@@ -1,12 +1,8 @@
 // he_prices.jsx — Live Market Prices + Inflation
 
 // ── Price fetcher ──────────────────────────────────────────────────
-const PROXY = 'https://corsproxy.io/?';
-const YF    = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=';
-
 async function fetchYF(symbols) {
-  const url = PROXY + encodeURIComponent(YF + symbols.join(',') +
-    '&fields=regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName');
+  const url = window.HE.apiUrl.yfQuote(symbols, 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName');
   const r = await fetch(url, {signal: AbortSignal.timeout(10000)});
   const d = await r.json();
   const out = {};

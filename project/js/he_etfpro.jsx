@@ -10,10 +10,7 @@ const ETFProTab = () => {
   const etfSymbols = Object.keys(tickers);
   React.useEffect(() => {
     setPriceStatus('loading');
-    const syms = etfSymbols.join(',');
-    const url = `https://corsproxy.io/?${encodeURIComponent(
-      `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=regularMarketPrice,regularMarketChangePercent`
-    )}`;
+    const url = window.HE.apiUrl.yfQuote(etfSymbols, 'regularMarketPrice,regularMarketChangePercent');
     fetch(url, {signal: AbortSignal.timeout(8000)})
       .then(r => r.json())
       .then(d => {

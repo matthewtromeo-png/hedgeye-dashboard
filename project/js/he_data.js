@@ -204,6 +204,87 @@ window.HE.RESEARCH = [
   ]},
 ];
 
+// ── API URL Builder (Netlify proxy on hosted, corsproxy.io on file://) ────────
+window.HE.apiUrl = {
+  _isFile: () => window.location.protocol === 'file:',
+  _cp: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+
+  yfQuote(symbols, fields) {
+    const f = fields || 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName,longName,regularMarketVolume,fiftyTwoWeekHigh,fiftyTwoWeekLow,marketCap,trailingPE,forwardPE';
+    const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
+    if (this._isFile()) return this._cp(`https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${f}`);
+    return `/api/yf-quote?symbols=${encodeURIComponent(syms)}&fields=${f}`;
+  },
+
+  yfChart(symbol, interval = '1d', range = '3mo') {
+    if (this._isFile()) return this._cp(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=${interval}&range=${range}&includePrePost=false`);
+    return `/api/yf-chart?symbol=${encodeURIComponent(symbol)}&interval=${interval}&range=${range}`;
+  },
+
+  yfSummary(symbol, modules) {
+    const m = Array.isArray(modules) ? modules.join(',') : (modules || 'defaultKeyStatistics,financialData,summaryDetail,earningsTrend,recommendationTrend,assetProfile');
+    if (this._isFile()) return this._cp(`https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=${m}`);
+    return `/api/yf-summary?symbol=${encodeURIComponent(symbol)}&modules=${m}`;
+  },
+
+  fmp(path, apikey) {
+    if (this._isFile()) {
+      if (!apikey) return null;
+      const sep = path.includes('?') ? '&' : '?';
+      return `https://financialmodelingprep.com/api${path}${sep}apikey=${apikey}`;
+    }
+    const p = new URLSearchParams({ path });
+    if (apikey) p.set('apikey', apikey);
+    return `/api/fmp?${p}`;
+  },
+};
+
+// ── Quad State (localStorage, updated by research ingestion) ──────────────────
+window.HE.loadQuadState = function() {
+  try {
+    return JSON.parse(localStorage.getItem('he_quad_state') || 'null') || {};
+  } catch { return {}; }
+};
+
+window.HE.saveQuadState = function(patch) {
+  try {
+    const s = window.HE.loadQuadState();
+    Object.assign(s, patch);
+    localStorage.setItem('he_quad_state', JSON.stringify(s));
+    return s;
+  } catch { return patch; }
+};
+
+// Dispatch event so App component can react to research-driven quad updates
+window.HE.applyResearchQuads = function(monthly, quarterly, source) {
+  const patch = { researchSource: source, researchDate: new Date().toISOString() };
+  if (monthly) patch.monthly = monthly;
+  if (quarterly) patch.quarterly = quarterly;
+  window.HE.saveQuadState(patch);
+  window.dispatchEvent(new CustomEvent('he_quad_updated', { detail: patch }));
+};
+
+// ── HAM Holdings Cache ─────────────────────────────────────────────────────────
+window.HE._hamCache = null;
+
+window.HE.loadHamCache = async function() {
+  if (window.HE._hamCache) return window.HE._hamCache;
+  try {
+    const txt = await fetch(window.__resources?.hamCsv || './data/ham_holdings_latest.csv').then(r => r.text());
+    const rows = window.HE.parseCSV(txt);
+    const cache = {};
+    rows.forEach(r => {
+      const w = parseFloat((r.Weightings || '0').replace('%', '')) / 100 || 0;
+      if (w > 0 && !(r.StockTicker || '').includes('-TRS-') && r.StockTicker !== 'Cash&Other' && r.MoneyMarketFlag !== 'Y') {
+        if (!cache[r.StockTicker]) cache[r.StockTicker] = {};
+        cache[r.StockTicker][r.Account] = w;
+      }
+    });
+    window.HE._hamCache = cache;
+    return cache;
+  } catch { return {}; }
+};
+
 // ── CSV Parser ─────────────────────────────────────────────────────
 window.HE.parseCSV = function(text) {
   const lines = text.replace(/\r/g,'').trim().split('\n');

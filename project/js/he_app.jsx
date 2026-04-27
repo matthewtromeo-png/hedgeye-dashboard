@@ -5,8 +5,23 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "monthlyQuad": "Q2",
   "usdSignal": "BEARISH",
   "btcSignal": "NEUTRAL",
-  "myPositions": ""
+  "myPositions": "",
+  "fmpKey": ""
 }/*EDITMODE-END*/;
+
+// Merge TWEAK_DEFAULTS with any values saved in localStorage
+function initTweaks() {
+  const s = window.HE.loadQuadState();
+  return {
+    ...TWEAK_DEFAULTS,
+    quarterlyQuad: s.quarterly  || TWEAK_DEFAULTS.quarterlyQuad,
+    monthlyQuad:   s.monthly    || TWEAK_DEFAULTS.monthlyQuad,
+    usdSignal:     s.usdSignal  || TWEAK_DEFAULTS.usdSignal,
+    btcSignal:     s.btcSignal  || TWEAK_DEFAULTS.btcSignal,
+    myPositions:   s.myPositions != null ? s.myPositions : TWEAK_DEFAULTS.myPositions,
+    fmpKey:        s.fmpKey     || TWEAK_DEFAULTS.fmpKey,
+  };
+}
 
 // ── PDF VIEWER MODAL ───────────────────────────────────────────────
 const PdfViewer = ({pdf, onClose}) => {
@@ -233,10 +248,13 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, onTabChange}) => {
 
 // ── MAIN APP ───────────────────────────────────────────────────────
 const App = () => {
-  const [tweaks, setTweaks]       = React.useState({...TWEAK_DEFAULTS});
-  const [tab, setTab]             = React.useState('overview');
+  const [tweaks, setTweaks]         = React.useState(initTweaks);
+  const [tab, setTab]               = React.useState('overview');
   const [showTweaks, setShowTweaks] = React.useState(false);
-  const [openPdf, setOpenPdf]     = React.useState(null);
+  const [openPdf, setOpenPdf]       = React.useState(null);
+  const [researchSource, setResearchSource] = React.useState(
+    () => window.HE.loadQuadState().researchSource || null
+  );
 
   // Tweaks host integration
   React.useEffect(() => {
@@ -247,39 +265,54 @@ const App = () => {
     window.parent.postMessage({type:'__edit_mode_available'}, '*');
   }, []);
 
-  // Global PDF drag-drop
+  // React to quad updates emitted by the Ingest tab
   React.useEffect(() => {
-    const onDragOver = e => e.preventDefault();
-    const onDrop = e => {
-      e.preventDefault();
-      const file = e.dataTransfer.files[0];
-      if (file && file.type === 'application/pdf') {
-        setOpenPdf({url: URL.createObjectURL(file), title: file.name});
-      }
+    const handler = (e) => {
+      const { monthly, quarterly, researchSource: src } = e.detail || {};
+      setTweaks(t => ({
+        ...t,
+        ...(quarterly ? { quarterlyQuad: quarterly } : {}),
+        ...(monthly   ? { monthlyQuad:   monthly   } : {}),
+      }));
+      if (src) setResearchSource(src);
     };
-    document.addEventListener('dragover', onDragOver);
-    document.addEventListener('drop', onDrop);
-    return () => { document.removeEventListener('dragover', onDragOver); document.removeEventListener('drop', onDrop); };
+    window.addEventListener('he_quad_updated', handler);
+    return () => window.removeEventListener('he_quad_updated', handler);
   }, []);
 
-  const setTweak = (k,v) => {
-    setTweaks(t => ({...t,[k]:v}));
+  const setTweak = (k, v) => {
+    setTweaks(t => ({ ...t, [k]: v }));
+    // Persist to localStorage
+    const patch = {};
+    if      (k === 'quarterlyQuad') patch.quarterly   = v;
+    else if (k === 'monthlyQuad')   patch.monthly     = v;
+    else if (k === 'usdSignal')     patch.usdSignal   = v;
+    else if (k === 'btcSignal')     patch.btcSignal   = v;
+    else if (k === 'myPositions')   patch.myPositions = v;
+    else if (k === 'fmpKey')        patch.fmpKey      = v;
+    window.HE.saveQuadState(patch);
     window.parent.postMessage({type:'__edit_mode_set_keys', edits:{[k]:v}}, '*');
   };
 
+  const handleQuadUpdate = ({ monthly, quarterly, source }) => {
+    if (quarterly) setTweak('quarterlyQuad', quarterly);
+    if (monthly)   setTweak('monthlyQuad',   monthly);
+    if (source)    setResearchSource(source);
+  };
+
   const TABS = [
-    {id:'overview',label:'Overview'},
-    {id:'market',  label:'Live Market'},
-    {id:'rta',     label:'RTA History'},
-    {id:'ham',     label:'HAM Holdings'},
-    {id:'signals', label:'Signal Strength'},
-    {id:'etfpro',  label:'ETF Pro'},
-    {id:'vol',     label:'Volatility'},
-    {id:'research',label:'Research'},
+    {id:'overview', label:'Overview'},
+    {id:'market',   label:'Live Market'},
+    {id:'rta',      label:'RTA History'},
+    {id:'ham',      label:'HAM Holdings'},
+    {id:'signals',  label:'Signal Strength'},
+    {id:'etfpro',   label:'ETF Pro'},
+    {id:'vol',      label:'Volatility'},
+    {id:'research', label:'Research'},
+    {id:'ingest',   label:'Ingest PDFs'},
   ];
 
-  const qQ = window.HE.QUADS[tweaks.quarterlyQuad];
-  const mQ = window.HE.QUADS[tweaks.monthlyQuad];
+  const today = new Date().toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
 
   return (
     <div style={{minHeight:'100vh',background:'#F4F3EF',color:'#1A1A18',fontFamily:'IBM Plex Sans,sans-serif'}}>
@@ -300,6 +333,15 @@ const App = () => {
             <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#555'}}>MO</span>
             <QuadBadge quad={tweaks.monthlyQuad} />
           </div>
+          {/* Research source indicator */}
+          {researchSource && (
+            <span title={`Quads from: ${researchSource}`}
+              style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#4A7C22',
+                background:'rgba(39,80,10,0.15)',padding:'1px 5px',borderRadius:2,flexShrink:0,
+                cursor:'default',letterSpacing:'0.04em'}}>
+              RESEARCH
+            </span>
+          )}
           <div style={{width:1,height:16,background:'#333',flexShrink:0}} />
           <div style={{display:'flex',alignItems:'center',gap:8}}>
             {[['USD',tweaks.usdSignal],['BTC',tweaks.btcSignal]].map(([lbl,sig])=>(
@@ -311,7 +353,7 @@ const App = () => {
           </div>
         </div>
         <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',flexShrink:0}}>
-          Apr 21, 2026
+          {today}
         </span>
       </div>
 
@@ -339,18 +381,19 @@ const App = () => {
       {tab==='etfpro'   && <ETFProTab />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} />}
+      {tab==='ingest'   && <IngestTab onQuadUpdate={handleQuadUpdate} />}
 
       {/* PDF VIEWER */}
       <PdfViewer pdf={openPdf} onClose={()=>setOpenPdf(null)} />
 
       {/* TWEAKS PANEL */}
       {showTweaks && (
-        <div style={{position:'fixed',bottom:20,right:20,width:272,background:'#fff',
+        <div style={{position:'fixed',bottom:20,right:20,width:280,background:'#fff',
           border:'1px solid #E4E1DA',borderRadius:10,
           boxShadow:'0 8px 32px rgba(0,0,0,0.12)',zIndex:1500,overflow:'hidden'}}>
           <div style={{padding:'11px 16px',background:'#F9F8F5',borderBottom:'1px solid #E4E1DA',
             fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
-            textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>Tweaks</div>
+            textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>Settings</div>
           <div style={{padding:16,display:'flex',flexDirection:'column',gap:13}}>
             {[['quarterlyQuad','Quarterly Quad'],['monthlyQuad','Monthly Quad']].map(([key,label])=>(
               <div key={key}>
@@ -396,7 +439,22 @@ const App = () => {
                 placeholder="AAPL NVDA CASY XOM…"
                 style={{width:'100%',padding:8,border:'1px solid #E4E1DA',borderRadius:4,
                   fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#1A1A18',
-                  background:'#FAFAF8',resize:'none',height:52,outline:'none'}} />
+                  background:'#FAFAF8',resize:'none',height:52,outline:'none',boxSizing:'border-box'}} />
+            </div>
+            <div>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>FMP API Key (optional)</div>
+              <input
+                type="password"
+                value={tweaks.fmpKey}
+                onChange={e=>setTweak('fmpKey',e.target.value)}
+                placeholder="Enter key for analyst data…"
+                style={{width:'100%',padding:'6px 8px',border:'1px solid #E4E1DA',borderRadius:4,
+                  fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#1A1A18',
+                  background:'#FAFAF8',outline:'none',boxSizing:'border-box'}}
+              />
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginTop:3}}>
+                financialmodelingprep.com — free tier works
+              </div>
             </div>
           </div>
         </div>
