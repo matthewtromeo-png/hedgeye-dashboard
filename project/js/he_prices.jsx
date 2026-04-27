@@ -64,8 +64,9 @@ const PriceCard = ({symbol, label, data, size='normal', accent}) => {
 const MarketTab = ({quad}) => {
   const [prices, setPrices]     = React.useState({});
   const [sssP,   setSssP]       = React.useState({});
-  const [infl,   setInfl]       = React.useState(null);
-  const [status, setStatus]     = React.useState('idle');
+  const [infl,       setInfl]       = React.useState(null);
+  const [inflSource, setInflSource] = React.useState('');
+  const [status,     setStatus]     = React.useState('idle');
   const [inflStatus, setInflStatus] = React.useState('idle');
   const [lastUpdated, setLastUpdated] = React.useState(null);
 
@@ -89,28 +90,48 @@ const MarketTab = ({quad}) => {
     }
   }, []);
 
-  // Inflation from BLS
+  // Inflation — BLS primary, FRED fallback
   const fetchInflation = React.useCallback(async () => {
     setInflStatus('loading');
+
+    // ── BLS ──────────────────────────────────────────────────────────
     try {
       const res = await fetch('https://api.bls.gov/publicAPI/v2/timeseries/data/', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
-        body: JSON.stringify({
-          seriesid: ['CUUR0000SA0','CUUR0000SA0L1E'],
-          startyear:'2024', endyear:'2026',
-        })
+        body: JSON.stringify({ seriesid: ['CUUR0000SA0','CUUR0000SA0L1E'], startyear:'2024', endyear:'2026' }),
+        signal: AbortSignal.timeout(8000),
       });
       const d = await res.json();
       if (d.status === 'REQUEST_SUCCEEDED') {
         const series = {};
-        d.Results.series.forEach(s => {
-          series[s.seriesID] = s.data.slice(0, 14).reverse();
-        });
+        d.Results.series.forEach(s => { series[s.seriesID] = s.data.slice(0, 14).reverse(); });
         setInfl(series);
+        setInflSource('BLS');
         setInflStatus('ok');
-      } else { setInflStatus('error'); }
-    } catch { setInflStatus('error'); }
+        return;
+      }
+      throw new Error(Array.isArray(d.message) ? d.message[0] : (d.status || 'BLS error'));
+    } catch (blsErr) {
+      console.warn('[inflation] BLS failed:', blsErr.message, '— trying FRED');
+    }
+
+    // ── FRED fallback (Netlify Function; not available on file://) ───
+    if (!window.HE.apiUrl._isFile()) {
+      try {
+        const res = await fetch('/api/fred-cpi', { signal: AbortSignal.timeout(10000) });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        setInfl(data);
+        setInflSource('FRED');
+        setInflStatus('ok');
+        return;
+      } catch (fredErr) {
+        console.error('[inflation] FRED also failed:', fredErr.message);
+      }
+    }
+
+    setInflStatus('error');
   }, []);
 
   React.useEffect(() => { refresh(); fetchInflation(); }, []);
@@ -241,9 +262,9 @@ const MarketTab = ({quad}) => {
       {/* Inflation */}
       <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:20}}>
         <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:16}}>
-          <SectionTitle mono>Inflation Dashboard — BLS Data{latestCpiMonth ? ` · Latest: ${latestCpiMonth}` : ''}</SectionTitle>
+          <SectionTitle mono>Inflation Dashboard{inflSource ? ` — ${inflSource}` : ''}{latestCpiMonth ? ` · Latest: ${latestCpiMonth}` : ''}</SectionTitle>
           {inflStatus==='error' && (
-            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>BLS API unavailable</span>
+            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>BLS + FRED unavailable</span>
           )}
         </div>
         <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:10, marginBottom:16}}>
