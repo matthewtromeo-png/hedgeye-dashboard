@@ -3,8 +3,10 @@
 // ── Price fetcher ──────────────────────────────────────────────────
 async function fetchYF(symbols) {
   const url = window.HE.apiUrl.yfQuote(symbols, 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName');
-  const r = await fetch(url, {signal: AbortSignal.timeout(10000)});
+  const r = await fetch(url, {signal: AbortSignal.timeout(15000)});
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
   const d = await r.json();
+  if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
   const out = {};
   (d.quoteResponse?.result || []).forEach(q => {
     out[q.symbol] = {

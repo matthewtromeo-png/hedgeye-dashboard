@@ -352,9 +352,20 @@ const App = () => {
             ))}
           </div>
         </div>
-        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',flexShrink:0}}>
-          {today}
-        </span>
+        <div style={{display:'flex',alignItems:'center',gap:10,flexShrink:0}}>
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555'}}>
+            {today}
+          </span>
+          <button
+            onClick={() => setShowTweaks(s => !s)}
+            title="Settings"
+            style={{background:'none',border:'1px solid #333',color:'#888',borderRadius:4,
+              cursor:'pointer',padding:'3px 9px',fontFamily:'IBM Plex Mono,monospace',
+              fontSize:11,lineHeight:1,flexShrink:0,
+              ...(showTweaks ? {borderColor:'#666',color:'#fff'} : {})}}>
+            ⚙
+          </button>
+        </div>
       </div>
 
       {/* NAV */}
