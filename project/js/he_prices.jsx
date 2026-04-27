@@ -80,12 +80,13 @@ const MarketTab = ({quad}) => {
         fetchYF(MARKET_SYMS),
         fetchYF(SSS_SYMS),
       ]);
+      if (Object.keys(mkt).length === 0) throw new Error('No price data returned — check Netlify Function logs');
       setPrices(mkt);
       setSssP(sss);
       setStatus('ok');
       setLastUpdated(new Date());
     } catch(e) {
-      console.warn('Price fetch error', e);
+      console.warn('[prices]', e.message);
       setStatus('error');
     }
   }, []);
@@ -177,7 +178,7 @@ const MarketTab = ({quad}) => {
         )}
         {status==='error' && (
           <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>
-            Price fetch failed — check connection
+            Price fetch failed — set TWELVE_DATA_KEY in Netlify env vars for reliable data
           </span>
         )}
       </div>
