@@ -66,9 +66,8 @@ const PriceCard = ({symbol, label, data, size='normal', accent}) => {
 
 // ── Market Tab ─────────────────────────────────────────────────────
 const MarketTab = ({quad}) => {
-  const [prices, setPrices]       = React.useState({});
-  const [sssP,   setSssP]         = React.useState({});
-  const [sssStatus, setSssStatus] = React.useState('idle'); // idle | loading | ok | error
+  const [prices, setPrices]   = React.useState({});
+  const [sssP,   setSssP]     = React.useState({});
   const [infl,       setInfl]       = React.useState(null);
   const [inflSource, setInflSource] = React.useState('');
   const [status,     setStatus]     = React.useState('idle');
@@ -76,32 +75,23 @@ const MarketTab = ({quad}) => {
   const [lastUpdated, setLastUpdated] = React.useState(null);
 
   const MARKET_SYMS = ['^VIX','^GSPC','QQQ','IWM','GLD','TLT','UUP','BTC-USD','^TNX','USO','GDX'];
-  // Top 12 SSS by days on signal — capped to stay within Netlify's 10s function timeout
-  const SSS_SYMS = window.HE.SSS.map(s => s.ticker).slice(0, 12);
+  const SSS_SYMS    = window.HE.SSS.map(s => s.ticker);
 
   const refresh = React.useCallback(async () => {
     setStatus('loading');
     try {
-      const mkt = await fetchYF(MARKET_SYMS);
+      const [mkt, sss] = await Promise.all([
+        fetchYF(MARKET_SYMS),
+        fetchYF(SSS_SYMS),
+      ]);
       if (Object.keys(mkt).length === 0) throw new Error('No price data returned');
       setPrices(mkt);
+      setSssP(sss);
       setStatus('ok');
       setLastUpdated(new Date());
     } catch(e) {
       console.warn('[prices]', e.message);
       setStatus('error');
-    }
-  }, []);
-
-  const loadSssPrices = React.useCallback(async () => {
-    setSssStatus('loading');
-    try {
-      const sss = await fetchYF(SSS_SYMS);
-      setSssP(sss);
-      setSssStatus('ok');
-    } catch(e) {
-      console.warn('[sss prices]', e.message);
-      setSssStatus('error');
     }
   }, []);
 
@@ -234,26 +224,7 @@ const MarketTab = ({quad}) => {
 
       {/* SSS Watchlist */}
       <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:20, marginBottom:16}}>
-        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:12}}>
-          <SectionTitle mono style={{marginBottom:0}}>Signal Strength Stocks — Live Prices vs Signal Price</SectionTitle>
-          {sssStatus === 'idle' && (
-            <button onClick={loadSssPrices}
-              style={{padding:'5px 14px', border:'1px solid #1A4D8F', borderRadius:4, cursor:'pointer',
-                fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#1A4D8F', background:'transparent'}}>
-              Load Prices (top 12)
-            </button>
-          )}
-          {sssStatus === 'loading' && (
-            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#9A9790'}}>
-              Fetching…
-            </span>
-          )}
-          {sssStatus === 'error' && (
-            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>
-              Price fetch failed
-            </span>
-          )}
-        </div>
+        <SectionTitle mono>Signal Strength Stocks — Live Prices vs Signal Price</SectionTitle>
         <div style={{overflowX:'auto'}}>
           <table style={{width:'100%', borderCollapse:'collapse', fontFamily:'IBM Plex Mono,monospace', fontSize:11}}>
             <thead>

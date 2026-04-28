@@ -1,18 +1,20 @@
-// Netlify Function — market quote proxy via Schwab Developer API
-// Single batch request; token cached in module scope (~30 min lifetime).
+// Netlify Function — market quote proxy via Schwab Developer API + CoinGecko (BTC)
+// Schwab: single batch call for all symbols except BTC-USD.
+// CoinGecko: parallel free API call for BTC-USD.
+// Token cached in module scope (~30 min lifetime).
 // Requires: SCHWAB_CLIENT_ID, SCHWAB_CLIENT_SECRET in Netlify env vars.
 
 const SCHWAB_TOKEN_URL  = 'https://api.schwabapi.com/v1/oauth/token';
 const SCHWAB_QUOTES_URL = 'https://api.schwabapi.com/marketdata/v1/quotes';
+const COINGECKO_URL     = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true';
 const CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET' };
 
-// YF/dashboard symbol → Schwab symbol (indices use $X.X format)
+// YF/dashboard symbol → Schwab symbol
 const YF_TO_SCHWAB = {
-  '^VIX':  '$VIX.X',
-  '^GSPC': '$SPX.X',
-  '^TNX':  '$TNX.X',
+  '^VIX':  'INDEX:VIX',
+  '^GSPC': '$SPX',
+  '^TNX':  '$TNX',
 };
-// Reverse map for response parsing
 const SCHWAB_TO_YF = Object.fromEntries(
   Object.entries(YF_TO_SCHWAB).map(([yf, sw]) => [sw, yf])
 );
@@ -57,7 +59,7 @@ function parseQuote(schwabSym, data) {
   }
   const q   = data.quote;
   const ref = data.reference || {};
-  const yfSym = SCHWAB_TO_YF[schwabSym] || schwabSym;
+  const yfSym  = SCHWAB_TO_YF[schwabSym] || schwabSym;
   const cur    = q.lastPrice ?? q.mark ?? 0;
   const prev   = q.closePrice ?? 0;
   const chg    = q.netChange ?? (cur - prev);
@@ -75,13 +77,58 @@ function parseQuote(schwabSym, data) {
   };
 }
 
+async function fetchSchwabBatch(schwabSyms, token) {
+  const url = `${SCHWAB_QUOTES_URL}?symbols=${encodeURIComponent(schwabSyms.join(','))}&fields=quote,reference`;
+  console.log(`[yf-quote] Schwab batch: ${schwabSyms.join(', ')}`);
+  const res = await fetch(url, {
+    headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/json' },
+    signal: AbortSignal.timeout(10000),
+  });
+  console.log(`[yf-quote] Schwab HTTP ${res.status}`);
+  if (!res.ok) {
+    const body = await res.text();
+    if (res.status === 401) { _token = null; _tokenExpiry = 0; }
+    throw new Error(`Schwab HTTP ${res.status}: ${body.slice(0, 300)}`);
+  }
+  const data = await res.json();
+  console.log(`[yf-quote] Schwab response keys: ${Object.keys(data).join(', ')}`);
+  return schwabSyms.map(sym => parseQuote(sym, data[sym])).filter(Boolean);
+}
+
+async function fetchBtcPrice() {
+  console.log('[yf-quote] CoinGecko: fetching BTC-USD');
+  const res = await fetch(COINGECKO_URL, {
+    headers: { 'Accept': 'application/json' },
+    signal: AbortSignal.timeout(8000),
+  });
+  console.log(`[yf-quote] CoinGecko HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`CoinGecko HTTP ${res.status}`);
+  const data = await res.json();
+  const usd    = data.bitcoin?.usd;
+  if (!usd) throw new Error('CoinGecko returned no BTC price');
+  const chgPct = data.bitcoin?.usd_24h_change ?? 0;
+  const chg    = usd * chgPct / 100;
+  const prev   = usd - chg;
+  console.log(`[yf-quote] BTC: $${usd} (${chgPct.toFixed(2)}%)`);
+  return {
+    symbol:                     'BTC-USD',
+    shortName:                  'Bitcoin USD',
+    regularMarketPrice:         usd,
+    regularMarketChange:        chg,
+    regularMarketChangePercent: chgPct,
+    regularMarketPreviousClose: prev,
+    regularMarketDayHigh:       usd,
+    regularMarketDayLow:        usd,
+    regularMarketVolume:        0,
+  };
+}
+
 export const handler = async (event) => {
   if (event.httpMethod === 'OPTIONS') return { statusCode: 200, headers: CORS, body: '' };
 
   const clientId     = process.env.SCHWAB_CLIENT_ID;
   const clientSecret = process.env.SCHWAB_CLIENT_SECRET;
   console.log(`[yf-quote] SCHWAB_CLIENT_ID: ${clientId ? `set (len=${clientId.length})` : 'NOT SET'}`);
-  console.log(`[yf-quote] SCHWAB_CLIENT_SECRET: ${clientSecret ? 'set' : 'NOT SET'}`);
   if (!clientId || !clientSecret) {
     return {
       statusCode: 503,
@@ -97,34 +144,35 @@ export const handler = async (event) => {
     body: JSON.stringify({ error: 'symbols param required' }),
   };
 
-  const yfSyms     = symbols.split(',').map(s => s.trim()).filter(Boolean);
-  const schwabSyms = yfSyms.map(s => YF_TO_SCHWAB[s] || s);
-  console.log(`[yf-quote] YF:     ${yfSyms.join(', ')}`);
-  console.log(`[yf-quote] Schwab: ${schwabSyms.join(', ')}`);
+  const yfSyms       = symbols.split(',').map(s => s.trim()).filter(Boolean);
+  const hasBtc       = yfSyms.includes('BTC-USD');
+  const schwabYfSyms = yfSyms.filter(s => s !== 'BTC-USD');
+  const schwabSyms   = schwabYfSyms.map(s => YF_TO_SCHWAB[s] || s);
+
+  console.log(`[yf-quote] ${yfSyms.length} symbols: ${schwabSyms.length} Schwab + ${hasBtc ? 1 : 0} CoinGecko`);
 
   try {
-    const token = await getToken(clientId, clientSecret);
-    const url   = `${SCHWAB_QUOTES_URL}?symbols=${encodeURIComponent(schwabSyms.join(','))}&fields=quote,reference`;
-    console.log(`[yf-quote] GET ${url}`);
-    const res = await fetch(url, {
-      headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/json' },
-      signal: AbortSignal.timeout(10000),
-    });
-    console.log(`[yf-quote] Quotes HTTP ${res.status}`);
-    if (!res.ok) {
-      const body = await res.text();
-      // If 401, invalidate cached token so next request re-auths
-      if (res.status === 401) { _token = null; _tokenExpiry = 0; }
-      throw new Error(`Schwab quotes HTTP ${res.status}: ${body.slice(0, 300)}`);
+    // Token fetch runs in parallel with CoinGecko (no dependency between them)
+    const [tokenResult, btcResult] = await Promise.allSettled([
+      getToken(clientId, clientSecret),
+      hasBtc ? fetchBtcPrice() : Promise.resolve(null),
+    ]);
+
+    if (tokenResult.status === 'rejected') throw tokenResult.reason;
+    const token = tokenResult.value;
+
+    const schwabResult = schwabSyms.length > 0 ? await fetchSchwabBatch(schwabSyms, token) : [];
+
+    const result = [
+      ...schwabResult,
+      ...(hasBtc && btcResult.status === 'fulfilled' && btcResult.value ? [btcResult.value] : []),
+    ];
+
+    if (hasBtc && btcResult.status === 'rejected') {
+      console.warn(`[yf-quote] CoinGecko failed: ${btcResult.reason?.message}`);
     }
-    const data = await res.json();
-    console.log(`[yf-quote] Response keys: ${Object.keys(data).join(', ')}`);
 
-    const result = schwabSyms
-      .map(sym => parseQuote(sym, data[sym]))
-      .filter(Boolean);
-
-    console.log(`[yf-quote] Parsed ${result.length}/${schwabSyms.length} symbols`);
+    console.log(`[yf-quote] Total: ${result.length}/${yfSyms.length} symbols succeeded`);
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json', ...CORS, 'Cache-Control': 'no-store' },
