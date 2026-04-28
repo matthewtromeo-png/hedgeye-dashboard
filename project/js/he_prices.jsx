@@ -7,11 +7,14 @@ async function fetchYF(symbols) {
   const direct = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${fields}`;
   const proxy  = `https://corsproxy.io/?${encodeURIComponent(direct)}`;
   for (const url of [direct, proxy]) {
+    const label = url.startsWith('https://corsproxy') ? 'corsproxy.io' : 'direct';
+    console.log(`[fetchYF] trying ${label}: ${url.slice(0, 120)}`);
     try {
       const r = await fetch(url, {signal: AbortSignal.timeout(10000)});
-      if (!r.ok) continue;
+      console.log(`[fetchYF] ${label} → HTTP ${r.status}`);
+      if (!r.ok) { console.warn(`[fetchYF] ${label} non-ok, skipping`); continue; }
       const d = await r.json();
-      if (d.error) continue;
+      if (d.error) { console.warn(`[fetchYF] ${label} API error:`, d.error); continue; }
       const out = {};
       (d.quoteResponse?.result || []).forEach(q => {
         out[q.symbol] = {
@@ -24,10 +27,12 @@ async function fetchYF(symbols) {
           name:  q.shortName || q.symbol,
         };
       });
+      console.log(`[fetchYF] ${label} got ${Object.keys(out).length} symbols`);
       if (Object.keys(out).length > 0) return out;
-    } catch(e) { /* try next */ }
+      console.warn(`[fetchYF] ${label} returned 0 results`);
+    } catch(e) { console.warn(`[fetchYF] ${label} threw:`, e.message); }
   }
-  throw new Error('Price fetch failed — no response from Yahoo Finance');
+  throw new Error('Price fetch failed — both direct and corsproxy.io failed');
 }
 
 // ── Market Pulse card ──────────────────────────────────────────────
@@ -186,7 +191,7 @@ const MarketTab = ({quad}) => {
         )}
         {status==='error' && (
           <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>
-            Price fetch failed — set TWELVE_DATA_KEY in Netlify env vars for reliable data
+            Price fetch failed — check browser console for details
           </span>
         )}
       </div>
