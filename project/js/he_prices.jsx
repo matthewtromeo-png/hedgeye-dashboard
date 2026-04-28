@@ -4,7 +4,7 @@
 async function fetchYF(symbols) {
   const url = window.HE.apiUrl.yfQuote(symbols);
   // Generous timeout: 11 symbols × ~650ms each ≈ 7s server-side
-  const r = await fetch(url, {signal: AbortSignal.timeout(20000)});
+  const r = await fetch(url, {signal: AbortSignal.timeout(12000)});
   if (!r.ok) {
     const body = await r.text().catch(() => '');
     throw new Error(`HTTP ${r.status}: ${body.slice(0, 120)}`);
@@ -245,7 +245,7 @@ const MarketTab = ({quad}) => {
           )}
           {sssStatus === 'loading' && (
             <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#9A9790'}}>
-              Fetching… (~8s)
+              Fetching…
             </span>
           )}
           {sssStatus === 'error' && (

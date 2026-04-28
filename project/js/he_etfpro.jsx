@@ -11,7 +11,7 @@ const ETFProTab = () => {
   React.useEffect(() => {
     setPriceStatus('loading');
     // 12 ETF symbols × ~650ms each ≈ 8s server-side; timeout set accordingly
-    fetch(window.HE.apiUrl.yfQuote(etfSymbols), {signal: AbortSignal.timeout(20000)})
+    fetch(window.HE.apiUrl.yfQuote(etfSymbols), {signal: AbortSignal.timeout(12000)})
       .then(r => r.json())
       .then(d => {
         const m = {};
