@@ -2,24 +2,32 @@
 
 // ── Price fetcher ──────────────────────────────────────────────────
 async function fetchYF(symbols) {
-  const url = window.HE.apiUrl.yfQuote(symbols, 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName');
-  const r = await fetch(url, {signal: AbortSignal.timeout(15000)});
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  const d = await r.json();
-  if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
-  const out = {};
-  (d.quoteResponse?.result || []).forEach(q => {
-    out[q.symbol] = {
-      price: q.regularMarketPrice,
-      chg:   q.regularMarketChange,
-      chgPct:q.regularMarketChangePercent,
-      prev:  q.regularMarketPreviousClose,
-      high:  q.regularMarketDayHigh,
-      low:   q.regularMarketDayLow,
-      name:  q.shortName || q.symbol,
-    };
-  });
-  return out;
+  const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
+  const fields = 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName';
+  const direct = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${fields}`;
+  const proxy  = `https://corsproxy.io/?${encodeURIComponent(direct)}`;
+  for (const url of [direct, proxy]) {
+    try {
+      const r = await fetch(url, {signal: AbortSignal.timeout(10000)});
+      if (!r.ok) continue;
+      const d = await r.json();
+      if (d.error) continue;
+      const out = {};
+      (d.quoteResponse?.result || []).forEach(q => {
+        out[q.symbol] = {
+          price: q.regularMarketPrice,
+          chg:   q.regularMarketChange,
+          chgPct:q.regularMarketChangePercent,
+          prev:  q.regularMarketPreviousClose,
+          high:  q.regularMarketDayHigh,
+          low:   q.regularMarketDayLow,
+          name:  q.shortName || q.symbol,
+        };
+      });
+      if (Object.keys(out).length > 0) return out;
+    } catch(e) { /* try next */ }
+  }
+  throw new Error('Price fetch failed — no response from Yahoo Finance');
 }
 
 // ── Market Pulse card ──────────────────────────────────────────────
@@ -80,7 +88,7 @@ const MarketTab = ({quad}) => {
         fetchYF(MARKET_SYMS),
         fetchYF(SSS_SYMS),
       ]);
-      if (Object.keys(mkt).length === 0) throw new Error('No price data returned — check Netlify Function logs');
+      if (Object.keys(mkt).length === 0) throw new Error('No price data returned');
       setPrices(mkt);
       setSssP(sss);
       setStatus('ok');

@@ -10,18 +10,26 @@ const ETFProTab = () => {
   const etfSymbols = Object.keys(tickers);
   React.useEffect(() => {
     setPriceStatus('loading');
-    const url = window.HE.apiUrl.yfQuote(etfSymbols, 'regularMarketPrice,regularMarketChangePercent');
-    fetch(url, {signal: AbortSignal.timeout(8000)})
-      .then(r => r.json())
-      .then(d => {
-        const m = {};
-        (d.quoteResponse?.result || []).forEach(q => {
-          m[q.symbol] = {price: q.regularMarketPrice, chg: q.regularMarketChangePercent};
-        });
-        setLivePrices(m);
-        setPriceStatus('ok');
-      })
-      .catch(() => setPriceStatus('error'));
+    const syms = etfSymbols.join(',');
+    const fields = 'regularMarketPrice,regularMarketChangePercent';
+    const direct = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${fields}`;
+    const proxy  = `https://corsproxy.io/?${encodeURIComponent(direct)}`;
+    (async () => {
+      for (const url of [direct, proxy]) {
+        try {
+          const r = await fetch(url, {signal: AbortSignal.timeout(8000)});
+          if (!r.ok) continue;
+          const d = await r.json();
+          if (d.error) continue;
+          const m = {};
+          (d.quoteResponse?.result || []).forEach(q => {
+            m[q.symbol] = {price: q.regularMarketPrice, chg: q.regularMarketChangePercent};
+          });
+          if (Object.keys(m).length > 0) { setLivePrices(m); setPriceStatus('ok'); return; }
+        } catch(e) { /* try next */ }
+      }
+      setPriceStatus('error');
+    })();
   }, []);
 
   const rankColor = r => r === 1 ? '#27500A' : r === 2 ? '#1A4D8F' : '#7A5C00';

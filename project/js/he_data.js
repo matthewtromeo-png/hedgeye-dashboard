@@ -212,8 +212,7 @@ window.HE.apiUrl = {
   yfQuote(symbols, fields) {
     const f = fields || 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName,longName,regularMarketVolume,fiftyTwoWeekHigh,fiftyTwoWeekLow,marketCap,trailingPE,forwardPE';
     const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
-    if (this._isFile()) return this._cp(`https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${f}`);
-    return `/api/yf-quote?symbols=${encodeURIComponent(syms)}&fields=${f}`;
+    return `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${f}`;
   },
 
   yfChart(symbol, interval = '1d', range = '3mo') {
