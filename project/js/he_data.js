@@ -209,10 +209,9 @@ window.HE.apiUrl = {
   _isFile: () => window.location.protocol === 'file:',
   _cp: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
 
-  yfQuote(symbols, fields) {
-    const f = fields || 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName,longName,regularMarketVolume,fiftyTwoWeekHigh,fiftyTwoWeekLow,marketCap,trailingPE,forwardPE';
+  yfQuote(symbols) {
     const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
-    return `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${f}`;
+    return `/api/yf-quote?symbols=${encodeURIComponent(syms)}`;
   },
 
   yfChart(symbol, interval = '1d', range = '3mo') {

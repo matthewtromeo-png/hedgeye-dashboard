@@ -1,38 +1,29 @@
 // he_prices.jsx — Live Market Prices + Inflation
 
-// ── Price fetcher ──────────────────────────────────────────────────
+// ── Price fetcher (via Netlify → Twelve Data, sequential/throttled) ──
 async function fetchYF(symbols) {
-  const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
-  const fields = 'regularMarketPrice,regularMarketChange,regularMarketChangePercent,regularMarketPreviousClose,regularMarketDayHigh,regularMarketDayLow,shortName';
-  const direct = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${syms}&fields=${fields}`;
-  const proxy  = `https://corsproxy.io/?${encodeURIComponent(direct)}`;
-  for (const url of [direct, proxy]) {
-    const label = url.startsWith('https://corsproxy') ? 'corsproxy.io' : 'direct';
-    console.log(`[fetchYF] trying ${label}: ${url.slice(0, 120)}`);
-    try {
-      const r = await fetch(url, {signal: AbortSignal.timeout(10000)});
-      console.log(`[fetchYF] ${label} → HTTP ${r.status}`);
-      if (!r.ok) { console.warn(`[fetchYF] ${label} non-ok, skipping`); continue; }
-      const d = await r.json();
-      if (d.error) { console.warn(`[fetchYF] ${label} API error:`, d.error); continue; }
-      const out = {};
-      (d.quoteResponse?.result || []).forEach(q => {
-        out[q.symbol] = {
-          price: q.regularMarketPrice,
-          chg:   q.regularMarketChange,
-          chgPct:q.regularMarketChangePercent,
-          prev:  q.regularMarketPreviousClose,
-          high:  q.regularMarketDayHigh,
-          low:   q.regularMarketDayLow,
-          name:  q.shortName || q.symbol,
-        };
-      });
-      console.log(`[fetchYF] ${label} got ${Object.keys(out).length} symbols`);
-      if (Object.keys(out).length > 0) return out;
-      console.warn(`[fetchYF] ${label} returned 0 results`);
-    } catch(e) { console.warn(`[fetchYF] ${label} threw:`, e.message); }
+  const url = window.HE.apiUrl.yfQuote(symbols);
+  // Generous timeout: 11 symbols × ~650ms each ≈ 7s server-side
+  const r = await fetch(url, {signal: AbortSignal.timeout(20000)});
+  if (!r.ok) {
+    const body = await r.text().catch(() => '');
+    throw new Error(`HTTP ${r.status}: ${body.slice(0, 120)}`);
   }
-  throw new Error('Price fetch failed — both direct and corsproxy.io failed');
+  const d = await r.json();
+  if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
+  const out = {};
+  (d.quoteResponse?.result || []).forEach(q => {
+    out[q.symbol] = {
+      price: q.regularMarketPrice,
+      chg:   q.regularMarketChange,
+      chgPct:q.regularMarketChangePercent,
+      prev:  q.regularMarketPreviousClose,
+      high:  q.regularMarketDayHigh,
+      low:   q.regularMarketDayLow,
+      name:  q.shortName || q.symbol,
+    };
+  });
+  return out;
 }
 
 // ── Market Pulse card ──────────────────────────────────────────────
@@ -75,8 +66,9 @@ const PriceCard = ({symbol, label, data, size='normal', accent}) => {
 
 // ── Market Tab ─────────────────────────────────────────────────────
 const MarketTab = ({quad}) => {
-  const [prices, setPrices]     = React.useState({});
-  const [sssP,   setSssP]       = React.useState({});
+  const [prices, setPrices]       = React.useState({});
+  const [sssP,   setSssP]         = React.useState({});
+  const [sssStatus, setSssStatus] = React.useState('idle'); // idle | loading | ok | error
   const [infl,       setInfl]       = React.useState(null);
   const [inflSource, setInflSource] = React.useState('');
   const [status,     setStatus]     = React.useState('idle');
@@ -84,23 +76,32 @@ const MarketTab = ({quad}) => {
   const [lastUpdated, setLastUpdated] = React.useState(null);
 
   const MARKET_SYMS = ['^VIX','^GSPC','QQQ','IWM','GLD','TLT','UUP','BTC-USD','^TNX','USO','GDX'];
-  const SSS_SYMS    = window.HE.SSS.map(s => s.ticker).slice(0, 40);
+  // Top 12 SSS by days on signal — capped to stay within Netlify's 10s function timeout
+  const SSS_SYMS = window.HE.SSS.map(s => s.ticker).slice(0, 12);
 
   const refresh = React.useCallback(async () => {
     setStatus('loading');
     try {
-      const [mkt, sss] = await Promise.all([
-        fetchYF(MARKET_SYMS),
-        fetchYF(SSS_SYMS),
-      ]);
+      const mkt = await fetchYF(MARKET_SYMS);
       if (Object.keys(mkt).length === 0) throw new Error('No price data returned');
       setPrices(mkt);
-      setSssP(sss);
       setStatus('ok');
       setLastUpdated(new Date());
     } catch(e) {
       console.warn('[prices]', e.message);
       setStatus('error');
+    }
+  }, []);
+
+  const loadSssPrices = React.useCallback(async () => {
+    setSssStatus('loading');
+    try {
+      const sss = await fetchYF(SSS_SYMS);
+      setSssP(sss);
+      setSssStatus('ok');
+    } catch(e) {
+      console.warn('[sss prices]', e.message);
+      setSssStatus('error');
     }
   }, []);
 
@@ -233,7 +234,26 @@ const MarketTab = ({quad}) => {
 
       {/* SSS Watchlist */}
       <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:20, marginBottom:16}}>
-        <SectionTitle mono>Signal Strength Stocks — Live Prices vs Signal Price</SectionTitle>
+        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:12}}>
+          <SectionTitle mono style={{marginBottom:0}}>Signal Strength Stocks — Live Prices vs Signal Price</SectionTitle>
+          {sssStatus === 'idle' && (
+            <button onClick={loadSssPrices}
+              style={{padding:'5px 14px', border:'1px solid #1A4D8F', borderRadius:4, cursor:'pointer',
+                fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#1A4D8F', background:'transparent'}}>
+              Load Prices (top 12)
+            </button>
+          )}
+          {sssStatus === 'loading' && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#9A9790'}}>
+              Fetching… (~8s)
+            </span>
+          )}
+          {sssStatus === 'error' && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>
+              Price fetch failed
+            </span>
+          )}
+        </div>
         <div style={{overflowX:'auto'}}>
           <table style={{width:'100%', borderCollapse:'collapse', fontFamily:'IBM Plex Mono,monospace', fontSize:11}}>
             <thead>
