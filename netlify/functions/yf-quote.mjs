@@ -62,13 +62,17 @@ async function fetchTwelveData(symbols, apiKey) {
   const tdSyms = yfSyms.map(s => TD_SYMBOL_MAP[s] || s);
   const url    = `${TD_BASE}?symbol=${tdSyms.join(',')}&apikey=${apiKey}&dp=4`;
 
-  console.log(`[yf-quote] Twelve Data: ${yfSyms.length} symbols`);
+  console.log(`[yf-quote] Twelve Data: requesting ${yfSyms.length} symbols`);
+  console.log(`[yf-quote] TD URL (key redacted): ${url.replace(apiKey, 'REDACTED')}`);
   const res = await fetch(url, {
     headers: { 'User-Agent': 'HedgeyeDashboard/1.0' },
     signal: AbortSignal.timeout(15000),
   });
-  if (!res.ok) throw new Error(`TD HTTP ${res.status}`);
-  const data = await res.json();
+  console.log(`[yf-quote] TD HTTP status: ${res.status}`);
+  const rawBody = await res.text();
+  console.log(`[yf-quote] TD response body (first 500 chars): ${rawBody.slice(0, 500)}`);
+  if (!res.ok) throw new Error(`TD HTTP ${res.status}: ${rawBody.slice(0, 200)}`);
+  const data = JSON.parse(rawBody);
   if (data.code && data.status === 'error') throw new Error(`TD: ${data.message}`);
 
   const result = yfSyms.map((yfSym, i) => {
@@ -100,8 +104,14 @@ async function fetchTwelveData(symbols, apiKey) {
 export const handler = async (event) => {
   if (event.httpMethod === 'OPTIONS') return { statusCode: 200, headers: CORS, body: '' };
 
+  // ── DEBUG: environment check ──────────────────────────────────────
+  const tdKey = process.env.TWELVE_DATA_KEY;
+  console.log(`[yf-quote] ENV check — TWELVE_DATA_KEY: ${tdKey ? `set (length=${tdKey.length}, starts="${tdKey.slice(0,4)}...")` : 'NOT SET'}`);
+  console.log(`[yf-quote] All env keys: ${Object.keys(process.env).filter(k => !k.includes('SECRET') && !k.includes('TOKEN')).join(', ')}`);
+
   const { symbols } = event.queryStringParameters || {};
   if (!symbols) return { statusCode: 400, headers: CORS, body: JSON.stringify({ error: 'symbols param required' }) };
+  console.log(`[yf-quote] Request for symbols: "${symbols.slice(0, 80)}"`);
 
   // 1. Try Yahoo Finance v8 (no auth needed)
   try {
@@ -119,7 +129,6 @@ export const handler = async (event) => {
   }
 
   // 2. Twelve Data fallback (requires TWELVE_DATA_KEY env var)
-  const tdKey = process.env.TWELVE_DATA_KEY;
   if (tdKey) {
     try {
       const result = await fetchTwelveData(symbols, tdKey);
@@ -130,6 +139,7 @@ export const handler = async (event) => {
           body: JSON.stringify({ quoteResponse: { result, error: null } }),
         };
       }
+      console.log('[yf-quote] Twelve Data returned 0 results');
     } catch (e) {
       console.error(`[yf-quote] Twelve Data threw: ${e.message}`);
     }
