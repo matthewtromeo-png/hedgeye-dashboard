@@ -11,13 +11,15 @@ const CORS = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods
 
 // YF/dashboard symbol → Schwab symbol
 const YF_TO_SCHWAB = {
-  '^VIX':  'INDEX:VIX',
   '^GSPC': '$SPX',
   '^TNX':  '$TNX',
 };
 const SCHWAB_TO_YF = Object.fromEntries(
   Object.entries(YF_TO_SCHWAB).map(([yf, sw]) => [sw, yf])
 );
+
+// Try all three VIX formats in the same batch so logs show exactly what Schwab returns for each
+const VIX_FORMATS = ['VIX', '/VIX', '$VIX'];
 
 // Module-level token cache — survives warm Lambda invocations
 let _token = null;
@@ -77,7 +79,8 @@ function parseQuote(schwabSym, data) {
   };
 }
 
-async function fetchSchwabBatch(schwabSyms, token) {
+// Returns the raw Schwab response object (caller does parsing + VIX resolution)
+async function fetchSchwabRaw(schwabSyms, token) {
   const url = `${SCHWAB_QUOTES_URL}?symbols=${encodeURIComponent(schwabSyms.join(','))}&fields=quote,reference`;
   console.log(`[yf-quote] Schwab batch: ${schwabSyms.join(', ')}`);
   const res = await fetch(url, {
@@ -92,7 +95,8 @@ async function fetchSchwabBatch(schwabSyms, token) {
   }
   const data = await res.json();
   console.log(`[yf-quote] Schwab response keys: ${Object.keys(data).join(', ')}`);
-  return schwabSyms.map(sym => parseQuote(sym, data[sym])).filter(Boolean);
+  if (data.errors) console.log(`[yf-quote] Schwab errors array: ${JSON.stringify(data.errors)}`);
+  return data;
 }
 
 async function fetchBtcPrice() {
@@ -146,10 +150,14 @@ export const handler = async (event) => {
 
   const yfSyms       = symbols.split(',').map(s => s.trim()).filter(Boolean);
   const hasBtc       = yfSyms.includes('BTC-USD');
-  const schwabYfSyms = yfSyms.filter(s => s !== 'BTC-USD');
-  const schwabSyms   = schwabYfSyms.map(s => YF_TO_SCHWAB[s] || s);
+  const hasVix       = yfSyms.includes('^VIX');
+  const coreYfSyms   = yfSyms.filter(s => s !== 'BTC-USD' && s !== '^VIX');
+  const schwabSyms   = [
+    ...coreYfSyms.map(s => YF_TO_SCHWAB[s] || s),
+    ...(hasVix ? VIX_FORMATS : []),   // probe all 3 VIX formats in one batch
+  ];
 
-  console.log(`[yf-quote] ${yfSyms.length} symbols: ${schwabSyms.length} Schwab + ${hasBtc ? 1 : 0} CoinGecko`);
+  console.log(`[yf-quote] ${yfSyms.length} YF symbols → Schwab: [${schwabSyms.join(', ')}] + ${hasBtc ? 'CoinGecko' : ''}`);
 
   try {
     // Token fetch runs in parallel with CoinGecko (no dependency between them)
@@ -161,16 +169,33 @@ export const handler = async (event) => {
     if (tokenResult.status === 'rejected') throw tokenResult.reason;
     const token = tokenResult.value;
 
-    const schwabResult = schwabSyms.length > 0 ? await fetchSchwabBatch(schwabSyms, token) : [];
+    const raw = schwabSyms.length > 0 ? await fetchSchwabRaw(schwabSyms, token) : {};
 
-    const result = [
-      ...schwabResult,
-      ...(hasBtc && btcResult.status === 'fulfilled' && btcResult.value ? [btcResult.value] : []),
-    ];
+    // Parse standard (non-VIX) symbols
+    const result = coreYfSyms
+      .map(yfSym => parseQuote(YF_TO_SCHWAB[yfSym] || yfSym, raw[YF_TO_SCHWAB[yfSym] || yfSym]))
+      .filter(Boolean);
 
-    if (hasBtc && btcResult.status === 'rejected') {
-      console.warn(`[yf-quote] CoinGecko failed: ${btcResult.reason?.message}`);
+    // Probe VIX formats — log every variant so we can see which Schwab accepts
+    if (hasVix) {
+      for (const fmt of VIX_FORMATS) {
+        const entry = raw[fmt];
+        console.log(`[yf-quote] VIX format "${fmt}": ${entry ? JSON.stringify(entry).slice(0, 400) : 'NOT IN RESPONSE'}`);
+      }
+      const winner = VIX_FORMATS.map(fmt => ({ fmt, entry: raw[fmt] }))
+        .find(({ entry }) => entry?.quote?.lastPrice != null);
+      if (winner) {
+        const q = parseQuote(winner.fmt, winner.entry);
+        if (q) { q.symbol = '^VIX'; q.shortName = q.shortName || 'CBOE Volatility Index'; result.push(q); }
+        console.log(`[yf-quote] VIX resolved via format "${winner.fmt}"`);
+      } else {
+        console.warn('[yf-quote] VIX: none of the 3 formats returned valid quote data');
+      }
     }
+
+    // Append BTC
+    if (hasBtc && btcResult.status === 'fulfilled' && btcResult.value) result.push(btcResult.value);
+    if (hasBtc && btcResult.status === 'rejected') console.warn(`[yf-quote] CoinGecko failed: ${btcResult.reason?.message}`);
 
     console.log(`[yf-quote] Total: ${result.length}/${yfSyms.length} symbols succeeded`);
     return {
