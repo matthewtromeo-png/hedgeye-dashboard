@@ -1,29 +1,46 @@
 // he_prices.jsx — Live Market Prices + Inflation
 
-// ── Price fetcher (via Netlify → Twelve Data, sequential/throttled) ──
+// Replace YOUR_SUBDOMAIN with your actual worker subdomain after deploying.
+// Find it at: Cloudflare Dashboard → Workers & Pages → schwab-prices → Triggers
+const PRICE_API = 'https://schwab-prices.YOUR_SUBDOMAIN.workers.dev';
+
+// ── Price fetcher — Cloudflare Worker primary, Netlify Function fallback ──
 async function fetchYF(symbols) {
-  const url = window.HE.apiUrl.yfQuote(symbols);
-  // Generous timeout: 11 symbols × ~650ms each ≈ 7s server-side
-  const r = await fetch(url, {signal: AbortSignal.timeout(12000)});
-  if (!r.ok) {
-    const body = await r.text().catch(() => '');
-    throw new Error(`HTTP ${r.status}: ${body.slice(0, 120)}`);
+  const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
+  const workerConfigured = !PRICE_API.includes('YOUR_SUBDOMAIN');
+  const endpoints = workerConfigured
+    ? [`${PRICE_API}?symbols=${encodeURIComponent(syms)}`, window.HE.apiUrl.yfQuote(symbols)]
+    : [window.HE.apiUrl.yfQuote(symbols)];
+
+  let lastErr;
+  for (const url of endpoints) {
+    try {
+      const r = await fetch(url, {signal: AbortSignal.timeout(12000)});
+      if (!r.ok) {
+        const body = await r.text().catch(() => '');
+        throw new Error(`HTTP ${r.status}: ${body.slice(0, 120)}`);
+      }
+      const d = await r.json();
+      if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
+      const out = {};
+      (d.quoteResponse?.result || []).forEach(q => {
+        out[q.symbol] = {
+          price: q.regularMarketPrice,
+          chg:   q.regularMarketChange,
+          chgPct:q.regularMarketChangePercent,
+          prev:  q.regularMarketPreviousClose,
+          high:  q.regularMarketDayHigh,
+          low:   q.regularMarketDayLow,
+          name:  q.shortName || q.symbol,
+        };
+      });
+      return out;
+    } catch (e) {
+      lastErr = e;
+      console.warn(`[prices] ${url.split('?')[0]} failed:`, e.message);
+    }
   }
-  const d = await r.json();
-  if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
-  const out = {};
-  (d.quoteResponse?.result || []).forEach(q => {
-    out[q.symbol] = {
-      price: q.regularMarketPrice,
-      chg:   q.regularMarketChange,
-      chgPct:q.regularMarketChangePercent,
-      prev:  q.regularMarketPreviousClose,
-      high:  q.regularMarketDayHigh,
-      low:   q.regularMarketDayLow,
-      name:  q.shortName || q.symbol,
-    };
-  });
-  return out;
+  throw lastErr;
 }
 
 // ── Market Pulse card ──────────────────────────────────────────────

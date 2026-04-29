@@ -1,0 +1,14 @@
+name = "schwab-prices"
+main = "schwab-prices.js"
+compatibility_date = "2024-11-01"
+
+# Add secrets via Cloudflare dashboard (Workers > schwab-prices > Settings > Variables)
+# or via CLI:
+#   wrangler secret put SCHWAB_CLIENT_ID
+#   wrangler secret put SCHWAB_CLIENT_SECRET
+#
+# Deploy:
+#   cd cloudflare-worker
+#   npx wrangler deploy
+#
+# After deploying, copy your worker URL and update PRICE_API in project/js/he_prices.jsx
