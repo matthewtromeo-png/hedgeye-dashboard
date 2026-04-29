@@ -68,6 +68,7 @@ const PriceCard = ({symbol, label, data, size='normal', accent}) => {
 const MarketTab = ({quad}) => {
   const [prices, setPrices]   = React.useState({});
   const [sssP,   setSssP]     = React.useState({});
+  const [researchCpi, setResearchCpi] = React.useState(null); // populated by he_ingest
   const [infl,       setInfl]       = React.useState(null);
   const [inflSource, setInflSource] = React.useState('');
   const [status,     setStatus]     = React.useState('idle');
@@ -95,9 +96,31 @@ const MarketTab = ({quad}) => {
     }
   }, []);
 
-  // Inflation — BLS primary, FRED fallback
+  // Re-run inflation fetch whenever new PDFs are ingested
+  React.useEffect(() => {
+    const handler = () => fetchInflation();
+    window.addEventListener('he_research_updated', handler);
+    return () => window.removeEventListener('he_research_updated', handler);
+  }, []);
+
+  // Inflation — Research Intel first, then BLS, then hardcoded FRED
   const fetchInflation = React.useCallback(async () => {
     setInflStatus('loading');
+
+    // ── Research Intel (from ingested PDFs) ──────────────────────────
+    try {
+      const ri = JSON.parse(localStorage.getItem('he_research_intel') || '{}');
+      if (ri.pdfs) {
+        const sorted = Object.values(ri.pdfs).sort((a, b) => new Date(b.ingestedAt) - new Date(a.ingestedAt));
+        const latest = sorted.find(p => p.cpi?.headline?.value != null || p.cpi?.core?.value != null);
+        if (latest) {
+          setResearchCpi({ ...latest.cpi, source: latest.filename, ingestedAt: latest.ingestedAt });
+          setInflSource('Research');
+          setInflStatus('ok');
+          return;
+        }
+      }
+    } catch (e) {}
 
     // ── BLS ──────────────────────────────────────────────────────────
     try {
@@ -160,10 +183,13 @@ const MarketTab = ({quad}) => {
     const prev   = parseFloat(series[series.length-2]?.value);
     return prev ? ((latest - prev) / prev * 100) : null;
   };
-  const cpiYoY  = calcYoY(cpiSeries);
-  const cpiMoM  = calcMoM(cpiSeries);
-  const coreYoY = calcYoY(coreSeries);
-  const latestCpiMonth = cpiSeries.length ? `${cpiSeries[cpiSeries.length-1]?.periodName} ${cpiSeries[cpiSeries.length-1]?.year}` : '';
+  const cpiYoY     = researchCpi?.headline?.value ?? calcYoY(cpiSeries);
+  const cpiMoM     = researchCpi?.mom?.value      ?? calcMoM(cpiSeries);
+  const coreYoY    = researchCpi?.core?.value     ?? calcYoY(coreSeries);
+  const cpiNowcast = researchCpi?.nowcast?.value  ?? null;
+  const latestCpiMonth = researchCpi
+    ? new Date(researchCpi.ingestedAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+    : (cpiSeries.length ? `${cpiSeries[cpiSeries.length-1]?.periodName} ${cpiSeries[cpiSeries.length-1]?.year}` : '');
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
@@ -267,17 +293,29 @@ const MarketTab = ({quad}) => {
       {/* Inflation */}
       <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:20}}>
         <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:16}}>
-          <SectionTitle mono>Inflation Dashboard{inflSource ? ` — ${inflSource}` : ''}{latestCpiMonth ? ` · Latest: ${latestCpiMonth}` : ''}</SectionTitle>
+          <div>
+            <SectionTitle mono style={{marginBottom:2}}>Inflation Dashboard</SectionTitle>
+            {researchCpi ? (
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#27500A', marginTop:2}}>
+                ● Research · {researchCpi.source.replace('.pdf','').slice(-45)} · {new Date(researchCpi.ingestedAt).toLocaleString()}
+              </div>
+            ) : (inflSource || latestCpiMonth) && (
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginTop:2}}>
+                {inflSource}{latestCpiMonth ? ` · ${latestCpiMonth}` : ''}
+              </div>
+            )}
+          </div>
           {inflStatus==='error' && (
             <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8302A'}}>BLS + FRED unavailable</span>
           )}
         </div>
-        <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:10, marginBottom:16}}>
+        <div style={{display:'grid', gridTemplateColumns:`repeat(${cpiNowcast !== null ? 5 : 4},1fr)`, gap:10, marginBottom:16}}>
           {[
-            ['CPI YoY', cpiYoY, '%', cpiYoY > 3 ? '#C8302A' : cpiYoY > 2 ? '#B8860B' : '#27500A'],
-            ['CPI MoM', cpiMoM, '%', cpiMoM > 0.4 ? '#C8302A' : cpiMoM > 0.2 ? '#B8860B' : '#27500A'],
-            ['Core CPI YoY', coreYoY, '%', coreYoY > 3 ? '#C8302A' : coreYoY > 2 ? '#B8860B' : '#27500A'],
-            ['Hedgeye Quad Context', null, '', '#7A7770'],
+            ['CPI YoY',      cpiYoY,     '%', cpiYoY  > 3 ? '#C8302A' : cpiYoY  > 2 ? '#B8860B' : '#27500A'],
+            ['CPI MoM',      cpiMoM,     '%', cpiMoM  > 0.4 ? '#C8302A' : cpiMoM > 0.2 ? '#B8860B' : '#27500A'],
+            ['Core CPI YoY', coreYoY,    '%', coreYoY > 3 ? '#C8302A' : coreYoY > 2 ? '#B8860B' : '#27500A'],
+            ...(cpiNowcast !== null ? [['CPI Nowcast ↗', cpiNowcast, '%', '#1A4D8F']] : []),
+            ['Quad Context', null, '', '#7A7770'],
           ].map(([lbl, val, unit, col]) => (
             <div key={lbl} style={{background:'#F9F8F5', border:'1px solid #E4E1DA',
               borderRadius:8, padding:'14px 16px'}}>

@@ -45,6 +45,133 @@ const PdfViewer = ({pdf, onClose}) => {
   );
 };
 
+// ── RESEARCH INTEL PANEL ──────────────────────────────────────────
+const ResearchIntelPanel = () => {
+  const RI_KEY = 'he_research_intel';
+  const [intel, setIntel] = React.useState(null);
+
+  const loadIntel = () => {
+    try {
+      const ri = JSON.parse(localStorage.getItem(RI_KEY) || '{}');
+      if (!ri.pdfs) { setIntel(null); return; }
+      const sorted = Object.values(ri.pdfs).sort((a, b) => new Date(b.ingestedAt) - new Date(a.ingestedAt));
+      const latest = sorted[0] || null;
+      setIntel(latest);
+    } catch { setIntel(null); }
+  };
+
+  React.useEffect(() => {
+    loadIntel();
+    const handler = () => loadIntel();
+    window.addEventListener('he_research_updated', handler);
+    return () => window.removeEventListener('he_research_updated', handler);
+  }, []);
+
+  if (!intel) return null;
+
+  const fmt = v => v != null ? v.toFixed(2) + '%' : '—';
+  const fmtDate = iso => {
+    try {
+      return new Date(iso).toLocaleDateString('en-US', {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'});
+    } catch { return '—'; }
+  };
+
+  const cpi   = intel.cpi   || {};
+  const gdp   = intel.gdp   || {};
+  const quads = intel.quads || {};
+  const kps   = (intel.keyPoints || []).slice(0, 4);
+  const risks = (intel.riskRanges || []).slice(0, 3);
+
+  const kpis = [
+    { label: 'CPI YoY',    val: fmt(cpi.headline?.value), color: cpi.headline?.value > 3 ? '#C8302A' : '#27500A' },
+    { label: 'Core CPI',   val: fmt(cpi.core?.value),     color: cpi.core?.value > 3 ? '#C8302A' : '#27500A' },
+    { label: 'CPI MoM',    val: fmt(cpi.mom?.value),      color: null },
+    { label: 'GDP Growth', val: fmt(gdp.growth?.value),   color: gdp.growth?.value < 0 ? '#C8302A' : '#27500A' },
+    ...(cpi.nowcast?.value != null ? [{ label: 'CPI Nowcast', val: fmt(cpi.nowcast.value), color: '#1A4D8F' }] : []),
+    ...(gdp.nowcast?.value  != null ? [{ label: 'GDP Nowcast', val: fmt(gdp.nowcast.value),  color: '#1A4D8F' }] : []),
+  ].filter(k => k.val !== '—');
+
+  const hasContent = kpis.length > 0 || quads.monthly || kps.length > 0;
+  if (!hasContent) return null;
+
+  return (
+    <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:'14px 18px', marginBottom:16}}>
+      <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12}}>
+        <div style={{display:'flex', alignItems:'center', gap:8}}>
+          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+            textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770'}}>Research Intelligence</span>
+          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, background:'#EAF3DE',
+            color:'#27500A', padding:'1px 6px', borderRadius:2, fontWeight:600}}>LIVE</span>
+        </div>
+        <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', textAlign:'right', lineHeight:1.4}}>
+          <div title={intel.filename} style={{maxWidth:260, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap'}}>
+            {intel.filename}
+          </div>
+          <div>{fmtDate(intel.ingestedAt)}</div>
+        </div>
+      </div>
+
+      <div style={{display:'grid', gridTemplateColumns:`repeat(${Math.min(kpis.length, 6)}, 1fr)`, gap:8, marginBottom: (quads.monthly || kps.length > 0 || risks.length > 0) ? 12 : 0}}>
+        {kpis.map(k => (
+          <div key={k.label} style={{background:'#F9F8F5', borderRadius:6, padding:'8px 10px'}}>
+            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+              textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:2}}>{k.label}</div>
+            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:16, fontWeight:700,
+              color: k.color || '#1A1A18'}}>{k.val}</div>
+          </div>
+        ))}
+      </div>
+
+      {(quads.monthly || quads.quarterly || kps.length > 0 || risks.length > 0) && (
+        <div style={{display:'grid', gridTemplateColumns: kps.length > 0 ? '200px 1fr' : '1fr', gap:12}}>
+          {(quads.monthly || quads.quarterly) && (
+            <div style={{display:'flex', flexDirection:'column', gap:6}}>
+              {quads.quarterly && (
+                <div style={{display:'flex', alignItems:'center', gap:6}}>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790', width:60}}>QTR QUAD</span>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:13, fontWeight:700,
+                    color: window.HE?.QUADS?.[quads.quarterly]?.color || '#1A1A18'}}>{quads.quarterly}</span>
+                  {quads.confidence && <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790'}}>{quads.confidence}% conf</span>}
+                </div>
+              )}
+              {quads.monthly && (
+                <div style={{display:'flex', alignItems:'center', gap:6}}>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790', width:60}}>MO QUAD</span>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:13, fontWeight:700,
+                    color: window.HE?.QUADS?.[quads.monthly]?.color || '#1A1A18'}}>{quads.monthly}</span>
+                </div>
+              )}
+              {risks.length > 0 && (
+                <div style={{marginTop:4}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                    textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>Risk Ranges</div>
+                  {risks.map((r, i) => (
+                    <div key={i} style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#555',
+                      marginBottom:1}}>{r}</div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+          {kps.length > 0 && (
+            <div>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:5}}>Key Points</div>
+              {kps.map((pt, i) => (
+                <div key={i} style={{display:'flex', gap:6, marginBottom:4, alignItems:'flex-start'}}>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                    marginTop:1, flexShrink:0}}>›</span>
+                  <span style={{fontSize:11, color:'#333', lineHeight:1.4}}>{pt}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
 // ── OVERVIEW TAB ───────────────────────────────────────────────────
 const OverviewTab = ({qQuad, mQuad, usd, btc, onTabChange}) => {
   const [rta, setRta]             = React.useState(null);
@@ -156,6 +283,9 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, onTabChange}) => {
           </div>
         </div>
       </div>
+
+      {/* Research Intelligence */}
+      <ResearchIntelPanel />
 
       {/* Three feeds */}
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:16}}>
