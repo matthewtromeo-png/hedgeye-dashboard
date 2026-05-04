@@ -2,7 +2,7 @@
 
 // Replace YOUR_SUBDOMAIN with your actual worker subdomain after deploying.
 // Find it at: Cloudflare Dashboard → Workers & Pages → schwab-prices → Triggers
-const PRICE_API = 'https://schwab-prices.YOUR_SUBDOMAIN.workers.dev';
+const PRICE_API = 'https://schwab-prices.hedgeye-dashboard.workers.dev';
 
 // ── Price fetcher — Cloudflare Worker primary, Netlify Function fallback ──
 async function fetchYF(symbols) {
