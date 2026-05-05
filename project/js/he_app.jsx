@@ -436,6 +436,7 @@ const App = () => {
     {id:'rta',      label:'RTA History'},
     {id:'ham',      label:'HAM Holdings'},
     {id:'signals',  label:'Signal Strength'},
+    {id:'analyzer', label:'Stock Analyzer'},
     {id:'etfpro',   label:'ETF Pro'},
     {id:'vol',      label:'Volatility'},
     {id:'research', label:'Research'},
@@ -519,6 +520,7 @@ const App = () => {
       {tab==='rta'      && <RTATab />}
       {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} />}
       {tab==='signals'  && <SignalsTab />}
+      {tab==='analyzer' && <AnalyzerTab />}
       {tab==='etfpro'   && <ETFProTab />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} />}
