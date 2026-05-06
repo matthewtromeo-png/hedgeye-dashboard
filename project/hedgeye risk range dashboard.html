@@ -1200,7 +1200,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);}
 
 <script>
 async function loadData() {
-  const response = await fetch('../data/official_levels.json');
+  const response = await fetch('./data/official_levels.json');
   const json = await response.json();
   return adaptData(json);
 }

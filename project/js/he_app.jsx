@@ -431,15 +431,16 @@ const App = () => {
   };
 
   const TABS = [
-    {id:'overview', label:'Overview'},
-    {id:'market',   label:'Live Market'},
-    {id:'rta',      label:'RTA History'},
-    {id:'ham',      label:'HAM Holdings'},
-    {id:'signals',  label:'Signal Strength'},
-    {id:'analyzer', label:'Stock Analyzer'},
-    {id:'etfpro',   label:'ETF Pro'},
-    {id:'vol',      label:'Volatility'},
-    {id:'research', label:'Research'},
+    {id:'overview',  label:'Overview'},
+    {id:'market',    label:'Live Market'},
+    {id:'rta',       label:'RTA History'},
+    {id:'ham',       label:'HAM Holdings'},
+    {id:'signals',   label:'Signal Strength'},
+    {id:'riskrange', label:'Risk Range'},
+    {id:'analyzer',  label:'Stock Analyzer'},
+    {id:'etfpro',    label:'ETF Pro'},
+    {id:'vol',       label:'Volatility'},
+    {id:'research',  label:'Research'},
     {id:'ingest',   label:'Ingest PDFs'},
   ];
 
@@ -519,7 +520,14 @@ const App = () => {
       {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} />}
       {tab==='rta'      && <RTATab />}
       {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} />}
-      {tab==='signals'  && <SignalsTab />}
+      {tab==='signals'   && <SignalsTab />}
+      {tab==='riskrange' && (
+        <iframe
+          src="./hedgeye risk range dashboard.html"
+          style={{width:'100%',height:'calc(100vh - 90px)',border:'none',display:'block'}}
+          title="Risk Range Dashboard"
+        />
+      )}
       {tab==='analyzer' && <AnalyzerTab />}
       {tab==='etfpro'   && <ETFProTab />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}

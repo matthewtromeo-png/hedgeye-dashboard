@@ -8,7 +8,7 @@ workbook and writes a single JSON file for the website Risk Range tab.
 What this script does:
   - Reads risk_range_tracker_excelworkbook.xlsx (read-only; never modified)
   - Scans all daily sheets to extract ticker / signal / buy / sell / close
-  - Writes hedgeye-dashboard/data/official_levels.json
+  - Writes hedgeye-dashboard/project/data/official_levels.json
   - Exits early (no rewrite) if the workbook has not changed since last run
 
 What this script does NOT do:
@@ -41,7 +41,7 @@ SOURCE_PATH = Path(
 )
 OUTPUT_DIR = Path(
     r"C:\Users\matth\OneDrive\Desktop\Trading"
-    r"\hedgeye-dashboard\data"
+    r"\hedgeye-dashboard\project\data"
 )
 OUTPUT_PATH = OUTPUT_DIR / "official_levels.json"
 
@@ -474,7 +474,7 @@ def main() -> None:
     # 9. Success summary
     print(
         f"\nWritten: {len(ticker_map)} tickers, {total_rows} rows, "
-        f"latest date {latest_date} -> data/official_levels.json"
+        f"latest date {latest_date} -> project/data/official_levels.json"
     )
 
     # 10. Validation summary
