@@ -119,6 +119,9 @@ const _RANK_SUFFIX = /\s+(?:\d+\/\d+|KM\s+Signal|Bench)\s*$/;
 function extractSssEntries(text) {
   const results = [], seen = new Set();
 
+  // Debug: show raw PDF text so we can see what pdf.js actually produces
+  console.log('[SSS debug] raw text (first 500 chars):', JSON.stringify(text.slice(0, 500)));
+
   // Primary: strict row pattern matching the exact PDF column order
   const lineRe = /^(\d{1,4})\s+([A-Z]{1,5})\s+(\d{1,2}\/\d{1,2}\/\d{4})\s+\$?([\d.]+)\s+\$?([\d.]+)\s+([\d.-]+)%\s+(.+)$/gm;
   // Splits the trailing "Retail Brian McGough [4/15]" into sector + analyst
@@ -160,6 +163,22 @@ function extractSssEntries(text) {
         priorClose: parseFloat(m[4]), lastClose: parseFloat(m[5]), pct: parseFloat(m[6]),
         sector: '', analyst: '',
       });
+    }
+  }
+
+  // Last-resort fallback: any uppercase word preceded by a line-leading number
+  // e.g. "352 FIVE\n5/18/2025 …" where pdf.js splits columns across lines
+  if (results.length < 3) {
+    const lineStartRe = /^\d+\s+([A-Z]{2,5})\b/gm;
+    const candidates = [...text.matchAll(lineStartRe)]
+      .map(m => m[1])
+      .filter(t => !NOT_TICKERS.has(t) && !seen.has(t));
+    if (candidates.length > 5) {
+      console.log('[SSS debug] line-start fallback matched:', candidates);
+      for (const ticker of candidates) {
+        seen.add(ticker);
+        results.push({ ticker, days: 0, signalDate: '', priorClose: 0, lastClose: 0, pct: 0, sector: '', analyst: '' });
+      }
     }
   }
 
