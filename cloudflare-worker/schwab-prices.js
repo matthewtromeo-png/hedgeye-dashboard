@@ -11,10 +11,22 @@ const SCHWAB_TOKEN_URL  = 'https://api.schwabapi.com/v1/oauth/token';
 const SCHWAB_QUOTES_URL = 'https://api.schwabapi.com/marketdata/v1/quotes';
 const COINGECKO_URL     = 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true';
 
-const CORS = {
-  'Access-Control-Allow-Origin':  '*',
-  'Access-Control-Allow-Methods': 'GET, OPTIONS',
-};
+// Allowed browser origins — echoed back so cookies/creds work if ever added.
+// Unrecognised origins (localhost, file://, etc.) get '*' for local dev.
+const ALLOWED_ORIGINS = new Set([
+  'https://hedgeye-dashboard.pages.dev',
+  'https://hedgeyedashboard.netlify.app',
+]);
+
+function corsHeaders(request) {
+  const origin = request.headers.get('Origin') || '';
+  const allowed = ALLOWED_ORIGINS.has(origin) ? origin : '*';
+  return {
+    'Access-Control-Allow-Origin':  allowed,
+    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+    'Vary': 'Origin',
+  };
+}
 
 const YF_TO_SCHWAB = { '^GSPC': '$SPX', '^TNX': '$TNX' };
 const SCHWAB_TO_YF = Object.fromEntries(Object.entries(YF_TO_SCHWAB).map(([y, s]) => [s, y]));
@@ -108,28 +120,30 @@ async function fetchBtcPrice() {
   };
 }
 
-function json(data, status = 200) {
+function json(data, cors, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { 'Content-Type': 'application/json', ...CORS, 'Cache-Control': 'no-store' },
+    headers: { 'Content-Type': 'application/json', ...cors, 'Cache-Control': 'no-store' },
   });
 }
 
 export default {
   async fetch(request, env) {
+    const cors = corsHeaders(request);
+
     if (request.method === 'OPTIONS') {
-      return new Response(null, { status: 204, headers: CORS });
+      return new Response(null, { status: 204, headers: cors });
     }
 
     const clientId     = env.SCHWAB_CLIENT_ID;
     const clientSecret = env.SCHWAB_CLIENT_SECRET;
     if (!clientId || !clientSecret) {
-      return json({ error: 'SCHWAB_CLIENT_ID / SCHWAB_CLIENT_SECRET not configured' }, 503);
+      return json({ error: 'SCHWAB_CLIENT_ID / SCHWAB_CLIENT_SECRET not configured' }, cors, 503);
     }
 
     const { searchParams } = new URL(request.url);
     const symbols = searchParams.get('symbols');
-    if (!symbols) return json({ error: 'symbols param required' }, 400);
+    if (!symbols) return json({ error: 'symbols param required' }, cors, 400);
 
     const yfSyms     = symbols.split(',').map(s => s.trim()).filter(Boolean);
     const hasBtc     = yfSyms.includes('BTC-USD');
@@ -167,10 +181,10 @@ export default {
       if (hasBtc && btcResult.status === 'fulfilled' && btcResult.value) result.push(btcResult.value);
       if (hasBtc && btcResult.status === 'rejected') console.warn(`CoinGecko failed: ${btcResult.reason?.message}`);
 
-      return json({ quoteResponse: { result, error: null } });
+      return json({ quoteResponse: { result, error: null } }, cors);
     } catch (e) {
       console.error(e.message);
-      return json({ error: e.message }, 502);
+      return json({ error: e.message }, cors, 502);
     }
   },
 };

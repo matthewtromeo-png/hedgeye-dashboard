@@ -279,20 +279,33 @@ const ResearchTab = ({onOpenPdf}) => {
       <input ref={fileInputRef} type="file" accept=".pdf" onChange={handleFileChosen}
         style={{display:'none'}} />
 
-      {/* Drop hint */}
-      <div style={{background:'#F9F8F5',border:'1px dashed #D0CCC4',borderRadius:8,
-        padding:'10px 16px',marginBottom:16,display:'flex',alignItems:'center',gap:10}}>
-        <span style={{fontSize:16}}>📄</span>
-        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#7A7770'}}>
-          <strong style={{color:'#1A1A18'}}>Pinned PDFs</strong> open instantly. For others, click the row — a file picker will open so you can select the PDF from your Hedgeye folder. Or <strong style={{color:'#1A1A18'}}>drag any PDF</strong> onto this window.
-        </span>
-      </div>
+      {/* Empty state — shown when no research loaded */}
+      {window.HE.RESEARCH.length === 0 && (
+        <div style={{background:'#F9F8F5',border:'1px dashed #D0CCC4',borderRadius:8,
+          padding:'32px 24px',marginBottom:16,textAlign:'center'}}>
+          <div style={{fontSize:28,marginBottom:12}}>📂</div>
+          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:600,
+            color:'#1A1A18',marginBottom:8}}>No research loaded yet</div>
+          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#7A7770',
+            lineHeight:1.7,maxWidth:480,margin:'0 auto'}}>
+            Go to the <strong style={{color:'#1A4D8F'}}>Ingest PDFs</strong> tab and click
+            {' '}<strong style={{color:'#1A1A18'}}>Connect Folder</strong> to point the dashboard
+            at your Hedgeye downloads folder. It will automatically scan for The Call summaries,
+            Early Look PDFs, Macro Show notes, and more.
+          </div>
+          <div style={{marginTop:16,fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790'}}>
+            You can also <strong style={{color:'#1A1A18'}}>drag any PDF</strong> directly onto this window to open it.
+          </div>
+        </div>
+      )}
 
-      <input value={search} onChange={e=>setSearch(e.target.value)}
-        placeholder="Search research by title…"
-        style={{width:'100%',padding:'10px 14px',border:'1px solid #E4E1DA',borderRadius:6,
-          fontFamily:'IBM Plex Mono,monospace',fontSize:13,color:'#1A1A18',
-          background:'#fff',outline:'none',marginBottom:16}} />
+      {window.HE.RESEARCH.length > 0 && (
+        <input value={search} onChange={e=>setSearch(e.target.value)}
+          placeholder="Search research by title…"
+          style={{width:'100%',padding:'10px 14px',border:'1px solid #E4E1DA',borderRadius:6,
+            fontFamily:'IBM Plex Mono,monospace',fontSize:13,color:'#1A1A18',
+            background:'#fff',outline:'none',marginBottom:16}} />
+      )}
 
       <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(340px,1fr))',gap:12}}>
         {filtered.map((cat,ci) => {

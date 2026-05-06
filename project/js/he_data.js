@@ -126,83 +126,9 @@ window.HE.ETF_STREAK = {
 };
 
 // ── Research Library ───────────────────────────────────────────────
-window.HE.RESEARCH = [
-  {category:"Founder's Choice",color:'#8B2252',pinned:true,files:[
-    {name:'Global Technology — Best Idea Longs & Shorts (Felix Wang)',date:'Apr 2026',
-      projectPath: (window.__resources?.foundersTech    || 'pdfs/founders_tech.pdf')},
-    {name:'Financials — Best Idea Longs & Shorts (Josh Steiner)',date:'Apr 2026',
-      projectPath: (window.__resources?.foundersFinancials || 'pdfs/founders_financials.pdf')},
-  ]},
-  {category:'Early Look',color:'#1A4D8F',files:[
-    {name:'#Quad2 Peace & Love = ATH',date:'Apr 16'},
-    {name:'#Quad2 Squeeze Continues',date:'Apr 16'},
-    {name:'#Quad2 Breakout, It Was',date:'Apr 13'},
-    {name:'2 Kinds of #Quad3',date:''},{name:'Is There A Cease Fire For #Quad3?',date:''},
-    {name:'Oil, Energy Stocks & Bonds Confirm Bullish TREND',date:''},
-    {name:'The Horse and the Rider',date:''},{name:'The Matthew Effect',date:''},
-    {name:"The Process Doesn't Care About Your Thesis",date:''},
-  ]},
-  {category:'Macro Show',color:'#7A5C00',files:[
-    {name:'KM/MC — Apr 21',date:'Apr 21'},{name:'KM/DJ — Apr 20',date:'Apr 20'},
-    {name:'RR/RPK — Apr 17',date:'Apr 17'},{name:'SR/RPK — Apr 16',date:'Apr 16'},
-    {name:'RR/RPK — Apr 14',date:'Apr 14'},{name:'KM/DJ — Apr 14',date:'Apr 14'},
-    {name:'KM/DJ — Apr 13',date:'Apr 13'},{name:'KM/MC — Apr 10',date:'Apr 10'},
-    {name:'KM/MC — Apr 9',date:'Apr 9'},{name:'KM/EV — Apr 8',date:'Apr 8'},
-    {name:'David Salem — Apr 7',date:'Apr 7'},{name:'KM/DJ — Apr 6',date:'Apr 6'},
-  ]},
-  {category:'Macro Research',color:'#4A4A40',files:[
-    {name:'2Q26 Macro Themes Deck',date:'Apr 2026'},
-    {name:'Quads/GIP Update — Updated 2Q26 Macro Themes',date:'Apr 2026'},
-    {name:'1Q26 Mid-Quarter Update',date:''},
-    {name:'Monthly Inflation Nowcast',date:''},
-    {name:'Industrial Activity — Flowers, Togas & Old Guys',date:''},
-    {name:'The RoC Report — Stag On A Lag',date:''},
-    {name:'ETF Pro Plus: April Update Q2 2026',date:'Apr 2026'},
-    {name:'Iran Flash Call — Geopolitics: Spanning The Globe',date:'Apr 2026'},
-  ]},
-  {category:'Market Situation Reports',color:'#C8302A',files:[
-    {name:'Weekly Game Plan Apr 20–25',date:'Apr 20'},{name:'April OpEx',date:'Apr 17'},
-    {name:'Volatility Compression',date:'Apr 16'},{name:'Counter To The Trend',date:'Apr 14'},
-    {name:'Weekly Game Plan Apr 13–17',date:'Apr 13'},
-    {name:'Stark Contrast In Positioning',date:'Apr 10'},
-    {name:'An Atypical Selloff',date:'Apr 9'},
-  ]},
-  {category:'Investing Ideas',color:'#27500A',files:[
-    {name:'Newsletter — Apr 20, 2026',date:'Apr 20'},
-    {name:'Newsletter — Apr 13, 2026',date:'Apr 13'},
-  ]},
-  {category:'Portfolio Solutions — ETF Re-Ranks',color:'#285C8C',files:[
-    {name:'4/21 — AAAU +3, XTL +2, EQRR +1',date:'Apr 21'},
-    {name:'4/20 — GII +11, ARGT +7, EQRR +2',date:'Apr 20'},
-    {name:'4/17 — AAAU +5, ARGT +4, XLU +4',date:'Apr 17'},
-    {name:'4/16 — AAAU +8, ARGT +8, YCS +6',date:'Apr 16'},
-    {name:'4/14 — TPYP +11, XLU +7, AAAU +7',date:'Apr 14'},
-    {name:'4/13 — AAAU +8, XLU +7, XTL +4',date:'Apr 13'},
-    {name:'4/10 — XTL +9, NORW +5, XLU +4',date:'Apr 10'},
-    {name:'4/9 — XTL +9, NORW +7, XLE +6',date:'Apr 9'},
-    {name:'4/8 — COM +11, XTL +8, NORW +3',date:'Apr 8'},
-  ]},
-  {category:'MOMO Tracker',color:'#5C2D8C',files:[
-    {name:'April 21st — Intraday Mean Reversion',date:'Apr 21'},
-    {name:'Mag7 +2.5%, AAPL=BULL, ATHs, Peace & Love',date:'Apr 20'},
-    {name:'Mag7 +2.6%, 7/9 Downside/Upside, Quad3 Confirms',date:''},
-    {name:'Mag7 +3%, META=BULL, "Fastest Pace Ever"',date:''},
-    {name:'Mag7 +1%, AAPL=BULL, $USD Breakdown',date:''},
-  ]},
-  {category:'Crypto / BTC Tracker',color:'#B8860B',files:[
-    {name:'BTC +0.7%, COIN=BULL + Agentic Market Launch',date:''},
-    {name:'BTC +1.3%, AVAX/XRP=BULL',date:''},{name:'BTC +3.3%, Crypto Allocation',date:''},
-    {name:'BTC -0.6%, Pre-IPO Markets',date:''},{name:'BTC -2.1%, ETFs=+$954M WoW',date:''},
-    {name:'BTC -2.7%, MSTR=BULL, COIN=NEUT',date:''},
-    {name:'BTC/IBIT/BLOK=BULL, Warsh Crypto Positions',date:''},
-  ]},
-  {category:'The Call — Summaries',color:'#1A4D8F',files:[
-    {name:'The Call — 4/20/2026',date:'Apr 20'},{name:'The Call — 4/17/2026',date:'Apr 17'},
-    {name:'The Call — 4/16/2026',date:'Apr 16'},{name:'The Call — 4/14/2026',date:'Apr 14'},
-    {name:'The Call — 4/13/2026',date:'Apr 13'},{name:'The Call — 4/10/2026',date:'Apr 10'},
-    {name:'The Call — 4/9/2026',date:'Apr 9'},
-  ]},
-];
+// Populated at runtime via the Ingest PDFs tab (folder scan → he_research_intel).
+// Do not add hardcoded entries here — they go stale.
+window.HE.RESEARCH = [];
 
 // ── API URL Builder ───────────────────────────────────────────────────────────
 // Prices go through the Cloudflare Worker (schwab-prices.hedgeye-dashboard.workers.dev).
