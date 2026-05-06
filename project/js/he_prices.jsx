@@ -1,46 +1,28 @@
 // he_prices.jsx — Live Market Prices + Inflation
 
-// Replace YOUR_SUBDOMAIN with your actual worker subdomain after deploying.
-// Find it at: Cloudflare Dashboard → Workers & Pages → schwab-prices → Triggers
-const PRICE_API = 'https://schwab-prices.hedgeye-dashboard.workers.dev';
-
-// ── Price fetcher — Cloudflare Worker primary, Netlify Function fallback ──
+// ── Price fetcher — Cloudflare Worker (schwab-prices.hedgeye-dashboard.workers.dev) ──
 async function fetchYF(symbols) {
-  const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
-  const workerConfigured = !PRICE_API.includes('YOUR_SUBDOMAIN');
-  const endpoints = workerConfigured
-    ? [`${PRICE_API}?symbols=${encodeURIComponent(syms)}`, window.HE.apiUrl.yfQuote(symbols)]
-    : [window.HE.apiUrl.yfQuote(symbols)];
-
-  let lastErr;
-  for (const url of endpoints) {
-    try {
-      const r = await fetch(url, {signal: AbortSignal.timeout(12000)});
-      if (!r.ok) {
-        const body = await r.text().catch(() => '');
-        throw new Error(`HTTP ${r.status}: ${body.slice(0, 120)}`);
-      }
-      const d = await r.json();
-      if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
-      const out = {};
-      (d.quoteResponse?.result || []).forEach(q => {
-        out[q.symbol] = {
-          price: q.regularMarketPrice,
-          chg:   q.regularMarketChange,
-          chgPct:q.regularMarketChangePercent,
-          prev:  q.regularMarketPreviousClose,
-          high:  q.regularMarketDayHigh,
-          low:   q.regularMarketDayLow,
-          name:  q.shortName || q.symbol,
-        };
-      });
-      return out;
-    } catch (e) {
-      lastErr = e;
-      console.warn(`[prices] ${url.split('?')[0]} failed:`, e.message);
-    }
+  const url = window.HE.apiUrl.yfQuote(symbols);
+  const r = await fetch(url, { signal: AbortSignal.timeout(12000) });
+  if (!r.ok) {
+    const body = await r.text().catch(() => '');
+    throw new Error(`HTTP ${r.status}: ${body.slice(0, 120)}`);
   }
-  throw lastErr;
+  const d = await r.json();
+  if (d.error) throw new Error(d.error.description || d.error.message || JSON.stringify(d.error));
+  const out = {};
+  (d.quoteResponse?.result || []).forEach(q => {
+    out[q.symbol] = {
+      price: q.regularMarketPrice,
+      chg:   q.regularMarketChange,
+      chgPct:q.regularMarketChangePercent,
+      prev:  q.regularMarketPreviousClose,
+      high:  q.regularMarketDayHigh,
+      low:   q.regularMarketDayLow,
+      name:  q.shortName || q.symbol,
+    };
+  });
+  return out;
 }
 
 // ── Market Pulse card ──────────────────────────────────────────────
@@ -158,22 +140,15 @@ const MarketTab = ({quad}) => {
       }
       throw new Error(Array.isArray(d.message) ? d.message[0] : (d.status || 'BLS error'));
     } catch (blsErr) {
-      console.warn('[inflation] BLS failed:', blsErr.message, '— trying FRED');
+      console.warn('[inflation] BLS failed:', blsErr.message, '— using hardcoded fallback');
     }
 
-    // ── FRED fallback (Netlify Function; not available on file://) ───
-    if (!window.HE.apiUrl._isFile()) {
-      try {
-        const res = await fetch('/api/fred-cpi', { signal: AbortSignal.timeout(10000) });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-        setInfl(data);
-        setInflSource('FRED');
-        setInflStatus('ok');
-        return;
-      } catch (fredErr) {
-        console.error('[inflation] FRED also failed:', fredErr.message);
-      }
+    // ── Hardcoded fallback (BLS data inlined in he_data.js) ─────────
+    if (window.HE.CPI_DATA) {
+      setInfl(window.HE.CPI_DATA);
+      setInflSource('Hardcoded');
+      setInflStatus('ok');
+      return;
     }
 
     setInflStatus('error');

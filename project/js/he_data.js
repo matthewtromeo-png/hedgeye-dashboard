@@ -204,37 +204,63 @@ window.HE.RESEARCH = [
   ]},
 ];
 
-// ── API URL Builder (Netlify proxy on hosted, corsproxy.io on file://) ────────
-window.HE.apiUrl = {
-  _isFile: () => window.location.protocol === 'file:',
-  _cp: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+// ── API URL Builder ───────────────────────────────────────────────────────────
+// Prices go through the Cloudflare Worker (schwab-prices.hedgeye-dashboard.workers.dev).
+// FMP calls are made directly from the browser using the user-supplied key.
+const _CF_WORKER = 'https://schwab-prices.hedgeye-dashboard.workers.dev';
 
+window.HE.apiUrl = {
   yfQuote(symbols) {
     const syms = Array.isArray(symbols) ? symbols.join(',') : symbols;
-    return `/api/yf-quote?symbols=${encodeURIComponent(syms)}`;
-  },
-
-  yfChart(symbol, interval = '1d', range = '3mo') {
-    if (this._isFile()) return this._cp(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=${interval}&range=${range}&includePrePost=false`);
-    return `/api/yf-chart?symbol=${encodeURIComponent(symbol)}&interval=${interval}&range=${range}`;
-  },
-
-  yfSummary(symbol, modules) {
-    const m = Array.isArray(modules) ? modules.join(',') : (modules || 'defaultKeyStatistics,financialData,summaryDetail,earningsTrend,recommendationTrend,assetProfile');
-    if (this._isFile()) return this._cp(`https://query1.finance.yahoo.com/v10/finance/quoteSummary/${symbol}?modules=${m}`);
-    return `/api/yf-summary?symbol=${encodeURIComponent(symbol)}&modules=${m}`;
+    return `${_CF_WORKER}?symbols=${encodeURIComponent(syms)}`;
   },
 
   fmp(path, apikey) {
-    if (this._isFile()) {
-      if (!apikey) return null;
-      const sep = path.includes('?') ? '&' : '?';
-      return `https://financialmodelingprep.com/api${path}${sep}apikey=${apikey}`;
-    }
-    const p = new URLSearchParams({ path });
-    if (apikey) p.set('apikey', apikey);
-    return `/api/fmp?${p}`;
+    if (!apikey) return null;
+    const sep = path.includes('?') ? '&' : '?';
+    return `https://financialmodelingprep.com/api${path}${sep}apikey=${apikey}`;
   },
+};
+
+// ── Hardcoded CPI fallback (BLS March 2026 release) ──────────────────────────
+// Used by he_prices.jsx when the live BLS API is unavailable.
+// Update the final row each month after BLS releases new data.
+window.HE.CPI_DATA = {
+  'CUUR0000SA0': [
+    { year:'2025', period:'M01', periodName:'January',   value:'311.800' },
+    { year:'2025', period:'M02', periodName:'February',  value:'312.100' },
+    { year:'2025', period:'M03', periodName:'March',     value:'312.302' },
+    { year:'2025', period:'M04', periodName:'April',     value:'313.200' },
+    { year:'2025', period:'M05', periodName:'May',       value:'314.000' },
+    { year:'2025', period:'M06', periodName:'June',      value:'314.800' },
+    { year:'2025', period:'M07', periodName:'July',      value:'315.500' },
+    { year:'2025', period:'M08', periodName:'August',    value:'316.100' },
+    { year:'2025', period:'M09', periodName:'September', value:'316.600' },
+    { year:'2025', period:'M10', periodName:'October',   value:'317.100' },
+    { year:'2025', period:'M11', periodName:'November',  value:'317.500' },
+    { year:'2025', period:'M12', periodName:'December',  value:'318.300' },
+    { year:'2026', period:'M01', periodName:'January',   value:'319.200' },
+    { year:'2026', period:'M02', periodName:'February',  value:'320.117' },
+    { year:'2026', period:'M03', periodName:'March',     value:'319.797' },
+  ],
+  'CUUR0000SA0L1E': [
+    { year:'2025', period:'M01', periodName:'January',   value:'311.200' },
+    { year:'2025', period:'M02', periodName:'February',  value:'311.500' },
+    { year:'2025', period:'M03', periodName:'March',     value:'312.000' },
+    { year:'2025', period:'M04', periodName:'April',     value:'313.000' },
+    { year:'2025', period:'M05', periodName:'May',       value:'313.700' },
+    { year:'2025', period:'M06', periodName:'June',      value:'314.500' },
+    { year:'2025', period:'M07', periodName:'July',      value:'315.300' },
+    { year:'2025', period:'M08', periodName:'August',    value:'315.900' },
+    { year:'2025', period:'M09', periodName:'September', value:'316.600' },
+    { year:'2025', period:'M10', periodName:'October',   value:'317.200' },
+    { year:'2025', period:'M11', periodName:'November',  value:'317.800' },
+    { year:'2025', period:'M12', periodName:'December',  value:'318.600' },
+    { year:'2026', period:'M01', periodName:'January',   value:'319.500' },
+    { year:'2026', period:'M02', periodName:'February',  value:'320.400' },
+    { year:'2026', period:'M03', periodName:'March',     value:'320.736' },
+  ],
+  source: 'Hardcoded / BLS March 2026',
 };
 
 // ── Quad State (localStorage, updated by research ingestion) ──────────────────

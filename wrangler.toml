@@ -1,0 +1,8 @@
+# Cloudflare Pages — static site config
+# Deploy:  wrangler pages deploy project
+# Or:      connect this repo in the CF Dashboard → Workers & Pages → Create → Pages → Connect to Git
+#          set "Build output directory" to: project  (no build command needed)
+
+name = "hedgeye-dashboard"
+pages_build_output_dir = "project"
+compatibility_date = "2024-11-01"
