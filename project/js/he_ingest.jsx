@@ -119,11 +119,11 @@ const _RANK_SUFFIX = /\s+(?:\d+\/\d+|KM\s+Signal|Bench)\s*$/;
 function extractSssEntries(text) {
   const results = [], seen = new Set();
 
-  // Debug: show raw PDF text so we can see what pdf.js actually produces
-  console.log('[SSS debug] raw text (first 500 chars):', JSON.stringify(text.slice(0, 500)));
+  // Debug: show table portion of raw PDF text (skip intro page ~0-500 chars)
+  console.log('[SSS debug] raw text (chars 500-1500):', JSON.stringify(text.slice(500, 1500)));
 
   // Primary: strict row pattern matching the exact PDF column order
-  const lineRe = /^(\d{1,4})\s+([A-Z]{1,5})\s+(\d{1,2}\/\d{1,2}\/\d{4})\s+\$?([\d.]+)\s+\$?([\d.]+)\s+([\d.-]+)%\s+(.+)$/gm;
+  const lineRe = /^(\d{1,4})\s+([A-Z]{1,5})\s+(\d{1,2}\/\d{1,2}\/\d{4})\s+([\d.]+)\s+([\d.]+)\s+([\d.-]+)%\s+(.+)$/gm;
   // Splits the trailing "Retail Brian McGough [4/15]" into sector + analyst
   const saRe = new RegExp(`^(${_SECTOR_ALT})\\s+(.+?)\\s*$`);
 
