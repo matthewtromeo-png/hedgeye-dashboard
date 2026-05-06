@@ -96,6 +96,8 @@ function trySave(key, value) {
 }
 
 // ── SSS extraction ────────────────────────────────────────────────────────────
+// PDF row format: "352 FIVE 5/18/2025 $106.5 $227.8 113.9% Retail Brian McGough [optional rank]"
+// Fields: days  ticker  date  $entryPrice  $lastPrice  pct%  sector  analyst  [rank]
 const NOT_TICKERS = new Set([
   'THE','AND','FOR','WITH','FROM','THAT','THIS','HAVE','BEEN','WILL','ARE','HAS',
   'USD','BTC','CPI','GDP','ETF','RTA','HAM','SSS','GIP','YTD','EPS','TTM','YOY',
@@ -104,32 +106,63 @@ const NOT_TICKERS = new Set([
   'ALL','NEW','TOP','KEY','LOW','HIGH','BUY','SELL','LONG','SHORT','BEST','RISK',
 ]);
 
+// Known Hedgeye sectors — sorted longest-first so the regex alternation is greedy-safe
+const _SSS_SECTORS = [
+  'Consumer Staples','Digital Assets','Global Tech','Communications',
+  'Industrials','Financials','Healthcare','Restaurants','Retail','Energy','GLL',
+].sort((a, b) => b.length - a.length);
+const _SECTOR_ALT = _SSS_SECTORS.join('|');
+
+// Rank suffixes that sometimes appear after the analyst name
+const _RANK_SUFFIX = /\s+(?:\d+\/\d+|KM\s+Signal|Bench)\s*$/;
+
 function extractSssEntries(text) {
   const results = [], seen = new Set();
-  const fullRe = /\b([A-Z]{1,5})\s+(\d{1,4})\s+(\d{1,2}\/\d{1,2}\/\d{2,4})\s+(\d+\.?\d*)\s+(\d+\.?\d*)\s+([+-]?\d+\.?\d*)/g;
-  for (const m of text.matchAll(fullRe)) {
-    const t = m[1];
-    if (seen.has(t) || NOT_TICKERS.has(t)) continue;
-    const days = parseInt(m[2]);
+
+  // Primary: strict row pattern matching the exact PDF column order
+  const lineRe = /^(\d{1,4})\s+([A-Z]{1,5})\s+(\d{1,2}\/\d{1,2}\/\d{4})\s+\$?([\d.]+)\s+\$?([\d.]+)\s+([\d.-]+)%\s+(.+)$/gm;
+  // Splits the trailing "Retail Brian McGough [4/15]" into sector + analyst
+  const saRe = new RegExp(`^(${_SECTOR_ALT})\\s+(.+?)\\s*$`);
+
+  for (const m of text.matchAll(lineRe)) {
+    const ticker = m[2];
+    if (seen.has(ticker) || NOT_TICKERS.has(ticker)) continue;
+    const days = parseInt(m[1]);
     if (days < 1 || days > 3000) continue;
-    seen.add(t);
+
+    const remaining = m[7].trim().replace(_RANK_SUFFIX, '');
+    const sa        = remaining.match(saRe);
+
+    seen.add(ticker);
     results.push({
-      ticker: t, days, signalDate: normaliseDate(m[3]),
-      priorClose: parseFloat(m[4]), lastClose: parseFloat(m[5]), pct: parseFloat(m[6]),
-      sector: '', analyst: '',
+      ticker,
+      days,
+      signalDate: normaliseDate(m[3]),
+      priorClose: parseFloat(m[4]),   // entry price
+      lastClose:  parseFloat(m[5]),   // most recent price
+      pct:        parseFloat(m[6]),   // gain % as number (e.g. 113.9 not 1.139)
+      sector:     sa ? sa[1] : '',
+      analyst:    sa ? sa[2].replace(_RANK_SUFFIX, '').trim() : '',
     });
   }
+
+  // Fallback: loose pattern for older PDF layouts (no $ prefix, 2-digit year)
   if (results.length < 3) {
-    const looseRe = /\b([A-Z]{2,5})\s+(\d{1,4})\s*d(?:ays?)?\b/g;
+    const looseRe = /\b([A-Z]{2,5})\s+(\d{1,4})\s+(\d{1,2}\/\d{1,2}\/\d{2,4})\s+([\d.]+)\s+([\d.]+)\s+([+-]?[\d.]+)/g;
     for (const m of text.matchAll(looseRe)) {
-      const t = m[1];
-      if (seen.has(t) || NOT_TICKERS.has(t)) continue;
+      const ticker = m[1];
+      if (seen.has(ticker) || NOT_TICKERS.has(ticker)) continue;
       const days = parseInt(m[2]);
       if (days < 1 || days > 3000) continue;
-      seen.add(t);
-      results.push({ ticker: t, days, signalDate: '', priorClose: 0, lastClose: 0, pct: 0, sector: '', analyst: '' });
+      seen.add(ticker);
+      results.push({
+        ticker, days, signalDate: normaliseDate(m[3]),
+        priorClose: parseFloat(m[4]), lastClose: parseFloat(m[5]), pct: parseFloat(m[6]),
+        sector: '', analyst: '',
+      });
     }
   }
+
   return results.length >= 3 ? results : null;
 }
 
