@@ -1,14 +1,25 @@
 // he_rta.jsx — RTA performance tab
 
 const RTATab = () => {
-  const [data, setData] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
-  const [filter, setFilter] = React.useState({pos:'all', year:'all', search:''});
-  const [page, setPage] = React.useState(0);
-  const chartRef = React.useRef(null);
+  const [data,       setData]       = React.useState(null);
+  const [loading,    setLoading]    = React.useState(true);
+  const [liveSource, setLiveSource] = React.useState(null);
+  const [filter,     setFilter]     = React.useState({pos:'all', year:'all', search:''});
+  const [page,       setPage]       = React.useState(0);
+  const chartRef  = React.useRef(null);
   const chartInst = React.useRef(null);
 
   React.useEffect(() => {
+    // Prefer live data ingested from folder
+    try {
+      const live = JSON.parse(localStorage.getItem('he_rta_live') || '{}');
+      if (live.stats?.total > 0) {
+        setData(live.stats);
+        setLiveSource({ source: live.source, modifiedAt: live.modifiedAt });
+        setLoading(false);
+        return;
+      }
+    } catch {}
     fetch(window.__resources?.rtaCsv || './data/rta_latest.csv')
       .then(r => r.text())
       .then(txt => { setData(window.HE.computeRTAStats(window.HE.parseCSV(txt))); setLoading(false); })
@@ -64,6 +75,18 @@ const RTATab = () => {
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
+      {/* Live source badge */}
+      {liveSource && (
+        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#27500A',
+          background:'#EAF3DE',padding:'3px 10px',borderRadius:3,marginBottom:12,display:'inline-flex',gap:10}}>
+          <span>📂 {liveSource.source}</span>
+          {liveSource.modifiedAt && (
+            <span style={{color:'#5A7770'}}>
+              Modified {new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'2-digit'})}
+            </span>
+          )}
+        </div>
+      )}
       {/* Stats row */}
       <div style={{display:'grid', gridTemplateColumns:'repeat(5,1fr)', gap:10, marginBottom:20}}>
         <StatCard label="Total Trades" value={data.total.toLocaleString()} sub="closed positions" />

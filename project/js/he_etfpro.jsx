@@ -3,8 +3,9 @@
 const ETFProTab = () => {
   const {dates, tickers} = window.HE.ETF_STREAK;
   const reranks = window.HE.ETF_RERANKS;
-  const [livePrices, setLivePrices] = React.useState({});
+  const [livePrices,  setLivePrices]  = React.useState({});
   const [priceStatus, setPriceStatus] = React.useState('idle');
+  const liveSource = window.HE.getLiveSource?.('etfpro') || null;
 
   // Fetch prices for ETF Pro tickers
   const etfSymbols = Object.keys(tickers);
@@ -32,6 +33,17 @@ const ETFProTab = () => {
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
+      {liveSource && (
+        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#B8860B',
+          background:'#FFF8E1',padding:'3px 10px',borderRadius:3,marginBottom:12,display:'inline-flex',gap:10}}>
+          <span>📂 {liveSource.source}</span>
+          {liveSource.modifiedAt && (
+            <span style={{color:'#7A5C00'}}>
+              Modified {new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'2-digit'})}
+            </span>
+          )}
+        </div>
+      )}
       {/* Leaderboard */}
       <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10, marginBottom:20}}>
         {sorted.slice(0,6).map(([sym, info]) => {

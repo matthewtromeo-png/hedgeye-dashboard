@@ -1,56 +1,61 @@
 // he_ham.jsx — HAM Holdings tab
 
+function buildHAMData(rows) {
+  const funds = {};
+  rows.forEach(r => {
+    const f = r.Account; if (!f) return;
+    if (!funds[f]) funds[f] = [];
+    const wPct = parseFloat((r.Weightings||'0').replace('%','')) || 0;
+    const w = wPct / 100;
+    funds[f].push({
+      ticker: r.StockTicker,
+      name: r.SecurityName,
+      weight: w,
+      price: parseFloat(r.Price)||0,
+      mv: parseFloat(r.MarketValue)||0,
+      isLong: w > 0,
+      isShort: w < 0,
+      isCash: r.StockTicker === 'Cash&Other' || r.MoneyMarketFlag === 'Y',
+      isSwap: (r.StockTicker||'').includes('-TRS-'),
+    });
+  });
+  const tickerMap = {};
+  Object.entries(funds).forEach(([fund, holdings]) => {
+    holdings.filter(h => h.isLong && !h.isCash && !h.isSwap).forEach(h => {
+      if (!tickerMap[h.ticker]) tickerMap[h.ticker] = {ticker:h.ticker, name:h.name, funds:{}};
+      tickerMap[h.ticker].funds[fund] = h.weight;
+    });
+  });
+  const overlaps = Object.values(tickerMap)
+    .filter(t => Object.keys(t.funds).length >= 2)
+    .sort((a,b) => Object.keys(b.funds).length - Object.keys(a.funds).length
+      || Object.values(b.funds).reduce((x,y)=>x+y,0) - Object.values(a.funds).reduce((x,y)=>x+y,0));
+  return { funds, tickerMap, overlaps };
+}
+
 const HAMTab = ({myPositions, onMyPositionsChange}) => {
-  const [hamData, setHamData] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
+  const [hamData,    setHamData]    = React.useState(null);
+  const [loading,    setLoading]    = React.useState(true);
+  const [liveSource, setLiveSource] = React.useState(null);
   const [activeFund, setActiveFund] = React.useState('HEFT');
-  const [showLongs, setShowLongs] = React.useState(true);
-  const [subTab, setSubTab] = React.useState('holdings');
-  const [myInput, setMyInput] = React.useState(myPositions || '');
+  const [showLongs,  setShowLongs]  = React.useState(true);
+  const [subTab,     setSubTab]     = React.useState('holdings');
+  const [myInput,    setMyInput]    = React.useState(myPositions || '');
 
   React.useEffect(() => {
+    // Prefer live data ingested from folder
+    try {
+      const live = JSON.parse(localStorage.getItem('he_ham_live') || '{}');
+      if (live.rows?.length > 0) {
+        setHamData(buildHAMData(live.rows));
+        setLiveSource({ source: live.source, modifiedAt: live.modifiedAt });
+        setLoading(false);
+        return;
+      }
+    } catch {}
     fetch(window.__resources?.hamCsv || './data/ham_holdings_latest.csv')
       .then(r => r.text())
-      .then(txt => {
-        const rows = window.HE.parseCSV(txt);
-        const funds = {};
-        rows.forEach(r => {
-          const f = r.Account; if (!f) return;
-          if (!funds[f]) funds[f] = [];
-          const wPct = parseFloat((r.Weightings||'0').replace('%','')) || 0;
-          const w = wPct / 100;
-          funds[f].push({
-            ticker: r.StockTicker,
-            name: r.SecurityName,
-            weight: w,
-            price: parseFloat(r.Price)||0,
-            mv: parseFloat(r.MarketValue)||0,
-            isLong: w > 0,
-            isShort: w < 0,
-            isCash: r.StockTicker === 'Cash&Other' || r.MoneyMarketFlag === 'Y',
-            isSwap: (r.StockTicker||'').includes('-TRS-'),
-          });
-        });
-
-        // Overlap map (longs only, real equities)
-        const tickerMap = {};
-        Object.entries(funds).forEach(([fund, holdings]) => {
-          holdings
-            .filter(h => h.isLong && !h.isCash && !h.isSwap)
-            .forEach(h => {
-              if (!tickerMap[h.ticker]) tickerMap[h.ticker] = {ticker:h.ticker, name:h.name, funds:{}};
-              tickerMap[h.ticker].funds[fund] = h.weight;
-            });
-        });
-
-        const overlaps = Object.values(tickerMap)
-          .filter(t => Object.keys(t.funds).length >= 2)
-          .sort((a,b) => Object.keys(b.funds).length - Object.keys(a.funds).length
-            || Object.values(b.funds).reduce((x,y)=>x+y,0) - Object.values(a.funds).reduce((x,y)=>x+y,0));
-
-        setHamData({ funds, tickerMap, overlaps });
-        setLoading(false);
-      })
+      .then(txt => { setHamData(buildHAMData(window.HE.parseCSV(txt))); setLoading(false); })
       .catch(() => setLoading(false));
   }, []);
 
@@ -58,6 +63,9 @@ const HAMTab = ({myPositions, onMyPositionsChange}) => {
   if (!hamData) return <div style={{padding:40,color:'#C8302A',fontFamily:'IBM Plex Mono,monospace',fontSize:12}}>Could not load HAM data.</div>;
 
   const { funds, tickerMap, overlaps } = hamData;
+  const asOfStr = liveSource?.modifiedAt
+    ? new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
+    : 'Apr 17, 2026';
   const FUNDS = ['HECA','HEFT','HGRO','HELS'].filter(f => funds[f]);
   const myTickers = myInput.split(/[\s,\n]+/).map(s => s.trim().toUpperCase()).filter(Boolean);
   const sssSet = new Set(window.HE.SSS.map(s => s.ticker));
@@ -126,7 +134,7 @@ const HAMTab = ({myPositions, onMyPositionsChange}) => {
   const OverlapsTable = () => (
     <div>
       <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:12}}>
-        {overlaps.length} tickers held across 2+ HAM funds (longs only) · as of Apr 17, 2026
+        {overlaps.length} tickers held across 2+ HAM funds (longs only) · as of {asOfStr}
       </div>
       <div style={{overflowX:'auto'}}>
         <table style={{width:'100%',borderCollapse:'collapse',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>
@@ -237,6 +245,17 @@ const HAMTab = ({myPositions, onMyPositionsChange}) => {
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
+      {liveSource && (
+        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#27500A',
+          background:'#EAF3DE',padding:'3px 10px',borderRadius:3,marginBottom:12,display:'inline-flex',gap:10}}>
+          <span>📂 {liveSource.source}</span>
+          {liveSource.modifiedAt && (
+            <span style={{color:'#5A7770'}}>
+              Modified {new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'2-digit'})}
+            </span>
+          )}
+        </div>
+      )}
       <FundSummary />
       {/* Sub-tabs */}
       <div style={{display:'flex',gap:6,marginBottom:16}}>
