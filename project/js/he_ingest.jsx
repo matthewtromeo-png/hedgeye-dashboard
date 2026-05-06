@@ -96,125 +96,47 @@ function trySave(key, value) {
 }
 
 // ── SSS extraction ────────────────────────────────────────────────────────────
-// PDF row format: "352 FIVE 5/18/2025 $106.5 $227.8 113.9% Retail Brian McGough [optional rank]"
-// Fields: days  ticker  date  $entryPrice  $lastPrice  pct%  sector  analyst  [rank]
-const NOT_TICKERS = new Set([
-  'THE','AND','FOR','WITH','FROM','THAT','THIS','HAVE','BEEN','WILL','ARE','HAS',
-  'USD','BTC','CPI','GDP','ETF','RTA','HAM','SSS','GIP','YTD','EPS','TTM','YOY',
-  'MOM','PDF','QTD','FCF','FED','ECB','PMI','ISM','NFP','ADP','WTI','TLT',
-  'VIX','SPX','SPY','QQQ','IWM','GLD','DXY','IRS','SEC','CEO','CFO','COO','CAP',
-  'ALL','NEW','TOP','KEY','LOW','HIGH','BUY','SELL','LONG','SHORT','BEST','RISK',
-]);
+// Page 1 header contains readable text like:
+//   "Added: AKAM, NET, TTWO, U, PINS, APLE"
+//   "Removed: SFD, GME"
+// Page 2 ticker table is image-based and cannot be extracted by pdf.js.
 
-// Known Hedgeye sectors — sorted longest-first so the regex alternation is greedy-safe
-const _SSS_SECTORS = [
-  'Consumer Staples','Digital Assets','Global Tech','Communications',
-  'Industrials','Financials','Healthcare','Restaurants','Retail','Energy','GLL',
-].sort((a, b) => b.length - a.length);
-const _SECTOR_ALT = _SSS_SECTORS.join('|');
+function extractSssChanges(text) {
+  console.log('[SSS debug] page-1 text (first 800 chars):', JSON.stringify(text.slice(0, 800)));
 
-// Rank suffixes that sometimes appear after the analyst name
-const _RANK_SUFFIX = /\s+(?:\d+\/\d+|KM\s+Signal|Bench)\s*$/;
+  const parseTickers = raw => !raw ? [] :
+    raw.split(/[,\s]+/)
+       .map(t => t.trim().toUpperCase())
+       .filter(t => /^[A-Z]{1,5}$/.test(t) && t !== 'NONE' && t !== 'N/A');
 
-function extractSssEntries(text) {
-  const results = [], seen = new Set();
+  const addedM   = text.match(/\bAdded\s*:\s*([\w,\s]+?)(?=\n|\bRemoved\b|$)/i);
+  const removedM = text.match(/\bRemoved\s*:\s*([\w,\s]+?)(?=\n|\bAdded\b|$)/i);
 
-  // Debug: show table portion of raw PDF text (skip intro page ~0-500 chars)
-  console.log('[SSS debug] raw text (chars 500-1500):', JSON.stringify(text.slice(500, 1500)));
+  const added   = parseTickers(addedM?.[1]);
+  const removed = parseTickers(removedM?.[1]);
 
-  // Primary: strict row pattern matching the exact PDF column order
-  const lineRe = /^(\d{1,4})\s+([A-Z]{1,5})\s+(\d{1,2}\/\d{1,2}\/\d{4})\s+([\d.]+)\s+([\d.]+)\s+([\d.-]+)%\s+(.+)$/gm;
-  // Splits the trailing "Retail Brian McGough [4/15]" into sector + analyst
-  const saRe = new RegExp(`^(${_SECTOR_ALT})\\s+(.+?)\\s*$`);
-
-  for (const m of text.matchAll(lineRe)) {
-    const ticker = m[2];
-    if (seen.has(ticker) || NOT_TICKERS.has(ticker)) continue;
-    const days = parseInt(m[1]);
-    if (days < 1 || days > 3000) continue;
-
-    const remaining = m[7].trim().replace(_RANK_SUFFIX, '');
-    const sa        = remaining.match(saRe);
-
-    seen.add(ticker);
-    results.push({
-      ticker,
-      days,
-      signalDate: normaliseDate(m[3]),
-      priorClose: parseFloat(m[4]),   // entry price
-      lastClose:  parseFloat(m[5]),   // most recent price
-      pct:        parseFloat(m[6]),   // gain % as number (e.g. 113.9 not 1.139)
-      sector:     sa ? sa[1] : '',
-      analyst:    sa ? sa[2].replace(_RANK_SUFFIX, '').trim() : '',
-    });
-  }
-
-  // Fallback: loose pattern for older PDF layouts (no $ prefix, 2-digit year)
-  if (results.length < 3) {
-    const looseRe = /\b([A-Z]{2,5})\s+(\d{1,4})\s+(\d{1,2}\/\d{1,2}\/\d{2,4})\s+([\d.]+)\s+([\d.]+)\s+([+-]?[\d.]+)/g;
-    for (const m of text.matchAll(looseRe)) {
-      const ticker = m[1];
-      if (seen.has(ticker) || NOT_TICKERS.has(ticker)) continue;
-      const days = parseInt(m[2]);
-      if (days < 1 || days > 3000) continue;
-      seen.add(ticker);
-      results.push({
-        ticker, days, signalDate: normaliseDate(m[3]),
-        priorClose: parseFloat(m[4]), lastClose: parseFloat(m[5]), pct: parseFloat(m[6]),
-        sector: '', analyst: '',
-      });
-    }
-  }
-
-  // Last-resort fallback: any uppercase word preceded by a line-leading number
-  // e.g. "352 FIVE\n5/18/2025 …" where pdf.js splits columns across lines
-  if (results.length < 3) {
-    const lineStartRe = /^\d+\s+([A-Z]{2,5})\b/gm;
-    const candidates = [...text.matchAll(lineStartRe)]
-      .map(m => m[1])
-      .filter(t => !NOT_TICKERS.has(t) && !seen.has(t));
-    if (candidates.length > 5) {
-      console.log('[SSS debug] line-start fallback matched:', candidates);
-      for (const ticker of candidates) {
-        seen.add(ticker);
-        results.push({ ticker, days: 0, signalDate: '', priorClose: 0, lastClose: 0, pct: 0, sector: '', analyst: '' });
-      }
-    }
-  }
-
-  return results.length >= 3 ? results : null;
+  console.log('[SSS debug] Added:', added, '| Removed:', removed);
+  if (!added.length && !removed.length) return null;
+  return { added, removed };
 }
 
-function normaliseDate(raw) {
-  const p = raw.split('/');
-  if (p.length !== 3) return raw;
-  const [m, d, y] = p;
-  return `${y.length === 2 ? '20' + y : y}-${m.padStart(2, '0')}-${d.padStart(2, '0')}`;
-}
-
-function applySssUpdate(entries, source) {
-  if (!entries?.length) return;
+function applySssChanges(changes, source) {
   try {
-    const current  = Array.isArray(window.HE.SSS) ? [...window.HE.SSS] : [];
-    const byTicker = Object.fromEntries(current.map(s => [s.ticker, s]));
-    for (const e of entries) {
-      if (byTicker[e.ticker]) {
-        byTicker[e.ticker] = {
-          ...byTicker[e.ticker], days: e.days, pct: e.pct,
-          ...(e.lastClose  ? { lastClose:  e.lastClose  } : {}),
-          ...(e.priorClose ? { priorClose: e.priorClose } : {}),
-          ...(e.signalDate ? { signalDate: e.signalDate } : {}),
-        };
-      } else if (e.priorClose > 0) {
-        byTicker[e.ticker] = { ...e, sector: e.sector || 'Unknown', analyst: e.analyst || '' };
+    const current    = Array.isArray(window.HE.SSS) ? [...window.HE.SSS] : [];
+    const removedSet = new Set(changes.removed);
+    const updated    = current.filter(s => !removedSet.has(s.ticker));
+    const existing   = new Set(updated.map(s => s.ticker));
+    for (const ticker of changes.added) {
+      if (!existing.has(ticker)) {
+        updated.push({ ticker, days: 0, signalDate: '', priorClose: 0, lastClose: 0, pct: 0, sector: '', analyst: '' });
       }
     }
-    const merged = Object.values(byTicker).sort((a, b) => b.days - a.days);
-    window.HE.SSS = merged;
-    trySave(SSS_LIVE_KEY, { entries: merged, source, updatedAt: new Date().toISOString() });
-    window.dispatchEvent(new CustomEvent('he_sss_updated', { detail: { source, count: entries.length } }));
-    console.log(`[ingest] SSS updated: ${entries.length} entries from ${source}`);
-  } catch (e) { console.warn('[ingest] applySssUpdate:', e.message); }
+    window.HE.SSS = updated;
+    trySave(SSS_LIVE_KEY, { entries: updated, source, updatedAt: new Date().toISOString(), changes });
+    window.dispatchEvent(new CustomEvent('he_sss_updated', { detail: { source, count: updated.length, ...changes } }));
+    console.log(`[ingest] SSS: +${changes.added.length} -${changes.removed.length} → ${updated.length} total`);
+    return updated.length;
+  } catch (e) { console.warn('[ingest] applySssChanges:', e.message); return 0; }
 }
 
 // ── Intel extraction helpers ──────────────────────────────────────────────────
@@ -369,10 +291,13 @@ async function processPDF(file, cat) {
   const base       = { source: file.name, modifiedAt, storedAt };
 
   if (cat === 'sss') {
-    const entries = extractSssEntries(text);
-    const count   = entries?.length ?? 0;
-    if (entries) applySssUpdate(entries, file.name);
-    window.HE.setLiveSource?.('sss', { ...base, summary: `${count} tickers` });
+    const changes = extractSssChanges(text);
+    const total   = Array.isArray(window.HE.SSS) ? window.HE.SSS.length : 0;
+    const count   = changes ? applySssChanges(changes, file.name) : total;
+    const detail  = changes
+      ? `${count} tickers (+${changes.added.length}/-${changes.removed.length})`
+      : `${count} tickers (no changes found)`;
+    window.HE.setLiveSource?.('sss', { ...base, summary: detail });
     return { ...base, tickerCount: count };
   }
 
