@@ -109,8 +109,8 @@ function extractSssChanges(text) {
        .map(t => t.trim().toUpperCase())
        .filter(t => /^[A-Z]{1,5}$/.test(t) && t !== 'NONE' && t !== 'N/A');
 
-  const addedM   = text.match(/\bAdded\s*:\s*([\w,\s]+?)(?=\n|\bRemoved\b|$)/i);
-  const removedM = text.match(/\bRemoved\s*:\s*([\w,\s]+?)(?=\n|\bAdded\b|$)/i);
+  const addedM   = text.match(/\bAdded\s*:\s*([A-Z,\s]+?)(?:\n|$)/i);
+  const removedM = text.match(/\bRemoved\s*:\s*([A-Z,\s]+?)(?:\n|$)/i);
 
   const added   = parseTickers(addedM?.[1]);
   const removed = parseTickers(removedM?.[1]);

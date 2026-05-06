@@ -3,7 +3,16 @@
 // ── SIGNALS TAB ────────────────────────────────────────────────────
 const SignalsTab = () => {
   const [hamTickers, setHamTickers] = React.useState({});
-  const [imgDate, setImgDate] = React.useState('Apr 20');
+
+  const readLive = () => {
+    try {
+      const d = JSON.parse(localStorage.getItem('he_sss_live') || 'null');
+      return d?.entries?.length ? d : null;
+    } catch { return null; }
+  };
+
+  const [liveData, setLiveData] = React.useState(readLive);
+  const [imgDate,  setImgDate]  = React.useState(() => readLive() ? null : 'Apr 20');
 
   React.useEffect(() => {
     fetch(window.__resources?.hamCsv || './data/ham_holdings_latest.csv').then(r=>r.text()).then(txt => {
@@ -18,6 +27,13 @@ const SignalsTab = () => {
       });
       setHamTickers(t);
     }).catch(()=>{});
+
+    const onSssUpdate = () => {
+      const d = readLive();
+      if (d) { setLiveData(d); setImgDate(null); }
+    };
+    window.addEventListener('he_sss_updated', onSssUpdate);
+    return () => window.removeEventListener('he_sss_updated', onSssUpdate);
   }, []);
 
   const FUNDS = ['HECA','HEFT','HGRO','HELS'];
@@ -28,21 +44,34 @@ const SignalsTab = () => {
     'Apr 6':  window.__resources?.sssApr6  || 'signals/sss_apr6.png',
   };
 
+  const sssEntries = liveData?.entries ?? window.HE.SSS;
+  const liveTs = liveData?.updatedAt
+    ? new Date(liveData.updatedAt).toLocaleString([], { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' })
+    : null;
+
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
       {/* Image toggle + data table header */}
       <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:20,marginBottom:20}}>
         <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:16,flexWrap:'wrap',gap:10}}>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
-            letterSpacing:'0.1em',textTransform:'uppercase',color:'#7A7770'}}>
-            Signal Strength Stocks — Apr 20, 2026 &nbsp;·&nbsp; HAM overlap highlighted
+          <div style={{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap'}}>
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+              letterSpacing:'0.1em',textTransform:'uppercase',color:'#7A7770'}}>
+              Signal Strength Stocks &nbsp;·&nbsp; HAM overlap highlighted
+            </div>
+            {liveData && !imgDate && (
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
+                background:'#EAF3DE',color:'#27500A',padding:'2px 7px',borderRadius:3,fontWeight:600}}>
+                ● Live · updated {liveTs}
+              </span>
+            )}
           </div>
           <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
             <button onClick={()=>setImgDate(null)}
               style={{padding:'4px 12px',border:'1px solid #E4E1DA',borderRadius:4,cursor:'pointer',
                 fontFamily:'IBM Plex Mono,monospace',fontSize:10,
                 background:!imgDate?'#1A1A18':'#fff',color:!imgDate?'#fff':'#7A7770'}}>
-              Table view
+              {liveData ? 'Live table' : 'Table view'}
             </button>
             {Object.keys(SSS_IMAGES).map(d=>(
               <button key={d} onClick={()=>setImgDate(d)}
@@ -64,28 +93,28 @@ const SignalsTab = () => {
               <thead>
                 <tr>
                   <TH>Days</TH><TH>Ticker</TH><TH>Signal Date</TH>
-                  <TH right>Prior $</TH><TH right>Last $</TH><TH right>% Gain</TH>
+                  <TH right>Entry $</TH><TH right>Last $</TH><TH right>% Gain</TH>
                   <TH>Sector</TH><TH>Analyst</TH>
                   {FUNDS.map(f=><TH key={f} right>{f}</TH>)}
                 </tr>
               </thead>
               <tbody>
-                {window.HE.SSS.map((s,i) => {
+                {sssEntries.map((s,i) => {
                   const hamFunds = hamTickers[s.ticker]||{};
                   const hamCount = Object.keys(hamFunds).length;
                   return (
                     <tr key={i} style={{borderBottom:'1px solid #F5F3EF',
                       background:hamCount>=2?'rgba(39,80,10,0.04)':i%2===0?'#fff':'#FAFAF8'}}>
-                      <TD style={{color:'#9A9790',fontSize:10}}>{s.days}</TD>
+                      <TD style={{color:'#9A9790',fontSize:10}}>{s.days || '—'}</TD>
                       <TD><span style={{fontWeight:700}}>{s.ticker}</span></TD>
-                      <TD style={{color:'#7A7770',fontSize:10}}>{s.signalDate}</TD>
-                      <TD right>${s.priorClose.toFixed(2)}</TD>
-                      <TD right>${s.lastClose.toFixed(2)}</TD>
-                      <TD right style={{fontWeight:600,color:s.pct>0?'#27500A':'#C8302A'}}>
-                        {s.pct>0?'+':''}{s.pct.toFixed(1)}%
+                      <TD style={{color:'#7A7770',fontSize:10}}>{s.signalDate || '—'}</TD>
+                      <TD right>{s.priorClose ? `$${s.priorClose.toFixed(2)}` : '—'}</TD>
+                      <TD right>{s.lastClose  ? `$${s.lastClose.toFixed(2)}`  : '—'}</TD>
+                      <TD right style={{fontWeight:600,color:s.pct>0?'#27500A':s.pct<0?'#C8302A':'#9A9790'}}>
+                        {s.pct ? `${s.pct>0?'+':''}${s.pct.toFixed(1)}%` : '—'}
                       </TD>
-                      <TD style={{color:'#7A7770',fontSize:10}}>{s.sector}</TD>
-                      <TD style={{color:'#7A7770',fontSize:10}}>{s.analyst}</TD>
+                      <TD style={{color:'#7A7770',fontSize:10}}>{s.sector || '—'}</TD>
+                      <TD style={{color:'#7A7770',fontSize:10}}>{s.analyst || '—'}</TD>
                       {FUNDS.map(f => {
                         const w = hamFunds[f];
                         return (
