@@ -355,6 +355,7 @@ const getPdfjs = () => {
 
 // ── PDF processing ────────────────────────────────────────────────────────────
 async function processPDF(file, cat) {
+  console.log('[processPDF] called:', file.name, '| category:', cat);
   const lib  = getPdfjs();
   const doc  = await lib.getDocument({ data: await file.arrayBuffer() }).promise;
   let text = '';
@@ -495,6 +496,48 @@ const IngestTab = ({ onQuadUpdate }) => {
       setSyncStatus({ doneAt: new Date(), count: 0 });
     }
   }
+
+  const handleForceReprocess = async (cat) => {
+    // Clear this category's entries from the ingest-meta cache so needsProcessing() returns true
+    try {
+      const meta = readIngestMeta();
+      for (const filename of Object.keys(meta)) {
+        if (classifyFile(filename) === cat) delete meta[filename];
+      }
+      localStorage.setItem(INGEST_META_KEY, JSON.stringify(meta));
+    } catch {}
+
+    if (!_gDirHandle) {
+      setToast({ msg: `Cache cleared for ${CATS[cat].label}`, detail: 'Drop or reconnect the folder to reprocess' });
+      setCatStatus(prev => ({ ...prev, [cat]: null }));
+      return;
+    }
+
+    setSyncStatus('syncing');
+    try {
+      const newest = await getNewestByCategory(_gDirHandle);
+      const file   = newest[cat];
+      if (!file) {
+        setToast({ msg: `No ${CATS[cat].label} file found`, detail: 'Check that the file is in the connected folder' });
+        setSyncStatus({ doneAt: new Date(), count: 0 });
+        return;
+      }
+      setProcessingName(file.name);
+      const ext = file.name.split('.').pop().toLowerCase();
+      await (['csv', 'xlsx', 'xls'].includes(ext) ? processCSV(file, cat) : processPDF(file, cat));
+      setFileMeta(file.name, file.lastModified);
+      setCatStatus(prev => ({
+        ...prev,
+        [cat]: window.HE.getLiveSource?.(cat) || { source: file.name, modifiedAt: new Date(file.lastModified).toISOString(), storedAt: new Date().toISOString() },
+      }));
+      setSyncStatus({ doneAt: new Date(), count: 1 });
+    } catch (e) {
+      console.warn(`[ingest] force ${cat}: ${e.message}`);
+      setError(e.message);
+      setSyncStatus({ doneAt: new Date(), count: 0 });
+    }
+    setProcessingName('');
+  };
 
   const connectFolder = async () => {
     try {
@@ -705,6 +748,20 @@ const IngestTab = ({ onQuadUpdate }) => {
               ) : (
                 <div style={{ fontSize: 10, color: '#C0BDB8', fontStyle: 'italic' }}>
                   {hasFolder ? 'No matching file found' : 'Connect folder to scan'}
+                </div>
+              )}
+
+              {/* Force Reprocess button — only shown when there's cached data or a folder is connected */}
+              {(hasData || hasFolder) && (
+                <div style={{ marginTop: 8, borderTop: '1px solid #F0EDE8', paddingTop: 6 }}>
+                  <button
+                    disabled={isSyncing}
+                    onClick={() => handleForceReprocess(cat)}
+                    style={{ fontSize: 9, padding: '2px 7px', border: '1px solid #C0BDB8',
+                      background: 'transparent', color: '#7A7770', cursor: 'pointer',
+                      borderRadius: 2, fontFamily: 'IBM Plex Mono, monospace', letterSpacing: '0.04em' }}>
+                    Force Reprocess
+                  </button>
                 </div>
               )}
             </div>
