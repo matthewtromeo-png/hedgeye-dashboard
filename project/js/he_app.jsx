@@ -1,4 +1,5 @@
 // he_app.jsx — Overview tab + main App shell
+// v2026-05-07
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "quarterlyQuad": "Q3",
