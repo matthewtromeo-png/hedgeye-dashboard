@@ -17,4 +17,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: hedgeye-dashboard
           directory: project
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          
