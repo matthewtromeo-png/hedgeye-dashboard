@@ -6,7 +6,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $RepoDir  = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard"
-$Script   = "C:\Users\matth\OneDrive\Desktop\Python\Python algos\import_official_levels.py"
+$Script   = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\scripts\import_official_levels.py"
 
 Write-Host "==> Importing official levels..." -ForegroundColor Cyan
 python $Script
