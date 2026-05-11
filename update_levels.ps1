@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 
 $RepoDir       = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard"
 $Script        = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\scripts\import_official_levels.py"
-$GeneratedHtml = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Risk range dashboard\hedgeye_dashboard.html"
+$GeneratedHtml = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Dashboards\hedgeye risk range dashboard.html"
 $DestHtml      = "$RepoDir\project\risk_range_dashboard.html"
 
 Write-Host "==> Importing official levels..." -ForegroundColor Cyan
