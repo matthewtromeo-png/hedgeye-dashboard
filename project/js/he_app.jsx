@@ -524,7 +524,7 @@ const App = () => {
       {tab==='signals'   && <SignalsTab />}
       {tab==='riskrange' && (
         <iframe
-          src="./hedgeye risk range dashboard.html"
+          src="./risk_range_dashboard.html"
           style={{width:'100%',height:'calc(100vh - 90px)',border:'none',display:'block'}}
           title="Risk Range Dashboard"
         />
