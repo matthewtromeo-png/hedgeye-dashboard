@@ -288,7 +288,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);}
 <div class="header">
   <div class="header-left">
     <h1>Hedgeye Risk Range™ Dashboard</h1>
-    <p>Generated April 22, 2026 09:21 AM &nbsp;·&nbsp; 38 tickers tracked</p>
+    <p id="headerSubtitle">Loading…</p>
   </div>
   <div class="header-stats" id="headerStats"></div>
 </div>
@@ -1202,7 +1202,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);}
 async function loadData() {
   const response = await fetch('./data/official_levels.json');
   const json = await response.json();
-  return adaptData(json);
+  return { data: adaptData(json), meta: json };
 }
 
 function adaptData(json) {
@@ -1257,7 +1257,20 @@ function computeCounts(history) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const DATA = await loadData();
+  const { data: DATA, meta } = await loadData();
+
+  // Dynamic header subtitle from JSON metadata
+  const sub = document.getElementById('headerSubtitle');
+  if (sub && meta) {
+    const ts = meta.generated_at
+      ? new Date(meta.generated_at).toLocaleString('en-US', {
+          month:'long', day:'numeric', year:'numeric',
+          hour:'2-digit', minute:'2-digit'
+        })
+      : meta.latest_date || '';
+    sub.innerHTML = `Updated ${ts} &nbsp;·&nbsp; ${meta.ticker_count || Object.keys(DATA).length} tickers tracked`;
+  }
+
   initDashboard(DATA);
 });
 
