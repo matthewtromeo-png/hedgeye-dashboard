@@ -18,7 +18,7 @@ import glob
 import json
 import os
 import sys
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 try:
@@ -89,7 +89,13 @@ def read_etf_pro() -> dict:
         warn("etf pro: empty workbook")
         return {"etf_rerank": [], "active_longs": [], "active_shorts": [], "_source": path.name}
 
-    header = [str(c).strip() if c else '' for c in rows[0]]
+    # Find the header row dynamically — it contains 'Ticker' somewhere in first 5 rows
+    header_idx = 0
+    for i, row in enumerate(rows[:5]):
+        if any(str(c or '').strip().lower() == 'ticker' for c in row):
+            header_idx = i
+            break
+    header = [str(c).strip() if c else '' for c in rows[header_idx]]
 
     def col(name):
         try:
@@ -106,16 +112,21 @@ def read_etf_pro() -> dict:
     i_days  = col('Days Held')
 
     rerank, longs, shorts = [], [], []
+    seen_tickers = set()
     today = date.today()
 
-    for row in rows[1:]:
-        def get(i):
-            return row[i] if i is not None and i < len(row) else None
+    for row in rows[header_idx + 1:]:
+        def get(i, r=row):
+            return r[i] if i is not None and i < len(r) else None
 
         ticker = str(get(i_tick) or '').strip()
-        call   = str(get(i_call) or '').strip()
-        if not ticker:
+        call   = str(get(i_call) or '').strip().upper()
+        # Skip blank rows, header repeats, and non-Long/Short rows
+        if not ticker or ticker.lower() == 'ticker' or call not in ('LONG', 'SHORT'):
             continue
+        if ticker in seen_tickers:
+            continue
+        seen_tickers.add(ticker)
 
         rerank.append(ticker)
 
@@ -136,9 +147,9 @@ def read_etf_pro() -> dict:
             "last_price":  cell_float(get(i_price)),
             "days_held":   int(days_held) if days_held is not None else None,
         }
-        if call.upper() == 'LONG':
+        if call == 'LONG':
             longs.append(entry)
-        elif call.upper() == 'SHORT':
+        else:
             shorts.append(entry)
 
     return {
@@ -213,59 +224,120 @@ def read_ham_holdings() -> dict:
     return {"ham_holdings": holdings, "_source": path.name}
 
 
-# ── RTA OPEN POSITIONS ────────────────────────────────────────────────────────
+# ── RTA TRADE HISTORY ─────────────────────────────────────────────────────────
 
-def read_rta_open() -> dict:
+def _parse_duration(raw: str) -> str:
+    """Extract highest signal level from RTA duration string."""
+    s = raw.lower()
+    if 'tail'  in s: return 'TAIL'
+    if 'trend' in s: return 'TREND'
+    return 'TRADE'
+
+
+def read_rta_trades() -> dict:
     pattern = str(HEDGEYE_BASE / "RTA" / "real-time-alerts-history-*.csv")
     path = newest_file(pattern)
     if not path:
         warn("RTA: no file found")
-        return {"rta_open_positions": [], "_source": None}
+        return {"rta": {"recent_trades": [], "stats": {}, "recently_traded_tickers": []}, "_source": None}
 
-    today = date.today()
-    open_positions = []
+    today      = date.today()
+    cutoff_90d = today - timedelta(days=90)
+    cutoff_60d = today - timedelta(days=60)
+
+    all_closed: list = []
 
     with open(path, newline='', encoding='utf-8-sig') as fh:
         reader = csv.DictReader(fh)
         for row in reader:
-            close_date  = (row.get('Close Date')  or '').strip()
-            close_price = (row.get('Close Price') or '').strip()
-            if close_date or close_price:
-                continue  # already closed
+            close_date_raw  = (row.get('Close Date')  or '').strip()
+            close_price_raw = (row.get('Close Price') or '').strip()
+            if not close_date_raw or not close_price_raw:
+                continue  # open position — skip
+
+            close_date_str = close_date_raw[:10]
+            try:
+                close_date = datetime.strptime(close_date_str, '%Y-%m-%d').date()
+            except ValueError:
+                continue
 
             symbol   = (row.get('Symbol')   or '').strip()
-            position = (row.get('Position') or '').strip().upper()
+            position = (row.get('Position') or '').strip().lower()
             if not symbol:
                 continue
 
-            open_date_raw = (row.get('Open Date') or '').strip()
-            open_date_str = open_date_raw[:10] if open_date_raw else ''
-            days_held = None
-            if open_date_str:
-                try:
-                    opened = datetime.strptime(open_date_str, '%Y-%m-%d').date()
-                    days_held = (today - opened).days
-                except ValueError:
-                    pass
+            open_date_str = (row.get('Open Date') or '')[:10]
 
-            open_price_raw = (row.get('Open Price') or '').strip()
             try:
-                open_price = float(open_price_raw)
+                open_price = float((row.get('Open Price') or '').strip())
             except ValueError:
                 open_price = None
 
-            open_positions.append({
-                "symbol":     symbol,
-                "position":   position,
-                "open_date":  open_date_str,
-                "open_price": open_price,
-                "days_held":  days_held,
+            try:
+                close_price = float(close_price_raw)
+            except ValueError:
+                close_price = None
+
+            try:
+                realized_return = float((row.get('Realized Return') or '').strip())
+            except ValueError:
+                realized_return = None
+
+            duration = _parse_duration(row.get('Duration') or '')
+
+            all_closed.append({
+                "symbol":           symbol,
+                "position":         position,
+                "open_date":        open_date_str,
+                "open_price":       open_price,
+                "close_date":       close_date_str,
+                "close_price":      close_price,
+                "realized_return":  realized_return,
+                "duration":         duration,
+                "_close_date_obj":  close_date,
             })
 
-    # Most recent first
-    open_positions.sort(key=lambda x: x['open_date'], reverse=True)
+    # Recent trades (last 90 days), most recent first
+    recent = [t for t in all_closed if t["_close_date_obj"] >= cutoff_90d]
+    recent.sort(key=lambda x: x["close_date"], reverse=True)
 
-    return {"rta_open_positions": open_positions, "_source": path.name}
+    # Recently traded tickers (last 60 days) — for SSS badge
+    recently_traded = sorted({
+        t["symbol"] for t in all_closed if t["_close_date_obj"] >= cutoff_60d
+    })
+
+    # Strip internal field before output
+    for t in recent:
+        del t["_close_date_obj"]
+
+    # Stats
+    longs  = [t for t in recent if t["position"] == "long"  and t["realized_return"] is not None]
+    shorts = [t for t in recent if t["position"] == "short" and t["realized_return"] is not None]
+
+    def win_rate(trades):
+        if not trades: return None
+        return round(sum(1 for t in trades if t["realized_return"] > 0) / len(trades), 4)
+
+    def avg_return(trades):
+        if not trades: return None
+        return round(sum(t["realized_return"] for t in trades) / len(trades), 4)
+
+    stats = {
+        "win_rate_long":    win_rate(longs),
+        "win_rate_short":   win_rate(shorts),
+        "avg_return_long":  avg_return(longs),
+        "avg_return_short": avg_return(shorts),
+        "total_trades_90d": len(recent),
+    }
+
+    return {
+        "rta": {
+            "recent_trades":           recent,
+            "stats":                   stats,
+            "recently_traded_tickers": recently_traded,
+        },
+        "_source": path.name,
+    }
 
 
 # ── RISK RANGE LEVELS ─────────────────────────────────────────────────────────
@@ -337,7 +409,7 @@ def main():
 
     etf   = read_etf_pro()
     ham   = read_ham_holdings()
-    rta   = read_rta_open()
+    rta   = read_rta_trades()
     rr    = read_risk_range_levels()
 
     now = datetime.now(tz=timezone.utc)
@@ -346,10 +418,10 @@ def main():
         "generated_at": now.isoformat(),
         "source_date":  date.today().isoformat(),
         "sources_used": {
-            "etf_pro":    etf.pop("_source"),
+            "etf_pro":      etf.pop("_source"),
             "ham_holdings": ham.pop("_source"),
-            "rta":        rta.pop("_source"),
-            "risk_range": rr.pop("_source"),
+            "rta":          rta.pop("_source"),
+            "risk_range":   rr.pop("_source"),
         },
         **etf,
         **ham,
@@ -361,12 +433,15 @@ def main():
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as fh:
         json.dump(output, fh, indent=2, ensure_ascii=False)
 
-    print(f"  etf_rerank:         {len(output['etf_rerank'])} tickers")
-    print(f"  active_longs:       {len(output['active_longs'])}")
-    print(f"  active_shorts:      {len(output['active_shorts'])}")
-    print(f"  ham_holdings:       {len(output['ham_holdings'])} rows")
-    print(f"  rta_open_positions: {len(output['rta_open_positions'])}")
-    print(f"  levels:             {len(output['levels'])} tickers")
+    rta_data = output.get('rta', {})
+    print(f"  etf_rerank:              {len(output['etf_rerank'])} tickers")
+    print(f"  active_longs:            {len(output['active_longs'])}")
+    print(f"  active_shorts:           {len(output['active_shorts'])}")
+    print(f"  ham_holdings:            {len(output['ham_holdings'])} tickers")
+    print(f"  rta.recent_trades (90d): {len(rta_data.get('recent_trades', []))}")
+    print(f"  rta.recently_traded(60d):{len(rta_data.get('recently_traded_tickers', []))}")
+    print(f"  rta.stats:               {rta_data.get('stats', {})}")
+    print(f"  levels:                  {len(output['levels'])} tickers")
     print(f"\nWritten: {OUTPUT_PATH}")
 
 
