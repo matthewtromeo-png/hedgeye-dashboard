@@ -35,11 +35,15 @@ OUTPUT_PATH  = REPO_ROOT / "project" / "data" / "macro_context.json"
 
 # ── HELPERS ───────────────────────────────────────────────────────────────────
 
-def newest_file(pattern: str) -> Path | None:
-    matches = [Path(p) for p in glob.glob(pattern)]
+def newest_file(folder: Path, glob_pattern: str) -> Path | None:
+    """Return most recently modified file in folder matching glob_pattern, or None."""
+    matches = sorted(folder.glob(glob_pattern), key=lambda p: p.stat().st_mtime)
     if not matches:
+        print(f"  [glob] No matches for {folder / glob_pattern}")
         return None
-    return max(matches, key=lambda p: p.stat().st_mtime)
+    print(f"  [glob] Found {len(matches)} match(es) in {folder}")
+    print(f"  [glob] Using: {matches[-1].name}")
+    return matches[-1]
 
 
 def warn(msg: str) -> None:
@@ -74,8 +78,8 @@ def iso_date(v) -> str:
 # ── ETF PRO ───────────────────────────────────────────────────────────────────
 
 def read_etf_pro() -> dict:
-    pattern = str(HEDGEYE_BASE / "etf pro dash board" / "etf-pro-all-active-tickers-*.xlsx")
-    path = newest_file(pattern)
+    print("\n── ETF Pro ──")
+    path = newest_file(HEDGEYE_BASE / "etf pro dash board", "etf-pro-all-active-tickers-*.xlsx")
     if not path:
         warn("etf pro: no file found")
         return {"etf_rerank": [], "active_longs": [], "active_shorts": [], "_source": None}
@@ -85,6 +89,7 @@ def read_etf_pro() -> dict:
     rows = list(ws.iter_rows(values_only=True))
     wb.close()
 
+    print(f"  [debug] Total raw rows (including header): {len(rows)}")
     if not rows:
         warn("etf pro: empty workbook")
         return {"etf_rerank": [], "active_longs": [], "active_shorts": [], "_source": path.name}
@@ -95,6 +100,7 @@ def read_etf_pro() -> dict:
         if any(str(c or '').strip().lower() == 'ticker' for c in row):
             header_idx = i
             break
+    print(f"  [debug] Header found at row index {header_idx}: {[str(c or '') for c in rows[header_idx]]}")
     header = [str(c).strip() if c else '' for c in rows[header_idx]]
 
     def col(name):
@@ -125,6 +131,7 @@ def read_etf_pro() -> dict:
         if not ticker or ticker.lower() == 'ticker' or call not in ('LONG', 'SHORT'):
             continue
         if ticker in seen_tickers:
+            print(f"  [debug] Duplicate ticker skipped: {ticker}")
             continue
         seen_tickers.add(ticker)
 
@@ -152,6 +159,7 @@ def read_etf_pro() -> dict:
         else:
             shorts.append(entry)
 
+    print(f"  [debug] After filter: {len(rerank)} unique tickers ({len(longs)} long, {len(shorts)} short)")
     return {
         "etf_rerank":    rerank,
         "active_longs":  longs,
@@ -163,8 +171,8 @@ def read_etf_pro() -> dict:
 # ── HAM HOLDINGS ─────────────────────────────────────────────────────────────
 
 def read_ham_holdings() -> dict:
-    pattern = str(HEDGEYE_BASE / "HAM holdings" / "ETF_Holdings*.csv")
-    path = newest_file(pattern)
+    print("\n── HAM Holdings ──")
+    path = newest_file(HEDGEYE_BASE / "HAM holdings", "ETF_Holdings*.csv")
     if not path:
         warn("HAM holdings: no file found")
         return {"ham_holdings": [], "_source": None}
@@ -234,9 +242,18 @@ def _parse_duration(raw: str) -> str:
     return 'TRADE'
 
 
+def _parse_date(raw: str) -> date | None:
+    """Parse date from RTA format '2026-05-07 15:47:14 -0400' or plain 'YYYY-MM-DD'."""
+    s = raw.strip()[:10]  # take just YYYY-MM-DD prefix
+    try:
+        return datetime.strptime(s, '%Y-%m-%d').date()
+    except ValueError:
+        return None
+
+
 def read_rta_trades() -> dict:
-    pattern = str(HEDGEYE_BASE / "RTA" / "real-time-alerts-history-*.csv")
-    path = newest_file(pattern)
+    print("\n── RTA ──")
+    path = newest_file(HEDGEYE_BASE / "RTA", "real-time-alerts-history-*.csv")
     if not path:
         warn("RTA: no file found")
         return {"rta": {"recent_trades": [], "stats": {}, "recently_traded_tickers": []}, "_source": None}
@@ -244,22 +261,34 @@ def read_rta_trades() -> dict:
     today      = date.today()
     cutoff_90d = today - timedelta(days=90)
     cutoff_60d = today - timedelta(days=60)
+    print(f"  [debug] today={today}  cutoff_90d={cutoff_90d}  cutoff_60d={cutoff_60d}")
 
     all_closed: list = []
+    skipped_open = skipped_date_err = total_rows = 0
 
     with open(path, newline='', encoding='utf-8-sig') as fh:
         reader = csv.DictReader(fh)
+        # Show column names so we can confirm field mapping
+        first = True
         for row in reader:
+            if first:
+                print(f"  [debug] CSV columns: {list(row.keys())}")
+                print(f"  [debug] First row sample: Close Date={row.get('Close Date')!r}  Close Price={row.get('Close Price')!r}")
+                first = False
+            total_rows += 1
+
             close_date_raw  = (row.get('Close Date')  or '').strip()
             close_price_raw = (row.get('Close Price') or '').strip()
             if not close_date_raw or not close_price_raw:
+                skipped_open += 1
                 continue  # open position — skip
 
-            close_date_str = close_date_raw[:10]
-            try:
-                close_date = datetime.strptime(close_date_str, '%Y-%m-%d').date()
-            except ValueError:
+            close_date = _parse_date(close_date_raw)
+            if close_date is None:
+                skipped_date_err += 1
                 continue
+
+            close_date_str = close_date.strftime('%Y-%m-%d')
 
             symbol   = (row.get('Symbol')   or '').strip()
             position = (row.get('Position') or '').strip().lower()
