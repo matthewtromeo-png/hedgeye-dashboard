@@ -2,17 +2,31 @@
 """
 build_macro_context.py
 ======================
-Stage 1: Excel / CSV sources only (no Claude API).
+Stage 1: Excel / CSV sources (no API).
+Stage 2: PDF extraction via Claude API (skipped with --stage1-only).
 
-Sources:
+Stage 1 sources:
   - etf pro dash board\etf-pro-all-active-tickers-*.xlsx
   - HAM holdings\ETF_Holdings*.csv
   - RTA\real-time-alerts-history-*.csv
-  - risk_range_tracker_excelworkbook.xlsx  (reuses import_official_levels logic)
+  - risk_range_tracker_excelworkbook.xlsx
+
+Stage 2 sources (PDFs → Claude API):
+  A  macro show slides\HE_TMS_*.pdf
+  B  Market situation report\*.pdf
+  C  signal strength list\*.pdf
+  D  Investing Ideas\*.pdf
+  E  Momentum Stock Tracker\*.pdf
+  F  macro research\*.pdf
+  G  BTC trend tracker\*.pdf
+  H  Founders Choice\*.pdf
+  I  macro show slides\macro show reports\*.pdf
 
 Output: project/data/macro_context.json
 """
 
+import argparse
+import base64
 import csv
 import glob
 import json
@@ -270,7 +284,6 @@ def read_rta_trades() -> dict:
 
     with open(path, newline='', encoding='utf-8-sig') as fh:
         reader = csv.DictReader(fh)
-        # Show column names so we can confirm field mapping
         first = True
         for row in reader:
             if first:
@@ -433,47 +446,307 @@ def read_risk_range_levels() -> dict:
     return {"levels": levels, "_source": RR_WORKBOOK.name}
 
 
+# ── STAGE 2: PDF EXTRACTION VIA CLAUDE API ────────────────────────────────────
+
+PDF_SOURCES = [
+    {
+        "key":    "macro_show",
+        "folder": HEDGEYE_BASE / "macro show slides",
+        "glob":   "HE_TMS_*.pdf",
+        "label":  "A: Macro Show Slides",
+        "prompt": (
+            "Extract these fields from the Hedgeye Macro Show presentation.\n"
+            "Return ONLY valid JSON with this exact structure (null for any field not found):\n"
+            "{\n"
+            '  "quad": {"monthly": <int 1-4>, "quarterly": <int 1-4>, "depth": <"SHALLOW"|"MODERATE"|"DEEP">},\n'
+            '  "vix": {"current": <float>, "lrr": <float>, "trr": <float>, "bucket": <"INVESTABLE"|"CAUTION"|"CRASH">},\n'
+            '  "cpi_nowcast": <float>,\n'
+            '  "growth_roc": <"ACCELERATING"|"DECELERATING">,\n'
+            '  "inflation_roc": <"ACCELERATING"|"DECELERATING">,\n'
+            '  "quad_sequence": <string showing next 4 quarters e.g. "2-2-2-3">,\n'
+            '  "high_beta_1m": <float, 1-month return % for high-beta factor bucket>,\n'
+            '  "low_beta_1m": <float, 1-month return % for low-beta factor bucket>,\n'
+            '  "keith_commentary": [<up to 5 key bullet points as strings>]\n'
+            "}"
+        ),
+    },
+    {
+        "key":    "msr",
+        "folder": HEDGEYE_BASE / "Market situation report",
+        "glob":   "*.pdf",
+        "label":  "B: Market Situation Report",
+        "prompt": (
+            "Extract these fields from the Hedgeye Market Situation Report (MSR) or Weekly Game Plan.\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
+            "{\n"
+            '  "gamma_exposure": <"POSITIVE"|"NEGATIVE"|"NEUTRAL">,\n'
+            '  "systematic_flow": <"BUYING"|"SELLING"|"NEUTRAL">,\n'
+            '  "pv_band": <"OVERBOUGHT"|"OVERSOLD"|"NEUTRAL">,\n'
+            '  "strategic_allocation": <"RISK_ON"|"RISK_OFF"|"NEUTRAL">,\n'
+            '  "spx_upper_pv": <float, upper price/volume level for SPX>,\n'
+            '  "spx_lower_pv": <float, lower price/volume level for SPX>,\n'
+            '  "gex_flip": <float, GEX zero or flip level for SPX>,\n'
+            '  "gvt": <float, gamma velocity threshold>,\n'
+            '  "realized_vol_10d": <float, 10-day realized volatility %>,\n'
+            '  "spx_last": <float, last SPX price>,\n'
+            '  "resistance": <float, key near-term resistance level>,\n'
+            '  "support": <float, key near-term support level>\n'
+            "}"
+        ),
+    },
+    {
+        "key":    "sss",
+        "folder": HEDGEYE_BASE / "signal strength list",
+        "glob":   "*.pdf",
+        "label":  "C: Signal Strength List",
+        "prompt": (
+            "Extract these fields from the Hedgeye Signal Strength Score (SSS) PDF.\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
+            "{\n"
+            '  "count": <int, total number of tickers currently on the signal strength list>,\n'
+            '  "added": [<ticker symbols added this week, e.g. ["LOTMY","CMI"]>],\n'
+            '  "removed": [<ticker symbols removed this week>],\n'
+            '  "tickers": [<every ticker symbol on the list in the order they appear>]\n'
+            "}"
+        ),
+    },
+    {
+        "key":    "investing_ideas",
+        "folder": HEDGEYE_BASE / "Investing Ideas",
+        "glob":   "*.pdf",
+        "label":  "D: Investing Ideas",
+        "prompt": (
+            "Extract all current long and short positions from this Hedgeye Investing Ideas newsletter.\n"
+            "Return ONLY valid JSON (null for missing fields):\n"
+            "{\n"
+            '  "longs": {\n'
+            '    "<TICKER>": {"lrr": <float lower risk range>, "trr": <float top risk range>, "thesis": <1-2 sentence summary>}\n'
+            "  },\n"
+            '  "shorts": {\n'
+            '    "<TICKER>": {"lrr": <float>, "trr": <float>, "thesis": <1-2 sentence summary>}\n'
+            "  }\n"
+            "}"
+        ),
+    },
+    {
+        "key":    "momo",
+        "folder": HEDGEYE_BASE / "Momentum Stock Tracker",
+        "glob":   "*.pdf",
+        "label":  "E: Momentum Stock Tracker",
+        "prompt": (
+            "Extract risk range and signal data for every ticker in the Hedgeye Momentum Stock Tracker.\n"
+            "Return ONLY valid JSON as a flat object keyed by ticker symbol (null for any missing value):\n"
+            "{\n"
+            '  "<TICKER>": {"lrr": <float lower risk range>, "trr": <float top risk range>, '
+            '"signal": <"BULLISH"|"BEARISH"|"NEUTRAL">, "close": <float last close price>}\n'
+            "}"
+        ),
+    },
+    {
+        "key":    "gip",
+        "folder": HEDGEYE_BASE / "macro research",
+        "glob":   "*.pdf",
+        "label":  "F: GIP / Inflation Nowcast",
+        "prompt": (
+            "Extract macro growth and inflation forecast data from this Hedgeye GIP (Growth, Inflation, Policy) "
+            "or Nowcast PDF.\n"
+            "Return ONLY valid JSON (null for missing fields):\n"
+            "{\n"
+            '  "cpi_nowcast": <float, current CPI nowcast %>,\n'
+            '  "cpi_trend": <"ACCELERATING"|"DECELERATING">,\n'
+            '  "forward_quads": {\n'
+            '    "<QNYY e.g. 2Q26>": {"quad": <int 1-4>, "gdp": <float % growth>, "cpi": <float % inflation>}\n'
+            "  }\n"
+            "}"
+        ),
+    },
+    {
+        "key":    "crypto",
+        "folder": HEDGEYE_BASE / "BTC trend tracker",
+        "glob":   "*.pdf",
+        "label":  "G: BTC Trend Tracker",
+        "prompt": (
+            "Extract risk range and signal data for all crypto assets in this Hedgeye BTC Trend Tracker PDF.\n"
+            "Return ONLY valid JSON as a flat object keyed by symbol (null for missing values):\n"
+            "{\n"
+            '  "<SYMBOL e.g. BTC>": {"lrr": <float lower risk range>, "trr": <float top risk range>, '
+            '"signal": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
+            "}"
+        ),
+    },
+    {
+        "key":    "founders_choice",
+        "folder": HEDGEYE_BASE / "Founders Choice",
+        "glob":   "*.pdf",
+        "label":  "H: Founders Choice",
+        "prompt": (
+            "Extract all sector long and short stock picks from this Hedgeye Founders Choice PDF.\n"
+            "Return ONLY valid JSON where keys are lowercase sector names (null if not found):\n"
+            "{\n"
+            '  "<sector e.g. industrials>": {"longs": [<ticker strings>], "shorts": [<ticker strings>]}\n'
+            "}"
+        ),
+    },
+    {
+        "key":    "macro_show_notes",
+        "folder": HEDGEYE_BASE / "macro show slides" / "macro show reports",
+        "glob":   "*.pdf",
+        "label":  "I: Macro Show Summary Notes",
+        "prompt": (
+            "Extract key takeaways from this Hedgeye Macro Show summary notes PDF.\n"
+            "Return ONLY valid JSON (null for missing fields):\n"
+            "{\n"
+            '  "key_points": [<up to 5 most important takeaways as strings>],\n'
+            '  "positioning_changes": [<any position adds, removes, or trims mentioned>],\n'
+            '  "keith_watching": [<catalysts, price levels, or events Keith is watching>]\n'
+            "}"
+        ),
+    },
+]
+
+
+def _call_claude_pdf(client, path: Path, prompt: str, label: str) -> dict | None:
+    """Send a single PDF to Claude API and return parsed JSON dict, or None on failure."""
+    size_kb = path.stat().st_size // 1024
+    print(f"  [API] Sending {path.name} ({size_kb} KB)...")
+    try:
+        pdf_b64 = base64.standard_b64encode(path.read_bytes()).decode('utf-8')
+        msg = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=2048,
+            system=(
+                "You are a financial data extractor. Extract ONLY the requested fields from "
+                "this Hedgeye research document. Return ONLY valid JSON, no other text."
+            ),
+            messages=[{
+                "role": "user",
+                "content": [
+                    {
+                        "type": "document",
+                        "source": {
+                            "type": "base64",
+                            "media_type": "application/pdf",
+                            "data": pdf_b64,
+                        },
+                    },
+                    {"type": "text", "text": prompt},
+                ],
+            }],
+        )
+        raw = msg.content[0].text.strip()
+        # Strip markdown code fences if the model wrapped the response
+        if raw.startswith('```'):
+            start = raw.index('{')
+            end   = raw.rindex('}') + 1
+            raw   = raw[start:end]
+        result = json.loads(raw)
+        print(f"  [API] OK — {len(result)} top-level keys returned")
+        return result
+    except json.JSONDecodeError as e:
+        warn(f"{label}: JSON parse failed — {e}")
+        return None
+    except Exception as e:
+        warn(f"{label}: API error — {e}")
+        return None
+
+
+def extract_pdf_data() -> dict:
+    """Stage 2: extract structured data from each PDF source via the Claude API."""
+    print("\n── PDF Extraction (Stage 2) ──")
+
+    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    if not api_key:
+        warn("ANTHROPIC_API_KEY not set — skipping PDF extraction")
+        return {"pdf": {}, "_pdf_sources": {}}
+
+    try:
+        import anthropic
+    except ImportError:
+        warn("anthropic not installed — run: pip install anthropic")
+        return {"pdf": {}, "_pdf_sources": {}}
+
+    client = anthropic.Anthropic(api_key=api_key)
+    results      = {}
+    sources_used = {}
+
+    for src in PDF_SOURCES:
+        key   = src["key"]
+        label = src["label"]
+        print(f"\n  {label}")
+        path = newest_file(src["folder"], src["glob"])
+        if not path:
+            warn(f"{label}: no PDF found — skipping")
+            results[key]      = None
+            sources_used[key] = None
+            continue
+        sources_used[key] = path.name
+        results[key] = _call_claude_pdf(client, path, src["prompt"], label)
+
+    return {"pdf": results, "_pdf_sources": sources_used}
+
+
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 
 def main():
-    print("build_macro_context.py — Stage 1 (CSV/Excel sources)")
+    parser = argparse.ArgumentParser(description="Build macro_context.json")
+    parser.add_argument(
+        '--stage1-only', action='store_true',
+        help='Skip PDF extraction (no Claude API calls) — faster for daily Excel/CSV updates',
+    )
+    args = parser.parse_args()
+
+    stage = "Stage 1 only (--stage1-only)" if args.stage1_only else "Stage 1 + 2"
+    print(f"build_macro_context.py — {stage}")
     print(f"Output: {OUTPUT_PATH}\n")
 
-    etf   = read_etf_pro()
-    ham   = read_ham_holdings()
-    rta   = read_rta_trades()
-    rr    = read_risk_range_levels()
+    etf = read_etf_pro()
+    ham = read_ham_holdings()
+    rta = read_rta_trades()
+    rr  = read_risk_range_levels()
 
     now = datetime.now(tz=timezone.utc)
+
+    sources_used = {
+        "etf_pro":      etf.pop("_source"),
+        "ham_holdings": ham.pop("_source"),
+        "rta":          rta.pop("_source"),
+        "risk_range":   rr.pop("_source"),
+    }
 
     output = {
         "generated_at": now.isoformat(),
         "source_date":  date.today().isoformat(),
-        "sources_used": {
-            "etf_pro":      etf.pop("_source"),
-            "ham_holdings": ham.pop("_source"),
-            "rta":          rta.pop("_source"),
-            "risk_range":   rr.pop("_source"),
-        },
+        "sources_used": sources_used,
         **etf,
         **ham,
         **rta,
         **rr,
     }
 
+    if not args.stage1_only:
+        pdf = extract_pdf_data()
+        # sources_used is the same dict object referenced inside output, so this updates both
+        sources_used.update(pdf.pop("_pdf_sources", {}))
+        output.update(pdf)
+
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as fh:
         json.dump(output, fh, indent=2, ensure_ascii=False)
 
     rta_data = output.get('rta', {})
-    print(f"  etf_rerank:              {len(output['etf_rerank'])} tickers")
-    print(f"  active_longs:            {len(output['active_longs'])}")
-    print(f"  active_shorts:           {len(output['active_shorts'])}")
-    print(f"  ham_holdings:            {len(output['ham_holdings'])} tickers")
+    pdf_data  = output.get('pdf', {})
+    print(f"\n── Summary ──")
+    print(f"  etf_rerank:              {len(output.get('etf_rerank', []))} tickers")
+    print(f"  active_longs:            {len(output.get('active_longs', []))}")
+    print(f"  active_shorts:           {len(output.get('active_shorts', []))}")
+    print(f"  ham_holdings:            {len(output.get('ham_holdings', []))} tickers")
     print(f"  rta.recent_trades (90d): {len(rta_data.get('recent_trades', []))}")
     print(f"  rta.recently_traded(60d):{len(rta_data.get('recently_traded_tickers', []))}")
     print(f"  rta.stats:               {rta_data.get('stats', {})}")
-    print(f"  levels:                  {len(output['levels'])} tickers")
+    print(f"  levels:                  {len(output.get('levels', {}))} tickers")
+    for k, v in pdf_data.items():
+        status = "OK" if v is not None else "null/failed"
+        print(f"  pdf.{k:<22} {status}")
     print(f"\nWritten: {OUTPUT_PATH}")
 
 
