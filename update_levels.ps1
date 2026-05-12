@@ -14,17 +14,21 @@ $DestHtml      = "$RepoDir\project\risk_range_dashboard.html"
 Write-Host "==> Importing official levels..." -ForegroundColor Cyan
 python $Script
 
+Write-Host "==> Building macro context..." -ForegroundColor Cyan
+python "$RepoDir\scripts\build_macro_context.py"
+
 Write-Host "==> Copying generated dashboard HTML..." -ForegroundColor Cyan
 Copy-Item -Path $GeneratedHtml -Destination $DestHtml -Force
 
 Write-Host "==> Staging files..." -ForegroundColor Cyan
 Set-Location $RepoDir
 git add project/data/official_levels.json
+git add project/data/macro_context.json
 git add project/risk_range_dashboard.html
 
 Write-Host "==> Committing..." -ForegroundColor Cyan
 $today = Get-Date -Format 'yyyy-MM-dd'
-git commit -m "Update levels $today"
+git commit -m "Update levels + macro context $today"
 
 Write-Host "==> Pushing to GitHub..." -ForegroundColor Cyan
 git push
