@@ -243,12 +243,14 @@ def _parse_duration(raw: str) -> str:
 
 
 def _parse_date(raw: str) -> date | None:
-    """Parse date from RTA format '2026-05-07 15:47:14 -0400' or plain 'YYYY-MM-DD'."""
-    s = raw.strip()[:10]  # take just YYYY-MM-DD prefix
-    try:
-        return datetime.strptime(s, '%Y-%m-%d').date()
-    except ValueError:
-        return None
+    """Parse RTA date strings: 'M/D/YYYY HH:MM', 'M/D/YYYY', or 'YYYY-MM-DD...'."""
+    s = raw.strip()
+    for fmt in ('%m/%d/%Y %H:%M', '%m/%d/%Y', '%Y-%m-%d'):
+        try:
+            return datetime.strptime(s[:len(fmt)], fmt).date()
+        except ValueError:
+            continue
+    return None
 
 
 def read_rta_trades() -> dict:
@@ -295,7 +297,8 @@ def read_rta_trades() -> dict:
             if not symbol:
                 continue
 
-            open_date_str = (row.get('Open Date') or '')[:10]
+            open_date_obj = _parse_date(row.get('Open Date') or '')
+            open_date_str = open_date_obj.strftime('%Y-%m-%d') if open_date_obj else ''
 
             try:
                 open_price = float((row.get('Open Price') or '').strip())
