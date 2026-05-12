@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-12T03:12:26.176756+00:00",
-  "source_date": "2026-05-11",
+  "generated_at": "2026-05-12T13:14:01.343550+00:00",
+  "source_date": "2026-05-12",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778512972.xlsx",
     "ham_holdings": "ETF_Holdings 5.8.2026.csv",
@@ -3060,24 +3060,14 @@
         "close_price": 71.7,
         "realized_return": 0.0119203,
         "duration": "TAIL"
-      },
-      {
-        "symbol": "RSI",
-        "position": "short",
-        "open_date": "2026-02-09",
-        "open_price": 17.765,
-        "close_date": "2026-02-10",
-        "close_price": 17.48,
-        "realized_return": 0.0160428,
-        "duration": "TAIL"
       }
     ],
     "stats": {
       "win_rate_long": 0.7463,
-      "win_rate_short": 0.8088,
+      "win_rate_short": 0.806,
       "avg_return_long": 0.0057,
       "avg_return_short": 0.0123,
-      "total_trades_90d": 135
+      "total_trades_90d": 134
     },
     "recently_traded_tickers": [
       "ACHC",
@@ -3115,7 +3105,6 @@
       "HYG",
       "IDX",
       "IHF",
-      "IVES",
       "JPM",
       "KMX",
       "KRE",
@@ -3154,7 +3143,6 @@
       "UTZ",
       "UUP",
       "WING",
-      "XLU",
       "XTL"
     ]
   },
@@ -3547,10 +3535,10 @@
       "low_beta_1m": -4.3,
       "keith_commentary": [
         "Long China (CNXT) vs. Short India (INDA) and Indonesia (IDX); China's Shanghai Comp ramping +1.1% to new Cycle Highs heading into #Quad1 Goldilocks for back-to-back quarters",
-        "WTI recovered the immediate-term TRADE level of $97.13 with upside target towards $110.19; remaining long Brent (BNO) and Dr. Copper (CPER) which hit all-time highs after +5.2% last week",
-        "NVDA + MU + AVGO = +21% positive impact on ATH Friday; OPEX pending with US Equity Vol in The Investable Bucket, keep buying Signal Strength Longs on correction days",
-        "South Korea's Tech Bubble continues to be bullish on the way up, +4.3%",
-        "US Equity Vol (VIX at 17.19) remains squarely in the Investable Bucket (VIX 9-19)"
+        "WTI recovered Immediate-term TRADE level of $97.13 with immediate-term upside back towards $110.19; remain long Brent (BNO) and Dr. Copper (CPER) which hit all-time highs after +5.2% last week",
+        "NVDA + MU + AVGO = +21% positive impact on ATH Friday; OPEX pending with US Equity Vol squarely in The Investable Bucket, keep buying Signal Strength Longs on correction days",
+        "South Korea's Tech Bubble continues bullish momentum, +4.3% overnight",
+        "VIX at 17.19 remains in the Investable Bucket (VIX 9-19), supporting continued long equity positioning"
       ]
     },
     "msr": {
@@ -3679,74 +3667,74 @@
         "DAR": {
           "lrr": 60.02,
           "trr": 65.91,
-          "thesis": "Rising diesel prices and widening crack spreads create a favorable margin environment for renewable diesel producers. DAR benefits from a structural cost advantage as its feedstock has risen more slowly than crude, with additional upside from EPA policy updates and its strategic partnership with Valero."
+          "thesis": "Rising diesel prices and widening crack spreads create a favorable margin environment for renewable diesel producers. DAR benefits from a structural cost advantage in feedstock and a strategic partnership with Valero enhancing scale and distribution."
         },
         "SWBI": {
           "lrr": 14.1,
           "trr": 15.9,
-          "thesis": "Improving production and rising plant utilization are expected to drive meaningful margin expansion from depressed levels. The company is gaining market share amid competitor distraction and industry consolidation, with asymmetric upside as earnings power builds."
+          "thesis": "Improving production and rising plant utilization are expected to drive meaningful margin expansion from depressed levels. The company is gaining market share amid competitor distraction with significant operating leverage from its fixed-cost structure."
         },
         "MUSA": {
           "lrr": 534.0,
           "trr": 635.0,
-          "thesis": "MUSA is levered to fuel price volatility and rate-of-change dynamics, driving both margin expansion and traffic through its price-led model. Its higher mix of gasoline, energy drinks, and nicotine sales positions it to benefit disproportionately from improving consumer activity and C-store category strength."
+          "thesis": "MUSA is levered to fuel price volatility and rate-of-change dynamics driving margin expansion and traffic through its price-led model. Its higher mix of gasoline, energy drinks, and nicotine sales positions it to benefit disproportionately from improving consumer activity."
         },
         "CZR": {
           "lrr": 27.01,
           "trr": 29.1,
-          "thesis": "Accelerating Las Vegas fundamentals and improving demand trends drive near-term earnings upside, with RevPAR growth, stable gaming performance, and a strengthening convention calendar supporting Q1 beats and continued momentum into Q2. CZR offers attractive risk/reward with ~35-40% upside potential, further supported by takeout optionality."
+          "thesis": "Accelerating Las Vegas fundamentals and improving demand trends drive near-term earnings upside with RevPAR growth and a strengthening convention calendar. CZR offers attractive risk/reward with ~35-40% upside potential, further supported by takeout optionality."
         },
         "ULS": {
           "lrr": 89.57,
           "trr": 108.0,
-          "thesis": "ULS is a high-quality, capital-light TIC franchise benefiting from a structural shift to a for-profit model, unlocking sustained margin expansion and disciplined capital allocation. The company is positioned at the center of durable secular tailwinds including rising global regulation, AI/data center buildout, and industrial complexity."
+          "thesis": "ULS is a high-quality, capital-light TIC franchise benefiting from a structural shift to a for-profit model unlocking sustained margin expansion and disciplined capital allocation. The company is positioned at the center of durable secular tailwinds including rising global regulation, AI/data center buildout, and industrial complexity."
         },
         "CAVA": {
           "lrr": 78.06,
           "trr": 97.39,
-          "thesis": "Sustained traffic growth, best-in-class unit economics, and a differentiated Mediterranean positioning support a path back to HSD/double-digit comps and multiple expansion. CAVA's reinvestment in food quality, labor, hospitality, and loyalty creates a traffic flywheel while peers lean more heavily on discounting."
+          "thesis": "Sustained traffic growth, best-in-class unit economics, and a differentiated Mediterranean positioning support a path back to HSD/double-digit comps and multiple expansion. CAVA's unit growth remains productive with infill expansion, rising AUVs, and direct share gains from nearby Chipotle locations."
         },
         "APD": {
           "lrr": 290.0,
           "trr": 307.0,
-          "thesis": "New leadership shifts the company away from uneconomic green capital deployment and back toward shareholder discipline, positioning the business to recover from several years of self-inflicted underperformance. Industrial gases remain one of the highest-quality and most structurally resilient industries within Materials, supported by outsourcing trends and pricing power."
+          "thesis": "New leadership shifts the company away from uneconomic green capital deployment back toward shareholder discipline, positioning the business to recover from years of self-inflicted underperformance. Industrial gases remain one of the highest-quality and most structurally resilient industries within Materials, supported by outsourcing trends and pricing power."
         },
         "PVH": {
           "lrr": 86.18,
           "trr": 94.59,
-          "thesis": "Accelerating Calvin Klein brand momentum and the ongoing recapture of key licenses from G-III are expected to drive a meaningful step-change in both revenue growth and margin expansion. Earnings power is viewed as capable of inflecting from roughly $10-11 toward $14-15 as the transition progresses and estimate revisions accelerate."
+          "thesis": "Accelerating Calvin Klein brand momentum and the ongoing recapture of key licenses from G-III are expected to drive a meaningful step-change in revenue growth and margin expansion. Earnings power is viewed as capable of inflecting from roughly $10-11 toward $14-15 as the transition progresses and estimate revisions accelerate."
         }
       },
       "shorts": {
         "ROP": {
           "lrr": 336.0,
           "trr": 360.0,
-          "thesis": "Roper Technologies remains a serial acquisition story dependent on perpetual, near-flawless capital allocation and ever-larger deals to sustain the growth narrative, obscuring underlying business quality and embedding significant execution risk. As software moats erode and niche verticals become more substitutable, the durability of Roper's portfolio is increasingly in question."
+          "thesis": "Roper Technologies remains a serial acquisition story dependent on perpetual, near-flawless capital allocation and ever-larger deals to sustain its growth narrative, obscuring underlying business quality and embedding significant execution risk. As software moats erode and niche verticals become more substitutable, the durability of Roper's portfolio is increasingly in question."
         },
         "RBLX": {
           "lrr": 36.36,
           "trr": 53.12,
-          "thesis": "Slowing user growth, reduced bookings guidance, and multiple near-term headwinds converge into a high-risk Q3 trough setup. Management has cut bookings guidance by ~14 points, with a high-probability downside window driven by toughest comps, age verification friction, and external competition from GTA 6."
+          "thesis": "Slowing user growth with proprietary data pointing to much lower DAU and bookings growth than investors saw last quarter, with management cutting bookings guidance by ~14 points. High-probability downside window into Q3 driven by toughest comps, age verification friction, and external competition from GTA 6."
         },
         "ONON": {
           "lrr": 33.07,
           "trr": 36.81,
-          "thesis": "The CEO departure signals an inflection toward slower growth while current profitability and expectations remain unsustainably high, with gross margins above 60% facing meaningful downside as scale drives margin normalization. Competitive pressures from Nike intensify and decelerating growth with overly optimistic sell-side assumptions set up for estimate cuts and multiple compression."
+          "thesis": "The CEO departure signals an inflection toward slower growth while current profitability and expectations remain unsustainably high, with gross margins above 60% facing meaningful downside as scale drives margin normalization. Competitive pressures from Nike are intensifying and decelerating growth with overly optimistic sell-side assumptions set up for estimate cuts and multiple compression."
         },
         "OLLI": {
           "lrr": 79.09,
           "trr": 88.9,
-          "thesis": "OLLI is underperforming despite what should be a peak operating environment, signaling structural weakness as slowing comps, declining store productivity, and overexpansion into lower-quality locations point to an inevitable trade-off between unit growth and margins. The stock faces meaningful downside as multiple compression accelerates with the business likely transitioning to ex-growth."
+          "thesis": "OLLI is underperforming despite what should be a peak operating environment, signaling structural weakness with slowing comps, declining store productivity, and overexpansion into lower-quality locations. The business is likely transitioning to ex-growth with valuation still in no man's land, facing meaningful downside as multiple compression accelerates."
         },
         "HCA": {
           "lrr": 412.0,
           "trr": 447.0,
-          "thesis": "Weak MA rate relief fails to offset broader structural pressure on hospital reimbursements and payer-driven cost containment, with fundamental trends deteriorating across key metrics including same-store admissions, wage inflation, and surgical volumes. Quad 3 macro headwinds and bearish Signal Strength support continued downside as earnings expectations reset lower."
+          "thesis": "Weak MA rate relief fails to offset broader structural pressure on hospital reimbursements and payer-driven cost containment, with fundamental trends deteriorating across same-store admissions, wage inflation, and surgical volumes. Quad 3 macro headwinds and bearish Signal Strength support continued downside as earnings expectations reset lower."
         },
         "WING": {
           "lrr": 120.0,
           "trr": 169.0,
-          "thesis": "Transaction data continues to deteriorate sharply with credit card activity down ~25% YoY and no evidence supporting the Street's expected same-store sales acceleration. Core initiatives including Smart Kitchen and loyalty are failing to drive incremental traffic, while declining AUVs and rising franchisee requirements point to a weaker unit economics model."
+          "thesis": "Transaction data continues to deteriorate sharply with recent credit card activity down ~25% YoY and a significant comp miss of -8.7% versus -5.4% expected. Core initiatives including Smart Kitchen and loyalty are failing to drive incremental traffic while declining AUVs and rising franchisee requirements point to a weaker unit economics model."
         }
       }
     },
@@ -3891,26 +3879,25 @@
     },
     "macro_show_notes": {
       "key_points": [
-        "Long China (CNXT) in Quad 1 setup vs. short India (INDA) and Indonesia (IDX) in Quad 3; Shanghai Composite up +1.1% to new cycle highs while India fell -1.2% and Indonesia -0.9%",
-        "Long inflation acceleration theme: WTI recovered $97.13 breakout level with upside target ~$110.19, Brent top-end near all-time high ~$117, Copper at all-time highs; remain long BNO and CPER",
-        "Factor positioning: long high beta growth, short low beta growth — high beta up 3.9% on the week and up 14% over one month vs. low beta down 2.3% and down 4%, an 1,800 bps divergence",
-        "Crypto rally broadening: Bitcoin at fourth straight all-time weekly closing high, Ethereum/Solana/Avalanche returning to bullish trend; Marathon Digital (MARA) and Circle (CRCL) cited as most bullish breakouts",
-        "VIX remains in 'investable bucket' (range ~16–19 handle), signaling dips in signal-strength longs like NVDA, MU, and AVGO should be bought on corrections"
+        "Long China (CNXT) on Quad 1 setup and strong signal; short India (INDA) on Quad 3 backdrop and oil exposure, and short Indonesia (IDX) on bounce to lower highs",
+        "Long inflation acceleration via Brent Oil (BNO) and Copper (CPER) at all-time highs; WTI recovered $97.13 breakout level with upside target toward $110.19",
+        "VIX remains in 'investable bucket' (range ~16–19 handle); strategy is to buy Signal Strength Longs on correction days, with NVDA as key example",
+        "Factor positioning strongly favors long high beta growth over short low beta growth — 1,800 bps divergence over one month (high beta +14% vs. low beta -4%)",
+        "Bitcoin at fourth straight all-time weekly closing high; broader crypto rally broadening into Ethereum, Solana, and Avalanche; Marathon Digital (MARA) and Circle (CRCL) highlighted as most bullish breakouts"
       ],
       "positioning_changes": [
-        "Gold reduced to minimum size — does not like bond yields rising into CPI",
-        "Returned to short side of Indonesia (IDX) on bounce to lower highs",
+        "Gold position reduced to minimum size due to rising bond yields into CPI",
+        "Returned to short side of Indonesia (IDX) on most recent bounce to lower highs",
+        "Hedgeye previously exited Utilities and Energy positions; those remain out",
         "Short palladium (PALL) added — down ~4% prior week, signal still working",
-        "Long soybeans (SOYB) confirmed and working",
-        "Long Canadian dollar (CAD) on pullbacks added/reaffirmed",
-        "Exited Utilities and Energy previously (already out on time)"
+        "Long soybeans (SOYB) reaffirmed — up nearly 1% on the morning of the show"
       ],
       "keith_watching": [
-        "CPI print expected in high 3s (3.6%–3.8%); bond market already pricing 'higher for longer'",
-        "10-year Treasury yield risk range: ~4.31% to 4.48%; MOVE Index confirming backdrop",
-        "WTI immediate-term breakout/breakdown level at $97.13; upside target $110.19",
-        "NVDA prior low-end risk range $195–$196 as buy zone; OPEX pending as timing catalyst",
-        "VIX risk range low end ~16, top end ~19-handle as threshold for 'investable bucket'"
+        "CPI print expected in the high 3s (3.6%–3.8%); bond market already pricing 'higher for longer'",
+        "10-year Treasury yield risk range: 4.31% to 4.48%; MOVE Index confirming backdrop",
+        "WTI immediate-term breakout/breakdown level at $97.13; upside target $110.19; Brent top-end near all-time high ~$117",
+        "OPEX (options expiration) pending — continuing to buy Signal Strength Longs on correction days",
+        "VIX risk range low end near 16, top end with a 19-handle; watching for volatility to remain investable"
       ]
     }
   }
