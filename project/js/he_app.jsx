@@ -442,7 +442,7 @@ const App = () => {
     {id:'etfpro',    label:'ETF Pro'},
     {id:'vol',       label:'Volatility'},
     {id:'research',  label:'Research'},
-    {id:'ingest',   label:'Ingest PDFs'},
+    {id:'ingest',   label:'Research Status'},
   ];
 
   const today = new Date().toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
@@ -533,7 +533,7 @@ const App = () => {
       {tab==='etfpro'   && <ETFProTab />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} />}
-      {tab==='ingest'   && <IngestTab onQuadUpdate={handleQuadUpdate} />}
+      {tab==='ingest'   && <ResearchStatusTab />}
 
       {/* PDF VIEWER */}
       <PdfViewer pdf={openPdf} onClose={()=>setOpenPdf(null)} />
