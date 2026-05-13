@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T15:31:07.340313+00:00",
+  "generated_at": "2026-05-13T17:05:13.210417+00:00",
   "source_date": "2026-05-13",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
@@ -13,7 +13,7 @@
     "early_look": "Hedgeye - Warrior #Quad2 Inflation Asset Allocations.pdf",
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_13_2026) _ Top Movers_ IBIT (+11), ALLW (+8), FXB (+3).pdf",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (+0.0%), XRP=BULLISH, COIN→SOL Backed lending, THYP→💪 Day 1, JPM Tokenized MMF #2.pdf",
-    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_13_2026.pdf",
+    "call_summary": "Hedgeye - Signal Strength Stocks_ 81 Stocks (2 Added, 8 Removed).pdf",
     "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Wednesday, May 13th, 2026.pdf",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 04, 2026.pdf|Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf",
     "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf",
@@ -4074,21 +4074,25 @@
     },
     "call_summary": {
       "date": "2026-05-13",
-      "quad": 2,
+      "quad": null,
       "key_points": [
-        "GIP Model May CPI Nowcast raised to 4.25% headline YoY; Q2 at 4.10%, Q3 at 4.32%, Q4 at 4.68%, indicating accelerating inflation trend",
-        "Bond futures pricing first Fed rate hike by March 2027 at 67% odds, rising to ~76% by April-June 2027",
-        "Short Treasuries and long commodities remain primary asset allocation calls; gold reduced to minimum in Quad 2",
-        "BTI elevated to Best Idea Long on nicotine deregulation tailwinds following FDA Commissioner Marty Makary's resignation",
-        "NVO elevated to Best Idea Long; Wegovy oral could generate ~2x consensus 2027 estimates with potential seven-handle stock price"
+        "Signal Strength Stocks list updated to 81 total stocks",
+        "2 stocks added: RHP and BTI",
+        "8 stocks removed: ALLY, ROST, CHRD, ONTO, TSN, RTO, PINS, CAKE",
+        "Top performer on the list is CAT with 163.3% gain since initial signal (352 days on list)",
+        "New feature introduced: Live Updates to Signal Strength Stocks List"
       ],
       "trades_mentioned": [
-        "BTI: Elevated from Long Bias to Best Idea Long",
-        "NVO: Elevated to Best Idea Long from Long Bench",
-        "CAT: Removed from Best Idea Long list due to infrastructure funding and gas tax policy risks",
-        "BOOT: Short with downside risk to guided comp growth ahead of Q4 FY26 earnings",
-        "U.S. dollar short position covered; long British pound maintained",
-        "Gold position reduced to minimum in Quad 2"
+        "Added RHP (GLL sector, analyst Sean Jenkins, entry price 107.1)",
+        "Added BTI (Consumer Staples sector, analyst Daniel Biolsi, entry price 64.6)",
+        "Removed ALLY",
+        "Removed ROST",
+        "Removed CHRD",
+        "Removed ONTO",
+        "Removed TSN",
+        "Removed RTO",
+        "Removed PINS",
+        "Removed CAKE"
       ],
       "keith_outlook": null
     },
