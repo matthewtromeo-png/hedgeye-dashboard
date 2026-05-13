@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-13T14:12:26.866643+00:00",
+  "generated_at": "2026-05-13T14:32:45.347872+00:00",
   "source_date": "2026-05-13",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
     "ham_holdings": "ETF_Holdings 5.13.2026.csv",
     "rta": "real-time-alerts-history-2026-05-13.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "macro_show": "HE_TMS_KM_EV_5.12.2026.pdf",
+    "macro_show": "HE_TMS_KM_RR_5.13.2026.pdf",
     "msr": "MSR_2.0.pdf",
     "sss": "Hedgeye - Signal Strength Stocks_ 87 Stocks (6 Added, 4 Removed).pdf",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (-0.5%), “Extraordinarily Low Correlation”, (more) Dispersion→ Perf_ 4 ↑,5 ↓, RRs_ 4_9 Upside_Downside.pdf",
@@ -14,11 +14,11 @@
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_12_2026) _ Top Movers_ EWC (+9), OAEM (+3), IBIT (+2).pdf",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (+0.0%), XRP=BULLISH, COIN→SOL Backed lending, THYP→💪 Day 1, JPM Tokenized MMF #2.pdf",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_13_2026.pdf",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Tuesday, May 12th, 2026.pdf",
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Wednesday, May 13th, 2026.pdf",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 04, 2026.pdf|Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf",
     "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf",
     "from_desk": "Macro_Week_Summary_Notes_5.1.2026.pdf|Macro_Week_Summary_Notes_5.8.2026.pdf",
-    "macro_research": "4a9cbb6dcc09"
+    "macro_research": "210a576224b4"
   },
   "etf_rerank": [
     "VYM",
@@ -1744,15 +1744,1410 @@
     }
   ],
   "rta": {
-    "recent_trades": [],
+    "recent_trades": [
+      {
+        "symbol": "KMX",
+        "position": "short",
+        "open_date": "2026-05-07",
+        "open_price": 39.6,
+        "close_date": "2026-05-11",
+        "close_price": 39.555,
+        "realized_return": 0.00113636,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EPHE",
+        "position": "short",
+        "open_date": "2026-05-07",
+        "open_price": 25.32,
+        "close_date": "2026-05-08",
+        "close_price": 25.19,
+        "realized_return": 0.00513428,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "THC",
+        "position": "short",
+        "open_date": "2026-05-05",
+        "open_price": 187.51,
+        "close_date": "2026-05-08",
+        "close_price": 190.97,
+        "realized_return": -0.0184523,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "OIH",
+        "position": "long",
+        "open_date": "2026-05-07",
+        "open_price": 418.52,
+        "close_date": "2026-05-08",
+        "close_price": 424.6,
+        "realized_return": 0.0145264,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CPB",
+        "position": "short",
+        "open_date": "2026-05-07",
+        "open_price": 21.27,
+        "close_date": "2026-05-08",
+        "close_price": 21.015,
+        "realized_return": 0.011988700000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "APD",
+        "position": "long",
+        "open_date": "2026-05-05",
+        "open_price": 297.51,
+        "close_date": "2026-05-08",
+        "close_price": 298.87,
+        "realized_return": 0.0045712700000000005,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PVH",
+        "position": "long",
+        "open_date": "2026-05-05",
+        "open_price": 88.465,
+        "close_date": "2026-05-06",
+        "close_price": 91.9,
+        "realized_return": 0.0388289,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MGM",
+        "position": "long",
+        "open_date": "2026-05-01",
+        "open_price": 38.43,
+        "close_date": "2026-05-06",
+        "close_price": 38.52,
+        "realized_return": 0.0023419200000000004,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "JPM",
+        "position": "long",
+        "open_date": "2026-05-04",
+        "open_price": 307.755,
+        "close_date": "2026-05-05",
+        "close_price": 309.81,
+        "realized_return": 0.00667739,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "KRE",
+        "position": "long",
+        "open_date": "2026-05-04",
+        "open_price": 68.925,
+        "close_date": "2026-05-05",
+        "close_price": 69.63,
+        "realized_return": 0.0102285,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CPER",
+        "position": "long",
+        "open_date": "2026-04-28",
+        "open_price": 36.265,
+        "close_date": "2026-05-05",
+        "close_price": 36.49,
+        "realized_return": 0.00620433,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MNDY",
+        "position": "short",
+        "open_date": "2026-05-01",
+        "open_price": 72.56,
+        "close_date": "2026-05-05",
+        "close_price": 74.92,
+        "realized_return": 0.0059046,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "HYG",
+        "position": "long",
+        "open_date": "2026-04-29",
+        "open_price": 80.0701,
+        "close_date": "2026-05-01",
+        "close_price": 80.07,
+        "realized_return": -1.2489099999999999e-06,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CAVA",
+        "position": "long",
+        "open_date": "2026-04-28",
+        "open_price": 91.1025,
+        "close_date": "2026-04-30",
+        "close_price": 93.49,
+        "realized_return": 0.0262067,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ULS",
+        "position": "long",
+        "open_date": "2026-04-24",
+        "open_price": 88.83,
+        "close_date": "2026-04-30",
+        "close_price": 90.62,
+        "realized_return": 0.020150800000000003,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UFO",
+        "position": "long",
+        "open_date": "2026-04-27",
+        "open_price": 50.509,
+        "close_date": "2026-04-30",
+        "close_price": 51.603,
+        "realized_return": 0.0216595,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "XTL",
+        "position": "long",
+        "open_date": "2026-04-28",
+        "open_price": 210.52,
+        "close_date": "2026-04-29",
+        "close_price": 214.06,
+        "realized_return": 0.0168155,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ACHC",
+        "position": "long",
+        "open_date": "2026-04-29",
+        "open_price": 27.37,
+        "close_date": "2026-04-29",
+        "close_price": 28.14,
+        "realized_return": 0.028133,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "FLO",
+        "position": "short",
+        "open_date": "2026-04-28",
+        "open_price": 9.01,
+        "close_date": "2026-04-29",
+        "close_price": 8.815,
+        "realized_return": 0.0216426,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "WING",
+        "position": "short",
+        "open_date": "2026-04-08",
+        "open_price": 170.725,
+        "close_date": "2026-04-28",
+        "close_price": 174.975,
+        "realized_return": -0.0248938,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CFG",
+        "position": "long",
+        "open_date": "2026-04-24",
+        "open_price": 63.825,
+        "close_date": "2026-04-27",
+        "close_price": 64.45,
+        "realized_return": 0.0097924,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ACHC",
+        "position": "long",
+        "open_date": "2026-04-24",
+        "open_price": 26.45,
+        "close_date": "2026-04-27",
+        "close_price": 27.53,
+        "realized_return": 0.040831799999999994,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ARGT",
+        "position": "long",
+        "open_date": "2026-04-23",
+        "open_price": 92.93,
+        "close_date": "2026-04-27",
+        "close_price": 92.75,
+        "realized_return": -0.00193694,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SPHR",
+        "position": "long",
+        "open_date": "2026-04-22",
+        "open_price": 128.128,
+        "close_date": "2026-04-24",
+        "close_price": 132.025,
+        "realized_return": 0.0304149,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "LOTMY",
+        "position": "long",
+        "open_date": "2026-04-21",
+        "open_price": 29.91,
+        "close_date": "2026-04-23",
+        "close_price": 30.45,
+        "realized_return": 0.0180542,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GII",
+        "position": "long",
+        "open_date": "2026-04-14",
+        "open_price": 77.009,
+        "close_date": "2026-04-23",
+        "close_price": 76.47,
+        "realized_return": -0.006999180000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EWW",
+        "position": "long",
+        "open_date": "2026-04-21",
+        "open_price": 78.4799,
+        "close_date": "2026-04-23",
+        "close_price": 78.72,
+        "realized_return": 0.00305938,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ARGT",
+        "position": "long",
+        "open_date": "2026-04-20",
+        "open_price": 93.94,
+        "close_date": "2026-04-21",
+        "close_price": 95.025,
+        "realized_return": 0.0115499,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PVH",
+        "position": "long",
+        "open_date": "2026-04-16",
+        "open_price": 88.11,
+        "close_date": "2026-04-20",
+        "close_price": 95.745,
+        "realized_return": 0.0866531,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CPB",
+        "position": "short",
+        "open_date": "2026-04-17",
+        "open_price": 21.395,
+        "close_date": "2026-04-17",
+        "close_price": 20.955,
+        "realized_return": 0.020565600000000003,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TSN",
+        "position": "long",
+        "open_date": "2026-04-15",
+        "open_price": 63.81,
+        "close_date": "2026-04-17",
+        "close_price": 64.37,
+        "realized_return": 0.00877605,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TJX",
+        "position": "long",
+        "open_date": "2026-04-14",
+        "open_price": 159.25,
+        "close_date": "2026-04-16",
+        "close_price": 158.54,
+        "realized_return": -0.0044584,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CZR",
+        "position": "long",
+        "open_date": "2026-04-14",
+        "open_price": 26.75,
+        "close_date": "2026-04-15",
+        "close_price": 27.23,
+        "realized_return": 0.0179439,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CASY",
+        "position": "long",
+        "open_date": "2026-04-13",
+        "open_price": 730.465,
+        "close_date": "2026-04-14",
+        "close_price": 737.185,
+        "realized_return": 0.00919962,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SWBI",
+        "position": "long",
+        "open_date": "2026-04-13",
+        "open_price": 14.27,
+        "close_date": "2026-04-14",
+        "close_price": 14.741,
+        "realized_return": 0.0330063,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UUP",
+        "position": "long",
+        "open_date": "2026-04-08",
+        "open_price": 27.56,
+        "close_date": "2026-04-14",
+        "close_price": 27.295,
+        "realized_return": -0.00961538,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ELF",
+        "position": "short",
+        "open_date": "2026-04-10",
+        "open_price": 65.375,
+        "close_date": "2026-04-13",
+        "close_price": 65.765,
+        "realized_return": -0.005965580000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CZR",
+        "position": "long",
+        "open_date": "2026-04-10",
+        "open_price": 26.32,
+        "close_date": "2026-04-13",
+        "close_price": 26.72,
+        "realized_return": 0.0151976,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SWBI",
+        "position": "long",
+        "open_date": "2026-04-09",
+        "open_price": 14.03,
+        "close_date": "2026-04-10",
+        "close_price": 14.49,
+        "realized_return": 0.0327869,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PSCH",
+        "position": "short",
+        "open_date": "2026-03-31",
+        "open_price": 41.0201,
+        "close_date": "2026-04-10",
+        "close_price": 41.89,
+        "realized_return": -0.021206700000000002,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "HCA",
+        "position": "short",
+        "open_date": "2026-04-07",
+        "open_price": 491.56,
+        "close_date": "2026-04-10",
+        "close_price": 499.675,
+        "realized_return": -0.0165087,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "USPH",
+        "position": "short",
+        "open_date": "2026-04-09",
+        "open_price": 78.065,
+        "close_date": "2026-04-10",
+        "close_price": 76.58,
+        "realized_return": 0.0190226,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IHF",
+        "position": "short",
+        "open_date": "2026-04-06",
+        "open_price": 42.95,
+        "close_date": "2026-04-10",
+        "close_price": 44.555,
+        "realized_return": -0.0110052,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CORN",
+        "position": "long",
+        "open_date": "2026-03-30",
+        "open_price": 18.426,
+        "close_date": "2026-04-10",
+        "close_price": 17.705,
+        "realized_return": -0.0391295,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "FICO",
+        "position": "short",
+        "open_date": "2026-04-02",
+        "open_price": 1089.11,
+        "close_date": "2026-04-09",
+        "close_price": 1048.51,
+        "realized_return": 0.0372781,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MTDR",
+        "position": "long",
+        "open_date": "2026-04-08",
+        "open_price": 59.56,
+        "close_date": "2026-04-09",
+        "close_price": 61.8401,
+        "realized_return": 0.0382824,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SGRY",
+        "position": "short",
+        "open_date": "2026-04-08",
+        "open_price": 12.91,
+        "close_date": "2026-04-09",
+        "close_price": 12.655,
+        "realized_return": 0.019752099999999998,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CANE",
+        "position": "long",
+        "open_date": "2026-04-01",
+        "open_price": 10.225,
+        "close_date": "2026-04-09",
+        "close_price": 9.5175,
+        "realized_return": -0.0691932,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "OLLI",
+        "position": "short",
+        "open_date": "2026-04-06",
+        "open_price": 97.92,
+        "close_date": "2026-04-08",
+        "close_price": 97.215,
+        "realized_return": 0.00719975,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MCO",
+        "position": "short",
+        "open_date": "2026-04-02",
+        "open_price": 440.435,
+        "close_date": "2026-04-07",
+        "close_price": 437.47,
+        "realized_return": 0.006731979999999999,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "DK",
+        "position": "long",
+        "open_date": "2026-04-06",
+        "open_price": 44.25,
+        "close_date": "2026-04-07",
+        "close_price": 45.09,
+        "realized_return": 0.0189831,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MARA",
+        "position": "short",
+        "open_date": "2026-04-06",
+        "open_price": 8.955,
+        "close_date": "2026-04-07",
+        "close_price": 8.555,
+        "realized_return": 0.0446678,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EWP",
+        "position": "short",
+        "open_date": "2026-03-31",
+        "open_price": 53.43,
+        "close_date": "2026-04-06",
+        "close_price": 55.04,
+        "realized_return": -0.0301329,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "RBLX",
+        "position": "short",
+        "open_date": "2026-04-02",
+        "open_price": 59.38,
+        "close_date": "2026-04-06",
+        "close_price": 57.045,
+        "realized_return": 0.039323000000000004,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "T",
+        "position": "long",
+        "open_date": "2026-04-02",
+        "open_price": 28.17,
+        "close_date": "2026-04-06",
+        "close_price": 28.47,
+        "realized_return": 0.010649599999999999,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TPYP",
+        "position": "long",
+        "open_date": "2026-03-31",
+        "open_price": 42.1799,
+        "close_date": "2026-04-06",
+        "close_price": 42.229,
+        "realized_return": 0.00116406,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "HELE",
+        "position": "short",
+        "open_date": "2026-04-01",
+        "open_price": 15.26,
+        "close_date": "2026-04-02",
+        "close_price": 14.43,
+        "realized_return": 0.0543906,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SGRY",
+        "position": "short",
+        "open_date": "2026-04-01",
+        "open_price": 12.25,
+        "close_date": "2026-04-02",
+        "close_price": 11.995,
+        "realized_return": 0.020816300000000003,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MPLX",
+        "position": "long",
+        "open_date": "2026-04-01",
+        "open_price": 55.99,
+        "close_date": "2026-04-02",
+        "close_price": 55.555,
+        "realized_return": -0.007769239999999999,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UTZ",
+        "position": "short",
+        "open_date": "2026-04-01",
+        "open_price": 7.925,
+        "close_date": "2026-04-02",
+        "close_price": 7.6,
+        "realized_return": 0.041009500000000004,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ENB",
+        "position": "long",
+        "open_date": "2026-04-01",
+        "open_price": 53.5008,
+        "close_date": "2026-04-02",
+        "close_price": 54.1319,
+        "realized_return": 0.0117961,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "KVYO",
+        "position": "short",
+        "open_date": "2026-03-31",
+        "open_price": 19.525,
+        "close_date": "2026-04-01",
+        "close_price": 19.33,
+        "realized_return": 0.0099872,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CPB",
+        "position": "short",
+        "open_date": "2026-03-30",
+        "open_price": 22.08,
+        "close_date": "2026-04-01",
+        "close_price": 21.99,
+        "realized_return": 0.00407609,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CZR",
+        "position": "long",
+        "open_date": "2026-03-30",
+        "open_price": 25.04,
+        "close_date": "2026-03-31",
+        "close_price": 26.57,
+        "realized_return": 0.0611022,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EWP",
+        "position": "long",
+        "open_date": "2026-03-31",
+        "open_price": 53.4,
+        "close_date": "2026-03-31",
+        "close_price": 53.4222,
+        "realized_return": 0.00041573,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "COLO",
+        "position": "short",
+        "open_date": "2026-03-24",
+        "open_price": 38.31,
+        "close_date": "2026-03-30",
+        "close_price": 38.49,
+        "realized_return": -0.00469851,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "FLO",
+        "position": "short",
+        "open_date": "2026-03-27",
+        "open_price": 8.545,
+        "close_date": "2026-03-30",
+        "close_price": 8.265,
+        "realized_return": 0.0327677,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ANF",
+        "position": "short",
+        "open_date": "2026-03-26",
+        "open_price": 90.485,
+        "close_date": "2026-03-27",
+        "close_price": 88.59,
+        "realized_return": 0.020942699999999998,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "JPM",
+        "position": "short",
+        "open_date": "2026-03-25",
+        "open_price": 295.19,
+        "close_date": "2026-03-27",
+        "close_price": 285.22,
+        "realized_return": 0.0337749,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SYF",
+        "position": "short",
+        "open_date": "2026-03-24",
+        "open_price": 67.53,
+        "close_date": "2026-03-27",
+        "close_price": 66.05,
+        "realized_return": 0.0219162,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PI",
+        "position": "short",
+        "open_date": "2026-03-24",
+        "open_price": 103.515,
+        "close_date": "2026-03-26",
+        "close_price": 101.2,
+        "realized_return": 0.022363900000000003,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GLD",
+        "position": "long",
+        "open_date": "2026-03-13",
+        "open_price": 463.45,
+        "close_date": "2026-03-26",
+        "close_price": 409.49,
+        "realized_return": -0.0733634,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IDX",
+        "position": "short",
+        "open_date": "2026-03-25",
+        "open_price": 13.9201,
+        "close_date": "2026-03-26",
+        "close_price": 13.676,
+        "realized_return": 0.0175358,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GIII",
+        "position": "short",
+        "open_date": "2026-03-24",
+        "open_price": 27.71,
+        "close_date": "2026-03-25",
+        "close_price": 26.425,
+        "realized_return": 0.046373199999999996,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ONON",
+        "position": "short",
+        "open_date": "2026-03-23",
+        "open_price": 40.18,
+        "close_date": "2026-03-25",
+        "close_price": 36.55,
+        "realized_return": 0.09034350000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TRP",
+        "position": "long",
+        "open_date": "2026-03-23",
+        "open_price": 63.185,
+        "close_date": "2026-03-24",
+        "close_price": 64.74,
+        "realized_return": 0.0246103,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "DDS",
+        "position": "short",
+        "open_date": "2026-03-20",
+        "open_price": 598.0,
+        "close_date": "2026-03-23",
+        "close_price": 574.485,
+        "realized_return": 0.0393227,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SWBI",
+        "position": "long",
+        "open_date": "2026-03-19",
+        "open_price": 13.77,
+        "close_date": "2026-03-20",
+        "close_price": 14.38,
+        "realized_return": 0.044299200000000004,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ANF",
+        "position": "short",
+        "open_date": "2026-03-19",
+        "open_price": 89.59,
+        "close_date": "2026-03-20",
+        "close_price": 89.02,
+        "realized_return": 0.00636232,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ELV",
+        "position": "short",
+        "open_date": "2026-03-16",
+        "open_price": 293.02,
+        "close_date": "2026-03-19",
+        "close_price": 295.32,
+        "realized_return": -0.00784929,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TRU",
+        "position": "short",
+        "open_date": "2026-03-18",
+        "open_price": 73.97,
+        "close_date": "2026-03-19",
+        "close_price": 71.89,
+        "realized_return": 0.0281195,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PI",
+        "position": "short",
+        "open_date": "2026-03-17",
+        "open_price": 101.445,
+        "close_date": "2026-03-18",
+        "close_price": 98.735,
+        "realized_return": 0.026714,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "BRBR",
+        "position": "short",
+        "open_date": "2026-03-16",
+        "open_price": 18.38,
+        "close_date": "2026-03-18",
+        "close_price": 18.12,
+        "realized_return": 0.0141458,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MSTY",
+        "position": "short",
+        "open_date": "2026-03-17",
+        "open_price": 25.425,
+        "close_date": "2026-03-18",
+        "close_price": 24.83,
+        "realized_return": 0.0234022,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "FRPT",
+        "position": "long",
+        "open_date": "2026-03-12",
+        "open_price": 78.54,
+        "close_date": "2026-03-17",
+        "close_price": 78.26,
+        "realized_return": -0.00356506,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MPLX",
+        "position": "long",
+        "open_date": "2026-03-13",
+        "open_price": 58.075,
+        "close_date": "2026-03-16",
+        "close_price": 58.29,
+        "realized_return": 0.00370211,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MOH",
+        "position": "short",
+        "open_date": "2026-03-12",
+        "open_price": 149.89,
+        "close_date": "2026-03-16",
+        "close_price": 147.65,
+        "realized_return": 0.014944299999999999,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "HSY",
+        "position": "long",
+        "open_date": "2026-03-09",
+        "open_price": 222.745,
+        "close_date": "2026-03-16",
+        "close_price": 220.44,
+        "realized_return": -0.0103482,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "NFLX",
+        "position": "long",
+        "open_date": "2026-03-12",
+        "open_price": 94.695,
+        "close_date": "2026-03-16",
+        "close_price": 95.355,
+        "realized_return": 0.00696975,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CRWV",
+        "position": "short",
+        "open_date": "2026-03-12",
+        "open_price": 80.95,
+        "close_date": "2026-03-13",
+        "close_price": 80.615,
+        "realized_return": 0.00413836,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IVES",
+        "position": "short",
+        "open_date": "2026-03-11",
+        "open_price": 30.7399,
+        "close_date": "2026-03-12",
+        "close_price": 30.14,
+        "realized_return": 0.019515400000000002,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "COLO",
+        "position": "short",
+        "open_date": "2026-03-11",
+        "open_price": 38.7879,
+        "close_date": "2026-03-12",
+        "close_price": 38.2,
+        "realized_return": 0.0151568,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "XLU",
+        "position": "long",
+        "open_date": "2026-03-11",
+        "open_price": 46.0708,
+        "close_date": "2026-03-12",
+        "close_price": 46.64,
+        "realized_return": 0.0123549,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PZZA",
+        "position": "short",
+        "open_date": "2026-03-10",
+        "open_price": 32.915,
+        "close_date": "2026-03-11",
+        "close_price": 38.195,
+        "realized_return": -0.160413,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "DAR",
+        "position": "long",
+        "open_date": "2026-03-10",
+        "open_price": 51.905,
+        "close_date": "2026-03-11",
+        "close_price": 54.31,
+        "realized_return": 0.046334600000000004,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PEP",
+        "position": "long",
+        "open_date": "2026-03-04",
+        "open_price": 163.83,
+        "close_date": "2026-03-10",
+        "close_price": 162.55,
+        "realized_return": -0.00781298,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TLT",
+        "position": "long",
+        "open_date": "2026-03-05",
+        "open_price": 88.725,
+        "close_date": "2026-03-10",
+        "close_price": 88.83,
+        "realized_return": 0.00118343,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "OSK",
+        "position": "long",
+        "open_date": "2026-03-04",
+        "open_price": 166.74,
+        "close_date": "2026-03-10",
+        "close_price": 158.74,
+        "realized_return": -0.007751590000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PATH",
+        "position": "short",
+        "open_date": "2026-03-06",
+        "open_price": 11.5686,
+        "close_date": "2026-03-10",
+        "close_price": 11.525,
+        "realized_return": 0.00376882,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ROP",
+        "position": "short",
+        "open_date": "2026-02-24",
+        "open_price": 336.61,
+        "close_date": "2026-03-09",
+        "close_price": 360.645,
+        "realized_return": -0.053208700000000005,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "AFRM",
+        "position": "short",
+        "open_date": "2026-03-05",
+        "open_price": 52.2099,
+        "close_date": "2026-03-09",
+        "close_price": 49.855,
+        "realized_return": 0.0451045,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SPGI",
+        "position": "short",
+        "open_date": "2026-03-02",
+        "open_price": 442.2,
+        "close_date": "2026-03-09",
+        "close_price": 434.735,
+        "realized_return": 0.0168815,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "WMS",
+        "position": "long",
+        "open_date": "2026-03-02",
+        "open_price": 168.42,
+        "close_date": "2026-03-09",
+        "close_price": 139.26,
+        "realized_return": -0.112711,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SKYY",
+        "position": "short",
+        "open_date": "2026-03-05",
+        "open_price": 112.865,
+        "close_date": "2026-03-09",
+        "close_price": 111.24,
+        "realized_return": 0.0143977,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MNDY",
+        "position": "short",
+        "open_date": "2026-03-05",
+        "open_price": 79.54,
+        "close_date": "2026-03-06",
+        "close_price": 77.5,
+        "realized_return": 0.0256475,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "DOV",
+        "position": "long",
+        "open_date": "2026-02-24",
+        "open_price": 231.09,
+        "close_date": "2026-03-05",
+        "close_price": 219.92,
+        "realized_return": -0.0246693,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EFX",
+        "position": "short",
+        "open_date": "2026-02-25",
+        "open_price": 195.67,
+        "close_date": "2026-03-04",
+        "close_price": 205.825,
+        "realized_return": -0.0161187,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EXPGY",
+        "position": "short",
+        "open_date": "2026-02-25",
+        "open_price": 36.27,
+        "close_date": "2026-03-03",
+        "close_price": 35.39,
+        "realized_return": 0.0242625,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UAE",
+        "position": "long",
+        "open_date": "2026-02-27",
+        "open_price": 21.195,
+        "close_date": "2026-03-03",
+        "close_price": 19.42,
+        "realized_return": -0.0837462,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "RBLX",
+        "position": "short",
+        "open_date": "2026-02-25",
+        "open_price": 66.505,
+        "close_date": "2026-03-02",
+        "close_price": 66.9,
+        "realized_return": -0.0059394,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EXPE",
+        "position": "short",
+        "open_date": "2026-02-27",
+        "open_price": 216.0,
+        "close_date": "2026-03-02",
+        "close_price": 214.045,
+        "realized_return": 0.00905093,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EIS",
+        "position": "long",
+        "open_date": "2026-02-24",
+        "open_price": 120.6,
+        "close_date": "2026-03-02",
+        "close_price": 124.21,
+        "realized_return": 0.0299337,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "BLOK",
+        "position": "short",
+        "open_date": "2026-02-25",
+        "open_price": 55.635,
+        "close_date": "2026-02-27",
+        "close_price": 52.99,
+        "realized_return": 0.047542,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "LII",
+        "position": "long",
+        "open_date": "2026-02-25",
+        "open_price": 535.64,
+        "close_date": "2026-02-26",
+        "close_price": 538.09,
+        "realized_return": 0.00457397,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UPS",
+        "position": "long",
+        "open_date": "2026-02-25",
+        "open_price": 113.25,
+        "close_date": "2026-02-26",
+        "close_price": 115.42,
+        "realized_return": 0.0191611,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CANE",
+        "position": "short",
+        "open_date": "2026-02-23",
+        "open_price": 9.298,
+        "close_date": "2026-02-25",
+        "close_price": 9.275,
+        "realized_return": 0.00247365,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "SFM",
+        "position": "short",
+        "open_date": "2026-02-23",
+        "open_price": 72.11,
+        "close_date": "2026-02-24",
+        "close_price": 71.21,
+        "realized_return": 0.0124809,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "FXF",
+        "position": "long",
+        "open_date": "2026-02-19",
+        "open_price": 114.09,
+        "close_date": "2026-02-23",
+        "close_price": 114.2,
+        "realized_return": 0.0009597690000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PYPL",
+        "position": "short",
+        "open_date": "2026-02-19",
+        "open_price": 41.28,
+        "close_date": "2026-02-23",
+        "close_price": 40.82,
+        "realized_return": 0.011143400000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UPS",
+        "position": "long",
+        "open_date": "2026-02-18",
+        "open_price": 115.7,
+        "close_date": "2026-02-20",
+        "close_price": 116.33,
+        "realized_return": 0.00544512,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GLIN",
+        "position": "long",
+        "open_date": "2026-02-19",
+        "open_price": 46.15,
+        "close_date": "2026-02-20",
+        "close_price": 46.6,
+        "realized_return": 0.00975081,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "MOH",
+        "position": "short",
+        "open_date": "2026-02-19",
+        "open_price": 147.01,
+        "close_date": "2026-02-20",
+        "close_price": 145.84,
+        "realized_return": 0.00795864,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TRU",
+        "position": "short",
+        "open_date": "2026-02-18",
+        "open_price": 76.56,
+        "close_date": "2026-02-20",
+        "close_price": 75.8,
+        "realized_return": 0.009926850000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "HUBS",
+        "position": "short",
+        "open_date": "2026-02-18",
+        "open_price": 247.98,
+        "close_date": "2026-02-19",
+        "close_price": 241.3,
+        "realized_return": 0.026937700000000002,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "HSY",
+        "position": "long",
+        "open_date": "2026-02-18",
+        "open_price": 218.55,
+        "close_date": "2026-02-19",
+        "close_price": 219.38,
+        "realized_return": 0.0037977600000000003,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "PEP",
+        "position": "long",
+        "open_date": "2026-02-17",
+        "open_price": 161.43,
+        "close_date": "2026-02-18",
+        "close_price": 164.025,
+        "realized_return": 0.016075100000000002,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "XOM",
+        "position": "long",
+        "open_date": "2026-02-17",
+        "open_price": 146.25,
+        "close_date": "2026-02-18",
+        "close_price": 149.355,
+        "realized_return": 0.021230799999999998,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IHF",
+        "position": "short",
+        "open_date": "2026-02-13",
+        "open_price": 46.2,
+        "close_date": "2026-02-18",
+        "close_price": 46.1473,
+        "realized_return": 0.00114069,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GOOGL",
+        "position": "long",
+        "open_date": "2026-02-05",
+        "open_price": 330.955,
+        "close_date": "2026-02-17",
+        "close_price": 301.56,
+        "realized_return": -0.0888187,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "JBHT",
+        "position": "long",
+        "open_date": "2026-02-13",
+        "open_price": 219.49,
+        "close_date": "2026-02-17",
+        "close_price": 223.29,
+        "realized_return": 0.0173129,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GME",
+        "position": "long",
+        "open_date": "2026-02-12",
+        "open_price": 23.435,
+        "close_date": "2026-02-17",
+        "close_price": 23.62,
+        "realized_return": 0.007894179999999999,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IDX",
+        "position": "short",
+        "open_date": "2026-02-10",
+        "open_price": 15.968,
+        "close_date": "2026-02-13",
+        "close_price": 15.9389,
+        "realized_return": 0.0018223900000000001,
+        "duration": "TAIL"
+      }
+    ],
     "stats": {
-      "win_rate_long": null,
-      "win_rate_short": null,
-      "avg_return_long": null,
-      "avg_return_short": null,
-      "total_trades_90d": 0
+      "win_rate_long": 0.7463,
+      "win_rate_short": 0.8,
+      "avg_return_long": 0.0057,
+      "avg_return_short": 0.0113,
+      "total_trades_90d": 132
     },
-    "recently_traded_tickers": []
+    "recently_traded_tickers": [
+      "ACHC",
+      "ANF",
+      "APD",
+      "ARGT",
+      "BRBR",
+      "CANE",
+      "CASY",
+      "CAVA",
+      "CFG",
+      "COLO",
+      "CORN",
+      "CPB",
+      "CPER",
+      "CZR",
+      "DDS",
+      "DK",
+      "ELF",
+      "ELV",
+      "ENB",
+      "EPHE",
+      "EWP",
+      "EWW",
+      "FICO",
+      "FLO",
+      "FRPT",
+      "GII",
+      "GIII",
+      "GLD",
+      "HCA",
+      "HELE",
+      "HSY",
+      "HYG",
+      "IDX",
+      "IHF",
+      "JPM",
+      "KMX",
+      "KRE",
+      "KVYO",
+      "LOTMY",
+      "MARA",
+      "MCO",
+      "MGM",
+      "MNDY",
+      "MOH",
+      "MPLX",
+      "MSTY",
+      "MTDR",
+      "NFLX",
+      "OIH",
+      "OLLI",
+      "ONON",
+      "PI",
+      "PSCH",
+      "PVH",
+      "RBLX",
+      "SGRY",
+      "SPHR",
+      "SWBI",
+      "SYF",
+      "T",
+      "THC",
+      "TJX",
+      "TPYP",
+      "TRP",
+      "TRU",
+      "TSN",
+      "UFO",
+      "ULS",
+      "USPH",
+      "UTZ",
+      "UUP",
+      "WING",
+      "XTL"
+    ]
   },
   "levels": {
     "UST30Y": {
@@ -2123,32 +3518,7 @@
     }
   },
   "pdf": {
-    "macro_show": {
-      "quad": {
-        "monthly": null,
-        "quarterly": 2,
-        "depth": "SHALLOW"
-      },
-      "vix": {
-        "current": 18.38,
-        "lrr": null,
-        "trr": null,
-        "bucket": null
-      },
-      "cpi_nowcast": 4.06,
-      "growth_roc": "ACCELERATING",
-      "inflation_roc": "ACCELERATING",
-      "quad_sequence": "2-3-2-1",
-      "high_beta_1m": 14.8,
-      "low_beta_1m": -3.4,
-      "keith_commentary": [
-        "UK 10-year bond yields rose +13bps to new Quad3 Stagflation Cycle Highs, continuing the trend seen in British, Japanese, German, and UST yields over the last 3 months.",
-        "USA CPI accelerating today should surprise no one; Hedgeye remains short TLT and ZROZ vs. long Rates Rising (EQRR) and STIP.",
-        "Copper is at all-time highs with a BROADENING of Industrial Pricing Inflation across Gallium, Tin, and other industrial metals; WTI TRADE Breakout Level = $97.",
-        "Best way to position for accelerating and broadening inflation is to be Long Commodities (COM) and their Sector Styles; big bounce off the LRR in Oil Services (OIH).",
-        "Long Industrials (XLI) vs. Short Healthcare (XLV) continues to print Quad2 long/short alpha; Hedgeye's May CPI nowcast is 4.06% y/y."
-      ]
-    },
+    "macro_show": null,
     "msr": null,
     "sss": {
       "count": 87,
@@ -2686,25 +4056,29 @@
     },
     "macro_show_notes": {
       "key_points": [
-        "Inflation acceleration was already priced in by bond markets; UK 10-year yield near highest since 1998 and Japan at new cycle high confirm Quad 2/Quad 3 conditions globally.",
-        "Copper hit all-time highs, and industrial metals (gallium, tin, indium, aluminum) are broadening the inflation impulse through the supply chain; WTI trade signal triggered above $97.",
-        "Keith is at 29 out of max 30 positions, advocating aggressive gross exposure over cash in Quad 2 regime — 'spread your wings' and reduce cash.",
-        "S&P 500 made its 16th all-time high of 2026; bear capitulation underway with profitless tech up 3.5% on a day the S&P was only up 0.2%, squeezing shorts in SOXS and small-cap bear ETFs.",
-        "India identified as a short due to poor Quad path (3, 3, 4) and vulnerability as a 'short oil' economy, paired against Hedgeye's long oil thesis."
+        "Inflation is accelerating with the Hedgeye Inflation Nowcast at +4.25% for May, up ~99 basis points over two months from 2.39% in January, making short bonds and long commodities the core playbook.",
+        "Commodities are Hedgeye's biggest asset allocation call of 2026, relevant in both Quad 2 and Quad 3 regimes due to accelerating inflation as the common denominator.",
+        "Small caps (IWM) should be bought on dips in Quad 2 but are a relative short in Quad 3, making the call regime-dependent rather than permanently bullish.",
+        "TLT and ZROZ were covered down to minimum position size as risk management after 10-year and 30-year yields hit the top end of published risk ranges — not a bullish reversal on bonds.",
+        "META was called a 'raging short' with implied volatility at a deep discount, while China is a long paired against short Indonesia, India, and the Philippines."
       ],
       "positioning_changes": [
-        "Covered Tesla (TSLA) short after it returned to bullish trend.",
-        "Bought more Brent Oil (BNO) last week when it was 'on sale'.",
-        "Bought IWM near the low end of the risk range last week.",
-        "Grossed up Oil Services (OIH) position after real-time buy signal near low end of risk range last week.",
-        "Told clients to buy Nvidia (NVDA); setup worked."
+        "Covered TLT and ZROZ down to minimum position size due to yields hitting top of risk range.",
+        "Added to IWM (small caps) on intraday dip of ~2.25-2.5%.",
+        "Building Bitcoin (IBIT) on down days alongside small caps.",
+        "Added to Canada ETF (EWC) on the dip.",
+        "Added additional EM exposure (OAEM) on the dip.",
+        "Gold reduced to minimum position size after breaking medium-term trade level.",
+        "Novo Nordisk flipped back to bullish; covered weight-loss drug ETF exposure.",
+        "Reloading on XLV (Health Care ETF) after prior day's bounce.",
+        "India (INDA) covered down to minimum on oversold signal, then re-entered short."
       ],
       "keith_watching": [
-        "Friday options expiration as a potential positioning reset event, with VIX near top of chop bucket around 19.19.",
-        "WTI crude price level above $97 as key immediate-term trade signal for oil thesis.",
-        "Bank of England policy decision risk — potential policy mistake of raising rates into a slowdown, supporting long GBP vs USD.",
-        "India's Quad path of 3, 3, 4 over the next three months as confirmation of short thesis.",
-        "Trending volatility on Bitcoin — declining trending volatility is the signal for 'buy the dips' setup."
+        "Bond yields (10-year and 30-year) relative to Hedgeye's published risk ranges — key trigger for adjusting TLT/ZROZ position size.",
+        "Hedgeye Inflation Nowcast trajectory, currently at +4.25% for May, as the primary regime signal.",
+        "VIX level relative to trend: VIX below 19 vs. trend near 22, used to identify dip-buying opportunities especially in small caps.",
+        "Implied volatility premium vs. realized volatility (IWM at 36% premium) as a signal to buy small-cap dips.",
+        "Japan's 10-year government bond yield hitting new cycle highs as confirmation of global inflation rising."
       ]
     },
     "investing_ideas": {
@@ -2785,6 +4159,43 @@
     },
     "founders_choice": null,
     "from_desk": null,
-    "macro_research": null
+    "macro_research": {
+      "cpi_nowcast": 4.0,
+      "cpi_upside": 4.11,
+      "cpi_downside": 3.89,
+      "cpi_trend": "ACCELERATING",
+      "quarterly_quad": 2,
+      "monthly_quad": 2,
+      "quad_sequence": "2-2-2-3",
+      "forward_quads": {
+        "2Q26": {
+          "quad": 2,
+          "gdp_qoq": 3.27,
+          "cpi_yoy": 3.85
+        },
+        "3Q26": {
+          "quad": 3,
+          "gdp_qoq": 2.14,
+          "cpi_yoy": 4.05
+        },
+        "4Q26": {
+          "quad": 2,
+          "gdp_qoq": 2.33,
+          "cpi_yoy": 4.4
+        },
+        "1Q27": {
+          "quad": 4,
+          "gdp_qoq": 1.62,
+          "cpi_yoy": 4.16
+        }
+      },
+      "key_themes": [
+        "Flation Now, Stag-On-A-Lag: Hybrid Quad2-Quad3 driven by post-shutdown momentum, tax stimulus, and Iran/Hormuz energy supply shock",
+        "USA Diverging Profit Cycles: Q2 2026 is a RoC acceleration window for both Mag7 and S&P 493, with Energy and Materials leading sector earnings growth",
+        "Short Treasuries: Rising inflation with Fed sidelined by political pressure creates persistent long-end yield pressure; short TLT and ZROZ",
+        "Long Gold: Dollar debasement hedge amid fiscal deterioration, war spending, and eventual Fed policy capitulation; active since Feb 2025 up +61%",
+        "Strait of Hormuz supply shock is the largest since 1973 with 8-10M bbl/d net supply gap, critical storage drawdown timeline in late July, and no near-term resolution"
+      ]
+    }
   }
 }
