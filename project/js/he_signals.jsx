@@ -267,128 +267,146 @@ const VolTab = ({quad}) => {
   );
 };
 
-// ── RESEARCH TAB ───────────────────────────────────────────────────
-const ResearchTab = ({onOpenPdf}) => {
-  const [search, setSearch] = React.useState('');
-  const [expanded, setExpanded] = React.useState(new Set(['Founder\'s Choice']));
-  const fileInputRef = React.useRef(null);
-  const [pendingFile, setPendingFile] = React.useState(null);
+// ── DAILY BRIEF TAB ────────────────────────────────────────────────
+const ResearchTab = ({onOpenPdf, macroCtx}) => {
+  const loading = macroCtx === null;
 
-  const toggle = cat => setExpanded(prev => {
-    const next = new Set(prev);
-    next.has(cat) ? next.delete(cat) : next.add(cat);
-    return next;
-  });
+  const showNotes   = macroCtx?.pdf?.macro_show_notes   ?? {};
+  const callSumm    = macroCtx?.pdf?.call_summary        ?? {};
+  const keyPts      = showNotes.key_points       ?? [];
+  const positioning = showNotes.positioning_changes ?? [];
+  const watchlist   = showNotes.keith_watching   ?? [];
+  const callPts     = callSumm.key_points         ?? [];
+  const callDate    = callSumm.date               ?? null;
+  const callQuad    = callSumm.quad               ?? null;
+  const trades      = callSumm.trades_mentioned   ?? [];
 
-  const handleProjectPdf = (path, name) => {
-    onOpenPdf({url: path, title: name, isProject: true});
+  const genAt = macroCtx?.generated_at
+    ? new Date(macroCtx.generated_at).toLocaleString('en-US', {
+        month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'
+      })
+    : null;
+
+  const hasAnyContent = keyPts.length > 0 || callPts.length > 0 || positioning.length > 0 || watchlist.length > 0;
+
+  const SectionCard = ({title, badge, items, accentColor}) => {
+    if (!items || items.length === 0) return null;
+    return (
+      <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'16px 20px',marginBottom:14}}>
+        <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+          <div style={{width:3,height:14,borderRadius:2,background:accentColor||'#1A4D8F',flexShrink:0}} />
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+            textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>{title}</span>
+          {badge && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,
+              background:'#F4F3EF',color:'#9A9790',padding:'1px 6px',borderRadius:2,marginLeft:'auto'}}>
+              {badge}
+            </span>
+          )}
+        </div>
+        <div style={{display:'flex',flexDirection:'column',gap:6}}>
+          {items.map((pt,i) => (
+            <div key={i} style={{display:'flex',gap:8,alignItems:'flex-start'}}>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
+                color:accentColor||'#7A7770',marginTop:3,flexShrink:0}}>›</span>
+              <span style={{fontSize:12,color:'#1A1A18',lineHeight:1.55}}>{pt}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   };
 
-  const handlePickFile = (name) => {
-    setPendingFile(name);
-    fileInputRef.current.click();
-  };
+  if (loading) {
+    return (
+      <div style={{padding:'20px 24px',maxWidth:900}}>
+        <LoadingSpinner msg="Loading pipeline data…" />
+      </div>
+    );
+  }
 
-  const handleFileChosen = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const url = URL.createObjectURL(file);
-    onOpenPdf({url, title: pendingFile || file.name});
-    e.target.value = '';
-  };
-
-  const filtered = window.HE.RESEARCH.map(cat => ({
-    ...cat,
-    files: search ? cat.files.filter(f => f.name.toLowerCase().includes(search.toLowerCase())) : cat.files,
-  })).filter(cat => cat.files.length > 0);
+  if (!hasAnyContent) {
+    return (
+      <div style={{padding:'20px 24px',maxWidth:900}}>
+        <div style={{background:'#F9F8F5',border:'1px dashed #D0CCC4',borderRadius:8,
+          padding:'32px 24px',textAlign:'center'}}>
+          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:600,
+            color:'#1A1A18',marginBottom:8}}>No brief available yet</div>
+          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#7A7770',lineHeight:1.7}}>
+            Run <strong style={{color:'#1A1A18'}}>build_macro_context.py</strong> with PDF extraction
+            to populate the Daily Brief. Check the <strong style={{color:'#1A4D8F'}}>Research Status</strong> tab for pipeline state.
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div style={{padding:'20px 24px', maxWidth:1100}}>
-      {/* Hidden file input */}
-      <input ref={fileInputRef} type="file" accept=".pdf" onChange={handleFileChosen}
-        style={{display:'none'}} />
+    <div style={{padding:'20px 24px',maxWidth:900}}>
+      {/* Header */}
+      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:18}}>
+        <div style={{display:'flex',alignItems:'center',gap:8}}>
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:700,color:'#1A1A18'}}>
+            Daily Brief
+          </span>
+          {callQuad && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+              padding:'2px 8px',borderRadius:3,
+              background: window.HE?.QUADS?.['Q'+callQuad]?.bg || '#F4F3EF',
+              color: window.HE?.QUADS?.['Q'+callQuad]?.color || '#1A1A18',
+              border: `1px solid ${window.HE?.QUADS?.['Q'+callQuad]?.color || '#E4E1DA'}`}}>
+              Q{callQuad}
+            </span>
+          )}
+        </div>
+        {genAt && (
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>
+            Updated {genAt}
+          </span>
+        )}
+      </div>
 
-      {/* Empty state — shown when no research loaded */}
-      {window.HE.RESEARCH.length === 0 && (
-        <div style={{background:'#F9F8F5',border:'1px dashed #D0CCC4',borderRadius:8,
-          padding:'32px 24px',marginBottom:16,textAlign:'center'}}>
-          <div style={{fontSize:28,marginBottom:12}}>📂</div>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:600,
-            color:'#1A1A18',marginBottom:8}}>No research loaded yet</div>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#7A7770',
-            lineHeight:1.7,maxWidth:480,margin:'0 auto'}}>
-            Go to the <strong style={{color:'#1A4D8F'}}>Ingest PDFs</strong> tab and click
-            {' '}<strong style={{color:'#1A1A18'}}>Connect Folder</strong> to point the dashboard
-            at your Hedgeye downloads folder. It will automatically scan for The Call summaries,
-            Early Look PDFs, Macro Show notes, and more.
+      {/* Call Summary */}
+      {callPts.length > 0 && (
+        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'16px 20px',marginBottom:14}}>
+          <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+            <div style={{width:3,height:14,borderRadius:2,background:'#1A4D8F',flexShrink:0}} />
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+              textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>Morning Call</span>
+            {callDate && (
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,
+                background:'#E4EDF8',color:'#1A4D8F',padding:'1px 6px',borderRadius:2,marginLeft:'auto'}}>
+                {callDate}
+              </span>
+            )}
           </div>
-          <div style={{marginTop:16,fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790'}}>
-            You can also <strong style={{color:'#1A1A18'}}>drag any PDF</strong> directly onto this window to open it.
+          <div style={{display:'flex',flexDirection:'column',gap:6}}>
+            {callPts.map((pt,i) => (
+              <div key={i} style={{display:'flex',gap:8,alignItems:'flex-start'}}>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
+                  color:'#1A4D8F',marginTop:3,flexShrink:0}}>›</span>
+                <span style={{fontSize:12,color:'#1A1A18',lineHeight:1.55}}>{pt}</span>
+              </div>
+            ))}
           </div>
+          {trades.length > 0 && (
+            <div style={{marginTop:12,paddingTop:10,borderTop:'1px solid #F0EDE8'}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:6}}>Trades Mentioned</div>
+              <div style={{display:'flex',flexDirection:'column',gap:3}}>
+                {trades.map((t,i) => (
+                  <div key={i} style={{fontSize:11,color:'#555',lineHeight:1.4}}>{t}</div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
-      {window.HE.RESEARCH.length > 0 && (
-        <input value={search} onChange={e=>setSearch(e.target.value)}
-          placeholder="Search research by title…"
-          style={{width:'100%',padding:'10px 14px',border:'1px solid #E4E1DA',borderRadius:6,
-            fontFamily:'IBM Plex Mono,monospace',fontSize:13,color:'#1A1A18',
-            background:'#fff',outline:'none',marginBottom:16}} />
-      )}
-
-      <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(340px,1fr))',gap:12}}>
-        {filtered.map((cat,ci) => {
-          const isExp = expanded.has(cat.category) || !!search;
-          const shown = isExp ? cat.files : cat.files.slice(0,3);
-          return (
-            <div key={ci} style={{background:'#fff',border:`1px solid ${cat.pinned?cat.color+'55':'#E4E1DA'}`,
-              borderRadius:8,overflow:'hidden'}}>
-              <div style={{padding:'10px 16px',background: cat.pinned ? cat.color+'11' : '#F9F8F5',
-                borderBottom:`1px solid ${cat.pinned?cat.color+'33':'#E4E1DA'}`,
-                display:'flex',alignItems:'center',gap:8}}>
-                <div style={{width:3,height:14,borderRadius:2,background:cat.color,flexShrink:0}} />
-                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
-                  textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770',flex:1}}>
-                  {cat.category}
-                </div>
-                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#aaa'}}>{cat.files.length}</div>
-              </div>
-              {shown.map((f,fi) => {
-                const hasProject = !!f.projectPath;
-                return (
-                  <div key={fi}
-                    onClick={() => hasProject ? handleProjectPdf(f.projectPath, f.name) : handlePickFile(f.name)}
-                    style={{display:'flex',alignItems:'center',justifyContent:'space-between',
-                      padding:'9px 16px',borderBottom:'1px solid #F5F3EF',cursor:'pointer',
-                      transition:'background 0.1s'}}
-                    onMouseEnter={e=>e.currentTarget.style.background='#F9F8F5'}
-                    onMouseLeave={e=>e.currentTarget.style.background='#fff'}>
-                    <div style={{fontSize:12,color:'#1A1A18',flex:1,marginRight:8,lineHeight:1.4}}>{f.name}</div>
-                    <div style={{display:'flex',alignItems:'center',gap:6,flexShrink:0}}>
-                      {f.date&&<span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',whiteSpace:'nowrap'}}>{f.date}</span>}
-                      <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
-                        padding:'1px 6px',borderRadius:3,border:'1px solid',
-                        borderColor: hasProject?cat.color:'#E4E1DA',
-                        color: hasProject?cat.color:'#ccc',
-                        background: hasProject?cat.color+'11':'transparent'}}>
-                        {hasProject ? 'View' : 'PDF'}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-              {cat.files.length > 3 && !search && (
-                <button onClick={()=>toggle(cat.category)}
-                  style={{width:'100%',padding:'8px 16px',border:'none',borderTop:'1px solid #F5F3EF',
-                    background:'none',fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',
-                    cursor:'pointer',textAlign:'left'}}>
-                  {isExp ? '▲ Show less' : `▼ ${cat.files.length - 3} more`}
-                </button>
-              )}
-            </div>
-          );
-        })}
-      </div>
+      <SectionCard title="Keith's Commentary" items={keyPts} accentColor="#27500A" />
+      <SectionCard title="Positioning Changes" items={positioning} accentColor="#B8860B"
+        badge={positioning.length > 0 ? `${positioning.length} moves` : null} />
+      <SectionCard title="Keith's Watchlist" items={watchlist} accentColor="#9A3B26" />
     </div>
   );
 };

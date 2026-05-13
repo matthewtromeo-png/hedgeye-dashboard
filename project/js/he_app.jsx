@@ -174,33 +174,34 @@ const ResearchIntelPanel = () => {
 };
 
 // ── OVERVIEW TAB ───────────────────────────────────────────────────
-const OverviewTab = ({qQuad, mQuad, usd, btc, onTabChange}) => {
-  const [rta, setRta]             = React.useState(null);
-  const [hamOverlaps, setHamOverlaps] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch(window.__resources?.rtaCsv || './data/rta_latest.csv').then(r=>r.text()).then(txt =>
-      setRta(window.HE.computeRTAStats(window.HE.parseCSV(txt)))
-    ).catch(()=>{});
-    fetch(window.__resources?.hamCsv || './data/ham_holdings_latest.csv').then(r=>r.text()).then(txt => {
-      const rows = window.HE.parseCSV(txt);
-      const map = {};
-      rows.forEach(r => {
-        const w = parseFloat((r.Weightings||'0').replace('%',''))/100||0;
-        if (w>0 && !(r.StockTicker||'').includes('-TRS-') && r.StockTicker!=='Cash&Other' && r.MoneyMarketFlag!=='Y') {
-          if (!map[r.StockTicker]) map[r.StockTicker] = {name:r.SecurityName, funds:[]};
-          if (!map[r.StockTicker].funds.includes(r.Account)) map[r.StockTicker].funds.push(r.Account);
-        }
-      });
-      setHamOverlaps(Object.entries(map).filter(([,v])=>v.funds.length>=3)
-        .sort((a,b)=>b[1].funds.length-a[1].funds.length).slice(0,10));
-    }).catch(()=>{});
-  }, []);
-
+const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const qQ = window.HE.QUADS[qQuad] || window.HE.QUADS.Q3;
   const mQ = window.HE.QUADS[mQuad] || window.HE.QUADS.Q2;
-  const latest = window.HE.ETF_RERANKS[0];
-  const fmt = n => isNaN(n)?'—':(n>=0?'+':'')+(n*100).toFixed(1)+'%';
+
+  const recentTrades = macroCtx?.rta?.recent_trades ?? null;
+  const winRate = recentTrades && recentTrades.length > 0
+    ? recentTrades.filter(t => (t.realized_return ?? 0) > 0).length / recentTrades.length
+    : null;
+
+  const hamHighConv = macroCtx?.ham_holdings
+    ? macroCtx.ham_holdings
+        .filter(h => Object.keys(h.accounts).length >= 3)
+        .sort((a,b) => Object.keys(b.accounts).length - Object.keys(a.accounts).length)
+        .slice(0, 10)
+    : null;
+
+  const sssTickers  = macroCtx?.pdf?.sss?.tickers ?? null;
+  const sssAdded    = macroCtx?.pdf?.sss?.added   ?? [];
+  const sssRemoved  = macroCtx?.pdf?.sss?.removed  ?? [];
+
+  const quadSeq         = macroCtx?.pdf?.macro_show?.quad_sequence ?? null;
+  const portfolioMovers = macroCtx?.pdf?.portfolio?.top_movers ?? null;
+  const fallbackRerank  = window.HE.ETF_RERANKS[0];
+
+  const showNotesPts = macroCtx?.pdf?.macro_show_notes?.key_points ?? [];
+  const callSummPts  = macroCtx?.pdf?.call_summary?.key_points ?? [];
+  const callSummDate = macroCtx?.pdf?.call_summary?.date ?? null;
+  const hasIntel = showNotesPts.length > 0 || callSummPts.length > 0;
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
@@ -271,106 +272,210 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, onTabChange}) => {
             ))}
           </div>
           <div style={{borderTop:'1px solid #F0EDE8',paddingTop:8}}>
-            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginBottom:4}}>
-              Latest Re-rank · {latest.date}
-            </div>
-            {latest.topMovers.map((m,i)=>(
-              <div key={i} style={{display:'flex',justifyContent:'space-between',
-                fontFamily:'IBM Plex Mono,monospace',fontSize:11,marginBottom:2}}>
-                <span style={{fontWeight:700}}>{m.ticker}</span>
-                <span style={{color:'#27500A',fontWeight:600}}>{m.pts}</span>
+            {quadSeq ? (
+              <div>
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginBottom:4}}>
+                  Quad Sequence
+                </div>
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:15,fontWeight:700,
+                  color:'#1A1A18',letterSpacing:'0.04em'}}>{quadSeq}</div>
               </div>
-            ))}
+            ) : portfolioMovers ? (
+              <div>
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginBottom:4}}>
+                  Top Movers
+                </div>
+                {portfolioMovers.slice(0,3).map((m,i)=>(
+                  <div key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:700,marginBottom:2}}>
+                    {typeof m === 'string' ? m : m.ticker}
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div>
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginBottom:4}}>
+                  Latest Re-rank · {fallbackRerank.date}
+                </div>
+                {fallbackRerank.topMovers.map((m,i)=>(
+                  <div key={i} style={{display:'flex',justifyContent:'space-between',
+                    fontFamily:'IBM Plex Mono,monospace',fontSize:11,marginBottom:2}}>
+                    <span style={{fontWeight:700}}>{m.ticker}</span>
+                    <span style={{color:'#27500A',fontWeight:600}}>{m.pts}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Research Intelligence */}
-      <ResearchIntelPanel />
+      {/* Macro Intel Panel */}
+      {hasIntel && (
+        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px',marginBottom:16}}>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                textTransform:'uppercase',letterSpacing:'0.12em',color:'#7A7770'}}>Macro Intelligence</span>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,background:'#EAF3DE',
+                color:'#27500A',padding:'1px 6px',borderRadius:2,fontWeight:600}}>PIPELINE</span>
+            </div>
+            {callSummDate && (
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>
+                Call: {callSummDate}
+              </span>
+            )}
+          </div>
+          <div style={{display:'grid',
+            gridTemplateColumns:(callSummPts.length > 0 && showNotesPts.length > 0) ? '1fr 1fr' : '1fr',
+            gap:16}}>
+            {showNotesPts.length > 0 && (
+              <div>
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                  textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:6}}>Macro Show Notes</div>
+                {showNotesPts.slice(0,4).map((pt,i) => (
+                  <div key={i} style={{display:'flex',gap:6,marginBottom:5,alignItems:'flex-start'}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                      marginTop:2,flexShrink:0}}>›</span>
+                    <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{pt}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            {callSummPts.length > 0 && (
+              <div>
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                  textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:6}}>Call Summary</div>
+                {callSummPts.slice(0,4).map((pt,i) => (
+                  <div key={i} style={{display:'flex',gap:6,marginBottom:5,alignItems:'flex-start'}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                      marginTop:2,flexShrink:0}}>›</span>
+                    <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{pt}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Three feeds */}
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:16}}>
+        {/* RTA Feed */}
         <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:16}}>
           <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
             textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770',
             borderBottom:'1px solid #E4E1DA',paddingBottom:8,marginBottom:12,
             display:'flex',justifyContent:'space-between'}}>
             <span>RTA — Recent</span>
-            {rta&&<span style={{color:rta.winRate>0.5?'#27500A':'#C8302A',fontWeight:700}}>
-              {(rta.winRate*100).toFixed(0)}% WR
-            </span>}
+            {winRate != null && (
+              <span style={{color:winRate>0.5?'#27500A':'#C8302A',fontWeight:700}}>
+                {(winRate*100).toFixed(0)}% WR
+              </span>
+            )}
           </div>
-          {rta ? rta.recentTrades.slice(0,10).map((t,i)=>{
-            const r=parseFloat(t['Realized Return'])||0;
+          {recentTrades === null ? <LoadingSpinner msg="Loading…" /> :
+           recentTrades.length === 0 ? (
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',
+              textAlign:'center',padding:'20px 0'}}>No trades in last 90 days</div>
+          ) : recentTrades.slice(0,10).map((t,i) => {
+            const r = t.realized_return ?? 0;
             return (
               <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',
-                padding:'5px 0',borderBottom:i<9?'1px solid #F5F3EF':'none'}}>
+                padding:'5px 0',borderBottom:i<Math.min(9,recentTrades.length-1)?'1px solid #F5F3EF':'none'}}>
                 <div style={{display:'flex',gap:7,alignItems:'center'}}>
-                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12,minWidth:48}}>{t.Symbol}</span>
-                  <SignalBadge signal={t.Position} />
+                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12,minWidth:48}}>{t.symbol}</span>
+                  <SignalBadge signal={(t.position||'').toUpperCase()} />
                 </div>
                 <div style={{textAlign:'right'}}>
                   <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:600,
                     color:r>0?'#27500A':'#C8302A'}}>{r>0?'+':''}{(r*100).toFixed(1)}%</div>
                   <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>
-                    {(t['Close Date']||'').slice(5,10)}</div>
+                    {(t.close_date||'').slice(5,10)}</div>
                 </div>
               </div>
             );
-          }) : <LoadingSpinner msg="Loading…" />}
+          })}
         </div>
 
+        {/* HAM Feed */}
         <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:16}}>
           <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
             textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770',
             borderBottom:'1px solid #E4E1DA',paddingBottom:8,marginBottom:12}}>
             HAM — Highest Conviction
           </div>
-          {hamOverlaps ? hamOverlaps.map(([ticker,v],i)=>{
-            const sss=window.HE.SSS.find(s=>s.ticker===ticker);
+          {hamHighConv === null ? <LoadingSpinner msg="Loading…" /> :
+           hamHighConv.length === 0 ? (
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',
+              textAlign:'center',padding:'20px 0'}}>No holdings in 3+ funds</div>
+          ) : hamHighConv.map((h,i) => {
+            const accts = Object.keys(h.accounts);
+            const isSss = (sssTickers || []).includes(h.ticker);
             return (
               <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',
-                padding:'5px 0',borderBottom:i<hamOverlaps.length-1?'1px solid #F5F3EF':'none'}}>
+                padding:'5px 0',borderBottom:i<hamHighConv.length-1?'1px solid #F5F3EF':'none'}}>
                 <div>
-                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12}}>{ticker}</span>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12}}>{h.ticker}</span>
                   <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginLeft:6}}>
-                    {(v.name||'').slice(0,22)}
+                    {(h.name||'').slice(0,22)}
                   </span>
                 </div>
                 <div style={{display:'flex',gap:5,alignItems:'center'}}>
-                  {sss&&<span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 5px',borderRadius:3}}>SSS</span>}
+                  {isSss && <span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 5px',borderRadius:3}}>SSS</span>}
                   <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:700,
                     padding:'2px 7px',borderRadius:3,
-                    background:v.funds.length===4?'#EAF3DE':'#E4EDF8',
-                    color:v.funds.length===4?'#27500A':'#1A4D8F'}}>
-                    {v.funds.length}/4
+                    background:accts.length===4?'#EAF3DE':'#E4EDF8',
+                    color:accts.length===4?'#27500A':'#1A4D8F'}}>
+                    {accts.length}/4
                   </span>
                 </div>
               </div>
             );
-          }) : <LoadingSpinner msg="Loading…" />}
+          })}
         </div>
 
+        {/* SSS Feed */}
         <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:16}}>
           <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
             textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770',
-            borderBottom:'1px solid #E4E1DA',paddingBottom:8,marginBottom:12}}>
-            Signal Strength — Top Names
+            borderBottom:'1px solid #E4E1DA',paddingBottom:8,marginBottom:12,
+            display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+            <span>Signal Strength Stocks</span>
+            {sssTickers && <span style={{color:'#9A9790',fontWeight:400,fontSize:9}}>{sssTickers.length}</span>}
           </div>
-          {window.HE.SSS.slice(0,10).map((s,i)=>(
-            <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',
-              padding:'5px 0',borderBottom:i<9?'1px solid #F5F3EF':'none'}}>
-              <div>
-                <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12,
-                  minWidth:48,display:'inline-block'}}>{s.ticker}</span>
-                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>{s.days}d · {s.sector}</span>
+          {sssAdded.length > 0 && (
+            <div style={{marginBottom:10}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#27500A',
+                textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:4}}>+ Added</div>
+              <div style={{display:'flex',flexWrap:'wrap',gap:4}}>
+                {sssAdded.map((t,i) => (
+                  <span key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+                    background:'#EAF3DE',color:'#27500A',padding:'2px 6px',borderRadius:3}}>{t}</span>
+                ))}
               </div>
-              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:600,
-                color:s.pct>0?'#27500A':'#C8302A'}}>
-                {s.pct>0?'+':''}{s.pct.toFixed(1)}%
-              </span>
             </div>
-          ))}
+          )}
+          {sssRemoved.length > 0 && (
+            <div style={{marginBottom:10}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#C8302A',
+                textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:4}}>– Removed</div>
+              <div style={{display:'flex',flexWrap:'wrap',gap:4}}>
+                {sssRemoved.map((t,i) => (
+                  <span key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+                    background:'#FCEBEB',color:'#C8302A',padding:'2px 6px',borderRadius:3}}>{t}</span>
+                ))}
+              </div>
+            </div>
+          )}
+          {sssTickers === null ? <LoadingSpinner msg="Loading…" /> : (
+            <div style={{display:'flex',flexWrap:'wrap',gap:4}}>
+              {(sssTickers || []).map((t,i) => (
+                <span key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+                  background:'#F4F3EF',color:'#1A1A18',padding:'2px 6px',borderRadius:3,
+                  border:'1px solid #E4E1DA'}}>{t}</span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -383,9 +488,34 @@ const App = () => {
   const [tab, setTab]               = React.useState('overview');
   const [showTweaks, setShowTweaks] = React.useState(false);
   const [openPdf, setOpenPdf]       = React.useState(null);
+  const [macroCtx, setMacroCtx]     = React.useState(null);
   const [researchSource, setResearchSource] = React.useState(
     () => window.HE.loadQuadState().researchSource || null
   );
+
+  // Load macro_context.json and auto-initialize tweaks from pipeline data
+  React.useEffect(() => {
+    fetch('./data/macro_context.json')
+      .then(r => r.json())
+      .then(data => {
+        setMacroCtx(data);
+        const ms = data.pdf?.macro_show || {};
+        const qQuart = ms.quad?.quarterly;
+        const qMo    = ms.quad?.monthly;
+        const usd    = data.levels?.USD?.signal;
+        const btc    = data.pdf?.btc?.BTC?.signal;
+        setTweaks(t => ({
+          ...t,
+          ...(qQuart != null ? { quarterlyQuad: 'Q' + qQuart } : {}),
+          ...(qMo    != null ? { monthlyQuad:   'Q' + qMo    } :
+              qQuart != null ? { monthlyQuad:   'Q' + qQuart } : {}),
+          ...(usd ? { usdSignal: usd } : {}),
+          ...(btc ? { btcSignal: btc } : {}),
+        }));
+        setResearchSource('macro_context.json');
+      })
+      .catch(() => {});
+  }, []);
 
   // Tweaks host integration
   React.useEffect(() => {
@@ -441,7 +571,7 @@ const App = () => {
     {id:'analyzer',  label:'Stock Analyzer'},
     {id:'etfpro',    label:'ETF Pro'},
     {id:'vol',       label:'Volatility'},
-    {id:'research',  label:'Research'},
+    {id:'research',  label:'Daily Brief'},
     {id:'ingest',   label:'Research Status'},
   ];
 
@@ -517,7 +647,7 @@ const App = () => {
       </div>
 
       {/* CONTENT */}
-      {tab==='overview' && <OverviewTab qQuad={tweaks.quarterlyQuad} mQuad={tweaks.monthlyQuad} usd={tweaks.usdSignal} btc={tweaks.btcSignal} />}
+      {tab==='overview' && <OverviewTab qQuad={tweaks.quarterlyQuad} mQuad={tweaks.monthlyQuad} usd={tweaks.usdSignal} btc={tweaks.btcSignal} macroCtx={macroCtx} />}
       {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} />}
       {tab==='rta'      && <RTATab />}
       {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} />}
@@ -532,7 +662,7 @@ const App = () => {
       {tab==='analyzer' && <AnalyzerTab />}
       {tab==='etfpro'   && <ETFProTab />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}
-      {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} />}
+      {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}
       {tab==='ingest'   && <ResearchStatusTab />}
 
       {/* PDF VIEWER */}
