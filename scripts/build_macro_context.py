@@ -11,16 +11,14 @@ Stage 1 sources:
   - RTA\real-time-alerts-history-*.csv
   - risk_range_tracker_excelworkbook.xlsx
 
-Stage 2 sources (PDFs → Claude API):
-  A  macro show slides\HE_TMS_*.pdf
-  B  Market situation report\*.pdf
-  C  signal strength list\*.pdf
-  D  Investing Ideas\*.pdf
-  E  Momentum Stock Tracker\*.pdf
-  F  macro research\*.pdf
-  G  BTC trend tracker\*.pdf
-  H  Founders Choice\*.pdf
-  I  macro show slides\macro show reports\*.pdf
+Stage 2 PDF sources:
+  DAILY   (cache 2 days,  newest 1 file each)
+    macro_show, msr, sss, momo, early_look, portfolio,
+    btc, call_summary, macro_show_notes
+  WEEKLY  (cache 14 days, newest 2 files each)
+    investing_ideas, founders_choice, from_desk
+  SPECIAL (no expiry,     all files from last 35 days, one combined call)
+    macro_research
 
 Output: project/data/macro_context.json
 """
@@ -28,7 +26,7 @@ Output: project/data/macro_context.json
 import argparse
 import base64
 import csv
-import glob
+import hashlib
 import json
 import os
 import sys
@@ -191,7 +189,6 @@ def read_ham_holdings() -> dict:
         warn("HAM holdings: no file found")
         return {"ham_holdings": [], "_source": None}
 
-    # Accumulate per-ticker across all accounts
     by_ticker: dict = {}
 
     with open(path, newline='', encoding='utf-8-sig') as fh:
@@ -249,7 +246,6 @@ def read_ham_holdings() -> dict:
 # ── RTA TRADE HISTORY ─────────────────────────────────────────────────────────
 
 def _parse_duration(raw: str) -> str:
-    """Extract highest signal level from RTA duration string."""
     s = raw.lower()
     if 'tail'  in s: return 'TAIL'
     if 'trend' in s: return 'TREND'
@@ -296,7 +292,7 @@ def read_rta_trades() -> dict:
             close_price_raw = (row.get('Close Price') or '').strip()
             if not close_date_raw or not close_price_raw:
                 skipped_open += 1
-                continue  # open position — skip
+                continue
 
             close_date = _parse_date(close_date_raw)
             if close_date is None:
@@ -304,7 +300,6 @@ def read_rta_trades() -> dict:
                 continue
 
             close_date_str = close_date.strftime('%Y-%m-%d')
-
             symbol   = (row.get('Symbol')   or '').strip()
             position = (row.get('Position') or '').strip().lower()
             if not symbol:
@@ -342,20 +337,16 @@ def read_rta_trades() -> dict:
                 "_close_date_obj":  close_date,
             })
 
-    # Recent trades (last 90 days), most recent first
     recent = [t for t in all_closed if t["_close_date_obj"] >= cutoff_90d]
     recent.sort(key=lambda x: x["close_date"], reverse=True)
 
-    # Recently traded tickers (last 60 days) — for SSS badge
     recently_traded = sorted({
         t["symbol"] for t in all_closed if t["_close_date_obj"] >= cutoff_60d
     })
 
-    # Strip internal field before output
     for t in recent:
         del t["_close_date_obj"]
 
-    # Stats
     longs  = [t for t in recent if t["position"] == "long"  and t["realized_return"] is not None]
     shorts = [t for t in recent if t["position"] == "short" and t["realized_return"] is not None]
 
@@ -386,14 +377,12 @@ def read_rta_trades() -> dict:
 
 
 # ── RISK RANGE LEVELS ─────────────────────────────────────────────────────────
-# Reuse parse logic from import_official_levels.py rather than duplicating it.
 
 def read_risk_range_levels() -> dict:
     if not RR_WORKBOOK.exists():
         warn(f"risk range workbook not found: {RR_WORKBOOK}")
         return {"levels": {}, "_source": None}
 
-    # Add scripts/ dir to path so we can import the sibling module
     scripts_dir = Path(__file__).resolve().parent
     if str(scripts_dir) not in sys.path:
         sys.path.insert(0, str(scripts_dir))
@@ -425,7 +414,6 @@ def read_risk_range_levels() -> dict:
 
     wb.close()
 
-    # Build latest-only levels dict
     latest_by_ticker: dict = {}
     for row in all_rows:
         t = row['ticker']
@@ -447,23 +435,34 @@ def read_risk_range_levels() -> dict:
 
 
 # ── STAGE 2: PDF EXTRACTION VIA CLAUDE API ────────────────────────────────────
+#
+# PDF_SOURCES  — regular sources (daily or weekly, 1–2 files each)
+# MACRO_RESEARCH_CFG — special: all files from last 35 days in one combined call
+#
+# Cache key for regular sources  = pipe-joined sorted filenames of the N files used
+# Cache key for macro_research   = 12-char MD5 hash of sorted filenames
+# Cache is valid when:           key matches AND age of last run < cache_days
+#                                (macro_research has no cache_days → never expires on key match)
 
 PDF_SOURCES = [
+    # ── DAILY — cache 2 days, newest 1 file ───────────────────────────────────
     {
-        "key":    "macro_show",
-        "folder": HEDGEYE_BASE / "macro show slides",
-        "glob":   "HE_TMS_*.pdf",
-        "label":  "A: Macro Show Slides",
+        "key":        "macro_show",
+        "folder":     HEDGEYE_BASE / "macro show slides",
+        "glob":       "HE_TMS_*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "macro_show (daily)",
         "prompt": (
             "Extract these fields from the Hedgeye Macro Show presentation.\n"
-            "Return ONLY valid JSON with this exact structure (null for any field not found):\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
             "{\n"
             '  "quad": {"monthly": <int 1-4>, "quarterly": <int 1-4>, "depth": <"SHALLOW"|"MODERATE"|"DEEP">},\n'
             '  "vix": {"current": <float>, "lrr": <float>, "trr": <float>, "bucket": <"INVESTABLE"|"CAUTION"|"CRASH">},\n'
             '  "cpi_nowcast": <float>,\n'
             '  "growth_roc": <"ACCELERATING"|"DECELERATING">,\n'
             '  "inflation_roc": <"ACCELERATING"|"DECELERATING">,\n'
-            '  "quad_sequence": <string showing next 4 quarters e.g. "2-2-2-3">,\n'
+            '  "quad_sequence": <string like "2-2-2-3" showing next 4 quarters>,\n'
             '  "high_beta_1m": <float, 1-month return % for high-beta factor bucket>,\n'
             '  "low_beta_1m": <float, 1-month return % for low-beta factor bucket>,\n'
             '  "keith_commentary": [<up to 5 key bullet points as strings>]\n'
@@ -471,10 +470,12 @@ PDF_SOURCES = [
         ),
     },
     {
-        "key":    "msr",
-        "folder": HEDGEYE_BASE / "Market situation report",
-        "glob":   "*.pdf",
-        "label":  "B: Market Situation Report",
+        "key":        "msr",
+        "folder":     HEDGEYE_BASE / "Market situation report",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "msr (daily)",
         "prompt": (
             "Extract these fields from the Hedgeye Market Situation Report (MSR) or Weekly Game Plan.\n"
             "Return ONLY valid JSON (null for any field not found):\n"
@@ -495,28 +496,145 @@ PDF_SOURCES = [
         ),
     },
     {
-        "key":    "sss",
-        "folder": HEDGEYE_BASE / "signal strength list",
-        "glob":   "*.pdf",
-        "label":  "C: Signal Strength List",
+        "key":        "sss",
+        "folder":     HEDGEYE_BASE / "signal strength list",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "sss (daily)",
         "prompt": (
             "Extract these fields from the Hedgeye Signal Strength Score (SSS) PDF.\n"
             "Return ONLY valid JSON (null for any field not found):\n"
             "{\n"
-            '  "count": <int, total number of tickers currently on the signal strength list>,\n'
-            '  "added": [<ticker symbols added this week, e.g. ["LOTMY","CMI"]>],\n'
+            '  "count": <int, total tickers on the list>,\n'
+            '  "added": [<ticker symbols added this week>],\n'
             '  "removed": [<ticker symbols removed this week>],\n'
-            '  "tickers": [<every ticker symbol on the list in the order they appear>]\n'
+            '  "tickers": [<every ticker on the list in order of appearance>]\n'
             "}"
         ),
     },
     {
-        "key":    "investing_ideas",
-        "folder": HEDGEYE_BASE / "Investing Ideas",
-        "glob":   "*.pdf",
-        "label":  "D: Investing Ideas",
+        "key":        "momo",
+        "folder":     HEDGEYE_BASE / "Momentum Stock Tracker",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "momo (daily)",
+        "prompt": (
+            "Extract risk range and signal data for every ticker in the Hedgeye Momentum Stock Tracker.\n"
+            "Return ONLY valid JSON as a flat object keyed by ticker (null for missing values):\n"
+            "{\n"
+            '  "<TICKER>": {"lrr": <float>, "trr": <float>, "signal": <"BULLISH"|"BEARISH"|"NEUTRAL">, "close": <float>}\n'
+            "}"
+        ),
+    },
+    {
+        "key":        "early_look",
+        "folder":     HEDGEYE_BASE / "Early look pdfs",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "early_look (daily)",
+        "prompt": (
+            "Extract these fields from the Hedgeye Early Look PDF.\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
+            "{\n"
+            '  "key_levels": {\n'
+            '    "<TICKER>": {"lrr": <float>, "trr": <float>, "signal": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
+            "  },\n"
+            '  "signal_changes": [\n'
+            '    {"ticker": <string>, "from": <"BULLISH"|"BEARISH"|"NEUTRAL">, "to": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
+            "  ],\n"
+            '  "vix_level": <float>,\n'
+            '  "keith_notes": [<up to 5 key observations or trade notes from Keith>]\n'
+            "}"
+        ),
+    },
+    {
+        "key":        "portfolio",
+        "folder":     HEDGEYE_BASE / "Portfolio solutions",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "portfolio (daily)",
+        "prompt": (
+            "Extract portfolio positions and movers from this Hedgeye Portfolio Solutions PDF.\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
+            "{\n"
+            '  "positions": [\n'
+            '    {"ticker": <string>, "weight": <float 0-1>, "daily_move": <string e.g. "+1.2%">, '
+            '"signal": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
+            "  ],\n"
+            '  "top_movers": [\n'
+            '    {"ticker": <string>, "move": <string e.g. "+8%">}\n'
+            "  ],\n"
+            '  "rerank_date": <string YYYY-MM-DD>\n'
+            "}"
+        ),
+    },
+    {
+        "key":        "btc",
+        "folder":     HEDGEYE_BASE / "BTC trend tracker",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "btc (daily)",
+        "prompt": (
+            "Extract risk range and signal data for all crypto assets from this Hedgeye BTC Trend Tracker PDF.\n"
+            "Return ONLY valid JSON as a flat object keyed by symbol (null for missing values):\n"
+            "{\n"
+            '  "<SYMBOL>": {"lrr": <float>, "trr": <float>, "signal": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
+            "}"
+        ),
+    },
+    {
+        "key":        "call_summary",
+        "folder":     HEDGEYE_BASE / "The call summaries",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "call_summary (daily)",
+        "prompt": (
+            "Extract key data from this Hedgeye macro call summary.\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
+            "{\n"
+            '  "date": <string YYYY-MM-DD>,\n'
+            '  "quad": <int 1-4>,\n'
+            '  "key_points": [<up to 5 most important takeaways from the call>],\n'
+            '  "trades_mentioned": [<any specific trade ideas or position changes discussed>],\n'
+            '  "keith_outlook": <string, 1-2 sentence summary of Keith\'s overall market view>\n'
+            "}"
+        ),
+    },
+    {
+        "key":        "macro_show_notes",
+        "folder":     HEDGEYE_BASE / "macro show slides" / "macro show reports",
+        "glob":       "*.pdf",
+        "cache_days": 2,
+        "read_n":     1,
+        "label":      "macro_show_notes (daily)",
+        "prompt": (
+            "Extract key takeaways from this Hedgeye Macro Show summary notes PDF.\n"
+            "Return ONLY valid JSON (null for missing fields):\n"
+            "{\n"
+            '  "key_points": [<up to 5 most important takeaways>],\n'
+            '  "positioning_changes": [<position adds, removes, or trims mentioned>],\n'
+            '  "keith_watching": [<catalysts, price levels, or events Keith is watching>]\n'
+            "}"
+        ),
+    },
+
+    # ── WEEKLY — cache 14 days, newest 2 files ─────────────────────────────────
+    {
+        "key":        "investing_ideas",
+        "folder":     HEDGEYE_BASE / "Investing Ideas",
+        "glob":       "*.pdf",
+        "cache_days": 14,
+        "read_n":     2,
+        "label":      "investing_ideas (weekly)",
         "prompt": (
             "Extract all current long and short positions from this Hedgeye Investing Ideas newsletter.\n"
+            "If two issues are provided, use the more recent one for current positions.\n"
             "Return ONLY valid JSON (null for missing fields):\n"
             "{\n"
             '  "longs": {\n'
@@ -529,56 +647,12 @@ PDF_SOURCES = [
         ),
     },
     {
-        "key":    "momo",
-        "folder": HEDGEYE_BASE / "Momentum Stock Tracker",
-        "glob":   "*.pdf",
-        "label":  "E: Momentum Stock Tracker",
-        "prompt": (
-            "Extract risk range and signal data for every ticker in the Hedgeye Momentum Stock Tracker.\n"
-            "Return ONLY valid JSON as a flat object keyed by ticker symbol (null for any missing value):\n"
-            "{\n"
-            '  "<TICKER>": {"lrr": <float lower risk range>, "trr": <float top risk range>, '
-            '"signal": <"BULLISH"|"BEARISH"|"NEUTRAL">, "close": <float last close price>}\n'
-            "}"
-        ),
-    },
-    {
-        "key":    "gip",
-        "folder": HEDGEYE_BASE / "macro research",
-        "glob":   "*.pdf",
-        "label":  "F: GIP / Inflation Nowcast",
-        "prompt": (
-            "Extract macro growth and inflation forecast data from this Hedgeye GIP (Growth, Inflation, Policy) "
-            "or Nowcast PDF.\n"
-            "Return ONLY valid JSON (null for missing fields):\n"
-            "{\n"
-            '  "cpi_nowcast": <float, current CPI nowcast %>,\n'
-            '  "cpi_trend": <"ACCELERATING"|"DECELERATING">,\n'
-            '  "forward_quads": {\n'
-            '    "<QNYY e.g. 2Q26>": {"quad": <int 1-4>, "gdp": <float % growth>, "cpi": <float % inflation>}\n'
-            "  }\n"
-            "}"
-        ),
-    },
-    {
-        "key":    "crypto",
-        "folder": HEDGEYE_BASE / "BTC trend tracker",
-        "glob":   "*.pdf",
-        "label":  "G: BTC Trend Tracker",
-        "prompt": (
-            "Extract risk range and signal data for all crypto assets in this Hedgeye BTC Trend Tracker PDF.\n"
-            "Return ONLY valid JSON as a flat object keyed by symbol (null for missing values):\n"
-            "{\n"
-            '  "<SYMBOL e.g. BTC>": {"lrr": <float lower risk range>, "trr": <float top risk range>, '
-            '"signal": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
-            "}"
-        ),
-    },
-    {
-        "key":    "founders_choice",
-        "folder": HEDGEYE_BASE / "Founders Choice",
-        "glob":   "*.pdf",
-        "label":  "H: Founders Choice",
+        "key":        "founders_choice",
+        "folder":     HEDGEYE_BASE / "Founders Choice",
+        "glob":       "*.pdf",
+        "cache_days": 14,
+        "read_n":     2,
+        "label":      "founders_choice (weekly)",
         "prompt": (
             "Extract all sector long and short stock picks from this Hedgeye Founders Choice PDF.\n"
             "Return ONLY valid JSON where keys are lowercase sector names (null if not found):\n"
@@ -588,29 +662,125 @@ PDF_SOURCES = [
         ),
     },
     {
-        "key":    "macro_show_notes",
-        "folder": HEDGEYE_BASE / "macro show slides" / "macro show reports",
-        "glob":   "*.pdf",
-        "label":  "I: Macro Show Summary Notes",
+        "key":        "from_desk",
+        "folder":     HEDGEYE_BASE / "From the desk",
+        "glob":       "*.pdf",
+        "cache_days": 14,
+        "read_n":     2,
+        "label":      "from_desk (weekly)",
         "prompt": (
-            "Extract key takeaways from this Hedgeye Macro Show summary notes PDF.\n"
-            "Return ONLY valid JSON (null for missing fields):\n"
+            "Extract key market commentary from this Hedgeye 'From the Desk' newsletter.\n"
+            "Return ONLY valid JSON (null for any field not found):\n"
             "{\n"
-            '  "key_points": [<up to 5 most important takeaways as strings>],\n'
-            '  "positioning_changes": [<any position adds, removes, or trims mentioned>],\n'
-            '  "keith_watching": [<catalysts, price levels, or events Keith is watching>]\n'
+            '  "macro_view": <string, 1-2 sentence summary of the macro thesis>,\n'
+            '  "key_points": [<up to 5 key takeaways>],\n'
+            '  "tickers_mentioned": [<all ticker symbols specifically mentioned>],\n'
+            '  "risk_tone": <"RISK_ON"|"RISK_OFF"|"NEUTRAL">\n'
             "}"
         ),
     },
 ]
 
+# Special — all PDFs from last 35 days sent as one combined API call
+MACRO_RESEARCH_CFG = {
+    "key":         "macro_research",
+    "folder":      HEDGEYE_BASE / "macro research",
+    "glob":        "*.pdf",
+    "window_days": 35,
+    "label":       "macro_research (combined, 35-day window)",
+    "prompt": (
+        "The following documents are recent Hedgeye macro research PDFs. They may include:\n"
+        "  - Monthly Inflation Nowcast (CPI forecasts and upside/downside bands)\n"
+        "  - Quarterly Macro Themes deck (quad sequence, GDP/CPI forecasts by quarter)\n"
+        "  - Mid-Quarter Update (revised quad calls)\n"
+        "  - Levels reference (SPX and other key ticker risk ranges)\n\n"
+        "Extract ALL of the following fields across the provided documents.\n"
+        "Return ONLY valid JSON (null for any field not found):\n"
+        "{\n"
+        '  "cpi_nowcast":    <float, current CPI nowcast %>,\n'
+        '  "cpi_upside":     <float, upside CPI scenario %>,\n'
+        '  "cpi_downside":   <float, downside CPI scenario %>,\n'
+        '  "cpi_trend":      <"ACCELERATING"|"DECELERATING">,\n'
+        '  "quarterly_quad": <int 1-4, current quarterly quad>,\n'
+        '  "monthly_quad":   <int 1-4, current monthly quad>,\n'
+        '  "quad_sequence":  <string like "2-2-2-3" showing next 4 quarters>,\n'
+        '  "forward_quads": {\n'
+        '    "<QNYY e.g. 2Q26>": {"quad": <int>, "gdp_qoq": <float %>, "cpi_yoy": <float %>}\n'
+        "  },\n"
+        '  "key_themes": [<up to 5 highest-conviction macro themes as strings>],\n'
+        '  "levels_reference": {\n'
+        '    "<TICKER>": {"lrr": <float>, "trr": <float>, "signal": <"BULLISH"|"BEARISH"|"NEUTRAL">}\n'
+        "  }\n"
+        "}"
+    ),
+}
 
-def _call_claude_pdf(client, path: Path, prompt: str, label: str) -> dict | None:
-    """Send a single PDF to Claude API and return parsed JSON dict, or None on failure."""
-    size_kb = path.stat().st_size // 1024
-    print(f"  [API] Sending {path.name} ({size_kb} KB)...")
+
+# ── PDF CACHE HELPERS ─────────────────────────────────────────────────────────
+
+def _newest_n(folder: Path, glob_pattern: str, n: int) -> list[Path]:
+    """Return the n most recently modified files matching the pattern (silent)."""
+    matches = sorted(folder.glob(glob_pattern), key=lambda p: p.stat().st_mtime, reverse=True)
+    return matches[:n]
+
+
+def _source_id(paths: list[Path]) -> str:
+    """Stable cache key for a set of source files — pipe-joined sorted names."""
+    return "|".join(sorted(p.name for p in paths))
+
+
+def _files_hash(paths: list[Path]) -> str:
+    """12-char MD5 of sorted filenames — compact cache key for multi-file sources."""
+    combined = "|".join(sorted(p.name for p in paths))
+    return hashlib.md5(combined.encode()).hexdigest()[:12]
+
+
+def _cache_valid(key: str, source_id: str, cache_days: int | None,
+                 existing: dict | None) -> bool:
+    """True if we can reuse the existing extraction for this source.
+
+    Requires:
+      1. source_id matches what was previously used
+      2. Either cache_days is None (no expiry) or the run age < cache_days
+    """
+    if not existing:
+        return False
+    if existing.get("sources_used", {}).get(key) != source_id:
+        return False
+    if cache_days is None:
+        return True
+    gen_at_str = existing.get("generated_at", "")
     try:
+        gen_at   = datetime.fromisoformat(gen_at_str)
+        age_days = (datetime.now(tz=timezone.utc) - gen_at).total_seconds() / 86400
+        return age_days < cache_days
+    except (ValueError, AttributeError, TypeError):
+        return False
+
+
+# ── CLAUDE API CALL ───────────────────────────────────────────────────────────
+
+def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str) -> dict | None:
+    """Send one or more PDFs as document blocks, return parsed JSON or None on failure."""
+    total_kb = sum(p.stat().st_size for p in paths) // 1024
+    print(f"  [API] {label}: {len(paths)} file(s), {total_kb} KB")
+    for p in paths:
+        print(f"        {p.name}")
+
+    content = []
+    for path in paths:
         pdf_b64 = base64.standard_b64encode(path.read_bytes()).decode('utf-8')
+        content.append({
+            "type": "document",
+            "source": {
+                "type":       "base64",
+                "media_type": "application/pdf",
+                "data":       pdf_b64,
+            },
+        })
+    content.append({"type": "text", "text": prompt})
+
+    try:
         msg = client.messages.create(
             model="claude-sonnet-4-6",
             max_tokens=2048,
@@ -618,29 +788,15 @@ def _call_claude_pdf(client, path: Path, prompt: str, label: str) -> dict | None
                 "You are a financial data extractor. Extract ONLY the requested fields from "
                 "this Hedgeye research document. Return ONLY valid JSON, no other text."
             ),
-            messages=[{
-                "role": "user",
-                "content": [
-                    {
-                        "type": "document",
-                        "source": {
-                            "type": "base64",
-                            "media_type": "application/pdf",
-                            "data": pdf_b64,
-                        },
-                    },
-                    {"type": "text", "text": prompt},
-                ],
-            }],
+            messages=[{"role": "user", "content": content}],
         )
         raw = msg.content[0].text.strip()
-        # Strip markdown code fences if the model wrapped the response
         if raw.startswith('```'):
             start = raw.index('{')
             end   = raw.rindex('}') + 1
             raw   = raw[start:end]
         result = json.loads(raw)
-        print(f"  [API] OK — {len(result)} top-level keys returned")
+        print(f"  [API] OK — {len(result)} top-level keys")
         return result
     except json.JSONDecodeError as e:
         warn(f"{label}: JSON parse failed — {e}")
@@ -650,54 +806,124 @@ def _call_claude_pdf(client, path: Path, prompt: str, label: str) -> dict | None
         return None
 
 
-def extract_pdf_data() -> dict:
-    """Stage 2: extract structured data from each PDF source via the Claude API."""
+# ── EXTRACT ALL PDFs ──────────────────────────────────────────────────────────
+
+def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
+    """Stage 2: extract structured data from PDFs via Claude API, with per-source caching."""
     print("\n── PDF Extraction (Stage 2) ──")
 
     api_key = os.environ.get('ANTHROPIC_API_KEY')
     if not api_key:
         warn("ANTHROPIC_API_KEY not set — skipping PDF extraction")
-        return {"pdf": {}, "_pdf_sources": {}}
+        return {"pdf": {}, "_pdf_sources": {}, "_cache_stats": {}}
 
     try:
         import anthropic
     except ImportError:
         warn("anthropic not installed — run: pip install anthropic")
-        return {"pdf": {}, "_pdf_sources": {}}
+        return {"pdf": {}, "_pdf_sources": {}, "_cache_stats": {}}
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client       = anthropic.Anthropic(api_key=api_key)
     results      = {}
     sources_used = {}
+    cache_stats  = {}   # key → "cached" | "fresh (N files)" | "missing"
 
+    # ── Regular sources (daily + weekly) ──────────────────────────────────────
     for src in PDF_SOURCES:
-        key   = src["key"]
-        label = src["label"]
-        print(f"\n  {label}")
-        path = newest_file(src["folder"], src["glob"])
-        if not path:
-            warn(f"{label}: no PDF found — skipping")
+        key        = src["key"]
+        cache_days = src["cache_days"]
+
+        paths = _newest_n(src["folder"], src["glob"], src["read_n"])
+        if not paths:
+            warn(f"{src['label']}: no PDF found")
             results[key]      = None
             sources_used[key] = None
+            cache_stats[key]  = "missing"
             continue
-        sources_used[key] = path.name
-        results[key] = _call_claude_pdf(client, path, src["prompt"], label)
 
-    return {"pdf": results, "_pdf_sources": sources_used}
+        source_id         = _source_id(paths)
+        sources_used[key] = source_id
+
+        if not force_pdf and _cache_valid(key, source_id, cache_days, existing):
+            results[key]     = (existing or {}).get("pdf", {}).get(key)
+            cache_stats[key] = "cached"
+            print(f"  {src['label']:<36} cached  ({source_id[:60]})")
+            continue
+
+        results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"])
+        cache_stats[key] = f"fresh ({len(paths)} file{'s' if len(paths) > 1 else ''})"
+
+    # ── Macro research: all PDFs from last 35 days in one combined call ────────
+    cfg    = MACRO_RESEARCH_CFG
+    cutoff = datetime.now() - timedelta(days=cfg["window_days"])
+    recent_pdfs = sorted(
+        [p for p in cfg["folder"].glob(cfg["glob"])
+         if datetime.fromtimestamp(p.stat().st_mtime) >= cutoff],
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+
+    if not recent_pdfs:
+        warn(f"{cfg['label']}: no PDFs found in last {cfg['window_days']} days")
+        results["macro_research"]      = None
+        sources_used["macro_research"] = None
+        cache_stats["macro_research"]  = "missing"
+    else:
+        source_id                      = _files_hash(recent_pdfs)
+        sources_used["macro_research"] = source_id
+
+        if not force_pdf and _cache_valid("macro_research", source_id, None, existing):
+            results["macro_research"]     = (existing or {}).get("pdf", {}).get("macro_research")
+            cache_stats["macro_research"] = "cached"
+            print(f"  {cfg['label']:<36} cached  ({len(recent_pdfs)} files, hash {source_id})")
+        else:
+            results["macro_research"]     = _call_claude_pdf(
+                client, recent_pdfs, cfg["prompt"], cfg["label"]
+            )
+            cache_stats["macro_research"] = f"fresh ({len(recent_pdfs)} files)"
+
+    return {
+        "pdf":          results,
+        "_pdf_sources": sources_used,
+        "_cache_stats": cache_stats,
+    }
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
+
+def _load_existing() -> dict | None:
+    """Load macro_context.json from the last run, or None if missing/corrupt."""
+    if not OUTPUT_PATH.exists():
+        return None
+    try:
+        with open(OUTPUT_PATH, encoding='utf-8') as fh:
+            return json.load(fh)
+    except (json.JSONDecodeError, OSError):
+        return None
+
 
 def main():
     parser = argparse.ArgumentParser(description="Build macro_context.json")
     parser.add_argument(
         '--stage1-only', action='store_true',
-        help='Skip PDF extraction (no Claude API calls) — faster for daily Excel/CSV updates',
+        help='Skip all PDF extraction (no Claude API calls)',
+    )
+    parser.add_argument(
+        '--force-pdf', action='store_true',
+        help='Bypass PDF cache — re-extract every source even if unchanged',
     )
     args = parser.parse_args()
 
-    stage = "Stage 1 only (--stage1-only)" if args.stage1_only else "Stage 1 + 2"
+    if args.stage1_only:
+        stage = "Stage 1 only (--stage1-only)"
+    elif args.force_pdf:
+        stage = "Stage 1 + 2 (--force-pdf, cache bypassed)"
+    else:
+        stage = "Stage 1 + 2"
     print(f"build_macro_context.py — {stage}")
     print(f"Output: {OUTPUT_PATH}\n")
+
+    existing = None if args.stage1_only else _load_existing()
 
     etf = read_etf_pro()
     ham = read_ham_holdings()
@@ -723,9 +949,10 @@ def main():
         **rr,
     }
 
+    cache_stats = {}
     if not args.stage1_only:
-        pdf = extract_pdf_data()
-        # sources_used is the same dict object referenced inside output, so this updates both
+        pdf = extract_pdf_data(existing, args.force_pdf)
+        cache_stats = pdf.pop("_cache_stats", {})
         sources_used.update(pdf.pop("_pdf_sources", {}))
         output.update(pdf)
 
@@ -737,16 +964,17 @@ def main():
     pdf_data  = output.get('pdf', {})
     print(f"\n── Summary ──")
     print(f"  etf_rerank:              {len(output.get('etf_rerank', []))} tickers")
-    print(f"  active_longs:            {len(output.get('active_longs', []))}")
-    print(f"  active_shorts:           {len(output.get('active_shorts', []))}")
+    print(f"  active_longs/shorts:     {len(output.get('active_longs', []))} / {len(output.get('active_shorts', []))}")
     print(f"  ham_holdings:            {len(output.get('ham_holdings', []))} tickers")
     print(f"  rta.recent_trades (90d): {len(rta_data.get('recent_trades', []))}")
-    print(f"  rta.recently_traded(60d):{len(rta_data.get('recently_traded_tickers', []))}")
     print(f"  rta.stats:               {rta_data.get('stats', {})}")
     print(f"  levels:                  {len(output.get('levels', {}))} tickers")
-    for k, v in pdf_data.items():
-        status = "OK" if v is not None else "null/failed"
-        print(f"  pdf.{k:<22} {status}")
+    if pdf_data:
+        print()
+        for k, v in pdf_data.items():
+            stat   = cache_stats.get(k, '')
+            status = f"OK ({stat})" if v is not None else f"null/failed ({stat})"
+            print(f"  pdf.{k:<22} {status}")
     print(f"\nWritten: {OUTPUT_PATH}")
 
 
