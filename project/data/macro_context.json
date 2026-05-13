@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T14:32:45.347872+00:00",
+  "generated_at": "2026-05-13T15:11:14.496319+00:00",
   "source_date": "2026-05-13",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
@@ -11,7 +11,7 @@
     "sss": "Hedgeye - Signal Strength Stocks_ 87 Stocks (6 Added, 4 Removed).pdf",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (-0.5%), “Extraordinarily Low Correlation”, (more) Dispersion→ Perf_ 4 ↑,5 ↓, RRs_ 4_9 Upside_Downside.pdf",
     "early_look": "Hedgeye - Warrior #Quad2 Inflation Asset Allocations.pdf",
-    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_12_2026) _ Top Movers_ EWC (+9), OAEM (+3), IBIT (+2).pdf",
+    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_13_2026) _ Top Movers_ IBIT (+11), ALLW (+8), FXB (+3).pdf",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (+0.0%), XRP=BULLISH, COIN→SOL Backed lending, THYP→💪 Day 1, JPM Tokenized MMF #2.pdf",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_13_2026.pdf",
     "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Wednesday, May 13th, 2026.pdf",
@@ -3518,7 +3518,32 @@
     }
   },
   "pdf": {
-    "macro_show": null,
+    "macro_show": {
+      "quad": {
+        "monthly": 2,
+        "quarterly": 2,
+        "depth": null
+      },
+      "vix": {
+        "current": 17.99,
+        "lrr": null,
+        "trr": null,
+        "bucket": null
+      },
+      "cpi_nowcast": 4.25,
+      "growth_roc": "ACCELERATING",
+      "inflation_roc": "ACCELERATING",
+      "quad_sequence": "2-3-2-3",
+      "high_beta_1m": 13.3,
+      "low_beta_1m": -2.6,
+      "keith_commentary": [
+        "Hedgeye Inflation Nowcast ticks higher to a Street High of +4.25% for May, with inflation accelerating in Quad2.",
+        "Best way to express Quad2 Inflation Accelerating is to be short Long-term Treasury Bonds (TLT) vs. Long 0-5yr TIPS (Long STIP).",
+        "Commodities (Long COM) remains the biggest Asset Allocation Call of 2026, with Dr. Copper (CPER) blasting to new all-time highs.",
+        "Long everything from Beans (SOYB) to Bitcoin (IBIT) as inflation plays spread across asset classes.",
+        "Russell (IWM) down only -1.5% from all-time high; bought the dip alongside more EM Exposure (OAEM) and Canada (EWC); Small Cap is a Long in Quad2 and relative Short in Quad3."
+      ]
+    },
     "msr": null,
     "sss": {
       "count": 87,
@@ -3780,233 +3805,7 @@
         "Long Oil and Energy Stocks position has been held since February; inflation reacceleration driven by food, energy, insurance, and everyday costs that official CPI ex-food & energy masks."
       ]
     },
-    "portfolio": {
-      "positions": [
-        {
-          "ticker": "FDRXX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "BUXX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CLOX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CLOZ",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "FXB",
-          "weight": 0.01,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "STIP",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "HYG",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "ALLW",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "EWC",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IWM",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "VYM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "NORW",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "EQRR",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "COM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "AAAU",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XLI",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XTL",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "OIH",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "TUR",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "MSOS",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "EWW",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "OAEM",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XOP",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IBIT",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "GII",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "NLR",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CNXT",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "SOYB",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "BNO",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CPER",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        }
-      ],
-      "top_movers": [
-        {
-          "ticker": "EWC",
-          "move": "+9"
-        },
-        {
-          "ticker": "OAEM",
-          "move": "+3"
-        },
-        {
-          "ticker": "IBIT",
-          "move": "+2"
-        },
-        {
-          "ticker": "FXB",
-          "move": "+1"
-        },
-        {
-          "ticker": "STIP",
-          "move": "+1"
-        },
-        {
-          "ticker": "OIH",
-          "move": "-9"
-        },
-        {
-          "ticker": "XLI",
-          "move": "-6"
-        },
-        {
-          "ticker": "XOP",
-          "move": "-6"
-        },
-        {
-          "ticker": "GII",
-          "move": "-6"
-        },
-        {
-          "ticker": "CNXT",
-          "move": "-6"
-        }
-      ],
-      "rerank_date": "2026-05-12"
-    },
+    "portfolio": null,
     "btc": {
       "BTC": {
         "lrr": 79713,
@@ -4158,7 +3957,47 @@
       }
     },
     "founders_choice": null,
-    "from_desk": null,
+    "from_desk": {
+      "macro_view": "The macro regime is firmly #Quad2 (Growth Accelerating + Inflation Accelerating) on a U.S. Monthly basis, with a down-dollar driving broad risk-on correlations across equities, commodities, and crypto. Higher-for-longer rates remain the operative framework as the Monthly Quad sequence runs 2-2-2-3 through August.",
+      "key_points": [
+        "The US Dollar Index remains in Bearish TRADE and TREND breakdown below 98, with strong inverse correlations to SPX (-0.90) and Bitcoin (-0.87), driving #Quad2 risk-on positioning.",
+        "UST 10yr yields broke above the March cycle high of 4.43% before settling at 4.36%; Bond Volatility (MOVE Index) flipped to Bullish TREND, reinforcing short duration and long high-yield positioning.",
+        "The VIX at 17.12 remains in the Investable Bucket with Bearish TREND; Global Currency Volatility breaking below 7 has flipped risk assets into bubble mode with SPX leaning toward positive gamma.",
+        "CRB Commodities Index hit fresh #Quad2 Cycle Highs at 401; Copper (CPER) ramped +3.1% WoW to cycle highs while WTI broke below TRADE Signal Support of $99.11/barrel.",
+        "SPY, QQQ, and IWM all hit all-time highs on Thursday with NVDA leading Tech (XLK) +2.7% WoW; Emerging Markets (OAEM) up +10.3% MoM on down-dollar correlation."
+      ],
+      "tickers_mentioned": [
+        "UUP",
+        "FXB",
+        "TLT",
+        "ZROZ",
+        "HYG",
+        "CLOZ",
+        "STIP",
+        "BNO",
+        "XOP",
+        "OIH",
+        "SOYB",
+        "CPER",
+        "SPY",
+        "QQQ",
+        "IWM",
+        "NVDA",
+        "XLK",
+        "XLI",
+        "KRE",
+        "ITB",
+        "XLV",
+        "OAEM",
+        "CNXT",
+        "TUR",
+        "IBIT",
+        "EQRR",
+        "COM",
+        "SLV"
+      ],
+      "risk_tone": "RISK_ON"
+    },
     "macro_research": {
       "cpi_nowcast": 4.0,
       "cpi_upside": 4.11,
