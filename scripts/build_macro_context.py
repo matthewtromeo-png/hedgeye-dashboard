@@ -773,7 +773,7 @@ def _cache_valid(key: str, source_id: str, cache_days: int | None,
 
 # ── CLAUDE API CALL ───────────────────────────────────────────────────────────
 
-def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str) -> dict | None:
+def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str, sleep_after: int = 3) -> dict | None:
     """Send one or more PDFs as document blocks, return parsed JSON or None on failure."""
     total_kb = sum(p.stat().st_size for p in paths) // 1024
     print(f"  [API] {label}: {len(paths)} file(s), {total_kb} KB")
@@ -818,7 +818,7 @@ def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str) -> dict
         warn(f"{label}: API error — {e}")
         return None
     finally:
-        time.sleep(3)  # rate-limit guard between API calls
+        time.sleep(sleep_after)  # rate-limit guard between API calls
 
 
 # ── MERGE HELPER FOR MACRO RESEARCH ──────────────────────────────────────────
@@ -871,7 +871,7 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
     sources_used = {}
     cache_stats  = {}   # key → "cached" | "fresh (N files)" | "missing"
 
-    MAX_PDF_MB = 3.0  # skip files larger than this to avoid 413 errors
+    MAX_PDF_MB = 10.0  # ~13MB base64; well under the API body limit (~20MB)
 
     # ── Regular sources (daily + weekly) ──────────────────────────────────────
     for src in PDF_SOURCES:
@@ -898,8 +898,9 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         source_id         = _source_id(paths)
         sources_used[key] = source_id
 
-        if not force_pdf and _cache_valid(key, source_id, cache_days, existing):
-            results[key]     = (existing or {}).get("pdf", {}).get(key)
+        cached_val = (existing or {}).get("pdf", {}).get(key)
+        if not force_pdf and cached_val is not None and _cache_valid(key, source_id, cache_days, existing):
+            results[key]     = cached_val
             cache_stats[key] = "cached"
             print(f"  {src['label']:<36} cached  ({source_id[:60]})")
             continue
@@ -927,14 +928,15 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         source_id                      = _files_hash(recent_pdfs)
         sources_used["macro_research"] = source_id
 
-        if not force_pdf and _cache_valid("macro_research", source_id, None, existing):
-            results["macro_research"]     = (existing or {}).get("pdf", {}).get("macro_research")
+        cached_val = (existing or {}).get("pdf", {}).get("macro_research")
+        if not force_pdf and cached_val is not None and _cache_valid("macro_research", source_id, None, existing):
+            results["macro_research"]     = cached_val
             cache_stats["macro_research"] = "cached"
             print(f"  {cfg['label']:<36} cached  ({len(recent_pdfs)} files, hash {source_id})")
         else:
             per_file: list[dict] = []
             for pdf_path in recent_pdfs:
-                r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"])
+                r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"], sleep_after=10)
                 if r:
                     per_file.append(r)
             results["macro_research"]     = _merge_macro_research(per_file) if per_file else None
