@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T15:11:14.496319+00:00",
+  "generated_at": "2026-05-13T15:29:15.830985+00:00",
   "source_date": "2026-05-13",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
@@ -3544,7 +3544,20 @@
         "Russell (IWM) down only -1.5% from all-time high; bought the dip alongside more EM Exposure (OAEM) and Canada (EWC); Small Cap is a Long in Quad2 and relative Short in Quad3."
       ]
     },
-    "msr": null,
+    "msr": {
+      "gamma_exposure": "POSITIVE",
+      "systematic_flow": "NEUTRAL",
+      "pv_band": "NEUTRAL",
+      "strategic_allocation": "RISK_ON",
+      "spx_upper_pv": 7492.0,
+      "spx_lower_pv": 7286.0,
+      "gex_flip": 7161.42,
+      "gvt": 20.74,
+      "realized_vol_10d": 10.14,
+      "spx_last": 7400.97,
+      "resistance": 7450.0,
+      "support": 7300.0
+    },
     "sss": {
       "count": 87,
       "added": [
@@ -3805,7 +3818,233 @@
         "Long Oil and Energy Stocks position has been held since February; inflation reacceleration driven by food, energy, insurance, and everyday costs that official CPI ex-food & energy masks."
       ]
     },
-    "portfolio": null,
+    "portfolio": {
+      "positions": [
+        {
+          "ticker": "FDRXX",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "BUXX",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CLOX",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CLOZ",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "FXB",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "HYG",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "ALLW",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "STIP",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IWM",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "VYM",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "EWC",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XLI",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "MSOS",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IBIT",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XTL",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "NORW",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "EQRR",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "COM",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "AAAU",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "VXF",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "TUR",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "EWW",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "OAEM",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "QTUM",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CNXT",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "SOYB",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "XOP",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "OIH",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "BNO",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "CPER",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BEARISH"
+        }
+      ],
+      "top_movers": [
+        {
+          "ticker": "IBIT",
+          "move": "+11"
+        },
+        {
+          "ticker": "ALLW",
+          "move": "+8"
+        },
+        {
+          "ticker": "FXB",
+          "move": "+3"
+        },
+        {
+          "ticker": "CLOZ",
+          "move": "+1"
+        },
+        {
+          "ticker": "EWC",
+          "move": "+1"
+        },
+        {
+          "ticker": "OIH",
+          "move": "-21"
+        },
+        {
+          "ticker": "COM",
+          "move": "-8"
+        },
+        {
+          "ticker": "SOYB",
+          "move": "-8"
+        },
+        {
+          "ticker": "XOP",
+          "move": "-8"
+        },
+        {
+          "ticker": "NORW",
+          "move": "-7"
+        }
+      ],
+      "rerank_date": "2026-05-13"
+    },
     "btc": {
       "BTC": {
         "lrr": 79713,
@@ -3956,7 +4195,121 @@
         }
       }
     },
-    "founders_choice": null,
+    "founders_choice": {
+      "retail": {
+        "longs": [
+          "WRBY",
+          "BBWI",
+          "AS",
+          "ROST",
+          "PVH",
+          "REAL",
+          "VVV",
+          "AMZN",
+          "TJX",
+          "ATZ.TO",
+          "SWBI",
+          "PLNT",
+          "RH",
+          "CPRI",
+          "EL.PA",
+          "DLTR",
+          "ASO",
+          "GAP",
+          "DG",
+          "ULTA",
+          "FIVE",
+          "BIRK",
+          "JD.L"
+        ],
+        "shorts": [
+          "BOOT",
+          "GIII",
+          "OLLI",
+          "HELE",
+          "DDS",
+          "KSS",
+          "AEO",
+          "DKS",
+          "ONON",
+          "ADS.DE",
+          "VFC",
+          "M",
+          "ANF",
+          "DECK",
+          "NKE",
+          "SIG",
+          "RL",
+          "WSM",
+          "RVLV",
+          "HNNMY",
+          "SBH",
+          "CRI",
+          "ARHS",
+          "FND",
+          "BBY",
+          "VSCO",
+          "CHWY",
+          "TPR",
+          "DRVN",
+          "ORLY",
+          "HD",
+          "GOOS",
+          "LUXE",
+          "RMS.PA",
+          "1913.HK",
+          "BURL",
+          "3998.HK",
+          "2331.HK",
+          "LTH",
+          "SHOO",
+          "GPI",
+          "PAG",
+          "UAA",
+          "CFR.SW",
+          "CAL",
+          "LVMHF",
+          "GME",
+          "W",
+          "ETSY",
+          "GRMN",
+          "LEVI",
+          "LULU",
+          "OXM",
+          "ONEW",
+          "PANDY",
+          "TSCO",
+          "PUM.DE",
+          "YETI",
+          "LAD",
+          "SAH",
+          "KMX",
+          "CARG",
+          "LOW"
+        ]
+      },
+      "energy": {
+        "longs": [
+          "DAR",
+          "MTDR",
+          "PBR",
+          "PBR-A",
+          "PR",
+          "MPC",
+          "FANG",
+          "XOM",
+          "GEL",
+          "VG"
+        ],
+        "shorts": [
+          "XIFR",
+          "PAM",
+          "NEE",
+          "CEG",
+          "DKL"
+        ]
+      }
+    },
     "from_desk": {
       "macro_view": "The macro regime is firmly #Quad2 (Growth Accelerating + Inflation Accelerating) on a U.S. Monthly basis, with a down-dollar driving broad risk-on correlations across equities, commodities, and crypto. Higher-for-longer rates remain the operative framework as the Monthly Quad sequence runs 2-2-2-3 through August.",
       "key_points": [
