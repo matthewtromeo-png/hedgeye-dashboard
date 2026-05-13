@@ -30,6 +30,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -253,9 +254,21 @@ def _parse_duration(raw: str) -> str:
 
 
 def _parse_date(raw: str) -> date | None:
-    """Parse RTA date strings: 'M/D/YYYY HH:MM', 'M/D/YYYY', or 'YYYY-MM-DD...'."""
+    """Parse RTA date strings in any of these formats:
+      '2026-05-11 15:01:17 -0400'  (new CSV format)
+      '2026-05-11'                 (ISO date only)
+      '5/11/2026 15:01'            (old US datetime format)
+      '5/11/2026'                  (old US date only)
+    """
     s = raw.strip()
-    for fmt in ('%m/%d/%Y %H:%M', '%m/%d/%Y', '%Y-%m-%d'):
+    # ISO format — detected by YYYY-MM-DD shape; slice [:10] strips time/tz
+    if len(s) >= 10 and s[4:5] == '-' and s[7:8] == '-':
+        try:
+            return datetime.strptime(s[:10], '%Y-%m-%d').date()
+        except ValueError:
+            pass
+    # US M/D/YYYY formats (legacy)
+    for fmt in ('%m/%d/%Y %H:%M', '%m/%d/%Y'):
         try:
             return datetime.strptime(s[:len(fmt)], fmt).date()
         except ValueError:
@@ -804,6 +817,36 @@ def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str) -> dict
     except Exception as e:
         warn(f"{label}: API error — {e}")
         return None
+    finally:
+        time.sleep(3)  # rate-limit guard between API calls
+
+
+# ── MERGE HELPER FOR MACRO RESEARCH ──────────────────────────────────────────
+
+def _merge_macro_research(results: list[dict]) -> dict:
+    """Merge per-file macro_research extractions.
+
+    Scalars (cpi_nowcast, etc.): last non-null value wins (oldest→newest order).
+    Dicts (forward_quads, levels_reference): union; newer file wins on key conflicts.
+    Lists (key_themes): concatenate unique values, cap at 5.
+    """
+    merged: dict = {}
+    scalar_keys = ('cpi_nowcast', 'cpi_upside', 'cpi_downside', 'cpi_trend',
+                   'quarterly_quad', 'monthly_quad', 'quad_sequence')
+    for r in results:
+        for k in scalar_keys:
+            if r.get(k) is not None:
+                merged[k] = r[k]
+        for dict_key in ('forward_quads', 'levels_reference'):
+            if r.get(dict_key):
+                merged.setdefault(dict_key, {}).update(r[dict_key])
+        if r.get('key_themes'):
+            existing_themes = merged.get('key_themes', [])
+            for theme in r['key_themes']:
+                if theme not in existing_themes:
+                    existing_themes.append(theme)
+            merged['key_themes'] = existing_themes[:5]
+    return merged
 
 
 # ── EXTRACT ALL PDFs ──────────────────────────────────────────────────────────
@@ -828,6 +871,8 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
     sources_used = {}
     cache_stats  = {}   # key → "cached" | "fresh (N files)" | "missing"
 
+    MAX_PDF_MB = 3.0  # skip files larger than this to avoid 413 errors
+
     # ── Regular sources (daily + weekly) ──────────────────────────────────────
     for src in PDF_SOURCES:
         key        = src["key"]
@@ -839,6 +884,15 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             results[key]      = None
             sources_used[key] = None
             cache_stats[key]  = "missing"
+            continue
+
+        # Size guard — skip rather than sending an oversized payload
+        total_mb = sum(p.stat().st_size for p in paths) / 1_048_576
+        if total_mb > MAX_PDF_MB:
+            warn(f"{src['label']}: file too large ({total_mb:.1f}MB), skipping")
+            results[key]      = None
+            sources_used[key] = _source_id(paths)
+            cache_stats[key]  = f"too large ({total_mb:.1f}MB)"
             continue
 
         source_id         = _source_id(paths)
@@ -853,18 +907,19 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"])
         cache_stats[key] = f"fresh ({len(paths)} file{'s' if len(paths) > 1 else ''})"
 
-    # ── Macro research: all PDFs from last 35 days in one combined call ────────
+    # ── Macro research: each file individually, merge results ─────────────────
+    # Window reduced to 14 days; cap at 4 files; one API call per file.
+    # Results are merged oldest-to-newest so newer files win on conflicts.
     cfg    = MACRO_RESEARCH_CFG
-    cutoff = datetime.now() - timedelta(days=cfg["window_days"])
+    cutoff = datetime.now() - timedelta(days=14)
     recent_pdfs = sorted(
         [p for p in cfg["folder"].glob(cfg["glob"])
          if datetime.fromtimestamp(p.stat().st_mtime) >= cutoff],
         key=lambda p: p.stat().st_mtime,
-        reverse=True,
-    )
+    )[:4]  # oldest first so newest overwrites on merge; hard cap at 4
 
     if not recent_pdfs:
-        warn(f"{cfg['label']}: no PDFs found in last {cfg['window_days']} days")
+        warn(f"{cfg['label']}: no PDFs found in last 14 days")
         results["macro_research"]      = None
         sources_used["macro_research"] = None
         cache_stats["macro_research"]  = "missing"
@@ -877,9 +932,12 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             cache_stats["macro_research"] = "cached"
             print(f"  {cfg['label']:<36} cached  ({len(recent_pdfs)} files, hash {source_id})")
         else:
-            results["macro_research"]     = _call_claude_pdf(
-                client, recent_pdfs, cfg["prompt"], cfg["label"]
-            )
+            per_file: list[dict] = []
+            for pdf_path in recent_pdfs:
+                r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"])
+                if r:
+                    per_file.append(r)
+            results["macro_research"]     = _merge_macro_research(per_file) if per_file else None
             cache_stats["macro_research"] = f"fresh ({len(recent_pdfs)} files)"
 
     return {
