@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T15:13:55.839179+00:00",
+  "generated_at": "2026-05-14T16:59:20.579443+00:00",
   "source_date": "2026-05-14",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
@@ -13,7 +13,7 @@
     "early_look": "Hedgeye - Riding Winners Still Pays.pdf",
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_13_2026) _ Top Movers_ IBIT (+11), ALLW (+8), FXB (+3).pdf",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (+0.0%), XRP=BULLISH, COIN→SOL Backed lending, THYP→💪 Day 1, JPM Tokenized MMF #2.pdf",
-    "call_summary": "Hedgeye - Signal Strength Stocks_ 81 Stocks (2 Added, 8 Removed).pdf",
+    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 05_14_2026.pdf",
     "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Thursday, May 14th, 2026.pdf",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 04, 2026.pdf|Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf",
     "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf",
@@ -4058,28 +4058,30 @@
       }
     },
     "call_summary": {
-      "date": "2026-05-13",
-      "quad": null,
+      "date": "2026-05-14",
+      "quad": 2,
       "key_points": [
-        "Signal Strength Stocks list updated to 81 total stocks",
-        "2 stocks added: RHP and BTI",
-        "8 stocks removed: ALLY, ROST, CHRD, ONTO, TSN, RTO, PINS, CAKE",
-        "Top performer on the list is CAT with 163.3% gain since initial signal (352 days on list)",
-        "New feature introduced: Live Updates to Signal Strength Stocks List"
+        "Quad 2 economic setup continues to be validated by incoming data; momentum and signal strength remain dominant investment factors with high-beta growth, IPOs, and momentum stocks outperforming",
+        "K-shaped economy widening: BofA Institute data shows spending growth accelerating to 4.8% YoY with top 10% income earners seeing after-tax income grow 10% YoY while gap between high and low income wage growth is widest in 11 years",
+        "GTA VI launches November 19 with TTWO preorders rumored to start May 18, ahead of June/July expectations; stock up 7% on session with $300+ price target",
+        "LTL industry faces structural headwinds as FedEx Freight enters with 30% available network capacity and Amazon enters LTL priced 8-12% below legacy players, pressuring ODFL",
+        "Meta Platforms faces estimated ~$60 billion legal liability risk over Section 230/platform design cases with first trial court hearing June 4, implying ~7-8% equity value impact"
       ],
       "trades_mentioned": [
-        "Added RHP (GLL sector, analyst Sean Jenkins, entry price 107.1)",
-        "Added BTI (Consumer Staples sector, analyst Daniel Biolsi, entry price 64.6)",
-        "Removed ALLY",
-        "Removed ROST",
-        "Removed CHRD",
-        "Removed ONTO",
-        "Removed TSN",
-        "Removed RTO",
-        "Removed PINS",
-        "Removed CAKE"
+        "TTWO LONG: Signal strength entry at $221, key resistance at $262, $300+ price target; GTA VI preorder catalyst imminent",
+        "ODFL SHORT: Returned to signal strength shorts this week; down ~15% from year peak",
+        "SBUX LONG: Bullish trade and trend, higher highs in risk range; next level is three-year high ~$113",
+        "WRBY LONG: Entered at $19, currently ~$28; near-term catalyst is Google product event in ~two weeks",
+        "VIK LONG: Sole signal strength long in GLL; soft price target $110-$120; 2026 pricing accelerating to ~11%",
+        "TSN SHORT: Remains on short bench due to cattle herd at ~70-year low and persistent elevated beef prices",
+        "THC SHORT: ACA enrollment decline of -13% to -35%; bad debt expected to increase significantly; watershed catalyst at Q2 reporting",
+        "RDDT SHORT: Broke trend at $167; down ~44% from all-time high; expected to move onto signal strength short list",
+        "CAMT SHORT: Optical metrology play not expected to accelerate even with AI tailwinds; stock declining sharply",
+        "CBRS LONG: IPO expected to open at ~$400 (~116% above final IPO price of $185)",
+        "MPC LONG: On signal strength long; coastal refinery advantage; E15 legislation and RINs reform add tailwinds",
+        "PBF: On bearish trend; E15/small refinery exemption reform is a headwind for merchant refiners"
       ],
-      "keith_outlook": null
+      "keith_outlook": "Quad 2 economic setup remains firmly in place, with momentum and signal strength as dominant investment factors; the emphasis is on riding high-beta growth winners and cutting losers quickly as market leadership remains concentrated in high-growth and AI-related equities amid a widening K-shaped economy."
     },
     "macro_show_notes": {
       "key_points": [
