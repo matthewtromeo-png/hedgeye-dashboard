@@ -716,7 +716,7 @@ MACRO_RESEARCH_CFG = {
         '  "cpi_trend":      <"ACCELERATING"|"DECELERATING">,\n'
         '  "quarterly_quad": <int 1-4, current quarterly quad>,\n'
         '  "monthly_quad":   <int 1-4, current monthly quad>,\n'
-        '  "quad_sequence":  <string like "2-2-2-3" showing next 4 quarters>,\n'
+        '  "quad_sequence":  <string like "2-2-2-3" — look for "Quad Count X-X-X-X" in the Mid-Quarter Update or Quarterly Themes deck; these are sequential monthly quads forward in time>,\n'
         '  "forward_quads": {\n'
         '    "<QNYY e.g. 2Q26>": {"quad": <int>, "gdp_qoq": <float %>, "cpi_yoy": <float %>}\n'
         "  },\n"
@@ -907,6 +907,9 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
 
         results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"])
         cache_stats[key] = f"fresh ({len(paths)} file{'s' if len(paths) > 1 else ''})"
+        if key == "macro_show":
+            print("  [rate-limit] Sleeping 60s after macro_show...")
+            time.sleep(60)
 
     # ── Macro research: each file individually, merge results ─────────────────
     # Window reduced to 14 days; cap at 4 files; one API call per file.

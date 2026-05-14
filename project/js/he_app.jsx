@@ -194,7 +194,8 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const sssAdded    = macroCtx?.pdf?.sss?.added   ?? [];
   const sssRemoved  = macroCtx?.pdf?.sss?.removed  ?? [];
 
-  const quadSeq         = macroCtx?.pdf?.macro_show?.quad_sequence ?? null;
+  const quadSeq         = macroCtx?.pdf?.macro_research?.quad_sequence
+                        ?? macroCtx?.pdf?.macro_show?.quad_sequence ?? null;
   const portfolioMovers = macroCtx?.pdf?.portfolio?.top_movers ?? null;
   const fallbackRerank  = window.HE.ETF_RERANKS[0];
 
@@ -202,6 +203,30 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const callSummPts  = macroCtx?.pdf?.call_summary?.key_points ?? [];
   const callSummDate = macroCtx?.pdf?.call_summary?.date ?? null;
   const hasIntel = showNotesPts.length > 0 || callSummPts.length > 0;
+
+  const vixLevel = macroCtx?.pdf?.macro_show?.vix?.current
+    ?? macroCtx?.pdf?.early_look?.vix_level
+    ?? macroCtx?.levels?.VIX?.close ?? null;
+  const vixBucket = vixLevel === null ? null
+    : vixLevel < 19 ? {label:'● INVESTABLE BUCKET', sub:'Buy dips on Signal Strength longs',   bg:'#EAF3DE', color:'#27500A', border:'#3B6D11'}
+    : vixLevel < 30 ? {label:'● CHOP BUCKET',       sub:'Reduce sizing — no fresh short adds', bg:'#FFFBEB', color:'#B8860B', border:'#D4A017'}
+    :                 {label:'● F*CK BUCKET',        sub:'Defensive — reduce gross exposure',   bg:'#FCEBEB', color:'#C8302A', border:'#E53E3E'};
+
+  const sssFilename  = macroCtx?.sources_used?.sss ?? '';
+  const sssCount     = macroCtx?.pdf?.sss?.count ?? null;
+  const sssCountM    = sssFilename.match(/(\d+)\s+Stocks/);
+  const sssAddedM    = sssFilename.match(/(\d+)\s+Added/);
+  const sssRemovedM  = sssFilename.match(/(\d+)\s+Removed/);
+  const sssFileCount = sssCountM   ? parseInt(sssCountM[1])   : null;
+  const sssAddedN    = sssAddedM   ? parseInt(sssAddedM[1])   : 0;
+  const sssRemovedN  = sssRemovedM ? parseInt(sssRemovedM[1]) : 0;
+  const sssPrevCount = sssFileCount !== null ? sssFileCount - sssAddedN + sssRemovedN : null;
+
+  const bulletSentiment = (text) => {
+    if (['BULLISH',' long ',' Long ','buying','added','long the'].some(k => text.includes(k))) return '#27500A';
+    if (['BEARISH',' short ',' Short ','selling','removed','short the'].some(k => text.includes(k))) return '#C8302A';
+    return null;
+  };
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
@@ -309,6 +334,22 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
         </div>
       </div>
 
+      {/* VIX Bucket Banner */}
+      {vixBucket && (
+        <div style={{background:vixBucket.bg,border:`1px solid ${vixBucket.border}`,borderRadius:8,
+          padding:'12px 18px',marginBottom:16,display:'flex',alignItems:'center',
+          justifyContent:'space-between'}}>
+          <div style={{display:'flex',alignItems:'center',gap:14}}>
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:700,
+              color:vixBucket.color}}>{vixBucket.label}</span>
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:vixBucket.color,
+              opacity:0.85}}>{vixBucket.sub}</span>
+          </div>
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:700,
+            color:vixBucket.color}}>VIX {vixLevel.toFixed(2)}</span>
+        </div>
+      )}
+
       {/* Macro Intel Panel */}
       {hasIntel && (
         <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px',marginBottom:16}}>
@@ -332,26 +373,34 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
               <div>
                 <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
                   textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:6}}>Macro Show Notes</div>
-                {showNotesPts.slice(0,4).map((pt,i) => (
-                  <div key={i} style={{display:'flex',gap:6,marginBottom:5,alignItems:'flex-start'}}>
-                    <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
-                      marginTop:2,flexShrink:0}}>›</span>
-                    <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{pt}</span>
-                  </div>
-                ))}
+                {showNotesPts.slice(0,4).map((pt,i) => {
+                  const bc = bulletSentiment(pt);
+                  return (
+                    <div key={i} style={{display:'flex',gap:6,marginBottom:5,alignItems:'flex-start',
+                      paddingLeft:6,borderLeft:`2px solid ${bc || '#E4E1DA'}`}}>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                        marginTop:2,flexShrink:0}}>›</span>
+                      <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{pt}</span>
+                    </div>
+                  );
+                })}
               </div>
             )}
             {callSummPts.length > 0 && (
               <div>
                 <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
                   textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:6}}>Call Summary</div>
-                {callSummPts.slice(0,4).map((pt,i) => (
-                  <div key={i} style={{display:'flex',gap:6,marginBottom:5,alignItems:'flex-start'}}>
-                    <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
-                      marginTop:2,flexShrink:0}}>›</span>
-                    <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{pt}</span>
-                  </div>
-                ))}
+                {callSummPts.slice(0,4).map((pt,i) => {
+                  const bc = bulletSentiment(pt);
+                  return (
+                    <div key={i} style={{display:'flex',gap:6,marginBottom:5,alignItems:'flex-start',
+                      paddingLeft:6,borderLeft:`2px solid ${bc || '#E4E1DA'}`}}>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                        marginTop:2,flexShrink:0}}>›</span>
+                      <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{pt}</span>
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -465,6 +514,12 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
                     background:'#FCEBEB',color:'#C8302A',padding:'2px 6px',borderRadius:3}}>{t}</span>
                 ))}
               </div>
+            </div>
+          )}
+          {sssCount !== null && sssPrevCount !== null && (
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,marginBottom:8,
+              color: sssCount > sssPrevCount ? '#27500A' : sssCount < sssPrevCount ? '#C8302A' : '#9A9790'}}>
+              {sssPrevCount} → {sssCount} {sssCount > sssPrevCount ? '↑ Expanding' : sssCount < sssPrevCount ? '↓ Contracting' : '— Stable'}
             </div>
           )}
           {sssTickers === null ? <LoadingSpinner msg="Loading…" /> : (

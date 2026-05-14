@@ -6,13 +6,20 @@
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$RepoDir       = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard"
-$Script        = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\scripts\import_official_levels.py"
-$GeneratedHtml = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Dashboards\hedgeye risk range dashboard.html"
-$DestHtml      = "$RepoDir\project\risk_range_dashboard.html"
+$RepoDir         = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard"
+$Script          = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\scripts\import_official_levels.py"
+$GeneratedHtml   = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Dashboards\hedgeye risk range dashboard.html"
+$DestHtml        = "$RepoDir\project\risk_range_dashboard.html"
+$DashboardScript = "C:\Users\matth\OneDrive\Desktop\Python\Python algos\hedgeye_risk_range_dashboard.py"
 
 Write-Host "==> Generating Risk Range dashboard..." -ForegroundColor Cyan
-python "C:\Users\matth\OneDrive\Desktop\Trading\Python\Python algos\hedgeye_risk_range_dashboard.py"
+$result = & python $DashboardScript 2>&1
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "[WARN] Dashboard generation failed — using existing HTML" -ForegroundColor Yellow
+    Write-Host $result
+} else {
+    Write-Host "==> Dashboard generated successfully" -ForegroundColor Green
+}
 
 Write-Host "==> Importing official levels..." -ForegroundColor Cyan
 python $Script
