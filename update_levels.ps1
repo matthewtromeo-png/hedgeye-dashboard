@@ -15,7 +15,7 @@ $DashboardScript = "C:\Users\matth\OneDrive\Desktop\Python\Python algos\hedgeye_
 Write-Host "==> Generating Risk Range dashboard..." -ForegroundColor Cyan
 $result = & python $DashboardScript 2>&1
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "[WARN] Dashboard generation failed — using existing HTML" -ForegroundColor Yellow
+    Write-Host "[WARN] Dashboard generation failed -- using existing HTML" -ForegroundColor Yellow
     Write-Host $result
 } else {
     Write-Host "==> Dashboard generated successfully" -ForegroundColor Green
