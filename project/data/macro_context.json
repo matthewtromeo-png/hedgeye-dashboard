@@ -1,11 +1,24 @@
 {
-  "generated_at": "2026-05-15T20:36:11.526476+00:00",
+  "generated_at": "2026-05-15T20:38:42.330555+00:00",
   "source_date": "2026-05-15",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778872803.xlsx",
     "ham_holdings": "ETF_Holdings 5.15.2026.csv",
     "rta": "real-time-alerts-history-2026-05-15.csv",
-    "risk_range": "risk_range_tracker_excelworkbook.xlsx"
+    "risk_range": "risk_range_tracker_excelworkbook.xlsx",
+    "macro_show": "HE_TMS_KM_RR_5.15.2026.pdf@1778856928",
+    "msr": "MSR_2.0.pdf@1778851302",
+    "sss": "Hedgeye - Signal Strength Stocks_ 70 Stocks (0 Added, 7 Removed).pdf@1778863207",
+    "momo": "Hedgeye - MOMO Tracker _ Mag7 (+0.5%), More Momo Driven ATHs, OpEx → Hedge Reset & (-) Asymmetry for Systematics.pdf@1778851322",
+    "early_look": "Hedgeye - The Future of Wall Street Is Already Here.pdf@1778851154",
+    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_15_2026) _ Top Movers_ OAEM (+12), CNXT (+10), IWM (+9).pdf@1778872786",
+    "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.9%), ETH_SOL_AVAX_XRP=BEARISH, BHYP Launch Today, HYPE🤝COIN_CRCL.pdf@1778851135",
+    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_15_2026.pdf@1778853858",
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Friday, May 15th, 2026.pdf@1778858022",
+    "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 04, 2026.pdf@1777897950|Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf@1778506347",
+    "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf@1778592817|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf@1778592798",
+    "from_desk": "Macro_Week_Summary_Notes_5.1.2026.pdf@1777897927|Macro_Week_Summary_Notes_5.8.2026.pdf@1778513480",
+    "macro_research": "49fce5e8054e"
   },
   "etf_rerank": [
     "SLX",
@@ -3602,6 +3615,858 @@
       "lrr": 220.0,
       "trr": 235.0,
       "signal": "BULLISH"
+    }
+  },
+  "pdf": {
+    "macro_show": {
+      "quad": {
+        "monthly": null,
+        "quarterly": 2,
+        "depth": "SHALLOW"
+      },
+      "vix": {
+        "current": 17.26,
+        "lrr": 16.52,
+        "trr": 19.83,
+        "bucket": "INVESTABLE"
+      },
+      "cpi_nowcast": null,
+      "growth_roc": "ACCELERATING",
+      "inflation_roc": "ACCELERATING",
+      "quad_sequence": "1Q26-2Q26-3Q26-4Q26",
+      "high_beta_1m": 9.2,
+      "low_beta_1m": -2.0,
+      "keith_commentary": [
+        "Oil ripping +4% but showing lower-high at $106.88 vs cycle high of $113 - sell-some day",
+        "Bond yields signaling inflation acceleration with 10yr at 4.59%, reiterating short duration via TLT/ZROZ",
+        "Multi-trillion OPEX day for SPY - VIX breakout sustainability key to continued equity beta strength",
+        "Next play: start buying stocks if Oil fails at lower-high and VIX holds 19.83 resistance",
+        "Oil losing immediate-term trade correlation to USD - positioning shift warranted"
+      ]
+    },
+    "msr": {
+      "gamma_exposure": "POSITIVE",
+      "systematic_flow": "NEUTRAL",
+      "pv_band": "NEUTRAL",
+      "strategic_allocation": "RISK_ON",
+      "spx_upper_pv": 7553.0,
+      "spx_lower_pv": 7346.0,
+      "gex_flip": 7200.0,
+      "gvt": 25.89,
+      "realized_vol_10d": 9.12,
+      "spx_last": 7501.25,
+      "resistance": 7550,
+      "support": 7350
+    },
+    "sss": {
+      "count": 70,
+      "added": [],
+      "removed": [
+        "COIN",
+        "QSR",
+        "ARCO",
+        "OC",
+        "GTBIF",
+        "ABNB",
+        "LII"
+      ],
+      "tickers": [
+        "CAT",
+        "OUT",
+        "SPHR",
+        "CASP",
+        "STKL",
+        "AMAT",
+        "ENB",
+        "DAR",
+        "CAVA",
+        "ACHE",
+        "MUSA",
+        "SWBI",
+        "RSI",
+        "CZR",
+        "FCFS",
+        "ULS",
+        "MAR",
+        "CSX",
+        "INTC",
+        "LRCX",
+        "SITU",
+        "NVDA",
+        "AMC",
+        "VIK",
+        "GOOGL",
+        "AAPL",
+        "ROKU",
+        "HST",
+        "GLASF",
+        "CURLF",
+        "SBUY",
+        "ROK",
+        "CF",
+        "LUMN",
+        "TWLO",
+        "LFST",
+        "LFMD",
+        "UNM",
+        "SXT",
+        "GACE",
+        "XYZ",
+        "CARR",
+        "APD",
+        "MARA",
+        "CRCL",
+        "AFRI",
+        "URI",
+        "BA",
+        "DOW",
+        "LYB",
+        "RIO",
+        "BHP",
+        "AKAM",
+        "TTWO",
+        "APLE",
+        "LOTMY",
+        "GDI",
+        "WRBY",
+        "DDOG",
+        "MNST",
+        "PFNB",
+        "PM",
+        "AZTA",
+        "BLMN",
+        "V",
+        "ATRO",
+        "ILMN",
+        "NVO",
+        "RHP",
+        "BTI"
+      ]
+    },
+    "momo": {
+      "MSFT": {
+        "lrr": 401,
+        "trr": 422,
+        "signal": "BEARISH",
+        "close": 409.43
+      },
+      "AAPL": {
+        "lrr": 290,
+        "trr": 305,
+        "signal": "BULLISH",
+        "close": 298.21
+      },
+      "AMZN": {
+        "lrr": 263,
+        "trr": 277,
+        "signal": "BULLISH",
+        "close": 267.22
+      },
+      "META": {
+        "lrr": 595,
+        "trr": 626,
+        "signal": "BEARISH",
+        "close": 618.43
+      },
+      "GOOGL": {
+        "lrr": 382,
+        "trr": 409,
+        "signal": "BULLISH",
+        "close": 401.07
+      },
+      "NFLX": {
+        "lrr": 84,
+        "trr": 91,
+        "signal": "BEARISH",
+        "close": 86.94
+      },
+      "TSLA": {
+        "lrr": 400,
+        "trr": 465,
+        "signal": "BULLISH",
+        "close": 443.32
+      },
+      "NVDA": {
+        "lrr": 216,
+        "trr": 240,
+        "signal": "BULLISH",
+        "close": 235.74
+      },
+      "ORCL": {
+        "lrr": 179,
+        "trr": 204,
+        "signal": "BULLISH",
+        "close": 195.61
+      }
+    },
+    "early_look": {
+      "key_levels": {
+        "UST10Y": {
+          "lrr": 4.37,
+          "trr": 4.59,
+          "signal": "BULLISH"
+        },
+        "HYG": {
+          "lrr": 79.65,
+          "trr": 80.19,
+          "signal": "BULLISH"
+        },
+        "LQD": {
+          "lrr": 107.9,
+          "trr": 109.2,
+          "signal": "BEARISH"
+        },
+        "SPX": {
+          "lrr": 7358,
+          "trr": 7549,
+          "signal": "BULLISH"
+        },
+        "NASDAQ": {
+          "lrr": 25865,
+          "trr": 26937,
+          "signal": "BULLISH"
+        },
+        "RUT": {
+          "lrr": 2791,
+          "trr": 2892,
+          "signal": "BULLISH"
+        },
+        "XLK": {
+          "lrr": 170,
+          "trr": 185,
+          "signal": "BULLISH"
+        },
+        "XOP": {
+          "lrr": 165,
+          "trr": 182,
+          "signal": "BULLISH"
+        },
+        "XTL": {
+          "lrr": 220,
+          "trr": 235,
+          "signal": "BULLISH"
+        },
+        "XLI": {
+          "lrr": 171,
+          "trr": 177,
+          "signal": "BULLISH"
+        },
+        "SSEC": {
+          "lrr": 4107,
+          "trr": 4275,
+          "signal": "BULLISH"
+        },
+        "NIKK": {
+          "lrr": 60008,
+          "trr": 64760,
+          "signal": "BULLISH"
+        },
+        "DAX": {
+          "lrr": 23763,
+          "trr": 24930,
+          "signal": "BULLISH"
+        },
+        "VIX": {
+          "lrr": 16.52,
+          "trr": 19.83,
+          "signal": "BEARISH"
+        },
+        "USD": {
+          "lrr": 97.91,
+          "trr": 99.32,
+          "signal": "BULLISH"
+        },
+        "BRENT": {
+          "lrr": 103,
+          "trr": 113,
+          "signal": "BULLISH"
+        },
+        "NATGAS": {
+          "lrr": 2.71,
+          "trr": 3.02,
+          "signal": "NEUTRAL"
+        },
+        "GOLD": {
+          "lrr": 4523,
+          "trr": 4692,
+          "signal": "NEUTRAL"
+        },
+        "COPPER": {
+          "lrr": 6.1,
+          "trr": 6.8,
+          "signal": "BULLISH"
+        },
+        "SLV": {
+          "lrr": 73,
+          "trr": 88,
+          "signal": "NEUTRAL"
+        },
+        "WTI": {
+          "lrr": 98.12,
+          "trr": 106.88,
+          "signal": "BULLISH"
+        }
+      },
+      "signal_changes": [],
+      "vix_level": 19.83,
+      "keith_notes": [
+        "Markets, macro, and AI are adaptive processes not static systems - rigid narratives and fixed calls keep failing in real time",
+        "Key to understanding macro flows is tracking repeating fractal patterns across durations rather than reacting emotionally to short-term price ripples",
+        "Follow the flow not the ripple - SPY's 18th all-time closing high of 2026 is expected with Dollar Up and Stocks Down inverse correlation",
+        "USD testing new immediate-term TRADE and TREND Breakout with breakout signals to exit GBP/USD position",
+        "If VIX can't hold above 19.83 the stream is calm with nothing to see in terms of US Equity Volatility Regime Shift"
+      ]
+    },
+    "portfolio": {
+      "positions": [
+        {
+          "ticker": "FDRXX",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CLOX",
+          "weight": 0.1,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "BUXX",
+          "weight": 0.1,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CLOZ",
+          "weight": 0.1,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IWM",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "STIP",
+          "weight": 0.1,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "COM",
+          "weight": 0.04,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XLI",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "HYG",
+          "weight": 0.1,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "VXF",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "EWC",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "ALLW",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IBIT",
+          "weight": 0.04,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CNXT",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "TUR",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "OAEM",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "VYM",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "EQRR",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "NORW",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "QTUM",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "MSOS",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XTL",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "AAAU",
+          "weight": 0.12,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "SLX",
+          "weight": 0.04,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "SOYB",
+          "weight": 0.04,
+          "daily_move": null,
+          "signal": "NEUTRAL"
+        },
+        {
+          "ticker": "EWW",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "XOP",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "OIH",
+          "weight": 0.06,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "BNO",
+          "weight": 0.04,
+          "daily_move": null,
+          "signal": "BEARISH"
+        },
+        {
+          "ticker": "CPER",
+          "weight": 0.04,
+          "daily_move": null,
+          "signal": "NEUTRAL"
+        }
+      ],
+      "top_movers": [
+        {
+          "ticker": "OAEM",
+          "move": "+12"
+        },
+        {
+          "ticker": "CNXT",
+          "move": "+10"
+        },
+        {
+          "ticker": "IWM",
+          "move": "+9"
+        },
+        {
+          "ticker": "IBIT",
+          "move": "+9"
+        },
+        {
+          "ticker": "COM",
+          "move": "+4"
+        }
+      ],
+      "rerank_date": "2026-05-15"
+    },
+    "btc": {
+      "BTC": {
+        "lrr": 78.608,
+        "trr": 82.457,
+        "signal": "BULLISH"
+      },
+      "ETH": {
+        "lrr": 2.211,
+        "trr": 2.368,
+        "signal": "BEARISH"
+      },
+      "SOL": {
+        "lrr": 86,
+        "trr": 97,
+        "signal": "BEARISH"
+      },
+      "AVAX": {
+        "lrr": 9.4,
+        "trr": 10.22,
+        "signal": "BEARISH"
+      },
+      "XRP": {
+        "lrr": 1.36,
+        "trr": 1.48,
+        "signal": "BEARISH"
+      }
+    },
+    "call_summary": {
+      "date": "2026-05-15",
+      "quad": 2,
+      "key_points": [
+        "Dollar strengthening as oil and rates rise together, consistent with higher-for-longer interest rate environment",
+        "Viking Holdings (VIK) remains top long idea in Gaming/Lodging/Leisure despite Street downgrade; booking curves accelerating with ROIC north of 40%",
+        "Boot Barn (BOOT) faces significant Pod 1 deceleration in fiscal Q1 with unprecedented comp hurdle rate increase from 7% to 10% in 13 weeks due to aggressive leasing strategy",
+        "GLP-1 adoption trends supporting healthcare ecosystem; NVO preferred over DGX given positive signal alignment and Quad Factor characteristics",
+        "Credit card delinquency data remains stable and unremarkable; rates market pricing first rate hike forward to December 9, 2026 FOMC meeting"
+      ],
+      "trades_mentioned": [
+        "VIK: Buy every dip given signal strength leadership and accelerating fundamentals",
+        "BOOT: Short positioning - margin pressure expected from below-market lease structures and rising occupancy leverage thresholds",
+        "NVO: Long positioned over DGX; full thesis presentation planned for next week",
+        "DGX: Moved from short to long bench based on Q2 volume acceleration",
+        "MSFT: Reiterate short thesis despite Bill Ackman's bullish commentary; viewed as potential value trap with Copilot/Azure growth concerns"
+      ],
+      "keith_outlook": "Dollar, oil, and rates all moving higher in tandem supporting higher-for-longer interest rate thesis. Fractal dimension generating jump conditions in risk range with focus on process-driven signal analysis and continued bearish positioning on long-duration Treasuries."
+    },
+    "macro_show_notes": {
+      "key_points": [
+        "Oil, rates, and VIX are interconnected macro flows - higher oil, higher bond yields, and stronger dollar all pressuring equity futures together",
+        "Rates remain the cleaner inflation signal showing higher highs, suggesting inflation could remain elevated beyond energy sector",
+        "VIX would need a sustained regime shift above low 20s to disrupt the bullish equity setup; current risk range is 16.52-19.83",
+        "Dollar breakout versus euro and pound requires positioning changes; pound relationship is 'over' and should be cut",
+        "Be long stocks going up and short stocks going down - Nvidia and Cisco drove 40% of S&P's marginal impact at all-time highs"
+      ],
+      "positioning_changes": [
+        "Sell some oil and energy into strength as WTI approaches lower-high risk level around $106.88",
+        "Cover some Treasury shorts (TLT, ZROZ) while maintaining bearish bias on duration",
+        "Cut pound FX position due to trend breakdown",
+        "Sell some Norway exposure (up 1.2%) signaling lower high similar to oil",
+        "Sold some Bitcoin strength the prior day while remaining bullish on dips",
+        "Buy China dips selectively; maintain shorts in India, Indonesia, Philippines"
+      ],
+      "keith_watching": [
+        "Oil trade breakdown and then trend breakdown after establishing lower high",
+        "VIX sustaining above low 20s as requirement for regime shift in equity volatility",
+        "Bond yield movements and their impact on gold (which broke immediate-term support) and Japanese equities",
+        "Natural Gas trend level around 2.97 as potential inflation broadening signal",
+        "Amazon and Nvidia as selective buying opportunities on pullbacks",
+        "Copper and soybeans pullbacks to be accumulated slowly and incrementally"
+      ]
+    },
+    "investing_ideas": {
+      "longs": {
+        "DAR": {
+          "lrr": 60.02,
+          "trr": 65.91,
+          "thesis": "Rising diesel prices and widening crack spreads create favorable margins for renewable diesel producers with structural cost advantages from low-cost feedstock. Clear earnings inflection underway with Q1 EBITDA more than doubling YoY to ~$406.8MM."
+        },
+        "SWBI": {
+          "lrr": 14.1,
+          "trr": 15.9,
+          "thesis": "Improving production and rising plant utilization expected to drive meaningful margin expansion from depressed levels. Company gaining market share amid competitor distraction with significant operating leverage from fixed-cost structure."
+        },
+        "MUSA": {
+          "lrr": 534.0,
+          "trr": 635.0,
+          "thesis": "Levered to fuel price volatility and rate-of-change dynamics driving both margin expansion and traffic through price-led model. Q1 EPS of $7.28 beat consensus with fuel contribution expanding to $0.35/gal."
+        },
+        "CZR": {
+          "lrr": 27.01,
+          "trr": 29.1,
+          "thesis": "Accelerating Las Vegas fundamentals and improving demand trends drive near-term earnings upside independent of M&A optionality. May tracking as strongest RevPAR month of Q2 with robust convention demand."
+        },
+        "ULS": {
+          "lrr": 89.57,
+          "trr": 108.0,
+          "thesis": "High-quality capital-light TIC franchise benefiting from structural shift to for-profit model unlocking sustained margin expansion. Positioned at center of durable secular tailwinds including rising global regulation and AI/data center buildout."
+        },
+        "CAVA": {
+          "lrr": 78.06,
+          "trr": 97.39,
+          "thesis": "Sustained traffic growth and best-in-class unit economics support path back to high-single-digit/double-digit comps and multiple expansion. April data continued to strengthen with fast-casual credit card sales accelerating."
+        },
+        "APD": {
+          "lrr": 290.0,
+          "trr": 307.0,
+          "thesis": "New leadership shifts company away from uneconomic green capital deployment and back toward shareholder discipline. Industrial gases remain highest-quality and most structurally resilient with pricing power and durable end-market demand."
+        },
+        "PVH": {
+          "lrr": 86.18,
+          "trr": 94.59,
+          "thesis": "Accelerating Calvin Klein brand momentum and ongoing recapture of key licenses from G-III expected to drive meaningful step-change in revenue growth and margin expansion. Setup draws parallels to Ralph Lauren's successful license take-backs."
+        }
+      },
+      "shorts": {
+        "ROP": {
+          "lrr": 336.0,
+          "trr": 360.0,
+          "thesis": "Serial acquisition story dependent on perpetual flawless capital allocation with increasing execution risk as pool of suitable assets shrinks. Core software assets face rising substitutability risk with eroding competitive moats."
+        },
+        "RBLX": {
+          "lrr": 36.36,
+          "trr": 53.12,
+          "thesis": "Slowing user growth with proprietary tracker flagging slowing new user acquisition now confirmed by management cutting bookings guidance by ~14 points. High-probability downside window into Q3 driven by toughest comps and external competition."
+        },
+        "ONON": {
+          "lrr": 33.07,
+          "trr": 36.81,
+          "thesis": "CEO departure signals inflection toward slower growth while current profitability remains unsustainably high with gross margins above 60%. Structurally unsustainable margins face meaningful downside as scale drives normalization and Nike competition intensifies."
+        },
+        "OLLI": {
+          "lrr": 79.09,
+          "trr": 88.9,
+          "thesis": "Underperforming despite peak operating environment signals structural weakness with slowing comps and declining store productivity. Inevitable trade-off between unit growth and margins with valuation lacking meaningful support."
+        },
+        "HCA": {
+          "lrr": 412.0,
+          "trr": 447.0,
+          "thesis": "Weak MA rate relief fails to offset broader structural pressure on hospital reimbursements and payer-driven cost containment. Fundamental trends deteriorating across key metrics signaling slowing demand and margin pressure ahead."
+        },
+        "WING": {
+          "lrr": 120.0,
+          "trr": 169.0,
+          "thesis": "Transaction data continues to deteriorate sharply with recent credit card activity down ~25% YoY and no evidence supporting expected same-store sales acceleration. Core initiatives failing to drive incremental traffic with declining unit economics."
+        }
+      }
+    },
+    "founders_choice": {
+      "retail": {
+        "longs": [
+          "WRBY",
+          "BBW",
+          "AS",
+          "ROST",
+          "PVH",
+          "REAL",
+          "VVV",
+          "AMZN",
+          "TJX",
+          "ATZ.TO",
+          "SWBI",
+          "PLNT",
+          "RH",
+          "CPRI",
+          "EL.PA",
+          "DLTR",
+          "ASO",
+          "GAP",
+          "DG",
+          "ULTA",
+          "FIVE",
+          "BIRK",
+          "JDL.L"
+        ],
+        "shorts": [
+          "VSCO",
+          "CHWY",
+          "TPR",
+          "DRVN",
+          "ORLY",
+          "HD",
+          "GOOS",
+          "LUXE",
+          "RMS.PA",
+          "1913.HK",
+          "BURL",
+          "3998.HK",
+          "2331.HK",
+          "LTH",
+          "SHOO",
+          "GPI",
+          "PAG",
+          "UAA",
+          "CFR.SW",
+          "CAL",
+          "LVMHF",
+          "GME",
+          "W",
+          "ETSY",
+          "GRMN",
+          "LEVI",
+          "LULU",
+          "CVR",
+          "ONEW",
+          "PANDY",
+          "TSCO",
+          "PUM.DE",
+          "YETI",
+          "LAD",
+          "SAH",
+          "KMX",
+          "CARG",
+          "LOW"
+        ]
+      },
+      "energy": {
+        "longs": [
+          "DAR",
+          "DVN",
+          "PBR",
+          "PBR-A",
+          "PR",
+          "MPC",
+          "FANG",
+          "XOM",
+          "GEL",
+          "VG"
+        ],
+        "shorts": [
+          "XIFR",
+          "PSX",
+          "CVI",
+          "CHRD",
+          "COP",
+          "BP",
+          "SHEL",
+          "DVN",
+          "VLO",
+          "ENB",
+          "TRP",
+          "TTE",
+          "VST",
+          "TLN",
+          "YPF",
+          "RRC",
+          "DK",
+          "DINO",
+          "CVX",
+          "MPLX",
+          "BKV",
+          "PBF",
+          "PAM",
+          "NEE",
+          "CEG",
+          "DKL"
+        ]
+      }
+    },
+    "from_desk": {
+      "macro_view": "The market is in a #Quad2 regime (Growth Accelerating + Inflation Accelerating) with the US Dollar breaking down bearishly, driving down-dollar correlations that support equity highs and emerging market strength. Higher for longer (HFL) interest rates remain the operative framework with UST 10yr hovering around 4.36-4.43%.",
+      "key_points": [
+        "USD Index extended bearish breakdown through 98 with intermediate term TREND inverse correlations at -0.90 vs SPX and -0.87 vs Bitcoin",
+        "VIX remains in Investable Bucket and Bearish TREND below 17, with positive gamma conditions suggesting lower volatility persistence",
+        "SPY, QQQ, and IWM achieved all-time closing highs driven by #Quad2 trifecta with NVDA leading Tech +2.7%",
+        "Emerging Markets (OAEM) up +10.3% MoM with China ChiNext (CNXT) +1.0% WoW and Turkey (TUR) +1.6% WoW",
+        "CRB Commodities Index at fresh #Quad2 cycle highs of 401 with Copper (CPER) up +3.1% WoW to cycle highs"
+      ],
+      "tickers_mentioned": [
+        "UUP",
+        "FXB",
+        "SPX",
+        "VIX",
+        "TLT",
+        "ZROZ",
+        "EQRR",
+        "HYG",
+        "BNO",
+        "XOP",
+        "OIH",
+        "SOYB",
+        "MOVE",
+        "CLOZ",
+        "STIP",
+        "HYG",
+        "CPER",
+        "OAEM",
+        "CNXT",
+        "TUR",
+        "SPY",
+        "QQQ",
+        "IWM",
+        "XLK",
+        "NVDA",
+        "XLI",
+        "KRE",
+        "ITB",
+        "XLV",
+        "IBIT",
+        "COM"
+      ],
+      "risk_tone": "RISK_ON"
+    },
+    "macro_research": {
+      "cpi_trend": "ACCELERATING",
+      "monthly_quad": 2,
+      "quad_sequence": "2-2-2-3",
+      "forward_quads": {
+        "1Q26": {
+          "quad": 1,
+          "gdp_qoq": 2.86,
+          "cpi_yoy": 3.88
+        },
+        "2Q26": {
+          "quad": 2,
+          "gdp_qoq": 2.34,
+          "cpi_yoy": 2.62
+        },
+        "3Q26": {
+          "quad": 2,
+          "gdp_qoq": null,
+          "cpi_yoy": null
+        },
+        "4Q26": {
+          "quad": 2,
+          "gdp_qoq": null,
+          "cpi_yoy": null
+        },
+        "1Q27": {
+          "quad": 3,
+          "gdp_qoq": null,
+          "cpi_yoy": null
+        }
+      },
+      "key_themes": [
+        "Oil shock via Strait of Hormuz disruption driving inflation and demand destruction",
+        "Epic domestic bubble with accelerating growth momentum post-shutdown reacceleration",
+        "Fed policy capitulation and rate cuts despite rising inflation; monetization ahead",
+        "Diverging profit cycles: Mag7 deceleration vs small cap/non-tech acceleration in Q2",
+        "Long gold and short treasuries positioning on dollar debasement and fiscal deterioration"
+      ],
+      "cpi_nowcast": 4.25,
+      "cpi_upside": 4.36,
+      "cpi_downside": 4.14
     }
   }
 }
