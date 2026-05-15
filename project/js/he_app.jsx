@@ -179,14 +179,18 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const [vixLoading, setVixLoading] = React.useState(true);
 
   React.useEffect(() => {
-    fetch('https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?interval=1d&range=1d')
-      .then(r => r.json())
-      .then(data => {
-        const price = data?.chart?.result?.[0]?.meta?.regularMarketPrice;
-        if (price != null) setLiveVix(price);
-      })
-      .catch(() => {})
-      .finally(() => setVixLoading(false));
+    const fetchVix = () => {
+      fetchYF(['^VIX'])
+        .then(data => {
+          const price = data['^VIX']?.price;
+          if (price != null) setLiveVix(price);
+        })
+        .catch(() => {})
+        .finally(() => setVixLoading(false));
+    };
+    fetchVix();
+    const id = setInterval(fetchVix, 60000);
+    return () => clearInterval(id);
   }, []);
 
   const qQ = window.HE.QUADS[qQuad] || window.HE.QUADS.Q3;
