@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-14T16:59:20.579443+00:00",
-  "source_date": "2026-05-14",
+  "generated_at": "2026-05-15T13:25:18.640195+00:00",
+  "source_date": "2026-05-15",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
     "ham_holdings": "ETF_Holdings 5.14.2026.csv",
@@ -8,11 +8,11 @@
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
     "macro_show": "HE_TMS_KM_DJ_5.14.2026.pdf",
     "msr": "MSR_2.0.pdf",
-    "sss": "Hedgeye - Signal Strength Stocks_ 81 Stocks (2 Added, 8 Removed).pdf",
-    "momo": "Hedgeye - MOMO Tracker _ Mag7 (+2%), Momo momo’ing, (+) Gamma, Breadth Distortion & Concentration Risk.pdf",
-    "early_look": "Hedgeye - Riding Winners Still Pays.pdf",
-    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_13_2026) _ Top Movers_ IBIT (+11), ALLW (+8), FXB (+3).pdf",
-    "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (+0.0%), XRP=BULLISH, COIN→SOL Backed lending, THYP→💪 Day 1, JPM Tokenized MMF #2.pdf",
+    "sss": "Hedgeye - Signal Strength Stocks_ 77 Stocks (0 Added, 4 Removed).pdf",
+    "momo": "Hedgeye - MOMO Tracker _ Mag7 (+0.5%), More Momo Driven ATHs, OpEx → Hedge Reset & (-) Asymmetry for Systematics.pdf",
+    "early_look": "Hedgeye - The Future of Wall Street Is Already Here.pdf",
+    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_14_2026) _ Top Movers_ CNXT (+8), ALLW (+7), EWC (+5).pdf",
+    "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.9%), ETH_SOL_AVAX_XRP=BEARISH, BHYP Launch Today, HYPE🤝COIN_CRCL.pdf",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 05_14_2026.pdf",
     "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Thursday, May 14th, 2026.pdf",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 04, 2026.pdf|Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf",
@@ -3045,24 +3045,14 @@
         "close_price": 23.62,
         "realized_return": 0.007894179999999999,
         "duration": "TAIL"
-      },
-      {
-        "symbol": "IDX",
-        "position": "short",
-        "open_date": "2026-02-10",
-        "open_price": 15.968,
-        "close_date": "2026-02-13",
-        "close_price": 15.9389,
-        "realized_return": 0.0018223900000000001,
-        "duration": "TAIL"
       }
     ],
     "stats": {
       "win_rate_long": 0.7463,
-      "win_rate_short": 0.8,
+      "win_rate_short": 0.7969,
       "avg_return_long": 0.0057,
-      "avg_return_short": 0.0113,
-      "total_trades_90d": 132
+      "avg_return_short": 0.0114,
+      "total_trades_90d": 131
     },
     "recently_traded_tickers": [
       "ACHC",
@@ -3142,57 +3132,57 @@
   },
   "levels": {
     "UST30Y": {
-      "close": 5.03,
-      "lrr": 4.95,
-      "trr": 5.06,
+      "close": 5.02,
+      "lrr": 4.96,
+      "trr": 5.14,
       "signal": "BULLISH"
     },
     "UST10Y": {
-      "close": 4.46,
+      "close": 4.47,
       "lrr": 4.37,
-      "trr": 4.5,
+      "trr": 4.59,
       "signal": "BULLISH"
     },
     "UST2Y": {
-      "close": 3.98,
+      "close": 4.0,
       "lrr": 3.87,
-      "trr": 4.05,
+      "trr": 4.08,
       "signal": "BULLISH"
     },
     "HYG": {
-      "close": 79.91,
-      "lrr": 79.71,
-      "trr": 80.23,
+      "close": 79.85,
+      "lrr": 79.65,
+      "trr": 80.19,
       "signal": "BULLISH"
     },
     "LQD": {
       "close": 108.6,
-      "lrr": 108.0,
+      "lrr": 107.9,
       "trr": 109.2,
       "signal": "BEARISH"
     },
     "SPX": {
-      "close": 7444.0,
-      "lrr": 7328.0,
-      "trr": 7524.0,
+      "close": 7501.0,
+      "lrr": 7358.0,
+      "trr": 7549.0,
       "signal": "BULLISH"
     },
     "COMPQ": {
-      "close": 26402.0,
-      "lrr": 25706.0,
-      "trr": 26792.0,
+      "close": 26635.0,
+      "lrr": 25865.0,
+      "trr": 26937.0,
       "signal": "BULLISH"
     },
     "RUT": {
-      "close": 2844.0,
-      "lrr": 2788.0,
-      "trr": 2895.0,
+      "close": 2863.0,
+      "lrr": 2791.0,
+      "trr": 2892.0,
       "signal": "BULLISH"
     },
     "XLK": {
-      "close": 177.0,
-      "lrr": 167.0,
-      "trr": 183.0,
+      "close": 180.0,
+      "lrr": 170.0,
+      "trr": 185.0,
       "signal": "BULLISH"
     },
     "XLV": {
@@ -3202,153 +3192,153 @@
       "signal": "BULLISH"
     },
     "SSEC": {
-      "close": 4199.0,
-      "lrr": 4125.0,
-      "trr": 4276.0,
+      "close": 4183.0,
+      "lrr": 4107.0,
+      "trr": 4275.0,
       "signal": "BULLISH"
     },
     "NIKK": {
-      "close": 63358.0,
-      "lrr": 61417.0,
-      "trr": 64539.0,
+      "close": 61610.0,
+      "lrr": 60008.0,
+      "trr": 64760.0,
       "signal": "BULLISH"
     },
     "DAX": {
-      "close": 24137.0,
-      "lrr": 23778.0,
-      "trr": 24928.0,
+      "close": 24456.0,
+      "lrr": 23763.0,
+      "trr": 24930.0,
       "signal": "BULLISH"
     },
     "VIX": {
-      "close": 17.87,
-      "lrr": 16.34,
-      "trr": 19.1,
+      "close": 17.26,
+      "lrr": 16.52,
+      "trr": 19.83,
       "signal": "BEARISH"
     },
     "USD": {
-      "close": 98.36,
-      "lrr": 97.8,
-      "trr": 98.74,
-      "signal": "NEUTRAL"
+      "close": 99.02,
+      "lrr": 97.91,
+      "trr": 99.32,
+      "signal": "BULLISH"
     },
     "EUR/USD": {
-      "close": 1.172,
-      "lrr": 1.167,
-      "trr": 1.18,
-      "signal": "BULLISH"
+      "close": 1.165,
+      "lrr": 1.161,
+      "trr": 1.177,
+      "signal": "BEARISH"
     },
     "USD/YEN": {
-      "close": 157.82,
-      "lrr": 156.52,
-      "trr": 158.47,
-      "signal": "NEUTRAL"
-    },
-    "GBP/USD": {
-      "close": 1.353,
-      "lrr": 1.348,
-      "trr": 1.364,
+      "close": 158.57,
+      "lrr": 156.15,
+      "trr": 159.01,
       "signal": "BULLISH"
     },
+    "GBP/USD": {
+      "close": 1.336,
+      "lrr": 1.334,
+      "trr": 1.355,
+      "signal": "BEARISH"
+    },
     "CAD/USD": {
-      "close": 0.73,
-      "lrr": 0.725,
+      "close": 0.727,
+      "lrr": 0.724,
       "trr": 0.734,
       "signal": "NEUTRAL"
     },
     "WTIC": {
-      "close": 101.5,
-      "lrr": 95.71,
-      "trr": 107.53,
+      "close": 98.26,
+      "lrr": 98.12,
+      "trr": 106.88,
       "signal": "BULLISH"
     },
     "BRENT": {
-      "close": 106.0,
-      "lrr": 100.0,
-      "trr": 115.0,
+      "close": 107.0,
+      "lrr": 103.0,
+      "trr": 113.0,
       "signal": "BULLISH"
     },
     "NATGAS": {
-      "close": 2.87,
-      "lrr": 2.69,
-      "trr": 2.95,
+      "close": 2.92,
+      "lrr": 2.71,
+      "trr": 3.02,
       "signal": "NEUTRAL"
     },
     "GOLD": {
-      "close": 4714.0,
-      "lrr": 4536.0,
-      "trr": 4745.0,
+      "close": 4609.0,
+      "lrr": 4523.0,
+      "trr": 4692.0,
       "signal": "NEUTRAL"
     },
     "COPPER": {
-      "close": 6.58,
-      "lrr": 6.19,
-      "trr": 6.84,
+      "close": 6.4,
+      "lrr": 6.1,
+      "trr": 6.8,
       "signal": "BULLISH"
     },
     "SILVER": {
-      "close": 88.0,
-      "lrr": 77.0,
-      "trr": 91.0,
-      "signal": "BULLISH"
+      "close": 81.0,
+      "lrr": 73.0,
+      "trr": 88.0,
+      "signal": "NEUTRAL"
     },
     "MSFT": {
-      "close": 405.0,
+      "close": 409.0,
       "lrr": 401.0,
-      "trr": 420.0,
+      "trr": 422.0,
       "signal": "BEARISH"
     },
     "AAPL": {
-      "close": 299.0,
-      "lrr": 287.0,
+      "close": 298.0,
+      "lrr": 290.0,
       "trr": 305.0,
       "signal": "BULLISH"
     },
     "AMZN": {
-      "close": 270.0,
-      "lrr": 265.0,
-      "trr": 279.0,
+      "close": 267.0,
+      "lrr": 263.0,
+      "trr": 277.0,
       "signal": "BULLISH"
     },
     "META": {
-      "close": 617.0,
+      "close": 618.0,
       "lrr": 595.0,
-      "trr": 627.0,
+      "trr": 626.0,
       "signal": "BEARISH"
     },
     "GOOGL": {
-      "close": 403.0,
-      "lrr": 387.0,
-      "trr": 410.0,
+      "close": 401.0,
+      "lrr": 382.0,
+      "trr": 409.0,
       "signal": "BULLISH"
     },
     "NFLX": {
-      "close": 88.0,
-      "lrr": 83.0,
-      "trr": 92.0,
+      "close": 87.0,
+      "lrr": 84.0,
+      "trr": 91.0,
       "signal": "BEARISH"
     },
     "TSLA": {
-      "close": 445.0,
-      "lrr": 414.0,
-      "trr": 460.0,
+      "close": 443.0,
+      "lrr": 400.0,
+      "trr": 465.0,
       "signal": "BULLISH"
     },
     "NVDA": {
-      "close": 226.0,
-      "lrr": 211.0,
-      "trr": 235.0,
+      "close": 236.0,
+      "lrr": 216.0,
+      "trr": 240.0,
       "signal": "BULLISH"
     },
     "ORCL": {
-      "close": 190.0,
-      "lrr": 176.0,
+      "close": 196.0,
+      "lrr": 179.0,
       "trr": 204.0,
       "signal": "BULLISH"
     },
     "BITCOIN": {
-      "close": 79384.0,
-      "lrr": 78907.0,
-      "trr": 82667.0,
+      "close": 80764.0,
+      "lrr": 78608.0,
+      "trr": 82457.0,
       "signal": "BULLISH"
     },
     "BSE": {
@@ -3364,8 +3354,8 @@
       "signal": "BULLISH"
     },
     "XLI": {
-      "close": 174.0,
-      "lrr": 170.0,
+      "close": 175.0,
+      "lrr": 171.0,
       "trr": 177.0,
       "signal": "BULLISH"
     },
@@ -3490,8 +3480,8 @@
       "signal": "BULLISH"
     },
     "XOP": {
-      "close": 168.0,
-      "lrr": 169.0,
+      "close": 169.0,
+      "lrr": 165.0,
       "trr": 182.0,
       "signal": "BULLISH"
     },
@@ -3501,9 +3491,33 @@
       "trr": 45.99,
       "signal": "BEARISH"
     },
+    "ETH": {
+      "close": 2260.0,
+      "lrr": 2221.0,
+      "trr": 2368.0,
+      "signal": "BEARISH"
+    },
+    "SOL": {
+      "close": 91.41,
+      "lrr": 86.0,
+      "trr": 97.0,
+      "signal": "BEARISH"
+    },
+    "AVAX": {
+      "close": 9.79,
+      "lrr": 9.4,
+      "trr": 10.22,
+      "signal": "BEARISH"
+    },
+    "XRP": {
+      "close": 1.47,
+      "lrr": 1.36,
+      "trr": 1.48,
+      "signal": "BEARISH"
+    },
     "XTL": {
-      "close": 227.0,
-      "lrr": 219.0,
+      "close": 232.0,
+      "lrr": 220.0,
       "trr": 235.0,
       "signal": "BULLISH"
     }
@@ -3550,20 +3564,13 @@
       "support": 7300.0
     },
     "sss": {
-      "count": 81,
-      "added": [
-        "RHP",
-        "BTI"
-      ],
+      "count": 77,
+      "added": [],
       "removed": [
-        "ALLY",
-        "ROST",
-        "CHRD",
-        "ONTO",
-        "TSN",
-        "RTO",
-        "PINS",
-        "CAKE"
+        "MGM",
+        "CFG",
+        "TCNNF",
+        "MP"
       ],
       "tickers": [
         "CAT",
@@ -3581,7 +3588,6 @@
         "RSI",
         "CZR",
         "FCFS",
-        "MGM",
         "ULS",
         "QSR",
         "MAR",
@@ -3592,7 +3598,6 @@
         "SITM",
         "NVDA",
         "AMZN",
-        "CFG",
         "VIK",
         "GOOGL",
         "AAPL",
@@ -3618,10 +3623,8 @@
         "CRCL",
         "AFRM",
         "GTBIF",
-        "TCNNF",
         "URI",
         "BA",
-        "MP",
         "DOW",
         "LYB",
         "RIO",
@@ -3652,155 +3655,175 @@
     "momo": {
       "MSFT": {
         "lrr": 401.0,
-        "trr": 420.0,
+        "trr": 422.0,
         "signal": "BEARISH",
-        "close": 405.21
+        "close": 409.43
       },
       "AAPL": {
-        "lrr": 287.0,
+        "lrr": 290.0,
         "trr": 305.0,
         "signal": "BULLISH",
-        "close": 298.87
+        "close": 298.21
       },
       "AMZN": {
-        "lrr": 265.0,
-        "trr": 279.0,
+        "lrr": 263.0,
+        "trr": 277.0,
         "signal": "BULLISH",
-        "close": 270.13
+        "close": 267.22
       },
       "META": {
         "lrr": 595.0,
-        "trr": 627.0,
+        "trr": 626.0,
         "signal": "BEARISH",
-        "close": 616.63
+        "close": 618.43
       },
       "GOOGL": {
-        "lrr": 387.0,
-        "trr": 410.0,
+        "lrr": 382.0,
+        "trr": 409.0,
         "signal": "BULLISH",
-        "close": 402.62
+        "close": 401.07
       },
       "NFLX": {
-        "lrr": 83.0,
-        "trr": 92.0,
+        "lrr": 84.0,
+        "trr": 91.0,
         "signal": "BEARISH",
-        "close": 87.56
+        "close": 86.94
       },
       "TSLA": {
-        "lrr": 414.0,
-        "trr": 460.0,
+        "lrr": 400.0,
+        "trr": 465.0,
         "signal": "BULLISH",
-        "close": 445.27
+        "close": 443.3
       },
       "NVDA": {
-        "lrr": 211.0,
-        "trr": 235.0,
+        "lrr": 216.0,
+        "trr": 240.0,
         "signal": "BULLISH",
-        "close": 225.83
+        "close": 235.74
       },
       "ORCL": {
-        "lrr": 176.0,
+        "lrr": 179.0,
         "trr": 204.0,
         "signal": "BULLISH",
-        "close": 189.76
+        "close": 195.61
       }
     },
     "early_look": {
       "key_levels": {
         "UST10Y": {
           "lrr": 4.37,
-          "trr": 4.5,
+          "trr": 4.59,
           "signal": "BULLISH"
         },
         "HYG": {
-          "lrr": 79.71,
-          "trr": 80.23,
+          "lrr": 79.65,
+          "trr": 80.19,
           "signal": "BULLISH"
         },
         "LQD": {
-          "lrr": 108.0,
+          "lrr": 107.9,
           "trr": 109.2,
           "signal": "BEARISH"
         },
         "SPX": {
-          "lrr": 7328,
-          "trr": 7524,
+          "lrr": 7358,
+          "trr": 7549,
           "signal": "BULLISH"
         },
         "NASDAQ": {
-          "lrr": 25706,
-          "trr": 26792,
+          "lrr": 25865,
+          "trr": 26937,
           "signal": "BULLISH"
         },
         "RUT": {
-          "lrr": 2788,
-          "trr": 2895,
+          "lrr": 2791,
+          "trr": 2892,
           "signal": "BULLISH"
         },
         "XLK": {
-          "lrr": 167,
-          "trr": 183,
+          "lrr": 170,
+          "trr": 185,
           "signal": "BULLISH"
         },
         "XOP": {
-          "lrr": 169,
+          "lrr": 165,
           "trr": 182,
           "signal": "BULLISH"
         },
         "XTL": {
-          "lrr": 219,
+          "lrr": 220,
           "trr": 235,
           "signal": "BULLISH"
         },
         "XLI": {
-          "lrr": 170,
+          "lrr": 171,
           "trr": 177,
           "signal": "BULLISH"
         },
+        "SSEC": {
+          "lrr": 4107,
+          "trr": 4275,
+          "signal": "BULLISH"
+        },
+        "NIKK": {
+          "lrr": 60008,
+          "trr": 64760,
+          "signal": "BULLISH"
+        },
+        "DAX": {
+          "lrr": 23763,
+          "trr": 24930,
+          "signal": "BULLISH"
+        },
         "VIX": {
-          "lrr": 16.34,
-          "trr": 19.1,
+          "lrr": 16.52,
+          "trr": 19.83,
           "signal": "BEARISH"
         },
         "USD": {
-          "lrr": 97.8,
-          "trr": 98.74,
-          "signal": "NEUTRAL"
+          "lrr": 97.91,
+          "trr": 99.32,
+          "signal": "BULLISH"
         },
-        "WTI": {
-          "lrr": 95.71,
-          "trr": 107.53,
+        "BRENT": {
+          "lrr": 103,
+          "trr": 113,
           "signal": "BULLISH"
         },
         "NATGAS": {
-          "lrr": 2.69,
-          "trr": 2.95,
+          "lrr": 2.71,
+          "trr": 3.02,
           "signal": "NEUTRAL"
         },
         "GOLD": {
-          "lrr": 4536,
-          "trr": 4745,
+          "lrr": 4523,
+          "trr": 4692,
           "signal": "NEUTRAL"
         },
         "COPPER": {
-          "lrr": 6.19,
-          "trr": 6.84,
+          "lrr": 6.1,
+          "trr": 6.8,
           "signal": "BULLISH"
         },
         "SLV": {
-          "lrr": 77,
-          "trr": 91,
+          "lrr": 73,
+          "trr": 88,
+          "signal": "NEUTRAL"
+        },
+        "WTI": {
+          "lrr": 98.12,
+          "trr": 106.88,
           "signal": "BULLISH"
         }
       },
       "signal_changes": [],
-      "vix_level": 16.34,
+      "vix_level": 19.83,
       "keith_notes": [
-        "Vol control fund buying triggered by falling 1M vol has already occurred; 3M vol is now expected to decelerate, triggering additional vol control fund buying and pushing markets to further all-time highs with high beta momentum moving higher.",
-        "NVDA earnings on the 20th are the next major catalyst — implied vol on the 20th is ~16 and typically reaches 20-25 into earnings, creating a short-term buying opportunity in bullish trade/trend names before options roll off.",
-        "Short end of vol curve (today/tomorrow) is at 11.67, approaching the Quad 2 floor of 8-10 which signals overbought conditions are near; top end of VIX risk range is 19.11, low end is 16.24.",
-        "Best 1-month ETF performers: HYDR (+47%), BWET (+43%), XSD (+40%), IGPT (+31%), KSTR (+28%), EWY (+28%), WGMI (+26%); leadership is AI, semiconductors, clean energy, and shipping (Hormuz Strait closure beneficiary).",
-        "Polymarket odds show Hormuz Strait traffic returning to normal by end of July at only 46% and US-Iran permanent peace deal by Dec 31 at 64%, supporting the view that the Iran conflict geopolitical overhang will persist and inflation will continue to accelerate through Q4 2026."
+        "Morning macro flows show Oil Up, Bond Yields Up, and Dollar Up — USD strength is driving SPY and Bitcoin lower via high inverse correlations, which is expected behavior not a surprise.",
+        "WTI is Bullish on TRADE and TREND durations with a Risk Range of $98.12-106.88, but the top-end of range is a lower-high vs. the cycle's recent high of $113.",
+        "UST 10yr Yield is Bullish on TRADE and TREND durations with a fractal zoom of 4.37-4.59%, and the TRR is a HIGHER-high vs. the cycle's recent high of 4.43%.",
+        "USD is testing a new immediate-term TRADE and TREND Breakout; USD's breakout signals will stop Keith out of his GBP/USD position.",
+        "If VIX cannot hold above 19.83, the stream is calm and there is nothing to indicate a US Equity Volatility Regime Shift; SPY has printed its 18th all-time closing high of 2026."
       ]
     },
     "portfolio": {
@@ -3812,13 +3835,13 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "BUXX",
+          "ticker": "CLOX",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "CLOX",
+          "ticker": "BUXX",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -3831,7 +3854,7 @@
         },
         {
           "ticker": "FXB",
-          "weight": 0.005,
+          "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
@@ -3842,26 +3865,8 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "ALLW",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
           "ticker": "STIP",
           "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IWM",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "VYM",
-          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
@@ -3872,31 +3877,37 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "XLI",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "MSOS",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IBIT",
-          "weight": 0.005,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XTL",
+          "ticker": "ALLW",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "NORW",
+          "ticker": "COM",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XLI",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IWM",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "TUR",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "VYM",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -3908,10 +3919,28 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "COM",
+          "ticker": "NORW",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "CNXT",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XTL",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IBIT",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
         },
         {
           "ticker": "AAAU",
@@ -3926,13 +3955,7 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "TUR",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "EWW",
+          "ticker": "SOYB",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -3944,25 +3967,25 @@
           "signal": "BULLISH"
         },
         {
+          "ticker": "EWW",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
           "ticker": "QTUM",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "CNXT",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "SOYB",
+          "ticker": "XOP",
           "weight": null,
           "daily_move": null,
           "signal": "BEARISH"
         },
         {
-          "ticker": "XOP",
+          "ticker": "MSOS",
           "weight": null,
           "daily_move": null,
           "signal": "BEARISH"
@@ -3988,73 +4011,73 @@
       ],
       "top_movers": [
         {
-          "ticker": "IBIT",
-          "move": "+11"
-        },
-        {
-          "ticker": "ALLW",
+          "ticker": "CNXT",
           "move": "+8"
         },
         {
-          "ticker": "FXB",
-          "move": "+3"
-        },
-        {
-          "ticker": "CLOZ",
-          "move": "+1"
+          "ticker": "ALLW",
+          "move": "+7"
         },
         {
           "ticker": "EWC",
-          "move": "+1"
+          "move": "+5"
+        },
+        {
+          "ticker": "TUR",
+          "move": "+5"
+        },
+        {
+          "ticker": "IBIT",
+          "move": "+5"
         },
         {
           "ticker": "OIH",
-          "move": "-21"
-        },
-        {
-          "ticker": "COM",
-          "move": "-8"
-        },
-        {
-          "ticker": "SOYB",
-          "move": "-8"
-        },
-        {
-          "ticker": "XOP",
-          "move": "-8"
+          "move": "-22"
         },
         {
           "ticker": "NORW",
           "move": "-7"
+        },
+        {
+          "ticker": "EQRR",
+          "move": "-5"
+        },
+        {
+          "ticker": "AAAU",
+          "move": "-5"
+        },
+        {
+          "ticker": "XOP",
+          "move": "-5"
         }
       ],
-      "rerank_date": "2026-05-13"
+      "rerank_date": "2026-05-14"
     },
     "btc": {
       "BTC": {
-        "lrr": 79713,
-        "trr": 82499,
+        "lrr": 78608,
+        "trr": 82457,
         "signal": "BULLISH"
       },
       "ETH": {
-        "lrr": 2260,
-        "trr": 2400,
-        "signal": "BULLISH"
+        "lrr": 2211,
+        "trr": 2368,
+        "signal": "BEARISH"
       },
       "SOL": {
-        "lrr": 90,
-        "trr": 101,
-        "signal": "BULLISH"
+        "lrr": 86,
+        "trr": 97,
+        "signal": "BEARISH"
       },
       "AVAX": {
-        "lrr": 9.58,
-        "trr": 10.41,
-        "signal": "BULLISH"
+        "lrr": 9.4,
+        "trr": 10.22,
+        "signal": "BEARISH"
       },
       "XRP": {
-        "lrr": 1.38,
-        "trr": 1.5,
-        "signal": "BULLISH"
+        "lrr": 1.36,
+        "trr": 1.48,
+        "signal": "BEARISH"
       }
     },
     "call_summary": {
