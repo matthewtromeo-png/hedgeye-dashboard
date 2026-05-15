@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-05-15T13:34:35.515847+00:00",
+  "generated_at": "2026-05-15T14:17:48.697339+00:00",
   "source_file": "risk_range_tracker_excelworkbook.xlsx",
-  "source_modified": "2026-05-15T13:34:03+00:00",
+  "source_modified": "2026-05-15T13:58:35+00:00",
   "ticker_count": 65,
   "row_count": 4387,
   "latest_date": "2026-05-15",
@@ -30639,8 +30639,8 @@
         {
           "date": "2026-04-29",
           "close": 2326.0,
-          "buy": 2557.0,
-          "sell": 2419.0,
+          "buy": 2419.0,
+          "sell": 2557.0,
           "signal": "NEUTRAL"
         },
         {
@@ -31192,7 +31192,7 @@
         {
           "date": "2026-05-14",
           "close": 9.72,
-          "buy": 9.8,
+          "buy": 9.3,
           "sell": 10.22,
           "signal": "NEUTRAL"
         },
