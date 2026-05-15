@@ -232,7 +232,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
     : vixLevel < 30 ? {label:'● CHOP BUCKET',       sub:'Reduce sizing — no fresh short adds', bg:'#FFFBEB', color:'#B8860B', border:'#D4A017'}
     :                 {label:'● F*CK BUCKET',        sub:'Defensive — reduce gross exposure',   bg:'#FCEBEB', color:'#C8302A', border:'#E53E3E'};
 
-  const sssFilename  = macroCtx?.sources_used?.sss ?? '';
+  const sssFilename  = (macroCtx?.sources_used?.sss ?? '').replace(/@\d+$/, '');
   const sssCount     = macroCtx?.pdf?.sss?.count ?? null;
   const sssCountM    = sssFilename.match(/(\d+)\s+Stocks/);
   const sssAddedM    = sssFilename.match(/(\d+)\s+Added/);
@@ -284,7 +284,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
           </div>
           {mQuad!==qQuad && <div style={{marginTop:8,fontSize:10,color:mQ.color,
             fontFamily:'IBM Plex Mono,monospace',fontWeight:600}}>
-            ↑ Transitioning from {qQuad}
+            {parseInt(mQuad[1]) < parseInt(qQuad[1]) ? '↑' : '↓'} Transitioning from {qQuad}
           </div>}
         </div>
         {/* Playbook */}
@@ -556,7 +556,14 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
               {sssPrevCount} → {sssCount} {sssCount > sssPrevCount ? '↑ Expanding' : sssCount < sssPrevCount ? '↓ Contracting' : '— Stable'}
             </div>
           )}
-          {sssTickers === null ? <LoadingSpinner msg="Loading…" /> : (
+          {macroCtx === null ? <LoadingSpinner msg="Loading…" /> :
+           sssTickers === null ? (
+             <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',
+               textAlign:'center',padding:'20px 0',lineHeight:1.7}}>
+               <div>No research data.</div>
+               <div style={{fontSize:9,marginTop:4}}>Run update_full.ps1 to populate.</div>
+             </div>
+           ) : (
             <div style={{display:'flex',flexWrap:'wrap',gap:4}}>
               {(sssTickers || []).map((t,i) => (
                 <span key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,

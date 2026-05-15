@@ -32,7 +32,12 @@ Write-Host "==> Building macro context (Stage 1 + 2, full PDF extraction)..." -F
 python "$RepoDir\scripts\build_macro_context.py"
 
 Write-Host "==> Copying generated dashboard HTML..." -ForegroundColor Cyan
-Copy-Item -Path $GeneratedHtml -Destination $DestHtml -Force
+try {
+    Copy-Item -Path $GeneratedHtml -Destination $DestHtml -Force
+    Write-Host "==> Dashboard HTML copied" -ForegroundColor Green
+} catch {
+    Write-Host "[WARN] Could not copy dashboard HTML -- using existing file" -ForegroundColor Yellow
+}
 
 Write-Host "==> Staging files..." -ForegroundColor Cyan
 Set-Location $RepoDir

@@ -660,12 +660,13 @@ PDF_SOURCES = [
         ),
     },
     {
-        "key":        "founders_choice",
-        "folder":     HEDGEYE_BASE / "Founders Choice",
-        "glob":       "*.pdf",
-        "cache_days": 14,
-        "read_n":     2,
-        "label":      "founders_choice (weekly)",
+        "key":         "founders_choice",
+        "folder":      HEDGEYE_BASE / "Founders Choice",
+        "glob":        "*.pdf",
+        "cache_days":  14,
+        "read_n":      2,
+        "name_filter": ["Founder", "Position Monitor"],
+        "label":       "founders_choice (weekly)",
         "prompt": (
             "Extract all sector long and short stock picks from this Hedgeye Founders Choice PDF.\n"
             "Return ONLY valid JSON where keys are lowercase sector names (null if not found):\n"
@@ -731,9 +732,17 @@ MACRO_RESEARCH_CFG = {
 
 # ── PDF CACHE HELPERS ─────────────────────────────────────────────────────────
 
-def _newest_n(folder: Path, glob_pattern: str, n: int) -> list[Path]:
-    """Return the n most recently modified files matching the pattern (silent)."""
+def _newest_n(folder: Path, glob_pattern: str, n: int,
+              name_filter: list[str] | None = None) -> list[Path]:
+    """Return the n most recently modified files matching the pattern (silent).
+
+    If name_filter is provided, only files whose name contains at least one of
+    the filter strings (case-insensitive) are considered.
+    """
     matches = sorted(folder.glob(glob_pattern), key=lambda p: p.stat().st_mtime, reverse=True)
+    if name_filter:
+        matches = [p for p in matches
+                   if any(f.lower() in p.name.lower() for f in name_filter)]
     return matches[:n]
 
 
@@ -758,8 +767,24 @@ def _cache_valid(key: str, source_id: str, existing: dict | None) -> bool:
 
 # ── CLAUDE API CALL ───────────────────────────────────────────────────────────
 
-def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str, sleep_after: int = 3) -> dict | None:
-    """Send one or more PDFs as document blocks, return parsed JSON or None on failure."""
+def _is_rate_limit(exc: Exception) -> bool:
+    return getattr(exc, 'status_code', None) == 429 or 'RateLimitError' in type(exc).__name__
+
+
+def _call_claude_pdf(
+    client,
+    paths: list[Path],
+    prompt: str,
+    label: str,
+    sleep_after: int = 3,
+    fallback: dict | None = None,
+) -> dict | None:
+    """Send one or more PDFs as document blocks, return parsed JSON or fallback on 429.
+
+    Retry policy: on 429, sleep 30s and retry once. If still rate-limited,
+    return fallback (the existing cached value) instead of None so we don't
+    overwrite valid data with null.
+    """
     total_kb = sum(p.stat().st_size for p in paths) // 1024
     print(f"  [API] {label}: {len(paths)} file(s), {total_kb} KB")
     for p in paths:
@@ -778,7 +803,7 @@ def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str, sleep_a
         })
     content.append({"type": "text", "text": prompt})
 
-    try:
+    def _do_call() -> dict | None:
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
             max_tokens=2048,
@@ -796,10 +821,29 @@ def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str, sleep_a
         result = json.loads(raw)
         print(f"  [API] OK — {len(result)} top-level keys")
         return result
+
+    try:
+        result = _do_call()
+        return result
     except json.JSONDecodeError as e:
         warn(f"{label}: JSON parse failed — {e}")
         return None
     except Exception as e:
+        if _is_rate_limit(e):
+            warn(f"{label}: 429 rate limit — sleeping 30s and retrying once")
+            time.sleep(30)
+            try:
+                result = _do_call()
+                return result
+            except json.JSONDecodeError as e2:
+                warn(f"{label}: JSON parse failed on retry — {e2}")
+                return None
+            except Exception as e2:
+                if _is_rate_limit(e2):
+                    warn(f"{label}: 429 on retry — using cached fallback")
+                    return fallback
+                warn(f"{label}: API error on retry — {e2}")
+                return fallback
         warn(f"{label}: API error — {e}")
         return None
     finally:
@@ -863,7 +907,7 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         key        = src["key"]
         cache_days = src["cache_days"]
 
-        paths = _newest_n(src["folder"], src["glob"], src["read_n"])
+        paths = _newest_n(src["folder"], src["glob"], src["read_n"], src.get("name_filter"))
         if not paths:
             warn(f"{src['label']}: no PDF found")
             results[key]      = None
@@ -890,7 +934,7 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             print(f"  {src['label']:<36} cached  ({source_id[:60]})")
             continue
 
-        results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"])
+        results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"], fallback=cached_val)
         cache_stats[key] = f"fresh ({len(paths)} file{'s' if len(paths) > 1 else ''})"
         if key == "macro_show":
             print("  [rate-limit] Sleeping 60s after macro_show...")
@@ -924,7 +968,8 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         else:
             per_file: list[dict] = []
             for pdf_path in recent_pdfs:
-                r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"], sleep_after=10)
+                r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"],
+                                     sleep_after=10, fallback=None)
                 if r:
                     per_file.append(r)
             results["macro_research"]     = _merge_macro_research(per_file) if per_file else None

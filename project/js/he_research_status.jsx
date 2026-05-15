@@ -416,7 +416,7 @@ function RSRow({ src, sourcesUsed, data, genAt }) {
   // display filename: first part of pipe-joined multi-file sources
   let dispFile = '—';
   if (sid) {
-    const parts = sid.split('|');
+    const parts = sid.split('|').map(p => p.replace(/@\d+$/, ''));
     dispFile    = rsTrunc(parts[0], 36) + (parts.length > 1 ? ` +${parts.length - 1}` : '');
   }
 
