@@ -1,7 +1,8 @@
-# update_levels.ps1
-# Runs the import script, copies the generated dashboard HTML,
-# commits both files, and pushes to GitHub.
-# Run from any directory — paths are all absolute.
+# update_full.ps1
+# Full run: imports levels, runs FULL PDF extraction (Stage 1 + 2),
+# copies dashboard HTML, commits and pushes.
+# Use this manually when new PDFs have been downloaded.
+# For daily runs without PDF extraction, use update_levels.ps1 instead.
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -27,8 +28,8 @@ try {
 Write-Host "==> Importing official levels..." -ForegroundColor Cyan
 python $Script
 
-Write-Host "==> Building macro context (Stage 1 only)..." -ForegroundColor Cyan
-python "$RepoDir\scripts\build_macro_context.py" --stage1-only
+Write-Host "==> Building macro context (Stage 1 + 2, full PDF extraction)..." -ForegroundColor Cyan
+python "$RepoDir\scripts\build_macro_context.py"
 
 Write-Host "==> Copying generated dashboard HTML..." -ForegroundColor Cyan
 Copy-Item -Path $GeneratedHtml -Destination $DestHtml -Force
@@ -41,7 +42,7 @@ git add project/risk_range_dashboard.html
 
 Write-Host "==> Committing..." -ForegroundColor Cyan
 $today = Get-Date -Format 'yyyy-MM-dd'
-git commit -m "Update levels + macro context $today"
+git commit -m "Update levels + full macro context $today"
 
 Write-Host "==> Pushing to GitHub..." -ForegroundColor Cyan
 git push

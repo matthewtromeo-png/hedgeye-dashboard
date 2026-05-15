@@ -738,37 +738,22 @@ def _newest_n(folder: Path, glob_pattern: str, n: int) -> list[Path]:
 
 
 def _source_id(paths: list[Path]) -> str:
-    """Stable cache key for a set of source files — pipe-joined sorted names."""
-    return "|".join(sorted(p.name for p in paths))
+    """Cache key: 'name@mtime' entries — detects filename changes AND in-place updates."""
+    return "|".join(sorted(f"{p.name}@{int(p.stat().st_mtime)}" for p in paths))
 
 
 def _files_hash(paths: list[Path]) -> str:
-    """12-char MD5 of sorted filenames — compact cache key for multi-file sources."""
-    combined = "|".join(sorted(p.name for p in paths))
+    """12-char MD5 of 'name@mtime' pairs — compact key for multi-file sources."""
+    combined = "|".join(sorted(f"{p.name}@{int(p.stat().st_mtime)}" for p in paths))
     return hashlib.md5(combined.encode()).hexdigest()[:12]
 
 
-def _cache_valid(key: str, source_id: str, cache_days: int | None,
-                 existing: dict | None) -> bool:
-    """True if we can reuse the existing extraction for this source.
-
-    Requires:
-      1. source_id matches what was previously used
-      2. Either cache_days is None (no expiry) or the run age < cache_days
-    """
+def _cache_valid(key: str, source_id: str, existing: dict | None) -> bool:
+    """True if the cached source_id matches (same filename AND same mtime).
+    Time-based expiry removed — re-extraction is driven by file changes only."""
     if not existing:
         return False
-    if existing.get("sources_used", {}).get(key) != source_id:
-        return False
-    if cache_days is None:
-        return True
-    gen_at_str = existing.get("generated_at", "")
-    try:
-        gen_at   = datetime.fromisoformat(gen_at_str)
-        age_days = (datetime.now(tz=timezone.utc) - gen_at).total_seconds() / 86400
-        return age_days < cache_days
-    except (ValueError, AttributeError, TypeError):
-        return False
+    return existing.get("sources_used", {}).get(key) == source_id
 
 
 # ── CLAUDE API CALL ───────────────────────────────────────────────────────────
@@ -795,7 +780,7 @@ def _call_claude_pdf(client, paths: list[Path], prompt: str, label: str, sleep_a
 
     try:
         msg = client.messages.create(
-            model="claude-sonnet-4-6",
+            model="claude-haiku-4-5-20251001",
             max_tokens=2048,
             system=(
                 "You are a financial data extractor. Extract ONLY the requested fields from "
@@ -899,7 +884,7 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         sources_used[key] = source_id
 
         cached_val = (existing or {}).get("pdf", {}).get(key)
-        if not force_pdf and cached_val is not None and _cache_valid(key, source_id, cache_days, existing):
+        if not force_pdf and cached_val is not None and _cache_valid(key, source_id, existing):
             results[key]     = cached_val
             cache_stats[key] = "cached"
             print(f"  {src['label']:<36} cached  ({source_id[:60]})")
@@ -932,7 +917,7 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         sources_used["macro_research"] = source_id
 
         cached_val = (existing or {}).get("pdf", {}).get("macro_research")
-        if not force_pdf and cached_val is not None and _cache_valid("macro_research", source_id, None, existing):
+        if not force_pdf and cached_val is not None and _cache_valid("macro_research", source_id, existing):
             results["macro_research"]     = cached_val
             cache_stats["macro_research"] = "cached"
             print(f"  {cfg['label']:<36} cached  ({len(recent_pdfs)} files, hash {source_id})")
