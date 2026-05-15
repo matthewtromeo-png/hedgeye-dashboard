@@ -175,6 +175,20 @@ const ResearchIntelPanel = () => {
 
 // ── OVERVIEW TAB ───────────────────────────────────────────────────
 const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
+  const [liveVix, setLiveVix]     = React.useState(null);
+  const [vixLoading, setVixLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    fetch('https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?interval=1d&range=1d')
+      .then(r => r.json())
+      .then(data => {
+        const price = data?.chart?.result?.[0]?.meta?.regularMarketPrice;
+        if (price != null) setLiveVix(price);
+      })
+      .catch(() => {})
+      .finally(() => setVixLoading(false));
+  }, []);
+
   const qQ = window.HE.QUADS[qQuad] || window.HE.QUADS.Q3;
   const mQ = window.HE.QUADS[mQuad] || window.HE.QUADS.Q2;
 
@@ -204,9 +218,11 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const callSummDate = macroCtx?.pdf?.call_summary?.date ?? null;
   const hasIntel = showNotesPts.length > 0 || callSummPts.length > 0;
 
-  const vixLevel = macroCtx?.pdf?.macro_show?.vix?.current
+  const vixFallback = macroCtx?.pdf?.macro_show?.vix?.current
     ?? macroCtx?.pdf?.early_look?.vix_level
     ?? macroCtx?.levels?.VIX?.close ?? null;
+  const isLiveVix = liveVix !== null;
+  const vixLevel  = liveVix ?? vixFallback;
   const vixBucket = vixLevel === null ? null
     : vixLevel < 19 ? {label:'● INVESTABLE BUCKET', sub:'Buy dips on Signal Strength longs',   bg:'#EAF3DE', color:'#27500A', border:'#3B6D11'}
     : vixLevel < 30 ? {label:'● CHOP BUCKET',       sub:'Reduce sizing — no fresh short adds', bg:'#FFFBEB', color:'#B8860B', border:'#D4A017'}
@@ -335,7 +351,14 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
       </div>
 
       {/* VIX Bucket Banner */}
-      {vixBucket && (
+      {vixLoading && vixLevel === null ? (
+        <div style={{background:'#F9F8F5',border:'1px solid #E4E1DA',borderRadius:8,
+          padding:'12px 18px',marginBottom:16}}>
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#9A9790'}}>
+            Loading VIX...
+          </span>
+        </div>
+      ) : vixBucket ? (
         <div style={{background:vixBucket.bg,border:`1px solid ${vixBucket.border}`,borderRadius:8,
           padding:'12px 18px',marginBottom:16,display:'flex',alignItems:'center',
           justifyContent:'space-between'}}>
@@ -345,10 +368,17 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
             <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:vixBucket.color,
               opacity:0.85}}>{vixBucket.sub}</span>
           </div>
-          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:700,
-            color:vixBucket.color}}>VIX {vixLevel.toFixed(2)}</span>
+          <div style={{display:'flex',alignItems:'center',gap:6}}>
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:700,
+              color:vixBucket.color}}>VIX {vixLevel.toFixed(2)}</span>
+            {isLiveVix && (
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,fontWeight:600,
+                background:`${vixBucket.color}22`,color:vixBucket.color,
+                padding:'1px 5px',borderRadius:2,letterSpacing:'0.04em'}}>● LIVE</span>
+            )}
+          </div>
         </div>
-      )}
+      ) : null}
 
       {/* Macro Intel Panel */}
       {hasIntel && (
