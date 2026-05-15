@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-15T15:13:01.086407+00:00",
+  "generated_at": "2026-05-15T19:21:20.671699+00:00",
   "source_date": "2026-05-15",
   "sources_used": {
-    "etf_pro": "etf-pro-all-active-tickers-1778857120.xlsx",
+    "etf_pro": "etf-pro-all-active-tickers-1778872803.xlsx",
     "ham_holdings": "ETF_Holdings 5.15.2026.csv",
     "rta": "real-time-alerts-history-2026-05-15.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
     "macro_show": "HE_TMS_KM_RR_5.15.2026.pdf",
     "msr": "MSR_2.0.pdf",
-    "sss": "Hedgeye - Signal Strength Stocks_ 77 Stocks (0 Added, 4 Removed).pdf",
+    "sss": "Hedgeye - Signal Strength Stocks_ 70 Stocks (0 Added, 7 Removed).pdf",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (+0.5%), More Momo Driven ATHs, OpEx → Hedge Reset & (-) Asymmetry for Systematics.pdf",
     "early_look": "Hedgeye - The Future of Wall Street Is Already Here.pdf",
-    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_14_2026) _ Top Movers_ CNXT (+8), ALLW (+7), EWC (+5).pdf",
+    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_15_2026) _ Top Movers_ OAEM (+12), CNXT (+10), IWM (+9).pdf",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.9%), ETH_SOL_AVAX_XRP=BEARISH, BHYP Launch Today, HYPE🤝COIN_CRCL.pdf",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_15_2026.pdf",
     "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Friday, May 15th, 2026.pdf",
@@ -21,29 +21,30 @@
     "macro_research": "210a576224b4"
   },
   "etf_rerank": [
-    "QTUM",
+    "SLX",
+    "COLO",
     "VXF",
+    "QTUM",
     "IAK",
     "VYM",
     "XLU",
     "MSOS",
-    "IWM",
     "IDX",
+    "IWM",
     "ITB",
     "EPHE",
     "PALL",
     "STIP",
     "OAEM",
+    "INDA",
     "CNXT",
     "ALLW",
-    "INDA",
-    "CPER",
     "EWC",
-    "TUR",
+    "CPER",
     "XLV",
     "CLOZ",
+    "TUR",
     "HYG",
-    "FXB",
     "SOYB",
     "ZROZ",
     "EWW",
@@ -63,19 +64,27 @@
   ],
   "active_longs": [
     {
-      "ticker": "QTUM",
-      "etf": "Quantum Tech",
-      "asset_class": "Global Equities",
-      "date_added": "2026-05-13",
-      "last_price": 143.45,
-      "days_held": 3
+      "ticker": "SLX",
+      "etf": "Steel",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-15",
+      "last_price": 105.9,
+      "days_held": 1
     },
     {
       "ticker": "VXF",
       "etf": "US Extended Market",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-13",
-      "last_price": 225.81,
+      "last_price": 225.17,
+      "days_held": 3
+    },
+    {
+      "ticker": "QTUM",
+      "etf": "Quantum Tech",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-13",
+      "last_price": 143.6,
       "days_held": 3
     },
     {
@@ -83,7 +92,7 @@
       "etf": "Dividend Yield",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
-      "last_price": 156.15,
+      "last_price": 155.9,
       "days_held": 4
     },
     {
@@ -91,7 +100,7 @@
       "etf": "US Cannabis",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-11",
-      "last_price": 4.73,
+      "last_price": 4.44,
       "days_held": 5
     },
     {
@@ -99,7 +108,7 @@
       "etf": "US Small-Cap",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-07",
-      "last_price": 278.36,
+      "last_price": 278.15,
       "days_held": 7
     },
     {
@@ -107,7 +116,7 @@
       "etf": "Short TIPS Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-05-01",
-      "last_price": 103.53,
+      "last_price": 103.56,
       "days_held": 11
     },
     {
@@ -115,7 +124,7 @@
       "etf": "Emerging Markets",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-30",
-      "last_price": 46.75,
+      "last_price": 47.52,
       "days_held": 12
     },
     {
@@ -123,7 +132,7 @@
       "etf": "VanEck ChiNext ETF",
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
-      "last_price": 55.76,
+      "last_price": 55.8,
       "days_held": 14
     },
     {
@@ -131,8 +140,16 @@
       "etf": "All Weather",
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
-      "last_price": 29.63,
+      "last_price": 29.57,
       "days_held": 14
+    },
+    {
+      "ticker": "EWC",
+      "etf": "Canada",
+      "asset_class": "International Equities",
+      "date_added": "2026-04-24",
+      "last_price": 57.4,
+      "days_held": 16
     },
     {
       "ticker": "CPER",
@@ -143,22 +160,6 @@
       "days_held": 16
     },
     {
-      "ticker": "EWC",
-      "etf": "Canada",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-24",
-      "last_price": 57.34,
-      "days_held": 16
-    },
-    {
-      "ticker": "TUR",
-      "etf": "Turkey",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-22",
-      "last_price": 41.35,
-      "days_held": 18
-    },
-    {
       "ticker": "CLOZ",
       "etf": "CLOs",
       "asset_class": "Fixed Income",
@@ -167,19 +168,19 @@
       "days_held": 18
     },
     {
+      "ticker": "TUR",
+      "etf": "Turkey",
+      "asset_class": "International Equities",
+      "date_added": "2026-04-22",
+      "last_price": 41.29,
+      "days_held": 18
+    },
+    {
       "ticker": "HYG",
       "etf": "High Yield Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-21",
-      "last_price": 79.62,
-      "days_held": 19
-    },
-    {
-      "ticker": "FXB",
-      "etf": "British Pound",
-      "asset_class": "Foreign Currencies",
-      "date_added": "2026-04-21",
-      "last_price": 128.33,
+      "last_price": 79.53,
       "days_held": 19
     },
     {
@@ -187,7 +188,7 @@
       "etf": "Soybean",
       "asset_class": "Commodities",
       "date_added": "2026-04-17",
-      "last_price": 24.73,
+      "last_price": 24.7,
       "days_held": 21
     },
     {
@@ -195,7 +196,7 @@
       "etf": "Mexico",
       "asset_class": "International Equities",
       "date_added": "2026-04-16",
-      "last_price": 77.24,
+      "last_price": 77.41,
       "days_held": 22
     },
     {
@@ -203,7 +204,7 @@
       "etf": "Bitcoin",
       "asset_class": "Commodities",
       "date_added": "2026-04-16",
-      "last_price": 44.84,
+      "last_price": 44.79,
       "days_held": 22
     },
     {
@@ -211,7 +212,7 @@
       "etf": "Industrials",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-15",
-      "last_price": 171.93,
+      "last_price": 171.32,
       "days_held": 23
     },
     {
@@ -219,7 +220,7 @@
       "etf": "Rising Rates Equities",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-31",
-      "last_price": 76.97,
+      "last_price": 77.12,
       "days_held": 33
     },
     {
@@ -227,7 +228,7 @@
       "etf": "Telecom",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-27",
-      "last_price": 227.52,
+      "last_price": 227.41,
       "days_held": 35
     },
     {
@@ -243,7 +244,7 @@
       "etf": "Norway",
       "asset_class": "International Equities",
       "date_added": "2026-03-03",
-      "last_price": 38.25,
+      "last_price": 38.27,
       "days_held": 53
     },
     {
@@ -251,7 +252,7 @@
       "etf": "Brent Oil",
       "asset_class": "Commodities",
       "date_added": "2026-02-13",
-      "last_price": 57.55,
+      "last_price": 57.77,
       "days_held": 64
     },
     {
@@ -259,7 +260,7 @@
       "etf": "Oil Services",
       "asset_class": "Commodities",
       "date_added": "2026-02-05",
-      "last_price": 438.86,
+      "last_price": 439.98,
       "days_held": 70
     },
     {
@@ -267,7 +268,7 @@
       "etf": "Oil & Gas Equity",
       "asset_class": "Commodities",
       "date_added": "2026-02-02",
-      "last_price": 172.19,
+      "last_price": 173.97,
       "days_held": 73
     },
     {
@@ -275,7 +276,7 @@
       "etf": "AAA CLO",
       "asset_class": "Fixed Income",
       "date_added": "2025-03-07",
-      "last_price": 25.54,
+      "last_price": 25.55,
       "days_held": 300
     },
     {
@@ -283,7 +284,7 @@
       "etf": "Physical Gold",
       "asset_class": "Foreign Currency",
       "date_added": "2025-02-28",
-      "last_price": 44.95,
+      "last_price": 44.86,
       "days_held": 305
     },
     {
@@ -297,11 +298,19 @@
   ],
   "active_shorts": [
     {
+      "ticker": "COLO",
+      "etf": "Colombia",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-15",
+      "last_price": 35.98,
+      "days_held": 1
+    },
+    {
       "ticker": "IAK",
       "etf": "US Insurance",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
-      "last_price": 132.43,
+      "last_price": 131.87,
       "days_held": 4
     },
     {
@@ -309,7 +318,7 @@
       "etf": "Utilities Sector",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-11",
-      "last_price": 44.34,
+      "last_price": 43.98,
       "days_held": 5
     },
     {
@@ -317,7 +326,7 @@
       "etf": "Indonesia",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-07",
-      "last_price": 12.17,
+      "last_price": 12.19,
       "days_held": 7
     },
     {
@@ -325,7 +334,7 @@
       "etf": "Home Construction",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-06",
-      "last_price": 87.31,
+      "last_price": 86.74,
       "days_held": 8
     },
     {
@@ -333,7 +342,7 @@
       "etf": "Philippines",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-04",
-      "last_price": 24.73,
+      "last_price": 24.71,
       "days_held": 10
     },
     {
@@ -341,7 +350,7 @@
       "etf": "Palladium",
       "asset_class": "Commodities",
       "date_added": "2026-05-01",
-      "last_price": 128.13,
+      "last_price": 128.5,
       "days_held": 11
     },
     {
@@ -349,7 +358,7 @@
       "etf": "India",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-28",
-      "last_price": 48.06,
+      "last_price": 48.02,
       "days_held": 14
     },
     {
@@ -357,7 +366,7 @@
       "etf": "Healthcare",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-22",
-      "last_price": 146.27,
+      "last_price": 145.02,
       "days_held": 18
     },
     {
@@ -365,7 +374,7 @@
       "etf": "US Treasury Long",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-17",
-      "last_price": 60.47,
+      "last_price": 60.19,
       "days_held": 21
     },
     {
@@ -373,7 +382,7 @@
       "etf": "Long Treasury Bond",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-02",
-      "last_price": 83.89,
+      "last_price": 83.61,
       "days_held": 31
     }
   ],
@@ -3650,13 +3659,16 @@
       "support": 7300.0
     },
     "sss": {
-      "count": 77,
+      "count": 70,
       "added": [],
       "removed": [
-        "MGM",
-        "CFG",
-        "TCNNF",
-        "MP"
+        "COIN",
+        "QSR",
+        "ARCO",
+        "OC",
+        "GTBIF",
+        "ABNB",
+        "LII"
       ],
       "tickers": [
         "CAT",
@@ -3675,9 +3687,7 @@
         "CZR",
         "FCFS",
         "ULS",
-        "QSR",
         "MAR",
-        "ARCO",
         "CSX",
         "MRVL",
         "LRCX",
@@ -3693,7 +3703,6 @@
         "CURLF",
         "SBUX",
         "ROK",
-        "OC",
         "CP",
         "LAMR",
         "TWLO",
@@ -3708,7 +3717,6 @@
         "MARA",
         "CRCL",
         "AFRM",
-        "GTBIF",
         "URI",
         "BA",
         "DOW",
@@ -3723,14 +3731,11 @@
         "WRBY",
         "DDOG",
         "MNST",
-        "ABNB",
         "PRMB",
         "PM",
         "AZTAF",
         "BLMN",
-        "COIN",
         "V",
-        "LII",
         "ATRO",
         "ILMN",
         "NVO",
@@ -3939,8 +3944,26 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "FXB",
-          "weight": null,
+          "ticker": "IWM",
+          "weight": 0.01,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "STIP",
+          "weight": 0.01,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "COM",
+          "weight": 0.01,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "XLI",
+          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
@@ -3951,8 +3974,8 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "STIP",
-          "weight": null,
+          "ticker": "VXF",
+          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
@@ -3969,26 +3992,26 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "COM",
-          "weight": null,
+          "ticker": "IBIT",
+          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "XLI",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IWM",
-          "weight": null,
+          "ticker": "CNXT",
+          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
           "ticker": "TUR",
           "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "OAEM",
+          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
@@ -4011,8 +4034,14 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "CNXT",
-          "weight": null,
+          "ticker": "QTUM",
+          "weight": 0.005,
+          "daily_move": null,
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "MSOS",
+          "weight": 0.005,
           "daily_move": null,
           "signal": "BULLISH"
         },
@@ -4023,19 +4052,13 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "IBIT",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
           "ticker": "AAAU",
           "weight": null,
           "daily_move": null,
-          "signal": "BULLISH"
+          "signal": "BEARISH"
         },
         {
-          "ticker": "VXF",
+          "ticker": "SLX",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -4047,31 +4070,13 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "OAEM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
           "ticker": "EWW",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "QTUM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XOP",
           "weight": null,
           "daily_move": null,
           "signal": "BEARISH"
         },
         {
-          "ticker": "MSOS",
+          "ticker": "XOP",
           "weight": null,
           "daily_move": null,
           "signal": "BEARISH"
@@ -4092,52 +4097,52 @@
           "ticker": "CPER",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "NEUTRAL"
         }
       ],
       "top_movers": [
         {
+          "ticker": "OAEM",
+          "move": "+12"
+        },
+        {
           "ticker": "CNXT",
-          "move": "+8"
+          "move": "+10"
         },
         {
-          "ticker": "ALLW",
-          "move": "+7"
-        },
-        {
-          "ticker": "EWC",
-          "move": "+5"
-        },
-        {
-          "ticker": "TUR",
-          "move": "+5"
+          "ticker": "IWM",
+          "move": "+9"
         },
         {
           "ticker": "IBIT",
-          "move": "+5"
+          "move": "+9"
+        },
+        {
+          "ticker": "COM",
+          "move": "+4"
         },
         {
           "ticker": "OIH",
-          "move": "-22"
+          "move": "-21"
         },
         {
           "ticker": "NORW",
-          "move": "-7"
-        },
-        {
-          "ticker": "EQRR",
-          "move": "-5"
+          "move": "-10"
         },
         {
           "ticker": "AAAU",
-          "move": "-5"
+          "move": "-8"
+        },
+        {
+          "ticker": "EWW",
+          "move": "-7"
         },
         {
           "ticker": "XOP",
-          "move": "-5"
+          "move": "-7"
         }
       ],
-      "rerank_date": "2026-05-14"
+      "rerank_date": "2026-05-15"
     },
     "btc": {
       "BTC": {
