@@ -478,26 +478,43 @@ function ResearchStatusTab() {
   );
   if (!ctx) return null;
 
-  const sourcesUsed = ctx.sources_used || {};
-  const genAt       = ctx.generated_at;
-  const pdf         = ctx.pdf || {};
-  const hasPdf      = Object.keys(pdf).length > 0;
+  const sourcesUsed  = ctx.sources_used || {};
+  const genAt        = ctx.generated_at;
+  const pdf          = ctx.pdf || {};
+  const hasPdf       = Object.keys(pdf).length > 0;
+  // stage1-only: the "pdf" key is absent entirely from the JSON (not just empty/null values)
+  const isStage1Only = !('pdf' in ctx);
 
-  // Overall banner
+  // Count issues — skip s2 sources when stage1-only (intentionally absent, not broken)
   let staleCnt = 0, missingCnt = 0;
   for (const src of RS_SOURCES) {
+    if (isStage1Only && src.stage === 2) continue;
     const { icon } = rsStatus(rsSid(src, sourcesUsed), src.cache, genAt);
     if (icon === '🔴') { if (!rsSid(src, sourcesUsed)) missingCnt++; else staleCnt++; }
     else if (icon === '⚠️') staleCnt++;
   }
   const issueCount = staleCnt + missingCnt;
   const allGreen   = issueCount === 0;
-  const bannerBg   = issueCount > 3 ? '#FFF5F5' : issueCount > 0 ? '#FFFFF0' : '#EAF3DE';
-  const bannerClr  = issueCount > 3 ? '#C53030' : issueCount > 0 ? '#B7791F' : '#276749';
-  const bannerIcon = allGreen ? '✅' : issueCount > 3 ? '🔴' : '⚠️';
-  const bannerMsg  = allGreen
-    ? `All sources fresh — last updated ${rsFmtTs(genAt)}`
-    : `${issueCount} source${issueCount !== 1 ? 's' : ''} stale or missing — run update_levels.ps1 to refresh`;
+
+  // Banner — three distinct states: stage1-only (info), all-green, or issues
+  let bannerBg, bannerClr, bannerIcon, bannerMsg;
+  if (isStage1Only) {
+    bannerBg   = '#EDF2F7';
+    bannerClr  = '#2C5282';
+    bannerIcon = 'ℹ️';
+    bannerMsg  = 'Research data not loaded — run update_full.ps1 to refresh PDF data';
+  } else if (allGreen) {
+    bannerBg   = '#EAF3DE';
+    bannerClr  = '#276749';
+    bannerIcon = '✅';
+    bannerMsg  = `All sources fresh — last updated ${rsFmtTs(genAt)}`;
+  } else {
+    const hasPdfIssues = RS_SOURCES.some(s => s.stage === 2 && !rsSid(s, sourcesUsed));
+    bannerBg   = issueCount > 3 ? '#FFF5F5' : '#FFFFF0';
+    bannerClr  = issueCount > 3 ? '#C53030' : '#B7791F';
+    bannerIcon = issueCount > 3 ? '🔴' : '⚠️';
+    bannerMsg  = `${issueCount} source${issueCount !== 1 ? 's' : ''} stale or missing — run ${hasPdfIssues ? 'update_full.ps1' : 'update_levels.ps1'} to refresh`;
+  }
 
   return (
     <div style={{ padding:'16px 20px', maxWidth:1200, margin:'0 auto', animation:'fadeIn 0.2s ease' }}>
@@ -515,7 +532,7 @@ function ResearchStatusTab() {
           ['LAST UPDATED',  rsFmtTs(genAt)],
           ['SOURCE DATE',   ctx.source_date || '—'],
           ['PDF SOURCES',   hasPdf ? `${Object.keys(pdf).length} extracted` : 'Stage 1 only'],
-          ['STATUS',        allGreen ? 'All green' : `${issueCount} issue${issueCount !== 1 ? 's' : ''}`],
+          ['STATUS',        isStage1Only ? 'Stage 1 only' : allGreen ? 'All green' : `${issueCount} issue${issueCount !== 1 ? 's' : ''}`],
         ].map(([lbl, val]) => (
           <div key={lbl} style={{ background:'#fff', border:'1px solid #E4E1DA', borderRadius:6,
             padding:'10px 14px', flex:'1 1 140px' }}>
