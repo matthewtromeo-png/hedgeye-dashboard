@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-15T14:24:02.943859+00:00",
+  "generated_at": "2026-05-15T15:13:01.086407+00:00",
   "source_date": "2026-05-15",
   "sources_used": {
-    "etf_pro": "etf-pro-all-active-tickers-1778600950.xlsx",
+    "etf_pro": "etf-pro-all-active-tickers-1778857120.xlsx",
     "ham_holdings": "ETF_Holdings 5.15.2026.csv",
-    "rta": "real-time-alerts-history-2026-05-13.csv",
+    "rta": "real-time-alerts-history-2026-05-15.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "macro_show": "HE_TMS_KM_DJ_5.14.2026.pdf",
+    "macro_show": "HE_TMS_KM_RR_5.15.2026.pdf",
     "msr": "MSR_2.0.pdf",
     "sss": "Hedgeye - Signal Strength Stocks_ 77 Stocks (0 Added, 4 Removed).pdf",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (+0.5%), More Momo Driven ATHs, OpEx → Hedge Reset & (-) Asymmetry for Systematics.pdf",
@@ -14,18 +14,19 @@
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_14_2026) _ Top Movers_ CNXT (+8), ALLW (+7), EWC (+5).pdf",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.9%), ETH_SOL_AVAX_XRP=BEARISH, BHYP Launch Today, HYPE🤝COIN_CRCL.pdf",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_15_2026.pdf",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Thursday, May 14th, 2026.pdf",
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Friday, May 15th, 2026.pdf",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 04, 2026.pdf|Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf",
     "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf",
     "from_desk": "Macro_Week_Summary_Notes_5.1.2026.pdf|Macro_Week_Summary_Notes_5.8.2026.pdf",
     "macro_research": "210a576224b4"
   },
   "etf_rerank": [
-    "VYM",
+    "QTUM",
+    "VXF",
     "IAK",
-    "MSOS",
+    "VYM",
     "XLU",
-    "NLR",
+    "MSOS",
     "IWM",
     "IDX",
     "ITB",
@@ -33,22 +34,21 @@
     "PALL",
     "STIP",
     "OAEM",
-    "INDA",
     "CNXT",
     "ALLW",
-    "EWC",
+    "INDA",
     "CPER",
+    "EWC",
     "TUR",
-    "CLOZ",
     "XLV",
-    "FXB",
+    "CLOZ",
     "HYG",
+    "FXB",
     "SOYB",
     "ZROZ",
     "EWW",
     "IBIT",
     "XLI",
-    "GII",
     "TLT",
     "EQRR",
     "XTL",
@@ -63,212 +63,212 @@
   ],
   "active_longs": [
     {
+      "ticker": "QTUM",
+      "etf": "Quantum Tech",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-13",
+      "last_price": 143.45,
+      "days_held": 3
+    },
+    {
+      "ticker": "VXF",
+      "etf": "US Extended Market",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-13",
+      "last_price": 225.81,
+      "days_held": 3
+    },
+    {
       "ticker": "VYM",
       "etf": "Dividend Yield",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
-      "last_price": 155.11,
-      "days_held": 1
+      "last_price": 156.15,
+      "days_held": 4
     },
     {
       "ticker": "MSOS",
       "etf": "US Cannabis",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-11",
-      "last_price": 4.89,
-      "days_held": 2
-    },
-    {
-      "ticker": "NLR",
-      "etf": "Nuclear Energy",
-      "asset_class": "Commodities",
-      "date_added": "2026-05-07",
-      "last_price": 137.75,
-      "days_held": 4
+      "last_price": 4.73,
+      "days_held": 5
     },
     {
       "ticker": "IWM",
       "etf": "US Small-Cap",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-07",
-      "last_price": 279.15,
-      "days_held": 4
+      "last_price": 278.36,
+      "days_held": 7
     },
     {
       "ticker": "STIP",
       "etf": "Short TIPS Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-05-01",
-      "last_price": 103.72,
-      "days_held": 8
+      "last_price": 103.53,
+      "days_held": 11
     },
     {
       "ticker": "OAEM",
       "etf": "Emerging Markets",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-30",
-      "last_price": 47.51,
-      "days_held": 9
+      "last_price": 46.75,
+      "days_held": 12
     },
     {
       "ticker": "CNXT",
       "etf": "VanEck ChiNext ETF",
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
-      "last_price": 55.87,
-      "days_held": 11
+      "last_price": 55.76,
+      "days_held": 14
     },
     {
       "ticker": "ALLW",
       "etf": "All Weather",
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
-      "last_price": 30.05,
-      "days_held": 11
-    },
-    {
-      "ticker": "EWC",
-      "etf": "Canada",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-24",
-      "last_price": 57.77,
-      "days_held": 13
+      "last_price": 29.63,
+      "days_held": 14
     },
     {
       "ticker": "CPER",
       "etf": "Copper",
       "asset_class": "Commodities",
       "date_added": "2026-04-24",
-      "last_price": 39.7,
-      "days_held": 13
+      "last_price": 38.16,
+      "days_held": 16
+    },
+    {
+      "ticker": "EWC",
+      "etf": "Canada",
+      "asset_class": "International Equities",
+      "date_added": "2026-04-24",
+      "last_price": 57.34,
+      "days_held": 16
     },
     {
       "ticker": "TUR",
       "etf": "Turkey",
       "asset_class": "International Equities",
       "date_added": "2026-04-22",
-      "last_price": 42.71,
-      "days_held": 15
+      "last_price": 41.35,
+      "days_held": 18
     },
     {
       "ticker": "CLOZ",
       "etf": "CLOs",
       "asset_class": "Fixed Income",
       "date_added": "2026-04-22",
-      "last_price": 26.38,
-      "days_held": 15
-    },
-    {
-      "ticker": "FXB",
-      "etf": "British Pound",
-      "asset_class": "Foreign Currencies",
-      "date_added": "2026-04-21",
-      "last_price": 130.01,
-      "days_held": 16
+      "last_price": 26.42,
+      "days_held": 18
     },
     {
       "ticker": "HYG",
       "etf": "High Yield Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-21",
-      "last_price": 79.79,
-      "days_held": 16
+      "last_price": 79.62,
+      "days_held": 19
+    },
+    {
+      "ticker": "FXB",
+      "etf": "British Pound",
+      "asset_class": "Foreign Currencies",
+      "date_added": "2026-04-21",
+      "last_price": 128.33,
+      "days_held": 19
     },
     {
       "ticker": "SOYB",
       "etf": "Soybean",
       "asset_class": "Commodities",
       "date_added": "2026-04-17",
-      "last_price": 25.18,
-      "days_held": 18
+      "last_price": 24.73,
+      "days_held": 21
     },
     {
       "ticker": "EWW",
       "etf": "Mexico",
       "asset_class": "International Equities",
       "date_added": "2026-04-16",
-      "last_price": 79.92,
-      "days_held": 19
+      "last_price": 77.24,
+      "days_held": 22
     },
     {
       "ticker": "IBIT",
       "etf": "Bitcoin",
       "asset_class": "Commodities",
       "date_added": "2026-04-16",
-      "last_price": 45.48,
-      "days_held": 19
+      "last_price": 44.84,
+      "days_held": 22
     },
     {
       "ticker": "XLI",
       "etf": "Industrials",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-15",
-      "last_price": 172.94,
-      "days_held": 20
-    },
-    {
-      "ticker": "GII",
-      "etf": "Global Infrastructure",
-      "asset_class": "Global Equities",
-      "date_added": "2026-04-13",
-      "last_price": 76.23,
-      "days_held": 22
+      "last_price": 171.93,
+      "days_held": 23
     },
     {
       "ticker": "EQRR",
       "etf": "Rising Rates Equities",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-31",
-      "last_price": 75.44,
-      "days_held": 30
+      "last_price": 76.97,
+      "days_held": 33
     },
     {
       "ticker": "XTL",
       "etf": "Telecom",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-27",
-      "last_price": 224.22,
-      "days_held": 32
+      "last_price": 227.52,
+      "days_held": 35
     },
     {
       "ticker": "COM",
       "etf": "Broad Commodity",
       "asset_class": "Commodities",
       "date_added": "2026-03-17",
-      "last_price": 35.17,
-      "days_held": 40
+      "last_price": 34.41,
+      "days_held": 43
     },
     {
       "ticker": "NORW",
       "etf": "Norway",
       "asset_class": "International Equities",
       "date_added": "2026-03-03",
-      "last_price": 38.17,
-      "days_held": 50
+      "last_price": 38.25,
+      "days_held": 53
     },
     {
       "ticker": "BNO",
       "etf": "Brent Oil",
       "asset_class": "Commodities",
       "date_added": "2026-02-13",
-      "last_price": 56.71,
-      "days_held": 61
+      "last_price": 57.55,
+      "days_held": 64
     },
     {
       "ticker": "OIH",
       "etf": "Oil Services",
       "asset_class": "Commodities",
       "date_added": "2026-02-05",
-      "last_price": 430.8,
-      "days_held": 67
+      "last_price": 438.86,
+      "days_held": 70
     },
     {
       "ticker": "XOP",
       "etf": "Oil & Gas Equity",
       "asset_class": "Commodities",
       "date_added": "2026-02-02",
-      "last_price": 169.23,
-      "days_held": 70
+      "last_price": 172.19,
+      "days_held": 73
     },
     {
       "ticker": "CLOX",
@@ -276,15 +276,15 @@
       "asset_class": "Fixed Income",
       "date_added": "2025-03-07",
       "last_price": 25.54,
-      "days_held": 297
+      "days_held": 300
     },
     {
       "ticker": "AAAU",
       "etf": "Physical Gold",
       "asset_class": "Foreign Currency",
       "date_added": "2025-02-28",
-      "last_price": 46.02,
-      "days_held": 302
+      "last_price": 44.95,
+      "days_held": 305
     },
     {
       "ticker": "BUXX",
@@ -292,7 +292,7 @@
       "asset_class": "Domestic Fixed Income",
       "date_added": "2023-10-25",
       "last_price": 20.23,
-      "days_held": 639
+      "days_held": 642
     }
   ],
   "active_shorts": [
@@ -301,80 +301,80 @@
       "etf": "US Insurance",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
-      "last_price": 130.31,
-      "days_held": 1
+      "last_price": 132.43,
+      "days_held": 4
     },
     {
       "ticker": "XLU",
       "etf": "Utilities Sector",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-11",
-      "last_price": 45.02,
-      "days_held": 2
+      "last_price": 44.34,
+      "days_held": 5
     },
     {
       "ticker": "IDX",
       "etf": "Indonesia",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-07",
-      "last_price": 12.55,
-      "days_held": 4
+      "last_price": 12.17,
+      "days_held": 7
     },
     {
       "ticker": "ITB",
       "etf": "Home Construction",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-06",
-      "last_price": 90.25,
-      "days_held": 5
+      "last_price": 87.31,
+      "days_held": 8
     },
     {
       "ticker": "EPHE",
       "etf": "Philippines",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-04",
-      "last_price": 24.68,
-      "days_held": 7
+      "last_price": 24.73,
+      "days_held": 10
     },
     {
       "ticker": "PALL",
       "etf": "Palladium",
       "asset_class": "Commodities",
       "date_added": "2026-05-01",
-      "last_price": 132.9,
-      "days_held": 8
+      "last_price": 128.13,
+      "days_held": 11
     },
     {
       "ticker": "INDA",
       "etf": "India",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-28",
-      "last_price": 47.44,
-      "days_held": 11
+      "last_price": 48.06,
+      "days_held": 14
     },
     {
       "ticker": "XLV",
       "etf": "Healthcare",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-22",
-      "last_price": 145.51,
-      "days_held": 15
+      "last_price": 146.27,
+      "days_held": 18
     },
     {
       "ticker": "ZROZ",
       "etf": "US Treasury Long",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-17",
-      "last_price": 61.98,
-      "days_held": 18
+      "last_price": 60.47,
+      "days_held": 21
     },
     {
       "ticker": "TLT",
       "etf": "Long Treasury Bond",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-02",
-      "last_price": 85.14,
-      "days_held": 28
+      "last_price": 83.89,
+      "days_held": 31
     }
   ],
   "ham_holdings": [
@@ -1747,6 +1747,76 @@
   "rta": {
     "recent_trades": [
       {
+        "symbol": "ACI",
+        "position": "short",
+        "open_date": "2026-05-14",
+        "open_price": 16.7111,
+        "close_date": "2026-05-15",
+        "close_price": 16.56,
+        "realized_return": 0.00904189,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CZR",
+        "position": "long",
+        "open_date": "2026-05-12",
+        "open_price": 26.74,
+        "close_date": "2026-05-14",
+        "close_price": 26.55,
+        "realized_return": -0.00710546,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "EWC",
+        "position": "long",
+        "open_date": "2026-05-13",
+        "open_price": 57.71,
+        "close_date": "2026-05-14",
+        "close_price": 58.16,
+        "realized_return": 0.007797610000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GLASF",
+        "position": "long",
+        "open_date": "2026-05-07",
+        "open_price": 9.25,
+        "close_date": "2026-05-13",
+        "close_price": 9.37,
+        "realized_return": 0.012972999999999998,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "AMZN",
+        "position": "long",
+        "open_date": "2026-05-12",
+        "open_price": 264.16,
+        "close_date": "2026-05-13",
+        "close_price": 269.94,
+        "realized_return": 0.0218803,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ROST",
+        "position": "long",
+        "open_date": "2026-05-07",
+        "open_price": 224.32,
+        "close_date": "2026-05-13",
+        "close_price": 213.805,
+        "realized_return": -0.021733699999999998,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "DGX",
+        "position": "short",
+        "open_date": "2026-05-12",
+        "open_price": 191.785,
+        "close_date": "2026-05-13",
+        "close_price": 188.25,
+        "realized_return": 0.0184321,
+        "duration": "TAIL"
+      },
+      {
         "symbol": "KMX",
         "position": "short",
         "open_date": "2026-05-07",
@@ -3058,14 +3128,16 @@
       }
     ],
     "stats": {
-      "win_rate_long": 0.7463,
-      "win_rate_short": 0.7969,
-      "avg_return_long": 0.0057,
-      "avg_return_short": 0.0114,
-      "total_trades_90d": 131
+      "win_rate_long": 0.7361,
+      "win_rate_short": 0.803,
+      "avg_return_long": 0.0055,
+      "avg_return_short": 0.0115,
+      "total_trades_90d": 138
     },
     "recently_traded_tickers": [
       "ACHC",
+      "ACI",
+      "AMZN",
       "ANF",
       "APD",
       "ARGT",
@@ -3080,11 +3152,13 @@
       "CPER",
       "CZR",
       "DDS",
+      "DGX",
       "DK",
       "ELF",
       "ELV",
       "ENB",
       "EPHE",
+      "EWC",
       "EWP",
       "EWW",
       "FICO",
@@ -3092,6 +3166,7 @@
       "FRPT",
       "GII",
       "GIII",
+      "GLASF",
       "GLD",
       "HCA",
       "HELE",
@@ -3120,6 +3195,7 @@
       "PSCH",
       "PVH",
       "RBLX",
+      "ROST",
       "SGRY",
       "SPHR",
       "SWBI",
@@ -3537,26 +3613,26 @@
       "quad": {
         "monthly": null,
         "quarterly": null,
-        "depth": "SHALLOW"
+        "depth": null
       },
       "vix": {
-        "current": 17.8,
-        "lrr": 17.87,
-        "trr": 19.12,
+        "current": 17.26,
+        "lrr": 16.52,
+        "trr": 19.83,
         "bucket": "INVESTABLE"
       },
-      "cpi_nowcast": 1.98,
-      "growth_roc": "ACCELERATING",
+      "cpi_nowcast": null,
+      "growth_roc": null,
       "inflation_roc": "ACCELERATING",
-      "quad_sequence": "2-3-2-1",
+      "quad_sequence": null,
       "high_beta_1m": 9.2,
-      "low_beta_1m": -2.5,
+      "low_beta_1m": -2.0,
       "keith_commentary": [
-        "New Cycle Highs for both Global and US Sovereign Bond Yields earlier this week; inflation is accelerating and the easiest macro theme to position for in H1 2026 is INFLATION ACCELERATING = Long Commodities (COM) vs. Short Long-term Treasuries (TLT).",
-        "Whether it's #Quad2 or #Quad3, the trade is the same: long commodities, short long-duration bonds.",
-        "Short Utilities (XLU) alongside higher-for-longer bond yields — XLU was down -1.2% yesterday; Financials also down -1.1%, pressured by higher cost of capital impacting Private Credit.",
-        "Top 3 Sector Longs ranked by Signal Strength: QTUM, XTL, OIH.",
-        "High Beta Momentum Basket (Long Winners, Short Losers) ramped to new all-time highs at +59.2% YTD; long NVDA, GOOGL, AAPL, AMZN vs. short MSFT, PLTR, JPM has been the winning trade."
+        "Oil is ripping +4% to the upside but the Risk Range Signal shows a lower-high for WTI at $106.88 vs. Cycle High of $113, making this a 'sell-SOME' day for Long Brent (BNO) and Energy Stocks.",
+        "Oil losing its immediate-term TRADE Correlation to USD is a key signal to watch.",
+        "Bond yields showing higher-highs and higher-lows in the Fractal Dimension of the Risk Range Signal, with 10yr Yield TRR driving to 4.59%; reiterating Short Duration via TLT and ZROZ.",
+        "Still short Utilities (XLU) and Insurance (IAK) and keeping Gold at minimum Asset Allocation.",
+        "On OPEX day, if the crowd can't sustain a VIX Breakout into the Chop Bucket above 19.83, that would be bullish for US Equity Beta (SPY) and High Beta Growth Momentum Factors; next play is to buy stocks when Oil fails at a lower-high and VIX hits 19.83."
       ]
     },
     "msr": {
@@ -4113,24 +4189,27 @@
     },
     "macro_show_notes": {
       "key_points": [
-        "Inflation acceleration is the dominant macro theme, with global interest rates hitting new cycle highs across US Treasuries, UK, Germany, and Japan — the core trade is Long Commodities (COM) vs. Short Long-term Treasuries (TLT).",
-        "Momentum is the strongest factor with the high beta momentum basket up ~60% YTD; key tech longs are NVDA, GOOGL, AAPL, and AMZN while MSFT, PLTR, and JPM are recommended shorts.",
-        "Long China (CNXT) / Short India (INDA) is a high-conviction, liquid Asia pair trade; Indonesia (IDX) also remains a short as an oil-importing emerging market with a crashing stock market.",
-        "Bitcoin is distinguished as a commodity long (recommended near the low end of its risk range), while Ethereum, Solana, and Avalanche have broken down technically and are bearish.",
-        "AI-driven quantitative signals are emphasized over narrative-based investing, with Hedgeye stressing strict adherence to algorithmic discipline — including rapidly exiting the KRE long when signals broke down."
+        "Oil, rates, and VIX should be understood together: higher oil, higher bond yields, and a stronger dollar are all part of the same macro flow currently pressuring equity futures.",
+        "WTI approaching a lower-high risk range level (~$106.88 vs. prior cycle high ~$113) signals a trim day for oil and energy, not a full exit — the first step in a potential breakdown process.",
+        "Inflation has broadened beyond energy; interest rates are still making higher highs, making long Treasuries the wrong side of the trade — Hedgeye remains short TLT and ZROZ.",
+        "The VIX risk range is 16.52–19.83 with trend around 21; unless VIX sustains a breakout into a higher-vol regime, equity pullbacks remain buyable, favoring SPY and High Beta Growth Momentum names like NVDA and AMZN.",
+        "China dips are to be bought (long CNXT) while India, Indonesia, and Philippines remain shorts — a clear long China vs. short Asia relative trade."
       ],
       "positioning_changes": [
-        "EXITED: Long regional banks (KRE) — rapidly exited upon quantitative signal breakdown.",
-        "NEW EXPOSURE CONSIDERED: Lithium ETFs (LIT) and broader commodity exposure.",
-        "MAINTAINING: Long Commodities (COM), Long China (CNXT), Long Bitcoin (IBIT), Long Pound (FXB), Long Canada (EWC), Long Soybeans (SOYB), Long QTUM, XTL, OIH, NVDA, GOOGL, AAPL, AMZN, EWY.",
-        "MAINTAINING: Short Long-term Treasuries (TLT), Short Utilities (XLU), Short Financials (XLF), Short Indonesia (IDX), Short India (INDA), Short MSFT, PLTR, JPM, KRUS, ETHA."
+        "TRIM: Oil (BNO) and Energy Stocks — selling some strength into the lower-high setup near $106.88 WTI.",
+        "TRIM/COVER: Some Treasury shorts (TLT, ZROZ) — covering some shorts tactically.",
+        "CUT: Long British Pound — dollar broke out vs. pound, pound broke trend, position exited.",
+        "TRIM: Norway energy-linked exposure — selling some strength after another 1.2% gain, lower-high signal similar to oil.",
+        "TRIM: Bitcoin (IBIT) — sold some of the rip the prior day in Portfolio Solutions, while remaining bullish and willing to buy dips.",
+        "BUY SELECTIVELY: Amazon (AMZN) — described as likely offering a buying opportunity that day.",
+        "PREFER: Lithium ETF (LIT) over Silver — LIT near low end of range; Silver position not held, signal awaited before acting."
       ],
       "keith_watching": [
-        "10-year Treasury yield levels: 4.20% (bullish trend support), 4.37% (low end of range), 4.50% (top end of range) — currently near 4.47%.",
-        "China (CNXT) pullback (~1.5%) following a perceived uneventful China-US meeting as a potential long entry opportunity.",
-        "Bitcoin at or near the low end of its risk range as a buy signal trigger.",
-        "Utilities (XLU) and Financials (XLF) performance as confirmation of Quad 2 macro regime — both sold off ~1.1–1.2%.",
-        "Broad commodity inflation signals beyond food and energy — rubber, rice, tea prices rising significantly as corroborating evidence for the inflation acceleration thesis."
+        "WTI Oil price levels: lower-high at ~$106.88 vs. prior cycle high ~$113 — watching for trade breakdown and then trend breakdown as next steps.",
+        "VIX levels: risk range 16.52–19.83, trend ~21 — a sustained breakout above the low 20s would signal a vol regime shift and change the bullish equity setup.",
+        "Interest rates / bond yields: still making higher highs; a continued breakout higher in yields is bearish for Gold and Utilities and reinforces short Treasury positioning.",
+        "Natural Gas trend level ~2.97 — already bullish trade, watching for potential bullish trend breakout as further evidence of broadening inflation.",
+        "Japanese government bond yields — Japan stocks fell sharply overnight; watching whether JGB yield moves force further pressure on Japanese equities."
       ]
     },
     "investing_ideas": {
