@@ -29,7 +29,9 @@ import csv
 import hashlib
 import json
 import os
+import re
 import sys
+import tempfile
 import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -765,6 +767,47 @@ def _cache_valid(key: str, source_id: str, existing: dict | None) -> bool:
     return existing.get("sources_used", {}).get(key) == source_id
 
 
+# ── PDF SPLITTING HELPERS ─────────────────────────────────────────────────────
+
+def _pdf_page_count(path: Path) -> int:
+    """Return number of pages in a PDF, or 0 if pypdf is unavailable/file unreadable."""
+    try:
+        import pypdf
+        return len(pypdf.PdfReader(str(path)).pages)
+    except Exception:
+        return 0
+
+
+def _split_pdf_pages(pdf_path: Path, chunk_size: int = 50) -> list[Path]:
+    """Split a PDF into chunk_size-page temp files; caller must delete them.
+
+    Returns a list of temp Paths (one per chunk, in page order).
+    Falls back to [pdf_path] unchanged if pypdf is missing.
+    """
+    try:
+        import pypdf
+    except ImportError:
+        warn("pypdf not installed — cannot split large PDF; run: pip install pypdf")
+        return [pdf_path]
+
+    reader = pypdf.PdfReader(str(pdf_path))
+    total  = len(reader.pages)
+    chunks: list[Path] = []
+
+    for start in range(0, total, chunk_size):
+        end    = min(start + chunk_size, total)
+        writer = pypdf.PdfWriter()
+        for i in range(start, end):
+            writer.add_page(reader.pages[i])
+        tmp = Path(tempfile.mktemp(suffix=f'_{pdf_path.stem}_p{start+1}-{end}.pdf'))
+        with open(tmp, 'wb') as fh:
+            writer.write(fh)
+        print(f"  [split] pages {start+1}–{end} → {tmp.name}")
+        chunks.append(tmp)
+
+    return chunks
+
+
 # ── CLAUDE API CALL ───────────────────────────────────────────────────────────
 
 def _is_rate_limit(exc: Exception) -> bool:
@@ -814,10 +857,13 @@ def _call_claude_pdf(
             messages=[{"role": "user", "content": content}],
         )
         raw = msg.content[0].text.strip()
-        if raw.startswith('```'):
-            start = raw.index('{')
-            end   = raw.rindex('}') + 1
-            raw   = raw[start:end]
+        # Extract the JSON object — strip markdown fences and any surrounding prose
+        try:
+            raw = raw[raw.index('{') : raw.rindex('}') + 1]
+        except ValueError:
+            pass
+        # Fix trailing commas before ] or } (common model output artifact)
+        raw = re.sub(r',\s*([}\]])', r'\1', raw)
         result = json.loads(raw)
         print(f"  [API] OK — {len(result)} top-level keys")
         return result
@@ -968,10 +1014,27 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         else:
             per_file: list[dict] = []
             for pdf_path in recent_pdfs:
-                r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"],
-                                     sleep_after=10, fallback=None)
-                if r:
-                    per_file.append(r)
+                page_count = _pdf_page_count(pdf_path)
+                if page_count > 95:
+                    print(f"  [split] {pdf_path.name}: {page_count} pages — splitting into 50-page chunks")
+                    chunk_paths = _split_pdf_pages(pdf_path, chunk_size=50)
+                    chunk_results: list[dict] = []
+                    try:
+                        for chunk_path in chunk_paths:
+                            cr = _call_claude_pdf(client, [chunk_path], cfg["prompt"], cfg["label"],
+                                                  sleep_after=10, fallback=None)
+                            if cr:
+                                chunk_results.append(cr)
+                    finally:
+                        for chunk_path in chunk_paths:
+                            chunk_path.unlink(missing_ok=True)
+                    if chunk_results:
+                        per_file.append(_merge_macro_research(chunk_results))
+                else:
+                    r = _call_claude_pdf(client, [pdf_path], cfg["prompt"], cfg["label"],
+                                         sleep_after=10, fallback=None)
+                    if r:
+                        per_file.append(r)
             results["macro_research"]     = _merge_macro_research(per_file) if per_file else None
             cache_stats["macro_research"] = f"fresh ({len(recent_pdfs)} files)"
 
