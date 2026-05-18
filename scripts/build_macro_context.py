@@ -836,6 +836,56 @@ def _split_pdf_pages(pdf_path: Path, chunk_size: int = 50) -> list[Path]:
 
 # ── CLAUDE API CALL ───────────────────────────────────────────────────────────
 
+def _clean_json(raw: str) -> str:
+    """Best-effort cleanup of LLM-generated JSON before parsing.
+
+    Handles:
+      - Markdown fences / surrounding prose (extract {...} block)
+      - Control characters embedded inside string values (literal newlines,
+        carriage returns, tabs — the most common cause of 'Expecting delimiter'
+        parse errors from model output)
+      - Trailing commas before } or ] (handles nested objects too)
+    """
+    # Extract the outermost JSON object
+    try:
+        raw = raw[raw.index('{') : raw.rindex('}') + 1]
+    except ValueError:
+        pass
+
+    # Escape control characters that appear inside JSON string values.
+    # A literal newline inside a string (e.g. a multi-line thesis field) makes
+    # the standard parser fail with "Expecting ',' delimiter".
+    out: list[str] = []
+    in_string   = False
+    i = 0
+    while i < len(raw):
+        ch = raw[i]
+        if ch == '\\' and in_string:
+            # Pass through the escape sequence intact
+            out.append(ch)
+            i += 1
+            if i < len(raw):
+                out.append(raw[i])
+        elif ch == '"':
+            out.append(ch)
+            in_string = not in_string
+        elif in_string:
+            if   ch == '\n': out.append('\\n')
+            elif ch == '\r': out.append('\\r')
+            elif ch == '\t': out.append('\\t')
+            elif ord(ch) < 0x20: pass          # drop other control chars
+            else: out.append(ch)
+        else:
+            out.append(ch)
+        i += 1
+    raw = ''.join(out)
+
+    # Fix trailing commas before } or ] (re.sub finds all occurrences)
+    raw = re.sub(r',(\s*[}\]])', r'\1', raw)
+
+    return raw
+
+
 def _is_rate_limit(exc: Exception) -> bool:
     return getattr(exc, 'status_code', None) == 429 or 'RateLimitError' in type(exc).__name__
 
@@ -882,14 +932,7 @@ def _call_claude_pdf(
             ),
             messages=[{"role": "user", "content": content}],
         )
-        raw = msg.content[0].text.strip()
-        # Extract the JSON object — strip markdown fences and any surrounding prose
-        try:
-            raw = raw[raw.index('{') : raw.rindex('}') + 1]
-        except ValueError:
-            pass
-        # Fix trailing commas before ] or } (common model output artifact)
-        raw = re.sub(r',\s*([}\]])', r'\1', raw)
+        raw = _clean_json(msg.content[0].text.strip())
         result = json.loads(raw)
         print(f"  [API] OK — {len(result)} top-level keys")
         return result
@@ -1058,6 +1101,14 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             per_file: list[dict] = []
             for pdf_path in recent_pdfs:
                 page_count = _pdf_page_count(pdf_path)
+                print(f"  [macro_research] {pdf_path.name}: {page_count} pages")
+                if page_count == 0:
+                    size_mb = pdf_path.stat().st_size / 1_048_576
+                    if size_mb > 8.0:
+                        warn(f"{pdf_path.name}: pypdf could not read page count and "
+                             f"file is {size_mb:.1f} MB — skipping to avoid API 400 "
+                             f"(run: pip install pypdf)")
+                        continue
                 if page_count > 95:
                     print(f"  [split] {pdf_path.name}: {page_count} pages — splitting into 50-page chunks")
                     chunk_paths = _split_pdf_pages(pdf_path, chunk_size=50)
