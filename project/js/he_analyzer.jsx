@@ -131,7 +131,7 @@ const AnalyzerTab = ({macroCtx}) => {
   const [loading,   setLoading]   = React.useState(false);
   const [priceData, setPriceData] = React.useState(null);
   const [fmpData,   setFmpData]   = React.useState(null);
-  const [fmpErr,    setFmpErr]    = React.useState(false);
+  const [fmpErr,    setFmpErr]    = React.useState('');
   const [fetchErr,  setFetchErr]  = React.useState('');
 
   const analyze = async () => {
@@ -141,7 +141,7 @@ const AnalyzerTab = ({macroCtx}) => {
     setLoading(true);
     setPriceData(null);
     setFmpData(null);
-    setFmpErr(false);
+    setFmpErr('');
     setFetchErr('');
 
     // Live price — CF Worker primary, Netlify fallback
@@ -172,24 +172,32 @@ const AnalyzerTab = ({macroCtx}) => {
           fetch(`https://financialmodelingprep.com/api/v3/profile/${sym}?apikey=${fmpKey}`,         { signal: AbortSignal.timeout(8000) }),
           fetch(`https://financialmodelingprep.com/api/v3/key-metrics-ttm/${sym}?apikey=${fmpKey}`, { signal: AbortSignal.timeout(8000) }),
         ]);
-        const profile = await pRes.json();
-        const metrics = await mRes.json();
-        const p0 = profile[0], m0 = metrics[0];
-        if (p0) setFmpData({
-          name:      p0.companyName,
-          sector:    p0.sector,
-          industry:  p0.industry,
-          mktCap:    p0.mktCap,
-          exchange:  p0.exchangeShortName,
-          pe:        m0?.peRatioTTM,
-          ps:        m0?.priceToSalesRatioTTM,
-          pb:        m0?.priceToBookRatioTTM,
-          evEbitda:  m0?.enterpriseValueOverEBITDATTM,
-        });
-        else setFmpErr(true);
+        if (!pRes.ok) {
+          const msg = pRes.status === 403
+            ? 'FMP subscription required — upgrade at financialmodelingprep.com'
+            : `FMP error (HTTP ${pRes.status}) — verify your API key in ⚙ Settings`;
+          console.warn('[analyzer] FMP HTTP error:', pRes.status);
+          setFmpErr(msg);
+        } else {
+          const profile = await pRes.json();
+          const metrics = await mRes.json();
+          const p0 = profile[0], m0 = metrics[0];
+          if (p0) setFmpData({
+            name:      p0.companyName,
+            sector:    p0.sector,
+            industry:  p0.industry,
+            mktCap:    p0.mktCap,
+            exchange:  p0.exchangeShortName,
+            pe:        m0?.peRatioTTM,
+            ps:        m0?.priceToSalesRatioTTM,
+            pb:        m0?.priceToBookRatioTTM,
+            evEbitda:  m0?.enterpriseValueOverEBITDATTM,
+          });
+          else setFmpErr('FMP returned no data for this ticker');
+        }
       } catch (e) {
         console.warn('[analyzer] FMP failed:', e.message);
-        setFmpErr(true);
+        setFmpErr('FMP data unavailable');
       }
     }
 
@@ -563,9 +571,7 @@ const AnalyzerTab = ({macroCtx}) => {
               <div style={{marginTop:10, borderTop:'1px solid #F5F3EF', paddingTop:8,
                 fontFamily:'IBM Plex Mono,monospace', fontSize:9,
                 color: fmpErr ? '#C8302A' : '#9A9790'}}>
-                {fmpErr
-                  ? 'FMP data unavailable — verify your API key in ⚙ Settings'
-                  : 'Market Cap / P/E / P/S / EV/EBITDA require an FMP API key — add one in ⚙ Settings (financialmodelingprep.com free tier works)'}
+                {fmpErr || 'Market Cap / P/E / P/S / EV/EBITDA require an FMP API key — add one in ⚙ Settings (financialmodelingprep.com free tier works)'}
               </div>
             )}
           </div>

@@ -525,7 +525,13 @@ PDF_SOURCES = [
             '  "added": [<ticker symbols added this week>],\n'
             '  "removed": [<ticker symbols removed this week>],\n'
             '  "tickers": [<every ticker on the list in order of appearance>]\n'
-            "}"
+            "}\n\n"
+            "STRICT TICKER RULES — only include genuine US equity ticker symbols:\n"
+            "  • 1–5 uppercase letters only, optionally followed by a single digit (e.g. NVDA, SPY, BRK, QQQ)\n"
+            "  • DO NOT include: lowercase text, partial words, column headers, page numbers,\n"
+            "    or strings containing $, %, ., /, -, spaces, or any other special character\n"
+            "  • DO NOT include strings longer than 6 characters\n"
+            "  • When in doubt, omit the entry\n"
         ),
     },
     {
@@ -1005,6 +1011,23 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
         if key == "macro_show":
             print("  [rate-limit] Sleeping 60s after macro_show...")
             time.sleep(60)
+
+    # ── Post-process SSS: strip PDF-artifact ticker strings ──────────────────
+    # Applies whether result came from cache or fresh extraction.
+    _valid_ticker = re.compile(r'^[A-Z]{1,5}[0-9]?$')
+    sss_result = results.get('sss')
+    if sss_result and isinstance(sss_result.get('tickers'), list):
+        raw = sss_result['tickers']
+        clean = [t for t in raw if _valid_ticker.match(t)]
+        bad   = [t for t in raw if not _valid_ticker.match(t)]
+        if bad:
+            print(f"  [sss] Removed {len(bad)} invalid ticker(s): {bad}")
+        for fld in ('added', 'removed'):
+            if isinstance(sss_result.get(fld), list):
+                sss_result[fld] = [t for t in sss_result[fld] if _valid_ticker.match(t)]
+        sss_result['tickers'] = clean
+        sss_result['count']   = len(clean)
+        results['sss'] = sss_result
 
     # ── Macro research: each file individually, merge results ─────────────────
     # Window reduced to 14 days; cap at 4 files; one API call per file.
