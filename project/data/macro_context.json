@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-05-18T13:43:10.330260+00:00",
+  "generated_at": "2026-05-18T15:33:52.182096+00:00",
   "source_date": "2026-05-18",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778872803.xlsx",
     "ham_holdings": "ETF_Holdings 5.15.2026.csv",
     "rta": "real-time-alerts-history-2026-05-15.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "macro_show": "HE_TMS_KM_RR_5.15.2026.pdf@1778856928",
+    "macro_show": "HE_TMS_KM_DJ_5.18.2026.pdf@1779114005",
     "msr": "MSR_2.0.pdf@1778851302",
     "sss": "Hedgeye - Signal Strength Stocks_ 70 Stocks (No Changes).pdf@1779110337",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (-1.3, BEARISH) vs MSFT (+3.1%, BULLISH), NVDA Earnings=Wednesday.pdf@1779110388",
     "early_look": "Hedgeye - The Future of Wall Street Is Already Here.pdf@1778851154",
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_15_2026) _ Top Movers_ OAEM (+12), CNXT (+10), IWM (+9).pdf@1778872786",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-1.8%), COIN=BEARISH, ETFs=-$1.26B W_W, Harvard→ Crypto ETF Exposure ↓↓, RIP Crypto ATMs.pdf@1779110402",
-    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_15_2026.pdf@1778853858",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Friday, May 15th, 2026.pdf@1778858022",
+    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_18_2026.pdf@1779111833",
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Monday, May 18th, 2026.pdf@1779113972",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf@1778506347|Hedgeye - Investing Ideas Newsletter_ May 18, 2026.pdf@1779110293",
     "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf@1778592817|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf@1778592798",
     "from_desk": "Macro_Week_Summary_Notes_5.15.2026.pdf@1779110909|Macro_Week_Summary_Notes_5.8.2026.pdf@1778513480",
-    "macro_research": "49fce5e8054e"
+    "macro_research": "f5839f216244"
   },
   "etf_rerank": [
     "SLX",
@@ -3619,23 +3619,23 @@
         "depth": "SHALLOW"
       },
       "vix": {
-        "current": 17.26,
-        "lrr": 16.52,
-        "trr": 19.83,
+        "current": 18.43,
+        "lrr": null,
+        "trr": null,
         "bucket": "INVESTABLE"
       },
       "cpi_nowcast": null,
       "growth_roc": "ACCELERATING",
       "inflation_roc": "ACCELERATING",
-      "quad_sequence": "1Q26-2Q26-3Q26-4Q26",
-      "high_beta_1m": 9.2,
-      "low_beta_1m": -2.0,
+      "quad_sequence": "2Q26-2Q26E-3Q26E-4Q26E",
+      "high_beta_1m": 19.4,
+      "low_beta_1m": -3.6,
       "keith_commentary": [
-        "Oil ripping +4% but showing lower-high at $106.88 vs cycle high of $113 - sell-some day",
-        "Bond yields signaling inflation acceleration with 10yr at 4.59%, reiterating short duration via TLT/ZROZ",
-        "Multi-trillion OPEX day for SPY - VIX breakout sustainability key to continued equity beta strength",
-        "Next play: start buying stocks if Oil fails at lower-high and VIX holds 19.83 resistance",
-        "Oil losing immediate-term trade correlation to USD - positioning shift warranted"
+        "Comfortable with Bond Yields hitting new Inflation Cycle Highs given short positions in long-term Treasury Bonds (TLT, ZROZ) and rate-sensitive sectors (XLU down -2.3%, ITB)",
+        "Street High Inflation Nowcast maintained for May and coming quarters",
+        "Long Commodities vs Short Treasuries remains one of easiest macro positions; commodity inflation broadening with Nat Gas +3% bullish trend breakout and Ag/Food prices ramping (SOYB +2%)",
+        "Can fade Old Wall Street bearish sentiment on bond yields and buy stocks if VIX stays within Risk Range Signal 16.59-19.49 and remains in Investable Bucket",
+        "NVDA reporting Wednesday (bullish catalyst); short-dated Cal Vol bid up from 12 to 18 on Friday"
       ]
     },
     "msr": {
@@ -4138,47 +4138,49 @@
       }
     },
     "call_summary": {
-      "date": "2026-05-15",
+      "date": "2026-05-18",
       "quad": 2,
       "key_points": [
-        "Dollar strengthening as oil and rates rise together, consistent with higher-for-longer interest rate environment",
-        "Viking Holdings (VIK) remains top long idea in Gaming/Lodging/Leisure despite Street downgrade; booking curves accelerating with ROIC north of 40%",
-        "Boot Barn (BOOT) faces significant Pod 1 deceleration in fiscal Q1 with unprecedented comp hurdle rate increase from 7% to 10% in 13 weeks due to aggressive leasing strategy",
-        "GLP-1 adoption trends supporting healthcare ecosystem; NVO preferred over DGX given positive signal alignment and Quad Factor characteristics",
-        "Credit card delinquency data remains stable and unremarkable; rates market pricing first rate hike forward to December 9, 2026 FOMC meeting"
+        "Bond yields reached new inflation cycle highs; Hedgeye maintains long commodities versus short Treasuries positioning due to accelerating inflation expectations",
+        "CRB commodity index up over 30% in three months while oil up 69%; utilities, long-duration bonds, and housing exposures deteriorating",
+        "Higher-for-longer inflation remains dominant macro framework supported by fiscal spending, commodity strength, and rising rates",
+        "U.S. Dollar Index broke to bullish TRADE and TREND while euro broke to bearish TRADE and TREND",
+        "VIX remains investable; continued preference for signal strength and momentum over valuation-based investing"
       ],
       "trades_mentioned": [
-        "VIK: Buy every dip given signal strength leadership and accelerating fundamentals",
-        "BOOT: Short positioning - margin pressure expected from below-market lease structures and rising occupancy leverage thresholds",
-        "NVO: Long positioned over DGX; full thesis presentation planned for next week",
-        "DGX: Moved from short to long bench based on Q2 volume acceleration",
-        "MSFT: Reiterate short thesis despite Bill Ackman's bullish commentary; viewed as potential value trap with Copilot/Azure growth concerns"
+        "BJRI: Buy - moved to top of Long Bias list, signal flipped from bearish to bullish, target ~$50 (~25% upside)",
+        "AMZN: Real-time buy alert on Friday at low end of range",
+        "CASY: Added via real-time alert on Friday",
+        "DGX: Moved from Short to Long Bench; GLP-1 tailwind cited as key driver",
+        "ROKU: Target price $160-$180 before year-end on World Cup and political ad spending",
+        "CEG: Preferred utility short due to Three Mile Island delays",
+        "NEE: Remains on short bench following $67B Dominion Energy acquisition",
+        "ODFL: Came off signal strength; Amazon competitive pressure cited",
+        "ALGN, ZTS: Both dropped from Long Bench to concentrate positioning"
       ],
-      "keith_outlook": "Dollar, oil, and rates all moving higher in tandem supporting higher-for-longer interest rate thesis. Fractal dimension generating jump conditions in risk range with focus on process-driven signal analysis and continued bearish positioning on long-duration Treasuries."
+      "keith_outlook": "Inflation pressures building from fiscal spending, commodity strength, and rising rates sustain higher-for-longer inflation framework. Signal strength and momentum investment approach preferred over valuation metrics in current macro environment."
     },
     "macro_show_notes": {
       "key_points": [
-        "Oil, rates, and VIX are interconnected macro flows - higher oil, higher bond yields, and stronger dollar all pressuring equity futures together",
-        "Rates remain the cleaner inflation signal showing higher highs, suggesting inflation could remain elevated beyond energy sector",
-        "VIX would need a sustained regime shift above low 20s to disrupt the bullish equity setup; current risk range is 16.52-19.83",
-        "Dollar breakout versus euro and pound requires positioning changes; pound relationship is 'over' and should be cut",
-        "Be long stocks going up and short stocks going down - Nvidia and Cisco drove 40% of S&P's marginal impact at all-time highs"
+        "Bond yields are the core macro pressure point, with U.S. 10-year yield risk range at 4.42% to 4.62%, driven by inflation acceleration",
+        "Long Commodities vs. Short Treasuries remains the key macro position, with inflation broadening beyond oil into agricultural prices",
+        "Mega-cap tech (Google, NVIDIA, Amazon, Apple) remains central to equity leadership, with NVIDIA reporting Wednesday",
+        "International positioning: long select EM (China, Turkey, Mexico) while shorting weak Asia (Indonesia down 28% since January, India and Philippines)",
+        "Process emphasis: buy pullbacks, do not chase; patience over timing is critical after compounding returns over long periods"
       ],
       "positioning_changes": [
-        "Sell some oil and energy into strength as WTI approaches lower-high risk level around $106.88",
-        "Cover some Treasury shorts (TLT, ZROZ) while maintaining bearish bias on duration",
-        "Cut pound FX position due to trend breakdown",
-        "Sell some Norway exposure (up 1.2%) signaling lower high similar to oil",
-        "Sold some Bitcoin strength the prior day while remaining bullish on dips",
-        "Buy China dips selectively; maintain shorts in India, Indonesia, Philippines"
+        "Reduced gold exposure to minimum position size due to rising interest rates pressure",
+        "Exited uranium, gold miners, and gold positions based on signal",
+        "Exited financials sector due to rate pressure and macro setup",
+        "Bought steel on Friday, preferring steel and copper over precious metals",
+        "Reduced Bitcoin position to minimum after breaking medium-term trade as dollar moved to bullish trade"
       ],
       "keith_watching": [
-        "Oil trade breakdown and then trend breakdown after establishing lower high",
-        "VIX sustaining above low 20s as requirement for regime shift in equity volatility",
-        "Bond yield movements and their impact on gold (which broke immediate-term support) and Japanese equities",
-        "Natural Gas trend level around 2.97 as potential inflation broadening signal",
-        "Amazon and Nvidia as selective buying opportunities on pullbacks",
-        "Copper and soybeans pullbacks to be accumulated slowly and incrementally"
+        "NVIDIA earnings report Wednesday and call option flow ahead of results",
+        "Bitcoin needing to get north of $78,000 to regain trade, with trend around $75,000",
+        "Natural gas as new bullish trend breakout on buy list, but buying pullbacks not chasing",
+        "Japan getting close to low end of risk range with 'sneaky' quad count setup",
+        "Turkey and Mexico longs on close watch for trend breaks as watch-list risks"
       ]
     },
     "investing_ideas": {
@@ -4434,36 +4436,36 @@
       "forward_quads": {
         "1Q26": {
           "quad": 1,
-          "gdp_qoq": 2.86,
+          "gdp_qoq": 2.79,
           "cpi_yoy": 3.88
         },
         "2Q26": {
           "quad": 2,
-          "gdp_qoq": 2.34,
+          "gdp_qoq": 2.66,
           "cpi_yoy": 2.62
         },
         "3Q26": {
           "quad": 2,
-          "gdp_qoq": null,
-          "cpi_yoy": null
+          "gdp_qoq": 2.33,
+          "cpi_yoy": 2.75
         },
         "4Q26": {
           "quad": 2,
-          "gdp_qoq": null,
-          "cpi_yoy": null
+          "gdp_qoq": 2.34,
+          "cpi_yoy": 2.74
         },
         "1Q27": {
           "quad": 3,
-          "gdp_qoq": null,
-          "cpi_yoy": null
+          "gdp_qoq": 2.38,
+          "cpi_yoy": 2.69
         }
       },
       "key_themes": [
-        "Oil shock via Strait of Hormuz disruption driving inflation and demand destruction",
-        "Epic domestic bubble with accelerating growth momentum post-shutdown reacceleration",
-        "Fed policy capitulation and rate cuts despite rising inflation; monetization ahead",
-        "Diverging profit cycles: Mag7 deceleration vs small cap/non-tech acceleration in Q2",
-        "Long gold and short treasuries positioning on dollar debasement and fiscal deterioration"
+        "Strait of Hormuz oil supply shock with 8-10M bbl/d net supply gap and critical storage drawdown timeline of late July",
+        "Post-shutdown reacceleration with strongest ISM stretch in 4 years and robust domestic manufacturing momentum",
+        "Earnings divergence: Mag7 peaks in Q2 RoC while S&P 493 (Ex-Mag7) shows consistent high growth through 2027",
+        "Stagflation transitioning to flation now with stag-on-a-lag; primary labor market risk is the cycle",
+        "Policy response forced by limited public support and political clock; Fed pressure to cut despite inflation; short treasuries with rising yields expected to peak 2-13 months post-oil shock"
       ],
       "cpi_nowcast": 4.25,
       "cpi_upside": 4.36,
