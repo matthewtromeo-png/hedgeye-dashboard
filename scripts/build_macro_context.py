@@ -925,7 +925,7 @@ def _call_claude_pdf(
     def _do_call() -> dict | None:
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=2048,
+            max_tokens=4096,
             system=(
                 "You are a financial data extractor. Extract ONLY the requested fields from "
                 "this Hedgeye research document. Return ONLY valid JSON, no other text."
