@@ -519,14 +519,24 @@ PDF_SOURCES = [
         "label":      "sss (daily)",
         "prompt": (
             "Extract these fields from the Hedgeye Signal Strength Score (SSS) PDF.\n"
+            "The PDF contains a table with columns: Days On, Ticker, Signal Date, Entry Price, Sector, Analyst.\n"
             "Return ONLY valid JSON (null for any field not found):\n"
             "{\n"
             '  "count": <int, total tickers on the list>,\n'
             '  "added": [<ticker symbols added this week>],\n'
             '  "removed": [<ticker symbols removed this week>],\n'
-            '  "tickers": [<every ticker on the list in order of appearance>]\n'
+            '  "tickers": [<every ticker on the list in order of appearance>],\n'
+            '  "tickers_detail": {\n'
+            '    "<TICKER>": {\n'
+            '      "signal_date": <string YYYY-MM-DD or null>,\n'
+            '      "entry_price": <float or null>,\n'
+            '      "sector": <string or null>,\n'
+            '      "analyst": <string or null>,\n'
+            '      "days_on_list": <int or null>\n'
+            "    }\n"
+            "  }\n"
             "}\n\n"
-            "STRICT TICKER RULES — only include genuine US equity ticker symbols:\n"
+            "STRICT TICKER RULES — apply to all ticker arrays AND tickers_detail keys:\n"
             "  • 1–5 uppercase letters only, optionally followed by a single digit (e.g. NVDA, SPY, BRK, QQQ)\n"
             "  • DO NOT include: lowercase text, partial words, column headers, page numbers,\n"
             "    or strings containing $, %, ., /, -, spaces, or any other special character\n"
@@ -1070,6 +1080,14 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
                 sss_result[fld] = [t for t in sss_result[fld] if _valid_ticker.match(t)]
         sss_result['tickers'] = clean
         sss_result['count']   = len(clean)
+        # Filter tickers_detail keys with the same rule
+        if isinstance(sss_result.get('tickers_detail'), dict):
+            detail_clean = {k: v for k, v in sss_result['tickers_detail'].items()
+                            if _valid_ticker.match(k)}
+            detail_bad   = [k for k in sss_result['tickers_detail'] if not _valid_ticker.match(k)]
+            if detail_bad:
+                print(f"  [sss] Removed {len(detail_bad)} invalid key(s) from tickers_detail: {detail_bad}")
+            sss_result['tickers_detail'] = detail_clean
         results['sss'] = sss_result
 
     # ── Macro research: each file individually, merge results ─────────────────

@@ -18,8 +18,39 @@ const SignalsTab = ({macroCtx}) => {
   const sssRemoved  = new Set(macroCtx?.pdf?.sss?.removed ?? []);
   const sssHistory  = macroCtx?.sss_history ?? [];
 
-  // Hardcoded Apr 20 metadata fallback
-  const HE_SSS_MAP = Object.fromEntries(window.HE.SSS.map(s => [s.ticker, s]));
+  // Per-ticker metadata: pipeline tickers_detail first, Apr 20 snapshot as fallback
+  const HE_SSS_MAP  = Object.fromEntries(window.HE.SSS.map(s => [s.ticker, s]));
+  const sssDetail   = macroCtx?.pdf?.sss?.tickers_detail ?? {};
+
+  const calcDays = (signalDate) => {
+    if (!signalDate) return null;
+    const diff = Date.now() - new Date(signalDate).getTime();
+    return diff > 0 ? Math.floor(diff / 86400000) : null;
+  };
+
+  const getMeta = (ticker) => {
+    const det = sssDetail[ticker];
+    if (det) return {
+      analyst:    det.analyst    ?? null,
+      sector:     det.sector     ?? null,
+      days:       det.days_on_list ?? calcDays(det.signal_date),
+      signalDate: det.signal_date ?? null,
+      entryPrice: det.entry_price ?? null,
+      lastClose:  null,
+      pct:        null,
+    };
+    const he = HE_SSS_MAP[ticker];
+    if (he) return {
+      analyst:    he.analyst    ?? null,
+      sector:     he.sector     ?? null,
+      days:       he.days       ?? null,
+      signalDate: he.signalDate ?? null,
+      entryPrice: he.priorClose ?? null,
+      lastClose:  he.lastClose  ?? null,
+      pct:        he.pct        ?? null,
+    };
+    return null;
+  };
 
   // HAM from macroCtx
   const hamHoldings = macroCtx?.ham_holdings ?? [];
@@ -72,7 +103,7 @@ const SignalsTab = ({macroCtx}) => {
     return <div style={{padding:'20px 24px'}}><LoadingSpinner msg="Loading pipeline data…" /></div>;
   }
 
-  const selEntry = selectedTicker ? HE_SSS_MAP[selectedTicker] : null;
+  const selMeta  = selectedTicker ? getMeta(selectedTicker)     : null;
   const selHam   = selectedTicker ? hamMap[selectedTicker]      : null;
   const selScore = selectedTicker ? convictionScore(selectedTicker) : 0;
 
@@ -143,7 +174,7 @@ const SignalsTab = ({macroCtx}) => {
               </thead>
               <tbody>
                 {displayTickers.map((ticker, i) => {
-                  const s     = HE_SSS_MAP[ticker];
+                  const meta  = getMeta(ticker);
                   const ham   = hamMap[ticker];
                   const score = convictionScore(ticker);
                   const isNew = sssAdded.has(ticker);
@@ -164,10 +195,10 @@ const SignalsTab = ({macroCtx}) => {
                             background:'#EAF3DE', padding:'1px 4px', borderRadius:2}}>NEW</span>
                         )}
                       </TD>
-                      <TD style={{color:'#7A7770', fontSize:10}}>{s?.signalDate ?? '—'}</TD>
-                      <TD right>{s?.priorClose ? `$${s.priorClose.toFixed(2)}` : '—'}</TD>
-                      <TD style={{color:'#7A7770', fontSize:10}}>{s?.sector ?? '—'}</TD>
-                      <TD style={{color:'#7A7770', fontSize:10}}>{s?.analyst ?? '—'}</TD>
+                      <TD style={{color:'#7A7770', fontSize:10}}>{meta?.signalDate ?? '—'}</TD>
+                      <TD right>{meta?.entryPrice != null ? `$${meta.entryPrice.toFixed(2)}` : '—'}</TD>
+                      <TD style={{color:'#7A7770', fontSize:10}}>{meta?.sector ?? '—'}</TD>
+                      <TD style={{color:'#7A7770', fontSize:10}}>{meta?.analyst ?? '—'}</TD>
                       <TD right style={{fontWeight:ham?600:400, color:ham?'#27500A':'#ccc'}}>
                         {ham ? `${(ham.total_weight*100).toFixed(2)}%` : '—'}
                       </TD>
@@ -200,30 +231,26 @@ const SignalsTab = ({macroCtx}) => {
                 textTransform:'uppercase', letterSpacing:'0.1em', color:'#7A7770', marginBottom:8}}>
                 1 · SSS Status
               </div>
-              {selEntry ? (
-                <div style={{display:'flex', flexDirection:'column', gap:5}}>
-                  {[
-                    ['Analyst',      selEntry.analyst],
-                    ['Sector',       selEntry.sector],
-                    ['Days on Signal', `${selEntry.days}d`],
-                    ['Signal Date',  selEntry.signalDate],
-                    ['Entry Price',  selEntry.priorClose != null ? `$${selEntry.priorClose.toFixed(2)}` : null],
-                    ['Apr 20 Close', selEntry.lastClose   != null ? `$${selEntry.lastClose.toFixed(2)}`  : null],
-                    ['Since Signal', selEntry.pct         != null ? `${selEntry.pct >= 0 ? '+' : ''}${selEntry.pct.toFixed(1)}%` : null],
-                  ].map(([label, val]) => (
-                    <div key={label} style={{display:'flex', justifyContent:'space-between', gap:8}}>
-                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
-                        color:'#9A9790', flexShrink:0}}>{label}</span>
-                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
-                        fontWeight:600, color:'#1A1A18', textAlign:'right'}}>{val ?? '—'}</span>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div style={{fontSize:11, color:'#7A7770', lineHeight:1.6}}>
-                  Metadata not available — ticker added after Apr 20 snapshot.
-                </div>
-              )}
+              <div style={{display:'flex', flexDirection:'column', gap:5}}>
+                {[
+                  ['Analyst',        selMeta?.analyst],
+                  ['Sector',         selMeta?.sector],
+                  ['Days on Signal', selMeta?.days != null ? `${selMeta.days}d` : null],
+                  ['Signal Date',    selMeta?.signalDate],
+                  ['Entry Price',    selMeta?.entryPrice != null ? `$${selMeta.entryPrice.toFixed(2)}` : null],
+                  ...(selMeta?.lastClose != null
+                    ? [['Apr 20 Close', `$${selMeta.lastClose.toFixed(2)}`]] : []),
+                  ...(selMeta?.pct != null
+                    ? [['Since Signal', `${selMeta.pct >= 0 ? '+' : ''}${selMeta.pct.toFixed(1)}%`]] : []),
+                ].map(([label, val]) => (
+                  <div key={label} style={{display:'flex', justifyContent:'space-between', gap:8}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                      color:'#9A9790', flexShrink:0}}>{label}</span>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
+                      fontWeight:600, color:'#1A1A18', textAlign:'right'}}>{val ?? '—'}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Section 2 — HAM Holdings */}
