@@ -1,141 +1,292 @@
 // he_signals.jsx — Signals, Volatility, Research tabs
 
 // ── SIGNALS TAB ────────────────────────────────────────────────────
-const SignalsTab = () => {
-  const [hamTickers, setHamTickers] = React.useState({});
+const SignalsTab = ({macroCtx}) => {
+  const [selectedTicker, setSelectedTicker] = React.useState(null);
 
-  const readLive = () => {
-    try {
-      const d = JSON.parse(localStorage.getItem('he_sss_live') || 'null');
-      return d?.entries?.length ? d : null;
-    } catch { return null; }
+  // Live SSS data from macroCtx
+  const liveTickers = macroCtx?.pdf?.sss?.tickers ?? null;
+  console.log('[SignalsTab] SSS tickers from pipeline:', liveTickers?.length ?? 'null (using fallback)');
+  const sssCount    = macroCtx?.pdf?.sss?.count ?? null;
+  const sssAdded    = new Set(macroCtx?.pdf?.sss?.added ?? []);
+  const sssRemoved  = new Set(macroCtx?.pdf?.sss?.removed ?? []);
+  const sssHistory  = macroCtx?.sss_history ?? [];
+
+  // Hardcoded Apr 20 metadata fallback
+  const HE_SSS_MAP = Object.fromEntries(window.HE.SSS.map(s => [s.ticker, s]));
+
+  // HAM from macroCtx
+  const hamHoldings = macroCtx?.ham_holdings ?? [];
+  const hamMap      = Object.fromEntries(hamHoldings.map(h => [h.ticker, h]));
+
+  // Investing ideas + RTA
+  const iiLongs    = macroCtx?.pdf?.investing_ideas?.longs  ?? {};
+  const iiShorts   = macroCtx?.pdf?.investing_ideas?.shorts ?? {};
+  const rtaTickers = new Set(macroCtx?.rta?.recently_traded_tickers ?? []);
+
+  // Conviction score 0–4: SSS + HAM + investing_ideas + RTA
+  const convictionScore = (ticker) => {
+    let s = 1;
+    if (hamMap[ticker])                            s++;
+    if (iiLongs[ticker] || iiShorts[ticker])       s++;
+    if (rtaTickers.has(ticker))                    s++;
+    return s;
   };
 
-  const [liveData, setLiveData] = React.useState(readLive);
-  const [imgDate,  setImgDate]  = React.useState(() => readLive() ? null : 'Apr 20');
+  const displayTickers = liveTickers ?? window.HE.SSS.map(s => s.ticker);
 
-  React.useEffect(() => {
-    fetch(window.__resources?.hamCsv || './data/ham_holdings_latest.csv').then(r=>r.text()).then(txt => {
-      const rows = window.HE.parseCSV(txt);
-      const t = {};
-      rows.forEach(r => {
-        const w = parseFloat((r.Weightings||'0').replace('%',''))/100||0;
-        if (w > 0 && !(r.StockTicker||'').includes('-TRS-') && r.StockTicker !== 'Cash&Other' && r.MoneyMarketFlag !== 'Y') {
-          if (!t[r.StockTicker]) t[r.StockTicker] = {};
-          t[r.StockTicker][r.Account] = w;
-        }
-      });
-      setHamTickers(t);
-    }).catch(()=>{});
-
-    const onSssUpdate = () => {
-      const d = readLive();
-      if (d) { setLiveData(d); setImgDate(null); }
-    };
-    window.addEventListener('he_sss_updated', onSssUpdate);
-    return () => window.removeEventListener('he_sss_updated', onSssUpdate);
-  }, []);
-
-  const FUNDS = ['HECA','HEFT','HGRO','HELS'];
-  const SSS_IMAGES = {
-    'Apr 20': window.__resources?.sssApr20 || 'signals/sss_apr20.png',
-    'Apr 13': window.__resources?.sssApr13 || 'signals/sss_apr13.png',
-    'Apr 10': window.__resources?.sssApr10 || 'signals/sss_apr10.png',
-    'Apr 6':  window.__resources?.sssApr6  || 'signals/sss_apr6.png',
+  // Sparkline for sss_history count trend
+  const SparkLine = () => {
+    if (sssHistory.length < 2) return null;
+    const counts = sssHistory.map(h => h.count);
+    const min = Math.min(...counts) - 2;
+    const max = Math.max(...counts) + 2;
+    const W = 100, H = 28;
+    const xAt = i => (i / (counts.length - 1)) * W;
+    const yAt = v => H - ((v - min) / (max - min || 1)) * H;
+    const pts = counts.map((v, i) => `${xAt(i).toFixed(1)},${yAt(v).toFixed(1)}`).join(' ');
+    const last = counts[counts.length - 1], prev = counts[counts.length - 2];
+    const col = last >= prev ? '#27500A' : '#C8302A';
+    return (
+      <svg width={W} height={H} style={{display:'block', overflow:'visible'}}>
+        <polyline points={pts} fill="none" stroke={col} strokeWidth={1.5} strokeLinejoin="round" />
+        <circle cx={xAt(counts.length-1).toFixed(1)} cy={yAt(last).toFixed(1)} r={2.5} fill={col} />
+      </svg>
+    );
   };
 
-  const sssEntries = liveData?.entries ?? window.HE.SSS;
-  const liveTs = liveData?.updatedAt
-    ? new Date(liveData.updatedAt).toLocaleString([], { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' })
-    : null;
+  const Stars = ({score}) => (
+    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, letterSpacing:1,
+      color:'#B8860B'}}>
+      {'★'.repeat(score)}{'☆'.repeat(4 - score)}
+    </span>
+  );
+
+  if (macroCtx === null) {
+    return <div style={{padding:'20px 24px'}}><LoadingSpinner msg="Loading pipeline data…" /></div>;
+  }
+
+  const selEntry = selectedTicker ? HE_SSS_MAP[selectedTicker] : null;
+  const selHam   = selectedTicker ? hamMap[selectedTicker]      : null;
+  const selScore = selectedTicker ? convictionScore(selectedTicker) : 0;
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
-      {/* Image toggle + data table header */}
-      <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:20,marginBottom:20}}>
-        <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:16,flexWrap:'wrap',gap:10}}>
-          <div style={{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap'}}>
-            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
-              letterSpacing:'0.1em',textTransform:'uppercase',color:'#7A7770'}}>
-              Signal Strength Stocks &nbsp;·&nbsp; HAM overlap highlighted
+
+      {/* ── Header: count + sparkline + added/removed badges ── */}
+      <div style={{display:'flex', alignItems:'center', gap:12, marginBottom:16, flexWrap:'wrap'}}>
+        <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8,
+          padding:'12px 20px', display:'flex', alignItems:'center', gap:20}}>
+          <div>
+            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790',
+              textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:2}}>SSS Count</div>
+            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:28, fontWeight:700,
+              color:'#1A1A18', lineHeight:1}}>
+              {sssCount ?? displayTickers.length}
             </div>
-            {liveData && !imgDate && (
-              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
-                background:'#EAF3DE',color:'#27500A',padding:'2px 7px',borderRadius:3,fontWeight:600}}>
-                ● Live · updated {liveTs}
-              </span>
-            )}
           </div>
-          <div style={{display:'flex',gap:6,flexWrap:'wrap'}}>
-            <button onClick={()=>setImgDate(null)}
-              style={{padding:'4px 12px',border:'1px solid #E4E1DA',borderRadius:4,cursor:'pointer',
-                fontFamily:'IBM Plex Mono,monospace',fontSize:10,
-                background:!imgDate?'#1A1A18':'#fff',color:!imgDate?'#fff':'#7A7770'}}>
-              {liveData ? 'Live table' : 'Table view'}
-            </button>
-            {Object.keys(SSS_IMAGES).map(d=>(
-              <button key={d} onClick={()=>setImgDate(d)}
-                style={{padding:'4px 12px',border:'1px solid #E4E1DA',borderRadius:4,cursor:'pointer',
-                  fontFamily:'IBM Plex Mono,monospace',fontSize:10,
-                  background:imgDate===d?'#1A1A18':'#fff',color:imgDate===d?'#fff':'#7A7770'}}>
-                {d}
-              </button>
-            ))}
-          </div>
+          {sssHistory.length >= 2 && (
+            <div>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790',
+                textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:6}}>10-run trend</div>
+              <SparkLine />
+            </div>
+          )}
         </div>
 
-        {imgDate ? (
-          <img src={SSS_IMAGES[imgDate]} alt={`SSS ${imgDate}`}
-            style={{width:'100%',borderRadius:4,display:'block'}} />
-        ) : (
+        {sssAdded.size > 0 && (
+          <div style={{background:'#EAF3DE', border:'1px solid #7AB648', borderRadius:6,
+            padding:'8px 14px', fontFamily:'IBM Plex Mono,monospace', fontSize:10}}>
+            <span style={{color:'#27500A', fontWeight:700}}>+{sssAdded.size} Added: </span>
+            <span style={{color:'#27500A'}}>{[...sssAdded].join(', ')}</span>
+          </div>
+        )}
+        {sssRemoved.size > 0 && (
+          <div style={{background:'#FCEBEB', border:'1px solid #E07070', borderRadius:6,
+            padding:'8px 14px', fontFamily:'IBM Plex Mono,monospace', fontSize:10}}>
+            <span style={{color:'#C8302A', fontWeight:700}}>−{sssRemoved.size} Removed: </span>
+            <span style={{color:'#C8302A'}}>{[...sssRemoved].join(', ')}</span>
+          </div>
+        )}
+        {!liveTickers && (
+          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#9A9790',
+            background:'#F5F3EF', border:'1px solid #E4E1DA', borderRadius:6, padding:'8px 14px'}}>
+            Showing Apr 20 snapshot — run update_full.ps1 for live data
+          </div>
+        )}
+      </div>
+
+      {/* ── Main layout: table + detail panel ── */}
+      <div style={{display:'grid',
+        gridTemplateColumns: selectedTicker ? '1fr 300px' : '1fr', gap:12, alignItems:'start'}}>
+
+        {/* Table */}
+        <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:20}}>
+          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:600,
+            letterSpacing:'0.1em', textTransform:'uppercase', color:'#7A7770', marginBottom:12}}>
+            Signal Strength Stocks — {displayTickers.length} tickers
+          </div>
           <div style={{overflowX:'auto'}}>
-            <table style={{width:'100%',borderCollapse:'collapse',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>
+            <table style={{width:'100%', borderCollapse:'collapse',
+              fontFamily:'IBM Plex Mono,monospace', fontSize:11}}>
               <thead>
                 <tr>
-                  <TH>Days</TH><TH>Ticker</TH><TH>Signal Date</TH>
-                  <TH right>Entry $</TH><TH right>Last $</TH><TH right>% Gain</TH>
-                  <TH>Sector</TH><TH>Analyst</TH>
-                  {FUNDS.map(f=><TH key={f} right>{f}</TH>)}
+                  <TH>Conv</TH><TH>Ticker</TH><TH>Signal Date</TH>
+                  <TH right>Entry $</TH><TH>Sector</TH><TH>Analyst</TH><TH right>HAM Wt</TH>
                 </tr>
               </thead>
               <tbody>
-                {sssEntries.map((s,i) => {
-                  const hamFunds = hamTickers[s.ticker]||{};
-                  const hamCount = Object.keys(hamFunds).length;
+                {displayTickers.map((ticker, i) => {
+                  const s     = HE_SSS_MAP[ticker];
+                  const ham   = hamMap[ticker];
+                  const score = convictionScore(ticker);
+                  const isNew = sssAdded.has(ticker);
+                  const isSel = selectedTicker === ticker;
                   return (
-                    <tr key={i} style={{borderBottom:'1px solid #F5F3EF',
-                      background:hamCount>=2?'rgba(39,80,10,0.04)':i%2===0?'#fff':'#FAFAF8'}}>
-                      <TD style={{color:'#9A9790',fontSize:10}}>{s.days || '—'}</TD>
-                      <TD><span style={{fontWeight:700}}>{s.ticker}</span></TD>
-                      <TD style={{color:'#7A7770',fontSize:10}}>{s.signalDate || '—'}</TD>
-                      <TD right>{s.priorClose ? `$${s.priorClose.toFixed(2)}` : '—'}</TD>
-                      <TD right>{s.lastClose  ? `$${s.lastClose.toFixed(2)}`  : '—'}</TD>
-                      <TD right style={{fontWeight:600,color:s.pct>0?'#27500A':s.pct<0?'#C8302A':'#9A9790'}}>
-                        {s.pct ? `${s.pct>0?'+':''}${s.pct.toFixed(1)}%` : '—'}
+                    <tr key={i}
+                      onClick={() => setSelectedTicker(isSel ? null : ticker)}
+                      style={{borderBottom:'1px solid #F5F3EF', cursor:'pointer',
+                        background: isSel ? '#EEF2FB'
+                          : isNew ? 'rgba(39,80,10,0.05)'
+                          : ham    ? 'rgba(39,80,10,0.02)'
+                          : i%2===0 ? '#fff' : '#FAFAF8'}}>
+                      <TD><Stars score={score} /></TD>
+                      <TD>
+                        <span style={{fontWeight:700}}>{ticker}</span>
+                        {isNew && (
+                          <span style={{marginLeft:5, fontSize:8, fontWeight:700, color:'#27500A',
+                            background:'#EAF3DE', padding:'1px 4px', borderRadius:2}}>NEW</span>
+                        )}
                       </TD>
-                      <TD style={{color:'#7A7770',fontSize:10}}>{s.sector || '—'}</TD>
-                      <TD style={{color:'#7A7770',fontSize:10}}>{s.analyst || '—'}</TD>
-                      {FUNDS.map(f => {
-                        const w = hamFunds[f];
-                        return (
-                          <TD key={f} right style={{fontWeight:w?600:400,color:w?'#27500A':'#ccc'}}>
-                            {w ? `${(w*100).toFixed(2)}%` : '—'}
-                          </TD>
-                        );
-                      })}
+                      <TD style={{color:'#7A7770', fontSize:10}}>{s?.signalDate ?? '—'}</TD>
+                      <TD right>{s?.priorClose ? `$${s.priorClose.toFixed(2)}` : '—'}</TD>
+                      <TD style={{color:'#7A7770', fontSize:10}}>{s?.sector ?? '—'}</TD>
+                      <TD style={{color:'#7A7770', fontSize:10}}>{s?.analyst ?? '—'}</TD>
+                      <TD right style={{fontWeight:ham?600:400, color:ham?'#27500A':'#ccc'}}>
+                        {ham ? `${(ham.total_weight*100).toFixed(2)}%` : '—'}
+                      </TD>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* Detail Panel */}
+        {selectedTicker && (
+          <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:20,
+            position:'sticky', top:12}}>
+            <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:14}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:20, fontWeight:700, color:'#1A1A18'}}>
+                {selectedTicker}
+              </div>
+              <button onClick={() => setSelectedTicker(null)}
+                style={{background:'none', border:'none', cursor:'pointer',
+                  color:'#9A9790', fontFamily:'IBM Plex Mono,monospace', fontSize:18, lineHeight:1}}>
+                ×
+              </button>
+            </div>
+
+            {/* Section 1 — SSS Status */}
+            <div style={{marginBottom:14}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+                textTransform:'uppercase', letterSpacing:'0.1em', color:'#7A7770', marginBottom:8}}>
+                1 · SSS Status
+              </div>
+              {selEntry ? (
+                <div style={{display:'flex', flexDirection:'column', gap:5}}>
+                  {[
+                    ['Analyst',      selEntry.analyst],
+                    ['Sector',       selEntry.sector],
+                    ['Days on Signal', `${selEntry.days}d`],
+                    ['Signal Date',  selEntry.signalDate],
+                    ['Entry Price',  selEntry.priorClose != null ? `$${selEntry.priorClose.toFixed(2)}` : null],
+                    ['Apr 20 Close', selEntry.lastClose   != null ? `$${selEntry.lastClose.toFixed(2)}`  : null],
+                    ['Since Signal', selEntry.pct         != null ? `${selEntry.pct >= 0 ? '+' : ''}${selEntry.pct.toFixed(1)}%` : null],
+                  ].map(([label, val]) => (
+                    <div key={label} style={{display:'flex', justifyContent:'space-between', gap:8}}>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                        color:'#9A9790', flexShrink:0}}>{label}</span>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
+                        fontWeight:600, color:'#1A1A18', textAlign:'right'}}>{val ?? '—'}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div style={{fontSize:11, color:'#7A7770', lineHeight:1.6}}>
+                  Metadata not available — ticker added after Apr 20 snapshot.
+                </div>
+              )}
+            </div>
+
+            {/* Section 2 — HAM Holdings */}
+            <div style={{marginBottom:14, paddingTop:12, borderTop:'1px solid #F5F3EF'}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+                textTransform:'uppercase', letterSpacing:'0.1em', color:'#7A7770', marginBottom:8}}>
+                2 · HAM Holdings
+              </div>
+              {selHam ? (
+                <div style={{display:'flex', flexDirection:'column', gap:5}}>
+                  <div style={{display:'flex', justifyContent:'space-between'}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790'}}>
+                      Total Weight
+                    </span>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
+                      fontWeight:700, color:'#27500A'}}>
+                      {(selHam.total_weight * 100).toFixed(2)}%
+                    </span>
+                  </div>
+                  {Object.entries(selHam.accounts).map(([fund, w]) => (
+                    <div key={fund} style={{display:'flex', justifyContent:'space-between'}}>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                        color:'#9A9790'}}>{fund}</span>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
+                        fontWeight:600, color:'#1A1A18'}}>{(w * 100).toFixed(2)}%</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#9A9790'}}>
+                  Not held in HAM portfolios
+                </div>
+              )}
+            </div>
+
+            {/* Section 4 — Conviction Score */}
+            <div style={{paddingTop:12, borderTop:'1px solid #F5F3EF'}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+                textTransform:'uppercase', letterSpacing:'0.1em', color:'#7A7770', marginBottom:8}}>
+                4 · Conviction Score
+              </div>
+              <div style={{marginBottom:10, display:'flex', alignItems:'center', gap:8}}>
+                <Stars score={selScore} />
+                <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790'}}>
+                  {selScore}/4
+                </span>
+              </div>
+              <div style={{display:'flex', flexDirection:'column', gap:4}}>
+                {[
+                  [true,                                           'On SSS list'],
+                  [!!selHam,                                       'In HAM portfolios'],
+                  [!!(iiLongs[selectedTicker]||iiShorts[selectedTicker]), 'In Investing Ideas'],
+                  [rtaTickers.has(selectedTicker),                 'Traded last 60d (RTA)'],
+                ].map(([met, label], i) => (
+                  <div key={i} style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
+                    color: met ? '#27500A' : '#C8C5BE', fontWeight: met ? 600 : 400}}>
+                    {met ? '✓' : '○'} {label}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         )}
       </div>
 
       {/* Link to ETF Pro tab */}
-      <div style={{background:'#F9F8F5',border:'1px solid #E4E1DA',borderRadius:8,padding:16,
-        display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#7A7770'}}>
+      <div style={{background:'#F9F8F5', border:'1px solid #E4E1DA', borderRadius:8, padding:16,
+        marginTop:12}}>
+        <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, color:'#7A7770'}}>
           ETF Pro re-ranks have moved to the dedicated <strong style={{color:'#1A1A18'}}>ETF Pro</strong> tab — streak tracker, heatmap, and full history.
         </div>
       </div>

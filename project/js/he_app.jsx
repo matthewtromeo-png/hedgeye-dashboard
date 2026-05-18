@@ -744,10 +744,10 @@ const App = () => {
 
       {/* CONTENT */}
       {tab==='overview' && <OverviewTab qQuad={tweaks.quarterlyQuad} mQuad={tweaks.monthlyQuad} usd={tweaks.usdSignal} btc={tweaks.btcSignal} macroCtx={macroCtx} />}
-      {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} />}
+      {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
       {tab==='rta'      && <RTATab />}
       {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} />}
-      {tab==='signals'   && <SignalsTab />}
+      {tab==='signals'   && <SignalsTab macroCtx={macroCtx} />}
       {tab==='riskrange' && (
         <iframe
           src="./risk_range_dashboard.html"
@@ -755,7 +755,7 @@ const App = () => {
           title="Risk Range Dashboard"
         />
       )}
-      {tab==='analyzer' && <AnalyzerTab />}
+      {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
       {tab==='etfpro'   && <ETFProTab />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}

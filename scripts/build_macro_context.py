@@ -617,7 +617,17 @@ PDF_SOURCES = [
             '  "quad": <int 1-4>,\n'
             '  "key_points": [<up to 5 most important takeaways from the call>],\n'
             '  "trades_mentioned": [<any specific trade ideas or position changes discussed>],\n'
-            '  "keith_outlook": <string, 1-2 sentence summary of Keith\'s overall market view>\n'
+            '  "keith_outlook": <string, 1-2 sentence summary of Keith\'s overall market view>,\n'
+            '  "ticker_mentions": {\n'
+            '    "<TICKER>": {\n'
+            '      "pod1_revenue": <"ACCELERATING"|"DECELERATING"|null>,\n'
+            '      "eps_trend": <"BEAT"|"MISS"|"IN_LINE"|null>,\n'
+            '      "gross_margin": <"EXPANDING"|"CONTRACTING"|null>,\n'
+            '      "key_thesis": <one sentence string|null>,\n'
+            '      "catalysts": [<string>],\n'
+            '      "signal": <"BULLISH"|"BEARISH"|"NEUTRAL"|null>\n'
+            "    }\n"
+            "  }\n"
             "}"
         ),
     },
@@ -671,9 +681,19 @@ PDF_SOURCES = [
         "label":       "founders_choice (weekly)",
         "prompt": (
             "Extract all sector long and short stock picks from this Hedgeye Founders Choice PDF.\n"
-            "Return ONLY valid JSON where keys are lowercase sector names (null if not found):\n"
+            "Return ONLY valid JSON (null if not found):\n"
             "{\n"
-            '  "<sector e.g. industrials>": {"longs": [<ticker strings>], "shorts": [<ticker strings>]}\n'
+            '  "<sector e.g. industrials>": {"longs": [<ticker strings>], "shorts": [<ticker strings>]},\n'
+            '  "ticker_mentions": {\n'
+            '    "<TICKER>": {\n'
+            '      "pod1_revenue": <"ACCELERATING"|"DECELERATING"|null>,\n'
+            '      "eps_trend": <"BEAT"|"MISS"|"IN_LINE"|null>,\n'
+            '      "gross_margin": <"EXPANDING"|"CONTRACTING"|null>,\n'
+            '      "key_thesis": <one sentence string|null>,\n'
+            '      "catalysts": [<string>],\n'
+            '      "signal": <"BULLISH"|"BEARISH"|"NEUTRAL"|null>\n'
+            "    }\n"
+            "  }\n"
             "}"
         ),
     },
@@ -1111,6 +1131,20 @@ def main():
         cache_stats = pdf.pop("_cache_stats", {})
         sources_used.update(pdf.pop("_pdf_sources", {}))
         output.update(pdf)
+
+    # sss_history — append today's SSS count on every full run, keep last 10
+    sss_history = (existing or {}).get("sss_history", [])
+    if not args.stage1_only:
+        sss_data = output.get("pdf", {}).get("sss")
+        if sss_data and sss_data.get("count") is not None:
+            sss_history.append({
+                "date":    date.today().isoformat(),
+                "count":   sss_data["count"],
+                "added":   len(sss_data.get("added") or []),
+                "removed": len(sss_data.get("removed") or []),
+            })
+            sss_history = sss_history[-10:]
+    output["sss_history"] = sss_history
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, 'w', encoding='utf-8') as fh:

@@ -125,7 +125,7 @@ function classifyBucket(ticker, hedgeyeSector, fmpIndustry) {
 }
 
 // ── Analyzer Tab ─────────────────────────────────────────────────────
-const AnalyzerTab = () => {
+const AnalyzerTab = ({macroCtx}) => {
   const [input,     setInput]     = React.useState('');
   const [ticker,    setTicker]    = React.useState('');
   const [loading,   setLoading]   = React.useState(false);
@@ -200,7 +200,10 @@ const AnalyzerTab = () => {
 
   // ── Derived analysis ───────────────────────────────────────────────
   const sssEntry = ticker ? window.HE.SSS.find(s => s.ticker === ticker) : null;
+  const liveSssTickers = new Set(macroCtx?.pdf?.sss?.tickers ?? []);
+  const isOnSss = ticker ? (liveSssTickers.size > 0 ? liveSssTickers.has(ticker) : !!sssEntry) : false;
   const qs = window.HE.loadQuadState();
+  console.log('[AnalyzerTab] FMP key:', qs.fmpKey ? 'SET' : 'NOT SET', '| live SSS tickers:', liveSssTickers.size || 'none (fallback)');
   const currentQuad = qs.monthly || qs.quarterly || 'Q3';
   const quadDef     = window.HE.QUADS[currentQuad];
   const fmpKey      = qs.fmpKey;
@@ -215,7 +218,7 @@ const AnalyzerTab = () => {
   const fitMeta    = quadFit ? FIT_META[quadFit] : null;
 
   const verdictKey = !ticker ? null
-    : !sssEntry ? 'NOT_ACTIONABLE'
+    : !isOnSss ? 'NOT_ACTIONABLE'
     : quadFit === 'best' ? 'STRONG_SETUP'
     : quadFit === 'worst' ? 'WEAK_TIMING'
     : 'WATCH';
@@ -334,7 +337,7 @@ const AnalyzerTab = () => {
                 textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770', marginBottom:12}}>
                 1 · Signal Strength Status
               </div>
-              {sssEntry ? (
+              {isOnSss ? (
                 <>
                   <div style={{display:'inline-flex', alignItems:'center', gap:6, background:'#EAF3DE',
                     border:'1px solid #7AB648', borderRadius:4, padding:'4px 10px', marginBottom:14}}>
@@ -343,27 +346,33 @@ const AnalyzerTab = () => {
                     <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:700,
                       color:'#27500A'}}>QUALIFIED</span>
                   </div>
-                  <div style={{display:'flex', flexDirection:'column', gap:8}}>
-                    {[
-                      ['Analyst',        sssEntry.analyst, null],
-                      ['Sector',         sssEntry.sector, null],
-                      ['Days on Signal', `${sssEntry.days}d`, null],
-                      ['Signal Date',    sssEntry.signalDate, null],
-                      ['Signal Price',   `$${sssEntry.priorClose.toFixed(2)}`, null],
-                      ['Since Signal',   `${sssEntry.pct >= 0 ? '+' : ''}${sssEntry.pct.toFixed(1)}%`,
-                        sssEntry.pct >= 0 ? '#27500A' : '#C8302A'],
-                    ].map(([label, val, color]) => (
-                      <div key={label} style={{display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:8}}>
-                        <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', flexShrink:0}}>
-                          {label}
-                        </span>
-                        <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:600,
-                          color: color || '#1A1A18', textAlign:'right'}}>
-                          {val}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                  {sssEntry ? (
+                    <div style={{display:'flex', flexDirection:'column', gap:8}}>
+                      {[
+                        ['Analyst',        sssEntry.analyst, null],
+                        ['Sector',         sssEntry.sector, null],
+                        ['Days on Signal', `${sssEntry.days}d`, null],
+                        ['Signal Date',    sssEntry.signalDate, null],
+                        ['Signal Price',   `$${sssEntry.priorClose.toFixed(2)}`, null],
+                        ['Since Signal',   `${sssEntry.pct >= 0 ? '+' : ''}${sssEntry.pct.toFixed(1)}%`,
+                          sssEntry.pct >= 0 ? '#27500A' : '#C8302A'],
+                      ].map(([label, val, color]) => (
+                        <div key={label} style={{display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:8}}>
+                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', flexShrink:0}}>
+                            {label}
+                          </span>
+                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:600,
+                            color: color || '#1A1A18', textAlign:'right'}}>
+                            {val}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{fontSize:11, color:'#7A7770', lineHeight:1.65}}>
+                      Metadata not available — ticker added after last hardcoded snapshot.
+                    </div>
+                  )}
                 </>
               ) : (
                 <>
@@ -379,7 +388,7 @@ const AnalyzerTab = () => {
                   </div>
                   <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790',
                     borderTop:'1px solid #F5F3EF', paddingTop:10}}>
-                    {window.HE.SSS.length} tickers currently qualified on SSS
+                    {macroCtx?.pdf?.sss?.count ?? window.HE.SSS.length} tickers currently qualified on SSS
                   </div>
                 </>
               )}

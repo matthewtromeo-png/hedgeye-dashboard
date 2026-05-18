@@ -64,7 +64,7 @@ const PriceCard = ({symbol, label, data, size='normal', accent}) => {
 };
 
 // ── Market Tab ─────────────────────────────────────────────────────
-const MarketTab = ({quad}) => {
+const MarketTab = ({quad, macroCtx}) => {
   const [prices, setPrices]   = React.useState({});
   const [sssP,   setSssP]     = React.useState({});
   const [researchCpi, setResearchCpi] = React.useState(null); // populated by he_ingest
@@ -75,14 +75,21 @@ const MarketTab = ({quad}) => {
   const [lastUpdated, setLastUpdated] = React.useState(null);
 
   const MARKET_SYMS = ['^VIX','^GSPC','QQQ','IWM','GLD','TLT','UUP','BTC-USD','^TNX','USO','GDX'];
-  const SSS_SYMS    = window.HE.SSS.map(s => s.ticker);
+  const HE_SSS_MAP  = Object.fromEntries(window.HE.SSS.map(s => [s.ticker, s]));
+  const SSS_SYMS    = macroCtx?.pdf?.sss?.tickers ?? window.HE.SSS.map(s => s.ticker);
+  console.log('[MarketTab] SSS_SYMS count:', SSS_SYMS.length, macroCtx?.pdf?.sss?.tickers ? '(live)' : '(fallback Apr 20)');
+
+  // Use a ref so the refresh callback always reads the latest SSS_SYMS without
+  // being recreated every render (avoids stale-closure bug with [] deps).
+  const sssSymsRef = React.useRef(SSS_SYMS);
+  sssSymsRef.current = SSS_SYMS;
 
   const refresh = React.useCallback(async () => {
     setStatus('loading');
     try {
       const [mkt, sss] = await Promise.all([
         fetchYF(MARKET_SYMS),
-        fetchYF(SSS_SYMS),
+        fetchYF(sssSymsRef.current),
       ]);
       if (Object.keys(mkt).length === 0) throw new Error('No price data returned');
       setPrices(mkt);
@@ -94,6 +101,17 @@ const MarketTab = ({quad}) => {
       setStatus('error');
     }
   }, []);
+
+  // Re-fetch SSS prices whenever the live ticker list arrives from the pipeline
+  const prevSssTickersRef = React.useRef(null);
+  React.useEffect(() => {
+    const live = macroCtx?.pdf?.sss?.tickers;
+    if (live && live !== prevSssTickersRef.current) {
+      prevSssTickersRef.current = live;
+      console.log('[MarketTab] Live SSS tickers loaded, re-fetching prices for', live.length, 'tickers');
+      fetchYF(live).then(setSssP).catch(e => console.warn('[prices] SSS re-fetch failed:', e.message));
+    }
+  }, [macroCtx?.pdf?.sss?.tickers]);
 
   // Re-run inflation fetch whenever new PDFs are ingested
   React.useEffect(() => {
@@ -252,17 +270,20 @@ const MarketTab = ({quad}) => {
               </tr>
             </thead>
             <tbody>
-              {window.HE.SSS.map((s, i) => {
-                const p = sssP[s.ticker];
-                const curPrice = p?.price;
-                const sinceSignal = curPrice ? ((curPrice - s.priorClose) / s.priorClose * 100) : null;
+              {SSS_SYMS.map((ticker, i) => {
+                const p         = sssP[ticker];
+                const heEntry   = HE_SSS_MAP[ticker];
+                const signalPrice = heEntry?.priorClose ?? macroCtx?.levels?.[ticker]?.close;
+                const curPrice  = p?.price;
+                const sinceSignal = (curPrice && signalPrice)
+                  ? ((curPrice - signalPrice) / signalPrice * 100) : null;
                 return (
                   <tr key={i} style={{borderBottom:'1px solid #F5F3EF',
                     background: sinceSignal > 20 ? 'rgba(39,80,10,0.04)' : i%2===0?'#fff':'#FAFAF8'}}>
-                    <TD><span style={{fontWeight:700}}>{s.ticker}</span></TD>
-                    <TD style={{color:'#7A7770', fontSize:10}}>{s.sector}</TD>
-                    <TD style={{color:'#9A9790', fontSize:10}}>{s.days}d</TD>
-                    <TD right>${s.priorClose.toFixed(2)}</TD>
+                    <TD><span style={{fontWeight:700}}>{ticker}</span></TD>
+                    <TD style={{color:'#7A7770', fontSize:10}}>{heEntry?.sector ?? '—'}</TD>
+                    <TD style={{color:'#9A9790', fontSize:10}}>{heEntry ? `${heEntry.days}d` : '—'}</TD>
+                    <TD right>{signalPrice ? `$${signalPrice.toFixed(2)}` : '—'}</TD>
                     <TD right style={{fontWeight:curPrice?600:400}}>
                       {curPrice ? `$${curPrice.toFixed(2)}` : '—'}
                     </TD>
