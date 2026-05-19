@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-05-18T19:54:23.827589+00:00",
-  "source_date": "2026-05-18",
+  "generated_at": "2026-05-19T12:14:49.990237+00:00",
+  "source_date": "2026-05-19",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1779133376.xlsx",
-    "ham_holdings": "ETF_Holdings 5.18.2026.csv",
+    "ham_holdings": "ETF_Holdings 5.19.2026.csv",
     "rta": "real-time-alerts-history-2026-05-18.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
     "macro_show": "HE_TMS_KM_DJ_5.18.2026.pdf@1779114005",
-    "msr": "MSR_2.0.pdf@1779129720",
+    "msr": "MSR_2.0.pdf@1779192278",
     "sss": "Hedgeye - Signal Strength Stocks_ 72 Stocks (3 Added, 1 Removed).pdf@1779119331",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (-1.3, BEARISH) vs MSFT (+3.1%, BULLISH), NVDA Earnings=Wednesday.pdf@1779110388",
-    "early_look": "Hedgeye - ROC Report_ #Quad2 Bond Yield Breakout.pdf@1779133401",
+    "early_look": "Hedgeye - Upside-Down Momentum.pdf@1779191580",
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_18_2026) _ Top Movers_ OAEM (+13), CNXT (+12), IBIT(+11).pdf@1779132064",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-1.8%), COIN=BEARISH, ETFs=-$1.26B W_W, Harvard→ Crypto ETF Exposure ↓↓, RIP Crypto ATMs.pdf@1779110402",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_18_2026.pdf@1779111833",
@@ -408,441 +408,384 @@
     {
       "ticker": "CERY",
       "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
-      "total_weight": 0.1418,
+      "total_weight": 0.1427,
       "accounts": {
-        "HEFT": 0.1418
+        "HEFT": 0.1427
       },
-      "market_value": 14671989.12
+      "market_value": 14796592.0
     },
     {
       "ticker": "AAPL",
       "name": "Apple Inc",
-      "total_weight": 0.1196,
+      "total_weight": 0.1194,
       "accounts": {
         "HELS": 0.0302,
-        "HGRO": 0.0894
+        "HGRO": 0.0892
       },
-      "market_value": 11061974.35
+      "market_value": 11165723.76
     },
     {
       "ticker": "GOOGL",
       "name": "Alphabet Inc",
-      "total_weight": 0.1136,
+      "total_weight": 0.1143,
       "accounts": {
-        "HELS": 0.0311,
-        "HGRO": 0.0825
+        "HELS": 0.0313,
+        "HGRO": 0.083
       },
-      "market_value": 10285727.94
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corp",
-      "total_weight": 0.0959,
-      "accounts": {
-        "HGRO": 0.0959
-      },
-      "market_value": 11068394.36
-    },
-    {
-      "ticker": "VTI",
-      "name": "Vanguard Total Stock Market ETF",
-      "total_weight": 0.0896,
-      "accounts": {
-        "HEFT": 0.0896
-      },
-      "market_value": 9274173.58
+      "market_value": 10467704.74
     },
     {
       "ticker": "VTIP",
       "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
-      "total_weight": 0.0849,
+      "total_weight": 0.1121,
       "accounts": {
-        "HECA": 0.0849
+        "HECA": 0.1121
       },
-      "market_value": 30086734.48
+      "market_value": 39167611.26
     },
     {
-      "ticker": "JAAA",
-      "name": "Janus Henderson AAA CLO ETF",
-      "total_weight": 0.0598,
+      "ticker": "NVDA",
+      "name": "NVIDIA Corp",
+      "total_weight": 0.0952,
       "accounts": {
-        "HECA": 0.0598
+        "HGRO": 0.0952
       },
-      "market_value": 21204755.34
+      "market_value": 11126449.04
     },
     {
-      "ticker": "AMZN",
-      "name": "Amazon.com Inc",
-      "total_weight": 0.0595,
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "total_weight": 0.0893,
       "accounts": {
-        "HGRO": 0.0595
+        "HEFT": 0.0893
       },
-      "market_value": 6859979.94
+      "market_value": 9264458.12
     },
     {
       "ticker": "OIH",
       "name": "VanEck Oil Services ETF",
-      "total_weight": 0.0583,
+      "total_weight": 0.0652,
       "accounts": {
-        "HECA": 0.0172,
-        "HEFT": 0.0411
+        "HECA": 0.023,
+        "HEFT": 0.0422
       },
-      "market_value": 10345612.2
-    },
-    {
-      "ticker": "FWD",
-      "name": "AB Disruptors ETF",
-      "total_weight": 0.0575,
-      "accounts": {
-        "HECA": 0.0575
-      },
-      "market_value": 20379659.19
-    },
-    {
-      "ticker": "GEV",
-      "name": "GE Vernova Inc",
-      "total_weight": 0.0567,
-      "accounts": {
-        "HEFT": 0.0125,
-        "HELS": 0.0255,
-        "HGRO": 0.0187
-      },
-      "market_value": 4080455.47
-    },
-    {
-      "ticker": "SLX",
-      "name": "VanEck Steel ETF",
-      "total_weight": 0.0561,
-      "accounts": {
-        "HECA": 0.0409,
-        "HEFT": 0.0152
-      },
-      "market_value": 16078549.38
-    },
-    {
-      "ticker": "CASY",
-      "name": "Casey's General Stores Inc",
-      "total_weight": 0.0553,
-      "accounts": {
-        "HEFT": 0.0152,
-        "HELS": 0.0304,
-        "HGRO": 0.0097
-      },
-      "market_value": 3446815.5
-    },
-    {
-      "ticker": "FESM",
-      "name": "Fidelity Enhanced Small Cap Core ETF",
-      "total_weight": 0.0507,
-      "accounts": {
-        "HECA": 0.0507
-      },
-      "market_value": 17977698.2
-    },
-    {
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin Trust ETF",
-      "total_weight": 0.0488,
-      "accounts": {
-        "HECA": 0.039,
-        "HEFT": 0.0098
-      },
-      "market_value": 14832999.72
-    },
-    {
-      "ticker": "PAVE",
-      "name": "Global X US Infrastructure Development ETF",
-      "total_weight": 0.0482,
-      "accounts": {
-        "HECA": 0.033,
-        "HEFT": 0.0152
-      },
-      "market_value": 13275294.03
-    },
-    {
-      "ticker": "DBB",
-      "name": "Invesco DB Base Metals Fund",
-      "total_weight": 0.0469,
-      "accounts": {
-        "HECA": 0.0469
-      },
-      "market_value": 16621429.45
+      "market_value": 12423790.4
     },
     {
       "ticker": "XTL",
       "name": "State Street SPDR S&P Telecom ETF",
-      "total_weight": 0.0456,
+      "total_weight": 0.0603,
       "accounts": {
-        "HECA": 0.0456
+        "HECA": 0.0603
       },
-      "market_value": 16181707.39
+      "market_value": 21075024.2
+    },
+    {
+      "ticker": "DBMF",
+      "name": "iMGP DBi Managed Futures Strategy ETF",
+      "total_weight": 0.0601,
+      "accounts": {
+        "HECA": 0.0601
+      },
+      "market_value": 21020907.8
+    },
+    {
+      "ticker": "JAAA",
+      "name": "Janus Henderson AAA CLO ETF",
+      "total_weight": 0.0601,
+      "accounts": {
+        "HECA": 0.0601
+      },
+      "market_value": 20999135.45
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc",
+      "total_weight": 0.06,
+      "accounts": {
+        "HGRO": 0.06
+      },
+      "market_value": 7008460.46
+    },
+    {
+      "ticker": "CASY",
+      "name": "Casey's General Stores Inc",
+      "total_weight": 0.0557,
+      "accounts": {
+        "HEFT": 0.0152,
+        "HELS": 0.0307,
+        "HGRO": 0.0098
+      },
+      "market_value": 3477399.81
+    },
+    {
+      "ticker": "UUP",
+      "name": "Invesco DB US Dollar Index Bullish Fund",
+      "total_weight": 0.0554,
+      "accounts": {
+        "HECA": 0.0554
+      },
+      "market_value": 19367424.5
+    },
+    {
+      "ticker": "DBJP",
+      "name": "Xtrackers MSCI Japan Hedged Equity ETF",
+      "total_weight": 0.0548,
+      "accounts": {
+        "HECA": 0.0548
+      },
+      "market_value": 19148613.99
+    },
+    {
+      "ticker": "FWD",
+      "name": "AB Disruptors ETF",
+      "total_weight": 0.054,
+      "accounts": {
+        "HECA": 0.054
+      },
+      "market_value": 18879072.8
+    },
+    {
+      "ticker": "SLX",
+      "name": "VanEck Steel ETF",
+      "total_weight": 0.0513,
+      "accounts": {
+        "HECA": 0.0361,
+        "HEFT": 0.0152
+      },
+      "market_value": 14175538.29
+    },
+    {
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust ETF",
+      "total_weight": 0.0506,
+      "accounts": {
+        "HECA": 0.0506
+      },
+      "market_value": 17690069.64
+    },
+    {
+      "ticker": "IHF",
+      "name": "iShares U.S. Healthcare Providers ETF",
+      "total_weight": 0.0473,
+      "accounts": {
+        "HECA": 0.0473
+      },
+      "market_value": 16514403.36
+    },
+    {
+      "ticker": "TAN",
+      "name": "Invesco Solar ETF",
+      "total_weight": 0.0454,
+      "accounts": {
+        "HECA": 0.0454
+      },
+      "market_value": 15870633.24
     },
     {
       "ticker": "CSX",
       "name": "CSX Corp",
-      "total_weight": 0.0437,
+      "total_weight": 0.0446,
       "accounts": {
-        "HELS": 0.0291,
-        "HGRO": 0.0146
+        "HELS": 0.0297,
+        "HGRO": 0.0149
       },
-      "market_value": 2401487.7
+      "market_value": 2461905.6
     },
     {
       "ticker": "ARTY",
       "name": "iShares Future AI & Tech ETF",
-      "total_weight": 0.0436,
+      "total_weight": 0.0426,
       "accounts": {
-        "HEFT": 0.0436
+        "HEFT": 0.0426
       },
-      "market_value": 4508287.0
+      "market_value": 4417162.05
     },
     {
       "ticker": "FCFS",
       "name": "FirstCash Holdings Inc",
       "total_weight": 0.0415,
       "accounts": {
-        "HEFT": 0.0107,
-        "HELS": 0.0202,
+        "HEFT": 0.0106,
+        "HELS": 0.0203,
         "HGRO": 0.0106
       },
-      "market_value": 2833335.78
+      "market_value": 2835620.8
     },
     {
-      "ticker": "APD",
-      "name": "Air Products and Chemicals Inc",
+      "ticker": "VYM",
+      "name": "Vanguard High Dividend Yield ETF",
       "total_weight": 0.0412,
       "accounts": {
-        "HEFT": 0.0109,
-        "HELS": 0.0303
+        "HECA": 0.0412
       },
-      "market_value": 1878026.04
+      "market_value": 14399465.79
     },
     {
-      "ticker": "DBMF",
-      "name": "iMGP DBi Managed Futures Strategy ETF",
-      "total_weight": 0.0409,
+      "ticker": "GEV",
+      "name": "GE Vernova Inc",
+      "total_weight": 0.0401,
       "accounts": {
-        "HECA": 0.0409
+        "HEFT": 0.0102,
+        "HELS": 0.0156,
+        "HGRO": 0.0143
       },
-      "market_value": 14485004.91
+      "market_value": 3111656.5
     },
     {
       "ticker": "URI",
       "name": "United Rentals Inc",
-      "total_weight": 0.0404,
+      "total_weight": 0.0399,
       "accounts": {
-        "HELS": 0.0254,
-        "HGRO": 0.015
+        "HELS": 0.0251,
+        "HGRO": 0.0148
       },
-      "market_value": 2352895.2
+      "market_value": 2338755.32
     },
     {
-      "ticker": "CSCO",
-      "name": "Cisco Systems Inc",
-      "total_weight": 0.0403,
-      "accounts": {
-        "HELS": 0.0276,
-        "HGRO": 0.0127
-      },
-      "market_value": 2141492.36
-    },
-    {
-      "ticker": "DBJP",
-      "name": "Xtrackers MSCI Japan Hedged Equity ETF",
+      "ticker": "FESM",
+      "name": "Fidelity Enhanced Small Cap Core ETF",
       "total_weight": 0.0398,
       "accounts": {
         "HECA": 0.0398
       },
-      "market_value": 14124949.25
-    },
-    {
-      "ticker": "IHF",
-      "name": "iShares U.S. Healthcare Providers ETF",
-      "total_weight": 0.0389,
-      "accounts": {
-        "HECA": 0.0389
-      },
-      "market_value": 13803126.48
-    },
-    {
-      "ticker": "GLD",
-      "name": "SPDR Gold Shares",
-      "total_weight": 0.0381,
-      "accounts": {
-        "HEFT": 0.0381
-      },
-      "market_value": 3940469.47
+      "market_value": 13925320.5
     },
     {
       "ticker": "SBUX",
       "name": "Starbucks Corp",
-      "total_weight": 0.0379,
+      "total_weight": 0.0382,
       "accounts": {
-        "HELS": 0.0224,
-        "HGRO": 0.0155
+        "HELS": 0.0226,
+        "HGRO": 0.0156
       },
-      "market_value": 2342452.95
+      "market_value": 2371317.0
     },
     {
-      "ticker": "AVEM",
-      "name": "Avantis Emerging Markets Equity ETF",
-      "total_weight": 0.0377,
+      "ticker": "CSCO",
+      "name": "Cisco Systems Inc",
+      "total_weight": 0.0381,
       "accounts": {
-        "HECA": 0.0185,
-        "HEFT": 0.0192
+        "HELS": 0.028,
+        "HGRO": 0.0101
       },
-      "market_value": 8561745.92
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar Inc",
-      "total_weight": 0.0367,
-      "accounts": {
-        "HELS": 0.0205,
-        "HGRO": 0.0162
-      },
-      "market_value": 2378005.87
+      "market_value": 1862255.2
     },
     {
       "ticker": "INTC",
       "name": "Intel Corp",
       "total_weight": 0.0364,
       "accounts": {
-        "HEFT": 0.0195,
-        "HELS": 0.0169
+        "HEFT": 0.0194,
+        "HELS": 0.017
       },
-      "market_value": 2436556.77
-    },
-    {
-      "ticker": "HGER",
-      "name": "Harbor Commodity All Weather Strategy ETF",
-      "total_weight": 0.0349,
-      "accounts": {
-        "HECA": 0.0349
-      },
-      "market_value": 12373581.5
+      "market_value": 2423116.17
     },
     {
       "ticker": "RIG",
       "name": "Transocean Ltd",
-      "total_weight": 0.0333,
+      "total_weight": 0.036,
       "accounts": {
-        "HEFT": 0.0164,
-        "HELS": 0.0169
+        "HEFT": 0.0176,
+        "HELS": 0.0184
       },
-      "market_value": 2110430.08
+      "market_value": 2272309.66
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar Inc",
+      "total_weight": 0.0359,
+      "accounts": {
+        "HELS": 0.0201,
+        "HGRO": 0.0158
+      },
+      "market_value": 2343032.4
     },
     {
       "ticker": "DAR",
       "name": "DARLING INGREDIENTS INC",
-      "total_weight": 0.0331,
+      "total_weight": 0.035,
       "accounts": {
-        "HELS": 0.0233,
-        "HGRO": 0.0098
+        "HELS": 0.0251,
+        "HGRO": 0.0099
       },
-      "market_value": 1709873.55
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom Inc",
-      "total_weight": 0.0331,
-      "accounts": {
-        "HGRO": 0.0331
-      },
-      "market_value": 3819481.77
-    },
-    {
-      "ticker": "VYM",
-      "name": "Vanguard High Dividend Yield ETF",
-      "total_weight": 0.0319,
-      "accounts": {
-        "HECA": 0.0319
-      },
-      "market_value": 11309577.84
-    },
-    {
-      "ticker": "XLE",
-      "name": "State Street Energy Select Sector SPDR ETF",
-      "total_weight": 0.0309,
-      "accounts": {
-        "HEFT": 0.0309
-      },
-      "market_value": 3194602.8
-    },
-    {
-      "ticker": "PICK",
-      "name": "iShares MSCI Global Metals & Mining Producers ETF",
-      "total_weight": 0.0308,
-      "accounts": {
-        "HECA": 0.0308
-      },
-      "market_value": 10929605.94
-    },
-    {
-      "ticker": "TAN",
-      "name": "Invesco Solar ETF",
-      "total_weight": 0.0308,
-      "accounts": {
-        "HECA": 0.0308
-      },
-      "market_value": 10922439.36
-    },
-    {
-      "ticker": "VIK",
-      "name": "Viking Holdings Ltd",
-      "total_weight": 0.0305,
-      "accounts": {
-        "HELS": 0.0204,
-        "HGRO": 0.0101
-      },
-      "market_value": 1664207.1
-    },
-    {
-      "ticker": "DRAM",
-      "name": "Roundhill Memory ETF",
-      "total_weight": 0.0301,
-      "accounts": {
-        "HEFT": 0.0301
-      },
-      "market_value": 3114034.0
-    },
-    {
-      "ticker": "GRID",
-      "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund",
-      "total_weight": 0.0289,
-      "accounts": {
-        "HECA": 0.0289
-      },
-      "market_value": 10236257.5
-    },
-    {
-      "ticker": "LIT",
-      "name": "Global X Lithium & Battery Tech ETF",
-      "total_weight": 0.0289,
-      "accounts": {
-        "HECA": 0.0289
-      },
-      "market_value": 10242373.36
+      "market_value": 1766231.64
     },
     {
       "ticker": "ULS",
       "name": "UL Solutions Inc",
-      "total_weight": 0.0287,
+      "total_weight": 0.0349,
       "accounts": {
-        "HELS": 0.0187,
+        "HELS": 0.0249,
         "HGRO": 0.01
       },
-      "market_value": 1611126.0
+      "market_value": 1779407.72
+    },
+    {
+      "ticker": "VIK",
+      "name": "Viking Holdings Ltd",
+      "total_weight": 0.0315,
+      "accounts": {
+        "HELS": 0.0211,
+        "HGRO": 0.0104
+      },
+      "market_value": 1733420.52
+    },
+    {
+      "ticker": "XLE",
+      "name": "State Street Energy Select Sector SPDR ETF",
+      "total_weight": 0.0314,
+      "accounts": {
+        "HEFT": 0.0314
+      },
+      "market_value": 3255872.1
+    },
+    {
+      "ticker": "APD",
+      "name": "Air Products and Chemicals Inc",
+      "total_weight": 0.0309,
+      "accounts": {
+        "HEFT": 0.0108,
+        "HELS": 0.0201
+      },
+      "market_value": 1613498.31
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc",
+      "total_weight": 0.0303,
+      "accounts": {
+        "HGRO": 0.0303
+      },
+      "market_value": 3539433.23
+    },
+    {
+      "ticker": "DRAM",
+      "name": "Roundhill Memory ETF",
+      "total_weight": 0.029,
+      "accounts": {
+        "HEFT": 0.029
+      },
+      "market_value": 3005560.8
+    },
+    {
+      "ticker": "LIT",
+      "name": "Global X Lithium & Battery Tech ETF",
+      "total_weight": 0.0287,
+      "accounts": {
+        "HECA": 0.0287
+      },
+      "market_value": 10013002.85
     },
     {
       "ticker": "TTWO",
       "name": "Take-Two Interactive Software Inc",
-      "total_weight": 0.0285,
+      "total_weight": 0.0286,
       "accounts": {
-        "HELS": 0.0188,
+        "HELS": 0.0189,
         "HGRO": 0.0097
       },
-      "market_value": 1580223.92
+      "market_value": 1598740.32
     },
     {
       "ticker": "CZR",
@@ -852,183 +795,175 @@
         "HELS": 0.0201,
         "HGRO": 0.0073
       },
-      "market_value": 1335929.0
+      "market_value": 1342939.64
+    },
+    {
+      "ticker": "PM",
+      "name": "Philip Morris International Inc",
+      "total_weight": 0.0273,
+      "accounts": {
+        "HEFT": 0.0126,
+        "HGRO": 0.0147
+      },
+      "market_value": 3024742.5
     },
     {
       "ticker": "CIBR",
       "name": "First Trust NASDAQ Cybersecurity ETF",
-      "total_weight": 0.026,
+      "total_weight": 0.0265,
       "accounts": {
-        "HEFT": 0.026
+        "HEFT": 0.0265
       },
-      "market_value": 2686672.35
+      "market_value": 2750228.04
     },
     {
       "ticker": "ROKU",
       "name": "Roku Inc",
-      "total_weight": 0.0258,
+      "total_weight": 0.026,
       "accounts": {
-        "HELS": 0.0258
+        "HELS": 0.026
       },
-      "market_value": 634486.32
+      "market_value": 635151.4
     },
     {
-      "ticker": "MRVL",
-      "name": "MARVELL TECHNOLOGY INC",
-      "total_weight": 0.0254,
+      "ticker": "AMAT",
+      "name": "Applied Materials Inc",
+      "total_weight": 0.0253,
       "accounts": {
-        "HELS": 0.0167,
-        "HGRO": 0.0087
+        "HELS": 0.0253
       },
-      "market_value": 1417950.24
-    },
-    {
-      "ticker": "JAZZ",
-      "name": "Jazz Pharmaceuticals PLC",
-      "total_weight": 0.0247,
-      "accounts": {
-        "HELS": 0.0247
-      },
-      "market_value": 609443.28
+      "market_value": 618287.15
     },
     {
       "ticker": "OUT",
       "name": "Outfront Media Inc",
-      "total_weight": 0.0246,
+      "total_weight": 0.0251,
       "accounts": {
-        "HELS": 0.0149,
-        "HGRO": 0.0097
+        "HELS": 0.0152,
+        "HGRO": 0.0099
       },
-      "market_value": 1484908.75
+      "market_value": 1527368.4
     },
     {
-      "ticker": "RSI",
-      "name": "Rush Street Interactive Inc",
-      "total_weight": 0.0241,
+      "ticker": "JAZZ",
+      "name": "Jazz Pharmaceuticals PLC",
+      "total_weight": 0.025,
       "accounts": {
-        "HELS": 0.0241
+        "HELS": 0.025
       },
-      "market_value": 593705.06
+      "market_value": 611521.2
+    },
+    {
+      "ticker": "HGER",
+      "name": "Harbor Commodity All Weather Strategy ETF",
+      "total_weight": 0.0248,
+      "accounts": {
+        "HECA": 0.0248
+      },
+      "market_value": 8672527.5
+    },
+    {
+      "ticker": "MRVL",
+      "name": "MARVELL TECHNOLOGY INC",
+      "total_weight": 0.0245,
+      "accounts": {
+        "HELS": 0.0161,
+        "HGRO": 0.0084
+      },
+      "market_value": 1371880.53
     },
     {
       "ticker": "LIN",
       "name": "Linde PLC",
-      "total_weight": 0.0235,
+      "total_weight": 0.0237,
       "accounts": {
         "HEFT": 0.0097,
-        "HGRO": 0.0138
+        "HGRO": 0.014
       },
-      "market_value": 2597862.63
+      "market_value": 2650852.54
     },
     {
       "ticker": "ADI",
       "name": "Analog Devices Inc",
-      "total_weight": 0.0233,
+      "total_weight": 0.0235,
       "accounts": {
-        "HGRO": 0.0233
+        "HGRO": 0.0235
       },
-      "market_value": 2689888.07
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly & Co",
-      "total_weight": 0.0232,
-      "accounts": {
-        "HGRO": 0.0232
-      },
-      "market_value": 2677106.88
-    },
-    {
-      "ticker": "PDBA",
-      "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
-      "total_weight": 0.023,
-      "accounts": {
-        "HECA": 0.023
-      },
-      "market_value": 8138164.86
-    },
-    {
-      "ticker": "VPL",
-      "name": "Vanguard FTSE Pacific ETF",
-      "total_weight": 0.0228,
-      "accounts": {
-        "HEFT": 0.0228
-      },
-      "market_value": 2359358.64
+      "market_value": 2746721.96
     },
     {
       "ticker": "MAR",
       "name": "Marriott International Inc/MD",
-      "total_weight": 0.0228,
+      "total_weight": 0.0234,
       "accounts": {
-        "HELS": 0.015,
-        "HGRO": 0.0078
+        "HELS": 0.0154,
+        "HGRO": 0.008
       },
-      "market_value": 1270352.49
+      "market_value": 1307056.02
     },
     {
       "ticker": "CBOE",
       "name": "Cboe Global Markets Inc",
-      "total_weight": 0.0226,
+      "total_weight": 0.0229,
       "accounts": {
-        "HGRO": 0.0226
+        "HGRO": 0.0229
       },
-      "market_value": 2602490.38
+      "market_value": 2674576.56
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly & Co",
+      "total_weight": 0.0229,
+      "accounts": {
+        "HGRO": 0.0229
+      },
+      "market_value": 2680688.17
+    },
+    {
+      "ticker": "DBB",
+      "name": "Invesco DB Base Metals Fund",
+      "total_weight": 0.0227,
+      "accounts": {
+        "HECA": 0.0227
+      },
+      "market_value": 7944908.04
     },
     {
       "ticker": "GS",
       "name": "Goldman Sachs Group Inc/The",
-      "total_weight": 0.022,
+      "total_weight": 0.0221,
       "accounts": {
-        "HGRO": 0.022
+        "HGRO": 0.0221
       },
-      "market_value": 2541899.6
+      "market_value": 2582616.44
     },
     {
       "ticker": "TWLO",
       "name": "Twilio Inc",
-      "total_weight": 0.0218,
+      "total_weight": 0.0219,
       "accounts": {
-        "HELS": 0.0154,
+        "HELS": 0.0155,
         "HGRO": 0.0064
       },
-      "market_value": 1116967.57
-    },
-    {
-      "ticker": "MKSI",
-      "name": "MKS Inc",
-      "total_weight": 0.0211,
-      "accounts": {
-        "HELS": 0.0211
-      },
-      "market_value": 518723.87
-    },
-    {
-      "ticker": "JBHT",
-      "name": "JB Hunt Transport Services Inc",
-      "total_weight": 0.021,
-      "accounts": {
-        "HELS": 0.021
-      },
-      "market_value": 517864.75
+      "market_value": 1127369.04
     },
     {
       "ticker": "V",
       "name": "Visa Inc",
-      "total_weight": 0.021,
+      "total_weight": 0.0216,
       "accounts": {
-        "HGRO": 0.021
+        "HGRO": 0.0216
       },
-      "market_value": 2426186.0
+      "market_value": 2524072.32
     },
     {
-      "ticker": "IDMO",
-      "name": "Invesco S&P International Developed Momentum ETF",
-      "total_weight": 0.0209,
+      "ticker": "JBHT",
+      "name": "JB Hunt Transport Services Inc",
+      "total_weight": 0.0211,
       "accounts": {
-        "HECA": 0.0209
+        "HELS": 0.0211
       },
-      "market_value": 7420251.3
+      "market_value": 516383.5
     },
     {
       "ticker": "UNH",
@@ -1037,99 +972,107 @@
       "accounts": {
         "HGRO": 0.0209
       },
-      "market_value": 2415482.05
-    },
-    {
-      "ticker": "ROBO",
-      "name": "ROBO Global Robotics and Automation Index ETF",
-      "total_weight": 0.0203,
-      "accounts": {
-        "HEFT": 0.0203
-      },
-      "market_value": 2103672.48
+      "market_value": 2442606.85
     },
     {
       "ticker": "ENB",
       "name": "Enbridge Inc",
-      "total_weight": 0.0203,
+      "total_weight": 0.0208,
       "accounts": {
-        "HELS": 0.0203
+        "HELS": 0.0208
       },
-      "market_value": 499947.09
+      "market_value": 509528.43
     },
     {
-      "ticker": "MUSA",
-      "name": "Murphy USA Inc",
-      "total_weight": 0.0202,
+      "ticker": "MKSI",
+      "name": "MKS Inc",
+      "total_weight": 0.0207,
       "accounts": {
-        "HELS": 0.0202
+        "HELS": 0.0207
       },
-      "market_value": 498203.52
-    },
-    {
-      "ticker": "FITE",
-      "name": "State Street SPDR S&P Kensho Future Security ETF",
-      "total_weight": 0.02,
-      "accounts": {
-        "HEFT": 0.02
-      },
-      "market_value": 2068480.87
-    },
-    {
-      "ticker": "XYZ",
-      "name": "Block Inc",
-      "total_weight": 0.0198,
-      "accounts": {
-        "HELS": 0.0198
-      },
-      "market_value": 487665.16
-    },
-    {
-      "ticker": "MEOH",
-      "name": "Methanex Corp",
-      "total_weight": 0.0197,
-      "accounts": {
-        "HELS": 0.0197
-      },
-      "market_value": 484413.34
+      "market_value": 505942.7
     },
     {
       "ticker": "CAVA",
       "name": "Cava Group Inc",
-      "total_weight": 0.0196,
+      "total_weight": 0.0206,
       "accounts": {
-        "HELS": 0.0143,
-        "HGRO": 0.0053
+        "HELS": 0.015,
+        "HGRO": 0.0056
       },
-      "market_value": 966025.29
+      "market_value": 1015721.46
     },
     {
-      "ticker": "SPHR",
-      "name": "Sphere Entertainment Co",
-      "total_weight": 0.0196,
+      "ticker": "MUSA",
+      "name": "Murphy USA Inc",
+      "total_weight": 0.0205,
       "accounts": {
-        "HELS": 0.0147,
-        "HGRO": 0.0049
+        "HELS": 0.0205
       },
-      "market_value": 930369.58
+      "market_value": 502021.92
+    },
+    {
+      "ticker": "FITE",
+      "name": "State Street SPDR S&P Kensho Future Security ETF",
+      "total_weight": 0.0203,
+      "accounts": {
+        "HEFT": 0.0203
+      },
+      "market_value": 2103303.93
+    },
+    {
+      "ticker": "512807306 SWP CS",
+      "name": "512807306 SWP CS",
+      "total_weight": 0.0203,
+      "accounts": {
+        "HELS": 0.0203
+      },
+      "market_value": 496714.52
     },
     {
       "ticker": "HAL",
       "name": "Halliburton Co",
-      "total_weight": 0.0196,
+      "total_weight": 0.0202,
       "accounts": {
-        "HGRO": 0.0196
+        "HGRO": 0.0202
       },
-      "market_value": 2257044.48
+      "market_value": 2355595.14
     },
     {
-      "ticker": "AMAT",
-      "name": "Applied Materials Inc",
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares",
+      "total_weight": 0.02,
+      "accounts": {
+        "HEFT": 0.02
+      },
+      "market_value": 2073739.08
+    },
+    {
+      "ticker": "XYZ",
+      "name": "Block Inc",
+      "total_weight": 0.02,
+      "accounts": {
+        "HELS": 0.02
+      },
+      "market_value": 489536.53
+    },
+    {
+      "ticker": "NOV",
+      "name": "NOV Inc",
+      "total_weight": 0.0197,
+      "accounts": {
+        "HELS": 0.0197
+      },
+      "market_value": 481998.56
+    },
+    {
+      "ticker": "MEOH",
+      "name": "Methanex Corp",
       "total_weight": 0.0194,
       "accounts": {
         "HELS": 0.0194
       },
-      "market_value": 476789.04
+      "market_value": 474553.87
     },
     {
       "ticker": "AMD",
@@ -1138,305 +1081,350 @@
       "accounts": {
         "HGRO": 0.0192
       },
-      "market_value": 2218891.2
+      "market_value": 2243876.7
+    },
+    {
+      "ticker": "AVEM",
+      "name": "Avantis Emerging Markets Equity ETF",
+      "total_weight": 0.0191,
+      "accounts": {
+        "HEFT": 0.0191
+      },
+      "market_value": 1981423.14
     },
     {
       "ticker": "XAR",
       "name": "State Street SPDR S&P Aerospace & Defense ETF",
-      "total_weight": 0.0189,
+      "total_weight": 0.019,
       "accounts": {
-        "HEFT": 0.0189
+        "HEFT": 0.019
       },
-      "market_value": 1951378.16
-    },
-    {
-      "ticker": "NOV",
-      "name": "NOV Inc",
-      "total_weight": 0.0188,
-      "accounts": {
-        "HELS": 0.0188
-      },
-      "market_value": 463784.16
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital Corp",
-      "total_weight": 0.0184,
-      "accounts": {
-        "HELS": 0.0184
-      },
-      "market_value": 453098.8
-    },
-    {
-      "ticker": "XBI",
-      "name": "State Street SPDR S&P Biotech ETF",
-      "total_weight": 0.0181,
-      "accounts": {
-        "HEFT": 0.0181
-      },
-      "market_value": 1868605.62
-    },
-    {
-      "ticker": "SWBI",
-      "name": "Smith & Wesson Brands Inc",
-      "total_weight": 0.0177,
-      "accounts": {
-        "HEFT": 0.0075,
-        "HELS": 0.0102
-      },
-      "market_value": 1023530.82
-    },
-    {
-      "ticker": "WMT",
-      "name": "Walmart Inc",
-      "total_weight": 0.0173,
-      "accounts": {
-        "HEFT": 0.0173
-      },
-      "market_value": 1790874.8
-    },
-    {
-      "ticker": "ASHR",
-      "name": "Xtrackers Harvest CSI 300 China A-Shares ETF",
-      "total_weight": 0.0169,
-      "accounts": {
-        "HECA": 0.0169
-      },
-      "market_value": 6006241.51
-    },
-    {
-      "ticker": "ADM",
-      "name": "Archer-Daniels-Midland Co",
-      "total_weight": 0.0165,
-      "accounts": {
-        "HEFT": 0.0165
-      },
-      "market_value": 1709866.8
-    },
-    {
-      "ticker": "NDAQ",
-      "name": "Nasdaq Inc",
-      "total_weight": 0.0165,
-      "accounts": {
-        "HGRO": 0.0165
-      },
-      "market_value": 1904064.6
-    },
-    {
-      "ticker": "CRCL",
-      "name": "Circle Internet Group Inc",
-      "total_weight": 0.0162,
-      "accounts": {
-        "HELS": 0.0162
-      },
-      "market_value": 398202.0
-    },
-    {
-      "ticker": "MO",
-      "name": "Altria Group Inc",
-      "total_weight": 0.016,
-      "accounts": {
-        "HEFT": 0.016
-      },
-      "market_value": 1655269.23
-    },
-    {
-      "ticker": "C",
-      "name": "Citigroup Inc",
-      "total_weight": 0.0156,
-      "accounts": {
-        "HGRO": 0.0156
-      },
-      "market_value": 1794403.38
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle Corp",
-      "total_weight": 0.0155,
-      "accounts": {
-        "HGRO": 0.0155
-      },
-      "market_value": 1787488.8
-    },
-    {
-      "ticker": "EWW",
-      "name": "iShares MSCI Mexico ETF",
-      "total_weight": 0.0152,
-      "accounts": {
-        "HEFT": 0.0152
-      },
-      "market_value": 1571377.92
-    },
-    {
-      "ticker": "MPC",
-      "name": "Marathon Petroleum Corp",
-      "total_weight": 0.0152,
-      "accounts": {
-        "HELS": 0.0152
-      },
-      "market_value": 375404.16
-    },
-    {
-      "ticker": "STT",
-      "name": "State Street Corp",
-      "total_weight": 0.0151,
-      "accounts": {
-        "HELS": 0.0151
-      },
-      "market_value": 372189.75
-    },
-    {
-      "ticker": "82982T106 SWP CS",
-      "name": "82982T106 SWP CS",
-      "total_weight": 0.015,
-      "accounts": {
-        "HELS": 0.015
-      },
-      "market_value": 370774.74
-    },
-    {
-      "ticker": "HBM",
-      "name": "Hudbay Minerals Inc",
-      "total_weight": 0.015,
-      "accounts": {
-        "HELS": 0.015
-      },
-      "market_value": 369035.45
-    },
-    {
-      "ticker": "TSN",
-      "name": "Tyson Foods Inc",
-      "total_weight": 0.0148,
-      "accounts": {
-        "HELS": 0.0148
-      },
-      "market_value": 364147.65
-    },
-    {
-      "ticker": "AFRM",
-      "name": "Affirm Holdings Inc",
-      "total_weight": 0.0147,
-      "accounts": {
-        "HELS": 0.0147
-      },
-      "market_value": 362273.28
-    },
-    {
-      "ticker": "GLASF",
-      "name": "Glass House Brands Inc",
-      "total_weight": 0.0147,
-      "accounts": {
-        "HELS": 0.0147
-      },
-      "market_value": 363255.3
-    },
-    {
-      "ticker": "LAMR",
-      "name": "Lamar Advertising Co",
-      "total_weight": 0.0147,
-      "accounts": {
-        "HELS": 0.0147
-      },
-      "market_value": 362540.14
-    },
-    {
-      "ticker": "WEAT",
-      "name": "Teucrium Wheat Fund",
-      "total_weight": 0.0145,
-      "accounts": {
-        "HEFT": 0.0145
-      },
-      "market_value": 1502896.85
-    },
-    {
-      "ticker": "DBA",
-      "name": "Invesco DB Agriculture Fund",
-      "total_weight": 0.0144,
-      "accounts": {
-        "HEFT": 0.0144
-      },
-      "market_value": 1485955.02
-    },
-    {
-      "ticker": "SOYB",
-      "name": "Teucrium Soybean Fund",
-      "total_weight": 0.0144,
-      "accounts": {
-        "HEFT": 0.0144
-      },
-      "market_value": 1490002.8
+      "market_value": 1969863.64
     },
     {
       "ticker": "SXT",
       "name": "Sensient Technologies Corp",
-      "total_weight": 0.0143,
+      "total_weight": 0.019,
       "accounts": {
-        "HELS": 0.0143
+        "HELS": 0.019
       },
-      "market_value": 351815.84
+      "market_value": 464638.89
+    },
+    {
+      "ticker": "SWBI",
+      "name": "Smith & Wesson Brands Inc",
+      "total_weight": 0.0179,
+      "accounts": {
+        "HEFT": 0.0075,
+        "HELS": 0.0104
+      },
+      "market_value": 1036208.19
+    },
+    {
+      "ticker": "XBI",
+      "name": "State Street SPDR S&P Biotech ETF",
+      "total_weight": 0.0176,
+      "accounts": {
+        "HEFT": 0.0176
+      },
+      "market_value": 1825425.66
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital Corp",
+      "total_weight": 0.0176,
+      "accounts": {
+        "HELS": 0.0176
+      },
+      "market_value": 431159.2
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart Inc",
+      "total_weight": 0.0175,
+      "accounts": {
+        "HEFT": 0.0175
+      },
+      "market_value": 1816624.16
+    },
+    {
+      "ticker": "GRID",
+      "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund",
+      "total_weight": 0.0169,
+      "accounts": {
+        "HECA": 0.0169
+      },
+      "market_value": 5910854.36
+    },
+    {
+      "ticker": "NDAQ",
+      "name": "Nasdaq Inc",
+      "total_weight": 0.0169,
+      "accounts": {
+        "HGRO": 0.0169
+      },
+      "market_value": 1972565.2
+    },
+    {
+      "ticker": "ADM",
+      "name": "Archer-Daniels-Midland Co",
+      "total_weight": 0.0166,
+      "accounts": {
+        "HEFT": 0.0166
+      },
+      "market_value": 1720712.97
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria Group Inc",
+      "total_weight": 0.0161,
+      "accounts": {
+        "HEFT": 0.0161
+      },
+      "market_value": 1669536.84
+    },
+    {
+      "ticker": "CRCL",
+      "name": "Circle Internet Group Inc",
+      "total_weight": 0.0159,
+      "accounts": {
+        "HELS": 0.0159
+      },
+      "market_value": 389085.27
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum Corp",
+      "total_weight": 0.0156,
+      "accounts": {
+        "HELS": 0.0156
+      },
+      "market_value": 382028.16
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc",
+      "total_weight": 0.0155,
+      "accounts": {
+        "HGRO": 0.0155
+      },
+      "market_value": 1813136.92
+    },
+    {
+      "ticker": "EWW",
+      "name": "iShares MSCI Mexico ETF",
+      "total_weight": 0.0153,
+      "accounts": {
+        "HEFT": 0.0153
+      },
+      "market_value": 1585420.8
+    },
+    {
+      "ticker": "GLASF",
+      "name": "Glass House Brands Inc",
+      "total_weight": 0.0153,
+      "accounts": {
+        "HELS": 0.0153
+      },
+      "market_value": 374115.51
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corp",
+      "total_weight": 0.0153,
+      "accounts": {
+        "HELS": 0.0153
+      },
+      "market_value": 374356.9
+    },
+    {
+      "ticker": "RSI",
+      "name": "Rush Street Interactive Inc",
+      "total_weight": 0.0152,
+      "accounts": {
+        "HELS": 0.0152
+      },
+      "market_value": 370390.62
+    },
+    {
+      "ticker": "SPHR",
+      "name": "Sphere Entertainment Co",
+      "total_weight": 0.0151,
+      "accounts": {
+        "HELS": 0.0151
+      },
+      "market_value": 370209.48
+    },
+    {
+      "ticker": "TSN",
+      "name": "Tyson Foods Inc",
+      "total_weight": 0.0151,
+      "accounts": {
+        "HELS": 0.0151
+      },
+      "market_value": 369073.8
+    },
+    {
+      "ticker": "IDMO",
+      "name": "Invesco S&P International Developed Momentum ETF",
+      "total_weight": 0.015,
+      "accounts": {
+        "HECA": 0.015
+      },
+      "market_value": 5235834.96
+    },
+    {
+      "ticker": "PAVE",
+      "name": "Global X US Infrastructure Development ETF",
+      "total_weight": 0.015,
+      "accounts": {
+        "HEFT": 0.015
+      },
+      "market_value": 1557276.48
+    },
+    {
+      "ticker": "ROBO",
+      "name": "ROBO Global Robotics and Automation Index ETF",
+      "total_weight": 0.015,
+      "accounts": {
+        "HEFT": 0.015
+      },
+      "market_value": 1553132.88
+    },
+    {
+      "ticker": "VPL",
+      "name": "Vanguard FTSE Pacific ETF",
+      "total_weight": 0.015,
+      "accounts": {
+        "HEFT": 0.015
+      },
+      "market_value": 1554981.39
+    },
+    {
+      "ticker": "WEAT",
+      "name": "Teucrium Wheat Fund",
+      "total_weight": 0.015,
+      "accounts": {
+        "HEFT": 0.015
+      },
+      "market_value": 1558375.0
+    },
+    {
+      "ticker": "LAMR",
+      "name": "Lamar Advertising Co",
+      "total_weight": 0.015,
+      "accounts": {
+        "HELS": 0.015
+      },
+      "market_value": 367397.59
+    },
+    {
+      "ticker": "HBM",
+      "name": "Hudbay Minerals Inc",
+      "total_weight": 0.0147,
+      "accounts": {
+        "HELS": 0.0147
+      },
+      "market_value": 358829.66
+    },
+    {
+      "ticker": "SOYB",
+      "name": "Teucrium Soybean Fund",
+      "total_weight": 0.0146,
+      "accounts": {
+        "HEFT": 0.0146
+      },
+      "market_value": 1518355.08
+    },
+    {
+      "ticker": "DBA",
+      "name": "Invesco DB Agriculture Fund",
+      "total_weight": 0.0145,
+      "accounts": {
+        "HEFT": 0.0145
+      },
+      "market_value": 1505710.8
+    },
+    {
+      "ticker": "AFRM",
+      "name": "Affirm Holdings Inc",
+      "total_weight": 0.0145,
+      "accounts": {
+        "HELS": 0.0145
+      },
+      "market_value": 354512.64
     },
     {
       "ticker": "CDNS",
       "name": "Cadence Design Systems Inc",
-      "total_weight": 0.0142,
+      "total_weight": 0.0143,
       "accounts": {
-        "HELS": 0.0142
+        "HELS": 0.0143
       },
-      "market_value": 349670.68
+      "market_value": 348411.93
     },
     {
       "ticker": "CF",
       "name": "CF Industries Holdings Inc",
+      "total_weight": 0.014,
+      "accounts": {
+        "HGRO": 0.014
+      },
+      "market_value": 1636249.74
+    },
+    {
+      "ticker": "PDBA",
+      "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
       "total_weight": 0.0139,
       "accounts": {
-        "HGRO": 0.0139
+        "HECA": 0.0139
       },
-      "market_value": 1606703.96
+      "market_value": 4844991.84
     },
     {
       "ticker": "CARR",
       "name": "Carrier Global Corp",
-      "total_weight": 0.0138,
+      "total_weight": 0.0139,
       "accounts": {
-        "HGRO": 0.0138
+        "HGRO": 0.0139
       },
-      "market_value": 1597995.7
+      "market_value": 1623845.72
     },
     {
       "ticker": "PLD",
       "name": "Prologis Inc",
-      "total_weight": 0.0136,
+      "total_weight": 0.0139,
       "accounts": {
-        "HGRO": 0.0136
+        "HGRO": 0.0139
       },
-      "market_value": 1573795.47
+      "market_value": 1623614.79
     },
     {
       "ticker": "KLAC",
       "name": "KLA CORP",
-      "total_weight": 0.0133,
+      "total_weight": 0.013,
       "accounts": {
-        "HGRO": 0.0133
+        "HGRO": 0.013
       },
-      "market_value": 1538925.08
+      "market_value": 1524598.6
     },
     {
-      "ticker": "STX",
-      "name": "Seagate Technology Holdings PLC",
-      "total_weight": 0.0133,
+      "ticker": "VLO",
+      "name": "Valero Energy Corp",
+      "total_weight": 0.0126,
       "accounts": {
-        "HGRO": 0.0133
+        "HGRO": 0.0126
       },
-      "market_value": 1530484.28
+      "market_value": 1469944.72
     },
     {
-      "ticker": "PM",
-      "name": "Philip Morris International Inc",
-      "total_weight": 0.0125,
+      "ticker": "LNG",
+      "name": "Cheniere Energy Inc",
+      "total_weight": 0.0124,
       "accounts": {
-        "HEFT": 0.0125
+        "HGRO": 0.0124
       },
-      "market_value": 1295415.52
+      "market_value": 1448288.04
     },
     {
       "ticker": "RIO",
@@ -1445,70 +1433,70 @@
       "accounts": {
         "HGRO": 0.0124
       },
-      "market_value": 1426878.09
+      "market_value": 1448686.6
     },
     {
-      "ticker": "VGK",
-      "name": "Vanguard FTSE Europe ETF",
-      "total_weight": 0.0121,
+      "ticker": "STX",
+      "name": "Seagate Technology Holdings PLC",
+      "total_weight": 0.0124,
       "accounts": {
-        "HEFT": 0.0121
+        "HGRO": 0.0124
       },
-      "market_value": 1249016.61
-    },
-    {
-      "ticker": "VLO",
-      "name": "Valero Energy Corp",
-      "total_weight": 0.0121,
-      "accounts": {
-        "HGRO": 0.0121
-      },
-      "market_value": 1399379.94
-    },
-    {
-      "ticker": "LNG",
-      "name": "Cheniere Energy Inc",
-      "total_weight": 0.012,
-      "accounts": {
-        "HGRO": 0.012
-      },
-      "market_value": 1388403.44
+      "market_value": 1451305.56
     },
     {
       "ticker": "BK",
       "name": "Bank of New York Mellon Corp/The",
-      "total_weight": 0.0119,
+      "total_weight": 0.0121,
       "accounts": {
-        "HGRO": 0.0119
+        "HGRO": 0.0121
       },
-      "market_value": 1368562.72
+      "market_value": 1410188.5
+    },
+    {
+      "ticker": "PICK",
+      "name": "iShares MSCI Global Metals & Mining Producers ETF",
+      "total_weight": 0.0118,
+      "accounts": {
+        "HECA": 0.0118
+      },
+      "market_value": 4127696.88
     },
     {
       "ticker": "EWY",
       "name": "iShares MSCI South Korea ETF",
-      "total_weight": 0.0114,
+      "total_weight": 0.0112,
       "accounts": {
-        "HEFT": 0.0114
+        "HEFT": 0.0112
       },
-      "market_value": 1175289.06
+      "market_value": 1157153.1
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle Corp",
+      "total_weight": 0.0112,
+      "accounts": {
+        "HGRO": 0.0112
+      },
+      "market_value": 1307016.44
     },
     {
       "ticker": "AM",
       "name": "Antero Midstream Corp",
-      "total_weight": 0.0106,
+      "total_weight": 0.0107,
       "accounts": {
-        "HEFT": 0.0106
+        "HEFT": 0.0107
       },
-      "market_value": 1097373.48
+      "market_value": 1112351.28
     },
     {
-      "ticker": "ATI",
-      "name": "ATI Inc",
+      "ticker": "CHRD",
+      "name": "Chord Energy Corp",
       "total_weight": 0.0106,
       "accounts": {
-        "HGRO": 0.0106
+        "HELS": 0.0106
       },
-      "market_value": 1222656.16
+      "market_value": 258290.12
     },
     {
       "ticker": "EPD",
@@ -1517,25 +1505,16 @@
       "accounts": {
         "HEFT": 0.0105
       },
-      "market_value": 1087298.68
+      "market_value": 1093673.36
     },
     {
-      "ticker": "SNDK",
-      "name": "Sandisk Corp/DE",
-      "total_weight": 0.0105,
+      "ticker": "ATI",
+      "name": "ATI Inc",
+      "total_weight": 0.0103,
       "accounts": {
-        "HGRO": 0.0105
+        "HGRO": 0.0103
       },
-      "market_value": 1214767.43
-    },
-    {
-      "ticker": "CHRD",
-      "name": "Chord Energy Corp",
-      "total_weight": 0.0104,
-      "accounts": {
-        "HELS": 0.0104
-      },
-      "market_value": 256269.53
+      "market_value": 1208181.5
     },
     {
       "ticker": "EWC",
@@ -1544,43 +1523,34 @@
       "accounts": {
         "HEFT": 0.0101
       },
-      "market_value": 1048280.0
+      "market_value": 1050470.0
     },
     {
       "ticker": "CVI",
       "name": "CVR Energy Inc",
-      "total_weight": 0.0099,
+      "total_weight": 0.0101,
       "accounts": {
-        "HELS": 0.0099
+        "HELS": 0.0101
       },
-      "market_value": 243025.19
+      "market_value": 247686.34
     },
     {
-      "ticker": "EWJ",
-      "name": "iShares MSCI Japan ETF",
-      "total_weight": 0.0097,
+      "ticker": "SNDK",
+      "name": "Sandisk Corp/DE",
+      "total_weight": 0.01,
       "accounts": {
-        "HEFT": 0.0097
+        "HGRO": 0.01
       },
-      "market_value": 1007507.41
-    },
-    {
-      "ticker": "IHE",
-      "name": "iShares U.S. Pharmaceuticals ETF",
-      "total_weight": 0.0097,
-      "accounts": {
-        "HEFT": 0.0097
-      },
-      "market_value": 1003044.96
+      "market_value": 1169049.77
     },
     {
       "ticker": "NORW",
       "name": "Global X MSCI Norway ETF",
-      "total_weight": 0.0097,
+      "total_weight": 0.0098,
       "accounts": {
-        "HEFT": 0.0097
+        "HEFT": 0.0098
       },
-      "market_value": 1004488.23
+      "market_value": 1020719.21
     },
     {
       "ticker": "WELL",
@@ -1589,7 +1559,7 @@
       "accounts": {
         "HEFT": 0.0097
       },
-      "market_value": 1008211.58
+      "market_value": 1002881.37
     },
     {
       "ticker": "XLI",
@@ -1598,25 +1568,16 @@
       "accounts": {
         "HEFT": 0.0097
       },
-      "market_value": 1005775.2
+      "market_value": 1001961.0
     },
     {
-      "ticker": "CIEN",
-      "name": "Ciena Corp",
+      "ticker": "ABNB",
+      "name": "Airbnb Inc",
       "total_weight": 0.0097,
       "accounts": {
         "HGRO": 0.0097
       },
-      "market_value": 1114464.6
-    },
-    {
-      "ticker": "GLW",
-      "name": "Corning Inc",
-      "total_weight": 0.0097,
-      "accounts": {
-        "HGRO": 0.0097
-      },
-      "market_value": 1124006.6
+      "market_value": 1134700.7
     },
     {
       "ticker": "HTEC",
@@ -1625,43 +1586,34 @@
       "accounts": {
         "HEFT": 0.0096
       },
-      "market_value": 991616.1
+      "market_value": 999104.32
     },
     {
-      "ticker": "XLY",
-      "name": "State Street Consumer Discretionary Select Sector SPDR ETF",
+      "ticker": "IHE",
+      "name": "iShares U.S. Pharmaceuticals ETF",
       "total_weight": 0.0096,
       "accounts": {
         "HEFT": 0.0096
       },
-      "market_value": 997147.21
+      "market_value": 998591.55
     },
     {
-      "ticker": "ABNB",
-      "name": "Airbnb Inc",
-      "total_weight": 0.0096,
+      "ticker": "CIEN",
+      "name": "Ciena Corp",
+      "total_weight": 0.0092,
       "accounts": {
-        "HGRO": 0.0096
+        "HGRO": 0.0092
       },
-      "market_value": 1101990.75
+      "market_value": 1072663.85
     },
     {
-      "ticker": "PPLT",
-      "name": "abrdn Physical Platinum Shares ETF",
-      "total_weight": 0.0095,
+      "ticker": "GLW",
+      "name": "Corning Inc",
+      "total_weight": 0.0091,
       "accounts": {
-        "HEFT": 0.0095
+        "HGRO": 0.0091
       },
-      "market_value": 985560.15
-    },
-    {
-      "ticker": "BSOL",
-      "name": "Bitwise Solana Staking ETF",
-      "total_weight": 0.0093,
-      "accounts": {
-        "HECA": 0.0093
-      },
-      "market_value": 3288240.15
+      "market_value": 1065050.75
     },
     {
       "ticker": "KO",
@@ -1670,61 +1622,43 @@
       "accounts": {
         "HEFT": 0.0078
       },
-      "market_value": 803916.54
+      "market_value": 807696.4
     },
     {
       "ticker": "EZPW",
       "name": "EZCORP Inc",
-      "total_weight": 0.0074,
+      "total_weight": 0.0075,
       "accounts": {
-        "HEFT": 0.0074
+        "HEFT": 0.0075
       },
-      "market_value": 768273.0
-    },
-    {
-      "ticker": "TER",
-      "name": "Teradyne Inc",
-      "total_weight": 0.0074,
-      "accounts": {
-        "HGRO": 0.0074
-      },
-      "market_value": 851795.48
+      "market_value": 776886.97
     },
     {
       "ticker": "COHR",
       "name": "Coherent Corp",
-      "total_weight": 0.0073,
+      "total_weight": 0.007,
       "accounts": {
-        "HGRO": 0.0073
+        "HGRO": 0.007
       },
-      "market_value": 845596.95
-    },
-    {
-      "ticker": "CWEN",
-      "name": "Clearway Energy Inc",
-      "total_weight": 0.0062,
-      "accounts": {
-        "HEFT": 0.0062
-      },
-      "market_value": 637360.9
+      "market_value": 814916.18
     },
     {
       "ticker": "ACHC",
       "name": "Acadia Healthcare Co Inc",
-      "total_weight": 0.0047,
+      "total_weight": 0.0046,
       "accounts": {
-        "HGRO": 0.0047
+        "HGRO": 0.0046
       },
-      "market_value": 542087.43
+      "market_value": 541507.45
     },
     {
-      "ticker": "SPY   260618P00570000",
-      "name": "SPY US 06/18/26 P570",
-      "total_weight": 0.0005,
+      "ticker": "SPY   260717P00610000",
+      "name": "STATE ST PUT OPT 07/26 610",
+      "total_weight": 0.0019,
       "accounts": {
-        "HEFT": 0.0005
+        "HEFT": 0.0019
       },
-      "market_value": 46687.5
+      "market_value": 192753.0
     }
   ],
   "rta": {
@@ -3128,44 +3062,14 @@
         "close_price": 46.1473,
         "realized_return": 0.00114069,
         "duration": "TAIL"
-      },
-      {
-        "symbol": "GOOGL",
-        "position": "long",
-        "open_date": "2026-02-05",
-        "open_price": 330.955,
-        "close_date": "2026-02-17",
-        "close_price": 301.56,
-        "realized_return": -0.0888187,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "JBHT",
-        "position": "long",
-        "open_date": "2026-02-13",
-        "open_price": 219.49,
-        "close_date": "2026-02-17",
-        "close_price": 223.29,
-        "realized_return": 0.0173129,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "GME",
-        "position": "long",
-        "open_date": "2026-02-12",
-        "open_price": 23.435,
-        "close_date": "2026-02-17",
-        "close_price": 23.62,
-        "realized_return": 0.007894179999999999,
-        "duration": "TAIL"
       }
     ],
     "stats": {
-      "win_rate_long": 0.7237,
+      "win_rate_long": 0.726,
       "win_rate_short": 0.806,
-      "avg_return_long": 0.0053,
+      "avg_return_long": 0.0064,
       "avg_return_short": 0.0113,
-      "total_trades_90d": 143
+      "total_trades_90d": 140
     },
     "recently_traded_tickers": [
       "ACHC",
@@ -3187,7 +3091,6 @@
       "DGX",
       "DK",
       "ELF",
-      "ELV",
       "ENB",
       "EPHE",
       "EWC",
@@ -3234,7 +3137,6 @@
       "TJX",
       "TPYP",
       "TRP",
-      "TRU",
       "TSN",
       "UFO",
       "ULS",
@@ -3247,57 +3149,57 @@
   },
   "levels": {
     "UST30Y": {
-      "close": 5.12,
-      "lrr": 4.99,
-      "trr": 5.15,
+      "close": 5.14,
+      "lrr": 5.02,
+      "trr": 5.17,
       "signal": "BULLISH"
     },
     "UST10Y": {
-      "close": 4.59,
-      "lrr": 4.42,
-      "trr": 4.62,
+      "close": 4.61,
+      "lrr": 4.45,
+      "trr": 4.64,
       "signal": "BULLISH"
     },
     "UST2Y": {
-      "close": 4.09,
-      "lrr": 3.96,
+      "close": 4.07,
+      "lrr": 3.97,
       "trr": 4.1,
       "signal": "BULLISH"
     },
     "HYG": {
-      "close": 79.46,
+      "close": 79.54,
       "lrr": 79.4,
-      "trr": 80.19,
+      "trr": 80.16,
       "signal": "BULLISH"
     },
     "LQD": {
-      "close": 107.9,
-      "lrr": 107.6,
-      "trr": 108.7,
+      "close": 107.7,
+      "lrr": 107.3,
+      "trr": 108.6,
       "signal": "BEARISH"
     },
     "SPX": {
-      "close": 7409.0,
-      "lrr": 7294.0,
-      "trr": 7525.0,
+      "close": 7403.0,
+      "lrr": 7302.0,
+      "trr": 7505.0,
       "signal": "BULLISH"
     },
     "COMPQ": {
-      "close": 26225.0,
-      "lrr": 25403.0,
-      "trr": 26843.0,
+      "close": 26091.0,
+      "lrr": 25666.0,
+      "trr": 26711.0,
       "signal": "BULLISH"
     },
     "RUT": {
-      "close": 2793.0,
-      "lrr": 2775.0,
-      "trr": 2894.0,
+      "close": 2775.0,
+      "lrr": 2747.0,
+      "trr": 2900.0,
       "signal": "BULLISH"
     },
     "XLK": {
-      "close": 176.0,
+      "close": 174.0,
       "lrr": 168.0,
-      "trr": 183.0,
+      "trr": 182.0,
       "signal": "BULLISH"
     },
     "XLV": {
@@ -3307,153 +3209,153 @@
       "signal": "BULLISH"
     },
     "SSEC": {
-      "close": 4127.0,
-      "lrr": 4101.0,
-      "trr": 4252.0,
+      "close": 4132.0,
+      "lrr": 4111.0,
+      "trr": 4245.0,
       "signal": "BULLISH"
     },
     "NIKK": {
-      "close": 60831.0,
-      "lrr": 59620.0,
-      "trr": 63411.0,
+      "close": 60348.0,
+      "lrr": 59619.0,
+      "trr": 63309.0,
       "signal": "BULLISH"
     },
     "DAX": {
-      "close": 23951.0,
-      "lrr": 23727.0,
-      "trr": 24898.0,
+      "close": 24308.0,
+      "lrr": 23990.0,
+      "trr": 24997.0,
       "signal": "BULLISH"
     },
     "VIX": {
-      "close": 18.43,
-      "lrr": 16.59,
-      "trr": 19.49,
+      "close": 17.82,
+      "lrr": 16.56,
+      "trr": 18.97,
       "signal": "BEARISH"
     },
     "USD": {
-      "close": 99.24,
-      "lrr": 98.34,
-      "trr": 99.45,
+      "close": 99.02,
+      "lrr": 98.47,
+      "trr": 99.71,
       "signal": "BULLISH"
     },
     "EUR/USD": {
-      "close": 1.162,
-      "lrr": 1.16,
-      "trr": 1.177,
+      "close": 1.164,
+      "lrr": 1.157,
+      "trr": 1.171,
       "signal": "BEARISH"
     },
     "USD/YEN": {
-      "close": 158.96,
+      "close": 158.94,
       "lrr": 156.49,
-      "trr": 159.52,
+      "trr": 159.62,
       "signal": "BULLISH"
     },
     "GBP/USD": {
-      "close": 1.332,
-      "lrr": 1.327,
-      "trr": 1.35,
+      "close": 1.341,
+      "lrr": 1.328,
+      "trr": 1.349,
       "signal": "BEARISH"
     },
     "CAD/USD": {
       "close": 0.727,
-      "lrr": 0.724,
-      "trr": 0.733,
-      "signal": "NEUTRAL"
+      "lrr": 0.721,
+      "trr": 0.729,
+      "signal": "BEARISH"
     },
     "WTIC": {
-      "close": 103.24,
-      "lrr": 98.86,
-      "trr": 108.67,
+      "close": 102.73,
+      "lrr": 99.01,
+      "trr": 108.15,
       "signal": "BULLISH"
     },
     "BRENT": {
-      "close": 111.0,
-      "lrr": 104.0,
-      "trr": 113.0,
+      "close": 110.0,
+      "lrr": 105.0,
+      "trr": 114.0,
       "signal": "BULLISH"
     },
     "NATGAS": {
-      "close": 3.03,
-      "lrr": 2.82,
+      "close": 3.02,
+      "lrr": 2.84,
       "trr": 3.14,
       "signal": "BULLISH"
     },
     "GOLD": {
-      "close": 4547.0,
-      "lrr": 4524.0,
-      "trr": 4688.0,
+      "close": 4542.0,
+      "lrr": 4500.0,
+      "trr": 4680.0,
       "signal": "NEUTRAL"
     },
     "COPPER": {
       "close": 6.24,
       "lrr": 6.1,
-      "trr": 6.69,
+      "trr": 6.65,
       "signal": "BULLISH"
     },
     "SILVER": {
       "close": 76.0,
       "lrr": 71.0,
-      "trr": 81.0,
+      "trr": 80.0,
       "signal": "BEARISH"
     },
     "MSFT": {
-      "close": 422.0,
-      "lrr": 404.0,
-      "trr": 425.0,
+      "close": 424.0,
+      "lrr": 401.0,
+      "trr": 428.0,
       "signal": "BEARISH"
     },
     "AAPL": {
-      "close": 300.0,
+      "close": 298.0,
       "lrr": 291.0,
-      "trr": 305.0,
+      "trr": 304.0,
       "signal": "BULLISH"
     },
     "AMZN": {
-      "close": 264.0,
-      "lrr": 260.0,
-      "trr": 277.0,
+      "close": 265.0,
+      "lrr": 259.0,
+      "trr": 276.0,
       "signal": "BULLISH"
     },
     "META": {
-      "close": 614.0,
+      "close": 611.0,
       "lrr": 595.0,
-      "trr": 626.0,
+      "trr": 624.0,
       "signal": "BEARISH"
     },
     "GOOGL": {
       "close": 397.0,
-      "lrr": 383.0,
-      "trr": 410.0,
+      "lrr": 384.0,
+      "trr": 408.0,
       "signal": "BULLISH"
     },
     "NFLX": {
-      "close": 87.0,
+      "close": 90.0,
       "lrr": 84.0,
       "trr": 90.0,
       "signal": "BEARISH"
     },
     "TSLA": {
-      "close": 422.0,
-      "lrr": 400.0,
+      "close": 410.0,
+      "lrr": 395.0,
       "trr": 445.0,
-      "signal": "BULLISH"
+      "signal": "NEUTRAL"
     },
     "NVDA": {
-      "close": 225.0,
-      "lrr": 215.0,
-      "trr": 240.0,
+      "close": 222.0,
+      "lrr": 216.0,
+      "trr": 239.0,
       "signal": "BULLISH"
     },
     "ORCL": {
-      "close": 193.0,
-      "lrr": 182.0,
-      "trr": 200.0,
+      "close": 187.0,
+      "lrr": 183.0,
+      "trr": 199.0,
       "signal": "BULLISH"
     },
     "BITCOIN": {
-      "close": 77000.0,
-      "lrr": 76006.0,
-      "trr": 83109.0,
+      "close": 76795.0,
+      "lrr": 75637.0,
+      "trr": 82531.0,
       "signal": "BULLISH"
     },
     "BSE": {
@@ -3471,7 +3373,7 @@
     "XLI": {
       "close": 171.0,
       "lrr": 169.0,
-      "trr": 177.0,
+      "trr": 178.0,
       "signal": "BULLISH"
     },
     "PPLT": {
@@ -3595,9 +3497,9 @@
       "signal": "BULLISH"
     },
     "XOP": {
-      "close": 174.0,
-      "lrr": 166.0,
-      "trr": 181.0,
+      "close": 176.0,
+      "lrr": 169.0,
+      "trr": 180.0,
       "signal": "BULLISH"
     },
     "XLU": {
@@ -3631,8 +3533,8 @@
       "signal": "BEARISH"
     },
     "XTL": {
-      "close": 226.0,
-      "lrr": 220.0,
+      "close": 224.0,
+      "lrr": 219.0,
       "trr": 233.0,
       "signal": "BULLISH"
     }
@@ -3657,11 +3559,11 @@
       "high_beta_1m": 19.4,
       "low_beta_1m": -3.6,
       "keith_commentary": [
-        "Bond yields hitting new inflation cycle highs - short TLT, ZROZ, and rate-sensitive sectors like Utilities (XLU -2.3%) and Housing (ITB)",
-        "Long Commodities vs. Short Treasuries positioning confirmed with Natural Gas +3% bullish trend breakout and Ag/Food prices ramping (SOYB +2%)",
-        "VIX staying within Risk Range Signal 16.59-19.49 and in The Investable Bucket - can fade bearish sentiment on bond yields and buy stocks",
-        "Street High Inflation Nowcast maintained for May and coming quarters with broadening commodity inflation acceleration",
-        "Short-dated Cal Vol bid up from 12 to 18 on Friday with NVDA earnings Wednesday viewed as bullish catalyst"
+        "Bond yields hitting new inflation cycle highs - short long-term Treasury bonds (TLT, ZROZ) and rate-sensitive sectors (XLU, ITB)",
+        "Long commodities vs. short Treasuries remains easy macro position with commodity inflation broadening (Nat Gas +3%, Soybeans +2%)",
+        "VIX in investable bucket at 16.59-19.49 risk range signal; NVDA reporting Wednesday (bullish catalyst)",
+        "Street High Inflation Nowcast maintained for May and coming quarters",
+        "Top 10 stocks (GOOGL, NVDA, AAPL) driving 73% of S&P 500 returns since March 31, 2026"
       ]
     },
     "msr": {
@@ -3669,99 +3571,16 @@
       "systematic_flow": "NEUTRAL",
       "pv_band": "NEUTRAL",
       "strategic_allocation": "RISK_ON",
-      "spx_upper_pv": 7546.0,
-      "spx_lower_pv": 7339.0,
-      "gex_flip": 7181.44,
-      "gvt": 13.01,
-      "realized_vol_10d": 1.26,
-      "spx_last": 7408.49,
+      "spx_upper_pv": 7539.0,
+      "spx_lower_pv": 7332.0,
+      "gex_flip": 7193.13,
+      "gvt": 9.86,
+      "realized_vol_10d": 12.17,
+      "spx_last": 7403.04,
       "resistance": 7500.0,
       "support": 7350.0
     },
-    "sss": {
-      "count": 71,
-      "added": [
-        "BJRI",
-        "ABNB",
-        "PEB"
-      ],
-      "removed": [
-        "BA"
-      ],
-      "tickers": [
-        "CAT",
-        "OUT",
-        "SPHR",
-        "CAPY",
-        "STLK",
-        "AMAT",
-        "ENB",
-        "DAS",
-        "CAYA",
-        "ACNC",
-        "MUSA",
-        "SWBI",
-        "RSI",
-        "FCF8",
-        "ULS",
-        "MAR",
-        "CSX",
-        "MRVL",
-        "LRCX",
-        "SITM",
-        "NVDA",
-        "AMZN",
-        "VIE",
-        "GOOGL",
-        "AAPL",
-        "ROHR",
-        "HST",
-        "GLASF",
-        "CURLF",
-        "SBUX",
-        "ROK",
-        "CP",
-        "LAMR",
-        "TWLO",
-        "LPST",
-        "LFMD",
-        "UNH",
-        "SVT",
-        "CACC",
-        "XYZ",
-        "CARR",
-        "APD",
-        "MARA",
-        "GRGL",
-        "AFRM",
-        "URI",
-        "DOM",
-        "LYB",
-        "RIO",
-        "BHP",
-        "AKAM",
-        "TTWO",
-        "APLE",
-        "LOTMY",
-        "GM",
-        "WRBY",
-        "DDOG",
-        "MNST",
-        "PRAB",
-        "PM",
-        "ASTF",
-        "BLMN",
-        "V",
-        "ATRO",
-        "ILMN",
-        "NVO",
-        "SUP",
-        "BTI",
-        "BJRI",
-        "ABNB",
-        "PEB"
-      ]
-    },
+    "sss": null,
     "momo": {
       "MSFT": {
         "lrr": 404,
@@ -3821,104 +3640,99 @@
     "early_look": {
       "key_levels": {
         "UST_10yr": {
-          "lrr": 4.42,
-          "trr": 4.62,
+          "lrr": 4.45,
+          "trr": 4.64,
           "signal": "BULLISH"
         },
         "HYG": {
           "lrr": 79.4,
-          "trr": 80.19,
+          "trr": 80.16,
           "signal": "BULLISH"
         },
         "LQD": {
-          "lrr": 107.6,
-          "trr": 108.7,
+          "lrr": 107.3,
+          "trr": 108.6,
           "signal": "BEARISH"
         },
         "SPX": {
-          "lrr": 7294,
-          "trr": 7525,
+          "lrr": 7302,
+          "trr": 7505,
           "signal": "BULLISH"
         },
         "NASDAQ": {
-          "lrr": 25403,
-          "trr": 26843,
+          "lrr": 25666,
+          "trr": 26711,
           "signal": "BULLISH"
         },
         "RUT": {
-          "lrr": 2775,
-          "trr": 2894,
+          "lrr": 2747,
+          "trr": 2900,
           "signal": "BULLISH"
         },
         "XLK": {
           "lrr": 168,
-          "trr": 183,
+          "trr": 182,
           "signal": "BULLISH"
         },
         "XOP": {
-          "lrr": 166,
-          "trr": 181,
+          "lrr": 169,
+          "trr": 180,
           "signal": "BULLISH"
         },
         "XTL": {
-          "lrr": 220,
+          "lrr": 219,
           "trr": 233,
           "signal": "BULLISH"
         },
         "XLI": {
           "lrr": 169,
-          "trr": 177,
+          "trr": 178,
           "signal": "BULLISH"
         },
         "VIX": {
-          "lrr": 16.59,
-          "trr": 19.49,
+          "lrr": 16.56,
+          "trr": 18.97,
           "signal": "BEARISH"
         },
         "USD": {
-          "lrr": 98.34,
-          "trr": 99.45,
+          "lrr": 98.47,
+          "trr": 99.71,
           "signal": "BULLISH"
         },
         "WTI": {
-          "lrr": 98.86,
-          "trr": 108.67,
+          "lrr": 99.01,
+          "trr": 108.15,
           "signal": "BULLISH"
         },
-        "NatGas": {
-          "lrr": 2.82,
+        "Nat_Gas": {
+          "lrr": 2.84,
           "trr": 3.14,
           "signal": "BULLISH"
         },
         "Gold": {
-          "lrr": 4524,
-          "trr": 4688,
+          "lrr": 4500,
+          "trr": 4680,
           "signal": "NEUTRAL"
         },
         "Copper": {
           "lrr": 6.1,
-          "trr": 6.69,
+          "trr": 6.65,
           "signal": "BULLISH"
         },
         "SLV": {
           "lrr": 71,
-          "trr": 81,
+          "trr": 80,
           "signal": "BEARISH"
-        },
-        "NVDA": {
-          "lrr": 215,
-          "trr": 240,
-          "signal": "BULLISH"
         }
       },
       "signal_changes": [],
-      "vix_level": null,
+      "vix_level": 16.56,
       "keith_notes": [
-        "Bond market signaling inflation re-acceleration: UST 2yr +18bps, UST 10yr +23bps last week",
-        "Top 3 Asian Equity Shorts (IDX, INDA, EPHE) facing Quad 4 stagflation with falling currencies and rising commodities (+30.3% CRB inflation 3-month, +69.0% WTI inflation 3-month)",
-        "Indonesia market crash -28% since January; India down -4.7% (3-month trending); commodity inflation accelerating across tea (+21%), oats (+15%), cocoa (+15%), rice (+14%)",
-        "Bullish TRADE and TREND signals intact in US equities (NVDA, AMZN, IWM) despite volatility; Friday dips are buying opportunities, not reversal signals",
-        "NVDA: Risk Range $215-240 signal; USD breakout bullish at +1.4%; focus on Rate of Change (ROC) momentum over traditional valuation frameworks"
+        "Goldman's High Beta Momentum basket down -6.5% yesterday and -19.5% in 3 trading days despite +59.2% YTD performance",
+        "Diversification across asset classes, sector styles, and factor exposures is critical to surviving momentum reversals",
+        "Long/Short book made money despite equity momentum losses due to commodity strength (CRB at fresh cycle high of 405)",
+        "Fade momentum moves with patience using Risk Range signals rather than chasing crowded consensus trades",
+        "Portfolio without asymmetry most likely to experience major drawdown; factor leadership can flip violently in days"
       ]
     },
     "portfolio": {
@@ -4083,7 +3897,7 @@
           "ticker": "CPER",
           "weight": null,
           "daily_move": null,
-          "signal": "BULLISH"
+          "signal": "NEUTRAL"
         },
         {
           "ticker": "MSOS",
@@ -4153,78 +3967,37 @@
         "lrr": 1.34,
         "trr": 1.48,
         "signal": "BEARISH"
-      },
-      "IBIT": {
-        "lrr": 44.04,
-        "trr": 46.9,
-        "signal": "BULLISH"
-      },
-      "MSTR": {
-        "lrr": 169,
-        "trr": 195,
-        "signal": "BULLISH"
-      },
-      "MARA": {
-        "lrr": 11.71,
-        "trr": 13.66,
-        "signal": "BULLISH"
-      },
-      "ETHA": {
-        "lrr": 16.35,
-        "trr": 17.89,
-        "signal": "BEARISH"
-      },
-      "BLOK": {
-        "lrr": 61.61,
-        "trr": 66.47,
-        "signal": "BULLISH"
-      },
-      "COIN": {
-        "lrr": 185,
-        "trr": 212,
-        "signal": "BEARISH"
-      },
-      "CRCL": {
-        "lrr": 109,
-        "trr": 133,
-        "signal": "BULLISH"
-      },
-      "BMNR": {
-        "lrr": 19.5,
-        "trr": 21.99,
-        "signal": "BEARISH"
       }
     },
     "call_summary": {
       "date": "2026-05-18",
       "quad": 2,
       "key_points": [
+        "Bond yields reached new inflation cycle highs; Hedgeye maintains long commodities versus short Treasuries positioning due to accelerating inflation expectations",
+        "CRB commodity index up 30%+ over three months, oil up 69%; utilities, long-duration bonds, and housing-related exposures continue to deteriorate",
+        "VIX remains in investable bucket; preference for signal strength and momentum over valuation-based investing",
         "Higher-for-longer inflation remains dominant macro framework driven by fiscal spending, commodity strength, and rising rates",
-        "Bond yields reached new inflation cycle highs; long commodities vs short Treasuries positioning maintained",
-        "CRB commodity index up 30% over three months, oil up 69%; utilities and long-duration bonds deteriorating",
-        "Signal strength and momentum favored over valuation-based investing; VIX remains in investable bucket",
-        "Multiple fiscal packages advancing ($580B highway, $350B defense, $72-73B immigration) expected to reinforce inflation pressures"
+        "Congress advancing major fiscal packages ($580B highway, $350B defense, $72-73B immigration) as additional inflationary catalysts"
       ],
       "trades_mentioned": [
-        "AMZN: Real-time buy alert Friday at low end of range; agentic commerce theme with competitive pressure on freight/logistics",
-        "BJRI: Moved to top of Long Bias list; target ~$50 stock (~25% upside) with modest multiple expansion",
-        "CASY: Added via real-time alert Friday alongside AMZN and CAT",
-        "DGX: Moved from Short to Long Bench; healthcare macro accelerating into Q2 with GLP-1 tailwind",
-        "ROKU: Target $160-$180 before year-end based on World Cup advertising and political spending tailwinds",
-        "CEG: Preferred utility short; Three Mile Island delays and deteriorating sector fundamentals",
-        "ALGN, ZTS: Dropped from Long Bench to concentrate positions"
+        "AMZN: Real-time alert to buy on Friday at low end of range",
+        "CASY: Added via real-time alert on Friday",
+        "BJRI: Moved to top of Long Bias list, signal flipped from bearish to bullish",
+        "DGX: Moved from Short to Long Bench last Friday",
+        "ALGN: Dropped from Long Bench",
+        "ZTS: Dropped from Long Bench"
       ],
-      "keith_outlook": "Continued preference for signal strength and momentum over valuation in current Quad 2 backdrop with higher-for-longer inflation framework dominating. Macro positioning favors long commodities versus short Treasuries amid accelerating inflation expectations.",
+      "keith_outlook": "Maintain preference for signal strength and momentum investing within Quad 2 backdrop characterized by accelerating inflation, rising commodity prices, and stronger dollar; valuation concerns secondary to trend-following positioning.",
       "ticker_mentions": {
         "BJRI": {
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Signal flipped bullish; traffic tracking ~6% vs street 2%; marketing shifted to Q2 for graduation/summer occasions.",
+          "key_thesis": "Traffic accelerating ~6% vs street 2%, marketing shifted to Q2 for graduation season, new menu items driving comps",
           "catalysts": [
             "Activity-based labor model scaling in Q3",
-            "New menu items launching during National Burger Month",
-            "Flexible pricing supports ~4% comp estimate"
+            "Flexible pricing supporting ~4% comp",
+            "National Burger Month product launches"
           ],
           "signal": "BULLISH"
         },
@@ -4232,10 +4005,10 @@
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Real-time buy alert on competitive pressure to freight/logistics incumbents; agentic commerce theme tailwind.",
+          "key_thesis": "Agentic commerce themes and competitive pressure on freight/logistics incumbents",
           "catalysts": [
-            "Agentic commerce competitive advantage",
-            "Freight/logistics competitive pressure on incumbents"
+            "Real-time buy alert",
+            "Industrial and logistics ecosystem pressures"
           ],
           "signal": "BULLISH"
         },
@@ -4243,10 +4016,10 @@
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Healthcare macro accelerating into Q2; GLP-1 tailwind identified as key driver with broader knock-on effects.",
+          "key_thesis": "Healthcare macro forecast accelerating into Q2 with GLP-1 tailwind as key driver",
           "catalysts": [
-            "GLP-1 tailwind accelerating into Q2",
-            "Broader GLP-1 knock-on effects presentation next week"
+            "GLP-1 knock-on effects presentation next week",
+            "Signal-driven position pivoting"
           ],
           "signal": "BULLISH"
         },
@@ -4254,11 +4027,11 @@
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Bullish trend confirmed; World Cup pre-marketing and political ad spending expected to drive Q2-Q3 revenue acceleration.",
+          "key_thesis": "World Cup pre-marketing phase expected to open advertising budgets Q2-Q3; political ad spending provides revenue tailwind",
           "catalysts": [
-            "World Cup advertising budgets opening in Q2-Q3",
-            "Political ad spending revenue tailwind",
-            "Stanley Druckenmiller disclosed position per 13F"
+            "World Cup advertising acceleration",
+            "Political ad spending",
+            "Stanley Druckermiller 13F disclosure"
           ],
           "signal": "BULLISH"
         },
@@ -4266,10 +4039,10 @@
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Preferred utility short; Three Mile Island restart facing significant delays; utility sector trend bearish.",
+          "key_thesis": "Preferred utility short; Three Mile Island restart facing significant delays",
           "catalysts": [
             "Three Mile Island restart delays",
-            "Deteriorating utility sector fundamentals"
+            "Worsening utility sector fundamentals"
           ],
           "signal": "BEARISH"
         },
@@ -4277,10 +4050,9 @@
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Remains short following $67B all-stock Dominion acquisition; poor capital allocation and weak non-regulated renewable returns.",
+          "key_thesis": "Poor long-term capital allocation strategy and weak returns in non-regulated renewable business",
           "catalysts": [
-            "$67B all-stock acquisition of Dominion Energy",
-            "Structurally capped returns despite data-center exposure"
+            "$67 billion acquisition of Dominion Energy"
           ],
           "signal": "BEARISH"
         },
@@ -4288,43 +4060,32 @@
           "pod1_revenue": "DECELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Came off signal strength creating transportation sector momentum concerns; Amazon competitive and broker liability risks emerging.",
+          "key_thesis": "Came off signal strength; Amazon competitive pressure and broker liability emerging risks",
           "catalysts": [
             "Amazon competitive pressure",
             "Broker liability issues"
           ],
           "signal": "BEARISH"
         },
-        "YSWY": {
+        "CAT": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Recent IPO positioned as more attractive valuation alternative to CASY; fits three-ines framework (gasoline, caffeine, nicotine).",
+          "key_thesis": "Benefits from signal strength and potential federal infrastructure spending support",
           "catalysts": [
-            "Eight Wall Street initiations mostly buys",
-            "Fits gasoline/caffeine/nicotine framework"
+            "Federal infrastructure spending",
+            "$580B highway bill"
           ],
-          "signal": "BULLISH"
-        },
-        "BTI": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "FDA changes expected to materially shift non-combustible nicotine sales with studio session discussion planned.",
-          "catalysts": [
-            "FDA regulatory changes on non-combustible nicotine",
-            "Studio session discussing changes this week"
-          ],
-          "signal": "BULLISH"
+          "signal": "NEUTRAL"
         },
         "VIK": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Strong quarter noted; long-term P&L trajectory underappreciated; ranks top 30 of ~70 names on signal strength list.",
+          "key_thesis": "Buy on pullback from all-time high; strong quarter with underappreciated long-term P&L trajectory",
           "catalysts": [
-            "Strong quarter execution",
-            "US Hotels REITs presentation 2:00 PM ET May 19"
+            "Strong quarterly results",
+            "Top 30 ranking on signal strength list"
           ],
           "signal": "BULLISH"
         },
@@ -4332,10 +4093,32 @@
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Google I/O announcement expected to feature GOOGL-WRBY smart glasses collaboration with significant upside if confirmed.",
+          "key_thesis": "Google I/O conference (May 19-20) expected to feature GOOGL-WRBY smart glasses collaboration",
           "catalysts": [
-            "Google I/O conference May 19-20 smart glasses announcement",
-            "GOGL-WRBY collaboration potential upside surprise"
+            "Google I/O smart glasses announcement potential",
+            "TAM expansion across WRBY/Meta/Apple platforms"
+          ],
+          "signal": "BULLISH"
+        },
+        "YSWY": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Recent IPO potentially more attractive on valuation than CASY for missed opportunity investors",
+          "catalysts": [
+            "Eight Wall Street initiations mostly buys",
+            "Fits three-ines framework (gasoline, caffeine, nicotine)"
+          ],
+          "signal": "BULLISH"
+        },
+        "BTI": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "FDA changes expected to materially shift non-combustible nicotine sales",
+          "catalysts": [
+            "FDA regulatory changes",
+            "Studio session discussing changes planned"
           ],
           "signal": "BULLISH"
         },
@@ -4343,41 +4126,30 @@
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "AI infrastructure demand trends to be discussed; frontier AI labs increasing effective token pricing to offset losses.",
+          "key_thesis": "AI infrastructure demand trends; frontier AI labs increasing token pricing to offset operating losses",
           "catalysts": [
-            "Upcoming AI-focused discussion on infrastructure demand",
-            "Frontier AI labs pricing power acceleration"
+            "AI-focused discussion scheduled",
+            "Frontier AI lab expansion",
+            "Token pricing increases"
           ],
           "signal": "BULLISH"
         },
-        "CAT": {
+        "VST": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Benefits from signal strength and potential federal infrastructure spending support despite stretched valuation concerns.",
+          "key_thesis": "Signal strength short with debt-related concerns following recent acquisitions",
           "catalysts": [
-            "Federal infrastructure spending support potential",
-            "Signal strength positioning"
+            "Recent acquisition debt concerns"
           ],
-          "signal": "NEUTRAL"
-        },
-        "D": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Acquisition target viewed as high-multiple regulated utility with structurally capped returns despite data-center exposure.",
-          "catalysts": [
-            "NextEra $67B all-stock acquisition of Dominion"
-          ],
-          "signal": "NEUTRAL"
+          "signal": "BEARISH"
         },
         "ALGN": {
-          "pod1_revenue": "DECELERATING",
+          "pod1_revenue": null,
           "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Dropped from Long Bench due to weak quad factor score and deteriorating consumer metrics with poor healthcare macro.",
+          "gross_margin": "CONTRACTING",
+          "key_thesis": "Dropped from Long Bench due to weak quad factor score and deteriorating consumer metrics",
           "catalysts": [
-            "Deteriorating consumer metrics",
             "Poor healthcare macro forecast"
           ],
           "signal": "BEARISH"
@@ -4386,47 +4158,46 @@
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Dropped from Long Bench; anticipated livestock inflation tailwind did not materialize.",
+          "key_thesis": "Dropped from Long Bench; anticipated livestock inflation tailwind did not materialize",
           "catalysts": [
-            "Livestock inflation tailwind failed to materialize"
+            "Failed livestock inflation thesis"
           ],
           "signal": "BEARISH"
         },
-        "VST": {
+        "D": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Signal strength short with debt-related concerns following recent acquisitions in power generation sector.",
+          "key_thesis": "Acquisition target viewed as high-multiple regulated utility with structurally capped returns despite data-center exposure",
           "catalysts": [
-            "Debt concerns following recent acquisitions",
-            "Signal strength deterioration"
+            "$67 billion acquisition by NextEra"
           ],
-          "signal": "BEARISH"
+          "signal": "NEUTRAL"
         }
       }
     },
     "macro_show_notes": {
       "key_points": [
-        "Bond yields are the core macro pressure point with U.S. 10-year yield risk range at 4.42% to 4.62%; both Japanese and U.S. 10-year yields up 31 bps over the last month",
-        "Long commodities versus short Treasuries setup remains one of the easiest macro positions to maintain, with inflation broadening beyond oil into agricultural prices",
-        "Mega-cap tech stocks (NVIDIA, Google, Amazon, Apple) continue to lead market performance since Quad 3 lows",
-        "Shift from precious metals to base metals: reducing gold to minimum position size while buying steel and copper instead",
-        "Process emphasis: buy pullbacks, do not chase breakouts; patience is the most important element after compounding returns"
+        "Bond yields are the core macro pressure point with U.S. 10-year yield risk range at 4.42% to 4.62%; inflation acceleration is the key driver",
+        "Long commodities versus short Treasuries remains the easiest macro position to maintain as inflation broadens beyond oil into agriculture",
+        "Mega-cap tech (Google, NVIDIA, Amazon, Apple) continues to drive S&P 500 gains; NVIDIA reporting Wednesday with expected bullish call option flow",
+        "Selective emerging market positioning: long China and Japan despite weakness; short Indonesia (down 28% since January), India, and Philippines",
+        "Process emphasis: buy pullbacks and practice patience rather than chasing breakouts after sharp moves"
       ],
       "positioning_changes": [
         "Reduced gold exposure to minimum position size due to rising interest rates headwinds",
-        "Exited uranium, gold miners, and gold positions based on signals",
-        "Exited financials sector due to rate pressure and macro setup",
-        "Bought steel on Friday; now prefers steel and copper over precious metals",
-        "Reduced Bitcoin position to minimum after breaking medium-term trade",
-        "Trimmed Turkey and Mexico positions - on close watch for trend breaks"
+        "Exited uranium, gold miners positions based on signal",
+        "Exited financials sector due to rate pressure",
+        "Silver broke trend on Friday; shifted preference to steel and copper",
+        "Bought steel on Friday as preferred commodity position over precious metals",
+        "Bitcoin position reduced to minimum after breaking medium-term trade as dollar moved to bullish"
       ],
       "keith_watching": [
-        "NVIDIA earnings report on Wednesday - watching for call option flow ahead of earnings",
-        "Natural gas as new bullish trend breakout - on buy list but waiting for pullbacks",
-        "Bitcoin needs to get north of $78,000 to regain trade; trend around $75,000",
-        "Indonesia stock market crash (down 28% since January) - has been shorted throughout",
-        "Japan approaching low end of risk range with interesting quad count setup opportunity"
+        "NVIDIA earnings report Wednesday with expected call option buying flow",
+        "Natural gas as new bullish trend breakout - on buy list but waiting for pullbacks, not chasing",
+        "Bitcoin needs to regain trade above $78,000; trend support around $75,000 with dollar at bullish trade",
+        "Japan equity market at low end of risk range with interesting quad count setup",
+        "Turkey and Mexico on close watch - will sell if they break trend despite being current longs"
       ]
     },
     "investing_ideas": {
@@ -4434,89 +4205,89 @@
         "DAR": {
           "lrr": 60.05,
           "trr": 65.0,
-          "thesis": "Rising diesel prices and widening crack spreads create favorable margins for renewable diesel producers with structural cost advantage from feedstock that rises slower than crude."
+          "thesis": "Rising diesel prices and widening crack spreads create favorable margins for renewable diesel producers with structural cost advantages from feedstock."
         },
         "SWBI": {
           "lrr": 14.4,
           "trr": 15.77,
-          "thesis": "Improving production and rising plant utilization drive meaningful margin expansion with market share gains amid competitor distraction and industry consolidation."
+          "thesis": "Improving production and rising plant utilization drive margin expansion with market share gains amid competitor distraction."
         },
         "MUSA": {
           "lrr": 545.0,
           "trr": 605.0,
-          "thesis": "Levered to fuel price volatility and rate-of-change dynamics that drive both margin expansion and traffic through price-led model with higher mix of gasoline, energy drinks, and nicotine sales."
+          "thesis": "Levered to fuel price volatility and rate-of-change dynamics driving margin expansion and traffic through price-led model."
         },
         "ULS": {
           "lrr": 92.79,
           "trr": 105.95,
-          "thesis": "High-quality capital-light TIC franchise benefiting from structural shift to for-profit model with durable secular tailwinds including AI/data center buildout and rising global regulation."
+          "thesis": "High-quality capital-light TIC franchise benefiting from for-profit transition with durable secular tailwinds across regulation and AI/data center buildout."
         },
         "CAVA": {
           "lrr": 72.3,
           "trr": 92.54,
-          "thesis": "Sustained traffic growth, best-in-class unit economics, and differentiated Mediterranean positioning support path back to high-single-digit/double-digit comps and multiple expansion."
+          "thesis": "Sustained traffic growth and best-in-class unit economics support path back to HSD/double-digit comps with Mediterranean differentiation."
         },
         "APD": {
           "lrr": 290.0,
           "trr": 307.0,
-          "thesis": "New leadership shifts away from uneconomic green capital deployment toward shareholder discipline, positioning recovery from underperformance in highest-quality industrial gases business."
+          "thesis": "New leadership shifts away from uneconomic green capital and toward shareholder discipline in highest-quality industrial gas franchise."
         },
         "AMZN": {
           "lrr": 259.0,
           "trr": 279.0,
-          "thesis": "Accelerating AWS growth, expanding AI infrastructure capacity, and improving retail operating leverage reinforce Amazon's leadership across cloud and commerce with robotics and logistics optionality."
+          "thesis": "Accelerating AWS growth, expanding AI infrastructure, and improving retail operating leverage reinforce cloud and commerce ecosystem leadership."
         },
         "ROKU": {
           "lrr": 120.0,
           "trr": 132.0,
-          "thesis": "Accelerating platform monetization with high-margin advertising and subscription revenue transforming business into scaled connected-TV software platform with powerful operating leverage cycle."
+          "thesis": "Accelerating platform monetization with high-margin advertising transforming business into scaled connected-TV software platform with operating leverage."
         },
         "CARR": {
           "lrr": 62.15,
           "trr": 68.85,
-          "thesis": "Accelerating demand for climate and energy-efficiency solutions with secular growth across HVAC replacement cycles, data center cooling, and electrification supporting durable organic expansion."
+          "thesis": "Accelerating demand for climate and energy-efficiency solutions with secular growth across HVAC and data center cooling."
         },
         "SXT": {
           "lrr": 110.0,
           "trr": 124.0,
-          "thesis": "Accelerating industry-wide shift from synthetic petroleum-based food dyes toward natural colors driven by regulation and consumer pressure, with Sensient uniquely positioned as leading U.S. supplier."
+          "thesis": "Accelerating industry shift from synthetic to natural food colors creates transformational opportunity with Sensient uniquely positioned as category leader."
         }
       },
       "shorts": {
         "ROP": {
           "lrr": 301.0,
           "trr": 344.0,
-          "thesis": "Serial acquisition story dependent on perpetual flawless capital allocation with eroding software moats and increasing substitutability risk as pool of suitable assets shrinks."
+          "thesis": "Serial acquisition story dependent on perpetual capital allocation with eroding software moats and rising substitutability risk as assets shrink."
         },
         "RBLX": {
           "lrr": 38.02,
           "trr": 47.56,
-          "thesis": "Slowing user growth with decelerating daily active users and bookings confirmed by management guidance cuts, setting up high-risk Q3 trough with multiple near-term headwinds."
+          "thesis": "Slowing user growth and reduced bookings guidance signal deceleration with high-probability downside window into Q3 trough setup."
         },
         "ONON": {
           "lrr": 33.02,
           "trr": 38.63,
-          "thesis": "CEO departure signals inflection toward slower growth while structurally unsustainable margins above 60% face normalization pressure as scale increases and competitive pressures from Nike intensify."
+          "thesis": "CEO departure signals slower growth while unsustainably high margins face pressure from scale and Nike competitive intensity."
         },
         "OLLI": {
           "lrr": 72.38,
           "trr": 85.14,
-          "thesis": "Underperforming despite peak operating environment with slowing comps and declining store productivity signaling structural weakness as unit growth masks weakening operating model."
+          "thesis": "Underperforming despite peak operating environment with deteriorating traffic and declining store productivity signaling structural weakness."
         },
         "HCA": {
           "lrr": 415.0,
           "trr": 435.0,
-          "thesis": "Weak MA rate relief fails to offset structural pressure on hospital reimbursements with deteriorating metrics across admissions, wage inflation, and surgical volumes signaling slowing demand."
+          "thesis": "Weak MA rate relief fails to offset structural pressure on hospital reimbursements with deteriorating fundamental trends across admissions and volumes."
         },
         "WING": {
           "lrr": 110.0,
           "trr": 151.0,
-          "thesis": "Transaction data deteriorates sharply with credit card activity down ~25% YoY and core initiatives failing to drive incremental traffic, with structural weakening demand outlook requiring growth reset."
+          "thesis": "Transaction data deteriorates sharply with core initiatives failing to drive traffic and structural pressures intensifying on unit economics."
         },
         "DGX": {
           "lrr": 181.0,
           "trr": 192.0,
-          "thesis": "Investors overestimate durability of GLP-1 adoption testing tailwinds which may prove cyclical rather than structural, with low-growth core diagnostics exposed to deteriorating healthcare consumption."
+          "thesis": "Investors overestimate durability of GLP-1 testing tailwinds which may prove cyclical rather than incremental with broader utilization weakness."
         }
       }
     },
@@ -4556,13 +4327,13 @@
           "HD",
           "GOOS",
           "LUXE",
-          "RMS",
+          "RMS.PA",
           "1913.HK",
           "BURL",
           "3998.HK",
           "2331.HK",
           "LTH",
-          "SHO",
+          "SHOO",
           "GPI",
           "PAG",
           "UAA",
@@ -4575,13 +4346,13 @@
           "GRMN",
           "LEVI",
           "LULU",
-          "CVR",
+          "CVS",
           "ONEW",
           "PANDY",
           "TSCO",
           "PUM.DE",
           "YETI",
-          "JAD",
+          "LAD",
           "SAH",
           "KMX",
           "CARG",
@@ -4591,7 +4362,7 @@
       "energy": {
         "longs": [
           "DAR",
-          "DVN",
+          "TPR",
           "PBR",
           "PBR-A",
           "PR",
@@ -4633,13 +4404,13 @@
       "ticker_mentions": {}
     },
     "from_desk": {
-      "macro_view": "The US is in a Quad 2 regime (Growth and Inflation accelerating) at the monthly level with Quad 3 (Stagflation Protection) at quarterly and global levels. Rising rates, falling duration, and broadening reflation across commodities characterize the current market environment.",
+      "macro_view": "The market is in a Quad 2 regime (Growth and Inflation Accelerating) with the US Dollar testing a new breakout, rates making cycle highs, and reflation broadening across commodities. Bond markets are finally 'seeing' accelerating inflation as the 10yr yield reaches levels not seen since 2007.",
       "key_points": [
-        "USD Dollar Index reversed from bearish to bullish breakout this week, triggering exit from Long GBP/USD (FXB) position despite pending BOE rate hikes",
-        "UST 30-year yield hit highest level since 2007 with 10yr yield at 4.37-4.59% risk range; April CPI accelerated +55bps to +3.81% YoY",
-        "VIX remains in Investable Bucket with $2.25 trillion SPX/SPY OPEX expiration on Friday serving as key inflection point",
-        "Quad 2 reflation broadening with Brent +8.6% WoW, Copper at all-time highs, while Short Palladium down -4.4% WoW",
-        "SPY printed 18th all-time closing high of 2026; Long Industrials (XLI) vs Short Healthcare (XLV) continues to print Quad 2 long/short alpha"
+        "USD Dollar Index reversed from bearish to bullish TRADE/TREND setup; 30-day inverse correlations show strong risk-on signals (SPX -0.71, Bitcoin -0.72)",
+        "UST 10yr yield at 4.37-4.59% Risk Range with higher-highs; April CPI accelerated +55bps to +3.81% YoY",
+        "Quad 2 reflation broadening: Brent up +8.6% WoW, Copper at all-time highs, Energy (XOP/OIH) gaining +5.5% and +4.7%",
+        "SPY printed 18th all-time closing high of 2026; High Beta Growth Momentum Basket ramping to new ATHs; Long Industrials (XLI) vs. Short Healthcare (XLV) driving alpha",
+        "$2.25 trillion OPEX reset on Friday; front-month gamma levels moving toward cyclical lows reducing short-term volatility suppression"
       ],
       "tickers_mentioned": [
         "FXB",
@@ -4649,6 +4420,8 @@
         "OIH",
         "CPER",
         "PALL",
+        "TLT",
+        "EQRR",
         "CNXT",
         "INDA",
         "IDX",
@@ -4659,8 +4432,6 @@
         "XLI",
         "XLV",
         "ITB",
-        "TLT",
-        "EQRR",
         "UUP",
         "HYG",
         "CLOZ",
@@ -4678,41 +4449,35 @@
     },
     "macro_research": {
       "cpi_trend": "ACCELERATING",
-      "monthly_quad": 2,
       "quad_sequence": "2-2-2-3",
       "forward_quads": {
         "1Q26": {
-          "quad": 1,
-          "gdp_qoq": 2.79,
+          "quad": null,
+          "gdp_qoq": null,
           "cpi_yoy": 3.88
         },
         "2Q26": {
-          "quad": 2,
-          "gdp_qoq": 2.66,
-          "cpi_yoy": 3.31
+          "quad": null,
+          "gdp_qoq": null,
+          "cpi_yoy": 4.01
         },
         "3Q26": {
-          "quad": 2,
-          "gdp_qoq": 2.83,
-          "cpi_yoy": 2.75
+          "quad": null,
+          "gdp_qoq": null,
+          "cpi_yoy": 4.23
         },
         "4Q26": {
-          "quad": 2,
-          "gdp_qoq": 2.8,
-          "cpi_yoy": 2.74
-        },
-        "1Q27": {
-          "quad": 3,
-          "gdp_qoq": 2.41,
-          "cpi_yoy": 2.69
+          "quad": null,
+          "gdp_qoq": null,
+          "cpi_yoy": 4.14
         }
       },
       "key_themes": [
-        "Strait of Hormuz oil shock - 8-10M bbl/d supply gap with critical storage drawdown by late July",
-        "Epic bubble in growth with post-shutdown reacceleration defining RoC change",
-        "S&P 500 earnings poised for +20% YoY growth in Q2 with Q2 RoC acceleration",
-        "Policy capitulation cycle - Fed pressured to cut rates regardless of inflation, driving long gold and short treasuries",
-        "Stagflation to flation now with stag-on-a-lag - energy price shocks hitting bottom income quintiles hardest"
+        "Oil shock at Strait of Hormuz with critical storage drawdown in late July",
+        "Accelerating domestic manufacturing momentum and capex pipeline activity",
+        "S&P 500 Q2 earnings acceleration to +20% YoY with diverging profit cycles",
+        "Stagflation risk evolving to flation now with stagnation on lag",
+        "Long Gold & Short Treasuries positioning for policy capitulation phase"
       ],
       "cpi_nowcast": 4.25,
       "cpi_upside": 4.36,
