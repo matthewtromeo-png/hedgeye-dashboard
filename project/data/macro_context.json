@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T12:28:34.616831+00:00",
+  "generated_at": "2026-05-19T12:57:15.872980+00:00",
   "source_date": "2026-05-19",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1779133376.xlsx",
@@ -12,7 +12,7 @@
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (-1.3, BEARISH) vs MSFT (+3.1%, BULLISH), NVDA Earnings=Wednesday.pdf@1779110388",
     "early_look": "Hedgeye - Upside-Down Momentum.pdf@1779191580",
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_18_2026) _ Top Movers_ OAEM (+13), CNXT (+12), IBIT(+11).pdf@1779132064",
-    "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-1.8%), COIN=BEARISH, ETFs=-$1.26B W_W, Harvard→ Crypto ETF Exposure ↓↓, RIP Crypto ATMs.pdf@1779110402",
+    "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.3%), MSTR=NEUTRAL, ETFs=-$-733M D_D, SEC→Tokenized Equities Plan Ready.pdf@1779194431",
     "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_18_2026.pdf@1779111833",
     "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Monday, May 18th, 2026.pdf@1779113972",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf@1778506347|Hedgeye - Investing Ideas Newsletter_ May 18, 2026.pdf@1779110293",
@@ -3509,27 +3509,27 @@
       "signal": "BEARISH"
     },
     "ETH": {
-      "close": 2115.0,
-      "lrr": 2055.0,
-      "trr": 2242.0,
+      "close": 2109.0,
+      "lrr": 2041.0,
+      "trr": 2253.0,
       "signal": "BEARISH"
     },
     "SOL": {
-      "close": 84.36,
+      "close": 84.3,
       "lrr": 80.0,
-      "trr": 90.0,
+      "trr": 89.0,
       "signal": "BEARISH"
     },
     "AVAX": {
-      "close": 9.06,
-      "lrr": 8.8,
-      "trr": 9.74,
+      "close": 9.09,
+      "lrr": 8.61,
+      "trr": 9.57,
       "signal": "BEARISH"
     },
     "XRP": {
-      "close": 1.38,
-      "lrr": 1.34,
-      "trr": 1.48,
+      "close": 1.37,
+      "lrr": 1.31,
+      "trr": 1.42,
       "signal": "BEARISH"
     },
     "XTL": {
@@ -4526,28 +4526,28 @@
     },
     "btc": {
       "BTC": {
-        "lrr": 76006,
-        "trr": 83109,
+        "lrr": 75.637,
+        "trr": 82.531,
         "signal": "BULLISH"
       },
       "ETH": {
-        "lrr": 2055,
-        "trr": 2242,
+        "lrr": 2.041,
+        "trr": 2.253,
         "signal": "BEARISH"
       },
       "SOL": {
         "lrr": 80,
-        "trr": 90,
+        "trr": 89,
         "signal": "BEARISH"
       },
       "AVAX": {
-        "lrr": 8.8,
-        "trr": 9.74,
+        "lrr": 8.61,
+        "trr": 9.57,
         "signal": "BEARISH"
       },
       "XRP": {
-        "lrr": 1.34,
-        "trr": 1.48,
+        "lrr": 1.31,
+        "trr": 1.42,
         "signal": "BEARISH"
       }
     },
@@ -5130,6 +5130,12 @@
     },
     {
       "date": "2026-05-18",
+      "count": 71,
+      "added": 3,
+      "removed": 1
+    },
+    {
+      "date": "2026-05-19",
       "count": 71,
       "added": 3,
       "removed": 1
