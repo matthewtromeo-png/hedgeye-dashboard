@@ -70,7 +70,33 @@ const SignalsTab = ({macroCtx}) => {
     return s;
   };
 
-  const displayTickers = liveTickers ?? window.HE.SSS.map(s => s.ticker);
+  const rawDisplayTickers = liveTickers ?? window.HE.SSS.map(s => s.ticker);
+
+  // Cross-reference filter: hide tickers absent from all known sources with only 1★ conviction
+  const knownTickers = new Set([
+    ...window.HE.SSS.map(s => s.ticker),
+    ...Object.keys(macroCtx?.levels ?? {}),
+    ...Object.keys(hamMap),
+    ...(macroCtx?.rta?.recently_traded_tickers ?? []),
+    ...Object.keys(iiLongs),
+    ...Object.keys(iiShorts),
+  ]);
+  let hiddenCount = 0;
+  const filteredTickers = rawDisplayTickers.filter(ticker => {
+    if (knownTickers.has(ticker)) return true;
+    hiddenCount++;
+    return false;
+  });
+
+  // Sort by days on list descending (longest first); tickers without date go to end
+  const displayTickers = [...filteredTickers].sort((a, b) => {
+    const aDays = getMeta(a)?.days;
+    const bDays = getMeta(b)?.days;
+    if (aDays == null && bDays == null) return 0;
+    if (aDays == null) return 1;
+    if (bDays == null) return -1;
+    return bDays - aDays;
+  });
 
   // Sparkline for sss_history count trend
   const SparkLine = () => {
@@ -168,7 +194,7 @@ const SignalsTab = ({macroCtx}) => {
               fontFamily:'IBM Plex Mono,monospace', fontSize:11}}>
               <thead>
                 <tr>
-                  <TH>Conv</TH><TH>Ticker</TH><TH>Signal Date</TH>
+                  <TH right>Days</TH><TH>Conv</TH><TH>Ticker</TH><TH>Signal Date</TH>
                   <TH right>Entry $</TH><TH>Sector</TH><TH>Analyst</TH><TH right>HAM Wt</TH>
                 </tr>
               </thead>
@@ -187,6 +213,9 @@ const SignalsTab = ({macroCtx}) => {
                           : isNew ? 'rgba(39,80,10,0.05)'
                           : ham    ? 'rgba(39,80,10,0.02)'
                           : i%2===0 ? '#fff' : '#FAFAF8'}}>
+                      <TD right style={{color:'#7A7770', fontWeight:600}}>
+                        {meta?.days != null ? `${meta.days}d` : '—'}
+                      </TD>
                       <TD><Stars score={score} /></TD>
                       <TD>
                         <span style={{fontWeight:700}}>{ticker}</span>
@@ -208,6 +237,12 @@ const SignalsTab = ({macroCtx}) => {
               </tbody>
             </table>
           </div>
+          {hiddenCount > 0 && (
+            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790',
+              marginTop:8, textAlign:'right'}}>
+              + {hiddenCount} unrecognized ticker{hiddenCount > 1 ? 's' : ''} hidden
+            </div>
+          )}
         </div>
 
         {/* Detail Panel */}

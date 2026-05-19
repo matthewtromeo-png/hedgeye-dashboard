@@ -1075,28 +1075,60 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             print("  [rate-limit] Sleeping 60s after macro_show...")
             time.sleep(60)
 
-    # ── Post-process SSS: strip PDF-artifact ticker strings ──────────────────
+    # ── Post-process SSS: normalize NEW suffix, strip PDF-artifact ticker strings ─
     # Applies whether result came from cache or fresh extraction.
     _valid_ticker = re.compile(r'^[A-Z]{1,5}[0-9]?$')
+
+    def _norm_ticker(t):
+        """Strip trailing NEW suffix if the bare ticker is valid (e.g. NVDANEW → NVDA)."""
+        if isinstance(t, str) and t.endswith('NEW') and _valid_ticker.match(t[:-3]):
+            return t[:-3]
+        return t
+
     sss_result = results.get('sss')
     if sss_result and isinstance(sss_result.get('tickers'), list):
         raw = sss_result['tickers']
-        clean = [t for t in raw if _valid_ticker.match(t)]
-        bad   = [t for t in raw if not _valid_ticker.match(t)]
+        seen, clean, new_stripped, bad = set(), [], [], []
+        for t in raw:
+            nt = _norm_ticker(t)
+            if not _valid_ticker.match(nt):
+                bad.append(t)
+            elif nt not in seen:
+                clean.append(nt)
+                seen.add(nt)
+                if nt != t:
+                    new_stripped.append(t)
         if bad:
             print(f"  [sss] Removed {len(bad)} invalid ticker(s): {bad}")
+        if new_stripped:
+            print(f"  [sss] Stripped NEW suffix from {len(new_stripped)} ticker(s): {new_stripped}")
         for fld in ('added', 'removed'):
             if isinstance(sss_result.get(fld), list):
-                sss_result[fld] = [t for t in sss_result[fld] if _valid_ticker.match(t)]
+                fld_seen: set = set()
+                fld_clean = []
+                for t in sss_result[fld]:
+                    nt = _norm_ticker(t)
+                    if _valid_ticker.match(nt) and nt not in fld_seen:
+                        fld_clean.append(nt)
+                        fld_seen.add(nt)
+                sss_result[fld] = fld_clean
         sss_result['tickers'] = clean
         sss_result['count']   = len(clean)
-        # Filter tickers_detail keys with the same rule
         if isinstance(sss_result.get('tickers_detail'), dict):
-            detail_clean = {k: v for k, v in sss_result['tickers_detail'].items()
-                            if _valid_ticker.match(k)}
-            detail_bad   = [k for k in sss_result['tickers_detail'] if not _valid_ticker.match(k)]
+            detail_clean: dict = {}
+            detail_bad, detail_new = [], []
+            for k, v in sss_result['tickers_detail'].items():
+                nk = _norm_ticker(k)
+                if not _valid_ticker.match(nk):
+                    detail_bad.append(k)
+                elif nk not in detail_clean:
+                    detail_clean[nk] = v
+                    if nk != k:
+                        detail_new.append(k)
             if detail_bad:
                 print(f"  [sss] Removed {len(detail_bad)} invalid key(s) from tickers_detail: {detail_bad}")
+            if detail_new:
+                print(f"  [sss] Stripped NEW suffix from {len(detail_new)} tickers_detail key(s): {detail_new}")
             sss_result['tickers_detail'] = detail_clean
         results['sss'] = sss_result
 
