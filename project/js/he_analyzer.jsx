@@ -164,36 +164,61 @@ const AnalyzerTab = ({macroCtx}) => {
     if (priceResult) setPriceData(priceResult);
     else setFetchErr('Price data unavailable — check ticker symbol');
 
-    // FMP valuation (optional, requires API key)
+    // FMP fundamentals — free-tier endpoints only
     const fmpKey = window.HE.loadQuadState().fmpKey;
     if (fmpKey) {
       try {
-        const [pRes, mRes] = await Promise.all([
-          fetch(`https://financialmodelingprep.com/api/v3/profile/${sym}?apikey=${fmpKey}`,         { signal: AbortSignal.timeout(8000) }),
-          fetch(`https://financialmodelingprep.com/api/v3/key-metrics-ttm/${sym}?apikey=${fmpKey}`, { signal: AbortSignal.timeout(8000) }),
+        const [quoteRes, incomeRes, surpriseRes] = await Promise.all([
+          fetch(`https://financialmodelingprep.com/api/v3/quote/${sym}?apikey=${fmpKey}`,                                    { signal: AbortSignal.timeout(8000) }),
+          fetch(`https://financialmodelingprep.com/api/v3/income-statement/${sym}?period=quarter&limit=4&apikey=${fmpKey}`,  { signal: AbortSignal.timeout(8000) }),
+          fetch(`https://financialmodelingprep.com/api/v3/earnings-surprises/${sym}?apikey=${fmpKey}`,                       { signal: AbortSignal.timeout(8000) }),
         ]);
-        if (!pRes.ok) {
-          const msg = pRes.status === 403
+        if (!quoteRes.ok) {
+          const msg = quoteRes.status === 403
             ? 'FMP subscription required — upgrade at financialmodelingprep.com'
-            : `FMP error (HTTP ${pRes.status}) — verify your API key in ⚙ Settings`;
-          console.warn('[analyzer] FMP HTTP error:', pRes.status);
+            : `FMP error (HTTP ${quoteRes.status}) — verify your API key in ⚙ Settings`;
+          console.warn('[analyzer] FMP HTTP error:', quoteRes.status);
           setFmpErr(msg);
         } else {
-          const profile = await pRes.json();
-          const metrics = await mRes.json();
-          const p0 = profile[0], m0 = metrics[0];
-          if (p0) setFmpData({
-            name:      p0.companyName,
-            sector:    p0.sector,
-            industry:  p0.industry,
-            mktCap:    p0.mktCap,
-            exchange:  p0.exchangeShortName,
-            pe:        m0?.peRatioTTM,
-            ps:        m0?.priceToSalesRatioTTM,
-            pb:        m0?.priceToBookRatioTTM,
-            evEbitda:  m0?.enterpriseValueOverEBITDATTM,
-          });
-          else setFmpErr('FMP returned no data for this ticker');
+          const [quote, income, surprises] = await Promise.all([
+            quoteRes.json(),
+            incomeRes.ok   ? incomeRes.json()   : [],
+            surpriseRes.ok ? surpriseRes.json() : [],
+          ]);
+          const q0 = Array.isArray(quote) ? quote[0] : null;
+          if (!q0) {
+            setFmpErr('FMP returned no data for this ticker');
+          } else {
+            // Revenue QoQ growth — income statements arrive newest-first, reverse to chronological
+            const stmts = (Array.isArray(income) ? income : []).slice(0, 4).reverse();
+            const revenueGrowths = [];
+            for (let i = 1; i < stmts.length; i++) {
+              const prev = stmts[i-1].revenue, curr = stmts[i].revenue;
+              if (prev && curr) revenueGrowths.push((curr - prev) / Math.abs(prev) * 100);
+            }
+            const revAccelerating = revenueGrowths.length >= 2
+              ? revenueGrowths[revenueGrowths.length-1] > revenueGrowths[revenueGrowths.length-2]
+              : null;
+            // EPS beat/miss — surprises newest-first, take last 4
+            const eps4 = (Array.isArray(surprises) ? surprises : []).slice(0, 4);
+            const beats = eps4.filter(s => (s.actualEarningResult ?? 0) > (s.estimatedEarning ?? 0)).length;
+            setFmpData({
+              name:          q0.name,
+              sector:        q0.sector   ?? null,
+              industry:      q0.industry ?? null,
+              exchange:      q0.exchange ?? null,
+              mktCap:        q0.marketCap,
+              pe:            q0.pe,
+              eps:           q0.eps,
+              weekHigh52:    q0.yearHigh,
+              weekLow52:     q0.yearLow,
+              price:         q0.price,
+              revenueGrowths,
+              revAccelerating,
+              beats,
+              totalEpsQ:     eps4.length,
+            });
+          }
         }
       } catch (e) {
         console.warn('[analyzer] FMP failed:', e.message);
@@ -207,17 +232,17 @@ const AnalyzerTab = ({macroCtx}) => {
   const onKey = e => { if (e.key === 'Enter') analyze(); };
 
   // ── Derived analysis ───────────────────────────────────────────────
-  const sssEntry = ticker ? window.HE.SSS.find(s => s.ticker === ticker) : null;
-  const liveSssTickers = new Set(macroCtx?.pdf?.sss?.tickers ?? []);
-  const isOnSss = ticker ? (liveSssTickers.size > 0 ? liveSssTickers.has(ticker) : !!sssEntry) : false;
+  const sssTickerDetail = ticker ? (macroCtx?.pdf?.sss?.tickers_detail?.[ticker] ?? null) : null;
+  const liveSssTickers  = new Set(macroCtx?.pdf?.sss?.tickers ?? []);
+  const isOnSss = ticker ? liveSssTickers.has(ticker) : false;
   const qs = window.HE.loadQuadState();
-  console.log('[AnalyzerTab] FMP key:', qs.fmpKey ? 'SET' : 'NOT SET', '| live SSS tickers:', liveSssTickers.size || 'none (fallback)');
+  console.log('[AnalyzerTab] FMP key:', qs.fmpKey ? 'SET' : 'NOT SET', '| live SSS tickers:', liveSssTickers.size || 'none');
   const currentQuad = qs.monthly || qs.quarterly || 'Q3';
   const quadDef     = window.HE.QUADS[currentQuad];
   const fmpKey      = qs.fmpKey;
 
-  // Effective sector: SSS > FMP-mapped > null
-  const hedgeyeSector = sssEntry?.sector
+  // Effective sector: SSS tickers_detail > FMP-mapped > null
+  const hedgeyeSector = sssTickerDetail?.sector
     || (fmpData ? mapFmpToHedgeyeSector(fmpData.sector, fmpData.industry) : null);
 
   const bucketKey  = ticker ? classifyBucket(ticker, hedgeyeSector, fmpData?.industry) : null;
@@ -354,33 +379,25 @@ const AnalyzerTab = ({macroCtx}) => {
                     <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:700,
                       color:'#27500A'}}>QUALIFIED</span>
                   </div>
-                  {sssEntry ? (
-                    <div style={{display:'flex', flexDirection:'column', gap:8}}>
-                      {[
-                        ['Analyst',        sssEntry.analyst, null],
-                        ['Sector',         sssEntry.sector, null],
-                        ['Days on Signal', `${sssEntry.days}d`, null],
-                        ['Signal Date',    sssEntry.signalDate, null],
-                        ['Signal Price',   `$${sssEntry.priorClose.toFixed(2)}`, null],
-                        ['Since Signal',   `${sssEntry.pct >= 0 ? '+' : ''}${sssEntry.pct.toFixed(1)}%`,
-                          sssEntry.pct >= 0 ? '#27500A' : '#C8302A'],
-                      ].map(([label, val, color]) => (
-                        <div key={label} style={{display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:8}}>
-                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', flexShrink:0}}>
-                            {label}
-                          </span>
-                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:600,
-                            color: color || '#1A1A18', textAlign:'right'}}>
-                            {val}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  ) : (
-                    <div style={{fontSize:11, color:'#7A7770', lineHeight:1.65}}>
-                      Metadata not available — ticker added after last hardcoded snapshot.
-                    </div>
-                  )}
+                  <div style={{display:'flex', flexDirection:'column', gap:8}}>
+                    {[
+                      ['Analyst',        sssTickerDetail?.analyst ?? null],
+                      ['Sector',         sssTickerDetail?.sector ?? null],
+                      ['Days on Signal', sssTickerDetail?.days_on_list != null ? `${sssTickerDetail.days_on_list}d` : null],
+                      ['Signal Date',    sssTickerDetail?.signal_date ?? null],
+                      ['Signal Price',   sssTickerDetail?.entry_price != null ? `$${sssTickerDetail.entry_price.toFixed(2)}` : null],
+                    ].map(([label, val]) => (
+                      <div key={label} style={{display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:8}}>
+                        <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', flexShrink:0}}>
+                          {label}
+                        </span>
+                        <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:600,
+                          color:'#1A1A18', textAlign:'right'}}>
+                          {val ?? '—'}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </>
               ) : (
                 <>
@@ -396,7 +413,7 @@ const AnalyzerTab = ({macroCtx}) => {
                   </div>
                   <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790',
                     borderTop:'1px solid #F5F3EF', paddingTop:10}}>
-                    {macroCtx?.pdf?.sss?.count ?? window.HE.SSS.length} tickers currently qualified on SSS
+                    {macroCtx?.pdf?.sss?.count ?? 0} tickers currently qualified on SSS
                   </div>
                 </>
               )}
@@ -538,11 +555,112 @@ const AnalyzerTab = ({macroCtx}) => {
             </div>
           </div>
 
+          {/* ── Fundamentals (Pod 1 Signal) ── */}
+          {fmpData && (
+            <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:16, marginBottom:12}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+                textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770', marginBottom:14}}>
+                Fundamentals
+              </div>
+
+              {/* Revenue Acceleration — Pod 1 signal, most prominent */}
+              {fmpData.revenueGrowths?.length > 0 ? (
+                <div style={{marginBottom:14, padding:'12px 14px', borderRadius:6,
+                  background: fmpData.revAccelerating === true  ? '#EAF3DE'
+                            : fmpData.revAccelerating === false ? '#FCEBEB' : '#F9F8F5',
+                  border: `1px solid ${fmpData.revAccelerating === true  ? '#7AB648'
+                                     : fmpData.revAccelerating === false ? '#E07070' : '#E4E1DA'}`}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                    textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:8}}>
+                    Revenue Growth (QoQ) — Pod 1 Signal
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:12, flexWrap:'wrap'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12}}>
+                      {fmpData.revenueGrowths.map((g, i) => (
+                        <React.Fragment key={i}>
+                          <span style={{color: g > 0 ? '#27500A' : '#C8302A', fontWeight:700}}>
+                            {g > 0 ? '+' : ''}{g.toFixed(1)}%
+                          </span>
+                          {i < fmpData.revenueGrowths.length - 1 && (
+                            <span style={{color:'#C8C5BE', margin:'0 8px'}}>→</span>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                    {fmpData.revAccelerating !== null && (
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12, fontWeight:700,
+                        color: fmpData.revAccelerating ? '#27500A' : '#C8302A'}}>
+                        {fmpData.revAccelerating ? 'ACCELERATING ↑' : 'DECELERATING ↓'}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div style={{marginBottom:14, fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                  color:'#9A9790', padding:'8px 0'}}>
+                  Revenue data unavailable — quarterly income statements may require FMP plan upgrade
+                </div>
+              )}
+
+              {/* Metrics grid */}
+              <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(155px,1fr))', gap:8}}>
+                {fmpData.totalEpsQ > 0 && (
+                  <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>EPS vs Estimate</div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700,
+                      color: fmpData.beats >= Math.ceil(fmpData.totalEpsQ * 0.75) ? '#27500A'
+                           : fmpData.beats <= Math.floor(fmpData.totalEpsQ * 0.25) ? '#C8302A' : '#1A1A18'}}>
+                      Beat {fmpData.beats} of {fmpData.totalEpsQ}
+                    </div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginTop:2}}>
+                      last {fmpData.totalEpsQ} quarters
+                    </div>
+                  </div>
+                )}
+                {fmpData.weekHigh52 != null && fmpData.weekLow52 != null && (() => {
+                  const rng = fmpData.weekHigh52 - fmpData.weekLow52;
+                  const pos = rng > 0 ? ((fmpData.price - fmpData.weekLow52) / rng * 100) : null;
+                  return (
+                    <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                        textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>52-Week Position</div>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700, color:'#1A1A18'}}>
+                        {pos != null ? `${pos.toFixed(0)}% of range` : '—'}
+                      </div>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginTop:2}}>
+                        L: ${fmpData.weekLow52?.toFixed(2)} · H: ${fmpData.weekHigh52?.toFixed(2)}
+                      </div>
+                    </div>
+                  );
+                })()}
+                {fmpData.mktCap != null && (
+                  <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>Market Cap</div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700, color:'#1A1A18'}}>
+                      {fmtMktCap(fmpData.mktCap)}
+                    </div>
+                  </div>
+                )}
+                {fmpData.pe != null && (
+                  <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>P/E</div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700, color:'#1A1A18'}}>
+                      {Number(fmpData.pe).toFixed(0)}x
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* ── Price & Valuation ── */}
           <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:16}}>
             <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
               textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770', marginBottom:14}}>
-              Live Price & Valuation — {ticker}{fmpData?.exchange ? ` · ${fmpData.exchange}` : ''}{fmpData?.industry ? ` · ${fmpData.industry}` : ''}
+              Live Price — {ticker}{fmpData?.exchange ? ` · ${fmpData.exchange}` : ''}
             </div>
             <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(120px,1fr))', gap:8}}>
               {[
@@ -552,12 +670,8 @@ const AnalyzerTab = ({macroCtx}) => {
                   : '—',
                   priceData ? (priceData.regularMarketChangePercent >= 0 ? '#27500A' : '#C8302A') : null],
                 ['Prev Close', priceData ? `$${priceData.regularMarketPreviousClose?.toFixed(2)}` : '—', null],
-                ['Day High',   priceData ? `$${priceData.regularMarketDayHigh?.toFixed(2)}`        : '—', null],
-                ['Day Low',    priceData ? `$${priceData.regularMarketDayLow?.toFixed(2)}`         : '—', null],
-                ['Market Cap', fmpData  ? fmtMktCap(fmpData.mktCap)                               : '—', null],
-                ['P/E (TTM)',  fmpData  ? fmtN(fmpData.pe)                                        : '—', null],
-                ['P/S (TTM)',  fmpData  ? fmtN(fmpData.ps)                                        : '—', null],
-                ['EV/EBITDA',  fmpData  ? fmtN(fmpData.evEbitda)                                  : '—', null],
+                ['Day High',   priceData ? `$${priceData.regularMarketDayHigh?.toFixed(2)}`  : '—', null],
+                ['Day Low',    priceData ? `$${priceData.regularMarketDayLow?.toFixed(2)}`   : '—', null],
               ].map(([label, val, color]) => (
                 <div key={label} style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
                   <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
@@ -571,7 +685,7 @@ const AnalyzerTab = ({macroCtx}) => {
               <div style={{marginTop:10, borderTop:'1px solid #F5F3EF', paddingTop:8,
                 fontFamily:'IBM Plex Mono,monospace', fontSize:9,
                 color: fmpErr ? '#C8302A' : '#9A9790'}}>
-                {fmpErr || 'Market Cap / P/E / P/S / EV/EBITDA require an FMP API key — add one in ⚙ Settings (financialmodelingprep.com free tier works)'}
+                {fmpErr || 'Add an FMP API key in ⚙ Settings to unlock Fundamentals (financialmodelingprep.com free tier)'}
               </div>
             )}
           </div>
