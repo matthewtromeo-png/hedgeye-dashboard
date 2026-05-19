@@ -42,6 +42,14 @@ except ImportError:
     print("ERROR: openpyxl not installed.  Run: pip install openpyxl")
     sys.exit(1)
 
+try:
+    from pypdf import PdfReader as _PdfReader, PdfWriter as _PdfWriter
+    PYPDF_OK = True
+except ImportError:
+    PYPDF_OK = False
+    print("[WARN] pypdf not installed — large PDFs will be skipped")
+    print("       Run: pip install pypdf --break-system-packages")
+
 # ── PATHS ─────────────────────────────────────────────────────────────────────
 HEDGEYE_BASE = Path(r"C:\Users\matth\OneDrive\Desktop\Trading\hedgeye")
 REPO_ROOT    = Path(__file__).resolve().parent.parent
@@ -516,6 +524,7 @@ PDF_SOURCES = [
         "glob":       "*.pdf",
         "cache_days": 2,
         "read_n":     1,
+        "max_tokens": 8192,
         "label":      "sss (daily)",
         "prompt": (
             "Extract these fields from the Hedgeye Signal Strength Score (SSS) PDF.\n"
@@ -807,9 +816,10 @@ def _cache_valid(key: str, source_id: str, existing: dict | None) -> bool:
 
 def _pdf_page_count(path: Path) -> int:
     """Return number of pages in a PDF, or 0 if pypdf is unavailable/file unreadable."""
+    if not PYPDF_OK:
+        return 0
     try:
-        import pypdf
-        return len(pypdf.PdfReader(str(path)).pages)
+        return len(_PdfReader(str(path)).pages)
     except Exception:
         return 0
 
@@ -820,19 +830,17 @@ def _split_pdf_pages(pdf_path: Path, chunk_size: int = 50) -> list[Path]:
     Returns a list of temp Paths (one per chunk, in page order).
     Falls back to [pdf_path] unchanged if pypdf is missing.
     """
-    try:
-        import pypdf
-    except ImportError:
+    if not PYPDF_OK:
         warn("pypdf not installed — cannot split large PDF; run: pip install pypdf")
         return [pdf_path]
 
-    reader = pypdf.PdfReader(str(pdf_path))
+    reader = _PdfReader(str(pdf_path))
     total  = len(reader.pages)
     chunks: list[Path] = []
 
     for start in range(0, total, chunk_size):
         end    = min(start + chunk_size, total)
-        writer = pypdf.PdfWriter()
+        writer = _PdfWriter()
         for i in range(start, end):
             writer.add_page(reader.pages[i])
         tmp = Path(tempfile.mktemp(suffix=f'_{pdf_path.stem}_p{start+1}-{end}.pdf'))
@@ -907,6 +915,7 @@ def _call_claude_pdf(
     label: str,
     sleep_after: int = 3,
     fallback: dict | None = None,
+    max_tokens: int = 4096,
 ) -> dict | None:
     """Send one or more PDFs as document blocks, return parsed JSON or fallback on 429.
 
@@ -935,7 +944,7 @@ def _call_claude_pdf(
     def _do_call() -> dict | None:
         msg = client.messages.create(
             model="claude-haiku-4-5-20251001",
-            max_tokens=4096,
+            max_tokens=max_tokens,
             system=(
                 "You are a financial data extractor. Extract ONLY the requested fields from "
                 "this Hedgeye research document. Return ONLY valid JSON, no other text."
@@ -1059,7 +1068,8 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             print(f"  {src['label']:<36} cached  ({source_id[:60]})")
             continue
 
-        results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"], fallback=cached_val)
+        results[key]     = _call_claude_pdf(client, paths, src["prompt"], src["label"], fallback=cached_val,
+                                             max_tokens=src.get("max_tokens", 4096))
         cache_stats[key] = f"fresh ({len(paths)} file{'s' if len(paths) > 1 else ''})"
         if key == "macro_show":
             print("  [rate-limit] Sleeping 60s after macro_show...")
@@ -1189,7 +1199,8 @@ def main():
     else:
         stage = "Stage 1 + 2"
     print(f"build_macro_context.py — {stage}")
-    print(f"Output: {OUTPUT_PATH}\n")
+    print(f"Output: {OUTPUT_PATH}")
+    print(f"[info] pypdf: {'OK' if PYPDF_OK else 'NOT INSTALLED'}\n")
 
     existing = None if args.stage1_only else _load_existing()
 
