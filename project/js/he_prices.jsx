@@ -74,10 +74,10 @@ const MarketTab = ({quad, macroCtx}) => {
   const [inflStatus, setInflStatus] = React.useState('idle');
   const [lastUpdated, setLastUpdated] = React.useState(null);
 
-  const MARKET_SYMS = ['^VIX','^GSPC','QQQ','IWM','GLD','TLT','UUP','BTC-USD','^TNX','USO','GDX'];
-  const HE_SSS_MAP  = Object.fromEntries(window.HE.SSS.map(s => [s.ticker, s]));
-  const SSS_SYMS    = macroCtx?.pdf?.sss?.tickers ?? window.HE.SSS.map(s => s.ticker);
-  console.log('[MarketTab] SSS_SYMS count:', SSS_SYMS.length, macroCtx?.pdf?.sss?.tickers ? '(live)' : '(fallback Apr 20)');
+  const MARKET_SYMS  = ['^VIX','^GSPC','QQQ','IWM','GLD','TLT','UUP','BTC-USD','^TNX','USO','GDX'];
+  const SSS_SYMS     = macroCtx?.pdf?.sss?.tickers ?? [];
+  const sssDetail    = macroCtx?.pdf?.sss?.tickers_detail ?? {};
+  console.log('[MarketTab] SSS_SYMS count:', SSS_SYMS.length, macroCtx?.pdf?.sss?.tickers ? '(live)' : '(pipeline not loaded)');
 
   // Use a ref so the refresh callback always reads the latest SSS_SYMS without
   // being recreated every render (avoids stale-closure bug with [] deps).
@@ -271,18 +271,21 @@ const MarketTab = ({quad, macroCtx}) => {
             </thead>
             <tbody>
               {SSS_SYMS.map((ticker, i) => {
-                const p         = sssP[ticker];
-                const heEntry   = HE_SSS_MAP[ticker];
-                const signalPrice = heEntry?.priorClose ?? macroCtx?.levels?.[ticker]?.close;
-                const curPrice  = p?.price;
+                const p           = sssP[ticker];
+                const det         = sssDetail[ticker];
+                const signalPrice = det?.entry_price ?? macroCtx?.levels?.[ticker]?.close;
+                const daysOnList  = det?.days_on_list ?? (det?.signal_date
+                  ? Math.floor((Date.now() - new Date(det.signal_date)) / 86400000)
+                  : null);
+                const curPrice    = p?.price;
                 const sinceSignal = (curPrice && signalPrice)
                   ? ((curPrice - signalPrice) / signalPrice * 100) : null;
                 return (
                   <tr key={i} style={{borderBottom:'1px solid #F5F3EF',
                     background: sinceSignal > 20 ? 'rgba(39,80,10,0.04)' : i%2===0?'#fff':'#FAFAF8'}}>
                     <TD><span style={{fontWeight:700}}>{ticker}</span></TD>
-                    <TD style={{color:'#7A7770', fontSize:10}}>{heEntry?.sector ?? '—'}</TD>
-                    <TD style={{color:'#9A9790', fontSize:10}}>{heEntry ? `${heEntry.days}d` : '—'}</TD>
+                    <TD style={{color:'#7A7770', fontSize:10}}>{det?.sector ?? '—'}</TD>
+                    <TD style={{color:'#9A9790', fontSize:10}}>{daysOnList != null ? `${daysOnList}d` : '—'}</TD>
                     <TD right>{signalPrice ? `$${signalPrice.toFixed(2)}` : '—'}</TD>
                     <TD right style={{fontWeight:curPrice?600:400}}>
                       {curPrice ? `$${curPrice.toFixed(2)}` : '—'}

@@ -1,7 +1,9 @@
 // he_data.js — plain JS, loaded before React components
 window.HE = window.HE || {};
 
-// ── Signal Strength Stocks (Apr 20, 2026) ──────────────────────────
+// ── Signal Strength Stocks (Apr 20, 2026) — DEPRECATED ────────────
+// Use macroCtx.pdf.sss (live pipeline data) instead of this snapshot.
+// Kept only as a last-resort fallback if pipeline data is unavailable.
 window.HE.SSS = [
   {days:337,ticker:'FIVE',signalDate:'2025-05-18',priorClose:106.50,lastClose:236.30,pct:121.8,sector:'Retail',analyst:'Brian McGough'},
   {days:329,ticker:'CAT',signalDate:'2025-05-26',priorClose:343.40,lastClose:794.70,pct:131.4,sector:'Industrials',analyst:'Jay Van Sciver'},

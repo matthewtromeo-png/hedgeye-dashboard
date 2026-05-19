@@ -18,8 +18,7 @@ const SignalsTab = ({macroCtx}) => {
   const sssRemoved  = new Set(macroCtx?.pdf?.sss?.removed ?? []);
   const sssHistory  = macroCtx?.sss_history ?? [];
 
-  // Per-ticker metadata: pipeline tickers_detail first, Apr 20 snapshot as fallback
-  const HE_SSS_MAP  = Object.fromEntries(window.HE.SSS.map(s => [s.ticker, s]));
+  // Per-ticker metadata from pipeline only (tickers_detail)
   const sssDetail   = macroCtx?.pdf?.sss?.tickers_detail ?? {};
 
   const calcDays = (signalDate) => {
@@ -30,26 +29,14 @@ const SignalsTab = ({macroCtx}) => {
 
   const getMeta = (ticker) => {
     const det = sssDetail[ticker];
-    if (det) return {
-      analyst:    det.analyst    ?? null,
-      sector:     det.sector     ?? null,
+    if (!det) return null;
+    return {
+      analyst:    det.analyst     ?? null,
+      sector:     det.sector      ?? null,
       days:       det.days_on_list ?? calcDays(det.signal_date),
-      signalDate: det.signal_date ?? null,
-      entryPrice: det.entry_price ?? null,
-      lastClose:  null,
-      pct:        null,
+      signalDate: det.signal_date  ?? null,
+      entryPrice: det.entry_price  ?? null,
     };
-    const he = HE_SSS_MAP[ticker];
-    if (he) return {
-      analyst:    he.analyst    ?? null,
-      sector:     he.sector     ?? null,
-      days:       he.days       ?? null,
-      signalDate: he.signalDate ?? null,
-      entryPrice: he.priorClose ?? null,
-      lastClose:  he.lastClose  ?? null,
-      pct:        he.pct        ?? null,
-    };
-    return null;
   };
 
   // HAM from macroCtx
@@ -70,23 +57,19 @@ const SignalsTab = ({macroCtx}) => {
     return s;
   };
 
-  const rawDisplayTickers = liveTickers ?? window.HE.SSS.map(s => s.ticker);
+  const rawDisplayTickers = liveTickers ?? [];
 
-  // Cross-reference filter: hide tickers absent from all known sources with only 1★ conviction
-  const knownTickers = new Set([
-    ...window.HE.SSS.map(s => s.ticker),
-    ...Object.keys(macroCtx?.levels ?? {}),
-    ...Object.keys(hamMap),
-    ...(macroCtx?.rta?.recently_traded_tickers ?? []),
-    ...Object.keys(iiLongs),
-    ...Object.keys(iiShorts),
-  ]);
+  // The live SSS list is authoritative — any ticker in it always shows.
+  // Anything not in it is a PDF extraction artifact and gets hidden.
+  const liveSssSet = new Set(liveTickers ?? []);
   let hiddenCount = 0;
-  const filteredTickers = rawDisplayTickers.filter(ticker => {
-    if (knownTickers.has(ticker)) return true;
-    hiddenCount++;
-    return false;
-  });
+  const filteredTickers = liveTickers
+    ? rawDisplayTickers.filter(ticker => {
+        if (liveSssSet.has(ticker)) return true;
+        hiddenCount++;
+        return false;
+      })
+    : rawDisplayTickers;
 
   // Sort by days on list descending (longest first); tickers without date go to end
   const displayTickers = [...filteredTickers].sort((a, b) => {
@@ -174,7 +157,7 @@ const SignalsTab = ({macroCtx}) => {
         {!liveTickers && (
           <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#9A9790',
             background:'#F5F3EF', border:'1px solid #E4E1DA', borderRadius:6, padding:'8px 14px'}}>
-            Showing Apr 20 snapshot — run update_full.ps1 for live data
+            No pipeline data — run update_full.ps1 to populate
           </div>
         )}
       </div>
@@ -273,10 +256,6 @@ const SignalsTab = ({macroCtx}) => {
                   ['Days on Signal', selMeta?.days != null ? `${selMeta.days}d` : null],
                   ['Signal Date',    selMeta?.signalDate],
                   ['Entry Price',    selMeta?.entryPrice != null ? `$${selMeta.entryPrice.toFixed(2)}` : null],
-                  ...(selMeta?.lastClose != null
-                    ? [['Apr 20 Close', `$${selMeta.lastClose.toFixed(2)}`]] : []),
-                  ...(selMeta?.pct != null
-                    ? [['Since Signal', `${selMeta.pct >= 0 ? '+' : ''}${selMeta.pct.toFixed(1)}%`]] : []),
                 ].map(([label, val]) => (
                   <div key={label} style={{display:'flex', justifyContent:'space-between', gap:8}}>
                     <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
