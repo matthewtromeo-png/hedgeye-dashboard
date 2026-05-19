@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-18T15:33:50.519814+00:00",
+  "generated_at": "2026-05-19T12:28:31.423320+00:00",
   "source_file": "risk_range_tracker_excelworkbook.xlsx",
-  "source_modified": "2026-05-18T14:35:34+00:00",
+  "source_modified": "2026-05-19T12:14:32+00:00",
   "ticker_count": 65,
-  "row_count": 4428,
-  "latest_date": "2026-05-18",
+  "row_count": 4469,
+  "latest_date": "2026-05-19",
   "tickers": {
     "UST30Y": {
       "ticker": "UST30Y",
@@ -829,13 +829,20 @@
           "buy": 4.99,
           "sell": 5.15,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 5.14,
+          "buy": 5.02,
+          "sell": 5.17,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 5.12,
-        "buy": 4.99,
-        "sell": 5.15,
+        "date": "2026-05-19",
+        "close": 5.14,
+        "buy": 5.02,
+        "sell": 5.17,
         "signal": "BULLISH"
       }
     },
@@ -1669,13 +1676,20 @@
           "buy": 4.42,
           "sell": 4.62,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 4.61,
+          "buy": 4.45,
+          "sell": 4.64,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 4.59,
-        "buy": 4.42,
-        "sell": 4.62,
+        "date": "2026-05-19",
+        "close": 4.61,
+        "buy": 4.45,
+        "sell": 4.64,
         "signal": "BULLISH"
       }
     },
@@ -2509,12 +2523,19 @@
           "buy": 3.96,
           "sell": 4.1,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 4.07,
+          "buy": 3.97,
+          "sell": 4.1,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 4.09,
-        "buy": 3.96,
+        "date": "2026-05-19",
+        "close": 4.07,
+        "buy": 3.97,
         "sell": 4.1,
         "signal": "BULLISH"
       }
@@ -3356,13 +3377,20 @@
           "buy": 79.4,
           "sell": 80.19,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 79.54,
+          "buy": 79.4,
+          "sell": 80.16,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 79.46,
+        "date": "2026-05-19",
+        "close": 79.54,
         "buy": 79.4,
-        "sell": 80.19,
+        "sell": 80.16,
         "signal": "BULLISH"
       }
     },
@@ -4203,13 +4231,20 @@
           "buy": 107.6,
           "sell": 108.7,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 107.7,
+          "buy": 107.3,
+          "sell": 108.6,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 107.9,
-        "buy": 107.6,
-        "sell": 108.7,
+        "date": "2026-05-19",
+        "close": 107.7,
+        "buy": 107.3,
+        "sell": 108.6,
         "signal": "BEARISH"
       }
     },
@@ -5043,13 +5078,20 @@
           "buy": 7294.0,
           "sell": 7525.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 7403.0,
+          "buy": 7302.0,
+          "sell": 7505.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 7409.0,
-        "buy": 7294.0,
-        "sell": 7525.0,
+        "date": "2026-05-19",
+        "close": 7403.0,
+        "buy": 7302.0,
+        "sell": 7505.0,
         "signal": "BULLISH"
       }
     },
@@ -5883,13 +5925,20 @@
           "buy": 25403.0,
           "sell": 26843.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 26091.0,
+          "buy": 25666.0,
+          "sell": 26711.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 26225.0,
-        "buy": 25403.0,
-        "sell": 26843.0,
+        "date": "2026-05-19",
+        "close": 26091.0,
+        "buy": 25666.0,
+        "sell": 26711.0,
         "signal": "BULLISH"
       }
     },
@@ -6723,13 +6772,20 @@
           "buy": 2775.0,
           "sell": 2894.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 2775.0,
+          "buy": 2747.0,
+          "sell": 2900.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 2793.0,
-        "buy": 2775.0,
-        "sell": 2894.0,
+        "date": "2026-05-19",
+        "close": 2775.0,
+        "buy": 2747.0,
+        "sell": 2900.0,
         "signal": "BULLISH"
       }
     },
@@ -7570,13 +7626,20 @@
           "buy": 168.0,
           "sell": 183.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 174.0,
+          "buy": 168.0,
+          "sell": 182.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 176.0,
+        "date": "2026-05-19",
+        "close": 174.0,
         "buy": 168.0,
-        "sell": 183.0,
+        "sell": 182.0,
         "signal": "BULLISH"
       }
     },
@@ -8718,13 +8781,20 @@
           "buy": 4101.0,
           "sell": 4252.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 4132.0,
+          "buy": 4111.0,
+          "sell": 4245.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 4127.0,
-        "buy": 4101.0,
-        "sell": 4252.0,
+        "date": "2026-05-19",
+        "close": 4132.0,
+        "buy": 4111.0,
+        "sell": 4245.0,
         "signal": "BULLISH"
       }
     },
@@ -9558,13 +9628,20 @@
           "buy": 59620.0,
           "sell": 63411.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 60348.0,
+          "buy": 59619.0,
+          "sell": 63309.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 60831.0,
-        "buy": 59620.0,
-        "sell": 63411.0,
+        "date": "2026-05-19",
+        "close": 60348.0,
+        "buy": 59619.0,
+        "sell": 63309.0,
         "signal": "BULLISH"
       }
     },
@@ -10398,13 +10475,20 @@
           "buy": 23727.0,
           "sell": 24898.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 24308.0,
+          "buy": 23990.0,
+          "sell": 24997.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 23951.0,
-        "buy": 23727.0,
-        "sell": 24898.0,
+        "date": "2026-05-19",
+        "close": 24308.0,
+        "buy": 23990.0,
+        "sell": 24997.0,
         "signal": "BULLISH"
       }
     },
@@ -11238,13 +11322,20 @@
           "buy": 16.59,
           "sell": 19.49,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 17.82,
+          "buy": 16.56,
+          "sell": 18.97,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 18.43,
-        "buy": 16.59,
-        "sell": 19.49,
+        "date": "2026-05-19",
+        "close": 17.82,
+        "buy": 16.56,
+        "sell": 18.97,
         "signal": "BEARISH"
       }
     },
@@ -12078,13 +12169,20 @@
           "buy": 98.34,
           "sell": 99.45,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 99.02,
+          "buy": 98.47,
+          "sell": 99.71,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 99.24,
-        "buy": 98.34,
-        "sell": 99.45,
+        "date": "2026-05-19",
+        "close": 99.02,
+        "buy": 98.47,
+        "sell": 99.71,
         "signal": "BULLISH"
       }
     },
@@ -12918,13 +13016,20 @@
           "buy": 1.16,
           "sell": 1.177,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 1.164,
+          "buy": 1.157,
+          "sell": 1.171,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 1.162,
-        "buy": 1.16,
-        "sell": 1.177,
+        "date": "2026-05-19",
+        "close": 1.164,
+        "buy": 1.157,
+        "sell": 1.171,
         "signal": "BEARISH"
       }
     },
@@ -13758,13 +13863,20 @@
           "buy": 156.49,
           "sell": 159.52,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 158.94,
+          "buy": 156.49,
+          "sell": 159.62,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 158.96,
+        "date": "2026-05-19",
+        "close": 158.94,
         "buy": 156.49,
-        "sell": 159.52,
+        "sell": 159.62,
         "signal": "BULLISH"
       }
     },
@@ -14598,13 +14710,20 @@
           "buy": 1.327,
           "sell": 1.35,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 1.341,
+          "buy": 1.328,
+          "sell": 1.349,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 1.332,
-        "buy": 1.327,
-        "sell": 1.35,
+        "date": "2026-05-19",
+        "close": 1.341,
+        "buy": 1.328,
+        "sell": 1.349,
         "signal": "BEARISH"
       }
     },
@@ -15438,14 +15557,21 @@
           "buy": 0.724,
           "sell": 0.733,
           "signal": "NEUTRAL"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 0.727,
+          "buy": 0.721,
+          "sell": 0.729,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 0.727,
-        "buy": 0.724,
-        "sell": 0.733,
-        "signal": "NEUTRAL"
+        "buy": 0.721,
+        "sell": 0.729,
+        "signal": "BEARISH"
       }
     },
     "WTIC": {
@@ -16278,13 +16404,20 @@
           "buy": 98.86,
           "sell": 108.67,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 102.73,
+          "buy": 99.01,
+          "sell": 108.15,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 103.24,
-        "buy": 98.86,
-        "sell": 108.67,
+        "date": "2026-05-19",
+        "close": 102.73,
+        "buy": 99.01,
+        "sell": 108.15,
         "signal": "BULLISH"
       }
     },
@@ -17118,13 +17251,20 @@
           "buy": 104.0,
           "sell": 113.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 110.0,
+          "buy": 105.0,
+          "sell": 114.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 111.0,
-        "buy": 104.0,
-        "sell": 113.0,
+        "date": "2026-05-19",
+        "close": 110.0,
+        "buy": 105.0,
+        "sell": 114.0,
         "signal": "BULLISH"
       }
     },
@@ -17958,12 +18098,19 @@
           "buy": 2.82,
           "sell": 3.14,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 3.02,
+          "buy": 2.84,
+          "sell": 3.14,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 3.03,
-        "buy": 2.82,
+        "date": "2026-05-19",
+        "close": 3.02,
+        "buy": 2.84,
         "sell": 3.14,
         "signal": "BULLISH"
       }
@@ -18798,13 +18945,20 @@
           "buy": 4524.0,
           "sell": 4688.0,
           "signal": "NEUTRAL"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 4542.0,
+          "buy": 4500.0,
+          "sell": 4680.0,
+          "signal": "NEUTRAL"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 4547.0,
-        "buy": 4524.0,
-        "sell": 4688.0,
+        "date": "2026-05-19",
+        "close": 4542.0,
+        "buy": 4500.0,
+        "sell": 4680.0,
         "signal": "NEUTRAL"
       }
     },
@@ -19638,13 +19792,20 @@
           "buy": 6.1,
           "sell": 6.69,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 6.24,
+          "buy": 6.1,
+          "sell": 6.65,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 6.24,
         "buy": 6.1,
-        "sell": 6.69,
+        "sell": 6.65,
         "signal": "BULLISH"
       }
     },
@@ -20478,13 +20639,20 @@
           "buy": 71.0,
           "sell": 81.0,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 76.0,
+          "buy": 71.0,
+          "sell": 80.0,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 76.0,
         "buy": 71.0,
-        "sell": 81.0,
+        "sell": 80.0,
         "signal": "BEARISH"
       }
     },
@@ -21325,13 +21493,20 @@
           "buy": 404.0,
           "sell": 425.0,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 424.0,
+          "buy": 401.0,
+          "sell": 428.0,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 422.0,
-        "buy": 404.0,
-        "sell": 425.0,
+        "date": "2026-05-19",
+        "close": 424.0,
+        "buy": 401.0,
+        "sell": 428.0,
         "signal": "BEARISH"
       }
     },
@@ -22172,13 +22347,20 @@
           "buy": 291.0,
           "sell": 305.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 298.0,
+          "buy": 291.0,
+          "sell": 304.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 300.0,
+        "date": "2026-05-19",
+        "close": 298.0,
         "buy": 291.0,
-        "sell": 305.0,
+        "sell": 304.0,
         "signal": "BULLISH"
       }
     },
@@ -23019,13 +23201,20 @@
           "buy": 260.0,
           "sell": 277.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 265.0,
+          "buy": 259.0,
+          "sell": 276.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 264.0,
-        "buy": 260.0,
-        "sell": 277.0,
+        "date": "2026-05-19",
+        "close": 265.0,
+        "buy": 259.0,
+        "sell": 276.0,
         "signal": "BULLISH"
       }
     },
@@ -23866,13 +24055,20 @@
           "buy": 595.0,
           "sell": 626.0,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 611.0,
+          "buy": 595.0,
+          "sell": 624.0,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 614.0,
+        "date": "2026-05-19",
+        "close": 611.0,
         "buy": 595.0,
-        "sell": 626.0,
+        "sell": 624.0,
         "signal": "BEARISH"
       }
     },
@@ -24713,13 +24909,20 @@
           "buy": 383.0,
           "sell": 410.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 397.0,
+          "buy": 384.0,
+          "sell": 408.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 397.0,
-        "buy": 383.0,
-        "sell": 410.0,
+        "buy": 384.0,
+        "sell": 408.0,
         "signal": "BULLISH"
       }
     },
@@ -25560,11 +25763,18 @@
           "buy": 84.0,
           "sell": 90.0,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 90.0,
+          "buy": 84.0,
+          "sell": 90.0,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 87.0,
+        "date": "2026-05-19",
+        "close": 90.0,
         "buy": 84.0,
         "sell": 90.0,
         "signal": "BEARISH"
@@ -26407,14 +26617,21 @@
           "buy": 400.0,
           "sell": 445.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 410.0,
+          "buy": 395.0,
+          "sell": 445.0,
+          "signal": "NEUTRAL"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 422.0,
-        "buy": 400.0,
+        "date": "2026-05-19",
+        "close": 410.0,
+        "buy": 395.0,
         "sell": 445.0,
-        "signal": "BULLISH"
+        "signal": "NEUTRAL"
       }
     },
     "NVDA": {
@@ -27254,13 +27471,20 @@
           "buy": 215.0,
           "sell": 240.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 222.0,
+          "buy": 216.0,
+          "sell": 239.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 225.0,
-        "buy": 215.0,
-        "sell": 240.0,
+        "date": "2026-05-19",
+        "close": 222.0,
+        "buy": 216.0,
+        "sell": 239.0,
         "signal": "BULLISH"
       }
     },
@@ -28101,13 +28325,20 @@
           "buy": 182.0,
           "sell": 200.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 187.0,
+          "buy": 183.0,
+          "sell": 199.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 193.0,
-        "buy": 182.0,
-        "sell": 200.0,
+        "date": "2026-05-19",
+        "close": 187.0,
+        "buy": 183.0,
+        "sell": 199.0,
         "signal": "BULLISH"
       }
     },
@@ -28906,13 +29137,20 @@
           "buy": 76006.0,
           "sell": 83109.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 76795.0,
+          "buy": 75637.0,
+          "sell": 82531.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 77000.0,
-        "buy": 76006.0,
-        "sell": 83109.0,
+        "date": "2026-05-19",
+        "close": 76795.0,
+        "buy": 75637.0,
+        "sell": 82531.0,
         "signal": "BULLISH"
       }
     },
@@ -29501,13 +29739,20 @@
           "buy": 169.0,
           "sell": 177.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 171.0,
+          "buy": 169.0,
+          "sell": 178.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 171.0,
         "buy": 169.0,
-        "sell": 177.0,
+        "sell": 178.0,
         "signal": "BULLISH"
       }
     },
@@ -30502,13 +30747,20 @@
           "buy": 166.0,
           "sell": 181.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 176.0,
+          "buy": 169.0,
+          "sell": 180.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 174.0,
-        "buy": 166.0,
-        "sell": 181.0,
+        "date": "2026-05-19",
+        "close": 176.0,
+        "buy": 169.0,
+        "sell": 180.0,
         "signal": "BULLISH"
       }
     },
@@ -30985,10 +31237,17 @@
           "buy": 2055.0,
           "sell": 2242.0,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 2115.0,
+          "buy": 2055.0,
+          "sell": 2242.0,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 2115.0,
         "buy": 2055.0,
         "sell": 2242.0,
@@ -31230,10 +31489,17 @@
           "buy": 80.0,
           "sell": 90.0,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 84.36,
+          "buy": 80.0,
+          "sell": 90.0,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 84.36,
         "buy": 80.0,
         "sell": 90.0,
@@ -31475,10 +31741,17 @@
           "buy": 8.8,
           "sell": 9.74,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 9.06,
+          "buy": 8.8,
+          "sell": 9.74,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 9.06,
         "buy": 8.8,
         "sell": 9.74,
@@ -31720,10 +31993,17 @@
           "buy": 1.34,
           "sell": 1.48,
           "signal": "BEARISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 1.38,
+          "buy": 1.34,
+          "sell": 1.48,
+          "signal": "BEARISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
+        "date": "2026-05-19",
         "close": 1.38,
         "buy": 1.34,
         "sell": 1.48,
@@ -31902,12 +32182,19 @@
           "buy": 220.0,
           "sell": 233.0,
           "signal": "BULLISH"
+        },
+        {
+          "date": "2026-05-19",
+          "close": 224.0,
+          "buy": 219.0,
+          "sell": 233.0,
+          "signal": "BULLISH"
         }
       ],
       "latest": {
-        "date": "2026-05-18",
-        "close": 226.0,
-        "buy": 220.0,
+        "date": "2026-05-19",
+        "close": 224.0,
+        "buy": 219.0,
         "sell": 233.0,
         "signal": "BULLISH"
       }
