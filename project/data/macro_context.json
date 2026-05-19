@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-05-19T12:57:15.872980+00:00",
+  "generated_at": "2026-05-19T19:12:45.864395+00:00",
   "source_date": "2026-05-19",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1779133376.xlsx",
     "ham_holdings": "ETF_Holdings 5.19.2026.csv",
     "rta": "real-time-alerts-history-2026-05-18.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "macro_show": "HE_TMS_KM_DJ_5.18.2026.pdf@1779114005",
+    "macro_show": "HE_TMS_KM_DJ_5.19.2026.pdf@1779217309",
     "msr": "MSR_2.0.pdf@1779192278",
-    "sss": "Hedgeye - Signal Strength Stocks_ 72 Stocks (3 Added, 1 Removed).pdf@1779119331",
+    "sss": "Hedgeye - Signal Strength Stocks_ 77 Stocks (7 Added, 2 Removed).pdf@1779210337",
     "momo": "Hedgeye - MOMO Tracker _ Mag7 (-1.3, BEARISH) vs MSFT (+3.1%, BULLISH), NVDA Earnings=Wednesday.pdf@1779110388",
     "early_look": "Hedgeye - Upside-Down Momentum.pdf@1779191580",
-    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_18_2026) _ Top Movers_ OAEM (+13), CNXT (+12), IBIT(+11).pdf@1779132064",
+    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_19_2026) _ Top Movers_ CNXT (+14), XLI (+9), OAEM (+8).pdf@1779210291",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.3%), MSTR=NEUTRAL, ETFs=-$-733M D_D, SEC→Tokenized Equities Plan Ready.pdf@1779194431",
-    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_18_2026.pdf@1779111833",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Monday, May 18th, 2026.pdf@1779113972",
+    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_19_2026.pdf@1779217405",
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Tuesday, May 19th, 2026.pdf@1779217282",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf@1778506347|Hedgeye - Investing Ideas Newsletter_ May 18, 2026.pdf@1779110293",
-    "founders_choice": "Hedgeye - Founder's Choice_ Retail - Best Idea Longs & Shorts.pdf@1778592817|Hedgeye - Position Monitors _ Energy - Best Idea Longs & Shorts.pdf@1778592798",
+    "founders_choice": "Hedgeye - Founder's Choice_ Global Technology - Best Idea Longs & Shorts.pdf@1779199300|Hedgeye - Position Monitors _ Communications - Best Idea Longs & Shorts.pdf@1779199338",
     "from_desk": "Macro_Week_Summary_Notes_5.15.2026.pdf@1779110909|Macro_Week_Summary_Notes_5.8.2026.pdf@1778513480",
     "macro_research": "c829a66e47b6"
   },
@@ -3547,23 +3547,23 @@
         "depth": "SHALLOW"
       },
       "vix": {
-        "current": 18.43,
-        "lrr": null,
-        "trr": null,
-        "bucket": "INVESTABLE"
+        "current": 17.82,
+        "lrr": 18.38,
+        "trr": 18.43,
+        "bucket": null
       },
-      "cpi_nowcast": null,
+      "cpi_nowcast": 2.69,
       "growth_roc": "ACCELERATING",
       "inflation_roc": "ACCELERATING",
-      "quad_sequence": "2-2-3-2",
-      "high_beta_1m": 19.4,
-      "low_beta_1m": -3.6,
+      "quad_sequence": "1Q26-4Q25-2Q25-3Q26E",
+      "high_beta_1m": 3.0,
+      "low_beta_1m": -1.7,
       "keith_commentary": [
-        "Bond yields hitting new inflation cycle highs - short long-term Treasury bonds (TLT, ZROZ) and rate-sensitive sectors (XLU, ITB)",
-        "Long commodities vs. short Treasuries remains easy macro position with commodity inflation broadening (Nat Gas +3%, Soybeans +2%)",
-        "VIX in investable bucket at 16.59-19.49 risk range signal; NVDA reporting Wednesday (bullish catalyst)",
-        "Street High Inflation Nowcast maintained for May and coming quarters",
-        "Top 10 stocks (GOOGL, NVDA, AAPL) driving 73% of S&P 500 returns since March 31, 2026"
+        "Indonesia (IDX) crashing -30% since JAN, our 1st Macro Crash Call of 2026",
+        "China (CNXT) up +0.9% in Shanghai while Dr. KOSPI trading epic High Beta Mo down -3.3% on session, correction -8.9% holding @Hedgeye TRADE Support",
+        "CRB Commodities Index printed new Inflation Cycle Highs at 405; good spot to buy-more Copper (CPER)",
+        "Eggs have inflated +90% in a month - significant consumer price pressure",
+        "72% of SPY stocks up avg +1.8% yesterday but High Beta Momentum down -6.5% to -19.5% since peaking +59% YTD - plenty to re-load on Long Side after drawdown"
       ]
     },
     "msr": {
@@ -3581,584 +3581,637 @@
       "support": 7350.0
     },
     "sss": {
-      "count": 71,
+      "count": 77,
       "added": [
-        "BJRI",
-        "ABNB",
-        "PEB"
+        "CPAY",
+        "HLT",
+        "TXG",
+        "LYV",
+        "CBRS",
+        "FWONK",
+        "LLY"
       ],
       "removed": [
-        "BA"
+        "ABNB",
+        "PEB"
       ],
       "tickers": [
         "CAT",
         "OUT",
         "SPHR",
-        "CAPY",
-        "STRK",
-        "AMAT",
+        "GASP",
+        "STLK",
+        "ANAT",
         "ENB",
         "DAS",
-        "CAYA",
-        "ACME",
+        "CAVA",
+        "ACHC",
         "MUSA",
-        "SWIR",
+        "SMPL",
         "RSI",
+        "CZR",
         "FCF8",
-        "ULS",
+        "NLS",
         "MAR",
-        "CSX",
-        "MRVL",
+        "CBX",
+        "MNRL",
         "LRCX",
         "SITM",
-        "NVDA",
-        "AMZN",
-        "VIE",
+        "NYDA",
+        "AMP2",
+        "VIK",
         "GOOGL",
         "AAPL",
-        "ROKU",
+        "ROOU",
         "HST",
-        "GLASP",
+        "GLABF",
         "CURLF",
         "SBUX",
         "ROK",
         "CP",
         "LAMR",
-        "TWLO",
-        "LPST",
+        "VMEO",
+        "LBST",
         "LFMD",
         "UNH",
-        "SVT",
-        "CACC",
+        "SXT",
+        "CAGC",
         "XYZ",
-        "CARR",
+        "CARS",
         "APD",
-        "MARA",
-        "CRCT",
-        "AFRM",
+        "NARA",
+        "CRCL",
+        "AFRI",
         "URI",
-        "DOM",
+        "DOW",
         "LYB",
         "RIO",
         "BHP",
-        "AKAM",
+        "ASGM",
         "TTWO",
         "APLE",
-        "LOTMY",
-        "GIM",
+        "LOTHY",
+        "CMI",
         "WRBY",
-        "DDOG",
-        "MNST",
-        "PPAB",
+        "DOOO",
+        "INST",
+        "PRMB",
         "PM",
-        "AZTA",
-        "BLMN",
+        "AZTAF",
+        "BLMNF",
         "V",
-        "ATRO",
+        "ATRD",
         "ILMN",
         "NVO",
-        "SUP",
-        "BTI",
+        "RHP",
+        "RTI",
         "BJRI",
-        "ABNB",
-        "PEB"
+        "CPAY",
+        "HLT",
+        "TXG",
+        "LYV",
+        "FWONK",
+        "LLY",
+        "CBRS"
       ],
       "tickers_detail": {
         "CAT": {
-          "signal_date": "2025-05-26",
+          "signal_date": "2026-05-26",
           "entry_price": 343.4,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 357
+          "days_on_list": 358
         },
         "OUT": {
-          "signal_date": "2025-11-17",
+          "signal_date": "2026-01-11",
           "entry_price": 22.1,
           "sector": "Communications",
           "analyst": "Andrew Freedman",
-          "days_on_list": 182
+          "days_on_list": 183
         },
         "SPHR": {
           "signal_date": "2026-01-12",
           "entry_price": 95.2,
           "sector": "Communications",
           "analyst": "Andrew Freedman",
-          "days_on_list": 126
+          "days_on_list": 127
         },
-        "CAPY": {
-          "signal_date": "2026-01-18",
+        "GASP": {
+          "signal_date": "2026-01-19",
           "entry_price": 640.4,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 119
+          "days_on_list": 120
         },
-        "STRK": {
-          "signal_date": "2026-02-22",
+        "STLK": {
+          "signal_date": "2026-02-02",
           "entry_price": 4.6,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 105
+          "days_on_list": 106
         },
-        "AMAT": {
-          "signal_date": "2026-02-28",
+        "ANAT": {
+          "signal_date": "2026-02-09",
           "entry_price": 322.5,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
-          "days_on_list": 98
+          "days_on_list": 99
         },
         "ENB": {
           "signal_date": "2026-02-23",
           "entry_price": 51.5,
           "sector": "Energy",
           "analyst": "Fernando Valle",
-          "days_on_list": 84
+          "days_on_list": 85
         },
         "DAS": {
           "signal_date": "2026-02-23",
           "entry_price": 51.6,
           "sector": "Energy",
           "analyst": "Fernando Valle",
-          "days_on_list": 84
+          "days_on_list": 85
         },
-        "CAYA": {
+        "CAVA": {
           "signal_date": "2026-03-02",
           "entry_price": 82.5,
           "sector": "Restaurants",
           "analyst": "Bennett Cheer",
-          "days_on_list": 77
+          "days_on_list": 78
         },
-        "ACME": {
+        "ACHC": {
           "signal_date": "2026-03-02",
           "entry_price": 23.4,
           "sector": "Healthcare",
           "analyst": "Tom Tobin",
-          "days_on_list": 77
+          "days_on_list": 78
         },
         "MUSA": {
           "signal_date": "2026-03-09",
           "entry_price": 438.4,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 70
+          "days_on_list": 71
         },
-        "SWIR": {
+        "SMPL": {
           "signal_date": "2026-03-09",
           "entry_price": 14.0,
           "sector": "Retail",
           "analyst": "Brian McGough",
-          "days_on_list": 79
+          "days_on_list": 71
         },
         "RSI": {
           "signal_date": "2026-03-16",
           "entry_price": 20.3,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 63
+          "days_on_list": 64
+        },
+        "CZR": {
+          "signal_date": "2026-03-16",
+          "entry_price": 28.1,
+          "sector": "GLL",
+          "analyst": "Sean Jenkins",
+          "days_on_list": 64
         },
         "FCF8": {
           "signal_date": "2026-03-23",
           "entry_price": 192.1,
           "sector": "Financials",
           "analyst": "Josh Steiner",
-          "days_on_list": 56
+          "days_on_list": 57
         },
-        "ULS": {
+        "NLS": {
           "signal_date": "2026-03-30",
           "entry_price": 83.9,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 49
+          "days_on_list": 50
         },
         "MAR": {
           "signal_date": "2026-04-10",
           "entry_price": 354.1,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 38
+          "days_on_list": 39
         },
-        "CSX": {
+        "CBX": {
           "signal_date": "2026-04-10",
           "entry_price": 42.2,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 38
+          "days_on_list": 39
         },
-        "MRVL": {
+        "MNRL": {
           "signal_date": "2026-04-10",
           "entry_price": 128.5,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
-          "days_on_list": 38
+          "days_on_list": 39
         },
         "LRCX": {
           "signal_date": "2026-04-10",
-          "entry_price": 263.7,
+          "entry_price": 283.7,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
-          "days_on_list": 38
+          "days_on_list": 39
         },
         "SITM": {
           "signal_date": "2026-04-10",
           "entry_price": 420.3,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
-          "days_on_list": 38
+          "days_on_list": 39
         },
-        "NVDA": {
+        "NYDA": {
           "signal_date": "2026-04-10",
-          "entry_price": 188.8,
+          "entry_price": 188.6,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
-          "days_on_list": 38
+          "days_on_list": 39
         },
-        "AMZN": {
+        "AMP2": {
           "signal_date": "2026-04-10",
           "entry_price": 238.4,
           "sector": "Retail",
           "analyst": "Brian McGough",
-          "days_on_list": 38
+          "days_on_list": 39
         },
-        "VIE": {
+        "VIK": {
           "signal_date": "2026-04-13",
           "entry_price": 77.1,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 35
+          "days_on_list": 36
         },
         "GOOGL": {
           "signal_date": "2026-04-16",
           "entry_price": 337.6,
           "sector": "Communications",
           "analyst": "Andrew Freedman",
-          "days_on_list": 32
+          "days_on_list": 33
         },
         "AAPL": {
           "signal_date": "2026-04-16",
           "entry_price": 262.5,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
-          "days_on_list": 32
+          "days_on_list": 33
         },
-        "ROKU": {
+        "ROOU": {
           "signal_date": "2026-04-20",
           "entry_price": 115.5,
           "sector": "Communications",
           "analyst": "Andrew Freedman",
-          "days_on_list": 28
+          "days_on_list": 29
         },
         "HST": {
           "signal_date": "2026-04-20",
           "entry_price": 21.2,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 28
+          "days_on_list": 29
         },
-        "GLASP": {
+        "GLABF": {
           "signal_date": "2026-04-20",
           "entry_price": 8.7,
           "sector": "Cannabis",
           "analyst": "Bennett Cheer",
-          "days_on_list": 28
+          "days_on_list": 29
         },
         "CURLF": {
           "signal_date": "2026-04-20",
           "entry_price": 2.8,
           "sector": "Cannabis",
           "analyst": "Bennett Cheer",
-          "days_on_list": 28
+          "days_on_list": 29
         },
         "SBUX": {
           "signal_date": "2026-04-21",
           "entry_price": 97.3,
           "sector": "Restaurants",
           "analyst": "Bennett Cheer",
-          "days_on_list": 27
+          "days_on_list": 28
         },
         "ROK": {
           "signal_date": "2026-04-21",
           "entry_price": 413.8,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 27
+          "days_on_list": 28
         },
         "CP": {
           "signal_date": "2026-04-21",
           "entry_price": 82.4,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 27
+          "days_on_list": 28
         },
         "LAMR": {
           "signal_date": "2026-04-21",
           "entry_price": 134.2,
           "sector": "Communications",
           "analyst": "Andrew Freedman",
-          "days_on_list": 27
+          "days_on_list": 28
         },
-        "TWLO": {
+        "VMEO": {
           "signal_date": "2026-04-22",
           "entry_price": 150.4,
           "sector": "Software",
           "analyst": "Andrew Freedman",
-          "days_on_list": 26
+          "days_on_list": 27
         },
-        "LPST": {
+        "LBST": {
           "signal_date": "2026-04-22",
           "entry_price": 6.8,
           "sector": "Healthcare",
           "analyst": "Tom Tobin",
-          "days_on_list": 26
+          "days_on_list": 27
         },
         "LFMD": {
           "signal_date": "2026-04-23",
           "entry_price": 4.4,
           "sector": "Healthcare",
           "analyst": "Tom Tobin",
-          "days_on_list": 25
+          "days_on_list": 26
         },
         "UNH": {
           "signal_date": "2026-04-24",
           "entry_price": 352.7,
           "sector": "Healthcare",
           "analyst": "Tom Tobin",
-          "days_on_list": 24
+          "days_on_list": 25
         },
-        "SVT": {
+        "SXT": {
           "signal_date": "2026-04-27",
           "entry_price": 122.4,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 21
+          "days_on_list": 22
         },
-        "CACC": {
+        "CAGC": {
           "signal_date": "2026-04-28",
           "entry_price": 510.1,
           "sector": "Financials",
           "analyst": "Josh Steiner",
-          "days_on_list": 20
+          "days_on_list": 21
         },
         "XYZ": {
           "signal_date": "2026-04-28",
           "entry_price": 70.0,
           "sector": "Financials",
           "analyst": "Josh Steiner",
-          "days_on_list": 20
+          "days_on_list": 21
         },
-        "CARR": {
+        "CARS": {
           "signal_date": "2026-04-28",
-          "entry_price": 61.7,
+          "entry_price": 81.7,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 20
+          "days_on_list": 21
         },
         "APD": {
           "signal_date": "2026-04-28",
           "entry_price": 303.9,
           "sector": "Materials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 20
+          "days_on_list": 21
         },
-        "MARA": {
+        "NARA": {
           "signal_date": "2026-05-04",
           "entry_price": 11.5,
           "sector": "Digital Assets",
           "analyst": "Josh Steiner",
-          "days_on_list": 14
+          "days_on_list": 15
         },
-        "CRCT": {
+        "CRCL": {
           "signal_date": "2026-05-04",
           "entry_price": 115.4,
           "sector": "Digital Assets",
           "analyst": "Josh Steiner",
-          "days_on_list": 14
+          "days_on_list": 15
         },
-        "AFRM": {
+        "AFRI": {
           "signal_date": "2026-05-04",
-          "entry_price": 67.3,
+          "entry_price": 87.3,
           "sector": "Financials",
           "analyst": "Josh Steiner",
-          "days_on_list": 14
+          "days_on_list": 15
         },
         "URI": {
           "signal_date": "2026-05-04",
           "entry_price": 931.0,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 14
+          "days_on_list": 15
         },
-        "DOM": {
+        "DOW": {
           "signal_date": "2026-05-04",
           "entry_price": 40.9,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 14
+          "days_on_list": 15
         },
         "LYB": {
           "signal_date": "2026-05-04",
           "entry_price": 76.9,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 14
+          "days_on_list": 15
         },
         "RIO": {
           "signal_date": "2026-05-04",
           "entry_price": 99.0,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 14
+          "days_on_list": 15
         },
         "BHP": {
           "signal_date": "2026-05-04",
           "entry_price": 77.9,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 14
+          "days_on_list": 15
         },
-        "AKAM": {
+        "ASGM": {
           "signal_date": "2026-05-05",
           "entry_price": 115.5,
           "sector": "Software",
           "analyst": "Andrew Freedman",
-          "days_on_list": 13
+          "days_on_list": 14
         },
         "TTWO": {
           "signal_date": "2026-05-05",
           "entry_price": 222.9,
           "sector": "Communications",
           "analyst": "Andrew Freedman",
-          "days_on_list": 13
+          "days_on_list": 14
         },
         "APLE": {
           "signal_date": "2026-05-05",
           "entry_price": 13.5,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 13
+          "days_on_list": 14
         },
-        "LOTMY": {
+        "LOTHY": {
           "signal_date": "2026-05-06",
           "entry_price": 32.0,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 12
+          "days_on_list": 13
         },
-        "GIM": {
-          "signal_date": "2026-05-06",
+        "CMI": {
+          "signal_date": "2026-05-08",
           "entry_price": 709.5,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 12
+          "days_on_list": 13
         },
         "WRBY": {
           "signal_date": "2026-05-07",
           "entry_price": 26.3,
           "sector": "Retail",
           "analyst": "Brian McGough",
-          "days_on_list": 11
+          "days_on_list": 12
         },
-        "DDOG": {
+        "DOOO": {
           "signal_date": "2026-05-11",
           "entry_price": 200.2,
           "sector": "Software",
           "analyst": "Andrew Freedman",
-          "days_on_list": 7
+          "days_on_list": 8
         },
-        "MNST": {
+        "INST": {
           "signal_date": "2026-05-11",
-          "entry_price": 86.3,
+          "entry_price": 88.3,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 7
+          "days_on_list": 8
         },
-        "PPAB": {
+        "PRMB": {
           "signal_date": "2026-05-11",
           "entry_price": 23.2,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 7
+          "days_on_list": 8
         },
         "PM": {
           "signal_date": "2026-05-12",
           "entry_price": 182.1,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 6
+          "days_on_list": 7
         },
-        "AZTA": {
+        "AZTAF": {
           "signal_date": "2026-05-12",
-          "entry_price": 105.5,
+          "entry_price": 106.5,
           "sector": "Retail",
           "analyst": "Brian McGough",
-          "days_on_list": 6
+          "days_on_list": 7
         },
-        "BLMN": {
+        "BLMNF": {
           "signal_date": "2026-05-12",
           "entry_price": 8.4,
           "sector": "Restaurants",
           "analyst": "Bennett Cheer",
-          "days_on_list": 6
+          "days_on_list": 7
         },
         "V": {
           "signal_date": "2026-05-12",
           "entry_price": 325.6,
           "sector": "Financials",
           "analyst": "Josh Steiner",
-          "days_on_list": 6
+          "days_on_list": 7
         },
-        "ATRO": {
+        "ATRD": {
           "signal_date": "2026-05-12",
           "entry_price": 73.8,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
-          "days_on_list": 6
+          "days_on_list": 7
         },
         "ILMN": {
           "signal_date": "2026-05-12",
           "entry_price": 144.9,
           "sector": "Healthcare",
           "analyst": "Tom Tobin",
-          "days_on_list": 6
+          "days_on_list": 7
         },
         "NVO": {
           "signal_date": "2026-05-12",
           "entry_price": 46.5,
           "sector": "Healthcare",
           "analyst": "Tom Tobin",
-          "days_on_list": 6
+          "days_on_list": 7
         },
-        "SUP": {
+        "RHP": {
           "signal_date": "2026-05-13",
           "entry_price": 107.1,
           "sector": "GLL",
           "analyst": "Sean Jenkins",
-          "days_on_list": 5
+          "days_on_list": 6
         },
-        "BTI": {
+        "RTI": {
           "signal_date": "2026-05-13",
           "entry_price": 64.6,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
-          "days_on_list": 5
+          "days_on_list": 6
         },
         "BJRI": {
           "signal_date": "2026-05-18",
           "entry_price": 42.0,
           "sector": "Restaurants",
           "analyst": "Bennett Cheer",
+          "days_on_list": 1
+        },
+        "CPAY": {
+          "signal_date": "2026-05-19",
+          "entry_price": 346.9,
+          "sector": "Financials",
+          "analyst": "Josh Steiner",
           "days_on_list": 0
         },
-        "ABNB": {
-          "signal_date": "2026-05-18",
-          "entry_price": 134.9,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
+        "HLT": {
+          "signal_date": "2026-05-19",
+          "entry_price": null,
+          "sector": null,
+          "analyst": null,
           "days_on_list": 0
         },
-        "PEB": {
-          "signal_date": "2026-05-18",
-          "entry_price": 14.3,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
+        "TXG": {
+          "signal_date": "2026-05-19",
+          "entry_price": 21.7,
+          "sector": "Healthcare",
+          "analyst": "Tom Tobin",
+          "days_on_list": 0
+        },
+        "LYV": {
+          "signal_date": "2026-05-19",
+          "entry_price": 164.7,
+          "sector": "Communications",
+          "analyst": "Andrew Freedman",
+          "days_on_list": 0
+        },
+        "FWONK": {
+          "signal_date": "2026-05-19",
+          "entry_price": 90.0,
+          "sector": "Global Tech",
+          "analyst": "Felix Wang",
+          "days_on_list": 0
+        },
+        "LLY": {
+          "signal_date": "2026-05-19",
+          "entry_price": 1012.0,
+          "sector": "Healthcare",
+          "analyst": "Tom Tobin",
+          "days_on_list": 0
+        },
+        "CBRS": {
+          "signal_date": "2026-05-19",
+          "entry_price": 323.1,
+          "sector": "Global Tech",
+          "analyst": "Felix Wang",
           "days_on_list": 0
         }
       }
@@ -4326,13 +4379,13 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "CLOX",
+          "ticker": "BUXX",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "BUXX",
+          "ticker": "CLOX",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -4368,7 +4421,7 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "COM",
+          "ticker": "QTUM",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -4380,13 +4433,13 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "QTUM",
+          "ticker": "XTL",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "IBIT",
+          "ticker": "DRAM",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -4404,7 +4457,7 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "TUR",
+          "ticker": "COM",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -4416,49 +4469,43 @@
           "signal": "BULLISH"
         },
         {
-          "ticker": "XTL",
+          "ticker": "NORW",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
         },
         {
-          "ticker": "NORW",
+          "ticker": "SLX",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
         },
         {
           "ticker": "EQRR",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
-        },
-        {
-          "ticker": "ALLW",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
         },
         {
           "ticker": "AAAU",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "IBIT",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
         },
         {
           "ticker": "SOYB",
           "weight": null,
           "daily_move": null,
-          "signal": "NEUTRAL"
+          "signal": "BULLISH"
         },
         {
-          "ticker": "SLX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "NEUTRAL"
-        },
-        {
-          "ticker": "DRAM",
+          "ticker": "ROBO",
           "weight": null,
           "daily_move": null,
           "signal": "BULLISH"
@@ -4467,62 +4514,62 @@
           "ticker": "EWW",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
-        },
-        {
-          "ticker": "XOP",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
         },
         {
           "ticker": "CPER",
           "weight": null,
           "daily_move": null,
-          "signal": "NEUTRAL"
+          "signal": "BULLISH"
         },
         {
-          "ticker": "MSOS",
+          "ticker": "XOP",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
+        },
+        {
+          "ticker": "DBB",
+          "weight": null,
+          "daily_move": null,
+          "signal": "BULLISH"
         },
         {
           "ticker": "OIH",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
         },
         {
           "ticker": "BNO",
           "weight": null,
           "daily_move": null,
-          "signal": "BEARISH"
+          "signal": "BULLISH"
         }
       ],
       "top_movers": [
         {
-          "ticker": "OAEM",
-          "move": "+13"
-        },
-        {
           "ticker": "CNXT",
-          "move": "+12"
+          "move": "+14"
         },
         {
-          "ticker": "IBIT",
-          "move": "+11"
+          "ticker": "XLI",
+          "move": "+9"
         },
         {
-          "ticker": "IWM",
-          "move": "+7"
+          "ticker": "OAEM",
+          "move": "+8"
         },
         {
-          "ticker": "COM",
+          "ticker": "XTL",
+          "move": "+6"
+        },
+        {
+          "ticker": "SOYB",
           "move": "+6"
         }
       ],
-      "rerank_date": "2026-05-18"
+      "rerank_date": "2026-05-19"
     },
     "btc": {
       "BTC": {
@@ -4552,234 +4599,239 @@
       }
     },
     "call_summary": {
-      "date": "2026-05-18",
-      "quad": 2,
+      "date": "2026-05-19",
+      "quad": 3,
       "key_points": [
-        "Bond yields reached new inflation cycle highs; Hedgeye maintains long commodities versus short Treasuries positioning due to accelerating inflation expectations",
-        "CRB commodity index up 30%+ over three months, oil up 69%; utilities, long-duration bonds, and housing-related exposures continue to deteriorate",
-        "VIX remains in investable bucket; preference for signal strength and momentum over valuation-based investing",
-        "Higher-for-longer inflation remains dominant macro framework driven by fiscal spending, commodity strength, and rising rates",
-        "Congress advancing major fiscal packages ($580B highway, $350B defense, $72-73B immigration) as additional inflationary catalysts"
+        "Inflation nowcast for May increased to 4.26%; energy inputs percolating into broader categories with rising bond yields",
+        "Fed futures pricing ~30% probability of second rate hike by mid-2027, first time reflected in forward pricing",
+        "Goldman Sachs High Beta Momentum basket down 19.5% over 3 days, emphasizing importance of portfolio asymmetry",
+        "GLP-1 oral adoption accelerating with falling barriers (cost, access); Medicare bridge program at $50 copay launching mid-year",
+        "Potential Quad 3 transition risk developing into July/August with draw-down in U.S. oil inventories flagged as non-linear risk"
       ],
       "trades_mentioned": [
-        "AMZN: Real-time alert to buy on Friday at low end of range",
-        "CASY: Added via real-time alert on Friday",
-        "BJRI: Moved to top of Long Bias list, signal flipped from bearish to bullish",
-        "DGX: Moved from Short to Long Bench last Friday",
-        "ALGN: Dropped from Long Bench",
-        "ZTS: Dropped from Long Bench"
+        "RHP elevated to Active Best Idea Long on accelerating RevPAR",
+        "CMG flagged as Active Best Idea Short on CEO behavior and brand mix deterioration",
+        "MZTI flagged as Active Best Idea Short on commodity inflation headwinds",
+        "CARR added to Active Long positions as non-consensus HVAC play",
+        "AFRM near low end of risk range on decelerating volume - target entry setup"
       ],
-      "keith_outlook": "Maintain preference for signal strength and momentum investing within Quad 2 backdrop characterized by accelerating inflation, rising commodity prices, and stronger dollar; valuation concerns secondary to trend-following positioning.",
+      "keith_outlook": "Market facing converging inflationary pressures and rising yields with potential for second rate hike by mid-2027; emphasis on portfolio asymmetry and balanced exposure as consensus momentum baskets correct sharply while selective names with strong signals outperform.",
       "ticker_mentions": {
-        "BJRI": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Traffic accelerating ~6% vs street 2%, marketing shifted to Q2 for graduation season, new menu items driving comps",
-          "catalysts": [
-            "Activity-based labor model scaling in Q3",
-            "Flexible pricing supporting ~4% comp",
-            "National Burger Month product launches"
-          ],
-          "signal": "BULLISH"
-        },
-        "AMZN": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Agentic commerce themes and competitive pressure on freight/logistics incumbents",
-          "catalysts": [
-            "Real-time buy alert",
-            "Industrial and logistics ecosystem pressures"
-          ],
-          "signal": "BULLISH"
-        },
-        "DGX": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Healthcare macro forecast accelerating into Q2 with GLP-1 tailwind as key driver",
-          "catalysts": [
-            "GLP-1 knock-on effects presentation next week",
-            "Signal-driven position pivoting"
-          ],
-          "signal": "BULLISH"
-        },
-        "ROKU": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "World Cup pre-marketing phase expected to open advertising budgets Q2-Q3; political ad spending provides revenue tailwind",
-          "catalysts": [
-            "World Cup advertising acceleration",
-            "Political ad spending",
-            "Stanley Druckermiller 13F disclosure"
-          ],
-          "signal": "BULLISH"
-        },
-        "CEG": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Preferred utility short; Three Mile Island restart facing significant delays",
-          "catalysts": [
-            "Three Mile Island restart delays",
-            "Worsening utility sector fundamentals"
-          ],
-          "signal": "BEARISH"
-        },
-        "NEE": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Poor long-term capital allocation strategy and weak returns in non-regulated renewable business",
-          "catalysts": [
-            "$67 billion acquisition of Dominion Energy"
-          ],
-          "signal": "BEARISH"
-        },
-        "ODFL": {
-          "pod1_revenue": "DECELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Came off signal strength; Amazon competitive pressure and broker liability emerging risks",
-          "catalysts": [
-            "Amazon competitive pressure",
-            "Broker liability issues"
-          ],
-          "signal": "BEARISH"
-        },
-        "CAT": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Benefits from signal strength and potential federal infrastructure spending support",
-          "catalysts": [
-            "Federal infrastructure spending",
-            "$580B highway bill"
-          ],
-          "signal": "NEUTRAL"
-        },
-        "VIK": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Buy on pullback from all-time high; strong quarter with underappreciated long-term P&L trajectory",
-          "catalysts": [
-            "Strong quarterly results",
-            "Top 30 ranking on signal strength list"
-          ],
-          "signal": "BULLISH"
-        },
-        "WRBY": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Google I/O conference (May 19-20) expected to feature GOOGL-WRBY smart glasses collaboration",
-          "catalysts": [
-            "Google I/O smart glasses announcement potential",
-            "TAM expansion across WRBY/Meta/Apple platforms"
-          ],
-          "signal": "BULLISH"
-        },
-        "YSWY": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Recent IPO potentially more attractive on valuation than CASY for missed opportunity investors",
-          "catalysts": [
-            "Eight Wall Street initiations mostly buys",
-            "Fits three-ines framework (gasoline, caffeine, nicotine)"
-          ],
-          "signal": "BULLISH"
-        },
-        "BTI": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "FDA changes expected to materially shift non-combustible nicotine sales",
-          "catalysts": [
-            "FDA regulatory changes",
-            "Studio session discussing changes planned"
-          ],
-          "signal": "BULLISH"
-        },
-        "NVDA": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "AI infrastructure demand trends; frontier AI labs increasing token pricing to offset operating losses",
-          "catalysts": [
-            "AI-focused discussion scheduled",
-            "Frontier AI lab expansion",
-            "Token pricing increases"
-          ],
-          "signal": "BULLISH"
-        },
-        "VST": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Signal strength short with debt-related concerns following recent acquisitions",
-          "catalysts": [
-            "Recent acquisition debt concerns"
-          ],
-          "signal": "BEARISH"
-        },
-        "ALGN": {
+        "CMG": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": "CONTRACTING",
-          "key_thesis": "Dropped from Long Bench due to weak quad factor score and deteriorating consumer metrics",
+          "key_thesis": "CEO behavior disconnected from labor conditions; new value menu signals downward brand mix shift to pressured consumer",
           "catalysts": [
-            "Poor healthcare macro forecast"
+            "CEO credibility concerns",
+            "Brand mix deterioration",
+            "Consumer cohort pressure"
           ],
           "signal": "BEARISH"
         },
-        "ZTS": {
+        "MZTI": {
           "pod1_revenue": null,
           "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Dropped from Long Bench; anticipated livestock inflation tailwind did not materialize",
-          "catalysts": [
-            "Failed livestock inflation thesis"
+          "gross_margin": "CONTRACTING",
+          "key_thesis": "Staples commodities inflationary; soybeans key cost input for livestock protein and sauces; China purchasing $17B in agricultural products driving 25M metric tons incremental demand",
+          "catalogs": [
+            "Soybean price inflation",
+            "China agricultural purchases",
+            "Commodity input costs"
           ],
           "signal": "BEARISH"
         },
-        "D": {
+        "RHP": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": "BEAT",
+          "gross_margin": null,
+          "key_thesis": "Hotel RevPAR accelerating beyond expectations; cleaner H2 setup vs peers due to convention/group orientation; renovation headwinds turning to tailwinds",
+          "catalysts": [
+            "H2 2026 acceleration",
+            "2027 further acceleration",
+            "Renovation tailwinds",
+            "Q1 EBITDA beat"
+          ],
+          "signal": "BULLISH"
+        },
+        "LLY": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "GLP-1 oral adoption accelerating with falling cost/access barriers; Medicare bridge program at $50 copay expanding addressable population; higher quality compound vs NVO with broader pipeline",
+          "catalysts": [
+            "Medicare bridge program mid-year launch",
+            "Oral access expansion",
+            "Physician adoption"
+          ],
+          "signal": "BULLISH"
+        },
+        "NVO": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "GLP-1 adoption curve accelerating; oral options removing needle barrier; direct-access platforms proliferating; Medicare bridge program expanding addressable population",
+          "catalysts": [
+            "Medicare bridge program launch",
+            "Oral formulation adoption",
+            "Direct-access platforms"
+          ],
+          "signal": "BULLISH"
+        },
+        "CAVA": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Capturing cyclical health trend becoming structural; 43% of foot traffic from $100K+ median income households; pod-1 acceleration expected to continue Q2 with potential ~10% full-year comp",
+          "catalysts": [
+            "Q1 pod-1 acceleration continuing",
+            "Earnings tonight",
+            "Easing comps in Q2"
+          ],
+          "signal": "BULLISH"
+        },
+        "CARR": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Acquisition target viewed as high-multiple regulated utility with structurally capped returns despite data-center exposure",
+          "key_thesis": "High-quality non-consensus HVAC play; favorable sector setup; example of portfolio asymmetry vs consensus momentum basket",
           "catalysts": [
-            "$67 billion acquisition by NextEra"
+            "HVAC sector favorability",
+            "Portfolio diversification"
+          ],
+          "signal": "BULLISH"
+        },
+        "GOOGL": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Two-day Google I/O event begins today with key product releases including Google Glasses (2026 launch) and 'Spark' AI agent response to OpenAI's OpenClaw",
+          "catalysts": [
+            "Google I/O event today",
+            "Google Glasses launch",
+            "AI agent 'Spark' details",
+            "Revenue trajectory clarity"
+          ],
+          "signal": "BULLISH"
+        },
+        "NOW": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Preferred enterprise application software name if forced to choose; broader software sector negatively positioned",
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "DDOG": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "One of top two software names; on Hedgeye's top 30 signal strength stocks list",
+          "catalysts": [
+            "Signal strength ranking"
+          ],
+          "signal": "BULLISH"
+        },
+        "TWLO": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Top software name; on Hedgeye's top 30 signal strength stocks list",
+          "catalysts": [
+            "Signal strength ranking"
+          ],
+          "signal": "BULLISH"
+        },
+        "HD": {
+          "pod1_revenue": null,
+          "eps_trend": "IN_LINE",
+          "gross_margin": null,
+          "key_thesis": "Revenue, profit, EPS, and cash flow all approximately flat; performance linked to lack of housing market improvement",
+          "catalysts": [
+            "Housing market conditions"
           ],
           "signal": "NEUTRAL"
+        },
+        "AS": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": "BEAT",
+          "gross_margin": "EXPANDING",
+          "key_thesis": "Arcteryx +33% revenue, Salomon +42%; top-line growth accelerated 500bps QoQ; EBIT growth +46% vs +18% prior quarter with significant flow-through acceleration",
+          "catalysts": [
+            "Q1 earnings beat",
+            "EBIT acceleration",
+            "Easy 2Q comps",
+            "Retail expansion to 400-500 stores per brand"
+          ],
+          "signal": "BULLISH"
+        },
+        "AFRM": {
+          "pod1_revenue": "DECELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Near low end of risk range on decelerating volume (target entry setup); positioned to benefit from K-shape consumer dynamics providing relief for stressed lower-income consumers dealing with inflation",
+          "catalysts": [
+            "Volume stabilization",
+            "K-shape consumer dynamics"
+          ],
+          "signal": "BULLISH"
+        },
+        "PEB": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Flagged as potential short as RevPAR cycle matures and H1 one-off tailwinds cycle; no active position yet",
+          "catalysts": [
+            "RevPAR cycle maturation",
+            "One-off tailwinds cycling"
+          ],
+          "signal": "BEARISH"
+        },
+        "XHR": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Flagged as potential short as RevPAR cycle matures and H1 one-off tailwinds cycle; no active position yet",
+          "catalysts": [
+            "RevPAR cycle maturation",
+            "One-off tailwinds cycling"
+          ],
+          "signal": "BEARISH"
+        },
+        "DRH": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Flagged as potential short as RevPAR cycle matures and H1 one-off tailwinds cycle; no active position yet",
+          "catalysts": [
+            "RevPAR cycle maturation",
+            "One-off tailwinds cycling"
+          ],
+          "signal": "BEARISH"
         }
       }
     },
     "macro_show_notes": {
       "key_points": [
-        "Bond yields are the core macro pressure point with U.S. 10-year yield risk range at 4.42% to 4.62%; inflation acceleration is the key driver",
-        "Long commodities versus short Treasuries remains the easiest macro position to maintain as inflation broadens beyond oil into agriculture",
-        "Mega-cap tech (Google, NVIDIA, Amazon, Apple) continues to drive S&P 500 gains; NVIDIA reporting Wednesday with expected bullish call option flow",
-        "Selective emerging market positioning: long China and Japan despite weakness; short Indonesia (down 28% since January), India, and Philippines",
-        "Process emphasis: buy pullbacks and practice patience rather than chasing breakouts after sharp moves"
+        "Global diversification beat U.S.-only momentum; portfolios with global, commodity, and short-bond exposure outperformed while high-beta U.S. momentum investors got hit",
+        "Commodities are a core long position and Treasuries/Bonds are a core short position in the long-short book",
+        "Indonesia remains Hedgeye's first stock market crash call of 2026, down roughly 30% since January; China long (CNXT) continues to work",
+        "Buying semiconductors after drawdown with DRAM as key entry; Nvidia earnings identified as decisively bullish catalyst",
+        "Short bonds central to strategy; bond yields in higher-highs/higher-lows mode at 4.64% on 10-year"
       ],
       "positioning_changes": [
-        "Reduced gold exposure to minimum position size due to rising interest rates headwinds",
-        "Exited uranium, gold miners positions based on signal",
-        "Exited financials sector due to rate pressure",
-        "Silver broke trend on Friday; shifted preference to steel and copper",
-        "Bought steel on Friday as preferred commodity position over precious metals",
-        "Bitcoin position reduced to minimum after breaking medium-term trade as dollar moved to bullish"
+        "Added DRAM position starting at 2%, targeting 4-6% depending on price",
+        "Already bought AMAT; planning to buy Lam Research and DRAM on weakness",
+        "Reduced gold below minimum position to 2% due to rising bond yields",
+        "Trimming Norway position after 4.7% gain to avoid being naked long Europe",
+        "Planning to short France if it trades green today"
       ],
       "keith_watching": [
-        "NVIDIA earnings report Wednesday with expected call option buying flow",
-        "Natural gas as new bullish trend breakout - on buy list but waiting for pullbacks, not chasing",
-        "Bitcoin needs to regain trade above $78,000; trend support around $75,000 with dollar at bullish trade",
-        "Japan equity market at low end of risk range with interesting quad count setup",
-        "Turkey and Mexico on close watch - will sell if they break trend despite being current longs"
+        "Nvidia earnings as decisively bullish catalyst; risk range 216-239 with trend bullish; if breaks 205 support would become sellers",
+        "VIX moving inside 18.97 puts market in investable bucket",
+        "MOVE Index needs to break 77 to break bond market trend",
+        "Bitcoin at 78,021 trade level; not buying dip as likely headed to low end of range",
+        "Copper as dip-buy opportunity; CRB Commodities at new inflation-cycle highs of 405"
       ]
     },
     "investing_ideas": {
@@ -4874,116 +4926,122 @@
       }
     },
     "founders_choice": {
-      "retail": {
+      "global_technology": {
         "longs": [
-          "WRBY",
-          "BBW",
-          "AS",
-          "ROST",
-          "PVH",
-          "REAL",
-          "VVV",
-          "AMZN",
-          "TJX",
-          "ATZ",
-          "SWBI",
-          "PLNT",
-          "RH",
-          "CPRI",
-          "ELPA",
-          "DLTR",
-          "ASO",
-          "GAP",
-          "DG",
-          "ULTA",
-          "FIVE",
-          "BIRK",
-          "JDL"
+          "MRVL",
+          "005930.KS",
+          "285A.T",
+          "NVDA",
+          "SFTM",
+          "RPI.I",
+          "AAPL",
+          "AMAT",
+          "TSSI"
         ],
         "shorts": [
-          "VSCO",
-          "CHWY",
-          "TPR",
-          "DRVN",
-          "ORLY",
-          "HD",
-          "GOOS",
-          "LUXE",
-          "RMS.PA",
-          "1913.HK",
-          "BURL",
-          "3998.HK",
-          "2331.HK",
-          "LTH",
-          "SHOO",
-          "GPI",
-          "PAG",
-          "UAA",
-          "CFR.SW",
-          "CAL",
-          "LVMHF",
-          "GME",
-          "W",
-          "ETSY",
-          "GRMN",
-          "LEVI",
-          "LULU",
-          "CVS",
-          "ONEW",
-          "PANDY",
-          "TSCO",
-          "PUM.DE",
-          "YETI",
-          "LAD",
-          "SAH",
-          "KMX",
-          "CARG",
-          "LOW"
+          "ANET",
+          "CAMT",
+          "MSFT"
         ]
       },
-      "energy": {
-        "longs": [
-          "DAR",
-          "TPR",
-          "PBR",
-          "PBR-A",
-          "PR",
-          "MPC",
-          "FANG",
-          "XOM",
-          "GEL",
-          "VG"
-        ],
-        "shorts": [
-          "XIFR",
-          "PSX",
-          "CVI",
-          "CHRD",
-          "COP",
-          "BP",
-          "SHEL",
-          "DVN",
-          "VLO",
-          "ENB",
-          "TRP",
-          "TTE",
-          "VST",
-          "TLN",
-          "YPF",
-          "RRC",
-          "DK",
-          "DINO",
-          "CVX",
-          "MPLX",
-          "BKV",
-          "PBF",
-          "PAM",
-          "NEE",
-          "CEG",
-          "DKL"
-        ]
-      },
-      "ticker_mentions": {}
+      "ticker_mentions": {
+        "MRVL": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "005930.KS": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "285A.T": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "NVDA": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "SFTM": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "RPI.I": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "AAPL": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "AMAT": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "TSSI": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BULLISH"
+        },
+        "ANET": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BEARISH"
+        },
+        "CAMT": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BEARISH"
+        },
+        "MSFT": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": null,
+          "catalysts": [],
+          "signal": "BEARISH"
+        }
+      }
     },
     "from_desk": {
       "macro_view": "The market is in a Quad 2 regime (Growth and Inflation Accelerating) with the US Dollar testing a new breakout, rates making cycle highs, and reflation broadening across commodities. Bond markets are finally 'seeing' accelerating inflation as the 10yr yield reaches levels not seen since 2007.",
@@ -5145,6 +5203,12 @@
       "count": 71,
       "added": 3,
       "removed": 1
+    },
+    {
+      "date": "2026-05-19",
+      "count": 77,
+      "added": 7,
+      "removed": 2
     }
   ]
 }
