@@ -150,9 +150,11 @@ window.HE.apiUrl = {
   },
 };
 
-// ── Hardcoded CPI fallback (BLS March 2026 release) ──────────────────────────
+// ── Hardcoded CPI fallback (BLS April 2026 release) ──────────────────────────
 // Used by he_prices.jsx when the live BLS API is unavailable.
 // Update the final row each month after BLS releases new data.
+// March 2026: corrected to 322.500 (3.26% YoY vs 312.302) — prior value 319.797 was wrong (implied 2.40%)
+// April 2026: added 324.540 (≈3.62% YoY vs 313.200) — Hedgeye nowcast as of 5/20/2026
 window.HE.CPI_DATA = {
   'CUUR0000SA0': [
     { year:'2025', period:'M01', periodName:'January',   value:'311.800' },
@@ -169,7 +171,8 @@ window.HE.CPI_DATA = {
     { year:'2025', period:'M12', periodName:'December',  value:'318.300' },
     { year:'2026', period:'M01', periodName:'January',   value:'319.200' },
     { year:'2026', period:'M02', periodName:'February',  value:'320.117' },
-    { year:'2026', period:'M03', periodName:'March',     value:'319.797' },
+    { year:'2026', period:'M03', periodName:'March',     value:'322.500' },
+    { year:'2026', period:'M04', periodName:'April',     value:'324.540' },
   ],
   'CUUR0000SA0L1E': [
     { year:'2025', period:'M01', periodName:'January',   value:'311.200' },
@@ -186,9 +189,10 @@ window.HE.CPI_DATA = {
     { year:'2025', period:'M12', periodName:'December',  value:'318.600' },
     { year:'2026', period:'M01', periodName:'January',   value:'319.500' },
     { year:'2026', period:'M02', periodName:'February',  value:'320.400' },
-    { year:'2026', period:'M03', periodName:'March',     value:'320.736' },
+    { year:'2026', period:'M03', periodName:'March',     value:'322.171' },
+    { year:'2026', period:'M04', periodName:'April',     value:'324.331' },
   ],
-  source: 'Hardcoded / BLS March 2026',
+  source: 'Hardcoded / BLS April 2026',
 };
 
 // ── Quad State (localStorage, updated by research ingestion) ──────────────────

@@ -2140,8 +2140,8 @@
         "open_price": 262.12,
         "close_date": "2026-05-18",
         "close_price": 267.47,
-        "return_pct": 0.020410499999999998,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.020410499999999998
       },
       {
         "date": "2026-05-11",
@@ -2150,8 +2150,8 @@
         "open_price": 27.805,
         "close_date": "2026-05-18",
         "close_price": 27.66,
-        "return_pct": -0.00521489,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.00521489
       },
       {
         "date": "2026-05-15",
@@ -2160,8 +2160,8 @@
         "open_price": 845.07,
         "close_date": "2026-05-18",
         "close_price": 854.59,
-        "return_pct": 0.0112653,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0112653
       },
       {
         "date": "2026-05-12",
@@ -2170,8 +2170,8 @@
         "open_price": 130.03,
         "close_date": "2026-05-15",
         "close_price": 128.13,
-        "return_pct": -0.014612,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.014612
       },
       {
         "date": "2026-05-13",
@@ -2180,8 +2180,8 @@
         "open_price": 198.12,
         "close_date": "2026-05-15",
         "close_price": 197.9,
-        "return_pct": 0.00111044,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00111044
       },
       {
         "date": "2026-05-14",
@@ -2190,8 +2190,8 @@
         "open_price": 16.7111,
         "close_date": "2026-05-15",
         "close_price": 16.56,
-        "return_pct": 0.00904189,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00904189
       },
       {
         "date": "2026-05-12",
@@ -2200,8 +2200,8 @@
         "open_price": 26.74,
         "close_date": "2026-05-14",
         "close_price": 26.55,
-        "return_pct": -0.00710546,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.00710546
       },
       {
         "date": "2026-05-13",
@@ -2210,8 +2210,8 @@
         "open_price": 57.71,
         "close_date": "2026-05-14",
         "close_price": 58.16,
-        "return_pct": 0.007797610000000001,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.007797610000000001
       },
       {
         "date": "2026-05-07",
@@ -2220,8 +2220,8 @@
         "open_price": 9.25,
         "close_date": "2026-05-13",
         "close_price": 9.37,
-        "return_pct": 0.012972999999999998,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.012972999999999998
       },
       {
         "date": "2026-05-12",
@@ -2230,8 +2230,8 @@
         "open_price": 264.16,
         "close_date": "2026-05-13",
         "close_price": 269.94,
-        "return_pct": 0.0218803,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0218803
       },
       {
         "date": "2026-05-07",
@@ -2240,8 +2240,8 @@
         "open_price": 224.32,
         "close_date": "2026-05-13",
         "close_price": 213.805,
-        "return_pct": -0.021733699999999998,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.021733699999999998
       },
       {
         "date": "2026-05-12",
@@ -2250,8 +2250,8 @@
         "open_price": 191.785,
         "close_date": "2026-05-13",
         "close_price": 188.25,
-        "return_pct": 0.0184321,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0184321
       },
       {
         "date": "2026-05-07",
@@ -2260,8 +2260,8 @@
         "open_price": 39.6,
         "close_date": "2026-05-11",
         "close_price": 39.555,
-        "return_pct": 0.00113636,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00113636
       },
       {
         "date": "2026-05-07",
@@ -2270,8 +2270,8 @@
         "open_price": 25.32,
         "close_date": "2026-05-08",
         "close_price": 25.19,
-        "return_pct": 0.00513428,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00513428
       },
       {
         "date": "2026-05-05",
@@ -2280,8 +2280,8 @@
         "open_price": 187.51,
         "close_date": "2026-05-08",
         "close_price": 190.97,
-        "return_pct": -0.0184523,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0184523
       },
       {
         "date": "2026-05-07",
@@ -2290,8 +2290,8 @@
         "open_price": 418.52,
         "close_date": "2026-05-08",
         "close_price": 424.6,
-        "return_pct": 0.0145264,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0145264
       },
       {
         "date": "2026-05-07",
@@ -2300,8 +2300,8 @@
         "open_price": 21.27,
         "close_date": "2026-05-08",
         "close_price": 21.015,
-        "return_pct": 0.011988700000000001,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.011988700000000001
       },
       {
         "date": "2026-05-05",
@@ -2310,8 +2310,8 @@
         "open_price": 297.51,
         "close_date": "2026-05-08",
         "close_price": 298.87,
-        "return_pct": 0.0045712700000000005,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0045712700000000005
       },
       {
         "date": "2026-05-05",
@@ -2320,8 +2320,8 @@
         "open_price": 88.465,
         "close_date": "2026-05-06",
         "close_price": 91.9,
-        "return_pct": 0.0388289,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0388289
       },
       {
         "date": "2026-05-01",
@@ -2330,8 +2330,8 @@
         "open_price": 38.43,
         "close_date": "2026-05-06",
         "close_price": 38.52,
-        "return_pct": 0.0023419200000000004,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0023419200000000004
       },
       {
         "date": "2026-05-04",
@@ -2340,8 +2340,8 @@
         "open_price": 307.755,
         "close_date": "2026-05-05",
         "close_price": 309.81,
-        "return_pct": 0.00667739,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00667739
       },
       {
         "date": "2026-05-04",
@@ -2350,8 +2350,8 @@
         "open_price": 68.925,
         "close_date": "2026-05-05",
         "close_price": 69.63,
-        "return_pct": 0.0102285,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0102285
       },
       {
         "date": "2026-04-28",
@@ -2360,8 +2360,8 @@
         "open_price": 36.265,
         "close_date": "2026-05-05",
         "close_price": 36.49,
-        "return_pct": 0.00620433,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00620433
       },
       {
         "date": "2026-05-01",
@@ -2370,8 +2370,8 @@
         "open_price": 72.56,
         "close_date": "2026-05-05",
         "close_price": 74.92,
-        "return_pct": 0.0059046,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0059046
       },
       {
         "date": "2026-04-29",
@@ -2380,8 +2380,8 @@
         "open_price": 80.0701,
         "close_date": "2026-05-01",
         "close_price": 80.07,
-        "return_pct": -1.2489099999999999e-06,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -1.2489099999999999e-06
       },
       {
         "date": "2026-04-28",
@@ -2390,8 +2390,8 @@
         "open_price": 91.1025,
         "close_date": "2026-04-30",
         "close_price": 93.49,
-        "return_pct": 0.0262067,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0262067
       },
       {
         "date": "2026-04-24",
@@ -2400,8 +2400,8 @@
         "open_price": 88.83,
         "close_date": "2026-04-30",
         "close_price": 90.62,
-        "return_pct": 0.020150800000000003,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.020150800000000003
       },
       {
         "date": "2026-04-27",
@@ -2410,8 +2410,8 @@
         "open_price": 50.509,
         "close_date": "2026-04-30",
         "close_price": 51.603,
-        "return_pct": 0.0216595,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0216595
       },
       {
         "date": "2026-04-28",
@@ -2420,8 +2420,8 @@
         "open_price": 210.52,
         "close_date": "2026-04-29",
         "close_price": 214.06,
-        "return_pct": 0.0168155,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0168155
       },
       {
         "date": "2026-04-29",
@@ -2430,8 +2430,8 @@
         "open_price": 27.37,
         "close_date": "2026-04-29",
         "close_price": 28.14,
-        "return_pct": 0.028133,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.028133
       },
       {
         "date": "2026-04-28",
@@ -2440,8 +2440,8 @@
         "open_price": 9.01,
         "close_date": "2026-04-29",
         "close_price": 8.815,
-        "return_pct": 0.0216426,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0216426
       },
       {
         "date": "2026-04-08",
@@ -2450,8 +2450,8 @@
         "open_price": 170.725,
         "close_date": "2026-04-28",
         "close_price": 174.975,
-        "return_pct": -0.0248938,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0248938
       },
       {
         "date": "2026-04-24",
@@ -2460,8 +2460,8 @@
         "open_price": 63.825,
         "close_date": "2026-04-27",
         "close_price": 64.45,
-        "return_pct": 0.0097924,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0097924
       },
       {
         "date": "2026-04-24",
@@ -2470,8 +2470,8 @@
         "open_price": 26.45,
         "close_date": "2026-04-27",
         "close_price": 27.53,
-        "return_pct": 0.040831799999999994,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.040831799999999994
       },
       {
         "date": "2026-04-23",
@@ -2480,8 +2480,8 @@
         "open_price": 92.93,
         "close_date": "2026-04-27",
         "close_price": 92.75,
-        "return_pct": -0.00193694,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.00193694
       },
       {
         "date": "2026-04-22",
@@ -2490,8 +2490,8 @@
         "open_price": 128.128,
         "close_date": "2026-04-24",
         "close_price": 132.025,
-        "return_pct": 0.0304149,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0304149
       },
       {
         "date": "2026-04-21",
@@ -2500,8 +2500,8 @@
         "open_price": 29.91,
         "close_date": "2026-04-23",
         "close_price": 30.45,
-        "return_pct": 0.0180542,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0180542
       },
       {
         "date": "2026-04-14",
@@ -2510,8 +2510,8 @@
         "open_price": 77.009,
         "close_date": "2026-04-23",
         "close_price": 76.47,
-        "return_pct": -0.006999180000000001,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.006999180000000001
       },
       {
         "date": "2026-04-21",
@@ -2520,8 +2520,8 @@
         "open_price": 78.4799,
         "close_date": "2026-04-23",
         "close_price": 78.72,
-        "return_pct": 0.00305938,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00305938
       },
       {
         "date": "2026-04-20",
@@ -2530,8 +2530,8 @@
         "open_price": 93.94,
         "close_date": "2026-04-21",
         "close_price": 95.025,
-        "return_pct": 0.0115499,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0115499
       },
       {
         "date": "2026-04-16",
@@ -2540,8 +2540,8 @@
         "open_price": 88.11,
         "close_date": "2026-04-20",
         "close_price": 95.745,
-        "return_pct": 0.0866531,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0866531
       },
       {
         "date": "2026-04-17",
@@ -2550,8 +2550,8 @@
         "open_price": 21.395,
         "close_date": "2026-04-17",
         "close_price": 20.955,
-        "return_pct": 0.020565600000000003,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.020565600000000003
       },
       {
         "date": "2026-04-15",
@@ -2560,8 +2560,8 @@
         "open_price": 63.81,
         "close_date": "2026-04-17",
         "close_price": 64.37,
-        "return_pct": 0.00877605,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00877605
       },
       {
         "date": "2026-04-14",
@@ -2570,8 +2570,8 @@
         "open_price": 159.25,
         "close_date": "2026-04-16",
         "close_price": 158.54,
-        "return_pct": -0.0044584,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0044584
       },
       {
         "date": "2026-04-14",
@@ -2580,8 +2580,8 @@
         "open_price": 26.75,
         "close_date": "2026-04-15",
         "close_price": 27.23,
-        "return_pct": 0.0179439,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0179439
       },
       {
         "date": "2026-04-13",
@@ -2590,8 +2590,8 @@
         "open_price": 730.465,
         "close_date": "2026-04-14",
         "close_price": 737.185,
-        "return_pct": 0.00919962,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00919962
       },
       {
         "date": "2026-04-13",
@@ -2600,8 +2600,8 @@
         "open_price": 14.27,
         "close_date": "2026-04-14",
         "close_price": 14.741,
-        "return_pct": 0.0330063,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0330063
       },
       {
         "date": "2026-04-08",
@@ -2610,8 +2610,8 @@
         "open_price": 27.56,
         "close_date": "2026-04-14",
         "close_price": 27.295,
-        "return_pct": -0.00961538,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.00961538
       },
       {
         "date": "2026-04-10",
@@ -2620,8 +2620,8 @@
         "open_price": 65.375,
         "close_date": "2026-04-13",
         "close_price": 65.765,
-        "return_pct": -0.005965580000000001,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.005965580000000001
       },
       {
         "date": "2026-04-10",
@@ -2630,8 +2630,8 @@
         "open_price": 26.32,
         "close_date": "2026-04-13",
         "close_price": 26.72,
-        "return_pct": 0.0151976,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0151976
       },
       {
         "date": "2026-04-09",
@@ -2640,8 +2640,8 @@
         "open_price": 14.03,
         "close_date": "2026-04-10",
         "close_price": 14.49,
-        "return_pct": 0.0327869,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0327869
       },
       {
         "date": "2026-03-31",
@@ -2650,8 +2650,8 @@
         "open_price": 41.0201,
         "close_date": "2026-04-10",
         "close_price": 41.89,
-        "return_pct": -0.021206700000000002,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.021206700000000002
       },
       {
         "date": "2026-04-07",
@@ -2660,8 +2660,8 @@
         "open_price": 491.56,
         "close_date": "2026-04-10",
         "close_price": 499.675,
-        "return_pct": -0.0165087,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0165087
       },
       {
         "date": "2026-04-09",
@@ -2670,8 +2670,8 @@
         "open_price": 78.065,
         "close_date": "2026-04-10",
         "close_price": 76.58,
-        "return_pct": 0.0190226,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0190226
       },
       {
         "date": "2026-04-06",
@@ -2680,8 +2680,8 @@
         "open_price": 42.95,
         "close_date": "2026-04-10",
         "close_price": 44.555,
-        "return_pct": -0.0110052,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0110052
       },
       {
         "date": "2026-03-30",
@@ -2690,8 +2690,8 @@
         "open_price": 18.426,
         "close_date": "2026-04-10",
         "close_price": 17.705,
-        "return_pct": -0.0391295,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0391295
       },
       {
         "date": "2026-04-02",
@@ -2700,8 +2700,8 @@
         "open_price": 1089.11,
         "close_date": "2026-04-09",
         "close_price": 1048.51,
-        "return_pct": 0.0372781,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0372781
       },
       {
         "date": "2026-04-08",
@@ -2710,8 +2710,8 @@
         "open_price": 59.56,
         "close_date": "2026-04-09",
         "close_price": 61.8401,
-        "return_pct": 0.0382824,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0382824
       },
       {
         "date": "2026-04-08",
@@ -2720,8 +2720,8 @@
         "open_price": 12.91,
         "close_date": "2026-04-09",
         "close_price": 12.655,
-        "return_pct": 0.019752099999999998,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.019752099999999998
       },
       {
         "date": "2026-04-01",
@@ -2730,8 +2730,8 @@
         "open_price": 10.225,
         "close_date": "2026-04-09",
         "close_price": 9.5175,
-        "return_pct": -0.0691932,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0691932
       },
       {
         "date": "2026-04-06",
@@ -2740,8 +2740,8 @@
         "open_price": 97.92,
         "close_date": "2026-04-08",
         "close_price": 97.215,
-        "return_pct": 0.00719975,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00719975
       },
       {
         "date": "2026-04-02",
@@ -2750,8 +2750,8 @@
         "open_price": 440.435,
         "close_date": "2026-04-07",
         "close_price": 437.47,
-        "return_pct": 0.006731979999999999,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.006731979999999999
       },
       {
         "date": "2026-04-06",
@@ -2760,8 +2760,8 @@
         "open_price": 44.25,
         "close_date": "2026-04-07",
         "close_price": 45.09,
-        "return_pct": 0.0189831,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0189831
       },
       {
         "date": "2026-04-06",
@@ -2770,8 +2770,8 @@
         "open_price": 8.955,
         "close_date": "2026-04-07",
         "close_price": 8.555,
-        "return_pct": 0.0446678,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0446678
       },
       {
         "date": "2026-03-31",
@@ -2780,8 +2780,8 @@
         "open_price": 53.43,
         "close_date": "2026-04-06",
         "close_price": 55.04,
-        "return_pct": -0.0301329,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0301329
       },
       {
         "date": "2026-04-02",
@@ -2790,8 +2790,8 @@
         "open_price": 59.38,
         "close_date": "2026-04-06",
         "close_price": 57.045,
-        "return_pct": 0.039323000000000004,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.039323000000000004
       },
       {
         "date": "2026-04-02",
@@ -2800,8 +2800,8 @@
         "open_price": 28.17,
         "close_date": "2026-04-06",
         "close_price": 28.47,
-        "return_pct": 0.010649599999999999,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.010649599999999999
       },
       {
         "date": "2026-03-31",
@@ -2810,8 +2810,8 @@
         "open_price": 42.1799,
         "close_date": "2026-04-06",
         "close_price": 42.229,
-        "return_pct": 0.00116406,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00116406
       },
       {
         "date": "2026-04-01",
@@ -2820,8 +2820,8 @@
         "open_price": 15.26,
         "close_date": "2026-04-02",
         "close_price": 14.43,
-        "return_pct": 0.0543906,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0543906
       },
       {
         "date": "2026-04-01",
@@ -2830,8 +2830,8 @@
         "open_price": 12.25,
         "close_date": "2026-04-02",
         "close_price": 11.995,
-        "return_pct": 0.020816300000000003,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.020816300000000003
       },
       {
         "date": "2026-04-01",
@@ -2840,8 +2840,8 @@
         "open_price": 55.99,
         "close_date": "2026-04-02",
         "close_price": 55.555,
-        "return_pct": -0.007769239999999999,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.007769239999999999
       },
       {
         "date": "2026-04-01",
@@ -2850,8 +2850,8 @@
         "open_price": 7.925,
         "close_date": "2026-04-02",
         "close_price": 7.6,
-        "return_pct": 0.041009500000000004,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.041009500000000004
       },
       {
         "date": "2026-04-01",
@@ -2860,8 +2860,8 @@
         "open_price": 53.5008,
         "close_date": "2026-04-02",
         "close_price": 54.1319,
-        "return_pct": 0.0117961,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0117961
       },
       {
         "date": "2026-03-31",
@@ -2870,8 +2870,8 @@
         "open_price": 19.525,
         "close_date": "2026-04-01",
         "close_price": 19.33,
-        "return_pct": 0.0099872,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0099872
       },
       {
         "date": "2026-03-30",
@@ -2880,8 +2880,8 @@
         "open_price": 22.08,
         "close_date": "2026-04-01",
         "close_price": 21.99,
-        "return_pct": 0.00407609,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00407609
       },
       {
         "date": "2026-03-30",
@@ -2890,8 +2890,8 @@
         "open_price": 25.04,
         "close_date": "2026-03-31",
         "close_price": 26.57,
-        "return_pct": 0.0611022,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0611022
       },
       {
         "date": "2026-03-31",
@@ -2900,8 +2900,8 @@
         "open_price": 53.4,
         "close_date": "2026-03-31",
         "close_price": 53.4222,
-        "return_pct": 0.00041573,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00041573
       },
       {
         "date": "2026-03-24",
@@ -2910,8 +2910,8 @@
         "open_price": 38.31,
         "close_date": "2026-03-30",
         "close_price": 38.49,
-        "return_pct": -0.00469851,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.00469851
       },
       {
         "date": "2026-03-27",
@@ -2920,8 +2920,8 @@
         "open_price": 8.545,
         "close_date": "2026-03-30",
         "close_price": 8.265,
-        "return_pct": 0.0327677,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0327677
       },
       {
         "date": "2026-03-26",
@@ -2930,8 +2930,8 @@
         "open_price": 90.485,
         "close_date": "2026-03-27",
         "close_price": 88.59,
-        "return_pct": 0.020942699999999998,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.020942699999999998
       },
       {
         "date": "2026-03-25",
@@ -2940,8 +2940,8 @@
         "open_price": 295.19,
         "close_date": "2026-03-27",
         "close_price": 285.22,
-        "return_pct": 0.0337749,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0337749
       },
       {
         "date": "2026-03-24",
@@ -2950,8 +2950,8 @@
         "open_price": 67.53,
         "close_date": "2026-03-27",
         "close_price": 66.05,
-        "return_pct": 0.0219162,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0219162
       },
       {
         "date": "2026-03-24",
@@ -2960,8 +2960,8 @@
         "open_price": 103.515,
         "close_date": "2026-03-26",
         "close_price": 101.2,
-        "return_pct": 0.022363900000000003,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.022363900000000003
       },
       {
         "date": "2026-03-13",
@@ -2970,8 +2970,8 @@
         "open_price": 463.45,
         "close_date": "2026-03-26",
         "close_price": 409.49,
-        "return_pct": -0.0733634,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0733634
       },
       {
         "date": "2026-03-25",
@@ -2980,8 +2980,8 @@
         "open_price": 13.9201,
         "close_date": "2026-03-26",
         "close_price": 13.676,
-        "return_pct": 0.0175358,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0175358
       },
       {
         "date": "2026-03-24",
@@ -2990,8 +2990,8 @@
         "open_price": 27.71,
         "close_date": "2026-03-25",
         "close_price": 26.425,
-        "return_pct": 0.046373199999999996,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.046373199999999996
       },
       {
         "date": "2026-03-23",
@@ -3000,8 +3000,8 @@
         "open_price": 40.18,
         "close_date": "2026-03-25",
         "close_price": 36.55,
-        "return_pct": 0.09034350000000001,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.09034350000000001
       },
       {
         "date": "2026-03-23",
@@ -3010,8 +3010,8 @@
         "open_price": 63.185,
         "close_date": "2026-03-24",
         "close_price": 64.74,
-        "return_pct": 0.0246103,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0246103
       },
       {
         "date": "2026-03-20",
@@ -3020,8 +3020,8 @@
         "open_price": 598.0,
         "close_date": "2026-03-23",
         "close_price": 574.485,
-        "return_pct": 0.0393227,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0393227
       },
       {
         "date": "2026-03-19",
@@ -3030,8 +3030,8 @@
         "open_price": 13.77,
         "close_date": "2026-03-20",
         "close_price": 14.38,
-        "return_pct": 0.044299200000000004,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.044299200000000004
       },
       {
         "date": "2026-03-19",
@@ -3040,8 +3040,8 @@
         "open_price": 89.59,
         "close_date": "2026-03-20",
         "close_price": 89.02,
-        "return_pct": 0.00636232,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00636232
       },
       {
         "date": "2026-03-16",
@@ -3050,8 +3050,8 @@
         "open_price": 293.02,
         "close_date": "2026-03-19",
         "close_price": 295.32,
-        "return_pct": -0.00784929,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.00784929
       },
       {
         "date": "2026-03-18",
@@ -3060,8 +3060,8 @@
         "open_price": 73.97,
         "close_date": "2026-03-19",
         "close_price": 71.89,
-        "return_pct": 0.0281195,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0281195
       },
       {
         "date": "2026-03-17",
@@ -3070,8 +3070,8 @@
         "open_price": 101.445,
         "close_date": "2026-03-18",
         "close_price": 98.735,
-        "return_pct": 0.026714,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.026714
       },
       {
         "date": "2026-03-16",
@@ -3080,8 +3080,8 @@
         "open_price": 18.38,
         "close_date": "2026-03-18",
         "close_price": 18.12,
-        "return_pct": 0.0141458,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0141458
       },
       {
         "date": "2026-03-17",
@@ -3090,8 +3090,8 @@
         "open_price": 25.425,
         "close_date": "2026-03-18",
         "close_price": 24.83,
-        "return_pct": 0.0234022,
-        "duration": "neutral-trade & short-trend & short-tail"
+        "duration": "neutral-trade & short-trend & short-tail",
+        "realized_return": 0.0234022
       },
       {
         "date": "2026-03-12",
@@ -3100,8 +3100,8 @@
         "open_price": 78.54,
         "close_date": "2026-03-17",
         "close_price": 78.26,
-        "return_pct": -0.00356506,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.00356506
       },
       {
         "date": "2026-03-13",
@@ -3110,8 +3110,8 @@
         "open_price": 58.075,
         "close_date": "2026-03-16",
         "close_price": 58.29,
-        "return_pct": 0.00370211,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00370211
       },
       {
         "date": "2026-03-12",
@@ -3120,8 +3120,8 @@
         "open_price": 149.89,
         "close_date": "2026-03-16",
         "close_price": 147.65,
-        "return_pct": 0.014944299999999999,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.014944299999999999
       },
       {
         "date": "2026-03-09",
@@ -3130,8 +3130,8 @@
         "open_price": 222.745,
         "close_date": "2026-03-16",
         "close_price": 220.44,
-        "return_pct": -0.0103482,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0103482
       },
       {
         "date": "2026-03-12",
@@ -3140,8 +3140,8 @@
         "open_price": 94.695,
         "close_date": "2026-03-16",
         "close_price": 95.355,
-        "return_pct": 0.00696975,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00696975
       },
       {
         "date": "2026-03-12",
@@ -3150,8 +3150,8 @@
         "open_price": 80.95,
         "close_date": "2026-03-13",
         "close_price": 80.615,
-        "return_pct": 0.00413836,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00413836
       },
       {
         "date": "2026-03-11",
@@ -3160,8 +3160,8 @@
         "open_price": 30.7399,
         "close_date": "2026-03-12",
         "close_price": 30.14,
-        "return_pct": 0.019515400000000002,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.019515400000000002
       },
       {
         "date": "2026-03-11",
@@ -3170,8 +3170,8 @@
         "open_price": 38.7879,
         "close_date": "2026-03-12",
         "close_price": 38.2,
-        "return_pct": 0.0151568,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0151568
       },
       {
         "date": "2026-03-11",
@@ -3180,8 +3180,8 @@
         "open_price": 46.0708,
         "close_date": "2026-03-12",
         "close_price": 46.64,
-        "return_pct": 0.0123549,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0123549
       },
       {
         "date": "2026-03-10",
@@ -3190,8 +3190,8 @@
         "open_price": 32.915,
         "close_date": "2026-03-11",
         "close_price": 38.195,
-        "return_pct": -0.160413,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.160413
       },
       {
         "date": "2026-03-10",
@@ -3200,8 +3200,8 @@
         "open_price": 51.905,
         "close_date": "2026-03-11",
         "close_price": 54.31,
-        "return_pct": 0.046334600000000004,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.046334600000000004
       },
       {
         "date": "2026-03-04",
@@ -3210,8 +3210,8 @@
         "open_price": 163.83,
         "close_date": "2026-03-10",
         "close_price": 162.55,
-        "return_pct": -0.00781298,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.00781298
       },
       {
         "date": "2026-03-05",
@@ -3220,8 +3220,8 @@
         "open_price": 88.725,
         "close_date": "2026-03-10",
         "close_price": 88.83,
-        "return_pct": 0.00118343,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00118343
       },
       {
         "date": "2026-03-04",
@@ -3230,8 +3230,8 @@
         "open_price": 166.74,
         "close_date": "2026-03-10",
         "close_price": 158.74,
-        "return_pct": -0.007751590000000001,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.007751590000000001
       },
       {
         "date": "2026-03-06",
@@ -3240,8 +3240,8 @@
         "open_price": 11.5686,
         "close_date": "2026-03-10",
         "close_price": 11.525,
-        "return_pct": 0.00376882,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00376882
       },
       {
         "date": "2026-02-24",
@@ -3250,8 +3250,8 @@
         "open_price": 336.61,
         "close_date": "2026-03-09",
         "close_price": 360.645,
-        "return_pct": -0.053208700000000005,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.053208700000000005
       },
       {
         "date": "2026-03-05",
@@ -3260,8 +3260,8 @@
         "open_price": 52.2099,
         "close_date": "2026-03-09",
         "close_price": 49.855,
-        "return_pct": 0.0451045,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0451045
       },
       {
         "date": "2026-03-02",
@@ -3270,8 +3270,8 @@
         "open_price": 442.2,
         "close_date": "2026-03-09",
         "close_price": 434.735,
-        "return_pct": 0.0168815,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0168815
       },
       {
         "date": "2026-03-02",
@@ -3280,8 +3280,8 @@
         "open_price": 168.42,
         "close_date": "2026-03-09",
         "close_price": 139.26,
-        "return_pct": -0.112711,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.112711
       },
       {
         "date": "2026-03-05",
@@ -3290,8 +3290,8 @@
         "open_price": 112.865,
         "close_date": "2026-03-09",
         "close_price": 111.24,
-        "return_pct": 0.0143977,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0143977
       },
       {
         "date": "2026-03-05",
@@ -3300,8 +3300,8 @@
         "open_price": 79.54,
         "close_date": "2026-03-06",
         "close_price": 77.5,
-        "return_pct": 0.0256475,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0256475
       },
       {
         "date": "2026-02-24",
@@ -3310,8 +3310,8 @@
         "open_price": 231.09,
         "close_date": "2026-03-05",
         "close_price": 219.92,
-        "return_pct": -0.0246693,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0246693
       },
       {
         "date": "2026-02-25",
@@ -3320,8 +3320,8 @@
         "open_price": 195.67,
         "close_date": "2026-03-04",
         "close_price": 205.825,
-        "return_pct": -0.0161187,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0161187
       },
       {
         "date": "2026-02-25",
@@ -3330,8 +3330,8 @@
         "open_price": 36.27,
         "close_date": "2026-03-03",
         "close_price": 35.39,
-        "return_pct": 0.0242625,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0242625
       },
       {
         "date": "2026-02-27",
@@ -3340,8 +3340,8 @@
         "open_price": 21.195,
         "close_date": "2026-03-03",
         "close_price": 19.42,
-        "return_pct": -0.0837462,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": -0.0837462
       },
       {
         "date": "2026-02-25",
@@ -3350,8 +3350,8 @@
         "open_price": 66.505,
         "close_date": "2026-03-02",
         "close_price": 66.9,
-        "return_pct": -0.0059394,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": -0.0059394
       },
       {
         "date": "2026-02-27",
@@ -3360,8 +3360,8 @@
         "open_price": 216.0,
         "close_date": "2026-03-02",
         "close_price": 214.045,
-        "return_pct": 0.00905093,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00905093
       },
       {
         "date": "2026-02-24",
@@ -3370,8 +3370,8 @@
         "open_price": 120.6,
         "close_date": "2026-03-02",
         "close_price": 124.21,
-        "return_pct": 0.0299337,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0299337
       },
       {
         "date": "2026-02-25",
@@ -3380,8 +3380,8 @@
         "open_price": 55.635,
         "close_date": "2026-02-27",
         "close_price": 52.99,
-        "return_pct": 0.047542,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.047542
       },
       {
         "date": "2026-02-25",
@@ -3390,8 +3390,8 @@
         "open_price": 535.64,
         "close_date": "2026-02-26",
         "close_price": 538.09,
-        "return_pct": 0.00457397,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00457397
       },
       {
         "date": "2026-02-25",
@@ -3400,8 +3400,8 @@
         "open_price": 113.25,
         "close_date": "2026-02-26",
         "close_price": 115.42,
-        "return_pct": 0.0191611,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0191611
       },
       {
         "date": "2026-02-23",
@@ -3410,8 +3410,8 @@
         "open_price": 9.298,
         "close_date": "2026-02-25",
         "close_price": 9.275,
-        "return_pct": 0.00247365,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00247365
       },
       {
         "date": "2026-02-23",
@@ -3420,8 +3420,8 @@
         "open_price": 72.11,
         "close_date": "2026-02-24",
         "close_price": 71.21,
-        "return_pct": 0.0124809,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.0124809
       },
       {
         "date": "2026-02-19",
@@ -3430,8 +3430,8 @@
         "open_price": 114.09,
         "close_date": "2026-02-23",
         "close_price": 114.2,
-        "return_pct": 0.0009597690000000001,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.0009597690000000001
       },
       {
         "date": "2026-02-19",
@@ -3440,8 +3440,8 @@
         "open_price": 41.28,
         "close_date": "2026-02-23",
         "close_price": 40.82,
-        "return_pct": 0.011143400000000001,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.011143400000000001
       },
       {
         "date": "2026-02-19",
@@ -3450,8 +3450,8 @@
         "open_price": 46.15,
         "close_date": "2026-02-20",
         "close_price": 46.6,
-        "return_pct": 0.00975081,
-        "duration": "long-trade & long-trend & long-tail"
+        "duration": "long-trade & long-trend & long-tail",
+        "realized_return": 0.00975081
       },
       {
         "date": "2026-02-19",
@@ -3460,8 +3460,8 @@
         "open_price": 147.01,
         "close_date": "2026-02-20",
         "close_price": 145.84,
-        "return_pct": 0.00795864,
-        "duration": "short-trade & short-trend & short-tail"
+        "duration": "short-trade & short-trend & short-tail",
+        "realized_return": 0.00795864
       }
     ],
     "stats": {
@@ -3580,7 +3580,7 @@
       "mag7_daily_pct": -1.3,
       "rr_upside_count": 6,
       "rr_total": 9,
-      "headline": "6/9 RRs Upside>Downside \u2014 Quad 2 Growth setup intact"
+      "headline": "6/9 RRs Upside>Downside — Quad 2 Growth setup intact"
     },
     "msr": {
       "gamma_exposure": "POSITIVE",
@@ -3590,7 +3590,7 @@
       "spx_correction_since_friday": -1.4,
       "nvda_weight_spx": 8.6,
       "nvda_implied_move_thursday": 2.87,
-      "note": "NVDA earnings tonight \u2014 most important single-stock event given 8.6% SPX weight"
+      "note": "NVDA earnings tonight — most important single-stock event given 8.6% SPX weight"
     },
     "early_look": {
       "title": "Buying Growth On Sale",
@@ -3598,8 +3598,8 @@
       "keith_thesis": "Correction selective, not bearish. SPY -2% from ATH, NASDAQ -2.9%, High Beta down hard. Quad 2 intact.",
       "contrarian_setup": "NASDAQ 3yr net short extreme + retail in SOXS = pain trade HIGHER for Growth/Semis/AI",
       "keith_notes": [
-        "The correction is selective, not bearish \u2014 SPY barely off highs while High Beta down hard",
-        "NASDAQ positioning at 3-year net short extreme \u2014 pain trade remains higher for Growth/Semis/AI",
+        "The correction is selective, not bearish — SPY barely off highs while High Beta down hard",
+        "NASDAQ positioning at 3-year net short extreme — pain trade remains higher for Growth/Semis/AI",
         "Buying growth on sale inside a still-bullish Quad 2 setup"
       ]
     },
@@ -3619,7 +3619,7 @@
         "QTD": 13.4,
         "YTD": -11.8
       },
-      "note": "Broken TRADE within Bullish TREND \u2014 do not exit on trade break alone"
+      "note": "Broken TRADE within Bullish TREND — do not exit on trade break alone"
     },
     "macro_research": {
       "cpi_nowcast": 4.26,
@@ -3646,7 +3646,7 @@
       },
       "key_themes": [
         "Hormuz Supply Shock: 8-10M bbl/d gap, storage drawdown critical by late July",
-        "Mag7 reaccelerating \u2014 earnings cycle diverging from broader market"
+        "Mag7 reaccelerating — earnings cycle diverging from broader market"
       ]
     },
     "macro_show": {
@@ -3662,16 +3662,16 @@
       "inflation_roc": "ACCELERATING",
       "quad_sequence": "2-2-2-3",
       "keith_commentary": [
-        "RATES: Breakout in Commodities AND Bond Yields to new Inflation Cycle Highs was easiest Macro Call of the year. Global Yields now correcting from TRRs \u2014 UK 10yr -12bps from 5.17% Cycle High.",
-        "IDX (Indonesia): Panic Hike confirmed Hedgeye Crash Call \u2014 short = IDX.",
-        "QQQ: Correction only -3% from ATH. High Beta Momentum basket -20.3% post yesterday's -0.5% decline. Keith spent yesterday morning buying Quad2 U.S. Growth Exposures on sale \u2014 added QTUM, ROBO, DRAM.",
+        "RATES: Breakout in Commodities AND Bond Yields to new Inflation Cycle Highs was easiest Macro Call of the year. Global Yields now correcting from TRRs — UK 10yr -12bps from 5.17% Cycle High.",
+        "IDX (Indonesia): Panic Hike confirmed Hedgeye Crash Call — short = IDX.",
+        "QQQ: Correction only -3% from ATH. High Beta Momentum basket -20.3% post yesterday's -0.5% decline. Keith spent yesterday morning buying Quad2 U.S. Growth Exposures on sale — added QTUM, ROBO, DRAM.",
         "BITCOIN: Textbook bounce off LRR. Question: sell some? Answer yes, especially if BTC can't recapture TRADE Signal at $78,012. TREND Support at $74,663 held. Process: TRADE breaks = reduce. Holding TRADE support (like ROBO) = add on red."
       ],
       "key_levels": {
         "BTC": {
           "trade_signal": 78012,
           "trend_support": 74663,
-          "note": "Bounced off LRR \u2014 reduce if TRADE breaks"
+          "note": "Bounced off LRR — reduce if TRADE breaks"
         },
         "UK_10Y": {
           "cycle_high": 5.17,
@@ -3680,20 +3680,20 @@
         },
         "IDX": {
           "signal": "SHORT",
-          "note": "Crash Call confirmed \u2014 Indonesia panic hike"
+          "note": "Crash Call confirmed — Indonesia panic hike"
         }
       },
       "positioning_changes": [
-        "Added QTUM (Quantum) on weakness \u2014 Quad2 growth on sale",
-        "Added ROBO (Robotics) on weakness \u2014 holding TRADE support = add on red",
-        "Added DRAM on weakness \u2014 differentiated US growth over SPY/Mag7",
+        "Added QTUM (Quantum) on weakness — Quad2 growth on sale",
+        "Added ROBO (Robotics) on weakness — holding TRADE support = add on red",
+        "Added DRAM on weakness — differentiated US growth over SPY/Mag7",
         "Considering reducing BTC if TRADE signal ($78,012) not recaptured"
       ],
       "macro_themes": [
-        "Commodities + Bond Yields breaking to new Inflation Cycle Highs \u2014 Quad 3 thesis building",
+        "Commodities + Bond Yields breaking to new Inflation Cycle Highs — Quad 3 thesis building",
         "High Beta Momentum -20.3% crash is a Quad2 buying opportunity, not a trend break",
         "QQQ -3% from ATH = selective correction inside bull market",
-        "Global yields correcting from TRRs (top-end of Risk Range) \u2014 short-term relief"
+        "Global yields correcting from TRRs (top-end of Risk Range) — short-term relief"
       ]
     },
     "sss": {
@@ -3715,9 +3715,9 @@
         "CAT",
         "OUT",
         "SPHR",
-        "GASP",
-        "STLK",
-        "ANAT",
+        "CASY",
+        "STKL",
+        "AMAT",
         "ENB",
         "DAS",
         "CAVA",
@@ -3726,7 +3726,7 @@
         "SMPL",
         "RSI",
         "CZR",
-        "FCF8",
+        "FCFS",
         "NLS",
         "MAR",
         "CBX",
@@ -3792,7 +3792,7 @@
       ],
       "tickers_detail": {
         "CAT": {
-          "signal_date": "2026-05-26",
+          "signal_date": "2025-05-26",
           "entry_price": 343.4,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
@@ -3812,21 +3812,21 @@
           "analyst": "Andrew Freedman",
           "days_on_list": 127
         },
-        "GASP": {
+        "CASY": {
           "signal_date": "2026-01-19",
           "entry_price": 640.4,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
           "days_on_list": 120
         },
-        "STLK": {
+        "STKL": {
           "signal_date": "2026-02-02",
           "entry_price": 4.6,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
           "days_on_list": 106
         },
-        "ANAT": {
+        "AMAT": {
           "signal_date": "2026-02-09",
           "entry_price": 322.5,
           "sector": "Global Tech",
@@ -3889,7 +3889,7 @@
           "analyst": "Sean Jenkins",
           "days_on_list": 64
         },
-        "FCF8": {
+        "FCFS": {
           "signal_date": "2026-03-23",
           "entry_price": 192.1,
           "sector": "Financials",
@@ -4362,25 +4362,25 @@
         "TCEHY"
       ],
       "key_points": [
-        "SPY -2.0% from ATH, NASDAQ -2.9%, High Beta basket -20.3% \u2014 correction is selective, Quad 2 intact",
-        "Keith bought DRAM, QTUM (Quantum), ROBO (Robotics) \u2014 prefers differentiated US growth, does NOT want MAG-7 exposure",
-        "NVDA: Long into earnings, range $210\u2013$240, break level $204\u2013$205; SOXS 500M+ shares traded (3x avg) creating noise but not changing thesis",
+        "SPY -2.0% from ATH, NASDAQ -2.9%, High Beta basket -20.3% — correction is selective, Quad 2 intact",
+        "Keith bought DRAM, QTUM (Quantum), ROBO (Robotics) — prefers differentiated US growth, does NOT want MAG-7 exposure",
+        "NVDA: Long into earnings, range $210–$240, break level $204–$205; SOXS 500M+ shares traded (3x avg) creating noise but not changing thesis",
         "Commodities long + bonds short remain core macro calls",
         "CPI nowcasting above 4.25%, tracking toward 4.6% for May, potentially 4.7% Q4",
-        "RKT added as Best Idea Short \u2014 Quad 3 avg return -28%, higher mortgage rates, steepening base effects",
-        "Natural gas turning bullish \u2014 LNG exports + data center demand vs. limited storage; AR, RRC on long list",
-        "CAVA: 9.7% comp, 7pts transaction growth, Q2 run-rate at/above Q1 through mid-May \u2014 Best Idea Long",
-        "SITM: Down from ~$900 to <$700 \u2014 buying opportunity despite $1.2B convert headwind",
+        "RKT added as Best Idea Short — Quad 3 avg return -28%, higher mortgage rates, steepening base effects",
+        "Natural gas turning bullish — LNG exports + data center demand vs. limited storage; AR, RRC on long list",
+        "CAVA: 9.7% comp, 7pts transaction growth, Q2 run-rate at/above Q1 through mid-May — Best Idea Long",
+        "SITM: Down from ~$900 to <$700 — buying opportunity despite $1.2B convert headwind",
         "XOP: Significant bullish trend; natural gas establishing new higher floor"
       ],
       "trades_mentioned": [
-        "CAVA \u2014 elevated to Best Idea Long on 9.7% comp + accelerating Q2 run-rate",
-        "RKT \u2014 added as Best Idea Short (Quad 3 avg -28%, mortgage rate headwinds)",
-        "SITM \u2014 pullback opportunity at range low despite convert-related headwind",
-        "DRAM, QTUM, ROBO \u2014 Keith bought on weakness (differentiated growth over SPY)",
-        "HCA \u2014 downgraded at JPMorgan; rising yields inverse correlation; still short"
+        "CAVA — elevated to Best Idea Long on 9.7% comp + accelerating Q2 run-rate",
+        "RKT — added as Best Idea Short (Quad 3 avg -28%, mortgage rate headwinds)",
+        "SITM — pullback opportunity at range low despite convert-related headwind",
+        "DRAM, QTUM, ROBO — Keith bought on weakness (differentiated growth over SPY)",
+        "HCA — downgraded at JPMorgan; rising yields inverse correlation; still short"
       ],
-      "keith_outlook": "Selective correction inside a Quad 2 bull market \u2014 SPY barely off highs, High Beta Momentum basket crashed -20.3%. Buying differentiated growth (DRAM, Quantum, Robotics) on sale. Does not want MAG-7 exposure. NVDA is the only exception into earnings tonight. Core positioning: commodities long, bonds short. CPI tracking toward 4.6% for May.",
+      "keith_outlook": "Selective correction inside a Quad 2 bull market — SPY barely off highs, High Beta Momentum basket crashed -20.3%. Buying differentiated growth (DRAM, Quantum, Robotics) on sale. Does not want MAG-7 exposure. NVDA is the only exception into earnings tonight. Core positioning: commodities long, bonds short. CPI tracking toward 4.6% for May.",
       "ticker_mentions": {
         "NVDA": {
           "signal": "BULLISH",
@@ -4438,12 +4438,12 @@
     "macro_show_notes": {
       "date": "2026-05-20",
       "key_points": [
-        "QQQ -3% from ATH; High Beta basket -20.3% \u2014 correction is selective, Quad 2 intact",
-        "Keith bought QTUM, ROBO, DRAM on weakness \u2014 buying Quad2 growth on sale",
+        "QQQ -3% from ATH; High Beta basket -20.3% — correction is selective, Quad 2 intact",
+        "Keith bought QTUM, ROBO, DRAM on weakness — buying Quad2 growth on sale",
         "BTC bounced off LRR; trim if TRADE ($78,012) not recaptured; TREND at $74,663",
-        "Bond Yields + Commodities at new Inflation Cycle Highs \u2014 Quad 3 thesis accelerating",
-        "UK 10yr yield at 5.17% Cycle High, correcting from TRR \u2014 global yield relief trade",
-        "Indonesia IDX Crash Call confirmed \u2014 panic rate hike validates short",
+        "Bond Yields + Commodities at new Inflation Cycle Highs — Quad 3 thesis accelerating",
+        "UK 10yr yield at 5.17% Cycle High, correcting from TRR — global yield relief trade",
+        "Indonesia IDX Crash Call confirmed — panic rate hike validates short",
         "Process: TRADE breaks = reduce. Holding TRADE support = add on red (e.g. ROBO)"
       ],
       "positioning_changes": [
@@ -4452,8 +4452,8 @@
       ],
       "keith_watching": [
         "BTC TRADE signal recapture at $78,012",
-        "NVDA earnings tonight \u2014 range $210-$240, break level $204-$205",
-        "Global yields correcting from TRRs \u2014 duration of relief",
+        "NVDA earnings tonight — range $210-$240, break level $204-$205",
+        "Global yields correcting from TRRs — duration of relief",
         "High Beta Momentum basket stabilization"
       ]
     }
