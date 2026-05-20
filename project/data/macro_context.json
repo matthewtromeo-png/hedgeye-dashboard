@@ -1,51 +1,41 @@
 {
-  "generated_at": "2026-05-19T19:12:45.864395+00:00",
-  "source_date": "2026-05-19",
+  "generated_at": "2026-05-20T14:00:12.289520+00:00",
+  "source_date": "2026-05-20",
   "sources_used": {
-    "etf_pro": "etf-pro-all-active-tickers-1779133376.xlsx",
-    "ham_holdings": "ETF_Holdings 5.19.2026.csv",
+    "etf_pro": "etf-pro-all-active-tickers-1779284895.xlsx",
+    "ham_holdings": "ETF_Holdings 5.20.2026.csv",
     "rta": "real-time-alerts-history-2026-05-18.csv",
-    "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "macro_show": "HE_TMS_KM_DJ_5.19.2026.pdf@1779217309",
-    "msr": "MSR_2.0.pdf@1779192278",
-    "sss": "Hedgeye - Signal Strength Stocks_ 77 Stocks (7 Added, 2 Removed).pdf@1779210337",
-    "momo": "Hedgeye - MOMO Tracker _ Mag7 (-1.3, BEARISH) vs MSFT (+3.1%, BULLISH), NVDA Earnings=Wednesday.pdf@1779110388",
-    "early_look": "Hedgeye - Upside-Down Momentum.pdf@1779191580",
-    "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (5_19_2026) _ Top Movers_ CNXT (+14), XLI (+9), OAEM (+8).pdf@1779210291",
-    "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-0.3%), MSTR=NEUTRAL, ETFs=-$-733M D_D, SEC→Tokenized Equities Plan Ready.pdf@1779194431",
-    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_19_2026.pdf@1779217405",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Tuesday, May 19th, 2026.pdf@1779217282",
-    "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ May 11, 2026.pdf@1778506347|Hedgeye - Investing Ideas Newsletter_ May 18, 2026.pdf@1779110293",
-    "founders_choice": "Hedgeye - Founder's Choice_ Global Technology - Best Idea Longs & Shorts.pdf@1779199300|Hedgeye - Position Monitors _ Communications - Best Idea Longs & Shorts.pdf@1779199338",
-    "from_desk": "Macro_Week_Summary_Notes_5.15.2026.pdf@1779110909|Macro_Week_Summary_Notes_5.8.2026.pdf@1778513480",
-    "macro_research": "c829a66e47b6"
+    "early_look": "Hedgeye - Buying Growth On Sale.pdf",
+    "msr": "MSR_2.0.pdf + May 20th 2026 The Strongest Short-term Catalyst.pdf",
+    "momo": "MOMO Tracker Mag7 (-1.3%) 5/20/26",
+    "btc": "CRYPTO QUANT BTC (+0.5%) Broken TRADE Bullish TREND 5/20/26"
   },
   "etf_rerank": [
+    "DBB",
+    "ROBO",
+    "EWUS",
     "DRAM",
-    "BTAL",
     "EWQ",
+    "BTAL",
     "IHI",
     "SLX",
     "COLO",
     "VXF",
     "QTUM",
     "VYM",
-    "MSOS",
     "XLU",
-    "IWM",
     "IDX",
+    "IWM",
     "ITB",
     "EPHE",
-    "STIP",
     "PALL",
+    "STIP",
     "OAEM",
-    "ALLW",
     "CNXT",
     "INDA",
     "CPER",
-    "CLOZ",
     "XLV",
-    "TUR",
+    "CLOZ",
     "HYG",
     "SOYB",
     "ZROZ",
@@ -66,83 +56,83 @@
   ],
   "active_longs": [
     {
+      "ticker": "DBB",
+      "etf": "Base Metals",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-19",
+      "last_price": 25.59,
+      "days_held": 2
+    },
+    {
+      "ticker": "ROBO",
+      "etf": "Robotics Automation",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-19",
+      "last_price": 82.58,
+      "days_held": 2
+    },
+    {
       "ticker": "DRAM",
       "etf": "Computer Memory",
       "asset_class": "International Equities",
       "date_added": "2026-05-18",
-      "last_price": 49.12,
-      "days_held": 1
+      "last_price": 50.86,
+      "days_held": 3
     },
     {
       "ticker": "SLX",
       "etf": "Steel",
       "asset_class": "Commodities",
       "date_added": "2026-05-15",
-      "last_price": 105.57,
-      "days_held": 2
+      "last_price": 103.84,
+      "days_held": 4
     },
     {
       "ticker": "VXF",
       "etf": "US Extended Market",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-13",
-      "last_price": 223.91,
-      "days_held": 4
+      "last_price": 222.58,
+      "days_held": 6
     },
     {
       "ticker": "QTUM",
       "etf": "Quantum Tech",
       "asset_class": "Global Equities",
       "date_added": "2026-05-13",
-      "last_price": 141.41,
-      "days_held": 4
+      "last_price": 143.1,
+      "days_held": 6
     },
     {
       "ticker": "VYM",
       "etf": "Dividend Yield",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
-      "last_price": 156.47,
-      "days_held": 5
-    },
-    {
-      "ticker": "MSOS",
-      "etf": "US Cannabis",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-11",
-      "last_price": 4.57,
-      "days_held": 6
+      "last_price": 156.2,
+      "days_held": 7
     },
     {
       "ticker": "IWM",
       "etf": "US Small-Cap",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-07",
-      "last_price": 275.73,
-      "days_held": 8
+      "last_price": 275.92,
+      "days_held": 10
     },
     {
       "ticker": "STIP",
       "etf": "Short TIPS Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-05-01",
-      "last_price": 103.53,
-      "days_held": 12
+      "last_price": 103.37,
+      "days_held": 14
     },
     {
       "ticker": "OAEM",
       "etf": "Emerging Markets",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-30",
-      "last_price": 46.99,
-      "days_held": 13
-    },
-    {
-      "ticker": "ALLW",
-      "etf": "All Weather",
-      "asset_class": "Global Equities",
-      "date_added": "2026-04-28",
-      "last_price": 29.74,
+      "last_price": 46.53,
       "days_held": 15
     },
     {
@@ -150,40 +140,32 @@
       "etf": "VanEck ChiNext ETF",
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
-      "last_price": 55.53,
-      "days_held": 15
+      "last_price": 55.5,
+      "days_held": 17
     },
     {
       "ticker": "CPER",
       "etf": "Copper",
       "asset_class": "Commodities",
       "date_added": "2026-04-24",
-      "last_price": 38.41,
-      "days_held": 17
+      "last_price": 38.16,
+      "days_held": 19
     },
     {
       "ticker": "CLOZ",
       "etf": "CLOs",
       "asset_class": "Fixed Income",
       "date_added": "2026-04-22",
-      "last_price": 26.45,
-      "days_held": 19
-    },
-    {
-      "ticker": "TUR",
-      "etf": "Turkey",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-22",
-      "last_price": 40.46,
-      "days_held": 19
+      "last_price": 26.41,
+      "days_held": 21
     },
     {
       "ticker": "HYG",
       "etf": "High Yield Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-21",
-      "last_price": 79.52,
-      "days_held": 20
+      "last_price": 79.45,
+      "days_held": 22
     },
     {
       "ticker": "SOYB",
@@ -191,103 +173,103 @@
       "asset_class": "Commodities",
       "date_added": "2026-04-17",
       "last_price": 25.18,
-      "days_held": 22
+      "days_held": 24
     },
     {
       "ticker": "EWW",
       "etf": "Mexico",
       "asset_class": "International Equities",
       "date_added": "2026-04-16",
-      "last_price": 77.89,
-      "days_held": 23
+      "last_price": 77.74,
+      "days_held": 25
     },
     {
       "ticker": "IBIT",
       "etf": "Bitcoin",
       "asset_class": "Commodities",
       "date_added": "2026-04-16",
-      "last_price": 43.45,
-      "days_held": 23
+      "last_price": 43.68,
+      "days_held": 25
     },
     {
       "ticker": "XLI",
       "etf": "Industrials",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-15",
-      "last_price": 170.51,
-      "days_held": 24
+      "last_price": 169.38,
+      "days_held": 26
     },
     {
       "ticker": "EQRR",
       "etf": "Rising Rates Equities",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-31",
-      "last_price": 77.16,
-      "days_held": 34
+      "last_price": 77.56,
+      "days_held": 36
     },
     {
       "ticker": "XTL",
       "etf": "Telecom",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-27",
-      "last_price": 223.04,
-      "days_held": 36
+      "last_price": 224.99,
+      "days_held": 38
     },
     {
       "ticker": "COM",
       "etf": "Broad Commodity",
       "asset_class": "Commodities",
       "date_added": "2026-03-17",
-      "last_price": 34.98,
-      "days_held": 44
+      "last_price": 34.87,
+      "days_held": 46
     },
     {
       "ticker": "NORW",
       "etf": "Norway",
       "asset_class": "International Equities",
       "date_added": "2026-03-03",
-      "last_price": 39.0,
-      "days_held": 54
+      "last_price": 39.14,
+      "days_held": 56
     },
     {
       "ticker": "BNO",
       "etf": "Brent Oil",
       "asset_class": "Commodities",
       "date_added": "2026-02-13",
-      "last_price": 57.69,
-      "days_held": 65
+      "last_price": 57.44,
+      "days_held": 67
     },
     {
       "ticker": "OIH",
       "etf": "Oil Services",
       "asset_class": "Commodities",
       "date_added": "2026-02-05",
-      "last_price": 452.33,
-      "days_held": 71
+      "last_price": 455.49,
+      "days_held": 73
     },
     {
       "ticker": "XOP",
       "etf": "Oil & Gas Equity",
       "asset_class": "Commodities",
       "date_added": "2026-02-02",
-      "last_price": 176.48,
-      "days_held": 74
+      "last_price": 178.65,
+      "days_held": 76
     },
     {
       "ticker": "CLOX",
       "etf": "AAA CLO",
       "asset_class": "Fixed Income",
       "date_added": "2025-03-07",
-      "last_price": 25.55,
-      "days_held": 301
+      "last_price": 25.53,
+      "days_held": 303
     },
     {
       "ticker": "AAAU",
       "etf": "Physical Gold",
       "asset_class": "Foreign Currency",
       "date_added": "2025-02-28",
-      "last_price": 44.95,
-      "days_held": 306
+      "last_price": 44.26,
+      "days_held": 308
     },
     {
       "ticker": "BUXX",
@@ -295,153 +277,185 @@
       "asset_class": "Domestic Fixed Income",
       "date_added": "2023-10-25",
       "last_price": 20.23,
-      "days_held": 643
+      "days_held": 645
     }
   ],
   "active_shorts": [
     {
-      "ticker": "BTAL",
-      "etf": "US Market Neutral",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-18",
-      "last_price": 12.52,
-      "days_held": 1
+      "ticker": "EWUS",
+      "etf": "UK Small-Cap",
+      "asset_class": "International Equities",
+      "date_added": "2026-05-19",
+      "last_price": 41.63,
+      "days_held": 2
     },
     {
       "ticker": "EWQ",
       "etf": "France",
       "asset_class": "International Equities",
       "date_added": "2026-05-18",
-      "last_price": 44.76,
-      "days_held": 1
+      "last_price": 44.83,
+      "days_held": 3
+    },
+    {
+      "ticker": "BTAL",
+      "etf": "US Market Neutral",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-18",
+      "last_price": 12.49,
+      "days_held": 3
     },
     {
       "ticker": "IHI",
       "etf": "Medical Devices",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-18",
-      "last_price": 49.8,
-      "days_held": 1
+      "last_price": 50.33,
+      "days_held": 3
     },
     {
       "ticker": "COLO",
       "etf": "Colombia",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-15",
-      "last_price": 36.52,
-      "days_held": 2
+      "last_price": 36.75,
+      "days_held": 4
     },
     {
       "ticker": "XLU",
       "etf": "Utilities Sector",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-11",
-      "last_price": 43.65,
-      "days_held": 6
+      "last_price": 44.67,
+      "days_held": 8
     },
     {
       "ticker": "IDX",
       "etf": "Indonesia",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-07",
-      "last_price": 11.92,
-      "days_held": 8
+      "last_price": 11.34,
+      "days_held": 10
     },
     {
       "ticker": "ITB",
       "etf": "Home Construction",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-06",
-      "last_price": 87.58,
-      "days_held": 9
+      "last_price": 86.72,
+      "days_held": 11
     },
     {
       "ticker": "EPHE",
       "etf": "Philippines",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-04",
-      "last_price": 24.56,
-      "days_held": 11
+      "last_price": 24.32,
+      "days_held": 13
     },
     {
       "ticker": "PALL",
       "etf": "Palladium",
       "asset_class": "Commodities",
       "date_added": "2026-05-01",
-      "last_price": 25.58,
-      "days_held": 12
+      "last_price": 24.57,
+      "days_held": 14
     },
     {
       "ticker": "INDA",
       "etf": "India",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-28",
-      "last_price": 47.79,
-      "days_held": 15
+      "last_price": 47.53,
+      "days_held": 17
     },
     {
       "ticker": "XLV",
       "etf": "Healthcare",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-22",
-      "last_price": 145.59,
-      "days_held": 19
+      "last_price": 147.77,
+      "days_held": 21
     },
     {
       "ticker": "ZROZ",
       "etf": "US Treasury Long",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-17",
-      "last_price": 60.17,
-      "days_held": 22
+      "last_price": 59.61,
+      "days_held": 24
     },
     {
       "ticker": "TLT",
       "etf": "Long Treasury Bond",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-02",
-      "last_price": 83.61,
-      "days_held": 32
+      "last_price": 83.17,
+      "days_held": 34
     }
   ],
   "ham_holdings": [
     {
+      "ticker": "Cash&Other",
+      "name": "Cash & Other",
+      "total_weight": 0.3512,
+      "accounts": {
+        "HECA": -0.0205,
+        "HEFT": 0.2118,
+        "HELS": 0.1377,
+        "HGRO": 0.0222
+      },
+      "market_value": 20813939.88
+    },
+    {
+      "ticker": "FGXXX",
+      "name": "First American Government Obligations Fund 12/01/2031",
+      "total_weight": 0.2662,
+      "accounts": {
+        "HECA": 0.1005,
+        "HEFT": 0.1276,
+        "HELS": 0.0096,
+        "HGRO": 0.0285
+      },
+      "market_value": 51767356.81
+    },
+    {
       "ticker": "CERY",
       "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
-      "total_weight": 0.1427,
+      "total_weight": 0.1432,
       "accounts": {
-        "HEFT": 0.1427
+        "HEFT": 0.1432
       },
-      "market_value": 14796592.0
+      "market_value": 14851105.76
     },
     {
       "ticker": "AAPL",
       "name": "Apple Inc",
-      "total_weight": 0.1194,
+      "total_weight": 0.1208,
       "accounts": {
-        "HELS": 0.0302,
-        "HGRO": 0.0892
+        "HELS": 0.0305,
+        "HGRO": 0.0903
       },
-      "market_value": 11165723.76
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet Inc",
-      "total_weight": 0.1143,
-      "accounts": {
-        "HELS": 0.0313,
-        "HGRO": 0.083
-      },
-      "market_value": 10467704.74
+      "market_value": 11373117.77
     },
     {
       "ticker": "VTIP",
       "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
-      "total_weight": 0.1121,
+      "total_weight": 0.1125,
       "accounts": {
-        "HECA": 0.1121
+        "HECA": 0.1125
       },
-      "market_value": 39167611.26
+      "market_value": 39113179.4
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc",
+      "total_weight": 0.1125,
+      "accounts": {
+        "HELS": 0.0308,
+        "HGRO": 0.0817
+      },
+      "market_value": 10371843.3
     },
     {
       "ticker": "NVDA",
@@ -450,62 +464,71 @@
       "accounts": {
         "HGRO": 0.0952
       },
-      "market_value": 11126449.04
+      "market_value": 11215591.79
     },
     {
       "ticker": "VTI",
       "name": "Vanguard Total Stock Market ETF",
-      "total_weight": 0.0893,
+      "total_weight": 0.0887,
       "accounts": {
-        "HEFT": 0.0893
+        "HEFT": 0.0887
       },
-      "market_value": 9264458.12
+      "market_value": 9205654.02
     },
     {
       "ticker": "OIH",
       "name": "VanEck Oil Services ETF",
-      "total_weight": 0.0652,
+      "total_weight": 0.078,
       "accounts": {
-        "HECA": 0.023,
-        "HEFT": 0.0422
+        "HECA": 0.0361,
+        "HEFT": 0.0419
       },
-      "market_value": 12423790.4
-    },
-    {
-      "ticker": "XTL",
-      "name": "State Street SPDR S&P Telecom ETF",
-      "total_weight": 0.0603,
-      "accounts": {
-        "HECA": 0.0603
-      },
-      "market_value": 21075024.2
+      "market_value": 16883482.68
     },
     {
       "ticker": "DBMF",
       "name": "iMGP DBi Managed Futures Strategy ETF",
-      "total_weight": 0.0601,
+      "total_weight": 0.071,
       "accounts": {
-        "HECA": 0.0601
+        "HECA": 0.071
       },
-      "market_value": 21020907.8
+      "market_value": 24683730.48
     },
     {
       "ticker": "JAAA",
       "name": "Janus Henderson AAA CLO ETF",
-      "total_weight": 0.0601,
+      "total_weight": 0.0604,
       "accounts": {
-        "HECA": 0.0601
+        "HECA": 0.0604
       },
-      "market_value": 20999135.45
+      "market_value": 20994989.52
+    },
+    {
+      "ticker": "XTL",
+      "name": "State Street SPDR S&P Telecom ETF",
+      "total_weight": 0.0604,
+      "accounts": {
+        "HECA": 0.0604
+      },
+      "market_value": 20979143.18
     },
     {
       "ticker": "AMZN",
       "name": "Amazon.com Inc",
-      "total_weight": 0.06,
+      "total_weight": 0.0592,
       "accounts": {
-        "HGRO": 0.06
+        "HGRO": 0.0592
       },
-      "market_value": 7008460.46
+      "market_value": 6971318.54
+    },
+    {
+      "ticker": "UUP",
+      "name": "Invesco DB US Dollar Index Bullish Fund",
+      "total_weight": 0.0559,
+      "accounts": {
+        "HECA": 0.0559
+      },
+      "market_value": 19430351.15
     },
     {
       "ticker": "CASY",
@@ -516,16 +539,7 @@
         "HELS": 0.0307,
         "HGRO": 0.0098
       },
-      "market_value": 3477399.81
-    },
-    {
-      "ticker": "UUP",
-      "name": "Invesco DB US Dollar Index Bullish Fund",
-      "total_weight": 0.0554,
-      "accounts": {
-        "HECA": 0.0554
-      },
-      "market_value": 19367424.5
+      "market_value": 3477624.1500000004
     },
     {
       "ticker": "DBJP",
@@ -534,35 +548,35 @@
       "accounts": {
         "HECA": 0.0548
       },
-      "market_value": 19148613.99
+      "market_value": 19032722.91
     },
     {
       "ticker": "FWD",
       "name": "AB Disruptors ETF",
-      "total_weight": 0.054,
+      "total_weight": 0.0537,
       "accounts": {
-        "HECA": 0.054
+        "HECA": 0.0537
       },
-      "market_value": 18879072.8
-    },
-    {
-      "ticker": "SLX",
-      "name": "VanEck Steel ETF",
-      "total_weight": 0.0513,
-      "accounts": {
-        "HECA": 0.0361,
-        "HEFT": 0.0152
-      },
-      "market_value": 14175538.29
+      "market_value": 18676797.02
     },
     {
       "ticker": "IBIT",
       "name": "iShares Bitcoin Trust ETF",
-      "total_weight": 0.0506,
+      "total_weight": 0.0509,
       "accounts": {
-        "HECA": 0.0506
+        "HECA": 0.0509
       },
-      "market_value": 17690069.64
+      "market_value": 17677878.0
+    },
+    {
+      "ticker": "SLX",
+      "name": "VanEck Steel ETF",
+      "total_weight": 0.0502,
+      "accounts": {
+        "HECA": 0.0354,
+        "HEFT": 0.0148
+      },
+      "market_value": 13856457.96
     },
     {
       "ticker": "IHF",
@@ -571,46 +585,46 @@
       "accounts": {
         "HECA": 0.0473
       },
-      "market_value": 16514403.36
-    },
-    {
-      "ticker": "TAN",
-      "name": "Invesco Solar ETF",
-      "total_weight": 0.0454,
-      "accounts": {
-        "HECA": 0.0454
-      },
-      "market_value": 15870633.24
+      "market_value": 16446349.5
     },
     {
       "ticker": "CSX",
       "name": "CSX Corp",
-      "total_weight": 0.0446,
+      "total_weight": 0.0447,
       "accounts": {
-        "HELS": 0.0297,
+        "HELS": 0.0298,
         "HGRO": 0.0149
       },
-      "market_value": 2461905.6
+      "market_value": 2482882.56
+    },
+    {
+      "ticker": "TAN",
+      "name": "Invesco Solar ETF",
+      "total_weight": 0.0445,
+      "accounts": {
+        "HECA": 0.0445
+      },
+      "market_value": 15454919.48
     },
     {
       "ticker": "ARTY",
       "name": "iShares Future AI & Tech ETF",
-      "total_weight": 0.0426,
+      "total_weight": 0.0421,
       "accounts": {
-        "HEFT": 0.0426
+        "HEFT": 0.0421
       },
-      "market_value": 4417162.05
+      "market_value": 4370571.85
     },
     {
       "ticker": "FCFS",
       "name": "FirstCash Holdings Inc",
-      "total_weight": 0.0415,
+      "total_weight": 0.0419,
       "accounts": {
-        "HEFT": 0.0106,
-        "HELS": 0.0203,
-        "HGRO": 0.0106
+        "HEFT": 0.0107,
+        "HELS": 0.0205,
+        "HGRO": 0.0107
       },
-      "market_value": 2835620.8
+      "market_value": 2865937.54
     },
     {
       "ticker": "VYM",
@@ -619,126 +633,125 @@
       "accounts": {
         "HECA": 0.0412
       },
-      "market_value": 14399465.79
+      "market_value": 14333274.03
     },
     {
       "ticker": "GEV",
       "name": "GE Vernova Inc",
-      "total_weight": 0.0401,
+      "total_weight": 0.0403,
       "accounts": {
         "HEFT": 0.0102,
-        "HELS": 0.0156,
-        "HGRO": 0.0143
+        "HELS": 0.0157,
+        "HGRO": 0.0144
       },
-      "market_value": 3111656.5
-    },
-    {
-      "ticker": "URI",
-      "name": "United Rentals Inc",
-      "total_weight": 0.0399,
-      "accounts": {
-        "HELS": 0.0251,
-        "HGRO": 0.0148
-      },
-      "market_value": 2338755.32
+      "market_value": 3134556.4000000004
     },
     {
       "ticker": "FESM",
       "name": "Fidelity Enhanced Small Cap Core ETF",
-      "total_weight": 0.0398,
+      "total_weight": 0.0397,
       "accounts": {
-        "HECA": 0.0398
+        "HECA": 0.0397
       },
-      "market_value": 13925320.5
+      "market_value": 13796828.5
+    },
+    {
+      "ticker": "URI",
+      "name": "United Rentals Inc",
+      "total_weight": 0.0394,
+      "accounts": {
+        "HELS": 0.0248,
+        "HGRO": 0.0146
+      },
+      "market_value": 2319050.0
     },
     {
       "ticker": "SBUX",
       "name": "Starbucks Corp",
-      "total_weight": 0.0382,
+      "total_weight": 0.0383,
       "accounts": {
         "HELS": 0.0226,
-        "HGRO": 0.0156
+        "HGRO": 0.0157
       },
-      "market_value": 2371317.0
-    },
-    {
-      "ticker": "CSCO",
-      "name": "Cisco Systems Inc",
-      "total_weight": 0.0381,
-      "accounts": {
-        "HELS": 0.028,
-        "HGRO": 0.0101
-      },
-      "market_value": 1862255.2
+      "market_value": 2395145.7
     },
     {
       "ticker": "INTC",
       "name": "Intel Corp",
-      "total_weight": 0.0364,
+      "total_weight": 0.0373,
       "accounts": {
-        "HEFT": 0.0194,
-        "HELS": 0.017
+        "HEFT": 0.0198,
+        "HELS": 0.0175
       },
-      "market_value": 2423116.17
-    },
-    {
-      "ticker": "RIG",
-      "name": "Transocean Ltd",
-      "total_weight": 0.036,
-      "accounts": {
-        "HEFT": 0.0176,
-        "HELS": 0.0184
-      },
-      "market_value": 2272309.66
+      "market_value": 2482030.8
     },
     {
       "ticker": "CAT",
       "name": "Caterpillar Inc",
-      "total_weight": 0.0359,
+      "total_weight": 0.036,
       "accounts": {
         "HELS": 0.0201,
-        "HGRO": 0.0158
+        "HGRO": 0.0159
       },
-      "market_value": 2343032.4
-    },
-    {
-      "ticker": "DAR",
-      "name": "DARLING INGREDIENTS INC",
-      "total_weight": 0.035,
-      "accounts": {
-        "HELS": 0.0251,
-        "HGRO": 0.0099
-      },
-      "market_value": 1766231.64
+      "market_value": 2358531.3000000003
     },
     {
       "ticker": "ULS",
       "name": "UL Solutions Inc",
-      "total_weight": 0.0349,
+      "total_weight": 0.0355,
       "accounts": {
-        "HELS": 0.0249,
-        "HGRO": 0.01
+        "HELS": 0.0253,
+        "HGRO": 0.0102
       },
-      "market_value": 1779407.72
+      "market_value": 1815618.42
     },
     {
-      "ticker": "VIK",
-      "name": "Viking Holdings Ltd",
-      "total_weight": 0.0315,
+      "ticker": "RIG",
+      "name": "Transocean Ltd",
+      "total_weight": 0.0354,
       "accounts": {
-        "HELS": 0.0211,
-        "HGRO": 0.0104
+        "HEFT": 0.0173,
+        "HELS": 0.0181
       },
-      "market_value": 1733420.52
+      "market_value": 2233338.65
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco Systems Inc",
+      "total_weight": 0.0343,
+      "accounts": {
+        "HELS": 0.0273,
+        "HGRO": 0.007
+      },
+      "market_value": 1482286.8599999999
+    },
+    {
+      "ticker": "HGER",
+      "name": "Harbor Commodity All Weather Strategy ETF",
+      "total_weight": 0.034,
+      "accounts": {
+        "HECA": 0.034
+      },
+      "market_value": 11834000.29
+    },
+    {
+      "ticker": "DAR",
+      "name": "DARLING INGREDIENTS INC",
+      "total_weight": 0.034,
+      "accounts": {
+        "HELS": 0.0244,
+        "HGRO": 0.0096
+      },
+      "market_value": 1721883.9
     },
     {
       "ticker": "XLE",
       "name": "State Street Energy Select Sector SPDR ETF",
-      "total_weight": 0.0314,
+      "total_weight": 0.0318,
       "accounts": {
-        "HEFT": 0.0314
+        "HEFT": 0.0318
       },
-      "market_value": 3255872.1
+      "market_value": 3294031.05
     },
     {
       "ticker": "APD",
@@ -748,158 +761,167 @@
         "HEFT": 0.0108,
         "HELS": 0.0201
       },
-      "market_value": 1613498.31
+      "market_value": 1605026.77
+    },
+    {
+      "ticker": "VIK",
+      "name": "Viking Holdings Ltd",
+      "total_weight": 0.0303,
+      "accounts": {
+        "HELS": 0.0203,
+        "HGRO": 0.01
+      },
+      "market_value": 1674531.72
     },
     {
       "ticker": "AVGO",
       "name": "Broadcom Inc",
-      "total_weight": 0.0303,
+      "total_weight": 0.0298,
       "accounts": {
-        "HGRO": 0.0303
+        "HGRO": 0.0298
       },
-      "market_value": 3539433.23
+      "market_value": 3512593.15
     },
     {
       "ticker": "DRAM",
       "name": "Roundhill Memory ETF",
-      "total_weight": 0.029,
+      "total_weight": 0.0292,
       "accounts": {
-        "HEFT": 0.029
+        "HEFT": 0.0292
       },
-      "market_value": 3005560.8
+      "market_value": 3032983.8
     },
     {
       "ticker": "LIT",
       "name": "Global X Lithium & Battery Tech ETF",
-      "total_weight": 0.0287,
+      "total_weight": 0.0284,
       "accounts": {
-        "HECA": 0.0287
+        "HECA": 0.0284
       },
-      "market_value": 10013002.85
+      "market_value": 9862259.1
     },
     {
       "ticker": "TTWO",
       "name": "Take-Two Interactive Software Inc",
-      "total_weight": 0.0286,
+      "total_weight": 0.0283,
       "accounts": {
-        "HELS": 0.0189,
-        "HGRO": 0.0097
+        "HELS": 0.0187,
+        "HGRO": 0.0096
       },
-      "market_value": 1598740.32
+      "market_value": 1589346.3599999999
     },
     {
-      "ticker": "CZR",
-      "name": "Caesars Entertainment Inc",
-      "total_weight": 0.0274,
+      "ticker": "PDBA",
+      "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
+      "total_weight": 0.028,
       "accounts": {
-        "HELS": 0.0201,
-        "HGRO": 0.0073
+        "HECA": 0.028
       },
-      "market_value": 1342939.64
+      "market_value": 9719612.99
     },
     {
       "ticker": "PM",
       "name": "Philip Morris International Inc",
-      "total_weight": 0.0273,
+      "total_weight": 0.0274,
       "accounts": {
         "HEFT": 0.0126,
-        "HGRO": 0.0147
+        "HGRO": 0.0148
       },
-      "market_value": 3024742.5
+      "market_value": 3052284.81
     },
     {
-      "ticker": "CIBR",
-      "name": "First Trust NASDAQ Cybersecurity ETF",
-      "total_weight": 0.0265,
+      "ticker": "023135106-TRS-06/15/27-L-HELS",
+      "name": "AMAZON.COM, INC.-SWAP-CLST-L",
+      "total_weight": 0.0273,
       "accounts": {
-        "HEFT": 0.0265
+        "HELS": 0.0273
       },
-      "market_value": 2750228.04
-    },
-    {
-      "ticker": "ROKU",
-      "name": "Roku Inc",
-      "total_weight": 0.026,
-      "accounts": {
-        "HELS": 0.026
-      },
-      "market_value": 635151.4
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials Inc",
-      "total_weight": 0.0253,
-      "accounts": {
-        "HELS": 0.0253
-      },
-      "market_value": 618287.15
-    },
-    {
-      "ticker": "OUT",
-      "name": "Outfront Media Inc",
-      "total_weight": 0.0251,
-      "accounts": {
-        "HELS": 0.0152,
-        "HGRO": 0.0099
-      },
-      "market_value": 1527368.4
-    },
-    {
-      "ticker": "JAZZ",
-      "name": "Jazz Pharmaceuticals PLC",
-      "total_weight": 0.025,
-      "accounts": {
-        "HELS": 0.025
-      },
-      "market_value": 611521.2
-    },
-    {
-      "ticker": "HGER",
-      "name": "Harbor Commodity All Weather Strategy ETF",
-      "total_weight": 0.0248,
-      "accounts": {
-        "HECA": 0.0248
-      },
-      "market_value": 8672527.5
-    },
-    {
-      "ticker": "MRVL",
-      "name": "MARVELL TECHNOLOGY INC",
-      "total_weight": 0.0245,
-      "accounts": {
-        "HELS": 0.0161,
-        "HGRO": 0.0084
-      },
-      "market_value": 1371880.53
+      "market_value": 663391.72
     },
     {
       "ticker": "LIN",
       "name": "Linde PLC",
-      "total_weight": 0.0237,
+      "total_weight": 0.0267,
       "accounts": {
         "HEFT": 0.0097,
-        "HGRO": 0.014
+        "HGRO": 0.017
       },
-      "market_value": 2650852.54
-    },
-    {
-      "ticker": "ADI",
-      "name": "Analog Devices Inc",
-      "total_weight": 0.0235,
-      "accounts": {
-        "HGRO": 0.0235
-      },
-      "market_value": 2746721.96
+      "market_value": 3001501.17
     },
     {
       "ticker": "MAR",
       "name": "Marriott International Inc/MD",
-      "total_weight": 0.0234,
+      "total_weight": 0.0264,
+      "accounts": {
+        "HELS": 0.0155,
+        "HGRO": 0.0109
+      },
+      "market_value": 1661093.3900000001
+    },
+    {
+      "ticker": "CIBR",
+      "name": "First Trust NASDAQ Cybersecurity ETF",
+      "total_weight": 0.0263,
+      "accounts": {
+        "HEFT": 0.0263
+      },
+      "market_value": 2732554.8
+    },
+    {
+      "ticker": "JAZZ",
+      "name": "Jazz Pharmaceuticals PLC",
+      "total_weight": 0.026,
+      "accounts": {
+        "HELS": 0.026
+      },
+      "market_value": 632566.8
+    },
+    {
+      "ticker": "MRVL",
+      "name": "MARVELL TECHNOLOGY INC",
+      "total_weight": 0.0256,
+      "accounts": {
+        "HELS": 0.0168,
+        "HGRO": 0.0088
+      },
+      "market_value": 1447352.97
+    },
+    {
+      "ticker": "OUT",
+      "name": "Outfront Media Inc",
+      "total_weight": 0.0254,
       "accounts": {
         "HELS": 0.0154,
-        "HGRO": 0.008
+        "HGRO": 0.01
       },
-      "market_value": 1307056.02
+      "market_value": 1552839.6
+    },
+    {
+      "ticker": "ROKU",
+      "name": "Roku Inc",
+      "total_weight": 0.0254,
+      "accounts": {
+        "HELS": 0.0254
+      },
+      "market_value": 616887.28
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly & Co",
+      "total_weight": 0.0254,
+      "accounts": {
+        "HGRO": 0.0254
+      },
+      "market_value": 2991709.89
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials Inc",
+      "total_weight": 0.025,
+      "accounts": {
+        "HELS": 0.025
+      },
+      "market_value": 608330.45
     },
     {
       "ticker": "CBOE",
@@ -908,34 +930,35 @@
       "accounts": {
         "HGRO": 0.0229
       },
-      "market_value": 2674576.56
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly & Co",
-      "total_weight": 0.0229,
-      "accounts": {
-        "HGRO": 0.0229
-      },
-      "market_value": 2680688.17
+      "market_value": 2691785.52
     },
     {
       "ticker": "DBB",
       "name": "Invesco DB Base Metals Fund",
-      "total_weight": 0.0227,
+      "total_weight": 0.0228,
       "accounts": {
-        "HECA": 0.0227
+        "HECA": 0.0228
       },
-      "market_value": 7944908.04
+      "market_value": 7923072.8
     },
     {
-      "ticker": "GS",
-      "name": "Goldman Sachs Group Inc/The",
-      "total_weight": 0.0221,
+      "ticker": "CZR",
+      "name": "Caesars Entertainment Inc",
+      "total_weight": 0.0224,
       "accounts": {
-        "HGRO": 0.0221
+        "HELS": 0.0151,
+        "HGRO": 0.0073
       },
-      "market_value": 2582616.44
+      "market_value": 1226830.0
+    },
+    {
+      "ticker": "67066G104-TRS-06/08/27-L-HELS",
+      "name": "NVIDIA CORPORATION-SWAP-CLST-L",
+      "total_weight": 0.0219,
+      "accounts": {
+        "HELS": 0.0219
+      },
+      "market_value": 531449.49
     },
     {
       "ticker": "TWLO",
@@ -945,7 +968,16 @@
         "HELS": 0.0155,
         "HGRO": 0.0064
       },
-      "market_value": 1127369.04
+      "market_value": 1129259.85
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs Group Inc/The",
+      "total_weight": 0.0218,
+      "accounts": {
+        "HGRO": 0.0218
+      },
+      "market_value": 2573538.54
     },
     {
       "ticker": "V",
@@ -954,34 +986,43 @@
       "accounts": {
         "HGRO": 0.0216
       },
-      "market_value": 2524072.32
-    },
-    {
-      "ticker": "JBHT",
-      "name": "JB Hunt Transport Services Inc",
-      "total_weight": 0.0211,
-      "accounts": {
-        "HELS": 0.0211
-      },
-      "market_value": 516383.5
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group Inc",
-      "total_weight": 0.0209,
-      "accounts": {
-        "HGRO": 0.0209
-      },
-      "market_value": 2442606.85
+      "market_value": 2542946.28
     },
     {
       "ticker": "ENB",
       "name": "Enbridge Inc",
+      "total_weight": 0.0211,
+      "accounts": {
+        "HELS": 0.0211
+      },
+      "market_value": 513324.81
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group Inc",
+      "total_weight": 0.021,
+      "accounts": {
+        "HGRO": 0.021
+      },
+      "market_value": 2468170.84
+    },
+    {
+      "ticker": "JBHT",
+      "name": "JB Hunt Transport Services Inc",
       "total_weight": 0.0208,
       "accounts": {
         "HELS": 0.0208
       },
-      "market_value": 509528.43
+      "market_value": 506646.75
+    },
+    {
+      "ticker": "MUSA",
+      "name": "Murphy USA Inc",
+      "total_weight": 0.0208,
+      "accounts": {
+        "HELS": 0.0208
+      },
+      "market_value": 505787.04
     },
     {
       "ticker": "MKSI",
@@ -990,144 +1031,179 @@
       "accounts": {
         "HELS": 0.0207
       },
-      "market_value": 505942.7
-    },
-    {
-      "ticker": "CAVA",
-      "name": "Cava Group Inc",
-      "total_weight": 0.0206,
-      "accounts": {
-        "HELS": 0.015,
-        "HGRO": 0.0056
-      },
-      "market_value": 1015721.46
-    },
-    {
-      "ticker": "MUSA",
-      "name": "Murphy USA Inc",
-      "total_weight": 0.0205,
-      "accounts": {
-        "HELS": 0.0205
-      },
-      "market_value": 502021.92
-    },
-    {
-      "ticker": "FITE",
-      "name": "State Street SPDR S&P Kensho Future Security ETF",
-      "total_weight": 0.0203,
-      "accounts": {
-        "HEFT": 0.0203
-      },
-      "market_value": 2103303.93
-    },
-    {
-      "ticker": "512807306 SWP CS",
-      "name": "512807306 SWP CS",
-      "total_weight": 0.0203,
-      "accounts": {
-        "HELS": 0.0203
-      },
-      "market_value": 496714.52
+      "market_value": 503102.44
     },
     {
       "ticker": "HAL",
       "name": "Halliburton Co",
-      "total_weight": 0.0202,
+      "total_weight": 0.0204,
       "accounts": {
-        "HGRO": 0.0202
+        "HGRO": 0.0204
       },
-      "market_value": 2355595.14
+      "market_value": 2404000.34
     },
     {
-      "ticker": "GLD",
-      "name": "SPDR Gold Shares",
-      "total_weight": 0.02,
+      "ticker": "FITE",
+      "name": "State Street SPDR S&P Kensho Future Security ETF",
+      "total_weight": 0.0201,
       "accounts": {
-        "HEFT": 0.02
+        "HEFT": 0.0201
       },
-      "market_value": 2073739.08
+      "market_value": 2086576.62
     },
     {
-      "ticker": "XYZ",
-      "name": "Block Inc",
+      "ticker": "IHE",
+      "name": "iShares U.S. Pharmaceuticals ETF",
+      "total_weight": 0.0201,
+      "accounts": {
+        "HEFT": 0.0201
+      },
+      "market_value": 2081899.05
+    },
+    {
+      "ticker": "512807306-TRS-06/22/27-L-HELS",
+      "name": "LAM RESEARCH CORPORATION-SWAP-CLST-L",
+      "total_weight": 0.0201,
+      "accounts": {
+        "HELS": 0.0201
+      },
+      "market_value": 488530.06
+    },
+    {
+      "ticker": "125523100-TRS-06/22/27-L-HELS",
+      "name": "THE CIGNA GROUP-SWAP-CLST-L",
       "total_weight": 0.02,
       "accounts": {
         "HELS": 0.02
       },
-      "market_value": 489536.53
+      "market_value": 485855.04
     },
     {
-      "ticker": "NOV",
-      "name": "NOV Inc",
+      "ticker": "92826C839 SWP CS",
+      "name": "92826C839 SWP CS",
+      "total_weight": 0.02,
+      "accounts": {
+        "HELS": 0.02
+      },
+      "market_value": 486947.16
+    },
+    {
+      "ticker": "00971T101-TRS-06/08/27-L-HELS",
+      "name": "AKAMAI TECHNOLOGIES, INC.-SWAP-CLST-L",
+      "total_weight": 0.0198,
+      "accounts": {
+        "HELS": 0.0198
+      },
+      "market_value": 481828.06
+    },
+    {
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares",
+      "total_weight": 0.0197,
+      "accounts": {
+        "HEFT": 0.0197
+      },
+      "market_value": 2039394.0
+    },
+    {
+      "ticker": "XYZ",
+      "name": "Block Inc",
       "total_weight": 0.0197,
       "accounts": {
         "HELS": 0.0197
       },
-      "market_value": 481998.56
+      "market_value": 479417.27
+    },
+    {
+      "ticker": "NOV",
+      "name": "NOV Inc",
+      "total_weight": 0.0196,
+      "accounts": {
+        "HELS": 0.0196
+      },
+      "market_value": 477217.28
     },
     {
       "ticker": "MEOH",
       "name": "Methanex Corp",
-      "total_weight": 0.0194,
+      "total_weight": 0.0195,
       "accounts": {
-        "HELS": 0.0194
+        "HELS": 0.0195
       },
-      "market_value": 474553.87
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices Inc",
-      "total_weight": 0.0192,
-      "accounts": {
-        "HGRO": 0.0192
-      },
-      "market_value": 2243876.7
-    },
-    {
-      "ticker": "AVEM",
-      "name": "Avantis Emerging Markets Equity ETF",
-      "total_weight": 0.0191,
-      "accounts": {
-        "HEFT": 0.0191
-      },
-      "market_value": 1981423.14
-    },
-    {
-      "ticker": "XAR",
-      "name": "State Street SPDR S&P Aerospace & Defense ETF",
-      "total_weight": 0.019,
-      "accounts": {
-        "HEFT": 0.019
-      },
-      "market_value": 1969863.64
+      "market_value": 474401.01
     },
     {
       "ticker": "SXT",
       "name": "Sensient Technologies Corp",
+      "total_weight": 0.0191,
+      "accounts": {
+        "HELS": 0.0191
+      },
+      "market_value": 465413.9
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices Inc",
       "total_weight": 0.019,
       "accounts": {
-        "HELS": 0.019
+        "HGRO": 0.019
       },
-      "market_value": 464638.89
+      "market_value": 2241666.7
+    },
+    {
+      "ticker": "AVEM",
+      "name": "Avantis Emerging Markets Equity ETF",
+      "total_weight": 0.0189,
+      "accounts": {
+        "HEFT": 0.0189
+      },
+      "market_value": 1959761.14
+    },
+    {
+      "ticker": "XAR",
+      "name": "State Street SPDR S&P Aerospace & Defense ETF",
+      "total_weight": 0.0187,
+      "accounts": {
+        "HEFT": 0.0187
+      },
+      "market_value": 1941798.64
+    },
+    {
+      "ticker": "14448C104-TRS-06/15/27-L-HELS",
+      "name": "CARRIER GLOBAL CORPORATION-SWAP-CLST-L",
+      "total_weight": 0.0185,
+      "accounts": {
+        "HELS": 0.0185
+      },
+      "market_value": 450600.96
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices Inc",
+      "total_weight": 0.0179,
+      "accounts": {
+        "HGRO": 0.0179
+      },
+      "market_value": 2110495.14
     },
     {
       "ticker": "SWBI",
       "name": "Smith & Wesson Brands Inc",
-      "total_weight": 0.0179,
+      "total_weight": 0.0176,
       "accounts": {
-        "HEFT": 0.0075,
-        "HELS": 0.0104
+        "HEFT": 0.0074,
+        "HELS": 0.0102
       },
-      "market_value": 1036208.19
+      "market_value": 1013522.37
     },
     {
-      "ticker": "XBI",
-      "name": "State Street SPDR S&P Biotech ETF",
+      "ticker": "WMT",
+      "name": "Walmart Inc",
       "total_weight": 0.0176,
       "accounts": {
         "HEFT": 0.0176
       },
-      "market_value": 1825425.66
+      "market_value": 1828340.8
     },
     {
       "ticker": "WDC",
@@ -1136,25 +1212,7 @@
       "accounts": {
         "HELS": 0.0176
       },
-      "market_value": 431159.2
-    },
-    {
-      "ticker": "WMT",
-      "name": "Walmart Inc",
-      "total_weight": 0.0175,
-      "accounts": {
-        "HEFT": 0.0175
-      },
-      "market_value": 1816624.16
-    },
-    {
-      "ticker": "GRID",
-      "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund",
-      "total_weight": 0.0169,
-      "accounts": {
-        "HECA": 0.0169
-      },
-      "market_value": 5910854.36
+      "market_value": 428452.0
     },
     {
       "ticker": "NDAQ",
@@ -1163,97 +1221,125 @@
       "accounts": {
         "HGRO": 0.0169
       },
-      "market_value": 1972565.2
+      "market_value": 1990263.24
+    },
+    {
+      "ticker": "GRID",
+      "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund",
+      "total_weight": 0.0166,
+      "accounts": {
+        "HECA": 0.0166
+      },
+      "market_value": 5779342.38
+    },
+    {
+      "ticker": "CAVA",
+      "name": "Cava Group Inc",
+      "total_weight": 0.0165,
+      "accounts": {
+        "HELS": 0.0125,
+        "HGRO": 0.004
+      },
+      "market_value": 776590.9199999999
     },
     {
       "ticker": "ADM",
       "name": "Archer-Daniels-Midland Co",
-      "total_weight": 0.0166,
+      "total_weight": 0.0162,
       "accounts": {
-        "HEFT": 0.0166
+        "HEFT": 0.0162
       },
-      "market_value": 1720712.97
+      "market_value": 1677328.29
     },
     {
       "ticker": "MO",
       "name": "Altria Group Inc",
-      "total_weight": 0.0161,
+      "total_weight": 0.0162,
       "accounts": {
-        "HEFT": 0.0161
+        "HEFT": 0.0162
       },
-      "market_value": 1669536.84
+      "market_value": 1675878.0
     },
     {
       "ticker": "CRCL",
       "name": "Circle Internet Group Inc",
-      "total_weight": 0.0159,
+      "total_weight": 0.016,
       "accounts": {
-        "HELS": 0.0159
+        "HELS": 0.016
       },
-      "market_value": 389085.27
+      "market_value": 387827.79
     },
     {
       "ticker": "MPC",
       "name": "Marathon Petroleum Corp",
-      "total_weight": 0.0156,
+      "total_weight": 0.0159,
       "accounts": {
-        "HELS": 0.0156
+        "HELS": 0.0159
       },
-      "market_value": 382028.16
-    },
-    {
-      "ticker": "C",
-      "name": "Citigroup Inc",
-      "total_weight": 0.0155,
-      "accounts": {
-        "HGRO": 0.0155
-      },
-      "market_value": 1813136.92
-    },
-    {
-      "ticker": "EWW",
-      "name": "iShares MSCI Mexico ETF",
-      "total_weight": 0.0153,
-      "accounts": {
-        "HEFT": 0.0153
-      },
-      "market_value": 1585420.8
+      "market_value": 385693.44
     },
     {
       "ticker": "GLASF",
       "name": "Glass House Brands Inc",
-      "total_weight": 0.0153,
+      "total_weight": 0.0158,
       "accounts": {
-        "HELS": 0.0153
+        "HELS": 0.0158
       },
-      "market_value": 374115.51
-    },
-    {
-      "ticker": "STT",
-      "name": "State Street Corp",
-      "total_weight": 0.0153,
-      "accounts": {
-        "HELS": 0.0153
-      },
-      "market_value": 374356.9
+      "market_value": 384413.99
     },
     {
       "ticker": "RSI",
       "name": "Rush Street Interactive Inc",
-      "total_weight": 0.0152,
+      "total_weight": 0.0154,
       "accounts": {
-        "HELS": 0.0152
+        "HELS": 0.0154
       },
-      "market_value": 370390.62
+      "market_value": 374808.0
     },
     {
-      "ticker": "SPHR",
-      "name": "Sphere Entertainment Co",
+      "ticker": "LAMR",
+      "name": "Lamar Advertising Co",
+      "total_weight": 0.0153,
+      "accounts": {
+        "HELS": 0.0153
+      },
+      "market_value": 372180.31
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc",
+      "total_weight": 0.0153,
+      "accounts": {
+        "HGRO": 0.0153
+      },
+      "market_value": 1805068.62
+    },
+    {
+      "ticker": "EWW",
+      "name": "iShares MSCI Mexico ETF",
+      "total_weight": 0.0152,
+      "accounts": {
+        "HEFT": 0.0152
+      },
+      "market_value": 1577687.04
+    },
+    {
+      "ticker": "WEAT",
+      "name": "Teucrium Wheat Fund",
+      "total_weight": 0.0151,
+      "accounts": {
+        "HEFT": 0.0151
+      },
+      "market_value": 1570842.0
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corp",
       "total_weight": 0.0151,
       "accounts": {
         "HELS": 0.0151
       },
-      "market_value": 370209.48
+      "market_value": 367392.8
     },
     {
       "ticker": "TSN",
@@ -1262,160 +1348,151 @@
       "accounts": {
         "HELS": 0.0151
       },
-      "market_value": 369073.8
+      "market_value": 366195.6
     },
     {
-      "ticker": "IDMO",
-      "name": "Invesco S&P International Developed Momentum ETF",
-      "total_weight": 0.015,
-      "accounts": {
-        "HECA": 0.015
-      },
-      "market_value": 5235834.96
-    },
-    {
-      "ticker": "PAVE",
-      "name": "Global X US Infrastructure Development ETF",
-      "total_weight": 0.015,
-      "accounts": {
-        "HEFT": 0.015
-      },
-      "market_value": 1557276.48
-    },
-    {
-      "ticker": "ROBO",
-      "name": "ROBO Global Robotics and Automation Index ETF",
-      "total_weight": 0.015,
-      "accounts": {
-        "HEFT": 0.015
-      },
-      "market_value": 1553132.88
-    },
-    {
-      "ticker": "VPL",
-      "name": "Vanguard FTSE Pacific ETF",
-      "total_weight": 0.015,
-      "accounts": {
-        "HEFT": 0.015
-      },
-      "market_value": 1554981.39
-    },
-    {
-      "ticker": "WEAT",
-      "name": "Teucrium Wheat Fund",
-      "total_weight": 0.015,
-      "accounts": {
-        "HEFT": 0.015
-      },
-      "market_value": 1558375.0
-    },
-    {
-      "ticker": "LAMR",
-      "name": "Lamar Advertising Co",
+      "ticker": "SPHR",
+      "name": "Sphere Entertainment Co",
       "total_weight": 0.015,
       "accounts": {
         "HELS": 0.015
       },
-      "market_value": 367397.59
+      "market_value": 364579.02
     },
     {
-      "ticker": "HBM",
-      "name": "Hudbay Minerals Inc",
-      "total_weight": 0.0147,
+      "ticker": "IDMO",
+      "name": "Invesco S&P International Developed Momentum ETF",
+      "total_weight": 0.0149,
       "accounts": {
-        "HELS": 0.0147
+        "HECA": 0.0149
       },
-      "market_value": 358829.66
+      "market_value": 5162389.92
     },
     {
-      "ticker": "SOYB",
-      "name": "Teucrium Soybean Fund",
-      "total_weight": 0.0146,
+      "ticker": "VPL",
+      "name": "Vanguard FTSE Pacific ETF",
+      "total_weight": 0.0149,
       "accounts": {
-        "HEFT": 0.0146
+        "HEFT": 0.0149
       },
-      "market_value": 1518355.08
+      "market_value": 1542061.83
     },
     {
-      "ticker": "DBA",
-      "name": "Invesco DB Agriculture Fund",
-      "total_weight": 0.0145,
+      "ticker": "XBI",
+      "name": "State Street SPDR S&P Biotech ETF",
+      "total_weight": 0.0149,
       "accounts": {
-        "HEFT": 0.0145
+        "HEFT": 0.0149
       },
-      "market_value": 1505710.8
+      "market_value": 1548232.69
+    },
+    {
+      "ticker": "PAVE",
+      "name": "Global X US Infrastructure Development ETF",
+      "total_weight": 0.0148,
+      "accounts": {
+        "HEFT": 0.0148
+      },
+      "market_value": 1530240.43
     },
     {
       "ticker": "AFRM",
       "name": "Affirm Holdings Inc",
-      "total_weight": 0.0145,
+      "total_weight": 0.0148,
       "accounts": {
-        "HELS": 0.0145
+        "HELS": 0.0148
       },
-      "market_value": 354512.64
+      "market_value": 359411.2
     },
     {
-      "ticker": "CDNS",
-      "name": "Cadence Design Systems Inc",
-      "total_weight": 0.0143,
+      "ticker": "ROBO",
+      "name": "ROBO Global Robotics and Automation Index ETF",
+      "total_weight": 0.0147,
       "accounts": {
-        "HELS": 0.0143
+        "HEFT": 0.0147
       },
-      "market_value": 348411.93
+      "market_value": 1521236.87
+    },
+    {
+      "ticker": "SOYB",
+      "name": "Teucrium Soybean Fund",
+      "total_weight": 0.0147,
+      "accounts": {
+        "HEFT": 0.0147
+      },
+      "market_value": 1524387.48
+    },
+    {
+      "ticker": "DBA",
+      "name": "Invesco DB Agriculture Fund",
+      "total_weight": 0.0146,
+      "accounts": {
+        "HEFT": 0.0146
+      },
+      "market_value": 1509982.32
+    },
+    {
+      "ticker": "HBM",
+      "name": "Hudbay Minerals Inc",
+      "total_weight": 0.0146,
+      "accounts": {
+        "HELS": 0.0146
+      },
+      "market_value": 354392.36
     },
     {
       "ticker": "CF",
       "name": "CF Industries Holdings Inc",
+      "total_weight": 0.0144,
+      "accounts": {
+        "HGRO": 0.0144
+      },
+      "market_value": 1696830.06
+    },
+    {
+      "ticker": "CDNS",
+      "name": "Cadence Design Systems Inc",
       "total_weight": 0.014,
       "accounts": {
-        "HGRO": 0.014
+        "HELS": 0.014
       },
-      "market_value": 1636249.74
-    },
-    {
-      "ticker": "PDBA",
-      "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
-      "total_weight": 0.0139,
-      "accounts": {
-        "HECA": 0.0139
-      },
-      "market_value": 4844991.84
-    },
-    {
-      "ticker": "CARR",
-      "name": "Carrier Global Corp",
-      "total_weight": 0.0139,
-      "accounts": {
-        "HGRO": 0.0139
-      },
-      "market_value": 1623845.72
+      "market_value": 340486.84
     },
     {
       "ticker": "PLD",
       "name": "Prologis Inc",
-      "total_weight": 0.0139,
+      "total_weight": 0.014,
       "accounts": {
-        "HGRO": 0.0139
+        "HGRO": 0.014
       },
-      "market_value": 1623614.79
+      "market_value": 1650737.16
     },
     {
-      "ticker": "KLAC",
-      "name": "KLA CORP",
-      "total_weight": 0.013,
+      "ticker": "82982T106-TRS-06/15/27-L-HELS",
+      "name": "SITIME CORPORATION-SWAP-CLST-L",
+      "total_weight": 0.0137,
       "accounts": {
-        "HGRO": 0.013
+        "HELS": 0.0137
       },
-      "market_value": 1524598.6
+      "market_value": 332263.14
+    },
+    {
+      "ticker": "CARR",
+      "name": "Carrier Global Corp",
+      "total_weight": 0.0133,
+      "accounts": {
+        "HGRO": 0.0133
+      },
+      "market_value": 1570897.92
     },
     {
       "ticker": "VLO",
       "name": "Valero Energy Corp",
-      "total_weight": 0.0126,
+      "total_weight": 0.0129,
       "accounts": {
-        "HGRO": 0.0126
+        "HGRO": 0.0129
       },
-      "market_value": 1469944.72
+      "market_value": 1516893.12
     },
     {
       "ticker": "LNG",
@@ -1424,25 +1501,16 @@
       "accounts": {
         "HGRO": 0.0124
       },
-      "market_value": 1448288.04
+      "market_value": 1464826.72
     },
     {
       "ticker": "RIO",
       "name": "Rio Tinto PLC",
-      "total_weight": 0.0124,
+      "total_weight": 0.0122,
       "accounts": {
-        "HGRO": 0.0124
+        "HGRO": 0.0122
       },
-      "market_value": 1448686.6
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology Holdings PLC",
-      "total_weight": 0.0124,
-      "accounts": {
-        "HGRO": 0.0124
-      },
-      "market_value": 1451305.56
+      "market_value": 1437302.64
     },
     {
       "ticker": "BK",
@@ -1451,70 +1519,79 @@
       "accounts": {
         "HGRO": 0.0121
       },
-      "market_value": 1410188.5
+      "market_value": 1429587.84
     },
     {
       "ticker": "PICK",
       "name": "iShares MSCI Global Metals & Mining Producers ETF",
-      "total_weight": 0.0118,
+      "total_weight": 0.0116,
       "accounts": {
-        "HECA": 0.0118
+        "HECA": 0.0116
       },
-      "market_value": 4127696.88
+      "market_value": 4015728.08
     },
     {
       "ticker": "EWY",
       "name": "iShares MSCI South Korea ETF",
-      "total_weight": 0.0112,
+      "total_weight": 0.011,
       "accounts": {
-        "HEFT": 0.0112
+        "HEFT": 0.011
       },
-      "market_value": 1157153.1
+      "market_value": 1143485.42
     },
     {
       "ticker": "ORCL",
       "name": "Oracle Corp",
-      "total_weight": 0.0112,
+      "total_weight": 0.011,
       "accounts": {
-        "HGRO": 0.0112
+        "HGRO": 0.011
       },
-      "market_value": 1307016.44
+      "market_value": 1290543.52
     },
     {
       "ticker": "AM",
       "name": "Antero Midstream Corp",
-      "total_weight": 0.0107,
+      "total_weight": 0.0108,
       "accounts": {
-        "HEFT": 0.0107
+        "HEFT": 0.0108
       },
-      "market_value": 1112351.28
-    },
-    {
-      "ticker": "CHRD",
-      "name": "Chord Energy Corp",
-      "total_weight": 0.0106,
-      "accounts": {
-        "HELS": 0.0106
-      },
-      "market_value": 258290.12
+      "market_value": 1116844.62
     },
     {
       "ticker": "EPD",
       "name": "Enterprise Products Partners LP",
+      "total_weight": 0.0106,
+      "accounts": {
+        "HEFT": 0.0106
+      },
+      "market_value": 1103096.8
+    },
+    {
+      "ticker": "CHRD",
+      "name": "Chord Energy Corp",
       "total_weight": 0.0105,
       "accounts": {
-        "HEFT": 0.0105
+        "HELS": 0.0105
       },
-      "market_value": 1093673.36
+      "market_value": 256200.45
     },
     {
       "ticker": "ATI",
       "name": "ATI Inc",
-      "total_weight": 0.0103,
+      "total_weight": 0.0105,
       "accounts": {
-        "HGRO": 0.0103
+        "HGRO": 0.0105
       },
-      "market_value": 1208181.5
+      "market_value": 1233758.44
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk Corp/DE",
+      "total_weight": 0.0104,
+      "accounts": {
+        "HGRO": 0.0104
+      },
+      "market_value": 1229744.81
     },
     {
       "ticker": "EWC",
@@ -1523,7 +1600,7 @@
       "accounts": {
         "HEFT": 0.0101
       },
-      "market_value": 1050470.0
+      "market_value": 1049192.5
     },
     {
       "ticker": "CVI",
@@ -1532,115 +1609,115 @@
       "accounts": {
         "HELS": 0.0101
       },
-      "market_value": 247686.34
+      "market_value": 246252.14
     },
     {
-      "ticker": "SNDK",
-      "name": "Sandisk Corp/DE",
+      "ticker": "STX",
+      "name": "Seagate Technology Holdings PLC",
+      "total_weight": 0.0101,
+      "accounts": {
+        "HGRO": 0.0101
+      },
+      "market_value": 1185093.6
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA CORP",
       "total_weight": 0.01,
       "accounts": {
         "HGRO": 0.01
       },
-      "market_value": 1169049.77
+      "market_value": 1176632.08
     },
     {
       "ticker": "NORW",
       "name": "Global X MSCI Norway ETF",
-      "total_weight": 0.0098,
+      "total_weight": 0.0099,
       "accounts": {
-        "HEFT": 0.0098
+        "HEFT": 0.0099
       },
-      "market_value": 1020719.21
+      "market_value": 1023860.69
     },
     {
       "ticker": "WELL",
       "name": "Welltower Inc",
-      "total_weight": 0.0097,
+      "total_weight": 0.0099,
       "accounts": {
-        "HEFT": 0.0097
+        "HEFT": 0.0099
       },
-      "market_value": 1002881.37
+      "market_value": 1028306.0
+    },
+    {
+      "ticker": "19247G107-TRS-06/08/27-L-HELS",
+      "name": "COHERENT CORP.-SWAP-CLST-L",
+      "total_weight": 0.0099,
+      "accounts": {
+        "HELS": 0.0099
+      },
+      "market_value": 241529.29
     },
     {
       "ticker": "XLI",
       "name": "State Street Industrial Select Sector SPDR ETF",
-      "total_weight": 0.0097,
+      "total_weight": 0.0095,
       "accounts": {
-        "HEFT": 0.0097
+        "HEFT": 0.0095
       },
-      "market_value": 1001961.0
-    },
-    {
-      "ticker": "ABNB",
-      "name": "Airbnb Inc",
-      "total_weight": 0.0097,
-      "accounts": {
-        "HGRO": 0.0097
-      },
-      "market_value": 1134700.7
-    },
-    {
-      "ticker": "HTEC",
-      "name": "ROBO Global R Healthcare Technology and Innovation ETF",
-      "total_weight": 0.0096,
-      "accounts": {
-        "HEFT": 0.0096
-      },
-      "market_value": 999104.32
-    },
-    {
-      "ticker": "IHE",
-      "name": "iShares U.S. Pharmaceuticals ETF",
-      "total_weight": 0.0096,
-      "accounts": {
-        "HEFT": 0.0096
-      },
-      "market_value": 998591.55
+      "market_value": 990166.32
     },
     {
       "ticker": "CIEN",
       "name": "Ciena Corp",
-      "total_weight": 0.0092,
+      "total_weight": 0.0095,
       "accounts": {
-        "HGRO": 0.0092
+        "HGRO": 0.0095
       },
-      "market_value": 1072663.85
-    },
-    {
-      "ticker": "GLW",
-      "name": "Corning Inc",
-      "total_weight": 0.0091,
-      "accounts": {
-        "HGRO": 0.0091
-      },
-      "market_value": 1065050.75
+      "market_value": 1124484.0
     },
     {
       "ticker": "KO",
       "name": "Coca-Cola Co/The",
-      "total_weight": 0.0078,
+      "total_weight": 0.0079,
       "accounts": {
-        "HEFT": 0.0078
+        "HEFT": 0.0079
       },
-      "market_value": 807696.4
+      "market_value": 814858.24
+    },
+    {
+      "ticker": "HTEC",
+      "name": "ROBO Global R Healthcare Technology and Innovation ETF",
+      "total_weight": 0.0074,
+      "accounts": {
+        "HEFT": 0.0074
+      },
+      "market_value": 771797.46
     },
     {
       "ticker": "EZPW",
       "name": "EZCORP Inc",
-      "total_weight": 0.0075,
+      "total_weight": 0.0072,
       "accounts": {
-        "HEFT": 0.0075
+        "HEFT": 0.0072
       },
-      "market_value": 776886.97
+      "market_value": 743362.33
     },
     {
-      "ticker": "COHR",
-      "name": "Coherent Corp",
+      "ticker": "GLW",
+      "name": "Corning Inc",
       "total_weight": 0.007,
       "accounts": {
         "HGRO": 0.007
       },
-      "market_value": 814916.18
+      "market_value": 823587.72
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent Corp",
+      "total_weight": 0.005,
+      "accounts": {
+        "HGRO": 0.005
+      },
+      "market_value": 588793.95
     },
     {
       "ticker": "ACHC",
@@ -1649,3443 +1726,1898 @@
       "accounts": {
         "HGRO": 0.0046
       },
-      "market_value": 541507.45
+      "market_value": 541536.52
     },
     {
       "ticker": "SPY   260717P00610000",
-      "name": "STATE ST PUT OPT 07/26 610",
-      "total_weight": 0.0019,
+      "name": "SPY US 07/17/26 P610",
+      "total_weight": 0.002,
       "accounts": {
-        "HEFT": 0.0019
+        "HEFT": 0.002
       },
-      "market_value": 192753.0
+      "market_value": 203643.0
+    },
+    {
+      "ticker": "EPHE",
+      "name": "iShares MSCI Philippines ETF",
+      "total_weight": -0.005,
+      "accounts": {
+        "HEFT": -0.005
+      },
+      "market_value": -514734.0
+    },
+    {
+      "ticker": "EWG",
+      "name": "ISHARES INC MSCI GERMAN",
+      "total_weight": -0.005,
+      "accounts": {
+        "HEFT": -0.005
+      },
+      "market_value": -516713.64
+    },
+    {
+      "ticker": "EWQ",
+      "name": "ISHARES INC MSCI FRANCE",
+      "total_weight": -0.005,
+      "accounts": {
+        "HEFT": -0.005
+      },
+      "market_value": -516782.28
+    },
+    {
+      "ticker": "MMM",
+      "name": "3M Co",
+      "total_weight": -0.005,
+      "accounts": {
+        "HELS": -0.005
+      },
+      "market_value": -121280.32
+    },
+    {
+      "ticker": "HCA",
+      "name": "HCA Healthcare Inc",
+      "total_weight": -0.0074,
+      "accounts": {
+        "HEFT": -0.0074
+      },
+      "market_value": -772148.52
+    },
+    {
+      "ticker": "RBLX",
+      "name": "ROBLOX Corp",
+      "total_weight": -0.0079,
+      "accounts": {
+        "HEFT": -0.0079
+      },
+      "market_value": -818457.85
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow Inc",
+      "total_weight": -0.0083,
+      "accounts": {
+        "HEFT": -0.0083
+      },
+      "market_value": -864740.36
+    },
+    {
+      "ticker": "LCID",
+      "name": "Lucid Group Inc",
+      "total_weight": -0.0089,
+      "accounts": {
+        "HELS": -0.0089
+      },
+      "market_value": -215861.58
+    },
+    {
+      "ticker": "PLAY",
+      "name": "Dave & Buster's Entertainment Inc",
+      "total_weight": -0.0091,
+      "accounts": {
+        "HELS": -0.0091
+      },
+      "market_value": -220360.32
+    },
+    {
+      "ticker": "BALL",
+      "name": "Ball Corp",
+      "total_weight": -0.0092,
+      "accounts": {
+        "HELS": -0.0092
+      },
+      "market_value": -224793.69
+    },
+    {
+      "ticker": "UTWO",
+      "name": "F/m US Treasury 2 Year Note ETF",
+      "total_weight": -0.0094,
+      "accounts": {
+        "HEFT": -0.0094
+      },
+      "market_value": -979564.7
+    },
+    {
+      "ticker": "CAG",
+      "name": "CONAGRA BRANDS INC",
+      "total_weight": -0.0094,
+      "accounts": {
+        "HELS": -0.0094
+      },
+      "market_value": -228215.19
+    },
+    {
+      "ticker": "TAP",
+      "name": "Molson Coors Beverage Co",
+      "total_weight": -0.0094,
+      "accounts": {
+        "HELS": -0.0094
+      },
+      "market_value": -227578.75
+    },
+    {
+      "ticker": "DPZ",
+      "name": "Domino's Pizza Inc",
+      "total_weight": -0.0095,
+      "accounts": {
+        "HELS": -0.0095
+      },
+      "market_value": -231435.0
+    },
+    {
+      "ticker": "FLUT",
+      "name": "Flutter Entertainment PLC",
+      "total_weight": -0.0095,
+      "accounts": {
+        "HELS": -0.0095
+      },
+      "market_value": -230977.5
+    },
+    {
+      "ticker": "NKE",
+      "name": "NIKE Inc",
+      "total_weight": -0.0096,
+      "accounts": {
+        "HELS": -0.0096
+      },
+      "market_value": -232249.5
+    },
+    {
+      "ticker": "BKNG",
+      "name": "Booking Holdings Inc",
+      "total_weight": -0.0098,
+      "accounts": {
+        "HELS": -0.0098
+      },
+      "market_value": -238764.3
+    },
+    {
+      "ticker": "IDX",
+      "name": "VanEck Indonesia Index ETF",
+      "total_weight": -0.0099,
+      "accounts": {
+        "HEFT": -0.0099
+      },
+      "market_value": -1028131.8
+    },
+    {
+      "ticker": "GPN",
+      "name": "Global Payments Inc",
+      "total_weight": -0.0099,
+      "accounts": {
+        "HELS": -0.0099
+      },
+      "market_value": -239828.2
+    },
+    {
+      "ticker": "HYG",
+      "name": "iShares iBoxx USD High Yield Corporate Bond ETF",
+      "total_weight": -0.01,
+      "accounts": {
+        "HEFT": -0.01
+      },
+      "market_value": -1032264.15
+    },
+    {
+      "ticker": "JNK",
+      "name": "State Street SPDR Bloomberg High Yield Bond ETF",
+      "total_weight": -0.01,
+      "accounts": {
+        "HEFT": -0.01
+      },
+      "market_value": -1032309.7
+    },
+    {
+      "ticker": "DDS",
+      "name": "Dillard's Inc",
+      "total_weight": -0.01,
+      "accounts": {
+        "HELS": -0.01
+      },
+      "market_value": -242136.0
+    },
+    {
+      "ticker": "FLO",
+      "name": "Flowers Foods Inc",
+      "total_weight": -0.01,
+      "accounts": {
+        "HELS": -0.01
+      },
+      "market_value": -243128.41
+    },
+    {
+      "ticker": "GIS",
+      "name": "General Mills Inc",
+      "total_weight": -0.01,
+      "accounts": {
+        "HELS": -0.01
+      },
+      "market_value": -243819.4
+    },
+    {
+      "ticker": "IDXX",
+      "name": "IDEXX Laboratories Inc",
+      "total_weight": -0.01,
+      "accounts": {
+        "HELS": -0.01
+      },
+      "market_value": -243188.05
+    },
+    {
+      "ticker": "ONON",
+      "name": "On Holding AG",
+      "total_weight": -0.01,
+      "accounts": {
+        "HELS": -0.01
+      },
+      "market_value": -243158.08
+    },
+    {
+      "ticker": "SMPL",
+      "name": "Simply Good Foods Co/The",
+      "total_weight": -0.01,
+      "accounts": {
+        "HELS": -0.01
+      },
+      "market_value": -243523.63
+    },
+    {
+      "ticker": "CHTR",
+      "name": "Charter Communications Inc",
+      "total_weight": -0.0101,
+      "accounts": {
+        "HELS": -0.0101
+      },
+      "market_value": -245527.5
+    },
+    {
+      "ticker": "CMG",
+      "name": "Chipotle Mexican Grill Inc",
+      "total_weight": -0.0101,
+      "accounts": {
+        "HELS": -0.0101
+      },
+      "market_value": -245255.92
+    },
+    {
+      "ticker": "RDDT",
+      "name": "Reddit Inc",
+      "total_weight": -0.0101,
+      "accounts": {
+        "HELS": -0.0101
+      },
+      "market_value": -246259.2
+    },
+    {
+      "ticker": "WING",
+      "name": "Wingstop Inc",
+      "total_weight": -0.0101,
+      "accounts": {
+        "HELS": -0.0101
+      },
+      "market_value": -245992.0
+    },
+    {
+      "ticker": "KSS",
+      "name": "Kohl's Corp",
+      "total_weight": -0.0102,
+      "accounts": {
+        "HELS": -0.0102
+      },
+      "market_value": -247866.62
+    },
+    {
+      "ticker": "SNAP",
+      "name": "Snap Inc",
+      "total_weight": -0.0103,
+      "accounts": {
+        "HELS": -0.0103
+      },
+      "market_value": -249650.1
+    },
+    {
+      "ticker": "IEF",
+      "name": "iShares 7-10 Year Treasury Bond ETF",
+      "total_weight": -0.0143,
+      "accounts": {
+        "HEFT": -0.0143
+      },
+      "market_value": -1481100.77
+    },
+    {
+      "ticker": "SYY",
+      "name": "Sysco Corp",
+      "total_weight": -0.0174,
+      "accounts": {
+        "HEFT": -0.0077,
+        "HELS": -0.0097
+      },
+      "market_value": -1033862.5
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms Inc",
+      "total_weight": -0.0175,
+      "accounts": {
+        "HEFT": -0.0076,
+        "HELS": -0.0099
+      },
+      "market_value": -1028655.27
+    },
+    {
+      "ticker": "USPH",
+      "name": "US Physical Therapy Inc",
+      "total_weight": -0.0179,
+      "accounts": {
+        "HEFT": -0.0076,
+        "HELS": -0.0103
+      },
+      "market_value": -1042379.59
+    },
+    {
+      "ticker": "BRBR",
+      "name": "BellRing Brands Inc",
+      "total_weight": -0.018,
+      "accounts": {
+        "HEFT": -0.0083,
+        "HELS": -0.0097
+      },
+      "market_value": -1096083.66
+    },
+    {
+      "ticker": "ITB",
+      "name": "ISHARES TRUST DJ HOME CONSTN",
+      "total_weight": -0.0197,
+      "accounts": {
+        "HEFT": -0.0197
+      },
+      "market_value": -2044168.38
+    },
+    {
+      "ticker": "INDA",
+      "name": "iShares MSCI India ETF",
+      "total_weight": -0.0198,
+      "accounts": {
+        "HEFT": -0.0198
+      },
+      "market_value": -2049674.47
+    },
+    {
+      "ticker": "ZROZ",
+      "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
+      "total_weight": -0.0232,
+      "accounts": {
+        "HEFT": -0.0232
+      },
+      "market_value": -2407725.0
+    },
+    {
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "total_weight": -0.0237,
+      "accounts": {
+        "HEFT": -0.0237
+      },
+      "market_value": -2461626.02
+    },
+    {
+      "ticker": "XTEN",
+      "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
+      "total_weight": -0.0239,
+      "accounts": {
+        "HEFT": -0.0239
+      },
+      "market_value": -2484214.59
     }
   ],
   "rta": {
     "recent_trades": [
       {
-        "symbol": "AMZN",
+        "date": "2026-05-15",
+        "ticker": "AMZN",
         "position": "long",
-        "open_date": "2026-05-15",
         "open_price": 262.12,
         "close_date": "2026-05-18",
         "close_price": 267.47,
-        "realized_return": 0.020410499999999998,
-        "duration": "TAIL"
+        "return_pct": 0.020410499999999998,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "RSI",
+        "date": "2026-05-11",
+        "ticker": "RSI",
         "position": "long",
-        "open_date": "2026-05-11",
         "open_price": 27.805,
         "close_date": "2026-05-18",
         "close_price": 27.66,
-        "realized_return": -0.00521489,
-        "duration": "TAIL"
+        "return_pct": -0.00521489,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CASY",
+        "date": "2026-05-15",
+        "ticker": "CASY",
         "position": "long",
-        "open_date": "2026-05-15",
         "open_price": 845.07,
         "close_date": "2026-05-18",
         "close_price": 854.59,
-        "realized_return": 0.0112653,
-        "duration": "TAIL"
+        "return_pct": 0.0112653,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "FXB",
+        "date": "2026-05-12",
+        "ticker": "FXB",
         "position": "long",
-        "open_date": "2026-05-12",
         "open_price": 130.03,
         "close_date": "2026-05-15",
         "close_price": 128.13,
-        "realized_return": -0.014612,
-        "duration": "TAIL"
+        "return_pct": -0.014612,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "THC",
+        "date": "2026-05-13",
+        "ticker": "THC",
         "position": "short",
-        "open_date": "2026-05-13",
         "open_price": 198.12,
         "close_date": "2026-05-15",
         "close_price": 197.9,
-        "realized_return": 0.00111044,
-        "duration": "TAIL"
+        "return_pct": 0.00111044,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "ACI",
+        "date": "2026-05-14",
+        "ticker": "ACI",
         "position": "short",
-        "open_date": "2026-05-14",
         "open_price": 16.7111,
         "close_date": "2026-05-15",
         "close_price": 16.56,
-        "realized_return": 0.00904189,
-        "duration": "TAIL"
+        "return_pct": 0.00904189,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CZR",
+        "date": "2026-05-12",
+        "ticker": "CZR",
         "position": "long",
-        "open_date": "2026-05-12",
         "open_price": 26.74,
         "close_date": "2026-05-14",
         "close_price": 26.55,
-        "realized_return": -0.00710546,
-        "duration": "TAIL"
+        "return_pct": -0.00710546,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "EWC",
+        "date": "2026-05-13",
+        "ticker": "EWC",
         "position": "long",
-        "open_date": "2026-05-13",
         "open_price": 57.71,
         "close_date": "2026-05-14",
         "close_price": 58.16,
-        "realized_return": 0.007797610000000001,
-        "duration": "TAIL"
+        "return_pct": 0.007797610000000001,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "GLASF",
+        "date": "2026-05-07",
+        "ticker": "GLASF",
         "position": "long",
-        "open_date": "2026-05-07",
         "open_price": 9.25,
         "close_date": "2026-05-13",
         "close_price": 9.37,
-        "realized_return": 0.012972999999999998,
-        "duration": "TAIL"
+        "return_pct": 0.012972999999999998,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "AMZN",
+        "date": "2026-05-12",
+        "ticker": "AMZN",
         "position": "long",
-        "open_date": "2026-05-12",
         "open_price": 264.16,
         "close_date": "2026-05-13",
         "close_price": 269.94,
-        "realized_return": 0.0218803,
-        "duration": "TAIL"
+        "return_pct": 0.0218803,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ROST",
+        "date": "2026-05-07",
+        "ticker": "ROST",
         "position": "long",
-        "open_date": "2026-05-07",
         "open_price": 224.32,
         "close_date": "2026-05-13",
         "close_price": 213.805,
-        "realized_return": -0.021733699999999998,
-        "duration": "TAIL"
+        "return_pct": -0.021733699999999998,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "DGX",
+        "date": "2026-05-12",
+        "ticker": "DGX",
         "position": "short",
-        "open_date": "2026-05-12",
         "open_price": 191.785,
         "close_date": "2026-05-13",
         "close_price": 188.25,
-        "realized_return": 0.0184321,
-        "duration": "TAIL"
+        "return_pct": 0.0184321,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "KMX",
+        "date": "2026-05-07",
+        "ticker": "KMX",
         "position": "short",
-        "open_date": "2026-05-07",
         "open_price": 39.6,
         "close_date": "2026-05-11",
         "close_price": 39.555,
-        "realized_return": 0.00113636,
-        "duration": "TAIL"
+        "return_pct": 0.00113636,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "EPHE",
+        "date": "2026-05-07",
+        "ticker": "EPHE",
         "position": "short",
-        "open_date": "2026-05-07",
         "open_price": 25.32,
         "close_date": "2026-05-08",
         "close_price": 25.19,
-        "realized_return": 0.00513428,
-        "duration": "TAIL"
+        "return_pct": 0.00513428,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "THC",
+        "date": "2026-05-05",
+        "ticker": "THC",
         "position": "short",
-        "open_date": "2026-05-05",
         "open_price": 187.51,
         "close_date": "2026-05-08",
         "close_price": 190.97,
-        "realized_return": -0.0184523,
-        "duration": "TAIL"
+        "return_pct": -0.0184523,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "OIH",
+        "date": "2026-05-07",
+        "ticker": "OIH",
         "position": "long",
-        "open_date": "2026-05-07",
         "open_price": 418.52,
         "close_date": "2026-05-08",
         "close_price": 424.6,
-        "realized_return": 0.0145264,
-        "duration": "TAIL"
+        "return_pct": 0.0145264,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CPB",
+        "date": "2026-05-07",
+        "ticker": "CPB",
         "position": "short",
-        "open_date": "2026-05-07",
         "open_price": 21.27,
         "close_date": "2026-05-08",
         "close_price": 21.015,
-        "realized_return": 0.011988700000000001,
-        "duration": "TAIL"
+        "return_pct": 0.011988700000000001,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "APD",
+        "date": "2026-05-05",
+        "ticker": "APD",
         "position": "long",
-        "open_date": "2026-05-05",
         "open_price": 297.51,
         "close_date": "2026-05-08",
         "close_price": 298.87,
-        "realized_return": 0.0045712700000000005,
-        "duration": "TAIL"
+        "return_pct": 0.0045712700000000005,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PVH",
+        "date": "2026-05-05",
+        "ticker": "PVH",
         "position": "long",
-        "open_date": "2026-05-05",
         "open_price": 88.465,
         "close_date": "2026-05-06",
         "close_price": 91.9,
-        "realized_return": 0.0388289,
-        "duration": "TAIL"
+        "return_pct": 0.0388289,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "MGM",
+        "date": "2026-05-01",
+        "ticker": "MGM",
         "position": "long",
-        "open_date": "2026-05-01",
         "open_price": 38.43,
         "close_date": "2026-05-06",
         "close_price": 38.52,
-        "realized_return": 0.0023419200000000004,
-        "duration": "TAIL"
+        "return_pct": 0.0023419200000000004,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "JPM",
+        "date": "2026-05-04",
+        "ticker": "JPM",
         "position": "long",
-        "open_date": "2026-05-04",
         "open_price": 307.755,
         "close_date": "2026-05-05",
         "close_price": 309.81,
-        "realized_return": 0.00667739,
-        "duration": "TAIL"
+        "return_pct": 0.00667739,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "KRE",
+        "date": "2026-05-04",
+        "ticker": "KRE",
         "position": "long",
-        "open_date": "2026-05-04",
         "open_price": 68.925,
         "close_date": "2026-05-05",
         "close_price": 69.63,
-        "realized_return": 0.0102285,
-        "duration": "TAIL"
+        "return_pct": 0.0102285,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CPER",
+        "date": "2026-04-28",
+        "ticker": "CPER",
         "position": "long",
-        "open_date": "2026-04-28",
         "open_price": 36.265,
         "close_date": "2026-05-05",
         "close_price": 36.49,
-        "realized_return": 0.00620433,
-        "duration": "TAIL"
+        "return_pct": 0.00620433,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "MNDY",
+        "date": "2026-05-01",
+        "ticker": "MNDY",
         "position": "short",
-        "open_date": "2026-05-01",
         "open_price": 72.56,
         "close_date": "2026-05-05",
         "close_price": 74.92,
-        "realized_return": 0.0059046,
-        "duration": "TAIL"
+        "return_pct": 0.0059046,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "HYG",
+        "date": "2026-04-29",
+        "ticker": "HYG",
         "position": "long",
-        "open_date": "2026-04-29",
         "open_price": 80.0701,
         "close_date": "2026-05-01",
         "close_price": 80.07,
-        "realized_return": -1.2489099999999999e-06,
-        "duration": "TAIL"
+        "return_pct": -1.2489099999999999e-06,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CAVA",
+        "date": "2026-04-28",
+        "ticker": "CAVA",
         "position": "long",
-        "open_date": "2026-04-28",
         "open_price": 91.1025,
         "close_date": "2026-04-30",
         "close_price": 93.49,
-        "realized_return": 0.0262067,
-        "duration": "TAIL"
+        "return_pct": 0.0262067,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ULS",
+        "date": "2026-04-24",
+        "ticker": "ULS",
         "position": "long",
-        "open_date": "2026-04-24",
         "open_price": 88.83,
         "close_date": "2026-04-30",
         "close_price": 90.62,
-        "realized_return": 0.020150800000000003,
-        "duration": "TAIL"
+        "return_pct": 0.020150800000000003,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "UFO",
+        "date": "2026-04-27",
+        "ticker": "UFO",
         "position": "long",
-        "open_date": "2026-04-27",
         "open_price": 50.509,
         "close_date": "2026-04-30",
         "close_price": 51.603,
-        "realized_return": 0.0216595,
-        "duration": "TAIL"
+        "return_pct": 0.0216595,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "XTL",
+        "date": "2026-04-28",
+        "ticker": "XTL",
         "position": "long",
-        "open_date": "2026-04-28",
         "open_price": 210.52,
         "close_date": "2026-04-29",
         "close_price": 214.06,
-        "realized_return": 0.0168155,
-        "duration": "TAIL"
+        "return_pct": 0.0168155,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ACHC",
+        "date": "2026-04-29",
+        "ticker": "ACHC",
         "position": "long",
-        "open_date": "2026-04-29",
         "open_price": 27.37,
         "close_date": "2026-04-29",
         "close_price": 28.14,
-        "realized_return": 0.028133,
-        "duration": "TAIL"
+        "return_pct": 0.028133,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "FLO",
+        "date": "2026-04-28",
+        "ticker": "FLO",
         "position": "short",
-        "open_date": "2026-04-28",
         "open_price": 9.01,
         "close_date": "2026-04-29",
         "close_price": 8.815,
-        "realized_return": 0.0216426,
-        "duration": "TAIL"
+        "return_pct": 0.0216426,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "WING",
+        "date": "2026-04-08",
+        "ticker": "WING",
         "position": "short",
-        "open_date": "2026-04-08",
         "open_price": 170.725,
         "close_date": "2026-04-28",
         "close_price": 174.975,
-        "realized_return": -0.0248938,
-        "duration": "TAIL"
+        "return_pct": -0.0248938,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CFG",
+        "date": "2026-04-24",
+        "ticker": "CFG",
         "position": "long",
-        "open_date": "2026-04-24",
         "open_price": 63.825,
         "close_date": "2026-04-27",
         "close_price": 64.45,
-        "realized_return": 0.0097924,
-        "duration": "TAIL"
+        "return_pct": 0.0097924,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ACHC",
+        "date": "2026-04-24",
+        "ticker": "ACHC",
         "position": "long",
-        "open_date": "2026-04-24",
         "open_price": 26.45,
         "close_date": "2026-04-27",
         "close_price": 27.53,
-        "realized_return": 0.040831799999999994,
-        "duration": "TAIL"
+        "return_pct": 0.040831799999999994,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ARGT",
+        "date": "2026-04-23",
+        "ticker": "ARGT",
         "position": "long",
-        "open_date": "2026-04-23",
         "open_price": 92.93,
         "close_date": "2026-04-27",
         "close_price": 92.75,
-        "realized_return": -0.00193694,
-        "duration": "TAIL"
+        "return_pct": -0.00193694,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "SPHR",
+        "date": "2026-04-22",
+        "ticker": "SPHR",
         "position": "long",
-        "open_date": "2026-04-22",
         "open_price": 128.128,
         "close_date": "2026-04-24",
         "close_price": 132.025,
-        "realized_return": 0.0304149,
-        "duration": "TAIL"
+        "return_pct": 0.0304149,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "LOTMY",
+        "date": "2026-04-21",
+        "ticker": "LOTMY",
         "position": "long",
-        "open_date": "2026-04-21",
         "open_price": 29.91,
         "close_date": "2026-04-23",
         "close_price": 30.45,
-        "realized_return": 0.0180542,
-        "duration": "TAIL"
+        "return_pct": 0.0180542,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "GII",
+        "date": "2026-04-14",
+        "ticker": "GII",
         "position": "long",
-        "open_date": "2026-04-14",
         "open_price": 77.009,
         "close_date": "2026-04-23",
         "close_price": 76.47,
-        "realized_return": -0.006999180000000001,
-        "duration": "TAIL"
+        "return_pct": -0.006999180000000001,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "EWW",
+        "date": "2026-04-21",
+        "ticker": "EWW",
         "position": "long",
-        "open_date": "2026-04-21",
         "open_price": 78.4799,
         "close_date": "2026-04-23",
         "close_price": 78.72,
-        "realized_return": 0.00305938,
-        "duration": "TAIL"
+        "return_pct": 0.00305938,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ARGT",
+        "date": "2026-04-20",
+        "ticker": "ARGT",
         "position": "long",
-        "open_date": "2026-04-20",
         "open_price": 93.94,
         "close_date": "2026-04-21",
         "close_price": 95.025,
-        "realized_return": 0.0115499,
-        "duration": "TAIL"
+        "return_pct": 0.0115499,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PVH",
+        "date": "2026-04-16",
+        "ticker": "PVH",
         "position": "long",
-        "open_date": "2026-04-16",
         "open_price": 88.11,
         "close_date": "2026-04-20",
         "close_price": 95.745,
-        "realized_return": 0.0866531,
-        "duration": "TAIL"
+        "return_pct": 0.0866531,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CPB",
+        "date": "2026-04-17",
+        "ticker": "CPB",
         "position": "short",
-        "open_date": "2026-04-17",
         "open_price": 21.395,
         "close_date": "2026-04-17",
         "close_price": 20.955,
-        "realized_return": 0.020565600000000003,
-        "duration": "TAIL"
+        "return_pct": 0.020565600000000003,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "TSN",
+        "date": "2026-04-15",
+        "ticker": "TSN",
         "position": "long",
-        "open_date": "2026-04-15",
         "open_price": 63.81,
         "close_date": "2026-04-17",
         "close_price": 64.37,
-        "realized_return": 0.00877605,
-        "duration": "TAIL"
+        "return_pct": 0.00877605,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "TJX",
+        "date": "2026-04-14",
+        "ticker": "TJX",
         "position": "long",
-        "open_date": "2026-04-14",
         "open_price": 159.25,
         "close_date": "2026-04-16",
         "close_price": 158.54,
-        "realized_return": -0.0044584,
-        "duration": "TAIL"
+        "return_pct": -0.0044584,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CZR",
+        "date": "2026-04-14",
+        "ticker": "CZR",
         "position": "long",
-        "open_date": "2026-04-14",
         "open_price": 26.75,
         "close_date": "2026-04-15",
         "close_price": 27.23,
-        "realized_return": 0.0179439,
-        "duration": "TAIL"
+        "return_pct": 0.0179439,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CASY",
+        "date": "2026-04-13",
+        "ticker": "CASY",
         "position": "long",
-        "open_date": "2026-04-13",
         "open_price": 730.465,
         "close_date": "2026-04-14",
         "close_price": 737.185,
-        "realized_return": 0.00919962,
-        "duration": "TAIL"
+        "return_pct": 0.00919962,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "SWBI",
+        "date": "2026-04-13",
+        "ticker": "SWBI",
         "position": "long",
-        "open_date": "2026-04-13",
         "open_price": 14.27,
         "close_date": "2026-04-14",
         "close_price": 14.741,
-        "realized_return": 0.0330063,
-        "duration": "TAIL"
+        "return_pct": 0.0330063,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "UUP",
+        "date": "2026-04-08",
+        "ticker": "UUP",
         "position": "long",
-        "open_date": "2026-04-08",
         "open_price": 27.56,
         "close_date": "2026-04-14",
         "close_price": 27.295,
-        "realized_return": -0.00961538,
-        "duration": "TAIL"
+        "return_pct": -0.00961538,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ELF",
+        "date": "2026-04-10",
+        "ticker": "ELF",
         "position": "short",
-        "open_date": "2026-04-10",
         "open_price": 65.375,
         "close_date": "2026-04-13",
         "close_price": 65.765,
-        "realized_return": -0.005965580000000001,
-        "duration": "TAIL"
+        "return_pct": -0.005965580000000001,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CZR",
+        "date": "2026-04-10",
+        "ticker": "CZR",
         "position": "long",
-        "open_date": "2026-04-10",
         "open_price": 26.32,
         "close_date": "2026-04-13",
         "close_price": 26.72,
-        "realized_return": 0.0151976,
-        "duration": "TAIL"
+        "return_pct": 0.0151976,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "SWBI",
+        "date": "2026-04-09",
+        "ticker": "SWBI",
         "position": "long",
-        "open_date": "2026-04-09",
         "open_price": 14.03,
         "close_date": "2026-04-10",
         "close_price": 14.49,
-        "realized_return": 0.0327869,
-        "duration": "TAIL"
+        "return_pct": 0.0327869,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PSCH",
+        "date": "2026-03-31",
+        "ticker": "PSCH",
         "position": "short",
-        "open_date": "2026-03-31",
         "open_price": 41.0201,
         "close_date": "2026-04-10",
         "close_price": 41.89,
-        "realized_return": -0.021206700000000002,
-        "duration": "TAIL"
+        "return_pct": -0.021206700000000002,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "HCA",
+        "date": "2026-04-07",
+        "ticker": "HCA",
         "position": "short",
-        "open_date": "2026-04-07",
         "open_price": 491.56,
         "close_date": "2026-04-10",
         "close_price": 499.675,
-        "realized_return": -0.0165087,
-        "duration": "TAIL"
+        "return_pct": -0.0165087,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "USPH",
+        "date": "2026-04-09",
+        "ticker": "USPH",
         "position": "short",
-        "open_date": "2026-04-09",
         "open_price": 78.065,
         "close_date": "2026-04-10",
         "close_price": 76.58,
-        "realized_return": 0.0190226,
-        "duration": "TAIL"
+        "return_pct": 0.0190226,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "IHF",
+        "date": "2026-04-06",
+        "ticker": "IHF",
         "position": "short",
-        "open_date": "2026-04-06",
         "open_price": 42.95,
         "close_date": "2026-04-10",
         "close_price": 44.555,
-        "realized_return": -0.0110052,
-        "duration": "TAIL"
+        "return_pct": -0.0110052,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CORN",
+        "date": "2026-03-30",
+        "ticker": "CORN",
         "position": "long",
-        "open_date": "2026-03-30",
         "open_price": 18.426,
         "close_date": "2026-04-10",
         "close_price": 17.705,
-        "realized_return": -0.0391295,
-        "duration": "TAIL"
+        "return_pct": -0.0391295,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "FICO",
+        "date": "2026-04-02",
+        "ticker": "FICO",
         "position": "short",
-        "open_date": "2026-04-02",
         "open_price": 1089.11,
         "close_date": "2026-04-09",
         "close_price": 1048.51,
-        "realized_return": 0.0372781,
-        "duration": "TAIL"
+        "return_pct": 0.0372781,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "MTDR",
+        "date": "2026-04-08",
+        "ticker": "MTDR",
         "position": "long",
-        "open_date": "2026-04-08",
         "open_price": 59.56,
         "close_date": "2026-04-09",
         "close_price": 61.8401,
-        "realized_return": 0.0382824,
-        "duration": "TAIL"
+        "return_pct": 0.0382824,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "SGRY",
+        "date": "2026-04-08",
+        "ticker": "SGRY",
         "position": "short",
-        "open_date": "2026-04-08",
         "open_price": 12.91,
         "close_date": "2026-04-09",
         "close_price": 12.655,
-        "realized_return": 0.019752099999999998,
-        "duration": "TAIL"
+        "return_pct": 0.019752099999999998,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CANE",
+        "date": "2026-04-01",
+        "ticker": "CANE",
         "position": "long",
-        "open_date": "2026-04-01",
         "open_price": 10.225,
         "close_date": "2026-04-09",
         "close_price": 9.5175,
-        "realized_return": -0.0691932,
-        "duration": "TAIL"
+        "return_pct": -0.0691932,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "OLLI",
+        "date": "2026-04-06",
+        "ticker": "OLLI",
         "position": "short",
-        "open_date": "2026-04-06",
         "open_price": 97.92,
         "close_date": "2026-04-08",
         "close_price": 97.215,
-        "realized_return": 0.00719975,
-        "duration": "TAIL"
+        "return_pct": 0.00719975,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "MCO",
+        "date": "2026-04-02",
+        "ticker": "MCO",
         "position": "short",
-        "open_date": "2026-04-02",
         "open_price": 440.435,
         "close_date": "2026-04-07",
         "close_price": 437.47,
-        "realized_return": 0.006731979999999999,
-        "duration": "TAIL"
+        "return_pct": 0.006731979999999999,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "DK",
+        "date": "2026-04-06",
+        "ticker": "DK",
         "position": "long",
-        "open_date": "2026-04-06",
         "open_price": 44.25,
         "close_date": "2026-04-07",
         "close_price": 45.09,
-        "realized_return": 0.0189831,
-        "duration": "TAIL"
+        "return_pct": 0.0189831,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "MARA",
+        "date": "2026-04-06",
+        "ticker": "MARA",
         "position": "short",
-        "open_date": "2026-04-06",
         "open_price": 8.955,
         "close_date": "2026-04-07",
         "close_price": 8.555,
-        "realized_return": 0.0446678,
-        "duration": "TAIL"
+        "return_pct": 0.0446678,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "EWP",
+        "date": "2026-03-31",
+        "ticker": "EWP",
         "position": "short",
-        "open_date": "2026-03-31",
         "open_price": 53.43,
         "close_date": "2026-04-06",
         "close_price": 55.04,
-        "realized_return": -0.0301329,
-        "duration": "TAIL"
+        "return_pct": -0.0301329,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "RBLX",
+        "date": "2026-04-02",
+        "ticker": "RBLX",
         "position": "short",
-        "open_date": "2026-04-02",
         "open_price": 59.38,
         "close_date": "2026-04-06",
         "close_price": 57.045,
-        "realized_return": 0.039323000000000004,
-        "duration": "TAIL"
+        "return_pct": 0.039323000000000004,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "T",
+        "date": "2026-04-02",
+        "ticker": "T",
         "position": "long",
-        "open_date": "2026-04-02",
         "open_price": 28.17,
         "close_date": "2026-04-06",
         "close_price": 28.47,
-        "realized_return": 0.010649599999999999,
-        "duration": "TAIL"
+        "return_pct": 0.010649599999999999,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "TPYP",
+        "date": "2026-03-31",
+        "ticker": "TPYP",
         "position": "long",
-        "open_date": "2026-03-31",
         "open_price": 42.1799,
         "close_date": "2026-04-06",
         "close_price": 42.229,
-        "realized_return": 0.00116406,
-        "duration": "TAIL"
+        "return_pct": 0.00116406,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "HELE",
+        "date": "2026-04-01",
+        "ticker": "HELE",
         "position": "short",
-        "open_date": "2026-04-01",
         "open_price": 15.26,
         "close_date": "2026-04-02",
         "close_price": 14.43,
-        "realized_return": 0.0543906,
-        "duration": "TAIL"
+        "return_pct": 0.0543906,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "SGRY",
+        "date": "2026-04-01",
+        "ticker": "SGRY",
         "position": "short",
-        "open_date": "2026-04-01",
         "open_price": 12.25,
         "close_date": "2026-04-02",
         "close_price": 11.995,
-        "realized_return": 0.020816300000000003,
-        "duration": "TAIL"
+        "return_pct": 0.020816300000000003,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "MPLX",
+        "date": "2026-04-01",
+        "ticker": "MPLX",
         "position": "long",
-        "open_date": "2026-04-01",
         "open_price": 55.99,
         "close_date": "2026-04-02",
         "close_price": 55.555,
-        "realized_return": -0.007769239999999999,
-        "duration": "TAIL"
+        "return_pct": -0.007769239999999999,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "UTZ",
+        "date": "2026-04-01",
+        "ticker": "UTZ",
         "position": "short",
-        "open_date": "2026-04-01",
         "open_price": 7.925,
         "close_date": "2026-04-02",
         "close_price": 7.6,
-        "realized_return": 0.041009500000000004,
-        "duration": "TAIL"
+        "return_pct": 0.041009500000000004,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "ENB",
+        "date": "2026-04-01",
+        "ticker": "ENB",
         "position": "long",
-        "open_date": "2026-04-01",
         "open_price": 53.5008,
         "close_date": "2026-04-02",
         "close_price": 54.1319,
-        "realized_return": 0.0117961,
-        "duration": "TAIL"
+        "return_pct": 0.0117961,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "KVYO",
+        "date": "2026-03-31",
+        "ticker": "KVYO",
         "position": "short",
-        "open_date": "2026-03-31",
         "open_price": 19.525,
         "close_date": "2026-04-01",
         "close_price": 19.33,
-        "realized_return": 0.0099872,
-        "duration": "TAIL"
+        "return_pct": 0.0099872,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CPB",
+        "date": "2026-03-30",
+        "ticker": "CPB",
         "position": "short",
-        "open_date": "2026-03-30",
         "open_price": 22.08,
         "close_date": "2026-04-01",
         "close_price": 21.99,
-        "realized_return": 0.00407609,
-        "duration": "TAIL"
+        "return_pct": 0.00407609,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "CZR",
+        "date": "2026-03-30",
+        "ticker": "CZR",
         "position": "long",
-        "open_date": "2026-03-30",
         "open_price": 25.04,
         "close_date": "2026-03-31",
         "close_price": 26.57,
-        "realized_return": 0.0611022,
-        "duration": "TAIL"
+        "return_pct": 0.0611022,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "EWP",
+        "date": "2026-03-31",
+        "ticker": "EWP",
         "position": "long",
-        "open_date": "2026-03-31",
         "open_price": 53.4,
         "close_date": "2026-03-31",
         "close_price": 53.4222,
-        "realized_return": 0.00041573,
-        "duration": "TAIL"
+        "return_pct": 0.00041573,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "COLO",
+        "date": "2026-03-24",
+        "ticker": "COLO",
         "position": "short",
-        "open_date": "2026-03-24",
         "open_price": 38.31,
         "close_date": "2026-03-30",
         "close_price": 38.49,
-        "realized_return": -0.00469851,
-        "duration": "TAIL"
+        "return_pct": -0.00469851,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "FLO",
+        "date": "2026-03-27",
+        "ticker": "FLO",
         "position": "short",
-        "open_date": "2026-03-27",
         "open_price": 8.545,
         "close_date": "2026-03-30",
         "close_price": 8.265,
-        "realized_return": 0.0327677,
-        "duration": "TAIL"
+        "return_pct": 0.0327677,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "ANF",
+        "date": "2026-03-26",
+        "ticker": "ANF",
         "position": "short",
-        "open_date": "2026-03-26",
         "open_price": 90.485,
         "close_date": "2026-03-27",
         "close_price": 88.59,
-        "realized_return": 0.020942699999999998,
-        "duration": "TAIL"
+        "return_pct": 0.020942699999999998,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "JPM",
+        "date": "2026-03-25",
+        "ticker": "JPM",
         "position": "short",
-        "open_date": "2026-03-25",
         "open_price": 295.19,
         "close_date": "2026-03-27",
         "close_price": 285.22,
-        "realized_return": 0.0337749,
-        "duration": "TAIL"
+        "return_pct": 0.0337749,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "SYF",
+        "date": "2026-03-24",
+        "ticker": "SYF",
         "position": "short",
-        "open_date": "2026-03-24",
         "open_price": 67.53,
         "close_date": "2026-03-27",
         "close_price": 66.05,
-        "realized_return": 0.0219162,
-        "duration": "TAIL"
+        "return_pct": 0.0219162,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "PI",
+        "date": "2026-03-24",
+        "ticker": "PI",
         "position": "short",
-        "open_date": "2026-03-24",
         "open_price": 103.515,
         "close_date": "2026-03-26",
         "close_price": 101.2,
-        "realized_return": 0.022363900000000003,
-        "duration": "TAIL"
+        "return_pct": 0.022363900000000003,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "GLD",
+        "date": "2026-03-13",
+        "ticker": "GLD",
         "position": "long",
-        "open_date": "2026-03-13",
         "open_price": 463.45,
         "close_date": "2026-03-26",
         "close_price": 409.49,
-        "realized_return": -0.0733634,
-        "duration": "TAIL"
+        "return_pct": -0.0733634,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "IDX",
+        "date": "2026-03-25",
+        "ticker": "IDX",
         "position": "short",
-        "open_date": "2026-03-25",
         "open_price": 13.9201,
         "close_date": "2026-03-26",
         "close_price": 13.676,
-        "realized_return": 0.0175358,
-        "duration": "TAIL"
+        "return_pct": 0.0175358,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "GIII",
+        "date": "2026-03-24",
+        "ticker": "GIII",
         "position": "short",
-        "open_date": "2026-03-24",
         "open_price": 27.71,
         "close_date": "2026-03-25",
         "close_price": 26.425,
-        "realized_return": 0.046373199999999996,
-        "duration": "TAIL"
+        "return_pct": 0.046373199999999996,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "ONON",
+        "date": "2026-03-23",
+        "ticker": "ONON",
         "position": "short",
-        "open_date": "2026-03-23",
         "open_price": 40.18,
         "close_date": "2026-03-25",
         "close_price": 36.55,
-        "realized_return": 0.09034350000000001,
-        "duration": "TAIL"
+        "return_pct": 0.09034350000000001,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "TRP",
+        "date": "2026-03-23",
+        "ticker": "TRP",
         "position": "long",
-        "open_date": "2026-03-23",
         "open_price": 63.185,
         "close_date": "2026-03-24",
         "close_price": 64.74,
-        "realized_return": 0.0246103,
-        "duration": "TAIL"
+        "return_pct": 0.0246103,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "DDS",
+        "date": "2026-03-20",
+        "ticker": "DDS",
         "position": "short",
-        "open_date": "2026-03-20",
         "open_price": 598.0,
         "close_date": "2026-03-23",
         "close_price": 574.485,
-        "realized_return": 0.0393227,
-        "duration": "TAIL"
+        "return_pct": 0.0393227,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "SWBI",
+        "date": "2026-03-19",
+        "ticker": "SWBI",
         "position": "long",
-        "open_date": "2026-03-19",
         "open_price": 13.77,
         "close_date": "2026-03-20",
         "close_price": 14.38,
-        "realized_return": 0.044299200000000004,
-        "duration": "TAIL"
+        "return_pct": 0.044299200000000004,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "ANF",
+        "date": "2026-03-19",
+        "ticker": "ANF",
         "position": "short",
-        "open_date": "2026-03-19",
         "open_price": 89.59,
         "close_date": "2026-03-20",
         "close_price": 89.02,
-        "realized_return": 0.00636232,
-        "duration": "TAIL"
+        "return_pct": 0.00636232,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "ELV",
+        "date": "2026-03-16",
+        "ticker": "ELV",
         "position": "short",
-        "open_date": "2026-03-16",
         "open_price": 293.02,
         "close_date": "2026-03-19",
         "close_price": 295.32,
-        "realized_return": -0.00784929,
-        "duration": "TAIL"
+        "return_pct": -0.00784929,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "TRU",
+        "date": "2026-03-18",
+        "ticker": "TRU",
         "position": "short",
-        "open_date": "2026-03-18",
         "open_price": 73.97,
         "close_date": "2026-03-19",
         "close_price": 71.89,
-        "realized_return": 0.0281195,
-        "duration": "TAIL"
+        "return_pct": 0.0281195,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "PI",
+        "date": "2026-03-17",
+        "ticker": "PI",
         "position": "short",
-        "open_date": "2026-03-17",
         "open_price": 101.445,
         "close_date": "2026-03-18",
         "close_price": 98.735,
-        "realized_return": 0.026714,
-        "duration": "TAIL"
+        "return_pct": 0.026714,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "BRBR",
+        "date": "2026-03-16",
+        "ticker": "BRBR",
         "position": "short",
-        "open_date": "2026-03-16",
         "open_price": 18.38,
         "close_date": "2026-03-18",
         "close_price": 18.12,
-        "realized_return": 0.0141458,
-        "duration": "TAIL"
+        "return_pct": 0.0141458,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "MSTY",
+        "date": "2026-03-17",
+        "ticker": "MSTY",
         "position": "short",
-        "open_date": "2026-03-17",
         "open_price": 25.425,
         "close_date": "2026-03-18",
         "close_price": 24.83,
-        "realized_return": 0.0234022,
-        "duration": "TAIL"
+        "return_pct": 0.0234022,
+        "duration": "neutral-trade & short-trend & short-tail"
       },
       {
-        "symbol": "FRPT",
+        "date": "2026-03-12",
+        "ticker": "FRPT",
         "position": "long",
-        "open_date": "2026-03-12",
         "open_price": 78.54,
         "close_date": "2026-03-17",
         "close_price": 78.26,
-        "realized_return": -0.00356506,
-        "duration": "TAIL"
+        "return_pct": -0.00356506,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "MPLX",
+        "date": "2026-03-13",
+        "ticker": "MPLX",
         "position": "long",
-        "open_date": "2026-03-13",
         "open_price": 58.075,
         "close_date": "2026-03-16",
         "close_price": 58.29,
-        "realized_return": 0.00370211,
-        "duration": "TAIL"
+        "return_pct": 0.00370211,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "MOH",
+        "date": "2026-03-12",
+        "ticker": "MOH",
         "position": "short",
-        "open_date": "2026-03-12",
         "open_price": 149.89,
         "close_date": "2026-03-16",
         "close_price": 147.65,
-        "realized_return": 0.014944299999999999,
-        "duration": "TAIL"
+        "return_pct": 0.014944299999999999,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "HSY",
+        "date": "2026-03-09",
+        "ticker": "HSY",
         "position": "long",
-        "open_date": "2026-03-09",
         "open_price": 222.745,
         "close_date": "2026-03-16",
         "close_price": 220.44,
-        "realized_return": -0.0103482,
-        "duration": "TAIL"
+        "return_pct": -0.0103482,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "NFLX",
+        "date": "2026-03-12",
+        "ticker": "NFLX",
         "position": "long",
-        "open_date": "2026-03-12",
         "open_price": 94.695,
         "close_date": "2026-03-16",
         "close_price": 95.355,
-        "realized_return": 0.00696975,
-        "duration": "TAIL"
+        "return_pct": 0.00696975,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CRWV",
+        "date": "2026-03-12",
+        "ticker": "CRWV",
         "position": "short",
-        "open_date": "2026-03-12",
         "open_price": 80.95,
         "close_date": "2026-03-13",
         "close_price": 80.615,
-        "realized_return": 0.00413836,
-        "duration": "TAIL"
+        "return_pct": 0.00413836,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "IVES",
+        "date": "2026-03-11",
+        "ticker": "IVES",
         "position": "short",
-        "open_date": "2026-03-11",
         "open_price": 30.7399,
         "close_date": "2026-03-12",
         "close_price": 30.14,
-        "realized_return": 0.019515400000000002,
-        "duration": "TAIL"
+        "return_pct": 0.019515400000000002,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "COLO",
+        "date": "2026-03-11",
+        "ticker": "COLO",
         "position": "short",
-        "open_date": "2026-03-11",
         "open_price": 38.7879,
         "close_date": "2026-03-12",
         "close_price": 38.2,
-        "realized_return": 0.0151568,
-        "duration": "TAIL"
+        "return_pct": 0.0151568,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "XLU",
+        "date": "2026-03-11",
+        "ticker": "XLU",
         "position": "long",
-        "open_date": "2026-03-11",
         "open_price": 46.0708,
         "close_date": "2026-03-12",
         "close_price": 46.64,
-        "realized_return": 0.0123549,
-        "duration": "TAIL"
+        "return_pct": 0.0123549,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PZZA",
+        "date": "2026-03-10",
+        "ticker": "PZZA",
         "position": "short",
-        "open_date": "2026-03-10",
         "open_price": 32.915,
         "close_date": "2026-03-11",
         "close_price": 38.195,
-        "realized_return": -0.160413,
-        "duration": "TAIL"
+        "return_pct": -0.160413,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "DAR",
+        "date": "2026-03-10",
+        "ticker": "DAR",
         "position": "long",
-        "open_date": "2026-03-10",
         "open_price": 51.905,
         "close_date": "2026-03-11",
         "close_price": 54.31,
-        "realized_return": 0.046334600000000004,
-        "duration": "TAIL"
+        "return_pct": 0.046334600000000004,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PEP",
+        "date": "2026-03-04",
+        "ticker": "PEP",
         "position": "long",
-        "open_date": "2026-03-04",
         "open_price": 163.83,
         "close_date": "2026-03-10",
         "close_price": 162.55,
-        "realized_return": -0.00781298,
-        "duration": "TAIL"
+        "return_pct": -0.00781298,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "TLT",
+        "date": "2026-03-05",
+        "ticker": "TLT",
         "position": "long",
-        "open_date": "2026-03-05",
         "open_price": 88.725,
         "close_date": "2026-03-10",
         "close_price": 88.83,
-        "realized_return": 0.00118343,
-        "duration": "TAIL"
+        "return_pct": 0.00118343,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "OSK",
+        "date": "2026-03-04",
+        "ticker": "OSK",
         "position": "long",
-        "open_date": "2026-03-04",
         "open_price": 166.74,
         "close_date": "2026-03-10",
         "close_price": 158.74,
-        "realized_return": -0.007751590000000001,
-        "duration": "TAIL"
+        "return_pct": -0.007751590000000001,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PATH",
+        "date": "2026-03-06",
+        "ticker": "PATH",
         "position": "short",
-        "open_date": "2026-03-06",
         "open_price": 11.5686,
         "close_date": "2026-03-10",
         "close_price": 11.525,
-        "realized_return": 0.00376882,
-        "duration": "TAIL"
+        "return_pct": 0.00376882,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "ROP",
+        "date": "2026-02-24",
+        "ticker": "ROP",
         "position": "short",
-        "open_date": "2026-02-24",
         "open_price": 336.61,
         "close_date": "2026-03-09",
         "close_price": 360.645,
-        "realized_return": -0.053208700000000005,
-        "duration": "TAIL"
+        "return_pct": -0.053208700000000005,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "AFRM",
+        "date": "2026-03-05",
+        "ticker": "AFRM",
         "position": "short",
-        "open_date": "2026-03-05",
         "open_price": 52.2099,
         "close_date": "2026-03-09",
         "close_price": 49.855,
-        "realized_return": 0.0451045,
-        "duration": "TAIL"
+        "return_pct": 0.0451045,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "SPGI",
+        "date": "2026-03-02",
+        "ticker": "SPGI",
         "position": "short",
-        "open_date": "2026-03-02",
         "open_price": 442.2,
         "close_date": "2026-03-09",
         "close_price": 434.735,
-        "realized_return": 0.0168815,
-        "duration": "TAIL"
+        "return_pct": 0.0168815,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "WMS",
+        "date": "2026-03-02",
+        "ticker": "WMS",
         "position": "long",
-        "open_date": "2026-03-02",
         "open_price": 168.42,
         "close_date": "2026-03-09",
         "close_price": 139.26,
-        "realized_return": -0.112711,
-        "duration": "TAIL"
+        "return_pct": -0.112711,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "SKYY",
+        "date": "2026-03-05",
+        "ticker": "SKYY",
         "position": "short",
-        "open_date": "2026-03-05",
         "open_price": 112.865,
         "close_date": "2026-03-09",
         "close_price": 111.24,
-        "realized_return": 0.0143977,
-        "duration": "TAIL"
+        "return_pct": 0.0143977,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "MNDY",
+        "date": "2026-03-05",
+        "ticker": "MNDY",
         "position": "short",
-        "open_date": "2026-03-05",
         "open_price": 79.54,
         "close_date": "2026-03-06",
         "close_price": 77.5,
-        "realized_return": 0.0256475,
-        "duration": "TAIL"
+        "return_pct": 0.0256475,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "DOV",
+        "date": "2026-02-24",
+        "ticker": "DOV",
         "position": "long",
-        "open_date": "2026-02-24",
         "open_price": 231.09,
         "close_date": "2026-03-05",
         "close_price": 219.92,
-        "realized_return": -0.0246693,
-        "duration": "TAIL"
+        "return_pct": -0.0246693,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "EFX",
+        "date": "2026-02-25",
+        "ticker": "EFX",
         "position": "short",
-        "open_date": "2026-02-25",
         "open_price": 195.67,
         "close_date": "2026-03-04",
         "close_price": 205.825,
-        "realized_return": -0.0161187,
-        "duration": "TAIL"
+        "return_pct": -0.0161187,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "EXPGY",
+        "date": "2026-02-25",
+        "ticker": "EXPGY",
         "position": "short",
-        "open_date": "2026-02-25",
         "open_price": 36.27,
         "close_date": "2026-03-03",
         "close_price": 35.39,
-        "realized_return": 0.0242625,
-        "duration": "TAIL"
+        "return_pct": 0.0242625,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "UAE",
+        "date": "2026-02-27",
+        "ticker": "UAE",
         "position": "long",
-        "open_date": "2026-02-27",
         "open_price": 21.195,
         "close_date": "2026-03-03",
         "close_price": 19.42,
-        "realized_return": -0.0837462,
-        "duration": "TAIL"
+        "return_pct": -0.0837462,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "RBLX",
+        "date": "2026-02-25",
+        "ticker": "RBLX",
         "position": "short",
-        "open_date": "2026-02-25",
         "open_price": 66.505,
         "close_date": "2026-03-02",
         "close_price": 66.9,
-        "realized_return": -0.0059394,
-        "duration": "TAIL"
+        "return_pct": -0.0059394,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "EXPE",
+        "date": "2026-02-27",
+        "ticker": "EXPE",
         "position": "short",
-        "open_date": "2026-02-27",
         "open_price": 216.0,
         "close_date": "2026-03-02",
         "close_price": 214.045,
-        "realized_return": 0.00905093,
-        "duration": "TAIL"
+        "return_pct": 0.00905093,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "EIS",
+        "date": "2026-02-24",
+        "ticker": "EIS",
         "position": "long",
-        "open_date": "2026-02-24",
         "open_price": 120.6,
         "close_date": "2026-03-02",
         "close_price": 124.21,
-        "realized_return": 0.0299337,
-        "duration": "TAIL"
+        "return_pct": 0.0299337,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "BLOK",
+        "date": "2026-02-25",
+        "ticker": "BLOK",
         "position": "short",
-        "open_date": "2026-02-25",
         "open_price": 55.635,
         "close_date": "2026-02-27",
         "close_price": 52.99,
-        "realized_return": 0.047542,
-        "duration": "TAIL"
+        "return_pct": 0.047542,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "LII",
+        "date": "2026-02-25",
+        "ticker": "LII",
         "position": "long",
-        "open_date": "2026-02-25",
         "open_price": 535.64,
         "close_date": "2026-02-26",
         "close_price": 538.09,
-        "realized_return": 0.00457397,
-        "duration": "TAIL"
+        "return_pct": 0.00457397,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "UPS",
+        "date": "2026-02-25",
+        "ticker": "UPS",
         "position": "long",
-        "open_date": "2026-02-25",
         "open_price": 113.25,
         "close_date": "2026-02-26",
         "close_price": 115.42,
-        "realized_return": 0.0191611,
-        "duration": "TAIL"
+        "return_pct": 0.0191611,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "CANE",
+        "date": "2026-02-23",
+        "ticker": "CANE",
         "position": "short",
-        "open_date": "2026-02-23",
         "open_price": 9.298,
         "close_date": "2026-02-25",
         "close_price": 9.275,
-        "realized_return": 0.00247365,
-        "duration": "TAIL"
+        "return_pct": 0.00247365,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "SFM",
+        "date": "2026-02-23",
+        "ticker": "SFM",
         "position": "short",
-        "open_date": "2026-02-23",
         "open_price": 72.11,
         "close_date": "2026-02-24",
         "close_price": 71.21,
-        "realized_return": 0.0124809,
-        "duration": "TAIL"
+        "return_pct": 0.0124809,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "FXF",
+        "date": "2026-02-19",
+        "ticker": "FXF",
         "position": "long",
-        "open_date": "2026-02-19",
         "open_price": 114.09,
         "close_date": "2026-02-23",
         "close_price": 114.2,
-        "realized_return": 0.0009597690000000001,
-        "duration": "TAIL"
+        "return_pct": 0.0009597690000000001,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "PYPL",
+        "date": "2026-02-19",
+        "ticker": "PYPL",
         "position": "short",
-        "open_date": "2026-02-19",
         "open_price": 41.28,
         "close_date": "2026-02-23",
         "close_price": 40.82,
-        "realized_return": 0.011143400000000001,
-        "duration": "TAIL"
+        "return_pct": 0.011143400000000001,
+        "duration": "short-trade & short-trend & short-tail"
       },
       {
-        "symbol": "UPS",
+        "date": "2026-02-19",
+        "ticker": "GLIN",
         "position": "long",
-        "open_date": "2026-02-18",
-        "open_price": 115.7,
-        "close_date": "2026-02-20",
-        "close_price": 116.33,
-        "realized_return": 0.00544512,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "GLIN",
-        "position": "long",
-        "open_date": "2026-02-19",
         "open_price": 46.15,
         "close_date": "2026-02-20",
         "close_price": 46.6,
-        "realized_return": 0.00975081,
-        "duration": "TAIL"
+        "return_pct": 0.00975081,
+        "duration": "long-trade & long-trend & long-tail"
       },
       {
-        "symbol": "MOH",
+        "date": "2026-02-19",
+        "ticker": "MOH",
         "position": "short",
-        "open_date": "2026-02-19",
         "open_price": 147.01,
         "close_date": "2026-02-20",
         "close_price": 145.84,
-        "realized_return": 0.00795864,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "TRU",
-        "position": "short",
-        "open_date": "2026-02-18",
-        "open_price": 76.56,
-        "close_date": "2026-02-20",
-        "close_price": 75.8,
-        "realized_return": 0.009926850000000001,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "HUBS",
-        "position": "short",
-        "open_date": "2026-02-18",
-        "open_price": 247.98,
-        "close_date": "2026-02-19",
-        "close_price": 241.3,
-        "realized_return": 0.026937700000000002,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "HSY",
-        "position": "long",
-        "open_date": "2026-02-18",
-        "open_price": 218.55,
-        "close_date": "2026-02-19",
-        "close_price": 219.38,
-        "realized_return": 0.0037977600000000003,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "PEP",
-        "position": "long",
-        "open_date": "2026-02-17",
-        "open_price": 161.43,
-        "close_date": "2026-02-18",
-        "close_price": 164.025,
-        "realized_return": 0.016075100000000002,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "XOM",
-        "position": "long",
-        "open_date": "2026-02-17",
-        "open_price": 146.25,
-        "close_date": "2026-02-18",
-        "close_price": 149.355,
-        "realized_return": 0.021230799999999998,
-        "duration": "TAIL"
-      },
-      {
-        "symbol": "IHF",
-        "position": "short",
-        "open_date": "2026-02-13",
-        "open_price": 46.2,
-        "close_date": "2026-02-18",
-        "close_price": 46.1473,
-        "realized_return": 0.00114069,
-        "duration": "TAIL"
+        "return_pct": 0.00795864,
+        "duration": "short-trade & short-trend & short-tail"
       }
     ],
     "stats": {
-      "win_rate_long": 0.726,
-      "win_rate_short": 0.806,
-      "avg_return_long": 0.0064,
-      "avg_return_short": 0.0113,
-      "total_trades_90d": 140
+      "count_90d": 133,
+      "open_count": 0
     },
     "recently_traded_tickers": [
-      "ACHC",
-      "ACI",
       "AMZN",
-      "ANF",
-      "APD",
-      "ARGT",
-      "CANE",
-      "CASY",
-      "CAVA",
-      "CFG",
-      "COLO",
-      "CORN",
-      "CPB",
-      "CPER",
-      "CZR",
-      "DDS",
-      "DGX",
-      "DK",
-      "ELF",
-      "ENB",
-      "EPHE",
-      "EWC",
-      "EWP",
-      "EWW",
-      "FICO",
-      "FLO",
-      "FXB",
-      "GII",
-      "GIII",
-      "GLASF",
-      "GLD",
-      "HCA",
-      "HELE",
-      "HYG",
-      "IDX",
-      "IHF",
-      "JPM",
-      "KMX",
-      "KRE",
-      "KVYO",
-      "LOTMY",
-      "MARA",
-      "MCO",
-      "MGM",
-      "MNDY",
-      "MPLX",
-      "MTDR",
-      "OIH",
-      "OLLI",
-      "ONON",
-      "PI",
-      "PSCH",
-      "PVH",
-      "RBLX",
-      "ROST",
       "RSI",
-      "SGRY",
-      "SPHR",
-      "SWBI",
-      "SYF",
-      "T",
+      "CASY",
+      "FXB",
       "THC",
-      "TJX",
-      "TPYP",
-      "TRP",
-      "TSN",
-      "UFO",
+      "ACI",
+      "CZR",
+      "EWC",
+      "GLASF",
+      "ROST",
+      "DGX",
+      "KMX",
+      "EPHE",
+      "OIH",
+      "CPB",
+      "APD",
+      "PVH",
+      "MGM",
+      "JPM",
+      "KRE",
+      "CPER",
+      "MNDY",
+      "HYG",
+      "CAVA",
       "ULS",
-      "USPH",
-      "UTZ",
-      "UUP",
+      "UFO",
+      "XTL",
+      "ACHC",
+      "FLO",
       "WING",
-      "XTL"
+      "CFG",
+      "ARGT",
+      "SPHR",
+      "LOTMY",
+      "GII",
+      "EWW",
+      "TSN",
+      "TJX",
+      "SWBI",
+      "UUP"
     ]
   },
-  "levels": {
-    "UST30Y": {
-      "close": 5.14,
-      "lrr": 5.02,
-      "trr": 5.17,
-      "signal": "BULLISH"
-    },
-    "UST10Y": {
-      "close": 4.61,
-      "lrr": 4.45,
-      "trr": 4.64,
-      "signal": "BULLISH"
-    },
-    "UST2Y": {
-      "close": 4.07,
-      "lrr": 3.97,
-      "trr": 4.1,
-      "signal": "BULLISH"
-    },
-    "HYG": {
-      "close": 79.54,
-      "lrr": 79.4,
-      "trr": 80.16,
-      "signal": "BULLISH"
-    },
-    "LQD": {
-      "close": 107.7,
-      "lrr": 107.3,
-      "trr": 108.6,
-      "signal": "BEARISH"
-    },
-    "SPX": {
-      "close": 7403.0,
-      "lrr": 7302.0,
-      "trr": 7505.0,
-      "signal": "BULLISH"
-    },
-    "COMPQ": {
-      "close": 26091.0,
-      "lrr": 25666.0,
-      "trr": 26711.0,
-      "signal": "BULLISH"
-    },
-    "RUT": {
-      "close": 2775.0,
-      "lrr": 2747.0,
-      "trr": 2900.0,
-      "signal": "BULLISH"
-    },
-    "XLK": {
-      "close": 174.0,
-      "lrr": 168.0,
-      "trr": 182.0,
-      "signal": "BULLISH"
-    },
-    "XLV": {
-      "close": 158.0,
-      "lrr": 156.0,
-      "trr": 160.0,
-      "signal": "BULLISH"
-    },
-    "SSEC": {
-      "close": 4132.0,
-      "lrr": 4111.0,
-      "trr": 4245.0,
-      "signal": "BULLISH"
-    },
-    "NIKK": {
-      "close": 60348.0,
-      "lrr": 59619.0,
-      "trr": 63309.0,
-      "signal": "BULLISH"
-    },
-    "DAX": {
-      "close": 24308.0,
-      "lrr": 23990.0,
-      "trr": 24997.0,
-      "signal": "BULLISH"
-    },
-    "VIX": {
-      "close": 17.82,
-      "lrr": 16.56,
-      "trr": 18.97,
-      "signal": "BEARISH"
-    },
-    "USD": {
-      "close": 99.02,
-      "lrr": 98.47,
-      "trr": 99.71,
-      "signal": "BULLISH"
-    },
-    "EUR/USD": {
-      "close": 1.164,
-      "lrr": 1.157,
-      "trr": 1.171,
-      "signal": "BEARISH"
-    },
-    "USD/YEN": {
-      "close": 158.94,
-      "lrr": 156.49,
-      "trr": 159.62,
-      "signal": "BULLISH"
-    },
-    "GBP/USD": {
-      "close": 1.341,
-      "lrr": 1.328,
-      "trr": 1.349,
-      "signal": "BEARISH"
-    },
-    "CAD/USD": {
-      "close": 0.727,
-      "lrr": 0.721,
-      "trr": 0.729,
-      "signal": "BEARISH"
-    },
-    "WTIC": {
-      "close": 102.73,
-      "lrr": 99.01,
-      "trr": 108.15,
-      "signal": "BULLISH"
-    },
-    "BRENT": {
-      "close": 110.0,
-      "lrr": 105.0,
-      "trr": 114.0,
-      "signal": "BULLISH"
-    },
-    "NATGAS": {
-      "close": 3.02,
-      "lrr": 2.84,
-      "trr": 3.14,
-      "signal": "BULLISH"
-    },
-    "GOLD": {
-      "close": 4542.0,
-      "lrr": 4500.0,
-      "trr": 4680.0,
-      "signal": "NEUTRAL"
-    },
-    "COPPER": {
-      "close": 6.24,
-      "lrr": 6.1,
-      "trr": 6.65,
-      "signal": "BULLISH"
-    },
-    "SILVER": {
-      "close": 76.0,
-      "lrr": 71.0,
-      "trr": 80.0,
-      "signal": "BEARISH"
-    },
-    "MSFT": {
-      "close": 424.0,
-      "lrr": 401.0,
-      "trr": 428.0,
-      "signal": "BEARISH"
-    },
-    "AAPL": {
-      "close": 298.0,
-      "lrr": 291.0,
-      "trr": 304.0,
-      "signal": "BULLISH"
-    },
-    "AMZN": {
-      "close": 265.0,
-      "lrr": 259.0,
-      "trr": 276.0,
-      "signal": "BULLISH"
-    },
-    "META": {
-      "close": 611.0,
-      "lrr": 595.0,
-      "trr": 624.0,
-      "signal": "BEARISH"
-    },
-    "GOOGL": {
-      "close": 397.0,
-      "lrr": 384.0,
-      "trr": 408.0,
-      "signal": "BULLISH"
-    },
-    "NFLX": {
-      "close": 90.0,
-      "lrr": 84.0,
-      "trr": 90.0,
-      "signal": "BEARISH"
-    },
-    "TSLA": {
-      "close": 410.0,
-      "lrr": 395.0,
-      "trr": 445.0,
-      "signal": "NEUTRAL"
-    },
-    "NVDA": {
-      "close": 222.0,
-      "lrr": 216.0,
-      "trr": 239.0,
-      "signal": "BULLISH"
-    },
-    "ORCL": {
-      "close": 187.0,
-      "lrr": 183.0,
-      "trr": 199.0,
-      "signal": "BULLISH"
-    },
-    "BITCOIN": {
-      "close": 76795.0,
-      "lrr": 75637.0,
-      "trr": 82531.0,
-      "signal": "BULLISH"
-    },
-    "BSE": {
-      "close": 85106.0,
-      "lrr": 84516.0,
-      "trr": 86339.0,
-      "signal": "BULLISH"
-    },
-    "XLY": {
-      "close": 120.0,
-      "lrr": 118.0,
-      "trr": 124.0,
-      "signal": "BULLISH"
-    },
-    "XLI": {
-      "close": 171.0,
-      "lrr": 169.0,
-      "trr": 178.0,
-      "signal": "BULLISH"
-    },
-    "PPLT": {
-      "close": 182.0,
-      "lrr": 175.0,
-      "trr": 211.0,
-      "signal": "BULLISH"
-    },
-    "BTCUSD": {
-      "close": 67049.0,
-      "lrr": 62799.0,
-      "trr": 71743.0,
-      "signal": "BEARISH"
-    },
-    "ST30Y": {
-      "close": 4.85,
-      "lrr": 4.93,
-      "trr": 4.81,
-      "signal": "BULLISH"
-    },
-    "^SPX": {
-      "close": 6832.0,
-      "lrr": 6776.0,
-      "trr": 7013.0,
-      "signal": "BULLISH"
-    },
-    "^IXIC": {
-      "close": 22597.0,
-      "lrr": 22318.0,
-      "trr": 23252.0,
-      "signal": "BEARISH"
-    },
-    "^RUT": {
-      "close": 2615.0,
-      "lrr": 2565.0,
-      "trr": 2715.0,
-      "signal": "BULLISH"
-    },
-    "^N225": {
-      "close": 56941.0,
-      "lrr": 54868.0,
-      "trr": 58432.0,
-      "signal": "BULLISH"
-    },
-    "^GDAXI": {
-      "close": 24852.0,
-      "lrr": 24436.0,
-      "trr": 25117.0,
-      "signal": "BULLISH"
-    },
-    "^VIX": {
-      "close": 20.82,
-      "lrr": 15.29,
-      "trr": 21.93,
-      "signal": "BEARISH"
-    },
-    "DX-Y.NYB": {
-      "close": 97.05,
-      "lrr": 96.22,
-      "trr": 97.7,
-      "signal": "BEARISH"
-    },
-    "EURUSD": {
-      "close": 1.186,
-      "lrr": 1.174,
-      "trr": 1.194,
-      "signal": "BULLISH"
-    },
-    "USDJPY": {
-      "close": 153.29,
-      "lrr": 152.01,
-      "trr": 155.53,
-      "signal": "BEARISH"
-    },
-    "GBPUSD": {
-      "close": 1.361,
-      "lrr": 1.352,
-      "trr": 1.379,
-      "signal": "BULLISH"
-    },
-    "CADUSD": {
-      "close": 0.733,
-      "lrr": 0.731,
-      "trr": 0.742,
-      "signal": "BULLISH"
-    },
-    "CLUSD": {
-      "close": 62.91,
-      "lrr": 61.73,
-      "trr": 65.62,
-      "signal": "BULLISH"
-    },
-    "BZUSD": {
-      "close": 67.6,
-      "lrr": 66.41,
-      "trr": 70.39,
-      "signal": "BULLISH"
-    },
-    "NGUSD": {
-      "close": 3.22,
-      "lrr": 2.88,
-      "trr": 3.57,
-      "signal": "BEARISH"
-    },
-    "GCUSD": {
-      "close": 4893.0,
-      "lrr": 4842.0,
-      "trr": 5209.0,
-      "signal": "BULLISH"
-    },
-    "HGUSD": {
-      "close": 5.75,
-      "lrr": 5.67,
-      "trr": 6.12,
-      "signal": "BULLISH"
-    },
-    "SILUSD": {
-      "close": 74.0,
-      "lrr": 70.0,
-      "trr": 93.0,
-      "signal": "BULLISH"
-    },
-    "XOP": {
-      "close": 176.0,
-      "lrr": 169.0,
-      "trr": 180.0,
-      "signal": "BULLISH"
-    },
-    "XLU": {
-      "close": 44.87,
-      "lrr": 44.35,
-      "trr": 45.99,
-      "signal": "BEARISH"
-    },
-    "ETH": {
-      "close": 2109.0,
-      "lrr": 2041.0,
-      "trr": 2253.0,
-      "signal": "BEARISH"
-    },
-    "SOL": {
-      "close": 84.3,
-      "lrr": 80.0,
-      "trr": 89.0,
-      "signal": "BEARISH"
-    },
-    "AVAX": {
-      "close": 9.09,
-      "lrr": 8.61,
-      "trr": 9.57,
-      "signal": "BEARISH"
-    },
-    "XRP": {
-      "close": 1.37,
-      "lrr": 1.31,
-      "trr": 1.42,
-      "signal": "BEARISH"
-    },
-    "XTL": {
-      "close": 224.0,
-      "lrr": 219.0,
-      "trr": 233.0,
-      "signal": "BULLISH"
-    }
-  },
+  "levels": {},
   "pdf": {
-    "macro_show": {
-      "quad": {
-        "monthly": null,
-        "quarterly": 2,
-        "depth": "SHALLOW"
+    "momo": {
+      "MSFT": {
+        "lrr": 401,
+        "trr": 424,
+        "signal": "BEARISH",
+        "upside_pct": 1.58,
+        "downside_pct": -3.9
       },
-      "vix": {
-        "current": 17.82,
-        "lrr": 18.38,
-        "trr": 18.43,
-        "bucket": null
+      "AAPL": {
+        "lrr": 290,
+        "trr": 305,
+        "signal": "BULLISH",
+        "upside_pct": 2.02,
+        "downside_pct": -3.0
       },
-      "cpi_nowcast": 2.69,
-      "growth_roc": "ACCELERATING",
-      "inflation_roc": "ACCELERATING",
-      "quad_sequence": "1Q26-4Q25-2Q25-3Q26E",
-      "high_beta_1m": 3.0,
-      "low_beta_1m": -1.7,
-      "keith_commentary": [
-        "Indonesia (IDX) crashing -30% since JAN, our 1st Macro Crash Call of 2026",
-        "China (CNXT) up +0.9% in Shanghai while Dr. KOSPI trading epic High Beta Mo down -3.3% on session, correction -8.9% holding @Hedgeye TRADE Support",
-        "CRB Commodities Index printed new Inflation Cycle Highs at 405; good spot to buy-more Copper (CPER)",
-        "Eggs have inflated +90% in a month - significant consumer price pressure",
-        "72% of SPY stocks up avg +1.8% yesterday but High Beta Momentum down -6.5% to -19.5% since peaking +59% YTD - plenty to re-load on Long Side after drawdown"
-      ]
+      "AMZN": {
+        "lrr": 257,
+        "trr": 275,
+        "signal": "BULLISH",
+        "upside_pct": 6.04,
+        "downside_pct": -0.9
+      },
+      "META": {
+        "lrr": 591,
+        "trr": 624,
+        "signal": "BEARISH",
+        "upside_pct": 3.55,
+        "downside_pct": -1.9
+      },
+      "GOOGL": {
+        "lrr": 382,
+        "trr": 406,
+        "signal": "BULLISH",
+        "upside_pct": 4.73,
+        "downside_pct": -1.5
+      },
+      "NFLX": {
+        "lrr": 84,
+        "trr": 91,
+        "signal": "BEARISH",
+        "upside_pct": 1.87,
+        "downside_pct": -6.0
+      },
+      "TSLA": {
+        "lrr": 394,
+        "trr": 427,
+        "signal": "NEUTRAL",
+        "upside_pct": 5.66,
+        "downside_pct": -2.5
+      },
+      "NVDA": {
+        "lrr": 210,
+        "trr": 240,
+        "signal": "BULLISH",
+        "upside_pct": 8.79,
+        "downside_pct": -4.8
+      },
+      "ORCL": {
+        "lrr": 178,
+        "trr": 196,
+        "signal": "BULLISH",
+        "upside_pct": 8.01,
+        "downside_pct": -1.9
+      },
+      "mag7_daily_pct": -1.3,
+      "rr_upside_count": 6,
+      "rr_total": 9,
+      "headline": "6/9 RRs Upside>Downside \u2014 Quad 2 Growth setup intact"
     },
     "msr": {
       "gamma_exposure": "POSITIVE",
       "systematic_flow": "NEUTRAL",
-      "pv_band": "NEUTRAL",
       "strategic_allocation": "RISK_ON",
-      "spx_upper_pv": 7539.0,
-      "spx_lower_pv": 7332.0,
-      "gex_flip": 7193.13,
-      "gvt": 9.86,
-      "realized_vol_10d": 12.17,
-      "spx_last": 7403.04,
-      "resistance": 7500.0,
-      "support": 7350.0
-    },
-    "sss": {
-      "count": 77,
-      "added": [
-        "CPAY",
-        "HLT",
-        "TXG",
-        "LYV",
-        "CBRS",
-        "FWONK",
-        "LLY"
-      ],
-      "removed": [
-        "ABNB",
-        "PEB"
-      ],
-      "tickers": [
-        "CAT",
-        "OUT",
-        "SPHR",
-        "GASP",
-        "STLK",
-        "ANAT",
-        "ENB",
-        "DAS",
-        "CAVA",
-        "ACHC",
-        "MUSA",
-        "SMPL",
-        "RSI",
-        "CZR",
-        "FCF8",
-        "NLS",
-        "MAR",
-        "CBX",
-        "MNRL",
-        "LRCX",
-        "SITM",
-        "NYDA",
-        "AMP2",
-        "VIK",
-        "GOOGL",
-        "AAPL",
-        "ROOU",
-        "HST",
-        "GLABF",
-        "CURLF",
-        "SBUX",
-        "ROK",
-        "CP",
-        "LAMR",
-        "VMEO",
-        "LBST",
-        "LFMD",
-        "UNH",
-        "SXT",
-        "CAGC",
-        "XYZ",
-        "CARS",
-        "APD",
-        "NARA",
-        "CRCL",
-        "AFRI",
-        "URI",
-        "DOW",
-        "LYB",
-        "RIO",
-        "BHP",
-        "ASGM",
-        "TTWO",
-        "APLE",
-        "LOTHY",
-        "CMI",
-        "WRBY",
-        "DOOO",
-        "INST",
-        "PRMB",
-        "PM",
-        "AZTAF",
-        "BLMNF",
-        "V",
-        "ATRD",
-        "ILMN",
-        "NVO",
-        "RHP",
-        "RTI",
-        "BJRI",
-        "CPAY",
-        "HLT",
-        "TXG",
-        "LYV",
-        "FWONK",
-        "LLY",
-        "CBRS"
-      ],
-      "tickers_detail": {
-        "CAT": {
-          "signal_date": "2026-05-26",
-          "entry_price": 343.4,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 358
-        },
-        "OUT": {
-          "signal_date": "2026-01-11",
-          "entry_price": 22.1,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 183
-        },
-        "SPHR": {
-          "signal_date": "2026-01-12",
-          "entry_price": 95.2,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 127
-        },
-        "GASP": {
-          "signal_date": "2026-01-19",
-          "entry_price": 640.4,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 120
-        },
-        "STLK": {
-          "signal_date": "2026-02-02",
-          "entry_price": 4.6,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 106
-        },
-        "ANAT": {
-          "signal_date": "2026-02-09",
-          "entry_price": 322.5,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 99
-        },
-        "ENB": {
-          "signal_date": "2026-02-23",
-          "entry_price": 51.5,
-          "sector": "Energy",
-          "analyst": "Fernando Valle",
-          "days_on_list": 85
-        },
-        "DAS": {
-          "signal_date": "2026-02-23",
-          "entry_price": 51.6,
-          "sector": "Energy",
-          "analyst": "Fernando Valle",
-          "days_on_list": 85
-        },
-        "CAVA": {
-          "signal_date": "2026-03-02",
-          "entry_price": 82.5,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 78
-        },
-        "ACHC": {
-          "signal_date": "2026-03-02",
-          "entry_price": 23.4,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 78
-        },
-        "MUSA": {
-          "signal_date": "2026-03-09",
-          "entry_price": 438.4,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 71
-        },
-        "SMPL": {
-          "signal_date": "2026-03-09",
-          "entry_price": 14.0,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 71
-        },
-        "RSI": {
-          "signal_date": "2026-03-16",
-          "entry_price": 20.3,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 64
-        },
-        "CZR": {
-          "signal_date": "2026-03-16",
-          "entry_price": 28.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 64
-        },
-        "FCF8": {
-          "signal_date": "2026-03-23",
-          "entry_price": 192.1,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 57
-        },
-        "NLS": {
-          "signal_date": "2026-03-30",
-          "entry_price": 83.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 50
-        },
-        "MAR": {
-          "signal_date": "2026-04-10",
-          "entry_price": 354.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 39
-        },
-        "CBX": {
-          "signal_date": "2026-04-10",
-          "entry_price": 42.2,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 39
-        },
-        "MNRL": {
-          "signal_date": "2026-04-10",
-          "entry_price": 128.5,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "LRCX": {
-          "signal_date": "2026-04-10",
-          "entry_price": 283.7,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "SITM": {
-          "signal_date": "2026-04-10",
-          "entry_price": 420.3,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "NYDA": {
-          "signal_date": "2026-04-10",
-          "entry_price": 188.6,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "AMP2": {
-          "signal_date": "2026-04-10",
-          "entry_price": 238.4,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 39
-        },
-        "VIK": {
-          "signal_date": "2026-04-13",
-          "entry_price": 77.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 36
-        },
-        "GOOGL": {
-          "signal_date": "2026-04-16",
-          "entry_price": 337.6,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 33
-        },
-        "AAPL": {
-          "signal_date": "2026-04-16",
-          "entry_price": 262.5,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 33
-        },
-        "ROOU": {
-          "signal_date": "2026-04-20",
-          "entry_price": 115.5,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 29
-        },
-        "HST": {
-          "signal_date": "2026-04-20",
-          "entry_price": 21.2,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 29
-        },
-        "GLABF": {
-          "signal_date": "2026-04-20",
-          "entry_price": 8.7,
-          "sector": "Cannabis",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 29
-        },
-        "CURLF": {
-          "signal_date": "2026-04-20",
-          "entry_price": 2.8,
-          "sector": "Cannabis",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 29
-        },
-        "SBUX": {
-          "signal_date": "2026-04-21",
-          "entry_price": 97.3,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 28
-        },
-        "ROK": {
-          "signal_date": "2026-04-21",
-          "entry_price": 413.8,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 28
-        },
-        "CP": {
-          "signal_date": "2026-04-21",
-          "entry_price": 82.4,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 28
-        },
-        "LAMR": {
-          "signal_date": "2026-04-21",
-          "entry_price": 134.2,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 28
-        },
-        "VMEO": {
-          "signal_date": "2026-04-22",
-          "entry_price": 150.4,
-          "sector": "Software",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 27
-        },
-        "LBST": {
-          "signal_date": "2026-04-22",
-          "entry_price": 6.8,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 27
-        },
-        "LFMD": {
-          "signal_date": "2026-04-23",
-          "entry_price": 4.4,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 26
-        },
-        "UNH": {
-          "signal_date": "2026-04-24",
-          "entry_price": 352.7,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 25
-        },
-        "SXT": {
-          "signal_date": "2026-04-27",
-          "entry_price": 122.4,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 22
-        },
-        "CAGC": {
-          "signal_date": "2026-04-28",
-          "entry_price": 510.1,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 21
-        },
-        "XYZ": {
-          "signal_date": "2026-04-28",
-          "entry_price": 70.0,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 21
-        },
-        "CARS": {
-          "signal_date": "2026-04-28",
-          "entry_price": 81.7,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 21
-        },
-        "APD": {
-          "signal_date": "2026-04-28",
-          "entry_price": 303.9,
-          "sector": "Materials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 21
-        },
-        "NARA": {
-          "signal_date": "2026-05-04",
-          "entry_price": 11.5,
-          "sector": "Digital Assets",
-          "analyst": "Josh Steiner",
-          "days_on_list": 15
-        },
-        "CRCL": {
-          "signal_date": "2026-05-04",
-          "entry_price": 115.4,
-          "sector": "Digital Assets",
-          "analyst": "Josh Steiner",
-          "days_on_list": 15
-        },
-        "AFRI": {
-          "signal_date": "2026-05-04",
-          "entry_price": 87.3,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 15
-        },
-        "URI": {
-          "signal_date": "2026-05-04",
-          "entry_price": 931.0,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "DOW": {
-          "signal_date": "2026-05-04",
-          "entry_price": 40.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "LYB": {
-          "signal_date": "2026-05-04",
-          "entry_price": 76.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "RIO": {
-          "signal_date": "2026-05-04",
-          "entry_price": 99.0,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "BHP": {
-          "signal_date": "2026-05-04",
-          "entry_price": 77.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "ASGM": {
-          "signal_date": "2026-05-05",
-          "entry_price": 115.5,
-          "sector": "Software",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 14
-        },
-        "TTWO": {
-          "signal_date": "2026-05-05",
-          "entry_price": 222.9,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 14
-        },
-        "APLE": {
-          "signal_date": "2026-05-05",
-          "entry_price": 13.5,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 14
-        },
-        "LOTHY": {
-          "signal_date": "2026-05-06",
-          "entry_price": 32.0,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 13
-        },
-        "CMI": {
-          "signal_date": "2026-05-08",
-          "entry_price": 709.5,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 13
-        },
-        "WRBY": {
-          "signal_date": "2026-05-07",
-          "entry_price": 26.3,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 12
-        },
-        "DOOO": {
-          "signal_date": "2026-05-11",
-          "entry_price": 200.2,
-          "sector": "Software",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 8
-        },
-        "INST": {
-          "signal_date": "2026-05-11",
-          "entry_price": 88.3,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 8
-        },
-        "PRMB": {
-          "signal_date": "2026-05-11",
-          "entry_price": 23.2,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 8
-        },
-        "PM": {
-          "signal_date": "2026-05-12",
-          "entry_price": 182.1,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 7
-        },
-        "AZTAF": {
-          "signal_date": "2026-05-12",
-          "entry_price": 106.5,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 7
-        },
-        "BLMNF": {
-          "signal_date": "2026-05-12",
-          "entry_price": 8.4,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 7
-        },
-        "V": {
-          "signal_date": "2026-05-12",
-          "entry_price": 325.6,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 7
-        },
-        "ATRD": {
-          "signal_date": "2026-05-12",
-          "entry_price": 73.8,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 7
-        },
-        "ILMN": {
-          "signal_date": "2026-05-12",
-          "entry_price": 144.9,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 7
-        },
-        "NVO": {
-          "signal_date": "2026-05-12",
-          "entry_price": 46.5,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 7
-        },
-        "RHP": {
-          "signal_date": "2026-05-13",
-          "entry_price": 107.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 6
-        },
-        "RTI": {
-          "signal_date": "2026-05-13",
-          "entry_price": 64.6,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 6
-        },
-        "BJRI": {
-          "signal_date": "2026-05-18",
-          "entry_price": 42.0,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 1
-        },
-        "CPAY": {
-          "signal_date": "2026-05-19",
-          "entry_price": 346.9,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 0
-        },
-        "HLT": {
-          "signal_date": "2026-05-19",
-          "entry_price": null,
-          "sector": null,
-          "analyst": null,
-          "days_on_list": 0
-        },
-        "TXG": {
-          "signal_date": "2026-05-19",
-          "entry_price": 21.7,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 0
-        },
-        "LYV": {
-          "signal_date": "2026-05-19",
-          "entry_price": 164.7,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 0
-        },
-        "FWONK": {
-          "signal_date": "2026-05-19",
-          "entry_price": 90.0,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 0
-        },
-        "LLY": {
-          "signal_date": "2026-05-19",
-          "entry_price": 1012.0,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 0
-        },
-        "CBRS": {
-          "signal_date": "2026-05-19",
-          "entry_price": 323.1,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 0
-        }
-      }
-    },
-    "momo": {
-      "MSFT": {
-        "lrr": 404,
-        "trr": 425,
-        "signal": "BULLISH",
-        "close": 421.92
-      },
-      "AAPL": {
-        "lrr": 291,
-        "trr": 305,
-        "signal": "BULLISH",
-        "close": 300.23
-      },
-      "AMZN": {
-        "lrr": 260,
-        "trr": 277,
-        "signal": "BULLISH",
-        "close": 264.14
-      },
-      "META": {
-        "lrr": 595,
-        "trr": 626,
-        "signal": "BEARISH",
-        "close": 614.23
-      },
-      "GOOGL": {
-        "lrr": 383,
-        "trr": 410,
-        "signal": "BULLISH",
-        "close": 396.78
-      },
-      "NFLX": {
-        "lrr": 84,
-        "trr": 90,
-        "signal": "BEARISH",
-        "close": 87.02
-      },
-      "TSLA": {
-        "lrr": 400,
-        "trr": 445,
-        "signal": "BEARISH",
-        "close": 422.24
-      },
-      "NVDA": {
-        "lrr": 215,
-        "trr": 240,
-        "signal": "BULLISH",
-        "close": 225.32
-      },
-      "ORCL": {
-        "lrr": 182,
-        "trr": 200,
-        "signal": "BULLISH",
-        "close": 192.95
-      }
+      "monthly_gamma": "LOW",
+      "spx_correction_since_friday": -1.4,
+      "nvda_weight_spx": 8.6,
+      "nvda_implied_move_thursday": 2.87,
+      "note": "NVDA earnings tonight \u2014 most important single-stock event given 8.6% SPX weight"
     },
     "early_look": {
-      "key_levels": {
-        "UST_10yr": {
-          "lrr": 4.45,
-          "trr": 4.64,
-          "signal": "BULLISH"
-        },
-        "HYG": {
-          "lrr": 79.4,
-          "trr": 80.16,
-          "signal": "BULLISH"
-        },
-        "LQD": {
-          "lrr": 107.3,
-          "trr": 108.6,
-          "signal": "BEARISH"
-        },
-        "SPX": {
-          "lrr": 7302,
-          "trr": 7505,
-          "signal": "BULLISH"
-        },
-        "NASDAQ": {
-          "lrr": 25666,
-          "trr": 26711,
-          "signal": "BULLISH"
-        },
-        "RUT": {
-          "lrr": 2747,
-          "trr": 2900,
-          "signal": "BULLISH"
-        },
-        "XLK": {
-          "lrr": 168,
-          "trr": 182,
-          "signal": "BULLISH"
-        },
-        "XOP": {
-          "lrr": 169,
-          "trr": 180,
-          "signal": "BULLISH"
-        },
-        "XTL": {
-          "lrr": 219,
-          "trr": 233,
-          "signal": "BULLISH"
-        },
-        "XLI": {
-          "lrr": 169,
-          "trr": 178,
-          "signal": "BULLISH"
-        },
-        "VIX": {
-          "lrr": 16.56,
-          "trr": 18.97,
-          "signal": "BEARISH"
-        },
-        "USD": {
-          "lrr": 98.47,
-          "trr": 99.71,
-          "signal": "BULLISH"
-        },
-        "WTI": {
-          "lrr": 99.01,
-          "trr": 108.15,
-          "signal": "BULLISH"
-        },
-        "Nat_Gas": {
-          "lrr": 2.84,
-          "trr": 3.14,
-          "signal": "BULLISH"
-        },
-        "Gold": {
-          "lrr": 4500,
-          "trr": 4680,
-          "signal": "NEUTRAL"
-        },
-        "Copper": {
-          "lrr": 6.1,
-          "trr": 6.65,
-          "signal": "BULLISH"
-        },
-        "SLV": {
-          "lrr": 71,
-          "trr": 80,
-          "signal": "BEARISH"
-        }
-      },
-      "signal_changes": [],
-      "vix_level": 16.56,
+      "title": "Buying Growth On Sale",
+      "vix_level": 17.82,
+      "keith_thesis": "Correction selective, not bearish. SPY -2% from ATH, NASDAQ -2.9%, High Beta down hard. Quad 2 intact.",
+      "contrarian_setup": "NASDAQ 3yr net short extreme + retail in SOXS = pain trade HIGHER for Growth/Semis/AI",
       "keith_notes": [
-        "Goldman's High Beta Momentum basket down -6.5% yesterday and -19.5% in 3 trading days despite +59.2% YTD performance",
-        "Diversification across asset classes, sector styles, and factor exposures is critical to surviving momentum reversals",
-        "Long/Short book made money despite equity momentum losses due to commodity strength (CRB at fresh cycle high of 405)",
-        "Fade momentum moves with patience using Risk Range signals rather than chasing crowded consensus trades",
-        "Portfolio without asymmetry most likely to experience major drawdown; factor leadership can flip violently in days"
+        "The correction is selective, not bearish \u2014 SPY barely off highs while High Beta down hard",
+        "NASDAQ positioning at 3-year net short extreme \u2014 pain trade remains higher for Growth/Semis/AI",
+        "Buying growth on sale inside a still-bullish Quad 2 setup"
       ]
-    },
-    "portfolio": {
-      "positions": [
-        {
-          "ticker": "FDRXX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "BUXX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CLOX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CLOZ",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "STIP",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IWM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XLI",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "VXF",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "QTUM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "HYG",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XTL",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "DRAM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CNXT",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "OAEM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "COM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "VYM",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "NORW",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "SLX",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "EQRR",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "AAAU",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "IBIT",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "SOYB",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "ROBO",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "EWW",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "CPER",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "XOP",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "DBB",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "OIH",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        },
-        {
-          "ticker": "BNO",
-          "weight": null,
-          "daily_move": null,
-          "signal": "BULLISH"
-        }
-      ],
-      "top_movers": [
-        {
-          "ticker": "CNXT",
-          "move": "+14"
-        },
-        {
-          "ticker": "XLI",
-          "move": "+9"
-        },
-        {
-          "ticker": "OAEM",
-          "move": "+8"
-        },
-        {
-          "ticker": "XTL",
-          "move": "+6"
-        },
-        {
-          "ticker": "SOYB",
-          "move": "+6"
-        }
-      ],
-      "rerank_date": "2026-05-19"
     },
     "btc": {
       "BTC": {
-        "lrr": 75.637,
-        "trr": 82.531,
-        "signal": "BULLISH"
+        "price": 77312,
+        "daily_pct": 0.5,
+        "trade_signal": "BROKEN",
+        "trend_signal": "BULLISH"
       },
-      "ETH": {
-        "lrr": 2.041,
-        "trr": 2.253,
-        "signal": "BEARISH"
+      "performance": {
+        "10D": -2.2,
+        "1M": 13.0,
+        "3M": 14.0,
+        "6M": -1.3,
+        "1Y": -27.7,
+        "QTD": 13.4,
+        "YTD": -11.8
       },
-      "SOL": {
-        "lrr": 80,
-        "trr": 89,
-        "signal": "BEARISH"
-      },
-      "AVAX": {
-        "lrr": 8.61,
-        "trr": 9.57,
-        "signal": "BEARISH"
-      },
-      "XRP": {
-        "lrr": 1.31,
-        "trr": 1.42,
-        "signal": "BEARISH"
-      }
-    },
-    "call_summary": {
-      "date": "2026-05-19",
-      "quad": 3,
-      "key_points": [
-        "Inflation nowcast for May increased to 4.26%; energy inputs percolating into broader categories with rising bond yields",
-        "Fed futures pricing ~30% probability of second rate hike by mid-2027, first time reflected in forward pricing",
-        "Goldman Sachs High Beta Momentum basket down 19.5% over 3 days, emphasizing importance of portfolio asymmetry",
-        "GLP-1 oral adoption accelerating with falling barriers (cost, access); Medicare bridge program at $50 copay launching mid-year",
-        "Potential Quad 3 transition risk developing into July/August with draw-down in U.S. oil inventories flagged as non-linear risk"
-      ],
-      "trades_mentioned": [
-        "RHP elevated to Active Best Idea Long on accelerating RevPAR",
-        "CMG flagged as Active Best Idea Short on CEO behavior and brand mix deterioration",
-        "MZTI flagged as Active Best Idea Short on commodity inflation headwinds",
-        "CARR added to Active Long positions as non-consensus HVAC play",
-        "AFRM near low end of risk range on decelerating volume - target entry setup"
-      ],
-      "keith_outlook": "Market facing converging inflationary pressures and rising yields with potential for second rate hike by mid-2027; emphasis on portfolio asymmetry and balanced exposure as consensus momentum baskets correct sharply while selective names with strong signals outperform.",
-      "ticker_mentions": {
-        "CMG": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": "CONTRACTING",
-          "key_thesis": "CEO behavior disconnected from labor conditions; new value menu signals downward brand mix shift to pressured consumer",
-          "catalysts": [
-            "CEO credibility concerns",
-            "Brand mix deterioration",
-            "Consumer cohort pressure"
-          ],
-          "signal": "BEARISH"
-        },
-        "MZTI": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": "CONTRACTING",
-          "key_thesis": "Staples commodities inflationary; soybeans key cost input for livestock protein and sauces; China purchasing $17B in agricultural products driving 25M metric tons incremental demand",
-          "catalogs": [
-            "Soybean price inflation",
-            "China agricultural purchases",
-            "Commodity input costs"
-          ],
-          "signal": "BEARISH"
-        },
-        "RHP": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": "BEAT",
-          "gross_margin": null,
-          "key_thesis": "Hotel RevPAR accelerating beyond expectations; cleaner H2 setup vs peers due to convention/group orientation; renovation headwinds turning to tailwinds",
-          "catalysts": [
-            "H2 2026 acceleration",
-            "2027 further acceleration",
-            "Renovation tailwinds",
-            "Q1 EBITDA beat"
-          ],
-          "signal": "BULLISH"
-        },
-        "LLY": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "GLP-1 oral adoption accelerating with falling cost/access barriers; Medicare bridge program at $50 copay expanding addressable population; higher quality compound vs NVO with broader pipeline",
-          "catalysts": [
-            "Medicare bridge program mid-year launch",
-            "Oral access expansion",
-            "Physician adoption"
-          ],
-          "signal": "BULLISH"
-        },
-        "NVO": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "GLP-1 adoption curve accelerating; oral options removing needle barrier; direct-access platforms proliferating; Medicare bridge program expanding addressable population",
-          "catalysts": [
-            "Medicare bridge program launch",
-            "Oral formulation adoption",
-            "Direct-access platforms"
-          ],
-          "signal": "BULLISH"
-        },
-        "CAVA": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Capturing cyclical health trend becoming structural; 43% of foot traffic from $100K+ median income households; pod-1 acceleration expected to continue Q2 with potential ~10% full-year comp",
-          "catalysts": [
-            "Q1 pod-1 acceleration continuing",
-            "Earnings tonight",
-            "Easing comps in Q2"
-          ],
-          "signal": "BULLISH"
-        },
-        "CARR": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "High-quality non-consensus HVAC play; favorable sector setup; example of portfolio asymmetry vs consensus momentum basket",
-          "catalysts": [
-            "HVAC sector favorability",
-            "Portfolio diversification"
-          ],
-          "signal": "BULLISH"
-        },
-        "GOOGL": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Two-day Google I/O event begins today with key product releases including Google Glasses (2026 launch) and 'Spark' AI agent response to OpenAI's OpenClaw",
-          "catalysts": [
-            "Google I/O event today",
-            "Google Glasses launch",
-            "AI agent 'Spark' details",
-            "Revenue trajectory clarity"
-          ],
-          "signal": "BULLISH"
-        },
-        "NOW": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Preferred enterprise application software name if forced to choose; broader software sector negatively positioned",
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "DDOG": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "One of top two software names; on Hedgeye's top 30 signal strength stocks list",
-          "catalysts": [
-            "Signal strength ranking"
-          ],
-          "signal": "BULLISH"
-        },
-        "TWLO": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Top software name; on Hedgeye's top 30 signal strength stocks list",
-          "catalysts": [
-            "Signal strength ranking"
-          ],
-          "signal": "BULLISH"
-        },
-        "HD": {
-          "pod1_revenue": null,
-          "eps_trend": "IN_LINE",
-          "gross_margin": null,
-          "key_thesis": "Revenue, profit, EPS, and cash flow all approximately flat; performance linked to lack of housing market improvement",
-          "catalysts": [
-            "Housing market conditions"
-          ],
-          "signal": "NEUTRAL"
-        },
-        "AS": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": "BEAT",
-          "gross_margin": "EXPANDING",
-          "key_thesis": "Arcteryx +33% revenue, Salomon +42%; top-line growth accelerated 500bps QoQ; EBIT growth +46% vs +18% prior quarter with significant flow-through acceleration",
-          "catalysts": [
-            "Q1 earnings beat",
-            "EBIT acceleration",
-            "Easy 2Q comps",
-            "Retail expansion to 400-500 stores per brand"
-          ],
-          "signal": "BULLISH"
-        },
-        "AFRM": {
-          "pod1_revenue": "DECELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Near low end of risk range on decelerating volume (target entry setup); positioned to benefit from K-shape consumer dynamics providing relief for stressed lower-income consumers dealing with inflation",
-          "catalysts": [
-            "Volume stabilization",
-            "K-shape consumer dynamics"
-          ],
-          "signal": "BULLISH"
-        },
-        "PEB": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Flagged as potential short as RevPAR cycle matures and H1 one-off tailwinds cycle; no active position yet",
-          "catalysts": [
-            "RevPAR cycle maturation",
-            "One-off tailwinds cycling"
-          ],
-          "signal": "BEARISH"
-        },
-        "XHR": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Flagged as potential short as RevPAR cycle matures and H1 one-off tailwinds cycle; no active position yet",
-          "catalysts": [
-            "RevPAR cycle maturation",
-            "One-off tailwinds cycling"
-          ],
-          "signal": "BEARISH"
-        },
-        "DRH": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Flagged as potential short as RevPAR cycle matures and H1 one-off tailwinds cycle; no active position yet",
-          "catalysts": [
-            "RevPAR cycle maturation",
-            "One-off tailwinds cycling"
-          ],
-          "signal": "BEARISH"
-        }
-      }
-    },
-    "macro_show_notes": {
-      "key_points": [
-        "Global diversification beat U.S.-only momentum; portfolios with global, commodity, and short-bond exposure outperformed while high-beta U.S. momentum investors got hit",
-        "Commodities are a core long position and Treasuries/Bonds are a core short position in the long-short book",
-        "Indonesia remains Hedgeye's first stock market crash call of 2026, down roughly 30% since January; China long (CNXT) continues to work",
-        "Buying semiconductors after drawdown with DRAM as key entry; Nvidia earnings identified as decisively bullish catalyst",
-        "Short bonds central to strategy; bond yields in higher-highs/higher-lows mode at 4.64% on 10-year"
-      ],
-      "positioning_changes": [
-        "Added DRAM position starting at 2%, targeting 4-6% depending on price",
-        "Already bought AMAT; planning to buy Lam Research and DRAM on weakness",
-        "Reduced gold below minimum position to 2% due to rising bond yields",
-        "Trimming Norway position after 4.7% gain to avoid being naked long Europe",
-        "Planning to short France if it trades green today"
-      ],
-      "keith_watching": [
-        "Nvidia earnings as decisively bullish catalyst; risk range 216-239 with trend bullish; if breaks 205 support would become sellers",
-        "VIX moving inside 18.97 puts market in investable bucket",
-        "MOVE Index needs to break 77 to break bond market trend",
-        "Bitcoin at 78,021 trade level; not buying dip as likely headed to low end of range",
-        "Copper as dip-buy opportunity; CRB Commodities at new inflation-cycle highs of 405"
-      ]
-    },
-    "investing_ideas": {
-      "longs": {
-        "DAR": {
-          "lrr": 60.05,
-          "trr": 65.0,
-          "thesis": "Rising diesel prices and widening crack spreads create favorable margins for renewable diesel producers with structural cost advantages from feedstock."
-        },
-        "SWBI": {
-          "lrr": 14.4,
-          "trr": 15.77,
-          "thesis": "Improving production and rising plant utilization drive margin expansion with market share gains amid competitor distraction."
-        },
-        "MUSA": {
-          "lrr": 545.0,
-          "trr": 605.0,
-          "thesis": "Levered to fuel price volatility and rate-of-change dynamics driving margin expansion and traffic through price-led model."
-        },
-        "ULS": {
-          "lrr": 92.79,
-          "trr": 105.95,
-          "thesis": "High-quality capital-light TIC franchise benefiting from for-profit transition with durable secular tailwinds across regulation and AI/data center buildout."
-        },
-        "CAVA": {
-          "lrr": 72.3,
-          "trr": 92.54,
-          "thesis": "Sustained traffic growth and best-in-class unit economics support path back to HSD/double-digit comps with Mediterranean differentiation."
-        },
-        "APD": {
-          "lrr": 290.0,
-          "trr": 307.0,
-          "thesis": "New leadership shifts away from uneconomic green capital and toward shareholder discipline in highest-quality industrial gas franchise."
-        },
-        "AMZN": {
-          "lrr": 259.0,
-          "trr": 279.0,
-          "thesis": "Accelerating AWS growth, expanding AI infrastructure, and improving retail operating leverage reinforce cloud and commerce ecosystem leadership."
-        },
-        "ROKU": {
-          "lrr": 120.0,
-          "trr": 132.0,
-          "thesis": "Accelerating platform monetization with high-margin advertising transforming business into scaled connected-TV software platform with operating leverage."
-        },
-        "CARR": {
-          "lrr": 62.15,
-          "trr": 68.85,
-          "thesis": "Accelerating demand for climate and energy-efficiency solutions with secular growth across HVAC and data center cooling."
-        },
-        "SXT": {
-          "lrr": 110.0,
-          "trr": 124.0,
-          "thesis": "Accelerating industry shift from synthetic to natural food colors creates transformational opportunity with Sensient uniquely positioned as category leader."
-        }
-      },
-      "shorts": {
-        "ROP": {
-          "lrr": 301.0,
-          "trr": 344.0,
-          "thesis": "Serial acquisition story dependent on perpetual capital allocation with eroding software moats and rising substitutability risk as assets shrink."
-        },
-        "RBLX": {
-          "lrr": 38.02,
-          "trr": 47.56,
-          "thesis": "Slowing user growth and reduced bookings guidance signal deceleration with high-probability downside window into Q3 trough setup."
-        },
-        "ONON": {
-          "lrr": 33.02,
-          "trr": 38.63,
-          "thesis": "CEO departure signals slower growth while unsustainably high margins face pressure from scale and Nike competitive intensity."
-        },
-        "OLLI": {
-          "lrr": 72.38,
-          "trr": 85.14,
-          "thesis": "Underperforming despite peak operating environment with deteriorating traffic and declining store productivity signaling structural weakness."
-        },
-        "HCA": {
-          "lrr": 415.0,
-          "trr": 435.0,
-          "thesis": "Weak MA rate relief fails to offset structural pressure on hospital reimbursements with deteriorating fundamental trends across admissions and volumes."
-        },
-        "WING": {
-          "lrr": 110.0,
-          "trr": 151.0,
-          "thesis": "Transaction data deteriorates sharply with core initiatives failing to drive traffic and structural pressures intensifying on unit economics."
-        },
-        "DGX": {
-          "lrr": 181.0,
-          "trr": 192.0,
-          "thesis": "Investors overestimate durability of GLP-1 testing tailwinds which may prove cyclical rather than incremental with broader utilization weakness."
-        }
-      }
-    },
-    "founders_choice": {
-      "global_technology": {
-        "longs": [
-          "MRVL",
-          "005930.KS",
-          "285A.T",
-          "NVDA",
-          "SFTM",
-          "RPI.I",
-          "AAPL",
-          "AMAT",
-          "TSSI"
-        ],
-        "shorts": [
-          "ANET",
-          "CAMT",
-          "MSFT"
-        ]
-      },
-      "ticker_mentions": {
-        "MRVL": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "005930.KS": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "285A.T": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "NVDA": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "SFTM": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "RPI.I": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "AAPL": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "AMAT": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "TSSI": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BULLISH"
-        },
-        "ANET": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BEARISH"
-        },
-        "CAMT": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BEARISH"
-        },
-        "MSFT": {
-          "pod1_revenue": null,
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": null,
-          "catalysts": [],
-          "signal": "BEARISH"
-        }
-      }
-    },
-    "from_desk": {
-      "macro_view": "The market is in a Quad 2 regime (Growth and Inflation Accelerating) with the US Dollar testing a new breakout, rates making cycle highs, and reflation broadening across commodities. Bond markets are finally 'seeing' accelerating inflation as the 10yr yield reaches levels not seen since 2007.",
-      "key_points": [
-        "USD Dollar Index reversed from bearish to bullish TRADE/TREND setup; 30-day inverse correlations show strong risk-on signals (SPX -0.71, Bitcoin -0.72)",
-        "UST 10yr yield at 4.37-4.59% Risk Range with higher-highs; April CPI accelerated +55bps to +3.81% YoY",
-        "Quad 2 reflation broadening: Brent up +8.6% WoW, Copper at all-time highs, Energy (XOP/OIH) gaining +5.5% and +4.7%",
-        "SPY printed 18th all-time closing high of 2026; High Beta Growth Momentum Basket ramping to new ATHs; Long Industrials (XLI) vs. Short Healthcare (XLV) driving alpha",
-        "$2.25 trillion OPEX reset on Friday; front-month gamma levels moving toward cyclical lows reducing short-term volatility suppression"
-      ],
-      "tickers_mentioned": [
-        "FXB",
-        "SPX",
-        "BNO",
-        "XOP",
-        "OIH",
-        "CPER",
-        "PALL",
-        "TLT",
-        "EQRR",
-        "CNXT",
-        "INDA",
-        "IDX",
-        "COLO",
-        "SPY",
-        "QTUM",
-        "XTL",
-        "XLI",
-        "XLV",
-        "ITB",
-        "UUP",
-        "HYG",
-        "CLOZ",
-        "STIP",
-        "SOYB",
-        "OAEM",
-        "TUR",
-        "QQQ",
-        "IWM",
-        "NVDA",
-        "XLK",
-        "KRE"
-      ],
-      "risk_tone": "RISK_ON"
+      "note": "Broken TRADE within Bullish TREND \u2014 do not exit on trade break alone"
     },
     "macro_research": {
       "cpi_nowcast": 4.26,
@@ -5096,11 +3628,6 @@
       "monthly_quad": 2,
       "quad_sequence": "2-2-2-3",
       "forward_quads": {
-        "1Q26": {
-          "quad": 1,
-          "gdp_qoq": 2.31,
-          "cpi_yoy": 3.88
-        },
         "2Q26E": {
           "quad": 3,
           "gdp_qoq": 3.27,
@@ -5112,103 +3639,119 @@
           "cpi_yoy": 4.05
         },
         "4Q26E": {
-          "quad": 2,
-          "gdp_qoq": 2.33,
-          "cpi_yoy": 4.4
-        },
-        "1Q27E": {
-          "quad": 4,
-          "gdp_qoq": 1.62,
-          "cpi_yoy": 4.16
-        },
-        "2Q26": {
-          "quad": 2,
-          "gdp_qoq": 2.66,
-          "cpi_yoy": 3.38
-        },
-        "3Q26": {
-          "quad": 2,
-          "gdp_qoq": null,
-          "cpi_yoy": null
-        },
-        "4Q26": {
-          "quad": 2,
-          "gdp_qoq": null,
-          "cpi_yoy": null
-        },
-        "1Q27": {
-          "quad": 3,
-          "gdp_qoq": null,
-          "cpi_yoy": null
-        }
-      },
-      "levels_reference": {
-        "SPX": {
-          "lrr": null,
-          "trr": null,
-          "signal": "NEUTRAL"
-        },
-        "UST_10Y": {
-          "lrr": null,
-          "trr": null,
-          "signal": "BEARISH"
-        },
-        "GOLD": {
-          "lrr": null,
-          "trr": null,
-          "signal": "BULLISH"
-        },
-        "CRUDE_OIL": {
-          "lrr": null,
-          "trr": null,
-          "signal": "BULLISH"
+          "quad": 2
         }
       },
       "key_themes": [
-        "USA: Quad Count 2-2-2-3 with Flation Now, Stag-On-A-Lag dynamic",
-        "Hormuz Supply Shock: 8-10M bbl/d gap, critical storage drawdown by late July",
-        "USA's Diverging Profit Cycles: Mag7 reacceleration vs S&P 493 headwinds",
-        "Energy Supply Shock Keeping Fed Sidelined in Pro-Growth Environment",
-        "Long Gold and Short Treasuries as long end sells into inflation vacuum"
+        "Hormuz Supply Shock: 8-10M bbl/d gap, storage drawdown critical by late July",
+        "Mag7 reaccelerating \u2014 earnings cycle diverging from broader market"
       ]
+    },
+    "macro_show": {},
+    "sss": {},
+    "portfolio": {},
+    "call_summary": {
+      "date": "2026-05-20",
+      "quad": 2,
+      "longs": [
+        "CAVA",
+        "SXT",
+        "TJX",
+        "AS",
+        "LLY",
+        "OPEN",
+        "AR",
+        "RRC",
+        "NVDA",
+        "SITM"
+      ],
+      "shorts": [
+        "KHC",
+        "VFC",
+        "HCA",
+        "RKT",
+        "ZG",
+        "RBLX"
+      ],
+      "neutral": [
+        "TGT",
+        "EQT",
+        "TCEHY"
+      ],
+      "key_points": [
+        "SPY -2.0% from ATH, NASDAQ -2.9%, High Beta basket -20.3% \u2014 correction is selective, Quad 2 intact",
+        "Keith bought DRAM, QTUM (Quantum), ROBO (Robotics) \u2014 prefers differentiated US growth, does NOT want MAG-7 exposure",
+        "NVDA: Long into earnings, range $210\u2013$240, break level $204\u2013$205; SOXS 500M+ shares traded (3x avg) creating noise but not changing thesis",
+        "Commodities long + bonds short remain core macro calls",
+        "CPI nowcasting above 4.25%, tracking toward 4.6% for May, potentially 4.7% Q4",
+        "RKT added as Best Idea Short \u2014 Quad 3 avg return -28%, higher mortgage rates, steepening base effects",
+        "Natural gas turning bullish \u2014 LNG exports + data center demand vs. limited storage; AR, RRC on long list",
+        "CAVA: 9.7% comp, 7pts transaction growth, Q2 run-rate at/above Q1 through mid-May \u2014 Best Idea Long",
+        "SITM: Down from ~$900 to <$700 \u2014 buying opportunity despite $1.2B convert headwind",
+        "XOP: Significant bullish trend; natural gas establishing new higher floor"
+      ],
+      "trades_mentioned": [
+        "CAVA \u2014 elevated to Best Idea Long on 9.7% comp + accelerating Q2 run-rate",
+        "RKT \u2014 added as Best Idea Short (Quad 3 avg -28%, mortgage rate headwinds)",
+        "SITM \u2014 pullback opportunity at range low despite convert-related headwind",
+        "DRAM, QTUM, ROBO \u2014 Keith bought on weakness (differentiated growth over SPY)",
+        "HCA \u2014 downgraded at JPMorgan; rising yields inverse correlation; still short"
+      ],
+      "keith_outlook": "Selective correction inside a Quad 2 bull market \u2014 SPY barely off highs, High Beta Momentum basket crashed -20.3%. Buying differentiated growth (DRAM, Quantum, Robotics) on sale. Does not want MAG-7 exposure. NVDA is the only exception into earnings tonight. Core positioning: commodities long, bonds short. CPI tracking toward 4.6% for May.",
+      "ticker_mentions": {
+        "NVDA": {
+          "signal": "BULLISH",
+          "lrr": 210,
+          "trr": 240,
+          "break_level": 204,
+          "key_thesis": "Long into earnings; model projects strong data center print; break 204-205 = sell"
+        },
+        "CAVA": {
+          "signal": "BULLISH",
+          "key_thesis": "9.7% comp, 7pts transaction growth, Q2 run-rate at/above Q1"
+        },
+        "RKT": {
+          "signal": "BEARISH",
+          "key_thesis": "Quad 3 avg -28%, higher mortgage rates, steepening base effects"
+        },
+        "SITM": {
+          "signal": "BULLISH",
+          "key_thesis": "Pullback from $900 to <$700; organic business strong; buying at range low"
+        },
+        "SXT": {
+          "signal": "BULLISH",
+          "key_thesis": "MAHA natural colors thesis; SXT $1B revenue opportunity replacing artificial food colors"
+        },
+        "VFC": {
+          "signal": "BEARISH",
+          "key_thesis": "Needs $1-2B equity offering; stock at high end of range; shortable"
+        },
+        "AR": {
+          "signal": "BULLISH",
+          "key_thesis": "Natural gas bull thesis; LNG + data center demand"
+        },
+        "RRC": {
+          "signal": "BULLISH",
+          "key_thesis": "Natural gas bull thesis; limited storage capacity"
+        },
+        "XOP": {
+          "signal": "BULLISH",
+          "key_thesis": "Significant bullish trend in energy"
+        },
+        "OPEN": {
+          "signal": "BEARISH",
+          "key_thesis": "Rate-sensitive housing short cluster; mortgage rates elevated"
+        },
+        "ZG": {
+          "signal": "BEARISH",
+          "key_thesis": "Rate-sensitive housing short cluster"
+        },
+        "TGT": {
+          "signal": "NEUTRAL",
+          "key_thesis": "Bearish-to-bullish reversal watch; new CEO; online sales up 9%"
+        }
+      }
     }
   },
-  "sss_history": [
-    {
-      "date": "2026-05-18",
-      "count": 71,
-      "added": 3,
-      "removed": 1
-    },
-    {
-      "date": "2026-05-18",
-      "count": 71,
-      "added": 3,
-      "removed": 1
-    },
-    {
-      "date": "2026-05-18",
-      "count": 71,
-      "added": 3,
-      "removed": 1
-    },
-    {
-      "date": "2026-05-19",
-      "count": 71,
-      "added": 3,
-      "removed": 1
-    },
-    {
-      "date": "2026-05-19",
-      "count": 71,
-      "added": 3,
-      "removed": 1
-    },
-    {
-      "date": "2026-05-19",
-      "count": 77,
-      "added": 7,
-      "removed": 2
-    }
-  ]
+  "sss_history": []
 }
