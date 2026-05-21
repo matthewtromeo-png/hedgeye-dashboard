@@ -1,289 +1,316 @@
 {
-  "generated_at": "2026-05-21T13:23:33.923769+00:00",
+  "generated_at": "2026-05-21T19:54:35.535204+00:00",
   "source_date": "2026-05-21",
   "sources_used": {
-    "etf_pro": "etf-pro-all-active-tickers-1779284895.xlsx",
+    "etf_pro": "etf-pro-all-active-tickers-1779384293.xlsx",
     "ham_holdings": "ETF_Holdings 5.21.2026.csv",
-    "rta": "real-time-alerts-history-2026-05-18.csv",
-    "early_look": "Hedgeye - Turn Off Your Mind.pdf",
-    "msr": "MSR_2.0.pdf + May 21st 2026 Exposure Remains Stretched.pdf",
-    "momo": "MOMO Tracker Mag7 (+1.34%) 5/21/26 \u2014 TSLA=BULLISH",
-    "btc": "CRYPTO QUANT BTC (-0.7%) Rallies & Resistance",
-    "macro_show": "HE_TMS_KM_EV_5.20.2026.pdf",
-    "macro_show_notes": "HE_TMS_KM_EV_5.20.2026.pdf (slides 4-6)"
+    "rta": "real-time-alerts-history-2026-05-21.csv",
+    "risk_range": "risk_range_tracker_excelworkbook.xlsx"
   },
   "etf_rerank": [
-    "FDRXX",
-    "BUXX",
-    "CLOX",
-    "CLOZ",
-    "STIP",
-    "HYG",
-    "COM",
-    "IWM",
-    "CNXT",
-    "DRAM",
-    "VXF",
-    "SLX",
-    "NORW",
-    "VYM",
-    "EQRR",
-    "QTUM",
-    "ROBO",
-    "OAEM",
-    "XTL",
-    "AAAU",
+    "EWZ",
+    "TILL",
+    "XRT",
     "TAN",
+    "JETS",
+    "EWUS",
+    "DBB",
+    "ROBO",
+    "IHI",
+    "BTAL",
+    "DRAM",
+    "EWQ",
+    "SLX",
+    "COLO",
+    "QTUM",
+    "VXF",
+    "VYM",
+    "XLU",
+    "IWM",
+    "IDX",
+    "ITB",
+    "EPHE",
+    "STIP",
+    "PALL",
+    "OAEM",
+    "CNXT",
+    "INDA",
+    "CPER",
+    "CLOZ",
+    "XLV",
+    "HYG",
+    "ZROZ",
     "SOYB",
     "EWW",
-    "XOP",
-    "DBB",
-    "CPER",
-    "TILL",
+    "TLT",
+    "EQRR",
+    "XTL",
+    "COM",
+    "NORW",
+    "BNO",
     "OIH",
-    "BNO"
+    "XOP",
+    "CLOX",
+    "AAAU",
+    "BUXX"
   ],
   "active_longs": [
     {
       "ticker": "TILL",
-      "etf": "DBIQ Diversified Agriculture Index",
+      "etf": "Agriculture Futures",
       "asset_class": "Commodities",
       "date_added": "2026-05-21",
-      "last_price": null,
-      "days_held": 0
+      "last_price": 18.59,
+      "days_held": 1
+    },
+    {
+      "ticker": "TAN",
+      "etf": "Solar Energy",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-20",
+      "last_price": 65.01,
+      "days_held": 2
     },
     {
       "ticker": "DBB",
       "etf": "Base Metals",
       "asset_class": "Commodities",
       "date_added": "2026-05-19",
-      "last_price": 25.59,
-      "days_held": 2
+      "last_price": 25.73,
+      "days_held": 3
     },
     {
       "ticker": "ROBO",
       "etf": "Robotics Automation",
       "asset_class": "Global Equities",
       "date_added": "2026-05-19",
-      "last_price": 82.58,
-      "days_held": 2
+      "last_price": 84.27,
+      "days_held": 3
     },
     {
       "ticker": "DRAM",
       "etf": "Computer Memory",
       "asset_class": "International Equities",
       "date_added": "2026-05-18",
-      "last_price": 50.86,
-      "days_held": 3
+      "last_price": 53.72,
+      "days_held": 4
     },
     {
       "ticker": "SLX",
       "etf": "Steel",
       "asset_class": "Commodities",
       "date_added": "2026-05-15",
-      "last_price": 103.84,
-      "days_held": 6
-    },
-    {
-      "ticker": "VXF",
-      "etf": "US Extended Market",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-13",
-      "last_price": 222.58,
-      "days_held": 8
+      "last_price": 105.44,
+      "days_held": 5
     },
     {
       "ticker": "QTUM",
       "etf": "Quantum Tech",
       "asset_class": "Global Equities",
       "date_added": "2026-05-13",
-      "last_price": 143.1,
-      "days_held": 8
+      "last_price": 148.78,
+      "days_held": 7
+    },
+    {
+      "ticker": "VXF",
+      "etf": "US Extended Market",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-13",
+      "last_price": 228.0,
+      "days_held": 7
     },
     {
       "ticker": "VYM",
       "etf": "Dividend Yield",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
-      "last_price": 156.2,
-      "days_held": 9
+      "last_price": 156.74,
+      "days_held": 8
     },
     {
       "ticker": "IWM",
       "etf": "US Small-Cap",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-07",
-      "last_price": 275.92,
-      "days_held": 14
+      "last_price": 281.85,
+      "days_held": 11
     },
     {
       "ticker": "STIP",
       "etf": "Short TIPS Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-05-01",
-      "last_price": 103.37,
-      "days_held": 20
+      "last_price": 103.36,
+      "days_held": 15
     },
     {
       "ticker": "OAEM",
       "etf": "Emerging Markets",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-30",
-      "last_price": 46.53,
-      "days_held": 21
+      "last_price": 47.5,
+      "days_held": 16
     },
     {
       "ticker": "CNXT",
       "etf": "VanEck ChiNext ETF",
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
-      "last_price": 55.5,
-      "days_held": 23
+      "last_price": 55.2,
+      "days_held": 18
     },
     {
       "ticker": "CPER",
       "etf": "Copper",
       "asset_class": "Commodities",
       "date_added": "2026-04-24",
-      "last_price": 38.16,
-      "days_held": 27
+      "last_price": 38.47,
+      "days_held": 20
     },
     {
       "ticker": "CLOZ",
       "etf": "CLOs",
       "asset_class": "Fixed Income",
       "date_added": "2026-04-22",
-      "last_price": 26.41,
-      "days_held": 29
+      "last_price": 26.46,
+      "days_held": 22
     },
     {
       "ticker": "HYG",
       "etf": "High Yield Bonds",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-21",
-      "last_price": 79.45,
-      "days_held": 30
+      "last_price": 79.81,
+      "days_held": 23
     },
     {
       "ticker": "SOYB",
       "etf": "Soybean",
       "asset_class": "Commodities",
       "date_added": "2026-04-17",
-      "last_price": 25.18,
-      "days_held": 34
+      "last_price": 25.0,
+      "days_held": 25
     },
     {
       "ticker": "EWW",
       "etf": "Mexico",
       "asset_class": "International Equities",
       "date_added": "2026-04-16",
-      "last_price": 77.74,
-      "days_held": 35
+      "last_price": 78.04,
+      "days_held": 26
     },
     {
       "ticker": "EQRR",
       "etf": "Rising Rates Equities",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-31",
-      "last_price": 77.56,
-      "days_held": 51
+      "last_price": 77.75,
+      "days_held": 37
     },
     {
       "ticker": "XTL",
       "etf": "Telecom",
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-27",
-      "last_price": 224.99,
-      "days_held": 55
+      "last_price": 227.24,
+      "days_held": 39
     },
     {
       "ticker": "COM",
       "etf": "Broad Commodity",
       "asset_class": "Commodities",
       "date_added": "2026-03-17",
-      "last_price": 34.87,
-      "days_held": 65
+      "last_price": 34.46,
+      "days_held": 47
     },
     {
       "ticker": "NORW",
       "etf": "Norway",
       "asset_class": "International Equities",
       "date_added": "2026-03-03",
-      "last_price": 39.14,
-      "days_held": 79
+      "last_price": 39.3,
+      "days_held": 57
     },
     {
       "ticker": "BNO",
       "etf": "Brent Oil",
       "asset_class": "Commodities",
       "date_added": "2026-02-13",
-      "last_price": 57.44,
-      "days_held": 97
+      "last_price": 55.68,
+      "days_held": 68
     },
     {
       "ticker": "OIH",
       "etf": "Oil Services",
       "asset_class": "Commodities",
       "date_added": "2026-02-05",
-      "last_price": 455.49,
-      "days_held": 105
+      "last_price": 444.31,
+      "days_held": 74
     },
     {
       "ticker": "XOP",
       "etf": "Oil & Gas Equity",
       "asset_class": "Commodities",
       "date_added": "2026-02-02",
-      "last_price": 178.65,
-      "days_held": 108
+      "last_price": 171.24,
+      "days_held": 77
     },
     {
       "ticker": "CLOX",
       "etf": "AAA CLO",
       "asset_class": "Fixed Income",
       "date_added": "2025-03-07",
-      "last_price": 25.53,
-      "days_held": 440
+      "last_price": 25.59,
+      "days_held": 304
     },
     {
       "ticker": "AAAU",
       "etf": "Physical Gold",
       "asset_class": "Foreign Currency",
       "date_added": "2025-02-28",
-      "last_price": 44.26,
-      "days_held": 447
+      "last_price": 44.71,
+      "days_held": 309
     },
     {
       "ticker": "BUXX",
       "etf": "Income Short Maturity",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2023-10-25",
-      "last_price": 20.23,
-      "days_held": 939
+      "last_price": 20.25,
+      "days_held": 646
     }
   ],
   "active_shorts": [
+    {
+      "ticker": "EWZ",
+      "etf": "Brazil",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-21",
+      "last_price": 37.14,
+      "days_held": 1
+    },
+    {
+      "ticker": "XRT",
+      "etf": "Retail",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-21",
+      "last_price": 81.26,
+      "days_held": 1
+    },
+    {
+      "ticker": "JETS",
+      "etf": "Global Airlines",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-20",
+      "last_price": 26.53,
+      "days_held": 2
+    },
     {
       "ticker": "EWUS",
       "etf": "UK Small-Cap",
       "asset_class": "International Equities",
       "date_added": "2026-05-19",
-      "last_price": 41.63,
-      "days_held": 2
-    },
-    {
-      "ticker": "EWQ",
-      "etf": "France",
-      "asset_class": "International Equities",
-      "date_added": "2026-05-18",
-      "last_price": 44.83,
-      "days_held": 3
-    },
-    {
-      "ticker": "BTAL",
-      "etf": "US Market Neutral",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-18",
-      "last_price": 12.49,
+      "last_price": 42.37,
       "days_held": 3
     },
     {
@@ -291,115 +318,107 @@
       "etf": "Medical Devices",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-18",
-      "last_price": 50.33,
-      "days_held": 3
+      "last_price": 50.38,
+      "days_held": 4
+    },
+    {
+      "ticker": "BTAL",
+      "etf": "US Market Neutral",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-18",
+      "last_price": 12.23,
+      "days_held": 4
+    },
+    {
+      "ticker": "EWQ",
+      "etf": "France",
+      "asset_class": "International Equities",
+      "date_added": "2026-05-18",
+      "last_price": 45.44,
+      "days_held": 4
     },
     {
       "ticker": "COLO",
       "etf": "Colombia",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-15",
-      "last_price": 36.75,
-      "days_held": 4
+      "last_price": 36.88,
+      "days_held": 5
     },
     {
       "ticker": "XLU",
       "etf": "Utilities Sector",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-11",
-      "last_price": 44.67,
-      "days_held": 8
+      "last_price": 44.88,
+      "days_held": 9
     },
     {
       "ticker": "IDX",
       "etf": "Indonesia",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-07",
-      "last_price": 11.34,
-      "days_held": 10
+      "last_price": 10.97,
+      "days_held": 11
     },
     {
       "ticker": "ITB",
       "etf": "Home Construction",
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-06",
-      "last_price": 86.72,
-      "days_held": 11
+      "last_price": 90.26,
+      "days_held": 12
     },
     {
       "ticker": "EPHE",
       "etf": "Philippines",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-05-04",
-      "last_price": 24.32,
-      "days_held": 13
+      "last_price": 24.59,
+      "days_held": 14
     },
     {
       "ticker": "PALL",
       "etf": "Palladium",
       "asset_class": "Commodities",
       "date_added": "2026-05-01",
-      "last_price": 24.57,
-      "days_held": 14
+      "last_price": 25.1,
+      "days_held": 15
     },
     {
       "ticker": "INDA",
       "etf": "India",
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-28",
-      "last_price": 47.53,
-      "days_held": 17
+      "last_price": 47.98,
+      "days_held": 18
     },
     {
       "ticker": "XLV",
       "etf": "Healthcare",
       "asset_class": "Domestic Equities",
       "date_added": "2026-04-22",
-      "last_price": 147.77,
-      "days_held": 21
+      "last_price": 147.8,
+      "days_held": 22
     },
     {
       "ticker": "ZROZ",
       "etf": "US Treasury Long",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-17",
-      "last_price": 59.61,
-      "days_held": 24
+      "last_price": 60.47,
+      "days_held": 25
     },
     {
       "ticker": "TLT",
       "etf": "Long Treasury Bond",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-02",
-      "last_price": 83.17,
-      "days_held": 34
+      "last_price": 83.92,
+      "days_held": 35
     }
   ],
   "ham_holdings": [
-    {
-      "ticker": "Cash&Other",
-      "name": "Cash & Other",
-      "total_weight": 0.4232,
-      "accounts": {
-        "HECA": 0.0257,
-        "HEFT": 0.2433,
-        "HELS": 0.1606,
-        "HGRO": -0.0064
-      },
-      "market_value": 37432403.85
-    },
-    {
-      "ticker": "FGXXX",
-      "name": "First American Government Obligations Fund 12/01/2031",
-      "total_weight": 0.2336,
-      "accounts": {
-        "HECA": 0.0538,
-        "HEFT": 0.1218,
-        "HELS": 0.0078,
-        "HGRO": 0.0502
-      },
-      "market_value": 37567674.9
-    },
     {
       "ticker": "CERY",
       "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
@@ -773,15 +792,6 @@
       "market_value": 3569759.2
     },
     {
-      "ticker": "023135106-TRS-06/15/27-L-HELS",
-      "name": "AMAZON.COM, INC.-SWAP-CLST-L",
-      "total_weight": 0.0299,
-      "accounts": {
-        "HELS": 0.0299
-      },
-      "market_value": 733547.68
-    },
-    {
       "ticker": "LIT",
       "name": "Global X Lithium & Battery Tech ETF",
       "total_weight": 0.0288,
@@ -905,15 +915,6 @@
       "market_value": 1588626.0
     },
     {
-      "ticker": "92826C839-TRS-06/22/27-L-HELS",
-      "name": "VISA INC.-SWAP-CLST-L",
-      "total_weight": 0.0247,
-      "accounts": {
-        "HELS": 0.0247
-      },
-      "market_value": 606595.5
-    },
-    {
       "ticker": "DBB",
       "name": "Invesco DB Base Metals Fund",
       "total_weight": 0.023,
@@ -961,15 +962,6 @@
       "market_value": 1229060.6
     },
     {
-      "ticker": "67066G104-TRS-06/08/27-L-HELS",
-      "name": "NVIDIA CORPORATION-SWAP-CLST-L",
-      "total_weight": 0.022,
-      "accounts": {
-        "HELS": 0.022
-      },
-      "market_value": 538339.23
-    },
-    {
       "ticker": "SXT",
       "name": "Sensient Technologies Corp",
       "total_weight": 0.022,
@@ -995,15 +987,6 @@
         "HGRO": 0.0214
       },
       "market_value": 2549421.0
-    },
-    {
-      "ticker": "512807306-TRS-06/22/27-L-HELS",
-      "name": "LAM RESEARCH CORPORATION-SWAP-CLST-L",
-      "total_weight": 0.0213,
-      "accounts": {
-        "HELS": 0.0213
-      },
-      "market_value": 521964.83
     },
     {
       "ticker": "JBHT",
@@ -1049,15 +1032,6 @@
         "HEFT": 0.0202
       },
       "market_value": 2099297.19
-    },
-    {
-      "ticker": "00971T101-TRS-06/08/27-L-HELS",
-      "name": "AKAMAI TECHNOLOGIES, INC.-SWAP-CLST-L",
-      "total_weight": 0.02,
-      "accounts": {
-        "HELS": 0.02
-      },
-      "market_value": 489361.95
     },
     {
       "ticker": "XYZ",
@@ -1112,15 +1086,6 @@
         "HEFT": 0.0192
       },
       "market_value": 1994486.0
-    },
-    {
-      "ticker": "14448C104-TRS-06/15/27-L-HELS",
-      "name": "CARRIER GLOBAL CORPORATION-SWAP-CLST-L",
-      "total_weight": 0.019,
-      "accounts": {
-        "HELS": 0.019
-      },
-      "market_value": 466369.06
     },
     {
       "ticker": "WDC",
@@ -1431,15 +1396,6 @@
       "market_value": 1625869.12
     },
     {
-      "ticker": "82982T106-TRS-06/15/27-L-HELS",
-      "name": "SITIME CORPORATION-SWAP-CLST-L",
-      "total_weight": 0.0136,
-      "accounts": {
-        "HELS": 0.0136
-      },
-      "market_value": 333863.0
-    },
-    {
       "ticker": "RIO",
       "name": "Rio Tinto PLC",
       "total_weight": 0.0124,
@@ -1575,15 +1531,6 @@
       "market_value": 1213729.12
     },
     {
-      "ticker": "19247G107-TRS-06/08/27-L-HELS",
-      "name": "COHERENT CORP.-SWAP-CLST-L",
-      "total_weight": 0.01,
-      "accounts": {
-        "HELS": 0.01
-      },
-      "market_value": 244855.5
-    },
-    {
       "ticker": "MEOH",
       "name": "Methanex Corp",
       "total_weight": 0.01,
@@ -1717,4478 +1664,1932 @@
         "HEFT": 0.0016
       },
       "market_value": 169884.0
-    },
-    {
-      "ticker": "EWQ",
-      "name": "ISHARES INC MSCI FRANCE",
-      "total_weight": -0.0051,
-      "accounts": {
-        "HEFT": -0.0051
-      },
-      "market_value": -529230.66
-    },
-    {
-      "ticker": "HCA",
-      "name": "HCA Healthcare Inc",
-      "total_weight": -0.0073,
-      "accounts": {
-        "HEFT": -0.0073
-      },
-      "market_value": -756846.36
-    },
-    {
-      "ticker": "LCID",
-      "name": "Lucid Group Inc",
-      "total_weight": -0.0089,
-      "accounts": {
-        "HELS": -0.0089
-      },
-      "market_value": -218555.04
-    },
-    {
-      "ticker": "CAG",
-      "name": "CONAGRA BRANDS INC",
-      "total_weight": -0.0092,
-      "accounts": {
-        "HELS": -0.0092
-      },
-      "market_value": -225430.08
-    },
-    {
-      "ticker": "FLUT",
-      "name": "Flutter Entertainment PLC",
-      "total_weight": -0.0093,
-      "accounts": {
-        "HELS": -0.0093
-      },
-      "market_value": -229200.75
-    },
-    {
-      "ticker": "PLAY",
-      "name": "Dave & Buster's Entertainment Inc",
-      "total_weight": -0.0093,
-      "accounts": {
-        "HELS": -0.0093
-      },
-      "market_value": -229199.4
-    },
-    {
-      "ticker": "UTWO",
-      "name": "F/m US Treasury 2 Year Note ETF",
-      "total_weight": -0.0094,
-      "accounts": {
-        "HEFT": -0.0094
-      },
-      "market_value": -981195.1
-    },
-    {
-      "ticker": "BALL",
-      "name": "Ball Corp",
-      "total_weight": -0.0095,
-      "accounts": {
-        "HELS": -0.0095
-      },
-      "market_value": -231727.99
-    },
-    {
-      "ticker": "DPZ",
-      "name": "Domino's Pizza Inc",
-      "total_weight": -0.0095,
-      "accounts": {
-        "HELS": -0.0095
-      },
-      "market_value": -233817.8
-    },
-    {
-      "ticker": "TAP",
-      "name": "Molson Coors Beverage Co",
-      "total_weight": -0.0095,
-      "accounts": {
-        "HELS": -0.0095
-      },
-      "market_value": -231973.0
-    },
-    {
-      "ticker": "SMPL",
-      "name": "Simply Good Foods Co/The",
-      "total_weight": -0.0097,
-      "accounts": {
-        "HELS": -0.0097
-      },
-      "market_value": -238614.74
-    },
-    {
-      "ticker": "IDX",
-      "name": "VanEck Indonesia Index ETF",
-      "total_weight": -0.0099,
-      "accounts": {
-        "HEFT": -0.0099
-      },
-      "market_value": -1031739.28
-    },
-    {
-      "ticker": "JETS",
-      "name": "US Global Jets ETF",
-      "total_weight": -0.0099,
-      "accounts": {
-        "HEFT": -0.0099
-      },
-      "market_value": -1033195.88
-    },
-    {
-      "ticker": "BKNG",
-      "name": "Booking Holdings Inc",
-      "total_weight": -0.0099,
-      "accounts": {
-        "HELS": -0.0099
-      },
-      "market_value": -242487.75
-    },
-    {
-      "ticker": "GIS",
-      "name": "General Mills Inc",
-      "total_weight": -0.0099,
-      "accounts": {
-        "HELS": -0.0099
-      },
-      "market_value": -242736.4
-    },
-    {
-      "ticker": "LUV",
-      "name": "Southwest Airlines Co",
-      "total_weight": -0.0099,
-      "accounts": {
-        "HELS": -0.0099
-      },
-      "market_value": -241773.0
-    },
-    {
-      "ticker": "NKE",
-      "name": "NIKE Inc",
-      "total_weight": -0.0099,
-      "accounts": {
-        "HELS": -0.0099
-      },
-      "market_value": -241940.25
-    },
-    {
-      "ticker": "EPHE",
-      "name": "iShares MSCI Philippines ETF",
-      "total_weight": -0.01,
-      "accounts": {
-        "HEFT": -0.01
-      },
-      "market_value": -1037079.34
-    },
-    {
-      "ticker": "EWG",
-      "name": "ISHARES INC MSCI GERMAN",
-      "total_weight": -0.01,
-      "accounts": {
-        "HEFT": -0.01
-      },
-      "market_value": -1038982.4
-    },
-    {
-      "ticker": "HYG",
-      "name": "iShares iBoxx USD High Yield Corporate Bond ETF",
-      "total_weight": -0.01,
-      "accounts": {
-        "HEFT": -0.01
-      },
-      "market_value": -1038898.74
-    },
-    {
-      "ticker": "JNK",
-      "name": "State Street SPDR Bloomberg High Yield Bond ETF",
-      "total_weight": -0.01,
-      "accounts": {
-        "HEFT": -0.01
-      },
-      "market_value": -1038576.6
-    },
-    {
-      "ticker": "CMG",
-      "name": "Chipotle Mexican Grill Inc",
-      "total_weight": -0.01,
-      "accounts": {
-        "HELS": -0.01
-      },
-      "market_value": -244662.08
-    },
-    {
-      "ticker": "FLO",
-      "name": "Flowers Foods Inc",
-      "total_weight": -0.01,
-      "accounts": {
-        "HELS": -0.01
-      },
-      "market_value": -244140.04
-    },
-    {
-      "ticker": "IDXX",
-      "name": "IDEXX Laboratories Inc",
-      "total_weight": -0.01,
-      "accounts": {
-        "HELS": -0.01
-      },
-      "market_value": -246343.1
-    },
-    {
-      "ticker": "ONON",
-      "name": "On Holding AG",
-      "total_weight": -0.0101,
-      "accounts": {
-        "HELS": -0.0101
-      },
-      "market_value": -246479.2
-    },
-    {
-      "ticker": "WING",
-      "name": "Wingstop Inc",
-      "total_weight": -0.0101,
-      "accounts": {
-        "HELS": -0.0101
-      },
-      "market_value": -248572.2
-    },
-    {
-      "ticker": "SNAP",
-      "name": "Snap Inc",
-      "total_weight": -0.0103,
-      "accounts": {
-        "HELS": -0.0103
-      },
-      "market_value": -252798.84
-    },
-    {
-      "ticker": "KSS",
-      "name": "Kohl's Corp",
-      "total_weight": -0.0105,
-      "accounts": {
-        "HELS": -0.0105
-      },
-      "market_value": -257789.73
-    },
-    {
-      "ticker": "IEF",
-      "name": "iShares 7-10 Year Treasury Bond ETF",
-      "total_weight": -0.0143,
-      "accounts": {
-        "HEFT": -0.0143
-      },
-      "market_value": -1491122.18
-    },
-    {
-      "ticker": "SYY",
-      "name": "Sysco Corp",
-      "total_weight": -0.0173,
-      "accounts": {
-        "HEFT": -0.0077,
-        "HELS": -0.0096
-      },
-      "market_value": -1037575.0
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms Inc",
-      "total_weight": -0.0174,
-      "accounts": {
-        "HEFT": -0.0076,
-        "HELS": -0.0098
-      },
-      "market_value": -1032837.42
-    },
-    {
-      "ticker": "DDS",
-      "name": "Dillard's Inc",
-      "total_weight": -0.0175,
-      "accounts": {
-        "HEFT": -0.0075,
-        "HELS": -0.01
-      },
-      "market_value": -1025551.48
-    },
-    {
-      "ticker": "CHTR",
-      "name": "Charter Communications Inc",
-      "total_weight": -0.0176,
-      "accounts": {
-        "HEFT": -0.0074,
-        "HELS": -0.0102
-      },
-      "market_value": -1022681.92
-    },
-    {
-      "ticker": "RBLX",
-      "name": "ROBLOX Corp",
-      "total_weight": -0.018,
-      "accounts": {
-        "HEFT": -0.0081,
-        "HELS": -0.0099
-      },
-      "market_value": -1086413.54
-    },
-    {
-      "ticker": "USPH",
-      "name": "US Physical Therapy Inc",
-      "total_weight": -0.018,
-      "accounts": {
-        "HEFT": -0.0077,
-        "HELS": -0.0103
-      },
-      "market_value": -1053038.56
-    },
-    {
-      "ticker": "BRBR",
-      "name": "BellRing Brands Inc",
-      "total_weight": -0.0181,
-      "accounts": {
-        "HEFT": -0.0084,
-        "HELS": -0.0097
-      },
-      "market_value": -1105947.18
-    },
-    {
-      "ticker": "INDA",
-      "name": "iShares MSCI India ETF",
-      "total_weight": -0.02,
-      "accounts": {
-        "HEFT": -0.02
-      },
-      "market_value": -2082195.22
-    },
-    {
-      "ticker": "ITB",
-      "name": "ISHARES TRUST DJ HOME CONSTN",
-      "total_weight": -0.0206,
-      "accounts": {
-        "HEFT": -0.0206
-      },
-      "market_value": -2136858.84
-    },
-    {
-      "ticker": "ZROZ",
-      "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
-      "total_weight": -0.0235,
-      "accounts": {
-        "HEFT": -0.0235
-      },
-      "market_value": -2446605.0
-    },
-    {
-      "ticker": "TLT",
-      "name": "iShares 20+ Year Treasury Bond ETF",
-      "total_weight": -0.0239,
-      "accounts": {
-        "HEFT": -0.0239
-      },
-      "market_value": -2488015.41
-    },
-    {
-      "ticker": "XTEN",
-      "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
-      "total_weight": -0.0241,
-      "accounts": {
-        "HEFT": -0.0241
-      },
-      "market_value": -2505964.75
     }
   ],
   "rta": {
     "recent_trades": [
       {
-        "date": "2026-05-15",
-        "ticker": "AMZN",
+        "symbol": "SITM",
         "position": "long",
+        "open_date": "2026-05-19",
+        "open_price": 690.125,
+        "close_date": "2026-05-21",
+        "close_price": 704.17,
+        "realized_return": 0.020351400000000002,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IWM",
+        "position": "long",
+        "open_date": "2026-05-15",
+        "open_price": 279.005,
+        "close_date": "2026-05-21",
+        "close_price": 280.67,
+        "realized_return": 0.005967630000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "IHI",
+        "position": "short",
+        "open_date": "2026-05-19",
+        "open_price": 50.375,
+        "close_date": "2026-05-21",
+        "close_price": 50.23,
+        "realized_return": 0.00287841,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CAT",
+        "position": "long",
+        "open_date": "2026-05-15",
+        "open_price": 883.465,
+        "close_date": "2026-05-20",
+        "close_price": 870.48,
+        "realized_return": -0.00168015,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "ROKU",
+        "position": "long",
+        "open_date": "2026-05-19",
+        "open_price": 120.24,
+        "close_date": "2026-05-20",
+        "close_price": 122.65,
+        "realized_return": 0.0200432,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "AMAT",
+        "position": "long",
+        "open_date": "2026-05-18",
+        "open_price": 412.46,
+        "close_date": "2026-05-20",
+        "close_price": 423.366,
+        "realized_return": 0.0264426,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "UTZ",
+        "position": "short",
+        "open_date": "2026-05-19",
+        "open_price": 7.565,
+        "close_date": "2026-05-20",
+        "close_price": 7.26,
+        "realized_return": 0.0403172,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "CMG",
+        "position": "short",
+        "open_date": "2026-05-18",
+        "open_price": 33.575,
+        "close_date": "2026-05-19",
+        "close_price": 33.545,
+        "realized_return": 0.0008935220000000001,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "RBLX",
+        "position": "short",
+        "open_date": "2026-05-18",
+        "open_price": 46.74,
+        "close_date": "2026-05-19",
+        "close_price": 45.75,
+        "realized_return": 0.021181000000000002,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "AMZN",
+        "position": "long",
+        "open_date": "2026-05-15",
         "open_price": 262.12,
         "close_date": "2026-05-18",
         "close_price": 267.47,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.020410499999999998
+        "realized_return": 0.020410499999999998,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-11",
-        "ticker": "RSI",
+        "symbol": "RSI",
         "position": "long",
+        "open_date": "2026-05-11",
         "open_price": 27.805,
         "close_date": "2026-05-18",
         "close_price": 27.66,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.00521489
+        "realized_return": -0.00521489,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-15",
-        "ticker": "CASY",
+        "symbol": "CASY",
         "position": "long",
+        "open_date": "2026-05-15",
         "open_price": 845.07,
         "close_date": "2026-05-18",
         "close_price": 854.59,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0112653
+        "realized_return": 0.0112653,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-12",
-        "ticker": "FXB",
+        "symbol": "FXB",
         "position": "long",
+        "open_date": "2026-05-12",
         "open_price": 130.03,
         "close_date": "2026-05-15",
         "close_price": 128.13,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.014612
+        "realized_return": -0.014612,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-13",
-        "ticker": "THC",
+        "symbol": "THC",
         "position": "short",
+        "open_date": "2026-05-13",
         "open_price": 198.12,
         "close_date": "2026-05-15",
         "close_price": 197.9,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00111044
+        "realized_return": 0.00111044,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-14",
-        "ticker": "ACI",
+        "symbol": "ACI",
         "position": "short",
+        "open_date": "2026-05-14",
         "open_price": 16.7111,
         "close_date": "2026-05-15",
         "close_price": 16.56,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00904189
+        "realized_return": 0.00904189,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-12",
-        "ticker": "CZR",
+        "symbol": "CZR",
         "position": "long",
+        "open_date": "2026-05-12",
         "open_price": 26.74,
         "close_date": "2026-05-14",
         "close_price": 26.55,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.00710546
+        "realized_return": -0.00710546,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-13",
-        "ticker": "EWC",
+        "symbol": "EWC",
         "position": "long",
+        "open_date": "2026-05-13",
         "open_price": 57.71,
         "close_date": "2026-05-14",
         "close_price": 58.16,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.007797610000000001
+        "realized_return": 0.007797610000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-07",
-        "ticker": "GLASF",
+        "symbol": "GLASF",
         "position": "long",
+        "open_date": "2026-05-07",
         "open_price": 9.25,
         "close_date": "2026-05-13",
         "close_price": 9.37,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.012972999999999998
+        "realized_return": 0.012972999999999998,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-12",
-        "ticker": "AMZN",
+        "symbol": "AMZN",
         "position": "long",
+        "open_date": "2026-05-12",
         "open_price": 264.16,
         "close_date": "2026-05-13",
         "close_price": 269.94,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0218803
+        "realized_return": 0.0218803,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-07",
-        "ticker": "ROST",
+        "symbol": "ROST",
         "position": "long",
+        "open_date": "2026-05-07",
         "open_price": 224.32,
         "close_date": "2026-05-13",
         "close_price": 213.805,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.021733699999999998
+        "realized_return": -0.021733699999999998,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-12",
-        "ticker": "DGX",
+        "symbol": "DGX",
         "position": "short",
+        "open_date": "2026-05-12",
         "open_price": 191.785,
         "close_date": "2026-05-13",
         "close_price": 188.25,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0184321
+        "realized_return": 0.0184321,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-07",
-        "ticker": "KMX",
+        "symbol": "KMX",
         "position": "short",
+        "open_date": "2026-05-07",
         "open_price": 39.6,
         "close_date": "2026-05-11",
         "close_price": 39.555,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00113636
+        "realized_return": 0.00113636,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-07",
-        "ticker": "EPHE",
+        "symbol": "EPHE",
         "position": "short",
+        "open_date": "2026-05-07",
         "open_price": 25.32,
         "close_date": "2026-05-08",
         "close_price": 25.19,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00513428
+        "realized_return": 0.00513428,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-05",
-        "ticker": "THC",
+        "symbol": "THC",
         "position": "short",
+        "open_date": "2026-05-05",
         "open_price": 187.51,
         "close_date": "2026-05-08",
         "close_price": 190.97,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0184523
+        "realized_return": -0.0184523,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-07",
-        "ticker": "OIH",
+        "symbol": "OIH",
         "position": "long",
+        "open_date": "2026-05-07",
         "open_price": 418.52,
         "close_date": "2026-05-08",
         "close_price": 424.6,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0145264
+        "realized_return": 0.0145264,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-07",
-        "ticker": "CPB",
+        "symbol": "CPB",
         "position": "short",
+        "open_date": "2026-05-07",
         "open_price": 21.27,
         "close_date": "2026-05-08",
         "close_price": 21.015,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.011988700000000001
+        "realized_return": 0.011988700000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-05",
-        "ticker": "APD",
+        "symbol": "APD",
         "position": "long",
+        "open_date": "2026-05-05",
         "open_price": 297.51,
         "close_date": "2026-05-08",
         "close_price": 298.87,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0045712700000000005
+        "realized_return": 0.0045712700000000005,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-05",
-        "ticker": "PVH",
+        "symbol": "PVH",
         "position": "long",
+        "open_date": "2026-05-05",
         "open_price": 88.465,
         "close_date": "2026-05-06",
         "close_price": 91.9,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0388289
+        "realized_return": 0.0388289,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-01",
-        "ticker": "MGM",
+        "symbol": "MGM",
         "position": "long",
+        "open_date": "2026-05-01",
         "open_price": 38.43,
         "close_date": "2026-05-06",
         "close_price": 38.52,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0023419200000000004
+        "realized_return": 0.0023419200000000004,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-04",
-        "ticker": "JPM",
+        "symbol": "JPM",
         "position": "long",
+        "open_date": "2026-05-04",
         "open_price": 307.755,
         "close_date": "2026-05-05",
         "close_price": 309.81,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00667739
+        "realized_return": 0.00667739,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-04",
-        "ticker": "KRE",
+        "symbol": "KRE",
         "position": "long",
+        "open_date": "2026-05-04",
         "open_price": 68.925,
         "close_date": "2026-05-05",
         "close_price": 69.63,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0102285
+        "realized_return": 0.0102285,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-28",
-        "ticker": "CPER",
+        "symbol": "CPER",
         "position": "long",
+        "open_date": "2026-04-28",
         "open_price": 36.265,
         "close_date": "2026-05-05",
         "close_price": 36.49,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00620433
+        "realized_return": 0.00620433,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-05-01",
-        "ticker": "MNDY",
+        "symbol": "MNDY",
         "position": "short",
+        "open_date": "2026-05-01",
         "open_price": 72.56,
         "close_date": "2026-05-05",
         "close_price": 74.92,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0059046
+        "realized_return": 0.0059046,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-29",
-        "ticker": "HYG",
+        "symbol": "HYG",
         "position": "long",
+        "open_date": "2026-04-29",
         "open_price": 80.0701,
         "close_date": "2026-05-01",
         "close_price": 80.07,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -1.2489099999999999e-06
+        "realized_return": -1.2489099999999999e-06,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-28",
-        "ticker": "CAVA",
+        "symbol": "CAVA",
         "position": "long",
+        "open_date": "2026-04-28",
         "open_price": 91.1025,
         "close_date": "2026-04-30",
         "close_price": 93.49,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0262067
+        "realized_return": 0.0262067,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-24",
-        "ticker": "ULS",
+        "symbol": "ULS",
         "position": "long",
+        "open_date": "2026-04-24",
         "open_price": 88.83,
         "close_date": "2026-04-30",
         "close_price": 90.62,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.020150800000000003
+        "realized_return": 0.020150800000000003,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-27",
-        "ticker": "UFO",
+        "symbol": "UFO",
         "position": "long",
+        "open_date": "2026-04-27",
         "open_price": 50.509,
         "close_date": "2026-04-30",
         "close_price": 51.603,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0216595
+        "realized_return": 0.0216595,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-28",
-        "ticker": "XTL",
+        "symbol": "XTL",
         "position": "long",
+        "open_date": "2026-04-28",
         "open_price": 210.52,
         "close_date": "2026-04-29",
         "close_price": 214.06,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0168155
+        "realized_return": 0.0168155,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-29",
-        "ticker": "ACHC",
+        "symbol": "ACHC",
         "position": "long",
+        "open_date": "2026-04-29",
         "open_price": 27.37,
         "close_date": "2026-04-29",
         "close_price": 28.14,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.028133
+        "realized_return": 0.028133,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-28",
-        "ticker": "FLO",
+        "symbol": "FLO",
         "position": "short",
+        "open_date": "2026-04-28",
         "open_price": 9.01,
         "close_date": "2026-04-29",
         "close_price": 8.815,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0216426
+        "realized_return": 0.0216426,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-08",
-        "ticker": "WING",
+        "symbol": "WING",
         "position": "short",
+        "open_date": "2026-04-08",
         "open_price": 170.725,
         "close_date": "2026-04-28",
         "close_price": 174.975,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0248938
+        "realized_return": -0.0248938,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-24",
-        "ticker": "CFG",
+        "symbol": "CFG",
         "position": "long",
+        "open_date": "2026-04-24",
         "open_price": 63.825,
         "close_date": "2026-04-27",
         "close_price": 64.45,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0097924
+        "realized_return": 0.0097924,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-24",
-        "ticker": "ACHC",
+        "symbol": "ACHC",
         "position": "long",
+        "open_date": "2026-04-24",
         "open_price": 26.45,
         "close_date": "2026-04-27",
         "close_price": 27.53,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.040831799999999994
+        "realized_return": 0.040831799999999994,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-23",
-        "ticker": "ARGT",
+        "symbol": "ARGT",
         "position": "long",
+        "open_date": "2026-04-23",
         "open_price": 92.93,
         "close_date": "2026-04-27",
         "close_price": 92.75,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.00193694
+        "realized_return": -0.00193694,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-22",
-        "ticker": "SPHR",
+        "symbol": "SPHR",
         "position": "long",
+        "open_date": "2026-04-22",
         "open_price": 128.128,
         "close_date": "2026-04-24",
         "close_price": 132.025,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0304149
+        "realized_return": 0.0304149,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-21",
-        "ticker": "LOTMY",
+        "symbol": "LOTMY",
         "position": "long",
+        "open_date": "2026-04-21",
         "open_price": 29.91,
         "close_date": "2026-04-23",
         "close_price": 30.45,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0180542
+        "realized_return": 0.0180542,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-14",
-        "ticker": "GII",
+        "symbol": "GII",
         "position": "long",
+        "open_date": "2026-04-14",
         "open_price": 77.009,
         "close_date": "2026-04-23",
         "close_price": 76.47,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.006999180000000001
+        "realized_return": -0.006999180000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-21",
-        "ticker": "EWW",
+        "symbol": "EWW",
         "position": "long",
+        "open_date": "2026-04-21",
         "open_price": 78.4799,
         "close_date": "2026-04-23",
         "close_price": 78.72,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00305938
+        "realized_return": 0.00305938,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-20",
-        "ticker": "ARGT",
+        "symbol": "ARGT",
         "position": "long",
+        "open_date": "2026-04-20",
         "open_price": 93.94,
         "close_date": "2026-04-21",
         "close_price": 95.025,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0115499
+        "realized_return": 0.0115499,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-16",
-        "ticker": "PVH",
+        "symbol": "PVH",
         "position": "long",
+        "open_date": "2026-04-16",
         "open_price": 88.11,
         "close_date": "2026-04-20",
         "close_price": 95.745,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0866531
+        "realized_return": 0.0866531,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-17",
-        "ticker": "CPB",
+        "symbol": "CPB",
         "position": "short",
+        "open_date": "2026-04-17",
         "open_price": 21.395,
         "close_date": "2026-04-17",
         "close_price": 20.955,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.020565600000000003
+        "realized_return": 0.020565600000000003,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-15",
-        "ticker": "TSN",
+        "symbol": "TSN",
         "position": "long",
+        "open_date": "2026-04-15",
         "open_price": 63.81,
         "close_date": "2026-04-17",
         "close_price": 64.37,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00877605
+        "realized_return": 0.00877605,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-14",
-        "ticker": "TJX",
+        "symbol": "TJX",
         "position": "long",
+        "open_date": "2026-04-14",
         "open_price": 159.25,
         "close_date": "2026-04-16",
         "close_price": 158.54,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0044584
+        "realized_return": -0.0044584,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-14",
-        "ticker": "CZR",
+        "symbol": "CZR",
         "position": "long",
+        "open_date": "2026-04-14",
         "open_price": 26.75,
         "close_date": "2026-04-15",
         "close_price": 27.23,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0179439
+        "realized_return": 0.0179439,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-13",
-        "ticker": "CASY",
+        "symbol": "CASY",
         "position": "long",
+        "open_date": "2026-04-13",
         "open_price": 730.465,
         "close_date": "2026-04-14",
         "close_price": 737.185,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00919962
+        "realized_return": 0.00919962,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-13",
-        "ticker": "SWBI",
+        "symbol": "SWBI",
         "position": "long",
+        "open_date": "2026-04-13",
         "open_price": 14.27,
         "close_date": "2026-04-14",
         "close_price": 14.741,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0330063
+        "realized_return": 0.0330063,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-08",
-        "ticker": "UUP",
+        "symbol": "UUP",
         "position": "long",
+        "open_date": "2026-04-08",
         "open_price": 27.56,
         "close_date": "2026-04-14",
         "close_price": 27.295,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.00961538
+        "realized_return": -0.00961538,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-10",
-        "ticker": "ELF",
+        "symbol": "ELF",
         "position": "short",
+        "open_date": "2026-04-10",
         "open_price": 65.375,
         "close_date": "2026-04-13",
         "close_price": 65.765,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.005965580000000001
+        "realized_return": -0.005965580000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-10",
-        "ticker": "CZR",
+        "symbol": "CZR",
         "position": "long",
+        "open_date": "2026-04-10",
         "open_price": 26.32,
         "close_date": "2026-04-13",
         "close_price": 26.72,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0151976
+        "realized_return": 0.0151976,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-09",
-        "ticker": "SWBI",
+        "symbol": "SWBI",
         "position": "long",
+        "open_date": "2026-04-09",
         "open_price": 14.03,
         "close_date": "2026-04-10",
         "close_price": 14.49,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0327869
+        "realized_return": 0.0327869,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-31",
-        "ticker": "PSCH",
+        "symbol": "PSCH",
         "position": "short",
+        "open_date": "2026-03-31",
         "open_price": 41.0201,
         "close_date": "2026-04-10",
         "close_price": 41.89,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.021206700000000002
+        "realized_return": -0.021206700000000002,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-07",
-        "ticker": "HCA",
+        "symbol": "HCA",
         "position": "short",
+        "open_date": "2026-04-07",
         "open_price": 491.56,
         "close_date": "2026-04-10",
         "close_price": 499.675,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0165087
+        "realized_return": -0.0165087,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-09",
-        "ticker": "USPH",
+        "symbol": "USPH",
         "position": "short",
+        "open_date": "2026-04-09",
         "open_price": 78.065,
         "close_date": "2026-04-10",
         "close_price": 76.58,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0190226
+        "realized_return": 0.0190226,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-06",
-        "ticker": "IHF",
+        "symbol": "IHF",
         "position": "short",
+        "open_date": "2026-04-06",
         "open_price": 42.95,
         "close_date": "2026-04-10",
         "close_price": 44.555,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0110052
+        "realized_return": -0.0110052,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-30",
-        "ticker": "CORN",
+        "symbol": "CORN",
         "position": "long",
+        "open_date": "2026-03-30",
         "open_price": 18.426,
         "close_date": "2026-04-10",
         "close_price": 17.705,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0391295
+        "realized_return": -0.0391295,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-02",
-        "ticker": "FICO",
+        "symbol": "FICO",
         "position": "short",
+        "open_date": "2026-04-02",
         "open_price": 1089.11,
         "close_date": "2026-04-09",
         "close_price": 1048.51,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0372781
+        "realized_return": 0.0372781,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-08",
-        "ticker": "MTDR",
+        "symbol": "MTDR",
         "position": "long",
+        "open_date": "2026-04-08",
         "open_price": 59.56,
         "close_date": "2026-04-09",
         "close_price": 61.8401,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0382824
+        "realized_return": 0.0382824,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-08",
-        "ticker": "SGRY",
+        "symbol": "SGRY",
         "position": "short",
+        "open_date": "2026-04-08",
         "open_price": 12.91,
         "close_date": "2026-04-09",
         "close_price": 12.655,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.019752099999999998
+        "realized_return": 0.019752099999999998,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-01",
-        "ticker": "CANE",
+        "symbol": "CANE",
         "position": "long",
+        "open_date": "2026-04-01",
         "open_price": 10.225,
         "close_date": "2026-04-09",
         "close_price": 9.5175,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0691932
+        "realized_return": -0.0691932,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-06",
-        "ticker": "OLLI",
+        "symbol": "OLLI",
         "position": "short",
+        "open_date": "2026-04-06",
         "open_price": 97.92,
         "close_date": "2026-04-08",
         "close_price": 97.215,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00719975
+        "realized_return": 0.00719975,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-02",
-        "ticker": "MCO",
+        "symbol": "MCO",
         "position": "short",
+        "open_date": "2026-04-02",
         "open_price": 440.435,
         "close_date": "2026-04-07",
         "close_price": 437.47,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.006731979999999999
+        "realized_return": 0.006731979999999999,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-06",
-        "ticker": "DK",
+        "symbol": "DK",
         "position": "long",
+        "open_date": "2026-04-06",
         "open_price": 44.25,
         "close_date": "2026-04-07",
         "close_price": 45.09,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0189831
+        "realized_return": 0.0189831,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-06",
-        "ticker": "MARA",
+        "symbol": "MARA",
         "position": "short",
+        "open_date": "2026-04-06",
         "open_price": 8.955,
         "close_date": "2026-04-07",
         "close_price": 8.555,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0446678
+        "realized_return": 0.0446678,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-31",
-        "ticker": "EWP",
+        "symbol": "EWP",
         "position": "short",
+        "open_date": "2026-03-31",
         "open_price": 53.43,
         "close_date": "2026-04-06",
         "close_price": 55.04,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0301329
+        "realized_return": -0.0301329,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-02",
-        "ticker": "RBLX",
+        "symbol": "RBLX",
         "position": "short",
+        "open_date": "2026-04-02",
         "open_price": 59.38,
         "close_date": "2026-04-06",
         "close_price": 57.045,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.039323000000000004
+        "realized_return": 0.039323000000000004,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-02",
-        "ticker": "T",
+        "symbol": "T",
         "position": "long",
+        "open_date": "2026-04-02",
         "open_price": 28.17,
         "close_date": "2026-04-06",
         "close_price": 28.47,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.010649599999999999
+        "realized_return": 0.010649599999999999,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-31",
-        "ticker": "TPYP",
+        "symbol": "TPYP",
         "position": "long",
+        "open_date": "2026-03-31",
         "open_price": 42.1799,
         "close_date": "2026-04-06",
         "close_price": 42.229,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00116406
+        "realized_return": 0.00116406,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-01",
-        "ticker": "HELE",
+        "symbol": "HELE",
         "position": "short",
+        "open_date": "2026-04-01",
         "open_price": 15.26,
         "close_date": "2026-04-02",
         "close_price": 14.43,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0543906
+        "realized_return": 0.0543906,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-01",
-        "ticker": "SGRY",
+        "symbol": "SGRY",
         "position": "short",
+        "open_date": "2026-04-01",
         "open_price": 12.25,
         "close_date": "2026-04-02",
         "close_price": 11.995,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.020816300000000003
+        "realized_return": 0.020816300000000003,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-01",
-        "ticker": "MPLX",
+        "symbol": "MPLX",
         "position": "long",
+        "open_date": "2026-04-01",
         "open_price": 55.99,
         "close_date": "2026-04-02",
         "close_price": 55.555,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.007769239999999999
+        "realized_return": -0.007769239999999999,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-01",
-        "ticker": "UTZ",
+        "symbol": "UTZ",
         "position": "short",
+        "open_date": "2026-04-01",
         "open_price": 7.925,
         "close_date": "2026-04-02",
         "close_price": 7.6,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.041009500000000004
+        "realized_return": 0.041009500000000004,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-04-01",
-        "ticker": "ENB",
+        "symbol": "ENB",
         "position": "long",
+        "open_date": "2026-04-01",
         "open_price": 53.5008,
         "close_date": "2026-04-02",
         "close_price": 54.1319,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0117961
+        "realized_return": 0.0117961,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-31",
-        "ticker": "KVYO",
+        "symbol": "KVYO",
         "position": "short",
+        "open_date": "2026-03-31",
         "open_price": 19.525,
         "close_date": "2026-04-01",
         "close_price": 19.33,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0099872
+        "realized_return": 0.0099872,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-30",
-        "ticker": "CPB",
+        "symbol": "CPB",
         "position": "short",
+        "open_date": "2026-03-30",
         "open_price": 22.08,
         "close_date": "2026-04-01",
         "close_price": 21.99,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00407609
+        "realized_return": 0.00407609,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-30",
-        "ticker": "CZR",
+        "symbol": "CZR",
         "position": "long",
+        "open_date": "2026-03-30",
         "open_price": 25.04,
         "close_date": "2026-03-31",
         "close_price": 26.57,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0611022
+        "realized_return": 0.0611022,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-31",
-        "ticker": "EWP",
+        "symbol": "EWP",
         "position": "long",
+        "open_date": "2026-03-31",
         "open_price": 53.4,
         "close_date": "2026-03-31",
         "close_price": 53.4222,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00041573
+        "realized_return": 0.00041573,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-24",
-        "ticker": "COLO",
+        "symbol": "COLO",
         "position": "short",
+        "open_date": "2026-03-24",
         "open_price": 38.31,
         "close_date": "2026-03-30",
         "close_price": 38.49,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.00469851
+        "realized_return": -0.00469851,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-27",
-        "ticker": "FLO",
+        "symbol": "FLO",
         "position": "short",
+        "open_date": "2026-03-27",
         "open_price": 8.545,
         "close_date": "2026-03-30",
         "close_price": 8.265,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0327677
+        "realized_return": 0.0327677,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-26",
-        "ticker": "ANF",
+        "symbol": "ANF",
         "position": "short",
+        "open_date": "2026-03-26",
         "open_price": 90.485,
         "close_date": "2026-03-27",
         "close_price": 88.59,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.020942699999999998
+        "realized_return": 0.020942699999999998,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-25",
-        "ticker": "JPM",
+        "symbol": "JPM",
         "position": "short",
+        "open_date": "2026-03-25",
         "open_price": 295.19,
         "close_date": "2026-03-27",
         "close_price": 285.22,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0337749
+        "realized_return": 0.0337749,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-24",
-        "ticker": "SYF",
+        "symbol": "SYF",
         "position": "short",
+        "open_date": "2026-03-24",
         "open_price": 67.53,
         "close_date": "2026-03-27",
         "close_price": 66.05,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0219162
+        "realized_return": 0.0219162,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-24",
-        "ticker": "PI",
+        "symbol": "PI",
         "position": "short",
+        "open_date": "2026-03-24",
         "open_price": 103.515,
         "close_date": "2026-03-26",
         "close_price": 101.2,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.022363900000000003
+        "realized_return": 0.022363900000000003,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-13",
-        "ticker": "GLD",
+        "symbol": "GLD",
         "position": "long",
+        "open_date": "2026-03-13",
         "open_price": 463.45,
         "close_date": "2026-03-26",
         "close_price": 409.49,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0733634
+        "realized_return": -0.0733634,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-25",
-        "ticker": "IDX",
+        "symbol": "IDX",
         "position": "short",
+        "open_date": "2026-03-25",
         "open_price": 13.9201,
         "close_date": "2026-03-26",
         "close_price": 13.676,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0175358
+        "realized_return": 0.0175358,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-24",
-        "ticker": "GIII",
+        "symbol": "GIII",
         "position": "short",
+        "open_date": "2026-03-24",
         "open_price": 27.71,
         "close_date": "2026-03-25",
         "close_price": 26.425,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.046373199999999996
+        "realized_return": 0.046373199999999996,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-23",
-        "ticker": "ONON",
+        "symbol": "ONON",
         "position": "short",
+        "open_date": "2026-03-23",
         "open_price": 40.18,
         "close_date": "2026-03-25",
         "close_price": 36.55,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.09034350000000001
+        "realized_return": 0.09034350000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-23",
-        "ticker": "TRP",
+        "symbol": "TRP",
         "position": "long",
+        "open_date": "2026-03-23",
         "open_price": 63.185,
         "close_date": "2026-03-24",
         "close_price": 64.74,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0246103
+        "realized_return": 0.0246103,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-20",
-        "ticker": "DDS",
+        "symbol": "DDS",
         "position": "short",
+        "open_date": "2026-03-20",
         "open_price": 598.0,
         "close_date": "2026-03-23",
         "close_price": 574.485,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0393227
+        "realized_return": 0.0393227,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-19",
-        "ticker": "SWBI",
+        "symbol": "SWBI",
         "position": "long",
+        "open_date": "2026-03-19",
         "open_price": 13.77,
         "close_date": "2026-03-20",
         "close_price": 14.38,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.044299200000000004
+        "realized_return": 0.044299200000000004,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-19",
-        "ticker": "ANF",
+        "symbol": "ANF",
         "position": "short",
+        "open_date": "2026-03-19",
         "open_price": 89.59,
         "close_date": "2026-03-20",
         "close_price": 89.02,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00636232
+        "realized_return": 0.00636232,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-16",
-        "ticker": "ELV",
+        "symbol": "ELV",
         "position": "short",
+        "open_date": "2026-03-16",
         "open_price": 293.02,
         "close_date": "2026-03-19",
         "close_price": 295.32,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.00784929
+        "realized_return": -0.00784929,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-18",
-        "ticker": "TRU",
+        "symbol": "TRU",
         "position": "short",
+        "open_date": "2026-03-18",
         "open_price": 73.97,
         "close_date": "2026-03-19",
         "close_price": 71.89,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0281195
+        "realized_return": 0.0281195,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-17",
-        "ticker": "PI",
+        "symbol": "PI",
         "position": "short",
+        "open_date": "2026-03-17",
         "open_price": 101.445,
         "close_date": "2026-03-18",
         "close_price": 98.735,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.026714
+        "realized_return": 0.026714,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-16",
-        "ticker": "BRBR",
+        "symbol": "BRBR",
         "position": "short",
+        "open_date": "2026-03-16",
         "open_price": 18.38,
         "close_date": "2026-03-18",
         "close_price": 18.12,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0141458
+        "realized_return": 0.0141458,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-17",
-        "ticker": "MSTY",
+        "symbol": "MSTY",
         "position": "short",
+        "open_date": "2026-03-17",
         "open_price": 25.425,
         "close_date": "2026-03-18",
         "close_price": 24.83,
-        "duration": "neutral-trade & short-trend & short-tail",
-        "realized_return": 0.0234022
+        "realized_return": 0.0234022,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-12",
-        "ticker": "FRPT",
+        "symbol": "FRPT",
         "position": "long",
+        "open_date": "2026-03-12",
         "open_price": 78.54,
         "close_date": "2026-03-17",
         "close_price": 78.26,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.00356506
+        "realized_return": -0.00356506,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-13",
-        "ticker": "MPLX",
+        "symbol": "MPLX",
         "position": "long",
+        "open_date": "2026-03-13",
         "open_price": 58.075,
         "close_date": "2026-03-16",
         "close_price": 58.29,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00370211
+        "realized_return": 0.00370211,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-12",
-        "ticker": "MOH",
+        "symbol": "MOH",
         "position": "short",
+        "open_date": "2026-03-12",
         "open_price": 149.89,
         "close_date": "2026-03-16",
         "close_price": 147.65,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.014944299999999999
+        "realized_return": 0.014944299999999999,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-09",
-        "ticker": "HSY",
+        "symbol": "HSY",
         "position": "long",
+        "open_date": "2026-03-09",
         "open_price": 222.745,
         "close_date": "2026-03-16",
         "close_price": 220.44,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0103482
+        "realized_return": -0.0103482,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-12",
-        "ticker": "NFLX",
+        "symbol": "NFLX",
         "position": "long",
+        "open_date": "2026-03-12",
         "open_price": 94.695,
         "close_date": "2026-03-16",
         "close_price": 95.355,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00696975
+        "realized_return": 0.00696975,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-12",
-        "ticker": "CRWV",
+        "symbol": "CRWV",
         "position": "short",
+        "open_date": "2026-03-12",
         "open_price": 80.95,
         "close_date": "2026-03-13",
         "close_price": 80.615,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00413836
+        "realized_return": 0.00413836,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-11",
-        "ticker": "IVES",
+        "symbol": "IVES",
         "position": "short",
+        "open_date": "2026-03-11",
         "open_price": 30.7399,
         "close_date": "2026-03-12",
         "close_price": 30.14,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.019515400000000002
+        "realized_return": 0.019515400000000002,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-11",
-        "ticker": "COLO",
+        "symbol": "COLO",
         "position": "short",
+        "open_date": "2026-03-11",
         "open_price": 38.7879,
         "close_date": "2026-03-12",
         "close_price": 38.2,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0151568
+        "realized_return": 0.0151568,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-11",
-        "ticker": "XLU",
+        "symbol": "XLU",
         "position": "long",
+        "open_date": "2026-03-11",
         "open_price": 46.0708,
         "close_date": "2026-03-12",
         "close_price": 46.64,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0123549
+        "realized_return": 0.0123549,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-10",
-        "ticker": "PZZA",
+        "symbol": "PZZA",
         "position": "short",
+        "open_date": "2026-03-10",
         "open_price": 32.915,
         "close_date": "2026-03-11",
         "close_price": 38.195,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.160413
+        "realized_return": -0.160413,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-10",
-        "ticker": "DAR",
+        "symbol": "DAR",
         "position": "long",
+        "open_date": "2026-03-10",
         "open_price": 51.905,
         "close_date": "2026-03-11",
         "close_price": 54.31,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.046334600000000004
+        "realized_return": 0.046334600000000004,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-04",
-        "ticker": "PEP",
+        "symbol": "PEP",
         "position": "long",
+        "open_date": "2026-03-04",
         "open_price": 163.83,
         "close_date": "2026-03-10",
         "close_price": 162.55,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.00781298
+        "realized_return": -0.00781298,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-05",
-        "ticker": "TLT",
+        "symbol": "TLT",
         "position": "long",
+        "open_date": "2026-03-05",
         "open_price": 88.725,
         "close_date": "2026-03-10",
         "close_price": 88.83,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00118343
+        "realized_return": 0.00118343,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-04",
-        "ticker": "OSK",
+        "symbol": "OSK",
         "position": "long",
+        "open_date": "2026-03-04",
         "open_price": 166.74,
         "close_date": "2026-03-10",
         "close_price": 158.74,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.007751590000000001
+        "realized_return": -0.007751590000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-06",
-        "ticker": "PATH",
+        "symbol": "PATH",
         "position": "short",
+        "open_date": "2026-03-06",
         "open_price": 11.5686,
         "close_date": "2026-03-10",
         "close_price": 11.525,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00376882
+        "realized_return": 0.00376882,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-24",
-        "ticker": "ROP",
+        "symbol": "ROP",
         "position": "short",
+        "open_date": "2026-02-24",
         "open_price": 336.61,
         "close_date": "2026-03-09",
         "close_price": 360.645,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.053208700000000005
+        "realized_return": -0.053208700000000005,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-05",
-        "ticker": "AFRM",
+        "symbol": "AFRM",
         "position": "short",
+        "open_date": "2026-03-05",
         "open_price": 52.2099,
         "close_date": "2026-03-09",
         "close_price": 49.855,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0451045
+        "realized_return": 0.0451045,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-02",
-        "ticker": "SPGI",
+        "symbol": "SPGI",
         "position": "short",
+        "open_date": "2026-03-02",
         "open_price": 442.2,
         "close_date": "2026-03-09",
         "close_price": 434.735,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0168815
+        "realized_return": 0.0168815,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-02",
-        "ticker": "WMS",
+        "symbol": "WMS",
         "position": "long",
+        "open_date": "2026-03-02",
         "open_price": 168.42,
         "close_date": "2026-03-09",
         "close_price": 139.26,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.112711
+        "realized_return": -0.112711,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-05",
-        "ticker": "SKYY",
+        "symbol": "SKYY",
         "position": "short",
+        "open_date": "2026-03-05",
         "open_price": 112.865,
         "close_date": "2026-03-09",
         "close_price": 111.24,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0143977
+        "realized_return": 0.0143977,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-03-05",
-        "ticker": "MNDY",
+        "symbol": "MNDY",
         "position": "short",
+        "open_date": "2026-03-05",
         "open_price": 79.54,
         "close_date": "2026-03-06",
         "close_price": 77.5,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0256475
+        "realized_return": 0.0256475,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-24",
-        "ticker": "DOV",
+        "symbol": "DOV",
         "position": "long",
+        "open_date": "2026-02-24",
         "open_price": 231.09,
         "close_date": "2026-03-05",
         "close_price": 219.92,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0246693
+        "realized_return": -0.0246693,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-25",
-        "ticker": "EFX",
+        "symbol": "EFX",
         "position": "short",
+        "open_date": "2026-02-25",
         "open_price": 195.67,
         "close_date": "2026-03-04",
         "close_price": 205.825,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0161187
+        "realized_return": -0.0161187,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-25",
-        "ticker": "EXPGY",
+        "symbol": "EXPGY",
         "position": "short",
+        "open_date": "2026-02-25",
         "open_price": 36.27,
         "close_date": "2026-03-03",
         "close_price": 35.39,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0242625
+        "realized_return": 0.0242625,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-27",
-        "ticker": "UAE",
+        "symbol": "UAE",
         "position": "long",
+        "open_date": "2026-02-27",
         "open_price": 21.195,
         "close_date": "2026-03-03",
         "close_price": 19.42,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": -0.0837462
+        "realized_return": -0.0837462,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-25",
-        "ticker": "RBLX",
+        "symbol": "RBLX",
         "position": "short",
+        "open_date": "2026-02-25",
         "open_price": 66.505,
         "close_date": "2026-03-02",
         "close_price": 66.9,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": -0.0059394
+        "realized_return": -0.0059394,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-27",
-        "ticker": "EXPE",
+        "symbol": "EXPE",
         "position": "short",
+        "open_date": "2026-02-27",
         "open_price": 216.0,
         "close_date": "2026-03-02",
         "close_price": 214.045,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00905093
+        "realized_return": 0.00905093,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-24",
-        "ticker": "EIS",
+        "symbol": "EIS",
         "position": "long",
+        "open_date": "2026-02-24",
         "open_price": 120.6,
         "close_date": "2026-03-02",
         "close_price": 124.21,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0299337
+        "realized_return": 0.0299337,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-25",
-        "ticker": "BLOK",
+        "symbol": "BLOK",
         "position": "short",
+        "open_date": "2026-02-25",
         "open_price": 55.635,
         "close_date": "2026-02-27",
         "close_price": 52.99,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.047542
+        "realized_return": 0.047542,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-25",
-        "ticker": "LII",
+        "symbol": "LII",
         "position": "long",
+        "open_date": "2026-02-25",
         "open_price": 535.64,
         "close_date": "2026-02-26",
         "close_price": 538.09,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00457397
+        "realized_return": 0.00457397,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-25",
-        "ticker": "UPS",
+        "symbol": "UPS",
         "position": "long",
+        "open_date": "2026-02-25",
         "open_price": 113.25,
         "close_date": "2026-02-26",
         "close_price": 115.42,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0191611
+        "realized_return": 0.0191611,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-23",
-        "ticker": "CANE",
+        "symbol": "CANE",
         "position": "short",
+        "open_date": "2026-02-23",
         "open_price": 9.298,
         "close_date": "2026-02-25",
         "close_price": 9.275,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00247365
+        "realized_return": 0.00247365,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-23",
-        "ticker": "SFM",
+        "symbol": "SFM",
         "position": "short",
+        "open_date": "2026-02-23",
         "open_price": 72.11,
         "close_date": "2026-02-24",
         "close_price": 71.21,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.0124809
+        "realized_return": 0.0124809,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-19",
-        "ticker": "FXF",
+        "symbol": "FXF",
         "position": "long",
+        "open_date": "2026-02-19",
         "open_price": 114.09,
         "close_date": "2026-02-23",
         "close_price": 114.2,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.0009597690000000001
+        "realized_return": 0.0009597690000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-19",
-        "ticker": "PYPL",
+        "symbol": "PYPL",
         "position": "short",
+        "open_date": "2026-02-19",
         "open_price": 41.28,
         "close_date": "2026-02-23",
         "close_price": 40.82,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.011143400000000001
+        "realized_return": 0.011143400000000001,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-19",
-        "ticker": "GLIN",
+        "symbol": "UPS",
         "position": "long",
+        "open_date": "2026-02-18",
+        "open_price": 115.7,
+        "close_date": "2026-02-20",
+        "close_price": 116.33,
+        "realized_return": 0.00544512,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "GLIN",
+        "position": "long",
+        "open_date": "2026-02-19",
         "open_price": 46.15,
         "close_date": "2026-02-20",
         "close_price": 46.6,
-        "duration": "long-trade & long-trend & long-tail",
-        "realized_return": 0.00975081
+        "realized_return": 0.00975081,
+        "duration": "TAIL"
       },
       {
-        "date": "2026-02-19",
-        "ticker": "MOH",
+        "symbol": "MOH",
         "position": "short",
+        "open_date": "2026-02-19",
         "open_price": 147.01,
         "close_date": "2026-02-20",
         "close_price": 145.84,
-        "duration": "short-trade & short-trend & short-tail",
-        "realized_return": 0.00795864
+        "realized_return": 0.00795864,
+        "duration": "TAIL"
+      },
+      {
+        "symbol": "TRU",
+        "position": "short",
+        "open_date": "2026-02-18",
+        "open_price": 76.56,
+        "close_date": "2026-02-20",
+        "close_price": 75.8,
+        "realized_return": 0.009926850000000001,
+        "duration": "TAIL"
       }
     ],
     "stats": {
-      "count_90d": 133,
-      "open_count": 0
+      "win_rate_long": 0.72,
+      "win_rate_short": 0.8116,
+      "avg_return_long": 0.0067,
+      "avg_return_short": 0.0115,
+      "total_trades_90d": 144
     },
     "recently_traded_tickers": [
-      "AMZN",
-      "RSI",
-      "CASY",
-      "FXB",
-      "THC",
-      "ACI",
-      "CZR",
-      "EWC",
-      "GLASF",
-      "ROST",
-      "DGX",
-      "KMX",
-      "EPHE",
-      "OIH",
-      "CPB",
-      "APD",
-      "PVH",
-      "MGM",
-      "JPM",
-      "KRE",
-      "CPER",
-      "MNDY",
-      "HYG",
-      "CAVA",
-      "ULS",
-      "UFO",
-      "XTL",
       "ACHC",
-      "FLO",
-      "WING",
-      "CFG",
+      "ACI",
+      "AMAT",
+      "AMZN",
+      "ANF",
+      "APD",
       "ARGT",
-      "SPHR",
-      "LOTMY",
-      "GII",
+      "CANE",
+      "CASY",
+      "CAT",
+      "CAVA",
+      "CFG",
+      "CMG",
+      "COLO",
+      "CORN",
+      "CPB",
+      "CPER",
+      "CZR",
+      "DDS",
+      "DGX",
+      "DK",
+      "ELF",
+      "ENB",
+      "EPHE",
+      "EWC",
+      "EWP",
       "EWW",
-      "TSN",
-      "TJX",
+      "FICO",
+      "FLO",
+      "FXB",
+      "GII",
+      "GIII",
+      "GLASF",
+      "GLD",
+      "HCA",
+      "HELE",
+      "HYG",
+      "IDX",
+      "IHF",
+      "IHI",
+      "IWM",
+      "JPM",
+      "KMX",
+      "KRE",
+      "KVYO",
+      "LOTMY",
+      "MARA",
+      "MCO",
+      "MGM",
+      "MNDY",
+      "MPLX",
+      "MTDR",
+      "OIH",
+      "OLLI",
+      "ONON",
+      "PI",
+      "PSCH",
+      "PVH",
+      "RBLX",
+      "ROKU",
+      "ROST",
+      "RSI",
+      "SGRY",
+      "SITM",
+      "SPHR",
       "SWBI",
-      "UUP"
+      "SYF",
+      "T",
+      "THC",
+      "TJX",
+      "TPYP",
+      "TRP",
+      "TSN",
+      "UFO",
+      "ULS",
+      "USPH",
+      "UTZ",
+      "UUP",
+      "WING",
+      "XTL"
     ]
   },
   "levels": {
     "UST30Y": {
+      "close": 5.11,
       "lrr": 5.05,
       "trr": 5.2,
-      "close": 5.11,
       "signal": "BULLISH"
     },
     "UST10Y": {
+      "close": 4.57,
       "lrr": 4.45,
       "trr": 4.7,
-      "close": 4.57,
       "signal": "BULLISH"
     },
     "UST2Y": {
+      "close": 4.04,
       "lrr": 3.97,
       "trr": 4.15,
-      "close": 4.04,
       "signal": "BULLISH"
     },
     "HYG": {
+      "close": 79.86,
       "lrr": 79.42,
       "trr": 80.23,
-      "close": 79.86,
       "signal": "BULLISH"
     },
     "LQD": {
-      "lrr": 107,
+      "close": 108.0,
+      "lrr": 107.0,
       "trr": 108.6,
-      "close": 108,
       "signal": "BEARISH"
     },
     "SPX": {
-      "lrr": 7321,
-      "trr": 7502,
-      "close": 7433,
+      "close": 7433.0,
+      "lrr": 7321.0,
+      "trr": 7502.0,
       "signal": "BULLISH"
     },
     "COMPQ": {
-      "lrr": 25803,
-      "trr": 26700,
-      "close": 26270,
+      "close": 26270.0,
+      "lrr": 25803.0,
+      "trr": 26700.0,
       "signal": "BULLISH"
     },
     "RUT": {
-      "lrr": 2763,
-      "trr": 2907,
-      "close": 2817,
+      "close": 2817.0,
+      "lrr": 2763.0,
+      "trr": 2907.0,
       "signal": "BULLISH"
     },
     "XLK": {
-      "lrr": 172,
-      "trr": 181,
-      "close": 177,
+      "close": 177.0,
+      "lrr": 172.0,
+      "trr": 181.0,
       "signal": "BULLISH"
     },
-    "XOP": {
-      "lrr": 165,
-      "trr": 181,
-      "close": 175,
-      "signal": "BULLISH"
-    },
-    "XTL": {
-      "lrr": 220,
-      "trr": 235,
-      "close": 224,
-      "signal": "BULLISH"
-    },
-    "XLI": {
-      "lrr": 168,
-      "trr": 176,
-      "close": 171,
+    "XLV": {
+      "close": 158.0,
+      "lrr": 156.0,
+      "trr": 160.0,
       "signal": "BULLISH"
     },
     "SSEC": {
-      "lrr": 4058,
-      "trr": 4243,
-      "close": 4166,
+      "close": 4166.0,
+      "lrr": 4058.0,
+      "trr": 4243.0,
       "signal": "BULLISH"
     },
     "NIKK": {
-      "lrr": 59699,
-      "trr": 63401,
-      "close": 62000,
+      "close": 62000.0,
+      "lrr": 59699.0,
+      "trr": 63401.0,
       "signal": "BULLISH"
     },
     "DAX": {
-      "lrr": 24104,
-      "trr": 24991,
-      "close": 24737,
+      "close": 24737.0,
+      "lrr": 24104.0,
+      "trr": 24991.0,
       "signal": "BULLISH"
     },
     "VIX": {
+      "close": 17.44,
       "lrr": 16.88,
       "trr": 18.73,
-      "close": 17.44,
       "signal": "BEARISH"
     },
     "USD": {
+      "close": 99.13,
       "lrr": 98.39,
       "trr": 99.92,
-      "close": 99.13,
       "signal": "BULLISH"
     },
-    "EURUSD": {
+    "EUR/USD": {
+      "close": 1.162,
       "lrr": 1.152,
       "trr": 1.171,
-      "close": 1.162,
       "signal": "BEARISH"
     },
-    "USDJPY": {
+    "USD/YEN": {
+      "close": 159.03,
       "lrr": 156.7,
       "trr": 159.91,
-      "close": 159.03,
       "signal": "BULLISH"
     },
-    "GBPUSD": {
+    "GBP/USD": {
+      "close": 1.343,
       "lrr": 1.327,
       "trr": 1.347,
-      "close": 1.343,
       "signal": "BEARISH"
     },
-    "CADUSD": {
+    "CAD/USD": {
+      "close": 0.727,
       "lrr": 0.722,
       "trr": 0.729,
-      "close": 0.727,
       "signal": "BEARISH"
     },
     "WTIC": {
+      "close": 99.18,
       "lrr": 94.93,
       "trr": 106.81,
-      "close": 99.18,
       "signal": "BULLISH"
     },
     "BRENT": {
-      "lrr": 101,
-      "trr": 112,
-      "close": 106,
+      "close": 106.0,
+      "lrr": 101.0,
+      "trr": 112.0,
       "signal": "BULLISH"
     },
     "NATGAS": {
+      "close": 3.04,
       "lrr": 2.87,
       "trr": 3.16,
-      "close": 3.04,
       "signal": "BULLISH"
     },
     "GOLD": {
-      "lrr": 4426,
-      "trr": 4644,
-      "close": 4527,
+      "close": 4527.0,
+      "lrr": 4426.0,
+      "trr": 4644.0,
       "signal": "NEUTRAL"
     },
     "COPPER": {
+      "close": 6.29,
       "lrr": 6.05,
       "trr": 6.65,
-      "close": 6.29,
       "signal": "BULLISH"
     },
     "SILVER": {
-      "lrr": 69,
-      "trr": 78,
-      "close": 76,
+      "close": 76.0,
+      "lrr": 69.0,
+      "trr": 78.0,
       "signal": "BEARISH"
     },
     "MSFT": {
-      "lrr": 402,
-      "trr": 429,
-      "close": 421,
+      "close": 421.0,
+      "lrr": 402.0,
+      "trr": 429.0,
       "signal": "BEARISH"
     },
     "AAPL": {
-      "lrr": 293,
-      "trr": 306,
-      "close": 302,
+      "close": 302.0,
+      "lrr": 293.0,
+      "trr": 306.0,
       "signal": "BULLISH"
     },
     "AMZN": {
-      "lrr": 258,
-      "trr": 274,
-      "close": 265,
+      "close": 265.0,
+      "lrr": 258.0,
+      "trr": 274.0,
       "signal": "BULLISH"
     },
     "META": {
-      "lrr": 591,
-      "trr": 623,
-      "close": 605,
+      "close": 605.0,
+      "lrr": 591.0,
+      "trr": 623.0,
       "signal": "BEARISH"
     },
     "GOOGL": {
-      "lrr": 382,
-      "trr": 408,
-      "close": 389,
+      "close": 389.0,
+      "lrr": 382.0,
+      "trr": 408.0,
       "signal": "BULLISH"
     },
     "NFLX": {
-      "lrr": 84,
-      "trr": 90,
-      "close": 88,
+      "close": 88.0,
+      "lrr": 84.0,
+      "trr": 90.0,
       "signal": "BEARISH"
     },
     "TSLA": {
-      "lrr": 400,
-      "trr": 445,
-      "close": 417,
+      "close": 417.0,
+      "lrr": 400.0,
+      "trr": 445.0,
       "signal": "BULLISH"
     },
     "NVDA": {
-      "lrr": 216,
-      "trr": 235,
-      "close": 223,
+      "close": 223.0,
+      "lrr": 216.0,
+      "trr": 235.0,
       "signal": "BULLISH"
     },
     "ORCL": {
-      "lrr": 179,
-      "trr": 200,
-      "close": 188,
+      "close": 188.0,
+      "lrr": 179.0,
+      "trr": 200.0,
       "signal": "BULLISH"
     },
-    "BTC": {
-      "lrr": 76307,
-      "trr": 81007,
-      "close": 77804,
+    "BITCOIN": {
+      "close": 77804.0,
+      "lrr": 76307.0,
+      "trr": 81007.0,
       "signal": "BULLISH"
+    },
+    "BSE": {
+      "close": 85106.0,
+      "lrr": 84516.0,
+      "trr": 86339.0,
+      "signal": "BULLISH"
+    },
+    "XLY": {
+      "close": 120.0,
+      "lrr": 118.0,
+      "trr": 124.0,
+      "signal": "BULLISH"
+    },
+    "XLI": {
+      "close": 171.0,
+      "lrr": 168.0,
+      "trr": 176.0,
+      "signal": "BULLISH"
+    },
+    "PPLT": {
+      "close": 182.0,
+      "lrr": 175.0,
+      "trr": 211.0,
+      "signal": "BULLISH"
+    },
+    "BTCUSD": {
+      "close": 67049.0,
+      "lrr": 62799.0,
+      "trr": 71743.0,
+      "signal": "BEARISH"
+    },
+    "ST30Y": {
+      "close": 4.85,
+      "lrr": 4.93,
+      "trr": 4.81,
+      "signal": "BULLISH"
+    },
+    "^SPX": {
+      "close": 6832.0,
+      "lrr": 6776.0,
+      "trr": 7013.0,
+      "signal": "BULLISH"
+    },
+    "^IXIC": {
+      "close": 22597.0,
+      "lrr": 22318.0,
+      "trr": 23252.0,
+      "signal": "BEARISH"
+    },
+    "^RUT": {
+      "close": 2615.0,
+      "lrr": 2565.0,
+      "trr": 2715.0,
+      "signal": "BULLISH"
+    },
+    "^N225": {
+      "close": 56941.0,
+      "lrr": 54868.0,
+      "trr": 58432.0,
+      "signal": "BULLISH"
+    },
+    "^GDAXI": {
+      "close": 24852.0,
+      "lrr": 24436.0,
+      "trr": 25117.0,
+      "signal": "BULLISH"
+    },
+    "^VIX": {
+      "close": 20.82,
+      "lrr": 15.29,
+      "trr": 21.93,
+      "signal": "BEARISH"
+    },
+    "DX-Y.NYB": {
+      "close": 97.05,
+      "lrr": 96.22,
+      "trr": 97.7,
+      "signal": "BEARISH"
+    },
+    "EURUSD": {
+      "close": 1.186,
+      "lrr": 1.174,
+      "trr": 1.194,
+      "signal": "BULLISH"
+    },
+    "USDJPY": {
+      "close": 153.29,
+      "lrr": 152.01,
+      "trr": 155.53,
+      "signal": "BEARISH"
+    },
+    "GBPUSD": {
+      "close": 1.361,
+      "lrr": 1.352,
+      "trr": 1.379,
+      "signal": "BULLISH"
+    },
+    "CADUSD": {
+      "close": 0.733,
+      "lrr": 0.731,
+      "trr": 0.742,
+      "signal": "BULLISH"
+    },
+    "CLUSD": {
+      "close": 62.91,
+      "lrr": 61.73,
+      "trr": 65.62,
+      "signal": "BULLISH"
+    },
+    "BZUSD": {
+      "close": 67.6,
+      "lrr": 66.41,
+      "trr": 70.39,
+      "signal": "BULLISH"
+    },
+    "NGUSD": {
+      "close": 3.22,
+      "lrr": 2.88,
+      "trr": 3.57,
+      "signal": "BEARISH"
+    },
+    "GCUSD": {
+      "close": 4893.0,
+      "lrr": 4842.0,
+      "trr": 5209.0,
+      "signal": "BULLISH"
+    },
+    "HGUSD": {
+      "close": 5.75,
+      "lrr": 5.67,
+      "trr": 6.12,
+      "signal": "BULLISH"
+    },
+    "SILUSD": {
+      "close": 74.0,
+      "lrr": 70.0,
+      "trr": 93.0,
+      "signal": "BULLISH"
+    },
+    "XOP": {
+      "close": 175.0,
+      "lrr": 165.0,
+      "trr": 181.0,
+      "signal": "BULLISH"
+    },
+    "XLU": {
+      "close": 44.87,
+      "lrr": 44.35,
+      "trr": 45.99,
+      "signal": "BEARISH"
     },
     "ETH": {
-      "lrr": 2028,
-      "trr": 2235,
-      "close": 2114,
+      "close": 2114.0,
+      "lrr": 2028.0,
+      "trr": 2235.0,
       "signal": "BEARISH"
     },
     "SOL": {
-      "lrr": 81,
-      "trr": 90,
       "close": 85.56,
+      "lrr": 81.0,
+      "trr": 90.0,
       "signal": "BEARISH"
+    },
+    "AVAX": {
+      "close": 9.31,
+      "lrr": 8.69,
+      "trr": 9.71,
+      "signal": "BEARISH"
+    },
+    "XRP": {
+      "close": 1.36,
+      "lrr": 1.3,
+      "trr": 1.43,
+      "signal": "BEARISH"
+    },
+    "XTL": {
+      "close": 224.0,
+      "lrr": 220.0,
+      "trr": 235.0,
+      "signal": "BULLISH"
     }
   },
-  "pdf": {
-    "momo": {
-      "MSFT": {
-        "lrr": 402,
-        "trr": 429,
-        "signal": "BEARISH",
-        "upside_pct": 1.9,
-        "downside_pct": -4.51
-      },
-      "AAPL": {
-        "lrr": 293,
-        "trr": 306,
-        "signal": "BULLISH",
-        "upside_pct": 1.32,
-        "downside_pct": -2.98
-      },
-      "AMZN": {
-        "lrr": 258,
-        "trr": 274,
-        "signal": "BULLISH",
-        "upside_pct": 3.4,
-        "downside_pct": -2.64
-      },
-      "META": {
-        "lrr": 591,
-        "trr": 623,
-        "signal": "BEARISH",
-        "upside_pct": 2.98,
-        "downside_pct": -2.31
-      },
-      "GOOGL": {
-        "lrr": 382,
-        "trr": 408,
-        "signal": "BULLISH",
-        "upside_pct": 4.88,
-        "downside_pct": -1.8
-      },
-      "NFLX": {
-        "lrr": 84,
-        "trr": 90,
-        "signal": "BEARISH",
-        "upside_pct": 2.27,
-        "downside_pct": -4.55
-      },
-      "TSLA": {
-        "lrr": 400,
-        "trr": 445,
-        "signal": "BULLISH",
-        "upside_pct": 6.71,
-        "downside_pct": -4.08
-      },
-      "NVDA": {
-        "lrr": 216,
-        "trr": 235,
-        "signal": "BULLISH",
-        "upside_pct": 5.38,
-        "downside_pct": -3.14
-      },
-      "ORCL": {
-        "lrr": 179,
-        "trr": 200,
-        "signal": "BULLISH",
-        "upside_pct": 6.38,
-        "downside_pct": -4.79
-      },
-      "mag7_daily_pct": 1.34,
-      "rr_upside_count": 6,
-      "rr_total": 9,
-      "headline": "Mag7 +1.34% \u2014 TSLA flipped BULLISH, NVDA Contained post-earnings. 6/9 RRs show more upside.",
-      "bullish": [
-        "AAPL",
-        "AMZN",
-        "GOOGL",
-        "TSLA",
-        "NVDA",
-        "ORCL"
-      ],
-      "bearish": [
-        "MSFT",
-        "META",
-        "NFLX"
-      ],
-      "neutral": []
-    },
-    "msr": {
-      "gamma_exposure": "POSITIVE",
-      "systematic_flow": "NEUTRAL",
-      "strategic_allocation": "RISK_ON",
-      "monthly_gamma": "LOW",
-      "gvt_index": 15.88,
-      "realized_vol_10d": 13.1,
-      "spx_support": 7324,
-      "spx_resistance": 7530,
-      "pv_band_pct": 2.77,
-      "note": "Exposure Remains Stretched \u2014 dealers long gamma (vol-suppressing). Systematic stable, vol-controlled exposure unchanged. Strategic model = Risk-On regime. Post-NVDA earnings: contained reaction = best case. SPX support 7324, resistance 7530."
-    },
-    "early_look": {
-      "title": "Turn Off Your Mind",
-      "vix_level": 17.44,
-      "keith_thesis": "AI trade is NOT a bubble yet \u2014 valuation, IPO activity, capex all below dot-com levels. Next decade rewards separating Mag7 winners from losers.",
-      "mag7_framework": {
-        "winners": [
-          "AAPL",
-          "AMZN",
-          "GOOGL"
-        ],
-        "challenged": [
-          "MSFT",
-          "META"
-        ],
-        "loser": [
-          "TSLA"
-        ]
-      },
-      "keith_notes": [
-        "Bubble-calling is loud but AI trade does not look like dot-com mania by valuation, IPO activity, or capex scale",
-        "Next decade: separate AI winners from losers \u2014 do not blindly own old Mag7 basket",
-        "Winners: Apple, Amazon, Alphabet. Challenged: Microsoft, Meta. Loser: Tesla",
-        "Fed tightening, inflation, geopolitics remain non-trivial risks to the trade",
-        "Key level: NASDAQ 25,803-26,700 (bullish). SPX 7321-7502 (bullish). VIX 16.88-18.73 (bearish)"
-      ]
-    },
-    "btc": {
-      "BTC": {
-        "price": 77804,
-        "daily_pct": -0.7,
-        "trade_signal": "BROKEN",
-        "trend_signal": "BULLISH",
-        "lrr": 76307,
-        "trr": 81007
-      },
-      "performance": {
-        "10D": -2.2,
-        "1M": 13.0,
-        "3M": 14.0,
-        "6M": -1.3,
-        "1Y": -27.7,
-        "QTD": 13.4,
-        "YTD": -11.8
-      },
-      "note": "BTC -0.7% \u2014 Rallies & Resistance. TRADE still broken, TREND BULLISH. Watch $78,012 TRADE recapture. HYPE ETF flow increasing."
-    },
-    "macro_research": {
-      "cpi_nowcast": 4.26,
-      "cpi_upside": 4.37,
-      "cpi_downside": 4.15,
-      "cpi_trend": "ACCELERATING",
-      "quarterly_quad": 3,
-      "monthly_quad": 2,
-      "quad_sequence": "2-2-2-3",
-      "forward_quads": {
-        "2Q26E": {
-          "quad": 3,
-          "gdp_qoq": 3.27,
-          "cpi_yoy": 3.85
-        },
-        "3Q26E": {
-          "quad": 3,
-          "gdp_qoq": 2.14,
-          "cpi_yoy": 4.05
-        },
-        "4Q26E": {
-          "quad": 2
-        }
-      },
-      "key_themes": [
-        "Hormuz Supply Shock: 8-10M bbl/d gap, storage drawdown critical by late July",
-        "Mag7 reaccelerating \u2014 earnings cycle diverging from broader market"
-      ]
-    },
-    "macro_show": {
-      "date": "2026-05-20",
-      "quarterly_quad": 3,
-      "monthly_quad": 2,
-      "quad_depth": "SHALLOW",
-      "vix": {
-        "current": 17.44,
-        "lrr": 16.88,
-        "trr": 18.73,
-        "bucket": "CALM"
-      },
-      "growth_roc": "ACCELERATING",
-      "inflation_roc": "ACCELERATING",
-      "quad_sequence": "2-2-2-3",
-      "keith_commentary": [
-        "RATES: Breakout in Commodities AND Bond Yields to new Inflation Cycle Highs was easiest Macro Call of the year. Global Yields now correcting from TRRs \u2014 UK 10yr -12bps from 5.17% Cycle High.",
-        "IDX (Indonesia): Panic Hike confirmed Hedgeye Crash Call \u2014 short = IDX.",
-        "QQQ: Correction only -3% from ATH. High Beta Momentum basket -20.3% post yesterday's -0.5% decline. Keith spent yesterday morning buying Quad2 U.S. Growth Exposures on sale \u2014 added QTUM, ROBO, DRAM.",
-        "BITCOIN: Textbook bounce off LRR. Question: sell some? Answer yes, especially if BTC can't recapture TRADE Signal at $78,012. TREND Support at $74,663 held. Process: TRADE breaks = reduce. Holding TRADE support (like ROBO) = add on red."
-      ],
-      "key_levels": {
-        "BTC": {
-          "trade_signal": 78012,
-          "trend_support": 74663,
-          "note": "Bounced off LRR \u2014 reduce if TRADE breaks"
-        },
-        "UK_10Y": {
-          "cycle_high": 5.17,
-          "current_delta": -0.12,
-          "note": "Correcting from TRR"
-        },
-        "IDX": {
-          "signal": "SHORT",
-          "note": "Crash Call confirmed \u2014 Indonesia panic hike"
-        }
-      },
-      "positioning_changes": [
-        "Added QTUM (Quantum) on weakness \u2014 Quad2 growth on sale",
-        "Added ROBO (Robotics) on weakness \u2014 holding TRADE support = add on red",
-        "Added DRAM on weakness \u2014 differentiated US growth over SPY/Mag7",
-        "Considering reducing BTC if TRADE signal ($78,012) not recaptured"
-      ],
-      "macro_themes": [
-        "Commodities + Bond Yields breaking to new Inflation Cycle Highs \u2014 Quad 3 thesis building",
-        "High Beta Momentum -20.3% crash is a Quad2 buying opportunity, not a trend break",
-        "QQQ -3% from ATH = selective correction inside bull market",
-        "Global yields correcting from TRRs (top-end of Risk Range) \u2014 short-term relief"
-      ]
-    },
-    "sss": {
-      "count": 77,
-      "added": [
-        "CPAY",
-        "HLT",
-        "TXG",
-        "LYV",
-        "CBRS",
-        "FWONK",
-        "LLY"
-      ],
-      "removed": [
-        "ABNB",
-        "PEB"
-      ],
-      "tickers": [
-        "CAT",
-        "OUT",
-        "SPHR",
-        "CASY",
-        "STKL",
-        "AMAT",
-        "ENB",
-        "DAR",
-        "CAVA",
-        "ACHC",
-        "MUSA",
-        "SWBI",
-        "RSI",
-        "CZR",
-        "FCFS",
-        "ULS",
-        "MAR",
-        "CSX",
-        "MRVL",
-        "LRCX",
-        "SITM",
-        "NVDA",
-        "AMZN",
-        "VIK",
-        "GOOGL",
-        "AAPL",
-        "ROKU",
-        "HST",
-        "GLASF",
-        "CURLF",
-        "SBUX",
-        "ROK",
-        "CP",
-        "LAMR",
-        "TWLO",
-        "LFST",
-        "LFMD",
-        "UNH",
-        "SXT",
-        "CACC",
-        "XYZ",
-        "CARR",
-        "APD",
-        "MARA",
-        "CRCL",
-        "AFRM",
-        "URI",
-        "DOW",
-        "LYB",
-        "RIO",
-        "BHP",
-        "AKAM",
-        "TTWO",
-        "APLE",
-        "LOTMY",
-        "CMI",
-        "WRBY",
-        "DDOG",
-        "MNST",
-        "PRMB",
-        "PM",
-        "AZTAF",
-        "BLMN",
-        "V",
-        "ATRO",
-        "ILMN",
-        "NVO",
-        "RHP",
-        "BTI",
-        "BJRI",
-        "CPAY",
-        "HLT",
-        "TXG",
-        "LYV",
-        "FWONK",
-        "LLY",
-        "CBRS"
-      ],
-      "tickers_detail": {
-        "CAT": {
-          "signal_date": "2025-05-26",
-          "entry_price": 343.4,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 358
-        },
-        "OUT": {
-          "signal_date": "2026-01-11",
-          "entry_price": 22.1,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 183
-        },
-        "SPHR": {
-          "signal_date": "2026-01-12",
-          "entry_price": 95.2,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 127
-        },
-        "CASY": {
-          "signal_date": "2026-01-19",
-          "entry_price": 640.4,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 120
-        },
-        "STKL": {
-          "signal_date": "2026-02-02",
-          "entry_price": 4.6,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 106
-        },
-        "AMAT": {
-          "signal_date": "2026-02-09",
-          "entry_price": 322.5,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 99
-        },
-        "ENB": {
-          "signal_date": "2026-02-23",
-          "entry_price": 51.5,
-          "sector": "Energy",
-          "analyst": "Fernando Valle",
-          "days_on_list": 85
-        },
-        "DAR": {
-          "signal_date": "2026-02-23",
-          "entry_price": 51.6,
-          "sector": "Energy",
-          "analyst": "Fernando Valle",
-          "days_on_list": 85
-        },
-        "CAVA": {
-          "signal_date": "2026-03-02",
-          "entry_price": 82.5,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 78
-        },
-        "ACHC": {
-          "signal_date": "2026-03-02",
-          "entry_price": 23.4,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 78
-        },
-        "MUSA": {
-          "signal_date": "2026-03-09",
-          "entry_price": 438.4,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 71
-        },
-        "SWBI": {
-          "signal_date": "2026-03-09",
-          "entry_price": 14.0,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 71
-        },
-        "RSI": {
-          "signal_date": "2026-03-16",
-          "entry_price": 20.3,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 64
-        },
-        "CZR": {
-          "signal_date": "2026-03-16",
-          "entry_price": 28.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 64
-        },
-        "FCFS": {
-          "signal_date": "2026-03-23",
-          "entry_price": 192.1,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 57
-        },
-        "ULS": {
-          "signal_date": "2026-03-30",
-          "entry_price": 83.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 50
-        },
-        "MAR": {
-          "signal_date": "2026-04-10",
-          "entry_price": 354.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 39
-        },
-        "CSX": {
-          "signal_date": "2026-04-10",
-          "entry_price": 42.2,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 39
-        },
-        "MRVL": {
-          "signal_date": "2026-04-10",
-          "entry_price": 128.5,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "LRCX": {
-          "signal_date": "2026-04-10",
-          "entry_price": 283.7,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "SITM": {
-          "signal_date": "2026-04-10",
-          "entry_price": 420.3,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "NVDA": {
-          "signal_date": "2026-04-10",
-          "entry_price": 188.6,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 39
-        },
-        "AMZN": {
-          "signal_date": "2026-04-10",
-          "entry_price": 238.4,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 39
-        },
-        "VIK": {
-          "signal_date": "2026-04-13",
-          "entry_price": 77.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 36
-        },
-        "GOOGL": {
-          "signal_date": "2026-04-16",
-          "entry_price": 337.6,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 33
-        },
-        "AAPL": {
-          "signal_date": "2026-04-16",
-          "entry_price": 262.5,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 33
-        },
-        "ROKU": {
-          "signal_date": "2026-04-20",
-          "entry_price": 115.5,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 29
-        },
-        "HST": {
-          "signal_date": "2026-04-20",
-          "entry_price": 21.2,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 29
-        },
-        "GLASF": {
-          "signal_date": "2026-04-20",
-          "entry_price": 8.7,
-          "sector": "Cannabis",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 29
-        },
-        "CURLF": {
-          "signal_date": "2026-04-20",
-          "entry_price": 2.8,
-          "sector": "Cannabis",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 29
-        },
-        "SBUX": {
-          "signal_date": "2026-04-21",
-          "entry_price": 97.3,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 28
-        },
-        "ROK": {
-          "signal_date": "2026-04-21",
-          "entry_price": 413.8,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 28
-        },
-        "CP": {
-          "signal_date": "2026-04-21",
-          "entry_price": 82.4,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 28
-        },
-        "LAMR": {
-          "signal_date": "2026-04-21",
-          "entry_price": 134.2,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 28
-        },
-        "TWLO": {
-          "signal_date": "2026-04-22",
-          "entry_price": 150.4,
-          "sector": "Software",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 27
-        },
-        "LFST": {
-          "signal_date": "2026-04-22",
-          "entry_price": 6.8,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 27
-        },
-        "LFMD": {
-          "signal_date": "2026-04-23",
-          "entry_price": 4.4,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 26
-        },
-        "UNH": {
-          "signal_date": "2026-04-24",
-          "entry_price": 352.7,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 25
-        },
-        "SXT": {
-          "signal_date": "2026-04-27",
-          "entry_price": 122.4,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 22
-        },
-        "CACC": {
-          "signal_date": "2026-04-28",
-          "entry_price": 510.1,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 21
-        },
-        "XYZ": {
-          "signal_date": "2026-04-28",
-          "entry_price": 70.0,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 21
-        },
-        "CARR": {
-          "signal_date": "2026-04-28",
-          "entry_price": 61.7,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 21
-        },
-        "APD": {
-          "signal_date": "2026-04-28",
-          "entry_price": 303.9,
-          "sector": "Materials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 21
-        },
-        "MARA": {
-          "signal_date": "2026-05-04",
-          "entry_price": 11.5,
-          "sector": "Digital Assets",
-          "analyst": "Josh Steiner",
-          "days_on_list": 15
-        },
-        "CRCL": {
-          "signal_date": "2026-05-04",
-          "entry_price": 115.4,
-          "sector": "Digital Assets",
-          "analyst": "Josh Steiner",
-          "days_on_list": 15
-        },
-        "AFRM": {
-          "signal_date": "2026-05-04",
-          "entry_price": 67.3,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 15
-        },
-        "URI": {
-          "signal_date": "2026-05-04",
-          "entry_price": 931.0,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "DOW": {
-          "signal_date": "2026-05-04",
-          "entry_price": 40.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "LYB": {
-          "signal_date": "2026-05-04",
-          "entry_price": 76.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "RIO": {
-          "signal_date": "2026-05-04",
-          "entry_price": 99.0,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "BHP": {
-          "signal_date": "2026-05-04",
-          "entry_price": 77.9,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 15
-        },
-        "AKAM": {
-          "signal_date": "2026-05-05",
-          "entry_price": 115.5,
-          "sector": "Software",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 14
-        },
-        "TTWO": {
-          "signal_date": "2026-05-05",
-          "entry_price": 222.9,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 14
-        },
-        "APLE": {
-          "signal_date": "2026-05-05",
-          "entry_price": 13.5,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 14
-        },
-        "LOTMY": {
-          "signal_date": "2026-05-06",
-          "entry_price": 32.0,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 13
-        },
-        "CMI": {
-          "signal_date": "2026-05-08",
-          "entry_price": 709.5,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 13
-        },
-        "WRBY": {
-          "signal_date": "2026-05-07",
-          "entry_price": 26.3,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 12
-        },
-        "DDOG": {
-          "signal_date": "2026-05-11",
-          "entry_price": 200.2,
-          "sector": "Software",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 8
-        },
-        "MNST": {
-          "signal_date": "2026-05-11",
-          "entry_price": 86.3,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 8
-        },
-        "PRMB": {
-          "signal_date": "2026-05-11",
-          "entry_price": 23.2,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 8
-        },
-        "PM": {
-          "signal_date": "2026-05-12",
-          "entry_price": 182.1,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 7
-        },
-        "AZTAF": {
-          "signal_date": "2026-05-12",
-          "entry_price": 106.5,
-          "sector": "Retail",
-          "analyst": "Brian McGough",
-          "days_on_list": 7
-        },
-        "BLMN": {
-          "signal_date": "2026-05-12",
-          "entry_price": 8.4,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 7
-        },
-        "V": {
-          "signal_date": "2026-05-12",
-          "entry_price": 325.6,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 7
-        },
-        "ATRO": {
-          "signal_date": "2026-05-12",
-          "entry_price": 73.8,
-          "sector": "Industrials",
-          "analyst": "Jay Van Sciver",
-          "days_on_list": 7
-        },
-        "ILMN": {
-          "signal_date": "2026-05-12",
-          "entry_price": 144.9,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 7
-        },
-        "NVO": {
-          "signal_date": "2026-05-12",
-          "entry_price": 46.5,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 7
-        },
-        "RHP": {
-          "signal_date": "2026-05-13",
-          "entry_price": 107.1,
-          "sector": "GLL",
-          "analyst": "Sean Jenkins",
-          "days_on_list": 6
-        },
-        "BTI": {
-          "signal_date": "2026-05-13",
-          "entry_price": 64.6,
-          "sector": "Consumer Staples",
-          "analyst": "Daniel Biolsi",
-          "days_on_list": 6
-        },
-        "BJRI": {
-          "signal_date": "2026-05-18",
-          "entry_price": 42.0,
-          "sector": "Restaurants",
-          "analyst": "Bennett Cheer",
-          "days_on_list": 1
-        },
-        "CPAY": {
-          "signal_date": "2026-05-19",
-          "entry_price": 346.9,
-          "sector": "Financials",
-          "analyst": "Josh Steiner",
-          "days_on_list": 0
-        },
-        "HLT": {
-          "signal_date": "2026-05-19",
-          "entry_price": null,
-          "sector": null,
-          "analyst": null,
-          "days_on_list": 0
-        },
-        "TXG": {
-          "signal_date": "2026-05-19",
-          "entry_price": 21.7,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 0
-        },
-        "LYV": {
-          "signal_date": "2026-05-19",
-          "entry_price": 164.7,
-          "sector": "Communications",
-          "analyst": "Andrew Freedman",
-          "days_on_list": 0
-        },
-        "FWONK": {
-          "signal_date": "2026-05-19",
-          "entry_price": 90.0,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 0
-        },
-        "LLY": {
-          "signal_date": "2026-05-19",
-          "entry_price": 1012.0,
-          "sector": "Healthcare",
-          "analyst": "Tom Tobin",
-          "days_on_list": 0
-        },
-        "CBRS": {
-          "signal_date": "2026-05-19",
-          "entry_price": 323.1,
-          "sector": "Global Tech",
-          "analyst": "Felix Wang",
-          "days_on_list": 0
-        }
-      }
-    },
-    "portfolio": {},
-    "call_summary": {
-      "date": "2026-05-20",
-      "quad": 2,
-      "longs": [
-        "CAVA",
-        "SXT",
-        "TJX",
-        "AS",
-        "LLY",
-        "OPEN",
-        "AR",
-        "RRC",
-        "NVDA",
-        "SITM"
-      ],
-      "shorts": [
-        "KHC",
-        "VFC",
-        "HCA",
-        "RKT",
-        "ZG",
-        "RBLX"
-      ],
-      "neutral": [
-        "TGT",
-        "EQT",
-        "TCEHY"
-      ],
-      "key_points": [
-        "SPY -2.0% from ATH, NASDAQ -2.9%, High Beta basket -20.3% \u2014 correction is selective, Quad 2 intact",
-        "Keith bought DRAM, QTUM (Quantum), ROBO (Robotics) \u2014 prefers differentiated US growth, does NOT want MAG-7 exposure",
-        "NVDA: Long into earnings, range $210\u2013$240, break level $204\u2013$205; SOXS 500M+ shares traded (3x avg) creating noise but not changing thesis",
-        "Commodities long + bonds short remain core macro calls",
-        "CPI nowcasting above 4.25%, tracking toward 4.6% for May, potentially 4.7% Q4",
-        "RKT added as Best Idea Short \u2014 Quad 3 avg return -28%, higher mortgage rates, steepening base effects",
-        "Natural gas turning bullish \u2014 LNG exports + data center demand vs. limited storage; AR, RRC on long list",
-        "CAVA: 9.7% comp, 7pts transaction growth, Q2 run-rate at/above Q1 through mid-May \u2014 Best Idea Long",
-        "SITM: Down from ~$900 to <$700 \u2014 buying opportunity despite $1.2B convert headwind",
-        "XOP: Significant bullish trend; natural gas establishing new higher floor"
-      ],
-      "trades_mentioned": [
-        "CAVA \u2014 elevated to Best Idea Long on 9.7% comp + accelerating Q2 run-rate",
-        "RKT \u2014 added as Best Idea Short (Quad 3 avg -28%, mortgage rate headwinds)",
-        "SITM \u2014 pullback opportunity at range low despite convert-related headwind",
-        "DRAM, QTUM, ROBO \u2014 Keith bought on weakness (differentiated growth over SPY)",
-        "HCA \u2014 downgraded at JPMorgan; rising yields inverse correlation; still short"
-      ],
-      "keith_outlook": "Selective correction inside a Quad 2 bull market \u2014 SPY barely off highs, High Beta Momentum basket crashed -20.3%. Buying differentiated growth (DRAM, Quantum, Robotics) on sale. Does not want MAG-7 exposure. NVDA is the only exception into earnings tonight. Core positioning: commodities long, bonds short. CPI tracking toward 4.6% for May.",
-      "ticker_mentions": {
-        "NVDA": {
-          "signal": "BULLISH",
-          "lrr": 210,
-          "trr": 240,
-          "break_level": 204,
-          "key_thesis": "Long into earnings; model projects strong data center print; break 204-205 = sell"
-        },
-        "CAVA": {
-          "signal": "BULLISH",
-          "key_thesis": "9.7% comp, 7pts transaction growth, Q2 run-rate at/above Q1"
-        },
-        "RKT": {
-          "signal": "BEARISH",
-          "key_thesis": "Quad 3 avg -28%, higher mortgage rates, steepening base effects"
-        },
-        "SITM": {
-          "signal": "BULLISH",
-          "key_thesis": "Pullback from $900 to <$700; organic business strong; buying at range low"
-        },
-        "SXT": {
-          "signal": "BULLISH",
-          "key_thesis": "MAHA natural colors thesis; SXT $1B revenue opportunity replacing artificial food colors"
-        },
-        "VFC": {
-          "signal": "BEARISH",
-          "key_thesis": "Needs $1-2B equity offering; stock at high end of range; shortable"
-        },
-        "AR": {
-          "signal": "BULLISH",
-          "key_thesis": "Natural gas bull thesis; LNG + data center demand"
-        },
-        "RRC": {
-          "signal": "BULLISH",
-          "key_thesis": "Natural gas bull thesis; limited storage capacity"
-        },
-        "XOP": {
-          "signal": "BULLISH",
-          "key_thesis": "Significant bullish trend in energy"
-        },
-        "OPEN": {
-          "signal": "BEARISH",
-          "key_thesis": "Rate-sensitive housing short cluster; mortgage rates elevated"
-        },
-        "ZG": {
-          "signal": "BEARISH",
-          "key_thesis": "Rate-sensitive housing short cluster"
-        },
-        "TGT": {
-          "signal": "NEUTRAL",
-          "key_thesis": "Bearish-to-bullish reversal watch; new CEO; online sales up 9%"
-        }
-      }
-    },
-    "macro_show_notes": {
-      "date": "2026-05-20",
-      "key_points": [
-        "QQQ -3% from ATH; High Beta basket -20.3% \u2014 correction is selective, Quad 2 intact",
-        "Keith bought QTUM, ROBO, DRAM on weakness \u2014 buying Quad2 growth on sale",
-        "BTC bounced off LRR; trim if TRADE ($78,012) not recaptured; TREND at $74,663",
-        "Bond Yields + Commodities at new Inflation Cycle Highs \u2014 Quad 3 thesis accelerating",
-        "UK 10yr yield at 5.17% Cycle High, correcting from TRR \u2014 global yield relief trade",
-        "Indonesia IDX Crash Call confirmed \u2014 panic rate hike validates short",
-        "Process: TRADE breaks = reduce. Holding TRADE support = add on red (e.g. ROBO)"
-      ],
-      "positioning_changes": [
-        "Added QTUM, ROBO, DRAM on weakness",
-        "Considering trimming BTC if $78,012 TRADE not recaptured"
-      ],
-      "keith_watching": [
-        "BTC TRADE signal recapture at $78,012",
-        "NVDA earnings tonight \u2014 range $210-$240, break level $204-$205",
-        "Global yields correcting from TRRs \u2014 duration of relief",
-        "High Beta Momentum basket stabilization"
-      ]
-    },
-    "etf_rerank_commentary": "PA 5/21: Added TILL (min). Sold all IBIT and XLI. Sold 100bps IWM. Sold 50bps STIP, HYG, VXF, SLX, QTUM, ROBO, OAEM, XTL. Bought 50bps COM, CNXT, SOYB. 1-wk top movers: VXF +10, QTUM +9, CNXT +8, OAEM +5, IWM +4."
-  },
-  "sss_history": [
-    {
-      "date": "2026-05-21",
-      "count": 77,
-      "added": 0,
-      "removed": 0,
-      "note": "No SSS update today \u2014 May 20 list (77 tickers) remains current"
-    },
-    {
-      "date": "2026-05-19",
-      "count": 77,
-      "added": 7,
-      "removed": 2
-    },
-    {
-      "date": "2026-05-18",
-      "count": 72,
-      "added": 3,
-      "removed": 1
-    },
-    {
-      "date": "2026-05-15",
-      "count": 70,
-      "added": 0,
-      "removed": 7
-    },
-    {
-      "date": "2026-05-14",
-      "count": 77,
-      "added": 0,
-      "removed": 4
-    },
-    {
-      "date": "2026-05-12",
-      "count": 87,
-      "added": 6,
-      "removed": 4
-    }
-  ],
-  "ham_deltas": {
-    "as_of": "2026-05-21",
-    "daily": {
-      "CASY": {
-        "delta": -0.0061,
-        "added": false,
-        "removed": false,
-        "cur": 0.0496,
-        "prior": 0.0557
-      },
-      "RDDT": {
-        "delta": 0.0101,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0101
-      },
-      "TAN": {
-        "delta": 0.0011,
-        "added": false,
-        "removed": false,
-        "cur": 0.0456,
-        "prior": 0.0445
-      },
-      "SXT": {
-        "delta": 0.0029,
-        "added": false,
-        "removed": false,
-        "cur": 0.022,
-        "prior": 0.0191
-      },
-      "GEV": {
-        "delta": 0.0041,
-        "added": false,
-        "removed": false,
-        "cur": 0.0444,
-        "prior": 0.0403
-      },
-      "CF": {
-        "delta": -0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0138,
-        "prior": 0.0144
-      },
-      "JETS": {
-        "delta": -0.0099,
-        "added": true,
-        "removed": false,
-        "cur": -0.0099,
-        "prior": 0
-      },
-      "MKSI": {
-        "delta": 0.001,
-        "added": false,
-        "removed": false,
-        "cur": 0.0217,
-        "prior": 0.0207
-      },
-      "RBLX": {
-        "delta": -0.0101,
-        "added": false,
-        "removed": false,
-        "cur": -0.018,
-        "prior": -0.0079
-      },
-      "BNY": {
-        "delta": 0.0121,
-        "added": true,
-        "removed": false,
-        "cur": 0.0121,
-        "prior": 0
-      },
-      "DRAM": {
-        "delta": 0.001,
-        "added": false,
-        "removed": false,
-        "cur": 0.0302,
-        "prior": 0.0292
-      },
-      "AMAT": {
-        "delta": 0.001,
-        "added": false,
-        "removed": false,
-        "cur": 0.026,
-        "prior": 0.025
-      },
-      "GOOGL": {
-        "delta": -0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.1118,
-        "prior": 0.1125
-      },
-      "CSCO": {
-        "delta": -0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.0336,
-        "prior": 0.0343
-      },
-      "UNH": {
-        "delta": 0.0193,
-        "added": false,
-        "removed": false,
-        "cur": 0.0403,
-        "prior": 0.021
-      },
-      "VTIP": {
-        "delta": -0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.1118,
-        "prior": 0.1125
-      },
-      "TWLO": {
-        "delta": 0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0228,
-        "prior": 0.0219
-      },
-      "ARTY": {
-        "delta": 0.0016,
-        "added": false,
-        "removed": false,
-        "cur": 0.0437,
-        "prior": 0.0421
-      },
-      "BK": {
-        "delta": -0.0121,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0121
-      },
-      "LLY": {
-        "delta": 0.0019,
-        "added": false,
-        "removed": false,
-        "cur": 0.0273,
-        "prior": 0.0254
-      },
-      "LNG": {
-        "delta": -0.0124,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0124
-      },
-      "AMZN": {
-        "delta": 0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.0599,
-        "prior": 0.0592
-      },
-      "FGXXX": {
-        "delta": -0.0326,
-        "added": false,
-        "removed": false,
-        "cur": 0.2336,
-        "prior": 0.2662
-      },
-      "FWD": {
-        "delta": 0.0011,
-        "added": false,
-        "removed": false,
-        "cur": 0.0548,
-        "prior": 0.0537
-      },
-      "NOW": {
-        "delta": 0.0083,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0083
-      },
-      "XLE": {
-        "delta": -0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0309,
-        "prior": 0.0318
-      },
-      "GS": {
-        "delta": 0.0011,
-        "added": false,
-        "removed": false,
-        "cur": 0.0229,
-        "prior": 0.0218
-      },
-      "MUSA": {
-        "delta": 0.0062,
-        "added": false,
-        "removed": false,
-        "cur": 0.027,
-        "prior": 0.0208
-      },
-      "DBMF": {
-        "delta": -0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0701,
-        "prior": 0.071
-      },
-      "ITB": {
-        "delta": -0.0009,
-        "added": false,
-        "removed": false,
-        "cur": -0.0206,
-        "prior": -0.0197
-      },
-      "TTWO": {
-        "delta": 0.0036,
-        "added": false,
-        "removed": false,
-        "cur": 0.0319,
-        "prior": 0.0283
-      },
-      "CERY": {
-        "delta": -0.0026,
-        "added": false,
-        "removed": false,
-        "cur": 0.1406,
-        "prior": 0.1432
-      },
-      "RIG": {
-        "delta": -0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.0347,
-        "prior": 0.0354
-      },
-      "DAR": {
-        "delta": -0.0192,
-        "added": false,
-        "removed": false,
-        "cur": 0.0148,
-        "prior": 0.034
-      },
-      "SBUX": {
-        "delta": -0.003,
-        "added": false,
-        "removed": false,
-        "cur": 0.0353,
-        "prior": 0.0383
-      },
-      "HGER": {
-        "delta": -0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0334,
-        "prior": 0.034
-      },
-      "DDS": {
-        "delta": -0.0075,
-        "added": false,
-        "removed": false,
-        "cur": -0.0175,
-        "prior": -0.01
-      },
-      "ADI": {
-        "delta": -0.0008,
-        "added": false,
-        "removed": false,
-        "cur": 0.0171,
-        "prior": 0.0179
-      },
-      "FESM": {
-        "delta": 0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.0404,
-        "prior": 0.0397
-      },
-      "MMM": {
-        "delta": 0.005,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.005
-      },
-      "PM": {
-        "delta": -0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0268,
-        "prior": 0.0274
-      },
-      "VLO": {
-        "delta": -0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0123,
-        "prior": 0.0129
-      },
-      "APD": {
-        "delta": -0.0202,
-        "added": false,
-        "removed": false,
-        "cur": 0.0107,
-        "prior": 0.0309
-      },
-      "LUV": {
-        "delta": -0.0099,
-        "added": true,
-        "removed": false,
-        "cur": -0.0099,
-        "prior": 0
-      },
-      "MRVL": {
-        "delta": 0.0014,
-        "added": false,
-        "removed": false,
-        "cur": 0.027,
-        "prior": 0.0256
-      },
-      "VTI": {
-        "delta": 0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0896,
-        "prior": 0.0887
-      },
-      "GPN": {
-        "delta": 0.0099,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0099
-      },
-      "INTC": {
-        "delta": 0.0026,
-        "added": false,
-        "removed": false,
-        "cur": 0.0399,
-        "prior": 0.0373
-      },
-      "EPHE": {
-        "delta": -0.005,
-        "added": false,
-        "removed": false,
-        "cur": -0.01,
-        "prior": -0.005
-      },
-      "XBI": {
-        "delta": 0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0155,
-        "prior": 0.0149
-      },
-      "CHTR": {
-        "delta": -0.0075,
-        "added": false,
-        "removed": false,
-        "cur": -0.0176,
-        "prior": -0.0101
-      },
-      "KMI": {
-        "delta": 0.0099,
-        "added": true,
-        "removed": false,
-        "cur": 0.0099,
-        "prior": 0
-      },
-      "MEOH": {
-        "delta": -0.0095,
-        "added": false,
-        "removed": false,
-        "cur": 0.01,
-        "prior": 0.0195
-      },
-      "AMD": {
-        "delta": 0.0014,
-        "added": false,
-        "removed": false,
-        "cur": 0.0204,
-        "prior": 0.019
-      },
-      "GFS": {
-        "delta": 0.0072,
-        "added": true,
-        "removed": false,
-        "cur": 0.0072,
-        "prior": 0
-      },
-      "EWG": {
-        "delta": -0.005,
-        "added": false,
-        "removed": false,
-        "cur": -0.01,
-        "prior": -0.005
-      },
-      "SLX": {
-        "delta": 0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0508,
-        "prior": 0.0502
-      }
-    },
-    "weekly": {
-      "MAR": {
-        "delta": 0.0044,
-        "added": false,
-        "removed": false,
-        "cur": 0.0269,
-        "prior": 0.0225
-      },
-      "CASY": {
-        "delta": 0.0016,
-        "added": false,
-        "removed": false,
-        "cur": 0.0496,
-        "prior": 0.048
-      },
-      "LIN": {
-        "delta": 0.003,
-        "added": false,
-        "removed": false,
-        "cur": 0.0264,
-        "prior": 0.0234
-      },
-      "CRCL": {
-        "delta": -0.0014,
-        "added": false,
-        "removed": false,
-        "cur": 0.0159,
-        "prior": 0.0173
-      },
-      "V": {
-        "delta": 0.0036,
-        "added": false,
-        "removed": false,
-        "cur": 0.0214,
-        "prior": 0.0178
-      },
-      "ACI": {
-        "delta": 0.0096,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0096
-      },
-      "ROBO": {
-        "delta": -0.0056,
-        "added": false,
-        "removed": false,
-        "cur": 0.0149,
-        "prior": 0.0205
-      },
-      "TAN": {
-        "delta": 0.0205,
-        "added": false,
-        "removed": false,
-        "cur": 0.0456,
-        "prior": 0.0251
-      },
-      "TAP": {
-        "delta": -0.0006,
-        "added": false,
-        "removed": false,
-        "cur": -0.0095,
-        "prior": -0.0089
-      },
-      "JNK": {
-        "delta": -0.01,
-        "added": true,
-        "removed": false,
-        "cur": -0.01,
-        "prior": 0
-      },
-      "SXT": {
-        "delta": 0.0075,
-        "added": false,
-        "removed": false,
-        "cur": 0.022,
-        "prior": 0.0145
-      },
-      "SYY": {
-        "delta": -0.0008,
-        "added": false,
-        "removed": false,
-        "cur": -0.0173,
-        "prior": -0.0165
-      },
-      "GEV": {
-        "delta": -0.0137,
-        "added": false,
-        "removed": false,
-        "cur": 0.0444,
-        "prior": 0.0581
-      },
-      "ENB": {
-        "delta": 0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.021,
-        "prior": 0.0201
-      },
-      "JETS": {
-        "delta": -0.0099,
-        "added": true,
-        "removed": false,
-        "cur": -0.0099,
-        "prior": 0
-      },
-      "BNY": {
-        "delta": 0.0121,
-        "added": true,
-        "removed": false,
-        "cur": 0.0121,
-        "prior": 0
-      },
-      "HCA": {
-        "delta": 0.0102,
-        "added": false,
-        "removed": false,
-        "cur": -0.0073,
-        "prior": -0.0175
-      },
-      "AVEM": {
-        "delta": -0.0193,
-        "added": false,
-        "removed": false,
-        "cur": 0.0192,
-        "prior": 0.0385
-      },
-      "DRAM": {
-        "delta": 0.0029,
-        "added": false,
-        "removed": false,
-        "cur": 0.0302,
-        "prior": 0.0273
-      },
-      "AMAT": {
-        "delta": 0.0067,
-        "added": false,
-        "removed": false,
-        "cur": 0.026,
-        "prior": 0.0193
-      },
-      "GOOGL": {
-        "delta": -0.0013,
-        "added": false,
-        "removed": false,
-        "cur": 0.1118,
-        "prior": 0.1131
-      },
-      "CSCO": {
-        "delta": -0.0052,
-        "added": false,
-        "removed": false,
-        "cur": 0.0336,
-        "prior": 0.0388
-      },
-      "XTL": {
-        "delta": 0.0462,
-        "added": false,
-        "removed": false,
-        "cur": 0.0602,
-        "prior": 0.014
-      },
-      "UNH": {
-        "delta": 0.0194,
-        "added": false,
-        "removed": false,
-        "cur": 0.0403,
-        "prior": 0.0209
-      },
-      "NVDA": {
-        "delta": -0.0032,
-        "added": false,
-        "removed": false,
-        "cur": 0.0956,
-        "prior": 0.0988
-      },
-      "CWEN": {
-        "delta": -0.0062,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0062
-      },
-      "NKE": {
-        "delta": -0.0007,
-        "added": false,
-        "removed": false,
-        "cur": -0.0099,
-        "prior": -0.0092
-      },
-      "HTEC": {
-        "delta": -0.002,
-        "added": false,
-        "removed": false,
-        "cur": 0.0076,
-        "prior": 0.0096
-      },
-      "CAVA": {
-        "delta": -0.0023,
-        "added": false,
-        "removed": false,
-        "cur": 0.0168,
-        "prior": 0.0191
-      },
-      "VTIP": {
-        "delta": 0.0298,
-        "added": false,
-        "removed": false,
-        "cur": 0.1118,
-        "prior": 0.082
-      },
-      "JBHT": {
-        "delta": 0.0011,
-        "added": false,
-        "removed": false,
-        "cur": 0.0212,
-        "prior": 0.0201
-      },
-      "TWLO": {
-        "delta": 0.0013,
-        "added": false,
-        "removed": false,
-        "cur": 0.0228,
-        "prior": 0.0215
-      },
-      "ARTY": {
-        "delta": -0.0011,
-        "added": false,
-        "removed": false,
-        "cur": 0.0437,
-        "prior": 0.0448
-      },
-      "BK": {
-        "delta": -0.0118,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0118
-      },
-      "GTBIF": {
-        "delta": -0.009,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.009
-      },
-      "LLY": {
-        "delta": 0.0127,
-        "added": false,
-        "removed": false,
-        "cur": 0.0273,
-        "prior": 0.0146
-      },
-      "TER": {
-        "delta": -0.0077,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0077
-      },
-      "LNG": {
-        "delta": -0.0167,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0167
-      },
-      "PDBA": {
-        "delta": -0.0046,
-        "added": false,
-        "removed": false,
-        "cur": 0.0275,
-        "prior": 0.0321
-      },
-      "KLAC": {
-        "delta": -0.0034,
-        "added": false,
-        "removed": false,
-        "cur": 0.0104,
-        "prior": 0.0138
-      },
-      "AMZN": {
-        "delta": 0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.0599,
-        "prior": 0.0592
-      },
-      "HBM": {
-        "delta": 0.0148,
-        "added": true,
-        "removed": false,
-        "cur": 0.0148,
-        "prior": 0
-      },
-      "DBB": {
-        "delta": -0.02,
-        "added": false,
-        "removed": false,
-        "cur": 0.023,
-        "prior": 0.043
-      },
-      "MRK": {
-        "delta": -0.014,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.014
-      },
-      "FGXXX": {
-        "delta": -0.0094,
-        "added": false,
-        "removed": false,
-        "cur": 0.2336,
-        "prior": 0.243
-      },
-      "RSI": {
-        "delta": -0.009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0151,
-        "prior": 0.0241
-      },
-      "CIBR": {
-        "delta": 0.0013,
-        "added": false,
-        "removed": false,
-        "cur": 0.0267,
-        "prior": 0.0254
-      },
-      "FCFS": {
-        "delta": 0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0417,
-        "prior": 0.0411
-      },
-      "FWD": {
-        "delta": 0.0068,
-        "added": false,
-        "removed": false,
-        "cur": 0.0548,
-        "prior": 0.048
-      },
-      "WING": {
-        "delta": -0.0101,
-        "added": true,
-        "removed": false,
-        "cur": -0.0101,
-        "prior": 0
-      },
-      "AVGO": {
-        "delta": -0.0037,
-        "added": false,
-        "removed": false,
-        "cur": 0.03,
-        "prior": 0.0337
-      },
-      "GLD": {
-        "delta": -0.0185,
-        "added": false,
-        "removed": false,
-        "cur": 0.0199,
-        "prior": 0.0384
-      },
-      "VGK": {
-        "delta": -0.0121,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0121
-      },
-      "NOW": {
-        "delta": 0.0169,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0169
-      },
-      "XLE": {
-        "delta": 0.0012,
-        "added": false,
-        "removed": false,
-        "cur": 0.0309,
-        "prior": 0.0297
-      },
-      "BRBR": {
-        "delta": -0.0017,
-        "added": false,
-        "removed": false,
-        "cur": -0.0181,
-        "prior": -0.0164
-      },
-      "MPC": {
-        "delta": 0.0008,
-        "added": false,
-        "removed": false,
-        "cur": 0.0155,
-        "prior": 0.0147
-      },
-      "CZR": {
-        "delta": -0.0041,
-        "added": false,
-        "removed": false,
-        "cur": 0.0223,
-        "prior": 0.0264
-      },
-      "LIT": {
-        "delta": -0.013,
-        "added": false,
-        "removed": false,
-        "cur": 0.0288,
-        "prior": 0.0418
-      },
-      "LH": {
-        "delta": 0.0096,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0096
-      },
-      "IHF": {
-        "delta": 0.0089,
-        "added": false,
-        "removed": false,
-        "cur": 0.0468,
-        "prior": 0.0379
-      },
-      "NOV": {
-        "delta": 0.0008,
-        "added": false,
-        "removed": false,
-        "cur": 0.0196,
-        "prior": 0.0188
-      },
-      "USPH": {
-        "delta": 0.0006,
-        "added": false,
-        "removed": false,
-        "cur": -0.018,
-        "prior": -0.0186
-      },
-      "HAL": {
-        "delta": 0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0199,
-        "prior": 0.019
-      },
-      "GS": {
-        "delta": 0.0008,
-        "added": false,
-        "removed": false,
-        "cur": 0.0229,
-        "prior": 0.0221
-      },
-      "MUSA": {
-        "delta": 0.0065,
-        "added": false,
-        "removed": false,
-        "cur": 0.027,
-        "prior": 0.0205
-      },
-      "DBMF": {
-        "delta": 0.0349,
-        "added": false,
-        "removed": false,
-        "cur": 0.0701,
-        "prior": 0.0352
-      },
-      "URI": {
-        "delta": 0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0394,
-        "prior": 0.0385
-      },
-      "ITB": {
-        "delta": -0.002,
-        "added": false,
-        "removed": false,
-        "cur": -0.0206,
-        "prior": -0.0186
-      },
-      "IDMO": {
-        "delta": -0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.0151,
-        "prior": 0.016
-      },
-      "DBJP": {
-        "delta": 0.0207,
-        "added": false,
-        "removed": false,
-        "cur": 0.0549,
-        "prior": 0.0342
-      },
-      "PPLT": {
-        "delta": -0.0098,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0098
-      },
-      "SNAP": {
-        "delta": -0.0103,
-        "added": true,
-        "removed": false,
-        "cur": -0.0103,
-        "prior": 0
-      },
-      "STX": {
-        "delta": -0.003,
-        "added": false,
-        "removed": false,
-        "cur": 0.0102,
-        "prior": 0.0132
-      },
-      "TTWO": {
-        "delta": 0.0039,
-        "added": false,
-        "removed": false,
-        "cur": 0.0319,
-        "prior": 0.028
-      },
-      "CERY": {
-        "delta": 0.004,
-        "added": false,
-        "removed": false,
-        "cur": 0.1406,
-        "prior": 0.1366
-      },
-      "RIG": {
-        "delta": 0.0025,
-        "added": false,
-        "removed": false,
-        "cur": 0.0347,
-        "prior": 0.0322
-      },
-      "EWQ": {
-        "delta": -0.0051,
-        "added": true,
-        "removed": false,
-        "cur": -0.0051,
-        "prior": 0
-      },
-      "CBOE": {
-        "delta": 0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0225,
-        "prior": 0.0219
-      },
-      "DAR": {
-        "delta": -0.0181,
-        "added": false,
-        "removed": false,
-        "cur": 0.0148,
-        "prior": 0.0329
-      },
-      "JAZZ": {
-        "delta": 0.0014,
-        "added": false,
-        "removed": false,
-        "cur": 0.026,
-        "prior": 0.0246
-      },
-      "ONON": {
-        "delta": -0.0032,
-        "added": false,
-        "removed": false,
-        "cur": -0.0101,
-        "prior": -0.0069
-      },
-      "SBUX": {
-        "delta": -0.0017,
-        "added": false,
-        "removed": false,
-        "cur": 0.0353,
-        "prior": 0.037
-      },
-      "HGER": {
-        "delta": -0.0047,
-        "added": false,
-        "removed": false,
-        "cur": 0.0334,
-        "prior": 0.0381
-      },
-      "HYG": {
-        "delta": -0.01,
-        "added": true,
-        "removed": false,
-        "cur": -0.01,
-        "prior": 0
-      },
-      "ULS": {
-        "delta": 0.0071,
-        "added": false,
-        "removed": false,
-        "cur": 0.0359,
-        "prior": 0.0288
-      },
-      "CSX": {
-        "delta": 0.001,
-        "added": false,
-        "removed": false,
-        "cur": 0.0443,
-        "prior": 0.0433
-      },
-      "COHR": {
-        "delta": -0.0026,
-        "added": false,
-        "removed": false,
-        "cur": 0.005,
-        "prior": 0.0076
-      },
-      "KSS": {
-        "delta": -0.0105,
-        "added": true,
-        "removed": false,
-        "cur": -0.0105,
-        "prior": 0
-      },
-      "LAMR": {
-        "delta": 0.0007,
-        "added": false,
-        "removed": false,
-        "cur": 0.0154,
-        "prior": 0.0147
-      },
-      "VIK": {
-        "delta": 0.0082,
-        "added": false,
-        "removed": false,
-        "cur": 0.0304,
-        "prior": 0.0222
-      },
-      "CAT": {
-        "delta": -0.0013,
-        "added": false,
-        "removed": false,
-        "cur": 0.0362,
-        "prior": 0.0375
-      },
-      "GLW": {
-        "delta": -0.0033,
-        "added": false,
-        "removed": false,
-        "cur": 0.0071,
-        "prior": 0.0104
-      },
-      "DDS": {
-        "delta": -0.0175,
-        "added": true,
-        "removed": false,
-        "cur": -0.0175,
-        "prior": 0
-      },
-      "ADM": {
-        "delta": -0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0159,
-        "prior": 0.0165
-      },
-      "GRID": {
-        "delta": -0.0023,
-        "added": false,
-        "removed": false,
-        "cur": 0.0168,
-        "prior": 0.0191
-      },
-      "ADI": {
-        "delta": -0.0064,
-        "added": false,
-        "removed": false,
-        "cur": 0.0171,
-        "prior": 0.0235
-      },
-      "DASH": {
-        "delta": 0.0098,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0098
-      },
-      "FESM": {
-        "delta": -0.0085,
-        "added": false,
-        "removed": false,
-        "cur": 0.0404,
-        "prior": 0.0489
-      },
-      "MMM": {
-        "delta": 0.0099,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0099
-      },
-      "PM": {
-        "delta": 0.0143,
-        "added": false,
-        "removed": false,
-        "cur": 0.0268,
-        "prior": 0.0125
-      },
-      "PICK": {
-        "delta": -0.0213,
-        "added": false,
-        "removed": false,
-        "cur": 0.0118,
-        "prior": 0.0331
-      },
-      "OIH": {
-        "delta": 0.02,
-        "added": false,
-        "removed": false,
-        "cur": 0.0776,
-        "prior": 0.0576
-      },
-      "FLO": {
-        "delta": -0.0024,
-        "added": false,
-        "removed": false,
-        "cur": -0.01,
-        "prior": -0.0076
-      },
-      "SPHR": {
-        "delta": -0.0046,
-        "added": false,
-        "removed": false,
-        "cur": 0.0148,
-        "prior": 0.0194
-      },
-      "BSOL": {
-        "delta": -0.0095,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0095
-      },
-      "VLO": {
-        "delta": 0.0006,
-        "added": false,
-        "removed": false,
-        "cur": 0.0123,
-        "prior": 0.0117
-      },
-      "APD": {
-        "delta": -0.0306,
-        "added": false,
-        "removed": false,
-        "cur": 0.0107,
-        "prior": 0.0413
-      },
-      "LUV": {
-        "delta": -0.0099,
-        "added": true,
-        "removed": false,
-        "cur": -0.0099,
-        "prior": 0
-      },
-      "UUP": {
-        "delta": 0.0554,
-        "added": true,
-        "removed": false,
-        "cur": 0.0554,
-        "prior": 0
-      },
-      "MRVL": {
-        "delta": 0.0011,
-        "added": false,
-        "removed": false,
-        "cur": 0.027,
-        "prior": 0.0259
-      },
-      "PAVE": {
-        "delta": -0.0138,
-        "added": false,
-        "removed": false,
-        "cur": 0.0149,
-        "prior": 0.0287
-      },
-      "IDXX": {
-        "delta": -0.01,
-        "added": true,
-        "removed": false,
-        "cur": -0.01,
-        "prior": 0
-      },
-      "GPN": {
-        "delta": 0.0095,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": -0.0095
-      },
-      "IDX": {
-        "delta": -0.0099,
-        "added": true,
-        "removed": false,
-        "cur": -0.0099,
-        "prior": 0
-      },
-      "GII": {
-        "delta": -0.0284,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0284
-      },
-      "INTC": {
-        "delta": 0.0016,
-        "added": false,
-        "removed": false,
-        "cur": 0.0399,
-        "prior": 0.0383
-      },
-      "EPHE": {
-        "delta": -0.01,
-        "added": true,
-        "removed": false,
-        "cur": -0.01,
-        "prior": 0
-      },
-      "MP": {
-        "delta": -0.0084,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0084
-      },
-      "IBIT": {
-        "delta": 0.0015,
-        "added": false,
-        "removed": false,
-        "cur": 0.0511,
-        "prior": 0.0496
-      },
-      "XBI": {
-        "delta": -0.0029,
-        "added": false,
-        "removed": false,
-        "cur": 0.0155,
-        "prior": 0.0184
-      },
-      "ASHR": {
-        "delta": -0.0204,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0204
-      },
-      "CHTR": {
-        "delta": -0.0093,
-        "added": false,
-        "removed": false,
-        "cur": -0.0176,
-        "prior": -0.0083
-      },
-      "KMI": {
-        "delta": 0.0099,
-        "added": true,
-        "removed": false,
-        "cur": 0.0099,
-        "prior": 0
-      },
-      "VPL": {
-        "delta": -0.008,
-        "added": false,
-        "removed": false,
-        "cur": 0.0151,
-        "prior": 0.0231
-      },
-      "FXF": {
-        "delta": -0.025,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.025
-      },
-      "PLAY": {
-        "delta": -0.0009,
-        "added": false,
-        "removed": false,
-        "cur": -0.0093,
-        "prior": -0.0084
-      },
-      "MEOH": {
-        "delta": -0.0091,
-        "added": false,
-        "removed": false,
-        "cur": 0.01,
-        "prior": 0.0191
-      },
-      "ORCL": {
-        "delta": -0.0042,
-        "added": false,
-        "removed": false,
-        "cur": 0.0113,
-        "prior": 0.0155
-      },
-      "VYM": {
-        "delta": 0.0192,
-        "added": false,
-        "removed": false,
-        "cur": 0.0412,
-        "prior": 0.022
-      },
-      "GFS": {
-        "delta": 0.0072,
-        "added": true,
-        "removed": false,
-        "cur": 0.0072,
-        "prior": 0
-      },
-      "AAPL": {
-        "delta": 0.004,
-        "added": false,
-        "removed": false,
-        "cur": 0.121,
-        "prior": 0.117
-      },
-      "ABNB": {
-        "delta": -0.0095,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0095
-      },
-      "EWG": {
-        "delta": -0.01,
-        "added": true,
-        "removed": false,
-        "cur": -0.01,
-        "prior": 0
-      },
-      "SLX": {
-        "delta": 0.0177,
-        "added": false,
-        "removed": false,
-        "cur": 0.0508,
-        "prior": 0.0331
-      },
-      "XLY": {
-        "delta": -0.0097,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0097
-      },
-      "EWJ": {
-        "delta": -0.0097,
-        "added": false,
-        "removed": true,
-        "cur": 0,
-        "prior": 0.0097
-      },
-      "INDA": {
-        "delta": -0.0019,
-        "added": false,
-        "removed": false,
-        "cur": -0.02,
-        "prior": -0.0181
-      },
-      "JAAA": {
-        "delta": 0.0009,
-        "added": false,
-        "removed": false,
-        "cur": 0.06,
-        "prior": 0.0591
-      },
-      "LCID": {
-        "delta": 0.0008,
-        "added": false,
-        "removed": false,
-        "cur": -0.0089,
-        "prior": -0.0097
-      },
-      "WDC": {
-        "delta": -0.0008,
-        "added": false,
-        "removed": false,
-        "cur": 0.0176,
-        "prior": 0.0184
-      },
-      "IHE": {
-        "delta": 0.0105,
-        "added": false,
-        "removed": false,
-        "cur": 0.0202,
-        "prior": 0.0097
-      }
-    },
-    "daily_added": [
-      "JETS",
-      "BNY",
-      "LUV",
-      "KMI",
-      "GFS"
-    ],
-    "daily_removed": [
-      "RDDT",
-      "BK",
-      "LNG",
-      "NOW",
-      "MMM",
-      "GPN"
-    ],
-    "weekly_added": [
-      "JNK",
-      "JETS",
-      "BNY",
-      "HBM",
-      "WING",
-      "SNAP",
-      "EWQ",
-      "HYG",
-      "KSS",
-      "DDS",
-      "LUV",
-      "UUP",
-      "IDXX",
-      "IDX",
-      "EPHE",
-      "KMI",
-      "GFS",
-      "EWG"
-    ],
-    "weekly_removed": [
-      "ACI",
-      "CWEN",
-      "BK",
-      "GTBIF",
-      "TER",
-      "LNG",
-      "MRK",
-      "VGK",
-      "NOW",
-      "LH",
-      "PPLT",
-      "DASH",
-      "MMM",
-      "BSOL",
-      "GPN",
-      "GII",
-      "MP",
-      "ASHR",
-      "FXF",
-      "ABNB",
-      "XLY",
-      "EWJ"
-    ]
-  }
+  "sss_history": []
 }
