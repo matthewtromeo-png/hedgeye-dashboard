@@ -268,3 +268,111 @@ window.HE.loadHamCache = async function() {
 
 // ── Live source metadata (written by ingestion, read by tabs) ────────────────
 window.HE.setLiveSource = function(category, meta) {
+  try {
+    const all = JSON.parse(localStorage.getItem('he_live_sources') || '{}');
+    all[category] = meta;
+    localStorage.setItem('he_live_sources', JSON.stringify(all));
+  } catch (e) { console.warn('[HE] setLiveSource:', e.message); }
+};
+window.HE.getLiveSource = function(category) {
+  try {
+    return JSON.parse(localStorage.getItem('he_live_sources') || '{}')[category] || null;
+  } catch { return null; }
+};
+
+// Apply persisted live SSS at startup (before React mounts)
+;(function() {
+  try {
+    const live = JSON.parse(localStorage.getItem('he_sss_live') || '{}');
+    if (live.entries?.length > 3) window.HE.SSS = live.entries;
+  } catch {}
+})();
+
+// ── CSV Parser ─────────────────────────────────────────────────────
+window.HE.parseCSV = function(text) {
+  const lines = text.replace(/\r/g,'').trim().split('\n');
+  const headers = lines[0].split(',').map(h => h.replace(/"/g,'').trim());
+  return lines.slice(1).filter(l => l.trim()).map(line => {
+    const vals = [];
+    let cur = '', inQ = false;
+    for (const c of line) {
+      if (c === '"') { inQ = !inQ; }
+      else if (c === ',' && !inQ) { vals.push(cur.trim()); cur = ''; }
+      else { cur += c; }
+    }
+    vals.push(cur.trim());
+    return Object.fromEntries(headers.map((h,i) => [h, vals[i]||'']));
+  });
+};
+
+// ── RTA Stats Calculator ───────────────────────────────────────────
+window.HE.computeRTAStats = function(trades) {
+  const closed = trades.filter(t => t['Close Date'] && t['Realized Return'] !== '');
+  const returns = closed.map(t => parseFloat(t['Realized Return'])||0);
+  const wins = returns.filter(r => r > 0).length;
+  const losses = returns.filter(r => r <= 0).length;
+
+  // By year
+  const byYear = {};
+  closed.forEach(t => {
+    const y = (t['Close Date']||'').slice(0,4);
+    if (!y || y.length !== 4 || isNaN(+y)) return;
+    if (!byYear[y]) byYear[y] = {count:0,wins:0,sumReturn:0,best:-Infinity,worst:Infinity};
+    const r = parseFloat(t['Realized Return'])||0;
+    byYear[y].count++;
+    if (r > 0) byYear[y].wins++;
+    byYear[y].sumReturn += r;
+    if (r > byYear[y].best) byYear[y].best = r;
+    if (r < byYear[y].worst) byYear[y].worst = r;
+  });
+
+  // Cumulative P&L — last 600 trades by close date
+  const chronological = [...closed]
+    .sort((a,b) => new Date(a['Close Date']) - new Date(b['Close Date']))
+    .slice(-600);
+  let cum = 0;
+  const cumPnl = chronological.map(t => {
+    cum += parseFloat(t['Realized Return'])||0;
+    return {date:(t['Close Date']||'').slice(0,10), cum, r:parseFloat(t['Realized Return'])||0};
+  });
+
+  // Best/worst
+  const sorted = [...closed].sort((a,b) =>
+    (parseFloat(b['Realized Return'])||0) - (parseFloat(a['Realized Return'])||0));
+
+  return {
+    total: closed.length,
+    wins, losses,
+    winRate: closed.length ? wins/closed.length : 0,
+    avgReturn: returns.length ? returns.reduce((a,b)=>a+b,0)/returns.length : 0,
+    byYear,
+    cumPnl,
+    best: sorted[0],
+    worst: sorted[sorted.length-1],
+    recentTrades: [...closed]
+      .sort((a,b) => new Date(b['Close Date']) - new Date(a['Close Date']))
+      .slice(0,300),
+  };
+};
+
+// ── Live source metadata (written by ingestion, read by tabs) ────────────────
+window.HE.setLiveSource = function(category, meta) {
+  try {
+    const all = JSON.parse(localStorage.getItem('he_live_sources') || '{}');
+    all[category] = meta;
+    localStorage.setItem('he_live_sources', JSON.stringify(all));
+  } catch (e) { console.warn('[HE] setLiveSource:', e.message); }
+};
+window.HE.getLiveSource = function(category) {
+  try {
+    return JSON.parse(localStorage.getItem('he_live_sources') || '{}')[category] || null;
+  } catch { return null; }
+};
+
+// Apply persisted live SSS at startup (before React mounts)
+;(function() {
+  try {
+    const live = JSON.parse(localStorage.getItem('he_sss_live') || '{}');
+    if (live.entries?.length > 3) window.HE.SSS = live.entries;
+  } catch {}
+})();

@@ -342,205 +342,35 @@ const SignalsTab = ({macroCtx}) => {
 };
 
 // ── VOLATILITY TAB ─────────────────────────────────────────────────
-const VolTab = ({quad, macroCtx}) => {
-  const [liveVix,  setLiveVix]  = React.useState(null);
+const VolTab = ({quad}) => {
+  const [vix, setVix] = React.useState('');
   const [rv1, setRv1] = React.useState('');
   const [rv3, setRv3] = React.useState('');
   const [ivRank, setIvRank] = React.useState('');
-  const [vixOverride, setVixOverride] = React.useState('');
-  const [lastFetch, setLastFetch] = React.useState(null);
   const q = window.HE.QUADS[quad] || window.HE.QUADS.Q3;
 
-  // Auto-fetch live VIX on mount
-  React.useEffect(() => {
-    const fetchVix = async () => {
-      try {
-        const url = window.HE.apiUrl.yfQuote(['^VIX']);
-        const r = await fetch(url, {signal: AbortSignal.timeout(10000)});
-        const d = await r.json();
-        const price = d.quoteResponse?.result?.[0]?.regularMarketPrice;
-        if (price != null) { setLiveVix(price); setLastFetch(new Date()); }
-      } catch(e) { console.warn('[VolTab] VIX fetch failed:', e.message); }
-    };
-    fetchVix();
-    const id = setInterval(fetchVix, 60000);
-    return () => clearInterval(id);
-  }, []);
-
-  // Populate realized vol from MSR if available
-  React.useEffect(() => {
-    const rv10d = macroCtx?.pdf?.msr?.realized_vol_10d;
-    if (rv10d && !rv1) setRv1(String(rv10d));
-  }, [macroCtx]);
-
-  // VIX: live wins over manual override over fallback from model
-  const vixFallback = macroCtx?.levels?.VIX?.prev_close ?? macroCtx?.pdf?.early_look?.vix_level ?? null;
-  const V = parseFloat(vixOverride) || liveVix || vixFallback || NaN;
-  const R1 = parseFloat(rv1), R3 = parseFloat(rv3);
+  const V = parseFloat(vix), R1 = parseFloat(rv1), R3 = parseFloat(rv3);
   const ratio = !isNaN(V) && !isNaN(R1) && R1 > 0 ? V/R1 : null;
   const roc = !isNaN(R1) && !isNaN(R3) ? R1 - R3 : null;
-
-  // Keith's VIX risk range from levels
-  const vixLrr = macroCtx?.levels?.VIX?.lrr ?? null;
-  const vixTrr = macroCtx?.levels?.VIX?.trr ?? null;
-  const vixSignal = macroCtx?.levels?.VIX?.signal ?? null;
-
-  const vixBucket = isNaN(V) ? null
-    : V < 19 ? {label:'CALM',    sub:'INVESTABLE — full size, buy dips', color:'#27500A', bg:'#EAF3DE'}
-    : V < 30 ? {label:'CHOP',    sub:'Reduce sizing — no fresh adds',    color:'#B8860B', bg:'#FFF8E1'}
-    :           {label:'FEAR',    sub:'Defensive — reduce gross exposure', color:'#C8302A', bg:'#FCEBEB'};
 
   const inputStyle = {width:'100%',border:'none',borderBottom:'2px solid #E4E1DA',
     fontFamily:'IBM Plex Mono,monospace',fontSize:24,fontWeight:700,color:'#1A1A18',
     background:'none',outline:'none',paddingBottom:4};
 
-  // Gauge bar showing VIX within risk range
-  const VixGauge = () => {
-    if (!vixLrr || !vixTrr || isNaN(V)) return null;
-    const min = vixLrr * 0.85, max = vixTrr * 1.15;
-    const lrrPct = ((vixLrr - min) / (max - min) * 100).toFixed(1);
-    const trrPct = ((vixTrr - min) / (max - min) * 100).toFixed(1);
-    const spotPct = Math.max(0, Math.min(100, ((V - min) / (max - min) * 100)));
-    return (
-      <div style={{marginTop:12}}>
-        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',
-          marginBottom:4,textTransform:'uppercase',letterSpacing:'0.06em'}}>
-          Keith's Range: {vixLrr}–{vixTrr} · Signal: {vixSignal}
-        </div>
-        <div style={{position:'relative',height:8,background:'#F5F3EF',borderRadius:4,overflow:'visible'}}>
-          {/* LRR marker */}
-          <div style={{position:'absolute',left:lrrPct+'%',top:-2,width:2,height:12,background:'#27500A',borderRadius:1}} />
-          {/* TRR marker */}
-          <div style={{position:'absolute',left:trrPct+'%',top:-2,width:2,height:12,background:'#C8302A',borderRadius:1}} />
-          {/* Range fill */}
-          <div style={{position:'absolute',left:lrrPct+'%',width:(trrPct-lrrPct)+'%',
-            height:'100%',background:'rgba(26,77,143,0.12)',borderRadius:2}} />
-          {/* Spot */}
-          <div style={{position:'absolute',left:spotPct+'%',top:-4,
-            width:10,height:16,background:'#1A1A18',borderRadius:2,
-            transform:'translateX(-50%)',transition:'left 0.5s'}} />
-        </div>
-        <div style={{display:'flex',justifyContent:'space-between',
-          fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',marginTop:3}}>
-          <span>BUY {vixLrr}</span><span>SELL {vixTrr}</span>
-        </div>
-      </div>
-    );
-  };
-
-  // MSR context from today's data
-  const msr = macroCtx?.pdf?.msr ?? {};
-  const hasMsr = Object.keys(msr).length > 2;
-
   return (
     <div style={{padding:'20px 24px', maxWidth:1200}}>
-      {/* Live VIX hero + input cards */}
-      <div style={{display:'grid',gridTemplateColumns:'1.2fr 1fr 1fr 1fr',gap:10,marginBottom:20}}>
-        {/* VIX card — live auto-populated */}
-        <div style={{background: vixBucket?.bg || '#fff',
-          border:`1px solid ${vixBucket ? vixBucket.color : '#E4E1DA'}`,borderRadius:8,padding:'14px 16px'}}>
-          <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
+      {/* Input cards */}
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:20}}>
+        {[['VIX Spot',vix,setVix,'e.g. 22'],['Realized Vol 1M',rv1,setRv1,'%'],
+          ['Realized Vol 3M',rv3,setRv3,'%'],['IV Rank (0–100)',ivRank,setIvRank,'pct']].map(([l,v,s,ph])=>(
+          <div key={l} style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 16px'}}>
             <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',
-              textTransform:'uppercase',letterSpacing:'0.08em'}}>VIX Spot</div>
-            {liveVix && (
-              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,fontWeight:600,
-                background: vixBucket?.color+'22', color: vixBucket?.color,
-                padding:'1px 5px',borderRadius:2,letterSpacing:'0.04em'}}>● LIVE</span>
-            )}
+              textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:8}}>{l}</div>
+            <input type="number" value={v} onChange={e=>s(e.target.value)} placeholder={ph}
+              style={inputStyle} />
           </div>
-          {isNaN(V)
-            ? <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:18,color:'#ccc'}}>Loading…</div>
-            : <>
-                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:36,fontWeight:700,
-                  color: vixBucket?.color || '#1A1A18',lineHeight:1}}>{V.toFixed(2)}</div>
-                {vixBucket && (
-                  <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:600,
-                    color:vixBucket.color,marginTop:4}}>{vixBucket.label}</div>
-                )}
-                {vixBucket && (
-                  <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:vixBucket.color,
-                    opacity:0.8,marginTop:2}}>{vixBucket.sub}</div>
-                )}
-                <VixGauge />
-              </>
-          }
-          {/* Manual override */}
-          <div style={{marginTop:10,borderTop:'1px solid rgba(0,0,0,0.06)',paddingTop:8}}>
-            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',marginBottom:3}}>
-              Override (if live unavailable)
-            </div>
-            <input type="number" value={vixOverride}
-              onChange={e=>setVixOverride(e.target.value)} placeholder="—"
-              style={{...inputStyle,fontSize:14,borderBottom:'1px solid #E4E1DA'}} />
-          </div>
-        </div>
-
-        {/* RVol 1M */}
-        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 16px'}}>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',
-            textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:8}}>Realized Vol 1M</div>
-          <input type="number" value={rv1} onChange={e=>setRv1(e.target.value)} placeholder="—"
-            style={inputStyle} />
-          {msr.realized_vol_10d && !rv1 && (
-            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#1A4D8F',marginTop:6}}>
-              MSR 10d: {msr.realized_vol_10d}% · GVT: {msr.gvt_index}
-            </div>
-          )}
-        </div>
-
-        {/* RVol 3M */}
-        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 16px'}}>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',
-            textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:8}}>Realized Vol 3M</div>
-          <input type="number" value={rv3} onChange={e=>setRv3(e.target.value)} placeholder="—"
-            style={inputStyle} />
-        </div>
-
-        {/* IV Rank */}
-        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 16px'}}>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',
-            textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:8}}>IV Rank (0–100)</div>
-          <input type="number" value={ivRank} onChange={e=>setIvRank(e.target.value)} placeholder="—"
-            style={inputStyle} />
-        </div>
+        ))}
       </div>
-
-      {/* MSR Market Structure panel */}
-      {hasMsr && (
-        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,
-          padding:'14px 18px',marginBottom:16}}>
-          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
-            textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770',marginBottom:12}}>
-            Market Structure (MSR — {macroCtx?.source_date || 'today'})
-          </div>
-          <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:12,marginBottom:12}}>
-            {[
-              ['Gamma', msr.gamma_exposure,   msr.gamma_exposure==='POSITIVE'?'#27500A':'#C8302A'],
-              ['Systematic', msr.systematic_flow, msr.systematic_flow==='BULLISH'?'#27500A':msr.systematic_flow==='NEUTRAL'?'#7A7770':'#C8302A'],
-              ['Strategic', msr.strategic_allocation, msr.strategic_allocation==='RISK_ON'?'#27500A':'#C8302A'],
-              ['10d RVol', msr.realized_vol_10d ? msr.realized_vol_10d+'%' : '—', '#1A4D8F'],
-            ].map(([lbl,val,col]) => (
-              <div key={lbl}>
-                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginBottom:3,
-                  textTransform:'uppercase',letterSpacing:'0.06em'}}>{lbl}</div>
-                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:14,fontWeight:700,color:col||'#1A1A18'}}>{val||'—'}</div>
-              </div>
-            ))}
-          </div>
-          {msr.spx_support && (
-            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',
-              background:'#F9F8F5',padding:'8px 12px',borderRadius:4}}>
-              SPX support {msr.spx_support.toLocaleString()} · resistance {msr.spx_resistance?.toLocaleString()} ·
-              PV band {msr.pv_band_pct}% range
-            </div>
-          )}
-          {msr.note && (
-            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',marginTop:8,lineHeight:1.6}}>
-              {msr.note}
-            </div>
-          )}
-        </div>
-      )}
 
       {/* Live interpretation */}
       {ratio !== null && (
@@ -595,4 +425,188 @@ const VolTab = ({quad, macroCtx}) => {
       <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:20,marginBottom:20}}>
         <SectionTitle mono>Vol Expectations by Quad</SectionTitle>
         <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10}}>
-          {Object.en
+          {Object.entries(window.HE.QUADS).map(([k,qd])=>(
+            <div key={k} style={{padding:14,borderRadius:6,
+              background:quad===k?qd.bg:'#F9F8F5',
+              border:`1px solid ${quad===k?qd.color:'#E4E1DA'}`,transition:'all 0.15s'}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:700,
+                color:qd.color,marginBottom:6}}>{k} · {qd.name}</div>
+              <div style={{fontSize:11,color:'#555',lineHeight:1.7}}>
+                <div><strong style={{color:'#1A1A18'}}>Best:</strong> {qd.bestAssets}</div>
+                <div><strong style={{color:'#1A1A18'}}>Worst:</strong> {qd.worstAssets}</div>
+                <div style={{marginTop:6,color:'#7A7770',fontSize:10}}>{qd.desc}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Framework notes */}
+      <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:20}}>
+        <SectionTitle mono>Framework Reference</SectionTitle>
+        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:24,fontSize:12,lineHeight:1.8,color:'#555'}}>
+          <div>
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,color:'#1A1A18',marginBottom:6}}>VIX Levels</div>
+            <div>&lt;15 — Low. Complacency. Quad 1/2 regime.</div>
+            <div>15–20 — Normal. Transition zone.</div>
+            <div>20–30 — Elevated. Quad 3 territory.</div>
+            <div>&gt;30 — Fear. Quad 4 extremes / dislocation.</div>
+          </div>
+          <div>
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,color:'#1A1A18',marginBottom:6}}>RoC Signals</div>
+            <div>RVol rising → regime expanding, position smaller</div>
+            <div>RVol falling → compression → breakout risk rises</div>
+            <div>IV &gt; RVol → sell premium / be long delta</div>
+            <div>IV &lt; RVol → buy protection / hedge downside</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ── DAILY BRIEF TAB ────────────────────────────────────────────────
+const ResearchTab = ({onOpenPdf, macroCtx}) => {
+  const loading = macroCtx === null;
+
+  const showNotes   = macroCtx?.pdf?.macro_show_notes   ?? {};
+  const callSumm    = macroCtx?.pdf?.call_summary        ?? {};
+  const keyPts      = showNotes.key_points       ?? [];
+  const positioning = showNotes.positioning_changes ?? [];
+  const watchlist   = showNotes.keith_watching   ?? [];
+  const callPts     = callSumm.key_points         ?? [];
+  const callDate    = callSumm.date               ?? null;
+  const callQuad    = callSumm.quad               ?? null;
+  const trades      = callSumm.trades_mentioned   ?? [];
+
+  const genAt = macroCtx?.generated_at
+    ? new Date(macroCtx.generated_at).toLocaleString('en-US', {
+        month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'
+      })
+    : null;
+
+  const hasAnyContent = keyPts.length > 0 || callPts.length > 0 || positioning.length > 0 || watchlist.length > 0;
+
+  const SectionCard = ({title, badge, items, accentColor}) => {
+    if (!items || items.length === 0) return null;
+    return (
+      <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'16px 20px',marginBottom:14}}>
+        <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+          <div style={{width:3,height:14,borderRadius:2,background:accentColor||'#1A4D8F',flexShrink:0}} />
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+            textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>{title}</span>
+          {badge && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,
+              background:'#F4F3EF',color:'#9A9790',padding:'1px 6px',borderRadius:2,marginLeft:'auto'}}>
+              {badge}
+            </span>
+          )}
+        </div>
+        <div style={{display:'flex',flexDirection:'column',gap:6}}>
+          {items.map((pt,i) => (
+            <div key={i} style={{display:'flex',gap:8,alignItems:'flex-start'}}>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
+                color:accentColor||'#7A7770',marginTop:3,flexShrink:0}}>›</span>
+              <span style={{fontSize:12,color:'#1A1A18',lineHeight:1.55}}>{pt}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  if (loading) {
+    return (
+      <div style={{padding:'20px 24px',maxWidth:900}}>
+        <LoadingSpinner msg="Loading pipeline data…" />
+      </div>
+    );
+  }
+
+  if (!hasAnyContent) {
+    return (
+      <div style={{padding:'20px 24px',maxWidth:900}}>
+        <div style={{background:'#F9F8F5',border:'1px dashed #D0CCC4',borderRadius:8,
+          padding:'32px 24px',textAlign:'center'}}>
+          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:600,
+            color:'#1A1A18',marginBottom:8}}>No brief available yet</div>
+          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#7A7770',lineHeight:1.7}}>
+            Run <strong style={{color:'#1A1A18'}}>build_macro_context.py</strong> with PDF extraction
+            to populate the Daily Brief. Check the <strong style={{color:'#1A4D8F'}}>Research Status</strong> tab for pipeline state.
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{padding:'20px 24px',maxWidth:900}}>
+      {/* Header */}
+      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:18}}>
+        <div style={{display:'flex',alignItems:'center',gap:8}}>
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:13,fontWeight:700,color:'#1A1A18'}}>
+            Daily Brief
+          </span>
+          {callQuad && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+              padding:'2px 8px',borderRadius:3,
+              background: window.HE?.QUADS?.['Q'+callQuad]?.bg || '#F4F3EF',
+              color: window.HE?.QUADS?.['Q'+callQuad]?.color || '#1A1A18',
+              border: `1px solid ${window.HE?.QUADS?.['Q'+callQuad]?.color || '#E4E1DA'}`}}>
+              Q{callQuad}
+            </span>
+          )}
+        </div>
+        {genAt && (
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>
+            Updated {genAt}
+          </span>
+        )}
+      </div>
+
+      {/* Call Summary */}
+      {callPts.length > 0 && (
+        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'16px 20px',marginBottom:14}}>
+          <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+            <div style={{width:3,height:14,borderRadius:2,background:'#1A4D8F',flexShrink:0}} />
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+              textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>Morning Call</span>
+            {callDate && (
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,
+                background:'#E4EDF8',color:'#1A4D8F',padding:'1px 6px',borderRadius:2,marginLeft:'auto'}}>
+                {callDate}
+              </span>
+            )}
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:6}}>
+            {callPts.map((pt,i) => (
+              <div key={i} style={{display:'flex',gap:8,alignItems:'flex-start'}}>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
+                  color:'#1A4D8F',marginTop:3,flexShrink:0}}>›</span>
+                <span style={{fontSize:12,color:'#1A1A18',lineHeight:1.55}}>{pt}</span>
+              </div>
+            ))}
+          </div>
+          {trades.length > 0 && (
+            <div style={{marginTop:12,paddingTop:10,borderTop:'1px solid #F0EDE8'}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                textTransform:'uppercase',letterSpacing:'0.08em',marginBottom:6}}>Trades Mentioned</div>
+              <div style={{display:'flex',flexDirection:'column',gap:3}}>
+                {trades.map((t,i) => (
+                  <div key={i} style={{fontSize:11,color:'#555',lineHeight:1.4}}>{t}</div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      <SectionCard title="Keith's Commentary" items={keyPts} accentColor="#27500A" />
+      <SectionCard title="Positioning Changes" items={positioning} accentColor="#B8860B"
+        badge={positioning.length > 0 ? `${positioning.length} moves` : null} />
+      <SectionCard title="Keith's Watchlist" items={watchlist} accentColor="#9A3B26" />
+    </div>
+  );
+};
+
+Object.assign(window, {SignalsTab, VolTab, ResearchTab});

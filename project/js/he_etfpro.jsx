@@ -7,8 +7,8 @@ const ETFProTab = ({macroCtx}) => {
   const [priceStatus, setPriceStatus] = React.useState('idle');
   const liveSource = window.HE.getLiveSource?.('etfpro') || null;
 
-  // Staleness check — warn if most recent rerank is >3 trading days old
-  const latestDate = reranks[0]?.date;
+  // Freshness + PA commentary from macro_context
+  const latestDate   = reranks[0]?.date;
   const paCommentary = macroCtx?.pdf?.etf_rerank_commentary ?? null;
 
   // Fetch prices for ETF Pro tickers
@@ -37,8 +37,7 @@ const ETFProTab = ({macroCtx}) => {
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
-
-      {/* Source + data freshness bar */}
+      {/* Source + freshness bar */}
       <div style={{display:'flex', gap:10, alignItems:'center', marginBottom:16, flexWrap:'wrap'}}>
         <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#27500A',
           background:'#EAF3DE', border:'1px solid #7AB648', padding:'3px 10px', borderRadius:3}}>
@@ -168,4 +167,26 @@ const ETFProTab = ({macroCtx}) => {
               </div>
               {r.topMovers.map((m, j) => (
                 <div key={j} style={{display:'flex', justifyContent:'space-between', alignItems:'center',
-                  padding:'4px 0', borderBottom: j < r.topMover
+                  padding:'4px 0', borderBottom: j < r.topMovers.length - 1 ? '1px solid #F5F3EF' : 'none'}}>
+                  <div style={{display:'flex', alignItems:'center', gap:6}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
+                      color: rankColor(j+1), background: rankBg(j+1),
+                      width:18, height:16, borderRadius:2, display:'inline-flex',
+                      alignItems:'center', justifyContent:'center'}}>
+                      {j+1}
+                    </span>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontWeight:700, fontSize:13}}>{m.ticker}</span>
+                  </div>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12,
+                    color:'#27500A', fontWeight:600}}>{m.pts}</span>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+Object.assign(window, {ETFProTab});

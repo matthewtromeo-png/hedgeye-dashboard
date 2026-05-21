@@ -8,7 +8,11 @@ const BUCKETS = {
     label:  'Moat',
     desc:   'Durable competitive advantage, multi-year compounder',
     sub:    'Consistent FCF growth, pricing power, secular market dominance. These are businesses you hold for years through quad shifts.',
-    detail: 'A Moat company has a structural barrier — exchange monopoly, network effects, switching costs, brand — that lets it grow FCF regardless of the macro environment. Sam sizes these up during periods of macro-driven price compression (Q3/Q4 headwinds) and holds through multiple quad cycles. The investment thesis is the business moat, not the quarter.',
+    detail: 'A Moat company has a structural barrier — exchange monopoly, network effects, switching costs, brand — that lets it grow FCF regardless of the macro environment. Sam looks for businesses where the competitive moat widens over time: pricing power that protects margins, recurring revenue that smooths cycles, and returns on capital that compound. The ideal Moat name is one you never need to sell — you size up on weakness and hold through quad shifts because the secular story never broke.',
+    quadCompatibility: { Q1:'strong', Q2:'strong', Q3:'neutral', Q4:'neutral' },
+    addWhen: 'Any quad — best entries when macro headwinds temporarily compress the price below intrinsic value',
+    chartPos: { x: 0.60, y: 0.28 },
+    exampleTickers: ['AAPL','GOOGL','MSFT','V','MA','CME','CBOE','SPGI'],
     color:  '#27500A',
     bg:     '#EAF3DE',
     border: '#7AB648',
@@ -17,43 +21,103 @@ const BUCKETS = {
     // Hedgeye sectors that lean Moat
     sectors: new Set(['Communications','Financials']),
     industryKw: ['exchange','payment network','capital markets','financial data','enterprise software','cloud platform'],
-    quadCompatibility: { Q1:'strong', Q2:'strong', Q3:'neutral', Q4:'neutral' },
-    addWhen: 'Any quad — best entries when macro headwinds temporarily compress the price',
-    chartPos: { x: 0.60, y: 0.28 },
-    exampleTickers: ['AAPL','GOOGL','MSFT','V','MA','CME','CBOE','SPGI'],
   },
   SCURVE: {
     label:  'S-Curve',
     desc:   'Secular growth — AI, semis, supply chain infrastructure',
     sub:    'Early-to-mid innings of a multi-year secular growth cycle. Macro matters less when the secular tailwind is strong enough.',
-    detail: 'An S-Curve name is in the early-to-middle innings of a secular growth cycle that spans multiple years — AI infrastructure, semiconductor capex, power grid buildout. The secular tailwind is large enough to override a single bad quad, but Q1/Q2 quads (growth accelerating) provide the best entry and hold environment. In Q3/Q4 (slowing growth), the secular story may persist but near-term risk/reward deteriorates.',
+    detail: 'An S-Curve name is in the early-to-middle innings of a secular growth cycle that spans multiple years — typically 5–10+. Sam focuses on markets where adoption is still sub-20% penetrated, meaning the TAM expansion itself drives revenue regardless of whether GDP is accelerating or decelerating. The classic tells: revenue beating consensus by wide margins, analyst estimates still lagging reality, and a product cycle (AI inference, power infrastructure, semi complexity) that has years to run. These names are sensitive to macro in Q3/Q4 but the secular story can override short-term headwinds.',
+    quadCompatibility: { Q1:'strong', Q2:'strong', Q3:'caution', Q4:'avoid' },
+    addWhen: 'Q1 or Q2 entries preferred — step aside or trim into Q3/Q4 unless the secular cycle clearly dominates',
+    chartPos: { x: 0.82, y: 0.62 },
+    exampleTickers: ['NVDA','AVGO','AMD','AMAT','GEV','CAT','PLTR','ORCL'],
     color:  '#1A4D8F',
     bg:     '#E4EDF8',
     border: '#5B8FD8',
     tickers: new Set(['AVGO','KLA','KLAC','GEV','STX','COHR','CAT','NVDA','AMD','TSM','AMAT','LRCX','MRVL','ONTO','TSSI','SITM','POET','CRWV','ASML','SMCI','ARM','PLTR','ORCL']),
     sectors: new Set(['Global Tech','Industrials','Digital Assets']),
     industryKw: ['semiconductor','electronic component','semiconductor equipment','power system','industrial automation','data center','networking'],
-    quadCompatibility: { Q1:'strong', Q2:'strong', Q3:'caution', Q4:'avoid' },
-    addWhen: 'Q1 or Q2 entries preferred — step aside or trim into Q3 / Q4 unless secular cycle dominates',
-    chartPos: { x: 0.82, y: 0.62 },
-    exampleTickers: ['NVDA','AVGO','AMD','AMAT','GEV','CAT','PLTR','ORCL'],
   },
   IDIO: {
     label:  'Idiosyncratic',
     desc:   'Management change, turnaround, or business transformation',
     sub:    'Company-specific catalyst that can work in any quad. The thesis is about the business change, not the macro.',
-    detail: 'An Idiosyncratic name has a company-specific catalyst — new CEO, spin-off, balance sheet restructuring, product turnaround — that can generate alpha independent of the macro quad. The thesis is not "this sector is in favor"; it\'s "this company is in the middle of a fundamental business change." Because the catalyst is internal, macro headwinds matter less, but you must size conservatively and hedge macro exposure separately.',
+    detail: "An Idiosyncratic name has a company-specific catalyst — new CEO, spin-off, balance sheet restructuring, product turnaround, or regulatory resolution — that drives the thesis independent of the macro backdrop. Sam's key test: would you still own this if the quad flipped tomorrow? If the answer is yes, it's truly idiosyncratic. The risk is that 'idio' becomes an excuse to fight the tape — these names need a concrete, time-bound catalyst and a clear exit trigger if the catalyst fails to materialize. They often offer the best risk/reward in Q3 and Q4 when macro tailwinds are scarce.",
+    quadCompatibility: { Q1:'neutral', Q2:'neutral', Q3:'neutral', Q4:'neutral' },
+    addWhen: 'Any quad — catalyst is company-specific; size smaller and hedge macro exposure separately',
+    chartPos: { x: 0.28, y: 0.22 },
+    exampleTickers: ['C','SBUX','NKE','INTC','MGM','HLT','PFE','WBD'],
     color:  '#7A5C00',
     bg:     '#FFF8E1',
     border: '#D4A017',
     tickers: new Set(['C','SBUX','CZR','CF','NKE','INTC','WBD','PFE','PARA','MGM','HLT','MAR']),
     sectors: new Set(['GLL','Restaurants','Healthcare','Energy','Consumer Staples']),
     industryKw: ['casino','hotel','lodging','restaurant','food service','pharmaceutical','oil','gas','turnaround'],
-    quadCompatibility: { Q1:'neutral', Q2:'neutral', Q3:'neutral', Q4:'neutral' },
-    addWhen: 'Any quad — the catalyst is company-specific; hedge macro exposure separately',
-    chartPos: { x: 0.28, y: 0.22 },
-    exampleTickers: ['C','SBUX','NKE','INTC','MGM','HLT','PFE','WBD'],
   },
+};
+
+// ── Quad compatibility label metadata ───────────────────────────────
+const QUAD_COMPAT_META = {
+  strong:  { label: 'STRONG',  color: '#27500A', bg: '#EAF3DE' },
+  neutral: { label: 'NEUTRAL', color: '#7A5C00', bg: '#FFF8E1' },
+  caution: { label: 'CAUTION', color: '#B8860B', bg: '#FFF3CD' },
+  avoid:   { label: 'AVOID',   color: '#C8302A', bg: '#FCEBEB' },
+};
+
+// ── 2×2 Bucket Positioning Chart (SVG) ──────────────────────────────
+const BucketPositioningChart = ({ activeBucketKey }) => {
+  const W = 320, H = 260;
+  const PL = 48, PR = 16, PT = 24, PB = 44;
+  const CW = W - PL - PR, CH = H - PT - PB;
+
+  const bucketDots = Object.entries(BUCKETS).map(([key, b]) => ({
+    key,
+    x: PL + b.chartPos.x * CW,
+    y: PT + (1 - b.chartPos.y) * CH,
+    color: b.color,
+    bg: b.bg,
+    border: b.border,
+    label: b.label,
+  }));
+
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} style={{width:'100%', maxWidth:320, display:'block', margin:'0 auto'}}
+      xmlns="http://www.w3.org/2000/svg">
+      {/* Axis lines */}
+      <line x1={PL} y1={PT} x2={PL} y2={PT+CH} stroke="#E4E1DA" strokeWidth={1}/>
+      <line x1={PL} y1={PT+CH} x2={PL+CW} y2={PT+CH} stroke="#E4E1DA" strokeWidth={1}/>
+      {/* Quadrant dividers */}
+      <line x1={PL+CW/2} y1={PT} x2={PL+CW/2} y2={PT+CH} stroke="#F1EFE8" strokeWidth={1} strokeDasharray="3,3"/>
+      <line x1={PL} y1={PT+CH/2} x2={PL+CW} y2={PT+CH/2} stroke="#F1EFE8" strokeWidth={1} strokeDasharray="3,3"/>
+      {/* Y-axis label */}
+      <text x={12} y={PT+CH/2} textAnchor="middle" fontSize={8} fill="#9A9790"
+        fontFamily="IBM Plex Mono,monospace"
+        transform={`rotate(-90,12,${PT+CH/2})`}>MACRO SENSITIVITY</text>
+      {/* X-axis label */}
+      <text x={PL+CW/2} y={H-6} textAnchor="middle" fontSize={8} fill="#9A9790"
+        fontFamily="IBM Plex Mono,monospace">GROWTH DEPENDENCY</text>
+      {/* Y-axis ticks */}
+      <text x={PL-4} y={PT+4}    textAnchor="end" fontSize={7} fill="#C8C5BE" fontFamily="IBM Plex Mono,monospace">HIGH</text>
+      <text x={PL-4} y={PT+CH+4} textAnchor="end" fontSize={7} fill="#C8C5BE" fontFamily="IBM Plex Mono,monospace">LOW</text>
+      {/* X-axis ticks */}
+      <text x={PL}    y={PT+CH+14} textAnchor="middle" fontSize={7} fill="#C8C5BE" fontFamily="IBM Plex Mono,monospace">LOW</text>
+      <text x={PL+CW} y={PT+CH+14} textAnchor="middle" fontSize={7} fill="#C8C5BE" fontFamily="IBM Plex Mono,monospace">HIGH</text>
+      {/* Bucket dots */}
+      {bucketDots.map(d => {
+        const isActive = d.key === activeBucketKey;
+        return (
+          <g key={d.key}>
+            <circle cx={d.x} cy={d.y} r={isActive ? 16 : 12}
+              fill={d.bg} stroke={d.border} strokeWidth={isActive ? 2 : 1}/>
+            <text x={d.x} y={d.y+4} textAnchor="middle" fontSize={isActive ? 9 : 8}
+              fontWeight={700} fill={d.color} fontFamily="IBM Plex Mono,monospace">
+              {d.label.slice(0,4).toUpperCase()}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
 };
 
 // ── Map FMP sector/industry → Hedgeye sector label ───────────────────
@@ -138,97 +202,6 @@ function classifyBucket(ticker, hedgeyeSector, fmpIndustry) {
   }
   return null;
 }
-
-// ── Quad compatibility badge metadata ────────────────────────────────
-const QUAD_COMPAT_META = {
-  strong:  { label: '✓ STRONG',  color: '#27500A', bg: '#EAF3DE', border: '#7AB648' },
-  neutral: { label: '— NEUTRAL', color: '#7A5C00', bg: '#FFF8E1', border: '#D4A017' },
-  caution: { label: '⚠ CAUTION', color: '#B35A00', bg: '#FFF0E0', border: '#E0901A' },
-  avoid:   { label: '✗ AVOID',   color: '#C8302A', bg: '#FCEBEB', border: '#E07070' },
-};
-
-// ── 2×2 Bucket Positioning Chart ─────────────────────────────────────
-const BucketPositioningChart = ({ activeBucket }) => {
-  const W = 480, H = 270;
-  const PL = 50, PR = 12, PT = 14, PB = 44;
-  const CW = W - PL - PR;
-  const CH = H - PT - PB;
-  const toX = v => PL + v * CW;
-  const toY = v => PT + (1 - v) * CH;
-
-  const qBgs = [
-    { x:0,   y:0.5, w:0.5, h:0.5, fill:'#EAF3DE', label:'Secular Compounder',  lx:0.01, ly:0.98, anchor:'start' },
-    { x:0.5, y:0.5, w:0.5, h:0.5, fill:'#E4EDF8', label:'Cyclical Growth',      lx:0.99, ly:0.98, anchor:'end'   },
-    { x:0,   y:0,   w:0.5, h:0.5, fill:'#FFF8E1', label:'Event-Driven',         lx:0.01, ly:0.02, anchor:'start' },
-    { x:0.5, y:0,   w:0.5, h:0.5, fill:'#F5F3EF', label:'Macro Play',           lx:0.99, ly:0.02, anchor:'end'   },
-  ];
-
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" style={{display:'block', maxWidth:480, fontFamily:'IBM Plex Mono,monospace'}}>
-      {/* Quadrant backgrounds */}
-      {qBgs.map((q, i) => (
-        <g key={i}>
-          <rect
-            x={toX(q.x)} y={toY(q.y + q.h)}
-            width={q.w * CW} height={q.h * CH}
-            fill={q.fill} opacity={0.3}
-          />
-          <text
-            x={toX(q.lx)} y={toY(q.ly)}
-            textAnchor={q.anchor} fill="#B0ADA5"
-            fontSize={7.5} letterSpacing="0.06em" fontWeight={500}
-          >{q.label}</text>
-        </g>
-      ))}
-
-      {/* Axis border + midlines */}
-      <line x1={PL} y1={PT} x2={PL} y2={PT+CH} stroke="#C8C5BE" strokeWidth={1} />
-      <line x1={PL} y1={PT+CH} x2={PL+CW} y2={PT+CH} stroke="#C8C5BE" strokeWidth={1} />
-      <line x1={PL+CW/2} y1={PT} x2={PL+CW/2} y2={PT+CH} stroke="#C8C5BE" strokeWidth={0.5} strokeDasharray="4,3" />
-      <line x1={PL} y1={PT+CH/2} x2={PL+CW} y2={PT+CH/2} stroke="#C8C5BE" strokeWidth={0.5} strokeDasharray="4,3" />
-
-      {/* Bucket zones */}
-      {Object.entries(BUCKETS).map(([key, b]) => {
-        const cx = toX(b.chartPos.x);
-        const cy = toY(b.chartPos.y);
-        const isActive = key === activeBucket;
-        const rx = isActive ? 48 : 38;
-        const ry = isActive ? 32 : 25;
-        return (
-          <g key={key}>
-            <ellipse cx={cx} cy={cy} rx={rx} ry={ry}
-              fill={isActive ? b.bg : '#F5F3EF'}
-              stroke={isActive ? b.border : '#C8C5BE'}
-              strokeWidth={isActive ? 2 : 1}
-              opacity={isActive ? 1 : 0.75}
-            />
-            <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
-              fill={isActive ? b.color : '#9A9790'}
-              fontSize={isActive ? 9.5 : 8.5}
-              fontWeight={isActive ? 700 : 500}
-              letterSpacing="0.07em"
-            >{b.label.toUpperCase()}</text>
-          </g>
-        );
-      })}
-
-      {/* Axis labels */}
-      <text x={PL + CW/2} y={H - 8} textAnchor="middle" fill="#7A7770" fontSize={8} fontWeight={600} letterSpacing="0.1em">
-        GROWTH DEPENDENCY →
-      </text>
-      <text x={13} y={PT + CH/2} textAnchor="middle" fill="#7A7770" fontSize={8} fontWeight={600} letterSpacing="0.1em"
-        transform={`rotate(-90, 13, ${PT + CH/2})`}>
-        MACRO SENSITIVITY →
-      </text>
-
-      {/* Axis LOW/HIGH hints */}
-      <text x={PL+3}    y={PT+CH-4} textAnchor="start" fill="#C8C5BE" fontSize={6.5}>LOW</text>
-      <text x={PL+CW-3} y={PT+CH-4} textAnchor="end"   fill="#C8C5BE" fontSize={6.5}>HIGH</text>
-      <text x={PL+3}    y={PT+10}   textAnchor="start" fill="#C8C5BE" fontSize={6.5}>HIGH</text>
-      <text x={PL+3}    y={PT+CH-14} textAnchor="start" fill="#C8C5BE" fontSize={6.5}>LOW</text>
-    </svg>
-  );
-};
 
 // ── Analyzer Tab ─────────────────────────────────────────────────────
 const AnalyzerTab = ({macroCtx}) => {
@@ -401,16 +374,16 @@ const AnalyzerTab = ({macroCtx}) => {
         )}
       </div>
 
-      {/* Empty state */}
+      {/* Empty state — bucket guide */}
       {!showResults && !loading && (
-        <div style={{padding:'0 0 40px'}}>
-          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
-            letterSpacing:'0.12em', color:'#C8C5BE', textTransform:'uppercase', marginBottom:16}}>
-            Sam Rahman's Investment Process — Bucket Guide
+        <div style={{padding:'8px 0 40px'}}>
+          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:600,
+            letterSpacing:'0.1em', color:'#C8C5BE', textTransform:'uppercase', marginBottom:14}}>
+            Sam Rahman's 3 Buckets — click to expand
           </div>
 
-          {/* 3 bucket cards — clickable to expand */}
-          <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10, marginBottom:14}}>
+          {/* 3 bucket cards */}
+          <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10, marginBottom:16}}>
             {Object.entries(BUCKETS).map(([key, b]) => {
               const isOpen = expandedBucket === key;
               return (
@@ -418,22 +391,34 @@ const AnalyzerTab = ({macroCtx}) => {
                   onClick={() => setExpandedBucket(isOpen ? null : key)}
                   style={{background: isOpen ? b.bg : '#fff',
                     border:`1px solid ${isOpen ? b.border : '#E4E1DA'}`,
+                    borderTop: `3px solid ${b.border}`,
                     borderRadius:8, padding:'14px 16px', cursor:'pointer',
                     transition:'all 0.15s ease'}}>
                   <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-start'}}>
                     <div>
                       <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:13, fontWeight:700,
-                        color: isOpen ? b.color : '#1A1A18', marginBottom:4, letterSpacing:'0.06em'}}>
-                        {b.label.toUpperCase()}
-                      </div>
-                      <div style={{fontSize:10, color: isOpen ? b.color : '#7A7770', lineHeight:1.5}}>
-                        {b.desc}
-                      </div>
+                        color:b.color, marginBottom:3}}>{b.label.toUpperCase()}</div>
+                      <div style={{fontSize:10, color:b.color, lineHeight:1.5, marginBottom:8}}>{b.desc}</div>
                     </div>
-                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11,
-                      color: isOpen ? b.color : '#C8C5BE', marginLeft:8, flexShrink:0}}>
-                      {isOpen ? '▲' : '▼'}
-                    </span>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, color:b.color,
+                      marginLeft:8, flexShrink:0}}>{isOpen ? '▲' : '▼'}</span>
+                  </div>
+                  {/* Quad compat pills */}
+                  <div style={{display:'flex', gap:4, flexWrap:'wrap', marginBottom:8}}>
+                    {['Q1','Q2','Q3','Q4'].map(q => {
+                      const compat = b.quadCompatibility[q];
+                      const cm = QUAD_COMPAT_META[compat];
+                      return (
+                        <span key={q} style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:700,
+                          color:cm.color, background:cm.bg, borderRadius:3, padding:'2px 6px'}}>
+                          {q}:{cm.label.slice(0,3)}
+                        </span>
+                      );
+                    })}
+                  </div>
+                  {/* Example tickers */}
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790'}}>
+                    {b.exampleTickers.slice(0,5).join(' · ')}
                   </div>
                 </div>
               );
@@ -444,79 +429,57 @@ const AnalyzerTab = ({macroCtx}) => {
           {expandedBucket && (() => {
             const b = BUCKETS[expandedBucket];
             return (
-              <div style={{background:b.bg, border:`1px solid ${b.border}`,
-                borderRadius:8, padding:'18px 20px', marginBottom:14}}>
-                <div style={{display:'grid', gridTemplateColumns:'1fr auto', gap:20, alignItems:'start'}}>
-
-                  {/* Left: description + add-when */}
-                  <div>
-                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:700,
-                      color:b.color, marginBottom:8, letterSpacing:'0.06em'}}>
-                      {b.label.toUpperCase()} — DEFINITION
-                    </div>
-                    <div style={{fontSize:12, color:'#333', lineHeight:1.75, marginBottom:14}}>
-                      {b.detail}
-                    </div>
-                    <div style={{borderTop:`1px solid ${b.border}40`, paddingTop:12, marginBottom:12}}>
-                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:b.color,
-                        fontWeight:700, letterSpacing:'0.1em', marginBottom:5}}>WHEN TO ADD</div>
-                      <div style={{fontSize:11, color:'#444', lineHeight:1.6}}>{b.addWhen}</div>
-                    </div>
-                    <div>
-                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:b.color,
-                        fontWeight:700, letterSpacing:'0.1em', marginBottom:6}}>EXAMPLE NAMES</div>
-                      <div style={{display:'flex', flexWrap:'wrap', gap:5}}>
-                        {b.exampleTickers.map(t => (
-                          <span key={t} onClick={e => { e.stopPropagation(); setInput(t); }}
-                            style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
-                              padding:'3px 8px', background:b.border + '22',
-                              border:`1px solid ${b.border}`, borderRadius:4,
-                              color:b.color, cursor:'pointer'}}
-                            title={`Click to analyze ${t}`}>
-                            {t}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+              <div style={{background:'#fff', border:`1px solid ${b.border}`,
+                borderLeft:`4px solid ${b.border}`, borderRadius:8,
+                padding:'20px 24px', marginBottom:16, display:'grid',
+                gridTemplateColumns:'1fr auto', gap:20, alignItems:'start'}}>
+                <div>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
+                    color:b.color, letterSpacing:'0.1em', marginBottom:8}}>
+                    {b.label.toUpperCase()} — SAM'S DEFINITION
                   </div>
-
-                  {/* Right: quad compatibility grid */}
-                  <div style={{minWidth:160}}>
-                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:b.color,
-                      fontWeight:700, letterSpacing:'0.1em', marginBottom:8}}>QUAD COMPATIBILITY</div>
-                    <div style={{display:'flex', flexDirection:'column', gap:5}}>
-                      {['Q1','Q2','Q3','Q4'].map(q => {
-                        const compat = b.quadCompatibility[q];
-                        const cm = QUAD_COMPAT_META[compat];
-                        const qd = window.HE.QUADS[q];
-                        return (
-                          <div key={q} style={{display:'flex', alignItems:'center', gap:8,
-                            background:cm.bg, border:`1px solid ${cm.border}`,
-                            borderRadius:5, padding:'5px 10px'}}>
-                            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11,
-                              fontWeight:700, color:qd.color, minWidth:20}}>{q}</span>
-                            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8,
-                              fontWeight:600, color:cm.color}}>{cm.label}</span>
-                          </div>
-                        );
-                      })}
-                    </div>
+                  <div style={{fontSize:12, color:'#333', lineHeight:1.8, marginBottom:16}}>
+                    {b.detail}
                   </div>
+                  <div style={{background:b.bg, borderRadius:6, padding:'10px 14px', marginBottom:12}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:700,
+                      color:b.color, letterSpacing:'0.08em', marginRight:8}}>ADD WHEN</span>
+                    <span style={{fontSize:11, color:'#444'}}>{b.addWhen}</span>
+                  </div>
+                  {/* Full quad compat grid */}
+                  <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:6}}>
+                    {['Q1','Q2','Q3','Q4'].map(q => {
+                      const compat = b.quadCompatibility[q];
+                      const cm = QUAD_COMPAT_META[compat];
+                      const qd = window.HE.QUADS[q];
+                      return (
+                        <div key={q} style={{background:cm.bg, border:`1px solid ${cm.color}30`,
+                          borderRadius:5, padding:'8px 10px', textAlign:'center'}}>
+                          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:16, fontWeight:700,
+                            color:qd.color, marginBottom:2}}>{q}</div>
+                          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:700,
+                            color:cm.color}}>{cm.label}</div>
+                          <div style={{fontSize:9, color:'#9A9790', marginTop:3, lineHeight:1.3}}>{qd.name}</div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+                {/* Positioning chart */}
+                <div style={{width:240, flexShrink:0}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                    textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:6, textAlign:'center'}}>
+                    Positioning
+                  </div>
+                  <BucketPositioningChart activeBucketKey={expandedBucket} />
                 </div>
               </div>
             );
           })()}
 
-          {/* 2×2 positioning chart */}
-          <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:'16px 20px'}}>
-            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
-              letterSpacing:'0.12em', color:'#7A7770', marginBottom:12, textTransform:'uppercase'}}>
-              Bucket Positioning — Growth vs Macro Sensitivity
-            </div>
-            <BucketPositioningChart activeBucket={expandedBucket} />
-            <div style={{marginTop:10, fontSize:10, color:'#9A9790', lineHeight:1.7}}>
-              Click a bucket above to highlight it on the chart. Enter a ticker in the search bar to run a full analysis.
-            </div>
+          <div style={{fontSize:11, color:'#9A9790', lineHeight:1.8, maxWidth:520}}>
+            Enter any ticker to check SSS qualification, assign a bucket, score
+            quad timing, and receive an actionability verdict.
           </div>
         </div>
       )}
@@ -638,43 +601,46 @@ const AnalyzerTab = ({macroCtx}) => {
                     </div>
                     <div style={{fontSize:10, color:bucket.color, fontWeight:500}}>{bucket.desc}</div>
                   </div>
-                  <div style={{fontSize:11, color:'#555', lineHeight:1.7, marginBottom:12}}>
+                  <div style={{fontSize:11, color:'#555', lineHeight:1.7, marginBottom:10}}>
                     {bucket.sub}
                   </div>
-                  {/* When to add */}
-                  <div style={{fontSize:10, color:'#444', lineHeight:1.6,
-                    background:bucket.bg, borderRadius:5, padding:'8px 10px', marginBottom:10}}>
+                  {/* Add-when box */}
+                  <div style={{background:bucket.bg, borderRadius:5, padding:'8px 10px', marginBottom:10}}>
                     <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:700,
-                      color:bucket.color, letterSpacing:'0.08em'}}>WHEN TO ADD · </span>
-                    {bucket.addWhen}
+                      color:bucket.color, letterSpacing:'0.08em', marginRight:6}}>ADD WHEN</span>
+                    <span style={{fontSize:10, color:'#444', lineHeight:1.5}}>{bucket.addWhen}</span>
                   </div>
-                  {/* Quad compatibility grid */}
-                  <div style={{borderTop:'1px solid #F5F3EF', paddingTop:10}}>
-                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
-                      letterSpacing:'0.08em', marginBottom:6, fontWeight:600}}>QUAD COMPATIBILITY</div>
-                    <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:4}}>
-                      {['Q1','Q2','Q3','Q4'].map(q => {
-                        const compat = bucket.quadCompatibility[q];
-                        const cm = QUAD_COMPAT_META[compat];
-                        const qd = window.HE.QUADS[q];
-                        const isActive = q === currentQuad;
-                        return (
-                          <div key={q} style={{
-                            display:'flex', alignItems:'center', gap:6,
-                            background: isActive ? cm.bg : '#F9F8F5',
-                            border: `1px solid ${isActive ? cm.border : '#E4E1DA'}`,
-                            borderRadius:4, padding:'4px 8px',
-                          }}>
-                            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
-                              fontWeight:700, color: isActive ? qd.color : '#9A9790'}}>{q}</span>
-                            <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:7,
-                              fontWeight:600, color: isActive ? cm.color : '#C8C5BE'}}>
-                              {compat === 'strong' ? '✓' : compat === 'avoid' ? '✗' : compat === 'caution' ? '⚠' : '—'}
-                            </span>
-                          </div>
-                        );
-                      })}
-                    </div>
+                  {/* Quad compat 2×2 */}
+                  <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:4, marginBottom:10}}>
+                    {['Q1','Q2','Q3','Q4'].map(q => {
+                      const compat = bucket.quadCompatibility[q];
+                      const cm = QUAD_COMPAT_META[compat];
+                      const qd = window.HE.QUADS[q];
+                      const isActive = q === currentQuad;
+                      return (
+                        <div key={q} style={{background: isActive ? cm.bg : '#F9F8F5',
+                          border:`1px solid ${isActive ? cm.color+'40' : '#E4E1DA'}`,
+                          borderRadius:4, padding:'4px 8px',
+                          display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:700,
+                            color: isActive ? qd.color : '#9A9790'}}>{q}</span>
+                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:700,
+                            color: isActive ? cm.color : '#C8C5BE'}}>{cm.label.slice(0,3)}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div style={{borderTop:'1px solid #F5F3EF', paddingTop:10, display:'flex',
+                    flexDirection:'column', gap:5}}>
+                    {Object.entries(BUCKETS).filter(([k]) => k !== bucketKey).map(([k, b]) => (
+                      <div key={k} style={{display:'flex', alignItems:'center', gap:7}}>
+                        <span style={{width:7, height:7, borderRadius:1, background:'#E4E1DA',
+                          display:'inline-block', flexShrink:0}} />
+                        <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#C8C5BE',
+                          fontWeight:600, minWidth:90}}>{b.label.toUpperCase()}</span>
+                        <span style={{fontSize:9, color:'#C8C5BE'}}>{b.desc.split(',')[0]}</span>
+                      </div>
+                    ))}
                   </div>
                 </>
               ) : (
@@ -702,4 +668,242 @@ const AnalyzerTab = ({macroCtx}) => {
                 <div style={{background:quadDef.bg, border:`1px solid ${quadDef.color}`, borderRadius:6,
                   padding:'6px 14px', flexShrink:0}}>
                   <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:quadDef.color,
-                    letterSpacing:'0.1em', margi
+                    letterSpacing:'0.1em', marginBottom:1}}>CURRENT</div>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:22, fontWeight:700,
+                    color:quadDef.color, lineHeight:1}}>{currentQuad}</div>
+                </div>
+                <div>
+                  <div style={{fontSize:12, fontWeight:600, color:'#1A1A18'}}>{quadDef.name}</div>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790',
+                    marginTop:2}}>{quadDef.desc}</div>
+                </div>
+              </div>
+
+              {hedgeyeSector ? (
+                <>
+                  <div style={{background:fitMeta.bg, border:`1px solid ${fitMeta.color}20`,
+                    borderLeft:`3px solid ${fitMeta.color}`,
+                    borderRadius:4, padding:'7px 10px', marginBottom:10,
+                    display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:700,
+                      color:fitMeta.color}}>{fitMeta.label}</span>
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                      color:fitMeta.color, opacity:0.8}}>{hedgeyeSector}</span>
+                  </div>
+                  {/* All quads mini-grid */}
+                  <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:4, marginBottom:10}}>
+                    {['Q1','Q2','Q3','Q4'].map(q => {
+                      const fit  = SECTOR_QUAD[hedgeyeSector]?.[q] || 'neutral';
+                      const meta = FIT_META[fit];
+                      const qd   = window.HE.QUADS[q];
+                      const isActive = q === currentQuad;
+                      return (
+                        <div key={q} style={{
+                          background: isActive ? meta.bg : '#F9F8F5',
+                          border: `1px solid ${isActive ? meta.color + '40' : '#E4E1DA'}`,
+                          borderRadius:4, padding:'4px 8px',
+                          display:'flex', justifyContent:'space-between', alignItems:'center',
+                        }}>
+                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:700,
+                            color: isActive ? qd.color : '#9A9790'}}>{q}</span>
+                          <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8,
+                            color: isActive ? meta.color : '#C8C5BE', fontWeight:600}}>
+                            {fit === 'best' ? '✓' : fit === 'worst' ? '✗' : '–'}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  <div style={{display:'flex', flexDirection:'column', gap:4}}>
+                    <div>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#27500A',
+                        fontWeight:700}}>BEST · </span>
+                      <span style={{fontSize:10, color:'#555'}}>{quadDef.bestSectors}</span>
+                    </div>
+                    <div>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#C8302A',
+                        fontWeight:700}}>AVOID · </span>
+                      <span style={{fontSize:10, color:'#555'}}>{quadDef.worstSectors}</span>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div style={{fontSize:11, color:'#7A7770', lineHeight:1.65}}>
+                  Sector mapping requires SSS qualification or FMP data.
+                  <div style={{marginTop:10, display:'flex', flexDirection:'column', gap:4}}>
+                    <div>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#27500A',
+                        fontWeight:700}}>BEST · </span>
+                      <span style={{fontSize:10, color:'#555'}}>{quadDef.bestSectors}</span>
+                    </div>
+                    <div>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#C8302A',
+                        fontWeight:700}}>AVOID · </span>
+                      <span style={{fontSize:10, color:'#555'}}>{quadDef.worstSectors}</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* ── Bucket Positioning Chart ── */}
+          {bucketKey && (
+            <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8,
+              padding:16, marginBottom:12, display:'flex', gap:20, alignItems:'flex-start', flexWrap:'wrap'}}>
+              <div style={{flex:1, minWidth:200}}>
+                <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+                  textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770', marginBottom:10}}>
+                  Bucket Positioning — Growth Dependency vs Macro Sensitivity
+                </div>
+                <div style={{fontSize:11, color:'#555', lineHeight:1.7}}>
+                  {bucket.detail}
+                </div>
+              </div>
+              <div style={{width:260, flexShrink:0}}>
+                <BucketPositioningChart activeBucketKey={bucketKey} />
+              </div>
+            </div>
+          )}
+
+          {/* ── Fundamentals (Pod 1 Signal) ── */}
+          {fmpData && (
+            <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:16, marginBottom:12}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+                textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770', marginBottom:14}}>
+                Fundamentals
+              </div>
+
+              {/* Revenue Acceleration — Pod 1 signal, most prominent */}
+              {fmpData.revenueGrowths?.length > 0 ? (
+                <div style={{marginBottom:14, padding:'12px 14px', borderRadius:6,
+                  background: fmpData.revAccelerating === true  ? '#EAF3DE'
+                            : fmpData.revAccelerating === false ? '#FCEBEB' : '#F9F8F5',
+                  border: `1px solid ${fmpData.revAccelerating === true  ? '#7AB648'
+                                     : fmpData.revAccelerating === false ? '#E07070' : '#E4E1DA'}`}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                    textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:8}}>
+                    Revenue Growth (QoQ) — Pod 1 Signal
+                  </div>
+                  <div style={{display:'flex', alignItems:'center', gap:12, flexWrap:'wrap'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12}}>
+                      {fmpData.revenueGrowths.map((g, i) => (
+                        <React.Fragment key={i}>
+                          <span style={{color: g > 0 ? '#27500A' : '#C8302A', fontWeight:700}}>
+                            {g > 0 ? '+' : ''}{g.toFixed(1)}%
+                          </span>
+                          {i < fmpData.revenueGrowths.length - 1 && (
+                            <span style={{color:'#C8C5BE', margin:'0 8px'}}>→</span>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                    {fmpData.revAccelerating !== null && (
+                      <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12, fontWeight:700,
+                        color: fmpData.revAccelerating ? '#27500A' : '#C8302A'}}>
+                        {fmpData.revAccelerating ? 'ACCELERATING ↑' : 'DECELERATING ↓'}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div style={{marginBottom:14, fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                  color:'#9A9790', padding:'8px 0'}}>
+                  Revenue data unavailable — quarterly income statements may require FMP plan upgrade
+                </div>
+              )}
+
+              {/* Metrics grid */}
+              <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(155px,1fr))', gap:8}}>
+                {fmpData.totalEpsQ > 0 && (
+                  <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>EPS vs Estimate</div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700,
+                      color: fmpData.beats >= Math.ceil(fmpData.totalEpsQ * 0.75) ? '#27500A'
+                           : fmpData.beats <= Math.floor(fmpData.totalEpsQ * 0.25) ? '#C8302A' : '#1A1A18'}}>
+                      Beat {fmpData.beats} of {fmpData.totalEpsQ}
+                    </div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginTop:2}}>
+                      last {fmpData.totalEpsQ} quarters
+                    </div>
+                  </div>
+                )}
+                {fmpData.weekHigh52 != null && fmpData.weekLow52 != null && (() => {
+                  const rng = fmpData.weekHigh52 - fmpData.weekLow52;
+                  const pos = rng > 0 ? ((fmpData.price - fmpData.weekLow52) / rng * 100) : null;
+                  return (
+                    <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                        textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>52-Week Position</div>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700, color:'#1A1A18'}}>
+                        {pos != null ? `${pos.toFixed(0)}% of range` : '—'}
+                      </div>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginTop:2}}>
+                        L: ${fmpData.weekLow52?.toFixed(2)} · H: ${fmpData.weekHigh52?.toFixed(2)}
+                      </div>
+                    </div>
+                  );
+                })()}
+                {fmpData.mktCap != null && (
+                  <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>Market Cap</div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700, color:'#1A1A18'}}>
+                      {fmtMktCap(fmpData.mktCap)}
+                    </div>
+                  </div>
+                )}
+                {fmpData.pe != null && (
+                  <div style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>P/E</div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:14, fontWeight:700, color:'#1A1A18'}}>
+                      {Number(fmpData.pe).toFixed(0)}x
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* ── Price & Valuation ── */}
+          <div style={{background:'#fff', border:'1px solid #E4E1DA', borderRadius:8, padding:16}}>
+            <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:600,
+              textTransform:'uppercase', letterSpacing:'0.12em', color:'#7A7770', marginBottom:14}}>
+              Live Price — {ticker}{fmpData?.exchange ? ` · ${fmpData.exchange}` : ''}
+            </div>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(120px,1fr))', gap:8}}>
+              {[
+                ['Price',      priceData ? `$${priceData.regularMarketPrice?.toFixed(2)}` : '—', null],
+                ['Day Change', priceData
+                  ? `${priceData.regularMarketChangePercent >= 0 ? '+' : ''}${priceData.regularMarketChangePercent?.toFixed(2)}%`
+                  : '—',
+                  priceData ? (priceData.regularMarketChangePercent >= 0 ? '#27500A' : '#C8302A') : null],
+                ['Prev Close', priceData ? `$${priceData.regularMarketPreviousClose?.toFixed(2)}` : '—', null],
+                ['Day High',   priceData ? `$${priceData.regularMarketDayHigh?.toFixed(2)}`  : '—', null],
+                ['Day Low',    priceData ? `$${priceData.regularMarketDayLow?.toFixed(2)}`   : '—', null],
+              ].map(([label, val, color]) => (
+                <div key={label} style={{background:'#F9F8F5', borderRadius:6, padding:'10px 12px'}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                    textTransform:'uppercase', letterSpacing:'0.08em', marginBottom:3}}>{label}</div>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:15, fontWeight:700,
+                    color: color || '#1A1A18'}}>{val}</div>
+                </div>
+              ))}
+            </div>
+            {(!fmpKey || fmpErr) && (
+              <div style={{marginTop:10, borderTop:'1px solid #F5F3EF', paddingTop:8,
+                fontFamily:'IBM Plex Mono,monospace', fontSize:9,
+                color: fmpErr ? '#C8302A' : '#9A9790'}}>
+                {fmpErr || 'Add an FMP API key in ⚙ Settings to unlock Fundamentals (financialmodelingprep.com free tier)'}
+              </div>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+Object.assign(window, { AnalyzerTab });
