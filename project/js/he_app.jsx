@@ -815,7 +815,7 @@ const App = () => {
         />
       )}
       {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
-      {tab==='etfpro'   && <ETFProTab />}
+      {tab==='etfpro'   && <ETFProTab macroCtx={macroCtx} />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}
       {tab==='ingest'   && <ResearchStatusTab />}
@@ -835,69 +835,4 @@ const App = () => {
             {[['quarterlyQuad','Quarterly Quad'],['monthlyQuad','Monthly Quad']].map(([key,label])=>(
               <div key={key}>
                 <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>{label}</div>
-                <div style={{display:'flex',gap:3}}>
-                  {['Q1','Q2','Q3','Q4'].map(o=>{
-                    const qd=window.HE.QUADS[o];
-                    const active=tweaks[key]===o;
-                    return (
-                      <button key={o} onClick={()=>setTweak(key,o)} style={{
-                        flex:1,padding:'5px 2px',borderRadius:4,cursor:'pointer',
-                        fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:active?700:400,
-                        border:`1px solid ${active?qd.color:'#E4E1DA'}`,
-                        background:active?qd.bg:'#fff',color:active?qd.color:'#7A7770'}}>
-                        {o}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-            {[['usdSignal','USD Signal'],['btcSignal','BTC Signal']].map(([key,label])=>(
-              <div key={key}>
-                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>{label}</div>
-                <div style={{display:'flex',gap:3}}>
-                  {['BULLISH','NEUTRAL','BEARISH'].map(o=>(
-                    <button key={o} onClick={()=>setTweak(key,o)} style={{
-                      flex:1,padding:'5px 2px',borderRadius:4,cursor:'pointer',
-                      fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:tweaks[key]===o?700:400,
-                      border:'1px solid #E4E1DA',
-                      background:tweaks[key]===o?'#1A1A18':'#fff',
-                      color:tweaks[key]===o?'#fff':'#7A7770'}}>
-                      {o.slice(0,4)}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            ))}
-            <div>
-              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>My Positions (HAM cross-ref)</div>
-              <textarea value={tweaks.myPositions}
-                onChange={e=>setTweak('myPositions',e.target.value)}
-                placeholder="AAPL NVDA CASY XOM…"
-                style={{width:'100%',padding:8,border:'1px solid #E4E1DA',borderRadius:4,
-                  fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#1A1A18',
-                  background:'#FAFAF8',resize:'none',height:52,outline:'none',boxSizing:'border-box'}} />
-            </div>
-            <div>
-              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>FMP API Key (optional)</div>
-              <input
-                type="password"
-                value={tweaks.fmpKey}
-                onChange={e=>setTweak('fmpKey',e.target.value)}
-                placeholder="Enter key for analyst data…"
-                style={{width:'100%',padding:'6px 8px',border:'1px solid #E4E1DA',borderRadius:4,
-                  fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#1A1A18',
-                  background:'#FAFAF8',outline:'none',boxSizing:'border-box'}}
-              />
-              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginTop:3}}>
-                financialmodelingprep.com — free tier works
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+         

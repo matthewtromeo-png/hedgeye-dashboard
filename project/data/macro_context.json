@@ -13,50 +13,45 @@
     "macro_show_notes": "HE_TMS_KM_EV_5.20.2026.pdf (slides 4-6)"
   },
   "etf_rerank": [
-    "DBB",
-    "ROBO",
-    "EWUS",
-    "DRAM",
-    "EWQ",
-    "BTAL",
-    "IHI",
-    "SLX",
-    "COLO",
-    "VXF",
-    "QTUM",
-    "VYM",
-    "XLU",
-    "IDX",
-    "IWM",
-    "ITB",
-    "EPHE",
-    "PALL",
-    "STIP",
-    "OAEM",
-    "CNXT",
-    "INDA",
-    "CPER",
-    "XLV",
-    "CLOZ",
-    "HYG",
-    "SOYB",
-    "ZROZ",
-    "EWW",
-    "IBIT",
-    "XLI",
-    "TLT",
-    "EQRR",
-    "XTL",
-    "COM",
-    "NORW",
-    "BNO",
-    "OIH",
-    "XOP",
+    "FDRXX",
+    "BUXX",
     "CLOX",
+    "CLOZ",
+    "STIP",
+    "HYG",
+    "COM",
+    "IWM",
+    "CNXT",
+    "DRAM",
+    "VXF",
+    "SLX",
+    "NORW",
+    "VYM",
+    "EQRR",
+    "QTUM",
+    "ROBO",
+    "OAEM",
+    "XTL",
     "AAAU",
-    "BUXX"
+    "TAN",
+    "SOYB",
+    "EWW",
+    "XOP",
+    "DBB",
+    "CPER",
+    "TILL",
+    "OIH",
+    "BNO"
   ],
   "active_longs": [
+    {
+      "ticker": "TILL",
+      "etf": "DBIQ Diversified Agriculture Index",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-21",
+      "last_price": null,
+      "days_held": 0
+    },
     {
       "ticker": "DBB",
       "etf": "Base Metals",
@@ -87,7 +82,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-05-15",
       "last_price": 103.84,
-      "days_held": 4
+      "days_held": 6
     },
     {
       "ticker": "VXF",
@@ -95,7 +90,7 @@
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-13",
       "last_price": 222.58,
-      "days_held": 6
+      "days_held": 8
     },
     {
       "ticker": "QTUM",
@@ -103,7 +98,7 @@
       "asset_class": "Global Equities",
       "date_added": "2026-05-13",
       "last_price": 143.1,
-      "days_held": 6
+      "days_held": 8
     },
     {
       "ticker": "VYM",
@@ -111,7 +106,7 @@
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-12",
       "last_price": 156.2,
-      "days_held": 7
+      "days_held": 9
     },
     {
       "ticker": "IWM",
@@ -119,7 +114,7 @@
       "asset_class": "Domestic Equities",
       "date_added": "2026-05-07",
       "last_price": 275.92,
-      "days_held": 10
+      "days_held": 14
     },
     {
       "ticker": "STIP",
@@ -127,7 +122,7 @@
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-05-01",
       "last_price": 103.37,
-      "days_held": 14
+      "days_held": 20
     },
     {
       "ticker": "OAEM",
@@ -135,7 +130,7 @@
       "asset_class": "Emerging Markets Equities",
       "date_added": "2026-04-30",
       "last_price": 46.53,
-      "days_held": 15
+      "days_held": 21
     },
     {
       "ticker": "CNXT",
@@ -143,7 +138,7 @@
       "asset_class": "Global Equities",
       "date_added": "2026-04-28",
       "last_price": 55.5,
-      "days_held": 17
+      "days_held": 23
     },
     {
       "ticker": "CPER",
@@ -151,7 +146,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-04-24",
       "last_price": 38.16,
-      "days_held": 19
+      "days_held": 27
     },
     {
       "ticker": "CLOZ",
@@ -159,7 +154,7 @@
       "asset_class": "Fixed Income",
       "date_added": "2026-04-22",
       "last_price": 26.41,
-      "days_held": 21
+      "days_held": 29
     },
     {
       "ticker": "HYG",
@@ -167,7 +162,7 @@
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-21",
       "last_price": 79.45,
-      "days_held": 22
+      "days_held": 30
     },
     {
       "ticker": "SOYB",
@@ -175,7 +170,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-04-17",
       "last_price": 25.18,
-      "days_held": 24
+      "days_held": 34
     },
     {
       "ticker": "EWW",
@@ -183,23 +178,7 @@
       "asset_class": "International Equities",
       "date_added": "2026-04-16",
       "last_price": 77.74,
-      "days_held": 25
-    },
-    {
-      "ticker": "IBIT",
-      "etf": "Bitcoin",
-      "asset_class": "Commodities",
-      "date_added": "2026-04-16",
-      "last_price": 43.68,
-      "days_held": 25
-    },
-    {
-      "ticker": "XLI",
-      "etf": "Industrials",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-04-15",
-      "last_price": 169.38,
-      "days_held": 26
+      "days_held": 35
     },
     {
       "ticker": "EQRR",
@@ -207,7 +186,7 @@
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-31",
       "last_price": 77.56,
-      "days_held": 36
+      "days_held": 51
     },
     {
       "ticker": "XTL",
@@ -215,7 +194,7 @@
       "asset_class": "Domestic Equities",
       "date_added": "2026-03-27",
       "last_price": 224.99,
-      "days_held": 38
+      "days_held": 55
     },
     {
       "ticker": "COM",
@@ -223,7 +202,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-03-17",
       "last_price": 34.87,
-      "days_held": 46
+      "days_held": 65
     },
     {
       "ticker": "NORW",
@@ -231,7 +210,7 @@
       "asset_class": "International Equities",
       "date_added": "2026-03-03",
       "last_price": 39.14,
-      "days_held": 56
+      "days_held": 79
     },
     {
       "ticker": "BNO",
@@ -239,7 +218,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-02-13",
       "last_price": 57.44,
-      "days_held": 67
+      "days_held": 97
     },
     {
       "ticker": "OIH",
@@ -247,7 +226,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-02-05",
       "last_price": 455.49,
-      "days_held": 73
+      "days_held": 105
     },
     {
       "ticker": "XOP",
@@ -255,7 +234,7 @@
       "asset_class": "Commodities",
       "date_added": "2026-02-02",
       "last_price": 178.65,
-      "days_held": 76
+      "days_held": 108
     },
     {
       "ticker": "CLOX",
@@ -263,7 +242,7 @@
       "asset_class": "Fixed Income",
       "date_added": "2025-03-07",
       "last_price": 25.53,
-      "days_held": 303
+      "days_held": 440
     },
     {
       "ticker": "AAAU",
@@ -271,7 +250,7 @@
       "asset_class": "Foreign Currency",
       "date_added": "2025-02-28",
       "last_price": 44.26,
-      "days_held": 308
+      "days_held": 447
     },
     {
       "ticker": "BUXX",
@@ -279,7 +258,7 @@
       "asset_class": "Domestic Fixed Income",
       "date_added": "2023-10-25",
       "last_price": 20.23,
-      "days_held": 645
+      "days_held": 939
     }
   ],
   "active_shorts": [
@@ -3500,211 +3479,235 @@
     "UST30Y": {
       "lrr": 5.05,
       "trr": 5.2,
-      "prev_close": 5.11,
+      "close": 5.11,
       "signal": "BULLISH"
     },
     "UST10Y": {
       "lrr": 4.45,
       "trr": 4.7,
-      "prev_close": 4.57,
+      "close": 4.57,
       "signal": "BULLISH"
     },
     "UST2Y": {
       "lrr": 3.97,
       "trr": 4.15,
-      "prev_close": 4.04,
+      "close": 4.04,
       "signal": "BULLISH"
     },
     "HYG": {
       "lrr": 79.42,
       "trr": 80.23,
-      "prev_close": 79.86,
+      "close": 79.86,
       "signal": "BULLISH"
     },
     "LQD": {
-      "lrr": 107.0,
+      "lrr": 107,
       "trr": 108.6,
-      "prev_close": 108.0,
+      "close": 108,
       "signal": "BEARISH"
     },
     "SPX": {
       "lrr": 7321,
       "trr": 7502,
-      "prev_close": 7433,
+      "close": 7433,
       "signal": "BULLISH"
     },
     "COMPQ": {
       "lrr": 25803,
       "trr": 26700,
-      "prev_close": 26270,
+      "close": 26270,
       "signal": "BULLISH"
     },
     "RUT": {
       "lrr": 2763,
       "trr": 2907,
-      "prev_close": 2817,
+      "close": 2817,
       "signal": "BULLISH"
     },
     "XLK": {
       "lrr": 172,
       "trr": 181,
-      "prev_close": 177,
+      "close": 177,
       "signal": "BULLISH"
     },
     "XOP": {
       "lrr": 165,
       "trr": 181,
-      "prev_close": 175,
+      "close": 175,
       "signal": "BULLISH"
     },
     "XTL": {
       "lrr": 220,
       "trr": 235,
-      "prev_close": 224,
+      "close": 224,
       "signal": "BULLISH"
     },
     "XLI": {
       "lrr": 168,
       "trr": 176,
-      "prev_close": 171,
+      "close": 171,
+      "signal": "BULLISH"
+    },
+    "SSEC": {
+      "lrr": 4058,
+      "trr": 4243,
+      "close": 4166,
+      "signal": "BULLISH"
+    },
+    "NIKK": {
+      "lrr": 59699,
+      "trr": 63401,
+      "close": 62000,
+      "signal": "BULLISH"
+    },
+    "DAX": {
+      "lrr": 24104,
+      "trr": 24991,
+      "close": 24737,
       "signal": "BULLISH"
     },
     "VIX": {
       "lrr": 16.88,
       "trr": 18.73,
-      "prev_close": 17.44,
+      "close": 17.44,
       "signal": "BEARISH"
     },
     "USD": {
       "lrr": 98.39,
       "trr": 99.92,
-      "prev_close": 99.13,
+      "close": 99.13,
       "signal": "BULLISH"
     },
     "EURUSD": {
       "lrr": 1.152,
       "trr": 1.171,
-      "prev_close": 1.162,
+      "close": 1.162,
       "signal": "BEARISH"
     },
     "USDJPY": {
       "lrr": 156.7,
       "trr": 159.91,
-      "prev_close": 159.03,
+      "close": 159.03,
       "signal": "BULLISH"
     },
     "GBPUSD": {
       "lrr": 1.327,
       "trr": 1.347,
-      "prev_close": 1.343,
+      "close": 1.343,
+      "signal": "BEARISH"
+    },
+    "CADUSD": {
+      "lrr": 0.722,
+      "trr": 0.729,
+      "close": 0.727,
       "signal": "BEARISH"
     },
     "WTIC": {
       "lrr": 94.93,
       "trr": 106.81,
-      "prev_close": 99.18,
+      "close": 99.18,
       "signal": "BULLISH"
     },
     "BRENT": {
-      "lrr": 101.0,
-      "trr": 112.0,
-      "prev_close": 106.0,
+      "lrr": 101,
+      "trr": 112,
+      "close": 106,
       "signal": "BULLISH"
     },
     "NATGAS": {
       "lrr": 2.87,
       "trr": 3.16,
-      "prev_close": 3.04,
+      "close": 3.04,
       "signal": "BULLISH"
     },
     "GOLD": {
       "lrr": 4426,
       "trr": 4644,
-      "prev_close": 4527,
+      "close": 4527,
       "signal": "NEUTRAL"
     },
     "COPPER": {
       "lrr": 6.05,
       "trr": 6.65,
-      "prev_close": 6.29,
+      "close": 6.29,
       "signal": "BULLISH"
     },
     "SILVER": {
-      "lrr": 69.0,
-      "trr": 78.0,
-      "prev_close": 76.0,
+      "lrr": 69,
+      "trr": 78,
+      "close": 76,
       "signal": "BEARISH"
     },
     "MSFT": {
       "lrr": 402,
       "trr": 429,
-      "prev_close": 421,
+      "close": 421,
       "signal": "BEARISH"
     },
     "AAPL": {
       "lrr": 293,
       "trr": 306,
-      "prev_close": 302,
+      "close": 302,
       "signal": "BULLISH"
     },
     "AMZN": {
       "lrr": 258,
       "trr": 274,
-      "prev_close": 265,
+      "close": 265,
       "signal": "BULLISH"
     },
     "META": {
       "lrr": 591,
       "trr": 623,
-      "prev_close": 605,
+      "close": 605,
       "signal": "BEARISH"
     },
     "GOOGL": {
       "lrr": 382,
       "trr": 408,
-      "prev_close": 389,
+      "close": 389,
       "signal": "BULLISH"
     },
     "NFLX": {
       "lrr": 84,
       "trr": 90,
-      "prev_close": 88,
+      "close": 88,
       "signal": "BEARISH"
     },
     "TSLA": {
       "lrr": 400,
       "trr": 445,
-      "prev_close": 417,
+      "close": 417,
       "signal": "BULLISH"
     },
     "NVDA": {
       "lrr": 216,
       "trr": 235,
-      "prev_close": 223,
+      "close": 223,
       "signal": "BULLISH"
     },
     "ORCL": {
       "lrr": 179,
       "trr": 200,
-      "prev_close": 188,
+      "close": 188,
       "signal": "BULLISH"
     },
     "BTC": {
       "lrr": 76307,
       "trr": 81007,
-      "prev_close": 77804,
+      "close": 77804,
       "signal": "BULLISH"
     },
     "ETH": {
       "lrr": 2028,
       "trr": 2235,
-      "prev_close": 2114,
+      "close": 2114,
       "signal": "BEARISH"
     },
     "SOL": {
       "lrr": 81,
       "trr": 90,
-      "prev_close": 85.56,
+      "close": 85.56,
       "signal": "BEARISH"
     }
   },
@@ -3802,7 +3805,7 @@
       "spx_support": 7324,
       "spx_resistance": 7530,
       "pv_band_pct": 2.77,
-      "note": "Exposure Remains Stretched \u2014 dealers long gamma (vol-suppressing). Systematic elevated, not yet under pressure. Post-NVDA earnings: contained reaction = best case. SPX support 7324, resistance 7530."
+      "note": "Exposure Remains Stretched \u2014 dealers long gamma (vol-suppressing). Systematic stable, vol-controlled exposure unchanged. Strategic model = Risk-On regime. Post-NVDA earnings: contained reaction = best case. SPX support 7324, resistance 7530."
     },
     "early_look": {
       "title": "Turn Off Your Mind",
@@ -4687,7 +4690,8 @@
         "Global yields correcting from TRRs \u2014 duration of relief",
         "High Beta Momentum basket stabilization"
       ]
-    }
+    },
+    "etf_rerank_commentary": "PA 5/21: Added TILL (min). Sold all IBIT and XLI. Sold 100bps IWM. Sold 50bps STIP, HYG, VXF, SLX, QTUM, ROBO, OAEM, XTL. Bought 50bps COM, CNXT, SOYB. 1-wk top movers: VXF +10, QTUM +9, CNXT +8, OAEM +5, IWM +4."
   },
   "sss_history": [
     {

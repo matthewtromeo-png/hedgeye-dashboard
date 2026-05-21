@@ -1,11 +1,15 @@
 // he_etfpro.jsx — ETF Pro dedicated tab
 
-const ETFProTab = () => {
+const ETFProTab = ({macroCtx}) => {
   const {dates, tickers} = window.HE.ETF_STREAK;
   const reranks = window.HE.ETF_RERANKS;
   const [livePrices,  setLivePrices]  = React.useState({});
   const [priceStatus, setPriceStatus] = React.useState('idle');
   const liveSource = window.HE.getLiveSource?.('etfpro') || null;
+
+  // Staleness check — warn if most recent rerank is >3 trading days old
+  const latestDate = reranks[0]?.date;
+  const paCommentary = macroCtx?.pdf?.etf_rerank_commentary ?? null;
 
   // Fetch prices for ETF Pro tickers
   const etfSymbols = Object.keys(tickers);
@@ -33,17 +37,31 @@ const ETFProTab = () => {
 
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
-      {liveSource && (
-        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#B8860B',
-          background:'#FFF8E1',padding:'3px 10px',borderRadius:3,marginBottom:12,display:'inline-flex',gap:10}}>
-          <span>📂 {liveSource.source}</span>
-          {liveSource.modifiedAt && (
-            <span style={{color:'#7A5C00'}}>
-              Modified {new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'2-digit'})}
-            </span>
-          )}
+
+      {/* Source + data freshness bar */}
+      <div style={{display:'flex', gap:10, alignItems:'center', marginBottom:16, flexWrap:'wrap'}}>
+        <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#27500A',
+          background:'#EAF3DE', border:'1px solid #7AB648', padding:'3px 10px', borderRadius:3}}>
+          LATEST: {latestDate} · {dates.length} trading days tracked
+        </div>
+        {liveSource?.modifiedAt && (
+          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#7A5C00',
+            background:'#FFF8E1', padding:'3px 10px', borderRadius:3}}>
+            Source modified {new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric'})}
+          </div>
+        )}
+      </div>
+
+      {/* Keith's PA commentary */}
+      {paCommentary && (
+        <div style={{background:'#fff', border:'1px solid #E4E1DA', borderLeft:'3px solid #1A4D8F',
+          borderRadius:6, padding:'12px 16px', marginBottom:16}}>
+          <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:700,
+            color:'#1A4D8F', letterSpacing:'0.1em', marginBottom:5}}>KEITH'S PA — {latestDate}</div>
+          <div style={{fontSize:11, color:'#333', lineHeight:1.7}}>{paCommentary}</div>
         </div>
       )}
+
       {/* Leaderboard */}
       <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(180px,1fr))', gap:10, marginBottom:20}}>
         {sorted.slice(0,6).map(([sym, info]) => {
@@ -150,26 +168,4 @@ const ETFProTab = () => {
               </div>
               {r.topMovers.map((m, j) => (
                 <div key={j} style={{display:'flex', justifyContent:'space-between', alignItems:'center',
-                  padding:'4px 0', borderBottom: j < r.topMovers.length - 1 ? '1px solid #F5F3EF' : 'none'}}>
-                  <div style={{display:'flex', alignItems:'center', gap:6}}>
-                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
-                      color: rankColor(j+1), background: rankBg(j+1),
-                      width:18, height:16, borderRadius:2, display:'inline-flex',
-                      alignItems:'center', justifyContent:'center'}}>
-                      {j+1}
-                    </span>
-                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontWeight:700, fontSize:13}}>{m.ticker}</span>
-                  </div>
-                  <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12,
-                    color:'#27500A', fontWeight:600}}>{m.pts}</span>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-Object.assign(window, {ETFProTab});
+                  padding:'4px 0', borderBottom: j < r.topMover

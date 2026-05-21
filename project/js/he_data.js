@@ -85,45 +85,70 @@ window.HE.QUADS = {
       worstSectors:'Energy, Tech, Industrials, Financials, Materials'},
 };
 
-// ── ETF Re-Ranks ───────────────────────────────────────────────────
+// ── ETF Re-Ranks ─────────────────────────────────────────────────────
+// Auto-generated from 28 Portfolio Solutions PDFs (4/8 → 5/21) — newest first
 window.HE.ETF_RERANKS = [
-  {date:'Apr 21',topMovers:[{ticker:'AAAU',pts:'+3'},{ticker:'XTL',pts:'+2'},{ticker:'EQRR',pts:'+1'}]},
-  {date:'Apr 20',topMovers:[{ticker:'GII',pts:'+11'},{ticker:'ARGT',pts:'+7'},{ticker:'EQRR',pts:'+2'}]},
-  {date:'Apr 17',topMovers:[{ticker:'AAAU',pts:'+5'},{ticker:'ARGT',pts:'+4'},{ticker:'XLU',pts:'+4'}]},
-  {date:'Apr 16',topMovers:[{ticker:'AAAU',pts:'+8'},{ticker:'ARGT',pts:'+8'},{ticker:'YCS',pts:'+6'}]},
-  {date:'Apr 14',topMovers:[{ticker:'TPYP',pts:'+11'},{ticker:'XLU',pts:'+7'},{ticker:'AAAU',pts:'+7'}]},
-  {date:'Apr 13',topMovers:[{ticker:'AAAU',pts:'+8'},{ticker:'XLU',pts:'+7'},{ticker:'XTL',pts:'+4'}]},
-  {date:'Apr 10',topMovers:[{ticker:'XTL',pts:'+9'},{ticker:'NORW',pts:'+5'},{ticker:'XLU',pts:'+4'}]},
-  {date:'Apr 9', topMovers:[{ticker:'XTL',pts:'+9'},{ticker:'NORW',pts:'+7'},{ticker:'XLE',pts:'+6'}]},
-  {date:'Apr 8', topMovers:[{ticker:'COM',pts:'+11'},{ticker:'XTL',pts:'+8'},{ticker:'NORW',pts:'+3'}]},
+  {date:'5/21',topMovers:[{ticker:'VXF',pts:'+10'},{ticker:'QTUM',pts:'+9'},{ticker:'CNXT',pts:'+8'}]},
+  {date:'5/20',topMovers:[{ticker:'OAEM',pts:'+13'},{ticker:'CNXT',pts:'+10'},{ticker:'VXF',pts:'+9'}]},
+  {date:'5/19',topMovers:[{ticker:'CNXT',pts:'+14'},{ticker:'XLI',pts:'+9'},{ticker:'OAEM',pts:'+8'}]},
+  {date:'5/18',topMovers:[{ticker:'OAEM',pts:'+13'},{ticker:'CNXT',pts:'+12'},{ticker:'IBIT',pts:'+11'}]},
+  {date:'5/15',topMovers:[{ticker:'OAEM',pts:'+12'},{ticker:'CNXT',pts:'+10'},{ticker:'IWM',pts:'+9'}]},
+  {date:'5/14',topMovers:[{ticker:'CNXT',pts:'+8'},{ticker:'ALLW',pts:'+7'},{ticker:'EWC',pts:'+5'}]},
+  {date:'5/13',topMovers:[{ticker:'IBIT',pts:'+11'},{ticker:'ALLW',pts:'+8'},{ticker:'FXB',pts:'+3'}]},
+  {date:'5/12',topMovers:[{ticker:'EWC',pts:'+9'},{ticker:'OAEM',pts:'+3'},{ticker:'IBIT',pts:'+2'}]},
+  {date:'5/11',topMovers:[{ticker:'EWC',pts:'+8'},{ticker:'XLI',pts:'+7'},{ticker:'AAAU',pts:'+4'}]},
+  {date:'5/8', topMovers:[{ticker:'OIH',pts:'+11'},{ticker:'EWC',pts:'+8'},{ticker:'IBIT',pts:'+5'}]},
+  {date:'5/7', topMovers:[{ticker:'OIH',pts:'+10'},{ticker:'EWC',pts:'+6'},{ticker:'SOYB',pts:'+3'}]},
+  {date:'5/6', topMovers:[{ticker:'OIH',pts:'+12'},{ticker:'COM',pts:'+6'},{ticker:'SOYB',pts:'+5'}]},
+  {date:'5/5', topMovers:[{ticker:'OIH',pts:'+9'},{ticker:'GII',pts:'+6'},{ticker:'ALLW',pts:'+4'}]},
+  {date:'5/4', topMovers:[{ticker:'TUR',pts:'+8'},{ticker:'OIH',pts:'+7'},{ticker:'EWW',pts:'+7'}]},
+  {date:'4/30',topMovers:[{ticker:'UFO',pts:'+6'},{ticker:'HYG',pts:'+5'},{ticker:'XLI',pts:'+2'}]},
+  {date:'4/29',topMovers:[{ticker:'TUR',pts:'+7'},{ticker:'FXB',pts:'+4'},{ticker:'HYG',pts:'+3'}]},
+  {date:'4/28',topMovers:[{ticker:'XLI',pts:'+5'},{ticker:'HYG',pts:'+2'},{ticker:'XTL',pts:'+1'}]},
+  {date:'4/23',topMovers:[{ticker:'EWW',pts:'+7'},{ticker:'XTL',pts:'+2'}]},
+  {date:'4/22',topMovers:[{ticker:'AAAU',pts:'+4'},{ticker:'XLI',pts:'+4'},{ticker:'XTL',pts:'+3'}]},
+  {date:'4/21',topMovers:[{ticker:'AAAU',pts:'+3'},{ticker:'XTL',pts:'+2'},{ticker:'EQRR',pts:'+1'}]},
+  {date:'4/20',topMovers:[{ticker:'GII',pts:'+11'},{ticker:'ARGT',pts:'+7'},{ticker:'EQRR',pts:'+2'}]},
+  {date:'4/17',topMovers:[{ticker:'AAAU',pts:'+5'},{ticker:'ARGT',pts:'+4'},{ticker:'XLU',pts:'+4'}]},
+  {date:'4/16',topMovers:[{ticker:'AAAU',pts:'+8'},{ticker:'ARGT',pts:'+8'},{ticker:'YCS',pts:'+6'}]},
+  {date:'4/14',topMovers:[{ticker:'TPYP',pts:'+11'},{ticker:'XLU',pts:'+7'},{ticker:'AAAU',pts:'+7'}]},
+  {date:'4/13',topMovers:[{ticker:'AAAU',pts:'+8'},{ticker:'XLU',pts:'+7'},{ticker:'XTL',pts:'+4'}]},
+  {date:'4/10',topMovers:[{ticker:'XTL',pts:'+9'},{ticker:'NORW',pts:'+5'},{ticker:'XLU',pts:'+4'}]},
+  {date:'4/9', topMovers:[{ticker:'XTL',pts:'+9'},{ticker:'NORW',pts:'+7'},{ticker:'XLE',pts:'+6'}]},
+  {date:'4/8', topMovers:[{ticker:'COM',pts:'+11'},{ticker:'XTL',pts:'+8'},{ticker:'NORW',pts:'+3'}]},
 ];
 
-// ── ETF Streak (appearances in top-3 re-rank) ──────────────────────
+// ── ETF Streak (top-3 appearances, 4/8→5/21, 28 trading days) ────────
 window.HE.ETF_STREAK = {
-  dates: ['Apr 8','Apr 9','Apr 10','Apr 13','Apr 14','Apr 16','Apr 17','Apr 20','Apr 21'],
+  dates: ['4/8','4/9','4/10','4/13','4/14','4/16','4/17','4/20','4/21','4/22','4/23','4/28','4/29','4/30','5/4','5/5','5/6','5/7','5/8','5/11','5/12','5/13','5/14','5/15','5/18','5/19','5/20','5/21'],
   tickers: {
-    AAAU: {desc:'Physical Gold ETF',appearances:5,
-      data:{'Apr 13':1,'Apr 14':3,'Apr 16':1,'Apr 17':1,'Apr 21':1}},
-    XTL:  {desc:'S&P Telecom ETF — defensive',appearances:5,
-      data:{'Apr 8':2,'Apr 9':1,'Apr 10':1,'Apr 13':3,'Apr 21':2}},
-    XLU:  {desc:'Utilities Select Sector ETF',appearances:4,
-      data:{'Apr 10':3,'Apr 13':2,'Apr 14':2,'Apr 17':3}},
-    ARGT: {desc:'Global X MSCI Argentina ETF',appearances:3,
-      data:{'Apr 16':2,'Apr 17':2,'Apr 20':2}},
-    NORW: {desc:'iShares MSCI Norway ETF',appearances:3,
-      data:{'Apr 8':3,'Apr 9':2,'Apr 10':2}},
-    EQRR: {desc:'ProShares Equities for Rising Rates',appearances:2,
-      data:{'Apr 20':3,'Apr 21':3}},
-    GII:  {desc:'Global Infrastructure ETF',appearances:1,
-      data:{'Apr 20':1}},
-    TPYP: {desc:'Tortoise North American Pipeline ETF',appearances:1,
-      data:{'Apr 14':1}},
-    COM:  {desc:'Direxion Auspice Broad Commodity ETF',appearances:1,
-      data:{'Apr 8':1}},
-    YCS:  {desc:'ProShares Ultra Short Yen',appearances:1,
-      data:{'Apr 16':3}},
-    XLE:  {desc:'Energy Select Sector ETF',appearances:1,
-      data:{'Apr 9':3}},
+    XTL:  {desc:'S&P Telecom ETF',appearances:8,  data:{'4/8':2,'4/9':1,'4/10':1,'4/13':3,'4/21':2,'4/22':3,'4/23':2,'4/28':3}},
+    AAAU: {desc:'Physical Gold ETF',appearances:7, data:{'4/13':1,'4/14':3,'4/16':1,'4/17':1,'4/21':1,'4/22':1,'5/11':3}},
+    CNXT: {desc:'VanEck ChiNext ETF',appearances:6,data:{'5/14':1,'5/15':2,'5/18':2,'5/19':1,'5/20':2,'5/21':3}},
+    XLI:  {desc:'Industrials SPDR',appearances:5,  data:{'4/22':2,'4/28':1,'4/30':3,'5/11':2,'5/19':2}},
+    OIH:  {desc:'Oil Services ETF',appearances:5,  data:{'5/4':2,'5/5':1,'5/6':1,'5/7':1,'5/8':1}},
+    EWC:  {desc:'iShares MSCI Canada',appearances:5,data:{'5/7':2,'5/8':2,'5/11':1,'5/12':1,'5/14':3}},
+    OAEM: {desc:'Emerging Markets Access',appearances:5,data:{'5/12':2,'5/15':1,'5/18':1,'5/19':3,'5/20':1}},
+    XLU:  {desc:'Utilities Select SPDR',appearances:4,data:{'4/10':3,'4/13':2,'4/14':2,'4/17':3}},
+    IBIT: {desc:'iShares Bitcoin Trust',appearances:4,data:{'5/8':3,'5/12':3,'5/13':1,'5/18':3}},
+    NORW: {desc:'iShares MSCI Norway',appearances:3,data:{'4/8':3,'4/9':2,'4/10':2}},
+    ARGT: {desc:'Global X MSCI Argentina',appearances:3,data:{'4/16':2,'4/17':2,'4/20':2}},
+    HYG:  {desc:'High Yield Bond ETF',appearances:3,data:{'4/28':2,'4/29':3,'4/30':2}},
+    ALLW: {desc:'iShares ESG Balanced',appearances:3,data:{'5/5':3,'5/13':2,'5/14':2}},
+    COM:  {desc:'Auspice Broad Commodity',appearances:2,data:{'4/8':1,'5/6':2}},
+    GII:  {desc:'Global Infrastructure ETF',appearances:2,data:{'4/20':1,'5/5':2}},
+    EQRR: {desc:'ProShares Equities Rising Rates',appearances:2,data:{'4/20':3,'4/21':3}},
+    EWW:  {desc:'iShares MSCI Mexico',appearances:2,data:{'4/23':1,'5/4':3}},
+    TUR:  {desc:'iShares MSCI Turkey',appearances:2,data:{'4/29':1,'5/4':1}},
+    FXB:  {desc:'Invesco British Pound',appearances:2,data:{'4/29':2,'5/13':3}},
+    SOYB: {desc:'Teucrium Soybean',appearances:2,data:{'5/6':3,'5/7':3}},
+    VXF:  {desc:'Vanguard Extended Market',appearances:2,data:{'5/20':3,'5/21':1}},
+    XLE:  {desc:'Energy Select SPDR',appearances:1,data:{'4/9':3}},
+    TPYP: {desc:'Tortoise MLP Pipeline',appearances:1,data:{'4/14':1}},
+    YCS:  {desc:'ProShares Ultra Short Yen',appearances:1,data:{'4/16':3}},
+    UFO:  {desc:'Procure Space ETF',appearances:1,data:{'4/30':1}},
+    IWM:  {desc:'iShares Russell 2000',appearances:1,data:{'5/15':3}},
+    QTUM: {desc:'Defiance Quantum ETF',appearances:1,data:{'5/21':2}},
   },
 };
 
@@ -243,89 +268,3 @@ window.HE.loadHamCache = async function() {
 
 // ── Live source metadata (written by ingestion, read by tabs) ────────────────
 window.HE.setLiveSource = function(category, meta) {
-  try {
-    const all = JSON.parse(localStorage.getItem('he_live_sources') || '{}');
-    all[category] = meta;
-    localStorage.setItem('he_live_sources', JSON.stringify(all));
-  } catch (e) { console.warn('[HE] setLiveSource:', e.message); }
-};
-window.HE.getLiveSource = function(category) {
-  try {
-    return JSON.parse(localStorage.getItem('he_live_sources') || '{}')[category] || null;
-  } catch { return null; }
-};
-
-// Apply persisted live SSS at startup (before React mounts)
-;(function() {
-  try {
-    const live = JSON.parse(localStorage.getItem('he_sss_live') || '{}');
-    if (live.entries?.length > 3) window.HE.SSS = live.entries;
-  } catch {}
-})();
-
-// ── CSV Parser ─────────────────────────────────────────────────────
-window.HE.parseCSV = function(text) {
-  const lines = text.replace(/\r/g,'').trim().split('\n');
-  const headers = lines[0].split(',').map(h => h.replace(/"/g,'').trim());
-  return lines.slice(1).filter(l => l.trim()).map(line => {
-    const vals = [];
-    let cur = '', inQ = false;
-    for (const c of line) {
-      if (c === '"') { inQ = !inQ; }
-      else if (c === ',' && !inQ) { vals.push(cur.trim()); cur = ''; }
-      else { cur += c; }
-    }
-    vals.push(cur.trim());
-    return Object.fromEntries(headers.map((h,i) => [h, vals[i]||'']));
-  });
-};
-
-// ── RTA Stats Calculator ───────────────────────────────────────────
-window.HE.computeRTAStats = function(trades) {
-  const closed = trades.filter(t => t['Close Date'] && t['Realized Return'] !== '');
-  const returns = closed.map(t => parseFloat(t['Realized Return'])||0);
-  const wins = returns.filter(r => r > 0).length;
-  const losses = returns.filter(r => r <= 0).length;
-
-  // By year
-  const byYear = {};
-  closed.forEach(t => {
-    const y = (t['Close Date']||'').slice(0,4);
-    if (!y || y.length !== 4 || isNaN(+y)) return;
-    if (!byYear[y]) byYear[y] = {count:0,wins:0,sumReturn:0,best:-Infinity,worst:Infinity};
-    const r = parseFloat(t['Realized Return'])||0;
-    byYear[y].count++;
-    if (r > 0) byYear[y].wins++;
-    byYear[y].sumReturn += r;
-    if (r > byYear[y].best) byYear[y].best = r;
-    if (r < byYear[y].worst) byYear[y].worst = r;
-  });
-
-  // Cumulative P&L — last 600 trades by close date
-  const chronological = [...closed]
-    .sort((a,b) => new Date(a['Close Date']) - new Date(b['Close Date']))
-    .slice(-600);
-  let cum = 0;
-  const cumPnl = chronological.map(t => {
-    cum += parseFloat(t['Realized Return'])||0;
-    return {date:(t['Close Date']||'').slice(0,10), cum, r:parseFloat(t['Realized Return'])||0};
-  });
-
-  // Best/worst
-  const sorted = [...closed].sort((a,b) =>
-    (parseFloat(b['Realized Return'])||0) - (parseFloat(a['Realized Return'])||0));
-
-  return {
-    total: closed.length,
-    wins, losses,
-    winRate: closed.length ? wins/closed.length : 0,
-    avgReturn: returns.length ? returns.reduce((a,b)=>a+b,0)/returns.length : 0,
-    byYear,
-    cumPnl,
-    best: sorted[0],
-    worst: sorted[sorted.length-1],
-    recentTrades: [...closed]
-      .sort((a,b) => new Date(b['Close Date']) - new Date(a['Close Date']))
-      .slice(0,300),
-  };
-};
