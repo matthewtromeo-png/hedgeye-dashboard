@@ -124,20 +124,30 @@ const MarketTab = ({quad, macroCtx}) => {
   const fetchInflation = React.useCallback(async () => {
     setInflStatus('loading');
 
-    // ── Research Intel (from ingested PDFs) ──────────────────────────
+    // ── macro_context.json (Cowork-maintained) — highest priority ─────
+    // cpi_nowcast lives at macroCtx.pdf.macro_research.cpi_nowcast
+    // This beats stale localStorage from previously ingested PDFs.
     try {
-      const ri = JSON.parse(localStorage.getItem('he_research_intel') || '{}');
-      if (ri.pdfs) {
-        const sorted = Object.values(ri.pdfs).sort((a, b) => new Date(b.ingestedAt) - new Date(a.ingestedAt));
-        const latest = sorted.find(p => p.cpi?.headline?.value != null || p.cpi?.core?.value != null);
-        if (latest) {
-          setResearchCpi({ ...latest.cpi, source: latest.filename, ingestedAt: latest.ingestedAt });
-          setInflSource('Research');
-          setInflStatus('ok');
-          return;
-        }
+      const nowcast = macroCtx?.pdf?.macro_research?.cpi_nowcast ?? null;
+      if (nowcast != null) {
+        setResearchCpi({
+          headline: null,
+          core:     null,
+          mom:      null,
+          nowcast:  { value: nowcast },
+          source:   'macro_context.json (Cowork)',
+          ingestedAt: new Date().toISOString(),
+        });
+        setInflSource('Research');
+        setInflStatus('ok');
+        // Don't return — fall through so BLS still fills headline/core from hardcoded data
+        // Actually clear any stale localStorage CPI so calcYoY runs from he_data.js
       }
     } catch (e) {}
+
+    // ── Research Intel (from ingested PDFs — stale, lower priority) ──
+    // Skipped: stale PDF extractions override the correct hardcoded values.
+    // To re-enable, remove this comment block and restore the localStorage read.
 
     // ── BLS ──────────────────────────────────────────────────────────
     try {
@@ -170,7 +180,7 @@ const MarketTab = ({quad, macroCtx}) => {
     }
 
     setInflStatus('error');
-  }, []);
+  }, [macroCtx]);
 
   React.useEffect(() => { refresh(); fetchInflation(); }, []);
 
@@ -349,7 +359,19 @@ const MarketTab = ({quad, macroCtx}) => {
                 <div style={{fontSize:12, color:'#555', lineHeight:1.6, marginTop:4}}>
                   {inflStatus==='loading' ? <span style={{color:'#ccc',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>fetching…</span> :
                   inflStatus==='error' ? <span style={{color:'#ccc',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>unavailable</span> :
-                  `Q3 = Rising inflation, slowing growth. Hedge with gold, short bonds, long defensive equities.`}
+                  (() => {
+                    const mq = macroCtx?.pdf?.macro_show?.monthly_quad;
+                    const qq = macroCtx?.pdf?.macro_show?.quarterly_quad;
+                    const seq = macroCtx?.pdf?.macro_show?.quad_sequence || '';
+                    const desc = {
+                      1: 'Growth ↑ Inflation ↓ — own tech, growth equities, high yield',
+                      2: 'Growth ↑↑ Inflation ↑↑ — own metals, commodities, crypto, HY. Avoid TLT/LQD',
+                      3: 'Growth ↓ Inflation ↑ — own energy, metals, short duration. Avoid tech/growth',
+                      4: 'Growth ↓ Inflation ↓ — own long bonds, cash, defensives',
+                    };
+                    if (!mq) return 'No quad data — run morning research pipeline';
+                    return `Monthly Q${mq} / Quarterly Q${qq}${seq ? ' · '+seq : ''} — ${desc[mq] || ''}`;
+                  })()}
                 </div>
               )}
             </div>

@@ -466,7 +466,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
               <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',
                 padding:'5px 0',borderBottom:i<Math.min(9,recentTrades.length-1)?'1px solid #F5F3EF':'none'}}>
                 <div style={{display:'flex',gap:7,alignItems:'center'}}>
-                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12,minWidth:48}}>{t.symbol}</span>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontWeight:700,fontSize:12,minWidth:48}}>{t.ticker}</span>
                   <SignalBadge signal={(t.position||'').toUpperCase()} />
                 </div>
                 <div style={{textAlign:'right'}}>

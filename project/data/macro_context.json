@@ -3719,68 +3719,68 @@
         "STKL",
         "AMAT",
         "ENB",
-        "DAS",
+        "DAR",
         "CAVA",
         "ACHC",
         "MUSA",
-        "SMPL",
+        "SWBI",
         "RSI",
         "CZR",
         "FCFS",
-        "NLS",
+        "ULS",
         "MAR",
-        "CBX",
-        "MNRL",
+        "CSX",
+        "MRVL",
         "LRCX",
         "SITM",
-        "NYDA",
-        "AMP2",
+        "NVDA",
+        "AMZN",
         "VIK",
         "GOOGL",
         "AAPL",
-        "ROOU",
+        "ROKU",
         "HST",
-        "GLABF",
+        "GLASF",
         "CURLF",
         "SBUX",
         "ROK",
         "CP",
         "LAMR",
-        "VMEO",
-        "LBST",
+        "TWLO",
+        "LFST",
         "LFMD",
         "UNH",
         "SXT",
-        "CAGC",
+        "CACC",
         "XYZ",
-        "CARS",
+        "CARR",
         "APD",
-        "NARA",
+        "MARA",
         "CRCL",
-        "AFRI",
+        "AFRM",
         "URI",
         "DOW",
         "LYB",
         "RIO",
         "BHP",
-        "ASGM",
+        "AKAM",
         "TTWO",
         "APLE",
-        "LOTHY",
+        "LOTMY",
         "CMI",
         "WRBY",
-        "DOOO",
-        "INST",
+        "DDOG",
+        "MNST",
         "PRMB",
         "PM",
         "AZTAF",
-        "BLMNF",
+        "BLMN",
         "V",
-        "ATRD",
+        "ATRO",
         "ILMN",
         "NVO",
         "RHP",
-        "RTI",
+        "BTI",
         "BJRI",
         "CPAY",
         "HLT",
@@ -3840,7 +3840,7 @@
           "analyst": "Fernando Valle",
           "days_on_list": 85
         },
-        "DAS": {
+        "DAR": {
           "signal_date": "2026-02-23",
           "entry_price": 51.6,
           "sector": "Energy",
@@ -3868,7 +3868,7 @@
           "analyst": "Daniel Biolsi",
           "days_on_list": 71
         },
-        "SMPL": {
+        "SWBI": {
           "signal_date": "2026-03-09",
           "entry_price": 14.0,
           "sector": "Retail",
@@ -3896,7 +3896,7 @@
           "analyst": "Josh Steiner",
           "days_on_list": 57
         },
-        "NLS": {
+        "ULS": {
           "signal_date": "2026-03-30",
           "entry_price": 83.9,
           "sector": "Industrials",
@@ -3910,14 +3910,14 @@
           "analyst": "Sean Jenkins",
           "days_on_list": 39
         },
-        "CBX": {
+        "CSX": {
           "signal_date": "2026-04-10",
           "entry_price": 42.2,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
           "days_on_list": 39
         },
-        "MNRL": {
+        "MRVL": {
           "signal_date": "2026-04-10",
           "entry_price": 128.5,
           "sector": "Global Tech",
@@ -3938,14 +3938,14 @@
           "analyst": "Felix Wang",
           "days_on_list": 39
         },
-        "NYDA": {
+        "NVDA": {
           "signal_date": "2026-04-10",
           "entry_price": 188.6,
           "sector": "Global Tech",
           "analyst": "Felix Wang",
           "days_on_list": 39
         },
-        "AMP2": {
+        "AMZN": {
           "signal_date": "2026-04-10",
           "entry_price": 238.4,
           "sector": "Retail",
@@ -3973,7 +3973,7 @@
           "analyst": "Felix Wang",
           "days_on_list": 33
         },
-        "ROOU": {
+        "ROKU": {
           "signal_date": "2026-04-20",
           "entry_price": 115.5,
           "sector": "Communications",
@@ -3987,7 +3987,7 @@
           "analyst": "Sean Jenkins",
           "days_on_list": 29
         },
-        "GLABF": {
+        "GLASF": {
           "signal_date": "2026-04-20",
           "entry_price": 8.7,
           "sector": "Cannabis",
@@ -4029,14 +4029,14 @@
           "analyst": "Andrew Freedman",
           "days_on_list": 28
         },
-        "VMEO": {
+        "TWLO": {
           "signal_date": "2026-04-22",
           "entry_price": 150.4,
           "sector": "Software",
           "analyst": "Andrew Freedman",
           "days_on_list": 27
         },
-        "LBST": {
+        "LFST": {
           "signal_date": "2026-04-22",
           "entry_price": 6.8,
           "sector": "Healthcare",
@@ -4064,7 +4064,7 @@
           "analyst": "Daniel Biolsi",
           "days_on_list": 22
         },
-        "CAGC": {
+        "CACC": {
           "signal_date": "2026-04-28",
           "entry_price": 510.1,
           "sector": "Financials",
@@ -4078,9 +4078,9 @@
           "analyst": "Josh Steiner",
           "days_on_list": 21
         },
-        "CARS": {
+        "CARR": {
           "signal_date": "2026-04-28",
-          "entry_price": 81.7,
+          "entry_price": 61.7,
           "sector": "Industrials",
           "analyst": "Jay Van Sciver",
           "days_on_list": 21
@@ -4092,7 +4092,7 @@
           "analyst": "Jay Van Sciver",
           "days_on_list": 21
         },
-        "NARA": {
+        "MARA": {
           "signal_date": "2026-05-04",
           "entry_price": 11.5,
           "sector": "Digital Assets",
@@ -4106,9 +4106,9 @@
           "analyst": "Josh Steiner",
           "days_on_list": 15
         },
-        "AFRI": {
+        "AFRM": {
           "signal_date": "2026-05-04",
-          "entry_price": 87.3,
+          "entry_price": 67.3,
           "sector": "Financials",
           "analyst": "Josh Steiner",
           "days_on_list": 15
@@ -4148,7 +4148,7 @@
           "analyst": "Jay Van Sciver",
           "days_on_list": 15
         },
-        "ASGM": {
+        "AKAM": {
           "signal_date": "2026-05-05",
           "entry_price": 115.5,
           "sector": "Software",
@@ -4169,7 +4169,7 @@
           "analyst": "Sean Jenkins",
           "days_on_list": 14
         },
-        "LOTHY": {
+        "LOTMY": {
           "signal_date": "2026-05-06",
           "entry_price": 32.0,
           "sector": "GLL",
@@ -4190,16 +4190,16 @@
           "analyst": "Brian McGough",
           "days_on_list": 12
         },
-        "DOOO": {
+        "DDOG": {
           "signal_date": "2026-05-11",
           "entry_price": 200.2,
           "sector": "Software",
           "analyst": "Andrew Freedman",
           "days_on_list": 8
         },
-        "INST": {
+        "MNST": {
           "signal_date": "2026-05-11",
-          "entry_price": 88.3,
+          "entry_price": 86.3,
           "sector": "Consumer Staples",
           "analyst": "Daniel Biolsi",
           "days_on_list": 8
@@ -4225,7 +4225,7 @@
           "analyst": "Brian McGough",
           "days_on_list": 7
         },
-        "BLMNF": {
+        "BLMN": {
           "signal_date": "2026-05-12",
           "entry_price": 8.4,
           "sector": "Restaurants",
@@ -4239,7 +4239,7 @@
           "analyst": "Josh Steiner",
           "days_on_list": 7
         },
-        "ATRD": {
+        "ATRO": {
           "signal_date": "2026-05-12",
           "entry_price": 73.8,
           "sector": "Industrials",
@@ -4267,7 +4267,7 @@
           "analyst": "Sean Jenkins",
           "days_on_list": 6
         },
-        "RTI": {
+        "BTI": {
           "signal_date": "2026-05-13",
           "entry_price": 64.6,
           "sector": "Consumer Staples",
