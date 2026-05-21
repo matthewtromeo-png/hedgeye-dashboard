@@ -378,36 +378,215 @@ const MarketTab = ({quad, macroCtx}) => {
           ))}
         </div>
 
-        {/* CPI trend mini table */}
-        {cpiSeries.length > 0 && (
-          <div style={{overflowX:'auto'}}>
-            <table style={{borderCollapse:'collapse', fontFamily:'IBM Plex Mono,monospace', fontSize:11}}>
-              <thead>
-                <tr>
-                  <TH>Period</TH><TH right>CPI</TH><TH right>Core CPI</TH><TH right>CPI MoM</TH>
-                </tr>
-              </thead>
-              <tbody>
-                {cpiSeries.slice(-8).reverse().map((row, i) => {
-                  const coreRow = coreSeries.find(r => r.year===row.year && r.period===row.period);
-                  const prev = cpiSeries[cpiSeries.indexOf(row) - 1];
-                  const mom = prev ? ((parseFloat(row.value) - parseFloat(prev.value)) / parseFloat(prev.value) * 100) : null;
-                  return (
-                    <tr key={i} style={{borderBottom:'1px solid #F5F3EF', background:i===0?'#FAFAF8':'#fff'}}>
-                      <TD style={{fontWeight:i===0?600:400}}>{row.periodName} {row.year}</TD>
-                      <TD right>{parseFloat(row.value).toFixed(3)}</TD>
-                      <TD right>{coreRow ? parseFloat(coreRow.value).toFixed(3) : '—'}</TD>
-                      <TD right style={{color: mom===null?'#ccc':mom>0.3?'#C8302A':mom>0?'#B8860B':'#27500A', fontWeight:600}}>
-                        {mom === null ? '—' : `${mom>0?'+':''}${mom.toFixed(3)}%`}
-                      </TD>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
+        {/* CPI Trend Chart + Table */}
+        <CpiTrendChart cpiSeries={cpiSeries} coreSeries={coreSeries} cpiNowcast={cpiNowcast}
+          macroCtx={macroCtx} />
       </div>
+    </div>
+  );
+};
+
+// ── CPI Trend Chart (inline SVG) ─────────────────────────────────────
+const CpiTrendChart = ({cpiSeries, coreSeries, cpiNowcast, macroCtx}) => {
+  const W = 820, H = 200, PAD = {t:20, r:20, b:40, l:48};
+  const chartW = W - PAD.l - PAD.r;
+  const chartH = H - PAD.t - PAD.b;
+
+  // Build dataset — use hardcoded HE.CPI_DATA if BLS not loaded yet
+  const rawCpi  = cpiSeries.length  > 2 ? cpiSeries  : (window.HE?.CPI_DATA?.['CUUR0000SA0']    ?? []);
+  const rawCore = coreSeries.length > 2 ? coreSeries : (window.HE?.CPI_DATA?.['CUUR0000SA0L1E'] ?? []);
+
+  if (rawCpi.length < 4) {
+    return (
+      <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',padding:'12px 0'}}>
+        Chart loading — CPI data not yet available
+      </div>
+    );
+  }
+
+  // Compute YoY for each month
+  const pts = [];
+  for (let i = 12; i < rawCpi.length; i++) {
+    const cur  = parseFloat(rawCpi[i]?.value);
+    const ago  = parseFloat(rawCpi[i-12]?.value);
+    if (!cur || !ago) continue;
+    const yoy = ((cur - ago) / ago * 100);
+    const coreRow = rawCore.find(r => r.year===rawCpi[i].year && r.period===rawCpi[i].period);
+    const coreAgo = coreRow ? rawCore[rawCore.indexOf(coreRow)-12] : null;
+    const coreYoy = coreRow && coreAgo
+      ? ((parseFloat(coreRow.value) - parseFloat(coreAgo?.value)) / parseFloat(coreAgo?.value) * 100)
+      : null;
+    pts.push({
+      label: `${rawCpi[i].periodName?.slice(0,3)} ${rawCpi[i].year}`,
+      yoy: Math.round(yoy * 100) / 100,
+      coreYoy: coreYoy ? Math.round(coreYoy * 100) / 100 : null,
+    });
+  }
+
+  // Add nowcast as projected final point
+  if (cpiNowcast && pts.length > 0) {
+    pts.push({ label: 'Nowcast', yoy: cpiNowcast, coreYoy: null, projected: true });
+  }
+
+  const recent = pts.slice(-14);
+  const allVals = recent.flatMap(p => [p.yoy, p.coreYoy].filter(v=>v!=null));
+  const minV = Math.min(...allVals, 2.5);
+  const maxV = Math.max(...allVals, 5.5);
+  const range = maxV - minV || 1;
+
+  const xPos = (i) => PAD.l + (i / (recent.length - 1)) * chartW;
+  const yPos = (v) => PAD.t + chartH - ((v - minV) / range) * chartH;
+
+  const makePath = (data, key) => {
+    const validPts = data.map((p,i) => ({x: xPos(i), y: yPos(p[key]), i})).filter(p=>p.y!=null && !isNaN(p.y));
+    return validPts.map((p,j) => `${j===0?'M':'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+  };
+
+  // Y-axis grid lines at 0.5% intervals
+  const gridVals = [];
+  for (let v = Math.ceil(minV*2)/2; v <= maxV; v += 0.5) gridVals.push(v);
+
+  // Quad color band — Q3 = red zone above ~3.5%
+  const q3Threshold = 3.5;
+  const q3Y = yPos(Math.min(q3Threshold, maxV));
+  const q2Y = yPos(Math.min(2.5, maxV));
+
+  // Determine monthly quad
+  const mq = macroCtx?.pdf?.macro_show?.monthly_quad;
+  const qq = macroCtx?.pdf?.macro_show?.quarterly_quad;
+
+  return (
+    <div>
+      <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:8}}>
+        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+          color:'#1A1A18',letterSpacing:'0.06em'}}>CPI YoY TREND</div>
+        <div style={{display:'flex',gap:14,fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#7A7770'}}>
+          <span><span style={{display:'inline-block',width:18,height:2,background:'#C8302A',
+            verticalAlign:'middle',marginRight:4}}/>CPI YoY</span>
+          <span><span style={{display:'inline-block',width:18,height:2,background:'#1A4D8F',
+            verticalAlign:'middle',marginRight:4,borderTop:'2px dashed #1A4D8F'}}/>Core CPI</span>
+          {cpiNowcast && <span><span style={{display:'inline-block',width:8,height:8,
+            background:'#B8860B',borderRadius:'50%',verticalAlign:'middle',marginRight:4}}/>Nowcast</span>}
+        </div>
+      </div>
+      <div style={{overflowX:'auto'}}>
+        <svg viewBox={`0 0 ${W} ${H}`} style={{width:'100%',maxWidth:W,display:'block'}}>
+          {/* Background quad color bands */}
+          <rect x={PAD.l} y={PAD.t} width={chartW} height={Math.max(0, q3Y - PAD.t)}
+            fill="rgba(200,48,42,0.04)" />
+          <rect x={PAD.l} y={q3Y} width={chartW}
+            height={Math.max(0, yPos(2.5) - q3Y)}
+            fill="rgba(184,134,11,0.04)" />
+          <rect x={PAD.l} y={yPos(2.5)} width={chartW}
+            height={Math.max(0, (PAD.t+chartH) - yPos(2.5))}
+            fill="rgba(39,80,10,0.04)" />
+
+          {/* Grid lines */}
+          {gridVals.map(v => (
+            <g key={v}>
+              <line x1={PAD.l} x2={PAD.l+chartW} y1={yPos(v)} y2={yPos(v)}
+                stroke="#E4E1DA" strokeWidth={0.5} />
+              <text x={PAD.l-4} y={yPos(v)+4} textAnchor="end"
+                fontFamily="IBM Plex Mono,monospace" fontSize={8} fill="#9A9790">
+                {v.toFixed(1)}%
+              </text>
+            </g>
+          ))}
+
+          {/* Fed 2% target line */}
+          {minV <= 2 && (
+            <line x1={PAD.l} x2={PAD.l+chartW} y1={yPos(2)} y2={yPos(2)}
+              stroke="#27500A" strokeWidth={0.8} strokeDasharray="4,3" opacity={0.5} />
+          )}
+
+          {/* 3.5% threshold label */}
+          {maxV >= q3Threshold && (
+            <text x={PAD.l+chartW+2} y={q3Y+4}
+              fontFamily="IBM Plex Mono,monospace" fontSize={7} fill="#C8302A">Q3</text>
+          )}
+
+          {/* Core CPI line (dashed blue) */}
+          <path d={makePath(recent, 'coreYoy')} fill="none"
+            stroke="#1A4D8F" strokeWidth={1.5} strokeDasharray="5,3" opacity={0.7} />
+
+          {/* CPI YoY line */}
+          <path d={makePath(recent, 'yoy')} fill="none"
+            stroke="#C8302A" strokeWidth={2} />
+
+          {/* Data points */}
+          {recent.map((p, i) => (
+            <g key={i}>
+              {/* CPI dot */}
+              <circle cx={xPos(i)} cy={yPos(p.yoy)} r={p.projected?5:3}
+                fill={p.projected?'#B8860B':'#C8302A'}
+                stroke={p.projected?'#fff':'none'} strokeWidth={1.5} />
+              {/* Core dot */}
+              {p.coreYoy != null && !p.projected && (
+                <circle cx={xPos(i)} cy={yPos(p.coreYoy)} r={2} fill="#1A4D8F" opacity={0.8} />
+              )}
+            </g>
+          ))}
+
+          {/* Nowcast label */}
+          {cpiNowcast && recent[recent.length-1]?.projected && (
+            <text x={xPos(recent.length-1)} y={yPos(cpiNowcast)-8} textAnchor="middle"
+              fontFamily="IBM Plex Mono,monospace" fontSize={8} fontWeight={700} fill="#B8860B">
+              {cpiNowcast.toFixed(2)}%↗
+            </text>
+          )}
+
+          {/* X-axis labels — every other */}
+          {recent.map((p, i) => i % 2 === 0 && (
+            <text key={i} x={xPos(i)} y={H-8} textAnchor="middle"
+              fontFamily="IBM Plex Mono,monospace" fontSize={7.5} fill="#9A9790"
+              transform={`rotate(-30,${xPos(i)},${H-8})`}>
+              {p.label}
+            </text>
+          ))}
+
+          {/* Current value callout */}
+          {recent.length > 1 && !recent[recent.length-2].projected && (() => {
+            const last = recent[recent.length - (cpiNowcast?2:1)];
+            const li = recent.length - (cpiNowcast?2:1);
+            return (
+              <text x={xPos(li)} y={yPos(last.yoy)-8} textAnchor="middle"
+                fontFamily="IBM Plex Mono,monospace" fontSize={8} fontWeight={700} fill="#C8302A">
+                {last.yoy.toFixed(2)}%
+              </text>
+            );
+          })()}
+        </svg>
+      </div>
+
+      {/* CPI trend table */}
+      {rawCpi.length > 0 && (
+        <div style={{overflowX:'auto',marginTop:12}}>
+          <table style={{borderCollapse:'collapse', fontFamily:'IBM Plex Mono,monospace', fontSize:11}}>
+            <thead>
+              <tr>
+                <TH>Period</TH><TH right>CPI</TH><TH right>Core CPI</TH><TH right>CPI MoM</TH>
+              </tr>
+            </thead>
+            <tbody>
+              {rawCpi.slice(-8).reverse().map((row, i) => {
+                const coreRow = rawCore.find(r => r.year===row.year && r.period===row.period);
+                const prev = rawCpi[rawCpi.indexOf(row) - 1];
+                const mom = prev ? ((parseFloat(row.value) - parseFloat(prev.value)) / parseFloat(prev.value) * 100) : null;
+                return (
+                  <tr key={i} style={{borderBottom:'1px solid #F5F3EF', background:i===0?'#FAFAF8':'#fff'}}>
+                    <TD style={{fontWeight:i===0?600:400}}>{row.periodName} {row.year}</TD>
+                    <TD right>{parseFloat(row.value).toFixed(3)}</TD>
+                    <TD right>{coreRow ? parseFloat(coreRow.value).toFixed(3) : '—'}</TD>
+                    <TD right style={{color: mom===null?'#ccc':mom>0.3?'#C8302A':mom>0?'#B8860B':'#27500A', fontWeight:600}}>
+                      {mom === null ? '—' : `${mom>0?'+':''}${mom.toFixed(3)}%`}
+                    </TD>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };

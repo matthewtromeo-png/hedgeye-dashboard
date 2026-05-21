@@ -384,6 +384,65 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
         </div>
       ) : null}
 
+      {/* Early Look / Daily Thesis */}
+      {(() => {
+        const el = macroCtx?.pdf?.early_look;
+        if (!el?.title) return null;
+        return (
+          <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,
+            padding:'14px 18px',marginBottom:16,display:'grid',
+            gridTemplateColumns:'1fr auto',gap:16,alignItems:'start'}}>
+            <div>
+              <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:8}}>
+                <div style={{width:3,height:14,borderRadius:2,background:'#B8860B',flexShrink:0}} />
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                  textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>Early Look</span>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>
+                  {macroCtx?.source_date}
+                </span>
+              </div>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:12,fontWeight:700,
+                color:'#1A1A18',marginBottom:6}}>{el.title}</div>
+              <div style={{fontSize:11,color:'#555',lineHeight:1.6}}>{el.keith_thesis}</div>
+              {el.keith_notes?.length > 0 && (
+                <div style={{marginTop:8,display:'flex',flexDirection:'column',gap:3}}>
+                  {el.keith_notes.slice(0,3).map((n,i) => (
+                    <div key={i} style={{display:'flex',gap:6,alignItems:'flex-start'}}>
+                      <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
+                        color:'#B8860B',marginTop:2,flexShrink:0}}>›</span>
+                      <span style={{fontSize:11,color:'#333',lineHeight:1.45}}>{n}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            {/* Key levels snapshot */}
+            {macroCtx?.levels && Object.keys(macroCtx.levels).length > 0 && (
+              <div style={{minWidth:160,background:'#F9F8F5',borderRadius:6,
+                padding:'10px 12px',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>
+                <div style={{fontWeight:600,color:'#7A7770',letterSpacing:'0.06em',
+                  textTransform:'uppercase',fontSize:8,marginBottom:8}}>Today's Ranges</div>
+                {['SPX','NVDA','BTC','VIX','HYG'].map(t => {
+                  const l = macroCtx.levels[t]; if (!l) return null;
+                  return (
+                    <div key={t} style={{display:'flex',justifyContent:'space-between',
+                      gap:8,marginBottom:4,alignItems:'center'}}>
+                      <span style={{fontWeight:700,color:'#1A1A18',minWidth:36}}>{t}</span>
+                      <span style={{color:'#9A9790',fontSize:9}}>{l.lrr}–{l.trr}</span>
+                      <span style={{fontSize:8,fontWeight:700,padding:'1px 4px',borderRadius:2,
+                        background:l.signal==='BULLISH'?'#EAF3DE':l.signal==='BEARISH'?'#FCEBEB':'#F5F3EF',
+                        color:l.signal==='BULLISH'?'#27500A':l.signal==='BEARISH'?'#C8302A':'#9A9790'}}>
+                        {(l.signal||'').slice(0,4)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })()}
+
       {/* Macro Intel Panel */}
       {hasIntel && (
         <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px',marginBottom:16}}>
@@ -746,7 +805,7 @@ const App = () => {
       {tab==='overview' && <OverviewTab qQuad={tweaks.quarterlyQuad} mQuad={tweaks.monthlyQuad} usd={tweaks.usdSignal} btc={tweaks.btcSignal} macroCtx={macroCtx} />}
       {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
       {tab==='rta'      && <RTATab />}
-      {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} />}
+      {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} macroCtx={macroCtx} />}
       {tab==='signals'   && <SignalsTab macroCtx={macroCtx} />}
       {tab==='riskrange' && (
         <iframe
@@ -757,7 +816,7 @@ const App = () => {
       )}
       {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
       {tab==='etfpro'   && <ETFProTab />}
-      {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} />}
+      {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}
       {tab==='ingest'   && <ResearchStatusTab />}
 
