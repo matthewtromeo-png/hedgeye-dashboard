@@ -17,7 +17,7 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-$RepoDir         = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard"
+$RepoDir         = "C:\\repos\\hedgeye-dashboard"
 $DashboardScript = "C:\Users\matth\OneDrive\Desktop\Python\Python algos\Hedgeye_riskrange_dashboard.py"
 $GeneratedHtml   = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Dashboards\hedgeye risk range dashboard.html"
 $DestHtml        = "$RepoDir\project\risk_range_dashboard.html"
