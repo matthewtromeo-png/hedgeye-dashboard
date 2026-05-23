@@ -5,7 +5,13 @@
     "etf_pro": "etf-pro-all-active-tickers-1778080902.xlsx",
     "ham_holdings": "ETF_Holdings 5.22.2026.csv",
     "rta": "real-time-alerts-history-2026-05-08.csv",
-    "risk_range": "risk_range_tracker_excelworkbook.xlsx"
+    "risk_range": "risk_range_tracker_excelworkbook.xlsx",
+    "early_look": "Hedgeye Early Look 5.22.2026",
+    "call": "Hedgeye Call Summary 5.22.2026",
+    "msr": "Hedgeye Market Situation Report 5.22.2026",
+    "momo": "Hedgeye MOMO Tracker 5.22.2026",
+    "btc": "Hedgeye BTC Trend Tracker 5.22.2026",
+    "sss": "Hedgeye Signal Strength Stocks 5.22.2026 (1:52PM EDT)"
   },
   "etf_rerank": [
     "GDX",
@@ -3190,5 +3196,435 @@
       "signal": "BULLISH"
     }
   },
-  "sss_history": []
+  "sss_history": [
+    {
+      "date": "2026-05-22",
+      "count": 71,
+      "added": [],
+      "removed": [
+        "SPHR",
+        "CARR",
+        "FWONK"
+      ]
+    }
+  ],
+  "pdf": {
+    "early_look": {
+      "title": "Quad 2\u21923 Transition: Positioning for Inflation Acceleration",
+      "keith_thesis": "Quad shift Q2\u2192Q3 is emerging. Sold XLI, shorted XRT, sold IBIT, staying long QTUM. Long energy (XOP, OIH), telecom (XTL), and commodity inflation plays. Short housing (ITB), healthcare (XLV), retail (XRT), airlines (JETS).",
+      "keith_notes": [
+        "Sold XLI \u2014 industrials move to headwind in Quad 3",
+        "Shorted XRT \u2014 consumer discretionary/retail short in Quad 3",
+        "Sold IBIT \u2014 Bitcoin a headwind in Quad 3",
+        "Staying long QTUM \u2014 secular quantum theme holds across quad shift",
+        "Quad 3 longs: XOP, OIH, XTL, EQRR, QTUM, ROBO"
+      ],
+      "vix_level": 17.5,
+      "vix_bucket": "LOW VOL",
+      "date": "2026-05-22",
+      "keith_levels": {
+        "SPX": {
+          "lrr": 7334,
+          "trr": 7500,
+          "signal": "BULLISH"
+        },
+        "NASDAQ": {
+          "lrr": 25813,
+          "trr": 26675,
+          "signal": "BULLISH"
+        },
+        "RUT": {
+          "lrr": 2771,
+          "trr": 2897,
+          "signal": "BULLISH"
+        },
+        "UST10Y": {
+          "lrr": 4.44,
+          "trr": 4.69,
+          "signal": "BULLISH"
+        },
+        "HYG": {
+          "lrr": 79.43,
+          "trr": 80.2,
+          "signal": "BULLISH"
+        },
+        "LQD": {
+          "lrr": 107.1,
+          "trr": 108.7,
+          "signal": "BEARISH"
+        },
+        "XLK": {
+          "lrr": 172,
+          "trr": 181,
+          "signal": "BULLISH"
+        },
+        "XOP": {
+          "lrr": 165,
+          "trr": 180,
+          "signal": "BULLISH"
+        },
+        "XTL": {
+          "lrr": 220,
+          "trr": 233,
+          "signal": "BULLISH"
+        },
+        "XLU": {
+          "lrr": 43.49,
+          "trr": 45.65,
+          "signal": "BEARISH"
+        },
+        "VIX": {
+          "lrr": 16.44,
+          "trr": 18.81,
+          "signal": "BEARISH"
+        },
+        "USD": {
+          "lrr": 98.7,
+          "trr": 99.83,
+          "signal": "BULLISH"
+        },
+        "GOLD": {
+          "lrr": 4413,
+          "trr": 4645,
+          "signal": "NEUTRAL"
+        },
+        "COPPER": {
+          "lrr": 6.15,
+          "trr": 6.68,
+          "signal": "BULLISH"
+        },
+        "SLV": {
+          "lrr": 69,
+          "trr": 78,
+          "signal": "BEARISH"
+        },
+        "NATGAS": {
+          "lrr": 2.85,
+          "trr": 3.11,
+          "signal": "NEUTRAL"
+        },
+        "WTI": {
+          "lrr": 95.73,
+          "trr": 107.29,
+          "signal": "BULLISH"
+        }
+      }
+    },
+    "macro_show": {
+      "quad": {
+        "monthly": 3,
+        "quarterly": 2
+      },
+      "quad_sequence": "Q2 \u2192 Q3",
+      "growth_roc": "DECELERATING",
+      "inflation_roc": "ACCELERATING",
+      "vix": {
+        "current": 17.5,
+        "bucket": "LOW VOL"
+      },
+      "keith_commentary": [
+        "Monthly Quad 3: Growth decelerating, Inflation accelerating",
+        "Q2\u2192Q3 transition \u2014 sold XLI and IBIT, adding short XRT",
+        "Long XOP, OIH, XTL, EQRR, QTUM, ROBO in Quad 3",
+        "Short XLV, ITB, XLU, JETS, XRT in Quad 3"
+      ]
+    },
+    "macro_show_notes": {
+      "key_points": [
+        "Monthly Quad 3: Growth decelerating, Inflation accelerating",
+        "Quarterly Quad 2 backdrop \u2014 Q2\u2192Q3 shift underway",
+        "VIX 16.44\u201318.81, LOW VOL regime \u2014 complacency risk",
+        "USD bullish 98.70\u201399.83 \u2014 dollar strength consistent with Quad 3",
+        "Gold neutral 4,413\u20134,645 \u2014 metals complex reassessing post-run",
+        "Copper bullish 6.15\u20136.68 \u2014 industrial metals still supported"
+      ],
+      "positioning_changes": [
+        "Sold XLI (industrials headwind, Quad 3)",
+        "Shorted XRT (retail/consumer discretionary headwind, Quad 3)",
+        "Sold IBIT (crypto moves to headwind, Quad 3)",
+        "Staying long QTUM (secular quantum computing theme)"
+      ],
+      "keith_watching": [
+        "Q2\u2192Q3 shift timing \u2014 watch growth data inflections",
+        "Energy complex: XOP, OIH, BNO holding key trend levels",
+        "HYG 79.43\u201380.20 \u2014 credit spread key macro tell",
+        "XLU bearish \u2014 utilities signal, rates / Quad 3 dynamic"
+      ]
+    },
+    "msr": {
+      "gamma_exposure": "POSITIVE",
+      "systematic_flow": "NEUTRAL",
+      "pv_band": "NEUTRAL",
+      "strategic_allocation": "RISK ON"
+    },
+    "sss": {
+      "count": 71,
+      "date": "2026-05-22",
+      "added": [],
+      "removed": [
+        "SPHR",
+        "CARR",
+        "FWONK"
+      ],
+      "tickers": [
+        "CAT",
+        "OUT",
+        "CASY",
+        "STKL",
+        "AMAT",
+        "ENB",
+        "DAR",
+        "CAVA",
+        "MUSA",
+        "SWBI",
+        "RSI",
+        "CZR",
+        "FCFS",
+        "ULS",
+        "MAR",
+        "CSX",
+        "MRVL",
+        "LRCX",
+        "SITM",
+        "NVDA",
+        "AMZN",
+        "VIK",
+        "GOOGL",
+        "AAPL",
+        "ROKU",
+        "HST",
+        "GLASF",
+        "CURLF",
+        "SBUX",
+        "ROK",
+        "CP",
+        "LAMR",
+        "TWLO",
+        "LFST",
+        "UNH",
+        "SXT",
+        "CACC",
+        "MARA",
+        "CRCL",
+        "AFRM",
+        "URI",
+        "LYB",
+        "RIO",
+        "BHP",
+        "AKAM",
+        "TTWO",
+        "APLE",
+        "LOTMY",
+        "CMI",
+        "WRBY",
+        "DDOG",
+        "MNST",
+        "PRMB",
+        "PM",
+        "AZTAF",
+        "BLMN",
+        "V",
+        "ATRO",
+        "ILMN",
+        "NVO",
+        "RHP",
+        "BTI",
+        "BJRI",
+        "CPAY",
+        "HLT",
+        "TXG",
+        "LYV",
+        "LLY",
+        "CBRS",
+        "CVX",
+        "XOM"
+      ]
+    },
+    "investing_ideas": {
+      "longs": {
+        "SBUX": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Consumer staples \u2014 resilient in Quad 3 transition"
+        },
+        "CASY": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Defensive consumer, in SSS"
+        },
+        "WMT": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Defensive retail \u2014 holds in Quad 3"
+        },
+        "ROST": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Value retail \u2014 Quad 3 consumer trade"
+        },
+        "NVO": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Healthcare long \u2014 GLP-1 secular theme, in SSS"
+        },
+        "ADP": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Payroll services \u2014 defensive Quad 3 name"
+        },
+        "ULS": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "In SSS"
+        },
+        "DOW": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Materials \u2014 Quad 3 commodity inflation exposure"
+        },
+        "TTWO": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Gaming \u2014 secular, in SSS"
+        },
+        "TWLO": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Software \u2014 in SSS"
+        }
+      },
+      "shorts": {
+        "DPZ": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Consumer discretionary short"
+        },
+        "ACI": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Grocery retail \u2014 margin compression"
+        },
+        "KR": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Grocery retail short"
+        },
+        "DECK": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Consumer discretionary \u2014 Quad 3 headwind"
+        },
+        "RL": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Apparel short \u2014 consumer spending headwind"
+        },
+        "IDXX": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Vet healthcare \u2014 expensive growth, headwind"
+        },
+        "ZG": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Housing/real estate \u2014 ITB short thesis"
+        },
+        "RKT": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Mortgage \u2014 rate-sensitive short"
+        },
+        "DE": {
+          "lrr": null,
+          "trr": null,
+          "thesis": "Industrials short \u2014 Quad 3 headwind"
+        }
+      },
+      "neutral": [
+        "CMI"
+      ]
+    },
+    "momo": {
+      "MSFT": {
+        "signal": "BEARISH",
+        "lrr": 400,
+        "trr": 428,
+        "close": null
+      },
+      "AAPL": {
+        "signal": "BULLISH",
+        "lrr": 293,
+        "trr": 307,
+        "close": null
+      },
+      "AMZN": {
+        "signal": "BULLISH",
+        "lrr": 259,
+        "trr": 274,
+        "close": null
+      },
+      "META": {
+        "signal": "BEARISH",
+        "lrr": 593,
+        "trr": 624,
+        "close": null
+      },
+      "GOOGL": {
+        "signal": "BULLISH",
+        "lrr": 380,
+        "trr": 405,
+        "close": null
+      },
+      "NFLX": {
+        "signal": "BEARISH",
+        "lrr": 84,
+        "trr": 91,
+        "close": null
+      },
+      "TSLA": {
+        "signal": "BULLISH",
+        "lrr": 396,
+        "trr": 445,
+        "close": null
+      },
+      "NVDA": {
+        "signal": "BULLISH",
+        "lrr": 213,
+        "trr": 234,
+        "close": null
+      },
+      "ORCL": {
+        "signal": "BULLISH",
+        "lrr": 180,
+        "trr": 198,
+        "close": null
+      }
+    },
+    "btc": {
+      "BTC": {
+        "signal": "BULLISH",
+        "lrr": 75306,
+        "trr": 80413,
+        "close": 77247
+      },
+      "IBIT": {
+        "signal": "BULLISH",
+        "lrr": null,
+        "trr": null,
+        "close": 44
+      },
+      "ETH": {
+        "signal": "BEARISH",
+        "lrr": null,
+        "trr": null,
+        "close": null
+      },
+      "SOL": {
+        "signal": "BEARISH",
+        "lrr": null,
+        "trr": null,
+        "close": null
+      }
+    }
+  }
 }
