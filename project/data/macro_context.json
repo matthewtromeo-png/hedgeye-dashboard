@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-22T14:36:37.483873+00:00",
-  "source_date": "2026-05-22",
+  "generated_at": "2026-05-26T13:54:28.398693",
+  "source_date": "2026-05-26",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1778080902.xlsx",
     "ham_holdings": "ETF_Holdings 5.22.2026.csv",
@@ -14,1593 +14,1996 @@
     "sss": "Hedgeye Signal Strength Stocks 5.22.2026 (1:52PM EDT)"
   },
   "etf_rerank": [
-    "GDX",
-    "ITB",
-    "ITA",
-    "UUP",
-    "EPHE",
-    "KRE",
-    "PALL",
-    "STIP",
-    "OAEM",
-    "INDA",
-    "CNXT",
-    "ALLW",
-    "CPER",
-    "EWC",
-    "CLOZ",
-    "XLV",
-    "TUR",
-    "HYG",
-    "FXB",
-    "ZROZ",
-    "SOYB",
-    "IBIT",
-    "EWW",
-    "XLI",
-    "GII",
-    "TLT",
-    "EQRR",
-    "OZEM",
-    "XTL",
-    "COM",
-    "NORW",
-    "BNO",
-    "OIH",
-    "XOP",
-    "CLOX",
+    "BUXX",
     "AAAU",
-    "BUXX"
+    "CLOX",
+    "XOP",
+    "OIH",
+    "BNO",
+    "NORW",
+    "COM",
+    "XTL",
+    "EQRR",
+    "EWW",
+    "SOYB",
+    "HYG",
+    "CLOZ",
+    "CPER",
+    "CNXT",
+    "STIP",
+    "IWM",
+    "VYM",
+    "QTUM",
+    "VXF",
+    "SLX",
+    "DRAM",
+    "DBB",
+    "ROBO",
+    "TAN",
+    "TILL",
+    "PFIX"
   ],
   "active_longs": [
     {
-      "ticker": "KRE",
-      "etf": "Regional Banking",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-01",
-      "last_price": 70.88,
-      "days_held": 4
-    },
-    {
-      "ticker": "STIP",
-      "etf": "Short TIPS Bonds",
+      "ticker": "BUXX",
+      "etf": "Income Short Maturity",
       "asset_class": "Domestic Fixed Income",
-      "date_added": "2026-05-01",
-      "last_price": 103.48,
-      "days_held": 4
-    },
-    {
-      "ticker": "OAEM",
-      "etf": "Emerging Markets",
-      "asset_class": "Emerging Markets Equities",
-      "date_added": "2026-04-30",
-      "last_price": 48.45,
-      "days_held": 5
-    },
-    {
-      "ticker": "CNXT",
-      "etf": "VanEck ChiNext ETF",
-      "asset_class": "Global Equities",
-      "date_added": "2026-04-28",
-      "last_price": 54.44,
-      "days_held": 7
-    },
-    {
-      "ticker": "ALLW",
-      "etf": "All Weather",
-      "asset_class": "Global Equities",
-      "date_added": "2026-04-28",
-      "last_price": 30.22,
-      "days_held": 7
-    },
-    {
-      "ticker": "CPER",
-      "etf": "Copper",
-      "asset_class": "Commodities",
-      "date_added": "2026-04-24",
-      "last_price": 37.5,
-      "days_held": 9
-    },
-    {
-      "ticker": "EWC",
-      "etf": "Canada",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-24",
-      "last_price": 58.34,
-      "days_held": 9
-    },
-    {
-      "ticker": "CLOZ",
-      "etf": "CLOs",
-      "asset_class": "Fixed Income",
-      "date_added": "2026-04-22",
-      "last_price": 26.32,
-      "days_held": 11
-    },
-    {
-      "ticker": "TUR",
-      "etf": "Turkey",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-22",
-      "last_price": 43.54,
-      "days_held": 11
-    },
-    {
-      "ticker": "HYG",
-      "etf": "High Yield Bonds",
-      "asset_class": "Domestic Fixed Income",
-      "date_added": "2026-04-21",
-      "last_price": 80.19,
-      "days_held": 12
-    },
-    {
-      "ticker": "FXB",
-      "etf": "British Pound",
-      "asset_class": "Foreign Currencies",
-      "date_added": "2026-04-21",
-      "last_price": 130.68,
-      "days_held": 12
-    },
-    {
-      "ticker": "SOYB",
-      "etf": "Soybean",
-      "asset_class": "Commodities",
-      "date_added": "2026-04-17",
-      "last_price": 24.75,
-      "days_held": 14
-    },
-    {
-      "ticker": "IBIT",
-      "etf": "Bitcoin",
-      "asset_class": "Commodities",
-      "date_added": "2026-04-16",
-      "last_price": 46.28,
-      "days_held": 15
-    },
-    {
-      "ticker": "EWW",
-      "etf": "Mexico",
-      "asset_class": "International Equities",
-      "date_added": "2026-04-16",
-      "last_price": 78.93,
-      "days_held": 15
-    },
-    {
-      "ticker": "XLI",
-      "etf": "Industrials",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-04-15",
-      "last_price": 176.7,
-      "days_held": 16
-    },
-    {
-      "ticker": "GII",
-      "etf": "Global Infrastructure",
-      "asset_class": "Global Equities",
-      "date_added": "2026-04-13",
-      "last_price": 77.33,
-      "days_held": 18
-    },
-    {
-      "ticker": "EQRR",
-      "etf": "Rising Rates Equities",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-03-31",
-      "last_price": 75.89,
-      "days_held": 26
-    },
-    {
-      "ticker": "XTL",
-      "etf": "Telecom",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-03-27",
-      "last_price": 226.25,
-      "days_held": 28
-    },
-    {
-      "ticker": "COM",
-      "etf": "Broad Commodity",
-      "asset_class": "Commodities",
-      "date_added": "2026-03-17",
-      "last_price": 34.27,
-      "days_held": 36
-    },
-    {
-      "ticker": "NORW",
-      "etf": "Norway",
-      "asset_class": "International Equities",
-      "date_added": "2026-03-03",
-      "last_price": 38.57,
-      "days_held": 46
-    },
-    {
-      "ticker": "BNO",
-      "etf": "Brent Oil",
-      "asset_class": "Commodities",
-      "date_added": "2026-02-13",
-      "last_price": 53.81,
-      "days_held": 57
-    },
-    {
-      "ticker": "OIH",
-      "etf": "Oil Services",
-      "asset_class": "Commodities",
-      "date_added": "2026-02-05",
-      "last_price": 435.32,
-      "days_held": 63
-    },
-    {
-      "ticker": "XOP",
-      "etf": "Oil & Gas Equity",
-      "asset_class": "Commodities",
-      "date_added": "2026-02-02",
-      "last_price": 171.42,
-      "days_held": 66
-    },
-    {
-      "ticker": "CLOX",
-      "etf": "AAA CLO",
-      "asset_class": "Fixed Income",
-      "date_added": "2025-03-07",
-      "last_price": 25.53,
-      "days_held": 293
+      "date_added": "2023-10-25",
+      "last_price": 20.26,
+      "lrr": 20.23,
+      "trr": 20.3,
+      "days_held": 944
     },
     {
       "ticker": "AAAU",
       "etf": "Physical Gold",
       "asset_class": "Foreign Currency",
       "date_added": "2025-02-28",
-      "last_price": 46.34,
-      "days_held": 298
+      "last_price": 44.44,
+      "lrr": 43.15,
+      "trr": 46.69,
+      "days_held": 452
     },
     {
-      "ticker": "BUXX",
-      "etf": "Income Short Maturity",
+      "ticker": "CLOX",
+      "etf": "AAA CLO",
+      "asset_class": "Fixed Income",
+      "date_added": "2025-03-06",
+      "last_price": 25.61,
+      "lrr": 25.53,
+      "trr": 25.64,
+      "days_held": 446
+    },
+    {
+      "ticker": "XOP",
+      "etf": "Oil & Gas Equity",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-02-02",
+      "last_price": 171.95,
+      "lrr": 163.0,
+      "trr": 181.0,
+      "days_held": 113
+    },
+    {
+      "ticker": "OIH",
+      "etf": "Oil Services",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-02-05",
+      "last_price": 443.96,
+      "lrr": 420.0,
+      "trr": 458.0,
+      "days_held": 110
+    },
+    {
+      "ticker": "BNO",
+      "etf": "Brent Oil",
+      "asset_class": "Commodities",
+      "date_added": "2026-02-13",
+      "last_price": 55.0,
+      "lrr": 53.11,
+      "trr": 60.0,
+      "days_held": 102
+    },
+    {
+      "ticker": "NORW",
+      "etf": "Norway",
+      "asset_class": "International Equities",
+      "date_added": "2026-03-03",
+      "last_price": 38.9,
+      "lrr": 37.31,
+      "trr": 39.96,
+      "days_held": 84
+    },
+    {
+      "ticker": "COM",
+      "etf": "Broad Commodity",
+      "asset_class": "Commodities",
+      "date_added": "2026-03-17",
+      "last_price": 34.42,
+      "lrr": 33.64,
+      "trr": 35.61,
+      "days_held": 70
+    },
+    {
+      "ticker": "XTL",
+      "etf": "Telecom",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-03-27",
+      "last_price": 233.84,
+      "lrr": 219.0,
+      "trr": 237.0,
+      "days_held": 60
+    },
+    {
+      "ticker": "EQRR",
+      "etf": "Rising Rates Equities",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-03-31",
+      "last_price": 78.96,
+      "lrr": 75.49,
+      "trr": 79.99,
+      "days_held": 56
+    },
+    {
+      "ticker": "EWW",
+      "etf": "Mexico",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-04-16",
+      "last_price": 77.76,
+      "lrr": 76.13,
+      "trr": 80.61,
+      "days_held": 40
+    },
+    {
+      "ticker": "SOYB",
+      "etf": "Soybean",
+      "asset_class": "Commodities",
+      "date_added": "2026-04-17",
+      "last_price": 25.06,
+      "lrr": 24.5,
+      "trr": 25.69,
+      "days_held": 39
+    },
+    {
+      "ticker": "HYG",
+      "etf": "High Yield Bonds",
       "asset_class": "Domestic Fixed Income",
-      "date_added": "2023-10-25",
-      "last_price": 20.23,
-      "days_held": 635
+      "date_added": "2026-04-21",
+      "last_price": 79.91,
+      "lrr": 79.35,
+      "trr": 80.21,
+      "days_held": 35
+    },
+    {
+      "ticker": "CLOZ",
+      "etf": "CLOs",
+      "asset_class": "Fixed Income",
+      "date_added": "2026-04-22",
+      "last_price": 26.48,
+      "lrr": 26.35,
+      "trr": 26.54,
+      "days_held": 34
+    },
+    {
+      "ticker": "CPER",
+      "etf": "Copper",
+      "asset_class": "Commodities",
+      "date_added": "2026-04-24",
+      "last_price": 38.92,
+      "lrr": 36.76,
+      "trr": 41.01,
+      "days_held": 32
+    },
+    {
+      "ticker": "CNXT",
+      "etf": "China ChiNext",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-04-28",
+      "last_price": 55.53,
+      "lrr": 52.96,
+      "trr": 58.02,
+      "days_held": 28
+    },
+    {
+      "ticker": "STIP",
+      "etf": "Short TIPS Bonds",
+      "asset_class": "Domestic Fixed Income",
+      "date_added": "2026-05-01",
+      "last_price": 103.28,
+      "lrr": 103.0,
+      "trr": 104.0,
+      "days_held": 25
+    },
+    {
+      "ticker": "IWM",
+      "etf": "US Small-Cap",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-07",
+      "last_price": 285.12,
+      "lrr": 273.0,
+      "trr": 290.0,
+      "days_held": 19
+    },
+    {
+      "ticker": "VYM",
+      "etf": "Dividend Yield",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-12",
+      "last_price": 158.7,
+      "lrr": 155.0,
+      "trr": 161.0,
+      "days_held": 14
+    },
+    {
+      "ticker": "QTUM",
+      "etf": "Quantum Tech",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-13",
+      "last_price": 153.44,
+      "lrr": 139.0,
+      "trr": 156.0,
+      "days_held": 13
+    },
+    {
+      "ticker": "VXF",
+      "etf": "US Extended Market",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-13",
+      "last_price": 230.82,
+      "lrr": 222.0,
+      "trr": 234.0,
+      "days_held": 13
+    },
+    {
+      "ticker": "SLX",
+      "etf": "Steel",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-15",
+      "last_price": 106.67,
+      "lrr": 102.0,
+      "trr": 111.0,
+      "days_held": 11
+    },
+    {
+      "ticker": "DRAM",
+      "etf": "Roundhill Memory",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-18",
+      "last_price": 52.82,
+      "lrr": 48.04,
+      "trr": 56.67,
+      "days_held": 8
+    },
+    {
+      "ticker": "DBB",
+      "etf": "Base Metals",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-19",
+      "last_price": 25.9,
+      "lrr": 25.08,
+      "trr": 26.59,
+      "days_held": 7
+    },
+    {
+      "ticker": "ROBO",
+      "etf": "Robotics Automation",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-19",
+      "last_price": 87.3,
+      "lrr": 82.06,
+      "trr": 89.39,
+      "days_held": 7
+    },
+    {
+      "ticker": "TAN",
+      "etf": "Solar Energy",
+      "asset_class": "Global Equities",
+      "date_added": "2026-05-20",
+      "last_price": 65.95,
+      "lrr": 60.82,
+      "trr": 67.13,
+      "days_held": 6
+    },
+    {
+      "ticker": "TILL",
+      "etf": "Agriculture Futures",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-21",
+      "last_price": 18.54,
+      "lrr": 18.03,
+      "trr": 19.16,
+      "days_held": 5
+    },
+    {
+      "ticker": "PFIX",
+      "etf": "Interest Rate Hedge",
+      "asset_class": "US Fixed Income",
+      "date_added": "2026-05-22",
+      "last_price": 49.66,
+      "lrr": 47.45,
+      "trr": 52.61,
+      "days_held": 4
     }
   ],
   "active_shorts": [
     {
-      "ticker": "GDX",
-      "etf": "Gold Miners",
-      "asset_class": "International Equity",
-      "date_added": "2026-05-06",
-      "last_price": 92.24,
-      "days_held": 1
-    },
-    {
-      "ticker": "ITB",
-      "etf": "Home Construction",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-06",
-      "last_price": 95.8,
-      "days_held": 1
-    },
-    {
-      "ticker": "ITA",
-      "etf": "Aerospace Defense",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-05-04",
-      "last_price": 222.88,
-      "days_held": 3
-    },
-    {
-      "ticker": "UUP",
-      "etf": "US Dollar Bullish",
-      "asset_class": "Foreign Currencies",
-      "date_added": "2026-05-04",
-      "last_price": 27.36,
-      "days_held": 3
-    },
-    {
-      "ticker": "EPHE",
-      "etf": "Philippines",
-      "asset_class": "Emerging Markets Equities",
-      "date_added": "2026-05-04",
-      "last_price": 25.12,
-      "days_held": 3
-    },
-    {
-      "ticker": "PALL",
-      "etf": "Palladium",
-      "asset_class": "Commodities",
-      "date_added": "2026-05-01",
-      "last_price": 139.57,
-      "days_held": 4
-    },
-    {
-      "ticker": "INDA",
-      "etf": "India",
-      "asset_class": "Emerging Markets Equities",
-      "date_added": "2026-04-28",
-      "last_price": 50.06,
-      "days_held": 7
-    },
-    {
-      "ticker": "XLV",
-      "etf": "Healthcare",
-      "asset_class": "Domestic Equities",
-      "date_added": "2026-04-22",
-      "last_price": 145.71,
-      "days_held": 11
+      "ticker": "TLT",
+      "etf": "Long Treasury Bond",
+      "asset_class": "Domestic Fixed Income",
+      "date_added": "2026-04-02",
+      "last_price": 84.68,
+      "lrr": 82.8,
+      "trr": 85.71,
+      "days_held": 54
     },
     {
       "ticker": "ZROZ",
       "etf": "US Treasury Long",
       "asset_class": "Domestic Fixed Income",
       "date_added": "2026-04-17",
-      "last_price": 63.02,
-      "days_held": 14
+      "last_price": 61.38,
+      "lrr": 59.19,
+      "trr": 62.55,
+      "days_held": 39
     },
     {
-      "ticker": "TLT",
-      "etf": "Long Treasury Bond",
-      "asset_class": "Domestic Fixed Income",
-      "date_added": "2026-04-02",
-      "last_price": 86.1,
-      "days_held": 24
+      "ticker": "INDA",
+      "etf": "India",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-04-28",
+      "last_price": 48.39,
+      "lrr": 46.62,
+      "trr": 48.92,
+      "days_held": 28
     },
     {
-      "ticker": "OZEM",
-      "etf": "Weight Loss Drugs",
-      "asset_class": "Global Equities",
-      "date_added": "2026-03-31",
-      "last_price": 31.94,
-      "days_held": 26
+      "ticker": "PALL",
+      "etf": "Palladium",
+      "asset_class": "Commodities",
+      "date_added": "2026-05-01",
+      "last_price": 24.52,
+      "lrr": 22.94,
+      "trr": 26.56,
+      "days_held": 25
+    },
+    {
+      "ticker": "EPHE",
+      "etf": "Philippines",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-04",
+      "last_price": 24.72,
+      "lrr": 23.97,
+      "trr": 25.13,
+      "days_held": 22
+    },
+    {
+      "ticker": "ITB",
+      "etf": "Home Construction",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-06",
+      "last_price": 90.97,
+      "lrr": 85.23,
+      "trr": 92.64,
+      "days_held": 20
+    },
+    {
+      "ticker": "IDX",
+      "etf": "Indonesia",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-07",
+      "last_price": 11.04,
+      "lrr": 10.48,
+      "trr": 12.6,
+      "days_held": 19
+    },
+    {
+      "ticker": "XLU",
+      "etf": "Utilities Sector",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-11",
+      "last_price": 45.35,
+      "lrr": 43.57,
+      "trr": 45.93,
+      "days_held": 15
+    },
+    {
+      "ticker": "COLO",
+      "etf": "Colombia",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-15",
+      "last_price": 37.29,
+      "lrr": 34.94,
+      "trr": 38.14,
+      "days_held": 11
+    },
+    {
+      "ticker": "IHI",
+      "etf": "Medical Devices",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-18",
+      "last_price": 50.57,
+      "lrr": 35.16,
+      "trr": 37.9,
+      "days_held": 8
+    },
+    {
+      "ticker": "EWQ",
+      "etf": "France",
+      "asset_class": "International Equities",
+      "date_added": "2026-05-18",
+      "last_price": 45.17,
+      "lrr": 44.01,
+      "trr": 46.62,
+      "days_held": 8
+    },
+    {
+      "ticker": "BTAL",
+      "etf": "US Market Neutral",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-18",
+      "last_price": 12.2,
+      "lrr": 11.41,
+      "trr": 12.7,
+      "days_held": 8
+    },
+    {
+      "ticker": "XRT",
+      "etf": "Retail",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-21",
+      "last_price": 82.54,
+      "lrr": 78.09,
+      "trr": 83.65,
+      "days_held": 5
+    },
+    {
+      "ticker": "EWZ",
+      "etf": "Brazil",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-21",
+      "last_price": 36.37,
+      "lrr": 35.03,
+      "trr": 38.19,
+      "days_held": 5
+    },
+    {
+      "ticker": "PSCD",
+      "etf": "Consumer Discretionary",
+      "asset_class": "Domestic Equities",
+      "date_added": "2026-05-22",
+      "last_price": 105.42,
+      "lrr": 99.36,
+      "trr": 107.0,
+      "days_held": 4
+    },
+    {
+      "ticker": "INQQ",
+      "etf": "India Internet",
+      "asset_class": "Emerging Markets Equities",
+      "date_added": "2026-05-22",
+      "last_price": 12.19,
+      "lrr": 11.54,
+      "trr": 12.6,
+      "days_held": 4
     }
   ],
-  "ham_holdings": [
-    {
-      "ticker": "CERY",
-      "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
-      "total_weight": 0.1403,
-      "accounts": {
-        "HEFT": 0.1403
-      },
-      "market_value": 14559067.76
-    },
-    {
-      "ticker": "AAPL",
-      "name": "Apple Inc",
-      "total_weight": 0.122,
-      "accounts": {
-        "HELS": 0.031,
-        "HGRO": 0.091
-      },
-      "market_value": 11650618.0
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet Inc",
-      "total_weight": 0.1113,
-      "accounts": {
-        "HELS": 0.0306,
-        "HGRO": 0.0807
-      },
-      "market_value": 10414098.24
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA Corp",
-      "total_weight": 0.0936,
-      "accounts": {
-        "HGRO": 0.0936
-      },
-      "market_value": 11217619.53
-    },
-    {
-      "ticker": "VTI",
-      "name": "Vanguard Total Stock Market ETF",
-      "total_weight": 0.0899,
-      "accounts": {
-        "HEFT": 0.0899
-      },
-      "market_value": 9334256.03
-    },
-    {
-      "ticker": "UUP",
-      "name": "Invesco DB US Dollar Index Bullish Fund",
-      "total_weight": 0.0865,
-      "accounts": {
-        "HECA": 0.0865
-      },
-      "market_value": 30217464.19
-    },
-    {
-      "ticker": "OIH",
-      "name": "VanEck Oil Services ETF",
-      "total_weight": 0.0766,
-      "accounts": {
-        "HECA": 0.0352,
-        "HEFT": 0.0414
-      },
-      "market_value": 16597562.31
-    },
-    {
-      "ticker": "DBMF",
-      "name": "iMGP DBi Managed Futures Strategy ETF",
-      "total_weight": 0.0698,
-      "accounts": {
-        "HECA": 0.0698
-      },
-      "market_value": 24383644.68
-    },
-    {
-      "ticker": "VTIP",
-      "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
-      "total_weight": 0.0617,
-      "accounts": {
-        "HECA": 0.0617
-      },
-      "market_value": 21543208.5
-    },
-    {
-      "ticker": "XTL",
-      "name": "State Street SPDR S&P Telecom ETF",
-      "total_weight": 0.0612,
-      "accounts": {
-        "HECA": 0.0612
-      },
-      "market_value": 21369009.3
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon.com Inc",
-      "total_weight": 0.0605,
-      "accounts": {
-        "HGRO": 0.0605
-      },
-      "market_value": 7254057.66
-    },
-    {
-      "ticker": "JAAA",
-      "name": "Janus Henderson AAA CLO ETF",
-      "total_weight": 0.0598,
-      "accounts": {
-        "HECA": 0.0598
-      },
-      "market_value": 20888029.88
-    },
-    {
-      "ticker": "FWD",
-      "name": "AB Disruptors ETF",
-      "total_weight": 0.0554,
-      "accounts": {
-        "HECA": 0.0554
-      },
-      "market_value": 19343740.92
-    },
-    {
-      "ticker": "DBJP",
-      "name": "Xtrackers MSCI Japan Hedged Equity ETF",
-      "total_weight": 0.0547,
-      "accounts": {
-        "HECA": 0.0547
-      },
-      "market_value": 19111859.66
-    },
-    {
-      "ticker": "SLX",
-      "name": "VanEck Steel ETF",
-      "total_weight": 0.0512,
-      "accounts": {
-        "HECA": 0.036,
-        "HEFT": 0.0152
-      },
-      "market_value": 14148068.88
-    },
-    {
-      "ticker": "IBIT",
-      "name": "iShares Bitcoin Trust ETF",
-      "total_weight": 0.0509,
-      "accounts": {
-        "HECA": 0.0509
-      },
-      "market_value": 17783128.0
-    },
-    {
-      "ticker": "CASY",
-      "name": "Casey's General Stores Inc",
-      "total_weight": 0.0481,
-      "accounts": {
-        "HEFT": 0.0147,
-        "HELS": 0.024,
-        "HGRO": 0.0094
-      },
-      "market_value": 3229092.0
-    },
-    {
-      "ticker": "TAN",
-      "name": "Invesco Solar ETF",
-      "total_weight": 0.0468,
-      "accounts": {
-        "HECA": 0.0468
-      },
-      "market_value": 16351076.28
-    },
-    {
-      "ticker": "IHF",
-      "name": "iShares U.S. Healthcare Providers ETF",
-      "total_weight": 0.0463,
-      "accounts": {
-        "HECA": 0.0463
-      },
-      "market_value": 16178857.6
-    },
-    {
-      "ticker": "GEV",
-      "name": "GE Vernova Inc",
-      "total_weight": 0.0454,
-      "accounts": {
-        "HEFT": 0.0105,
-        "HELS": 0.0202,
-        "HGRO": 0.0147
-      },
-      "market_value": 3337092.54
-    },
-    {
-      "ticker": "ARTY",
-      "name": "iShares Future AI & Tech ETF",
-      "total_weight": 0.045,
-      "accounts": {
-        "HEFT": 0.045
-      },
-      "market_value": 4666556.65
-    },
-    {
-      "ticker": "CSX",
-      "name": "CSX Corp",
-      "total_weight": 0.0442,
-      "accounts": {
-        "HELS": 0.0295,
-        "HGRO": 0.0147
-      },
-      "market_value": 2475111.6
-    },
-    {
-      "ticker": "FCFS",
-      "name": "FirstCash Holdings Inc",
-      "total_weight": 0.0417,
-      "accounts": {
-        "HEFT": 0.0107,
-        "HELS": 0.0204,
-        "HGRO": 0.0106
-      },
-      "market_value": 2872497.65
-    },
-    {
-      "ticker": "VYM",
-      "name": "Vanguard High Dividend Yield ETF",
-      "total_weight": 0.0412,
-      "accounts": {
-        "HECA": 0.0412
-      },
-      "market_value": 14377210.25
-    },
-    {
-      "ticker": "FESM",
-      "name": "Fidelity Enhanced Small Cap Core ETF",
-      "total_weight": 0.0406,
-      "accounts": {
-        "HECA": 0.0406
-      },
-      "market_value": 14190990.66
-    },
-    {
-      "ticker": "UNH",
-      "name": "UnitedHealth Group Inc",
-      "total_weight": 0.0402,
-      "accounts": {
-        "HELS": 0.0199,
-        "HGRO": 0.0203
-      },
-      "market_value": 2918322.4
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel Corp",
-      "total_weight": 0.0398,
-      "accounts": {
-        "HEFT": 0.0212,
-        "HELS": 0.0186
-      },
-      "market_value": 2650015.5
-    },
-    {
-      "ticker": "URI",
-      "name": "United Rentals Inc",
-      "total_weight": 0.0392,
-      "accounts": {
-        "HELS": 0.0248,
-        "HGRO": 0.0144
-      },
-      "market_value": 2332314.36
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials Inc",
-      "total_weight": 0.039,
-      "accounts": {
-        "HELS": 0.0261,
-        "HGRO": 0.0129
-      },
-      "market_value": 2179963.36
-    },
-    {
-      "ticker": "ULS",
-      "name": "UL Solutions Inc",
-      "total_weight": 0.036,
-      "accounts": {
-        "HELS": 0.0257,
-        "HGRO": 0.0103
-      },
-      "market_value": 1858392.06
-    },
-    {
-      "ticker": "CAT",
-      "name": "Caterpillar Inc",
-      "total_weight": 0.0359,
-      "accounts": {
-        "HELS": 0.0201,
-        "HGRO": 0.0158
-      },
-      "market_value": 2377898.7
-    },
-    {
-      "ticker": "RIG",
-      "name": "Transocean Ltd",
-      "total_weight": 0.0354,
-      "accounts": {
-        "HEFT": 0.0158,
-        "HELS": 0.0196
-      },
-      "market_value": 2115475.34
-    },
-    {
-      "ticker": "CSCO",
-      "name": "Cisco Systems Inc",
-      "total_weight": 0.0348,
-      "accounts": {
-        "HELS": 0.0278,
-        "HGRO": 0.007
-      },
-      "market_value": 1516033.2
-    },
-    {
-      "ticker": "SBUX",
-      "name": "Starbucks Corp",
-      "total_weight": 0.0345,
-      "accounts": {
-        "HELS": 0.0194,
-        "HGRO": 0.0151
-      },
-      "market_value": 2284091.55
-    },
-    {
-      "ticker": "HGER",
-      "name": "Harbor Commodity All Weather Strategy ETF",
-      "total_weight": 0.0331,
-      "accounts": {
-        "HECA": 0.0331
-      },
-      "market_value": 11546930.69
-    },
-    {
-      "ticker": "DRAM",
-      "name": "Roundhill Memory ETF",
-      "total_weight": 0.0319,
-      "accounts": {
-        "HEFT": 0.0319
-      },
-      "market_value": 3311479.6
-    },
-    {
-      "ticker": "VIK",
-      "name": "Viking Holdings Ltd",
-      "total_weight": 0.0307,
-      "accounts": {
-        "HELS": 0.0206,
-        "HGRO": 0.0101
-      },
-      "market_value": 1709798.1
-    },
-    {
-      "ticker": "XLE",
-      "name": "State Street Energy Select Sector SPDR ETF",
-      "total_weight": 0.0306,
-      "accounts": {
-        "HEFT": 0.0306
-      },
-      "market_value": 3177941.85
-    },
-    {
-      "ticker": "AVGO",
-      "name": "Broadcom Inc",
-      "total_weight": 0.0297,
-      "accounts": {
-        "HGRO": 0.0297
-      },
-      "market_value": 3560741.73
-    },
-    {
-      "ticker": "LIT",
-      "name": "Global X Lithium & Battery Tech ETF",
-      "total_weight": 0.029,
-      "accounts": {
-        "HECA": 0.029
-      },
-      "market_value": 10120284.06
-    },
-    {
-      "ticker": "SXT",
-      "name": "Sensient Technologies Corp",
-      "total_weight": 0.0288,
-      "accounts": {
-        "HELS": 0.0219,
-        "HGRO": 0.0069
-      },
-      "market_value": 1358550.17
-    },
-    {
-      "ticker": "LLY",
-      "name": "Eli Lilly & Co",
-      "total_weight": 0.0278,
-      "accounts": {
-        "HGRO": 0.0278
-      },
-      "market_value": 3334321.65
-    },
-    {
-      "ticker": "MRVL",
-      "name": "MARVELL TECHNOLOGY INC",
-      "total_weight": 0.0275,
-      "accounts": {
-        "HELS": 0.0181,
-        "HGRO": 0.0094
-      },
-      "market_value": 1567090.42
-    },
-    {
-      "ticker": "PDBA",
-      "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
-      "total_weight": 0.0271,
-      "accounts": {
-        "HECA": 0.0271
-      },
-      "market_value": 9450073.92
-    },
-    {
-      "ticker": "MAR",
-      "name": "Marriott International Inc/MD",
-      "total_weight": 0.027,
-      "accounts": {
-        "HELS": 0.0159,
-        "HGRO": 0.0111
-      },
-      "market_value": 1715641.37
-    },
-    {
-      "ticker": "CIBR",
-      "name": "First Trust NASDAQ Cybersecurity ETF",
-      "total_weight": 0.0269,
-      "accounts": {
-        "HEFT": 0.0269
-      },
-      "market_value": 2792032.05
-    },
-    {
-      "ticker": "LIN",
-      "name": "Linde PLC",
-      "total_weight": 0.0269,
-      "accounts": {
-        "HEFT": 0.0098,
-        "HGRO": 0.0171
-      },
-      "market_value": 3061849.01
-    },
-    {
-      "ticker": "PM",
-      "name": "Philip Morris International Inc",
-      "total_weight": 0.0268,
-      "accounts": {
-        "HEFT": 0.0124,
-        "HGRO": 0.0144
-      },
-      "market_value": 3011402.34
-    },
-    {
-      "ticker": "TTWO",
-      "name": "Take-Two Interactive Software Inc",
-      "total_weight": 0.0268,
-      "accounts": {
-        "HELS": 0.0173,
-        "HGRO": 0.0095
-      },
-      "market_value": 1559662.08
-    },
-    {
-      "ticker": "IDMO",
-      "name": "Invesco S&P International Developed Momentum ETF",
-      "total_weight": 0.0262,
-      "accounts": {
-        "HECA": 0.0262
-      },
-      "market_value": 9156701.88
-    },
-    {
-      "ticker": "OUT",
-      "name": "Outfront Media Inc",
-      "total_weight": 0.0262,
-      "accounts": {
-        "HELS": 0.0159,
-        "HGRO": 0.0103
-      },
-      "market_value": 1614338.55
-    },
-    {
-      "ticker": "ROKU",
-      "name": "Roku Inc",
-      "total_weight": 0.0262,
-      "accounts": {
-        "HELS": 0.0262
-      },
-      "market_value": 633530.2
-    },
-    {
-      "ticker": "JAZZ",
-      "name": "Jazz Pharmaceuticals PLC",
-      "total_weight": 0.0261,
-      "accounts": {
-        "HELS": 0.0261
-      },
-      "market_value": 631537.2
-    },
-    {
-      "ticker": "GS",
-      "name": "Goldman Sachs Group Inc/The",
-      "total_weight": 0.023,
-      "accounts": {
-        "HGRO": 0.023
-      },
-      "market_value": 2752053.45
-    },
-    {
-      "ticker": "DBB",
-      "name": "Invesco DB Base Metals Fund",
-      "total_weight": 0.0229,
-      "accounts": {
-        "HECA": 0.0229
-      },
-      "market_value": 7997574.72
-    },
-    {
-      "ticker": "CZR",
-      "name": "Caesars Entertainment Inc",
-      "total_weight": 0.0225,
-      "accounts": {
-        "HELS": 0.0152,
-        "HGRO": 0.0073
-      },
-      "market_value": 1245511.8
-    },
-    {
-      "ticker": "TWLO",
-      "name": "Twilio Inc",
-      "total_weight": 0.0221,
-      "accounts": {
-        "HELS": 0.0144,
-        "HGRO": 0.0077
-      },
-      "market_value": 1270269.0
-    },
-    {
-      "ticker": "MKSI",
-      "name": "MKS Inc",
-      "total_weight": 0.0219,
-      "accounts": {
-        "HELS": 0.0219
-      },
-      "market_value": 530493.04
-    },
-    {
-      "ticker": "CBOE",
-      "name": "Cboe Global Markets Inc",
-      "total_weight": 0.0219,
-      "accounts": {
-        "HGRO": 0.0219
-      },
-      "market_value": 2623360.76
-    },
-    {
-      "ticker": "ENB",
-      "name": "Enbridge Inc",
-      "total_weight": 0.0214,
-      "accounts": {
-        "HELS": 0.0214
-      },
-      "market_value": 517220.5
-    },
-    {
-      "ticker": "V",
-      "name": "Visa Inc",
-      "total_weight": 0.0214,
-      "accounts": {
-        "HGRO": 0.0214
-      },
-      "market_value": 2565517.76
-    },
-    {
-      "ticker": "JBHT",
-      "name": "JB Hunt Transport Services Inc",
-      "total_weight": 0.0209,
-      "accounts": {
-        "HELS": 0.0209
-      },
-      "market_value": 506794.65
-    },
-    {
-      "ticker": "FITE",
-      "name": "State Street SPDR S&P Kensho Future Security ETF",
-      "total_weight": 0.0207,
-      "accounts": {
-        "HEFT": 0.0207
-      },
-      "market_value": 2143237.02
-    },
-    {
-      "ticker": "IHE",
-      "name": "iShares U.S. Pharmaceuticals ETF",
-      "total_weight": 0.0205,
-      "accounts": {
-        "HEFT": 0.0205
-      },
-      "market_value": 2126334.84
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices Inc",
-      "total_weight": 0.0204,
-      "accounts": {
-        "HGRO": 0.0204
-      },
-      "market_value": 2446668.78
-    },
-    {
-      "ticker": "TSN",
-      "name": "Tyson Foods Inc",
-      "total_weight": 0.02,
-      "accounts": {
-        "HELS": 0.02
-      },
-      "market_value": 483835.13
-    },
-    {
-      "ticker": "GLD",
-      "name": "SPDR Gold Shares",
-      "total_weight": 0.0199,
-      "accounts": {
-        "HEFT": 0.0199
-      },
-      "market_value": 2066602.44
-    },
-    {
-      "ticker": "MUSA",
-      "name": "Murphy USA Inc",
-      "total_weight": 0.0198,
-      "accounts": {
-        "HELS": 0.0198
-      },
-      "market_value": 478624.29
-    },
-    {
-      "ticker": "HAL",
-      "name": "Halliburton Co",
-      "total_weight": 0.0197,
-      "accounts": {
-        "HGRO": 0.0197
-      },
-      "market_value": 2359117.08
-    },
-    {
-      "ticker": "AVEM",
-      "name": "Avantis Emerging Markets Equity ETF",
-      "total_weight": 0.0194,
-      "accounts": {
-        "HEFT": 0.0194
-      },
-      "market_value": 2016948.82
-    },
-    {
-      "ticker": "NOV",
-      "name": "NOV Inc",
-      "total_weight": 0.0194,
-      "accounts": {
-        "HELS": 0.0194
-      },
-      "market_value": 470246.98
-    },
-    {
-      "ticker": "XAR",
-      "name": "State Street SPDR S&P Aerospace & Defense ETF",
-      "total_weight": 0.0192,
-      "accounts": {
-        "HEFT": 0.0192
-      },
-      "market_value": 1993513.08
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital Corp",
-      "total_weight": 0.0187,
-      "accounts": {
-        "HELS": 0.0187
-      },
-      "market_value": 452894.26
-    },
-    {
-      "ticker": "SWBI",
-      "name": "Smith & Wesson Brands Inc",
-      "total_weight": 0.0177,
-      "accounts": {
-        "HEFT": 0.0074,
-        "HELS": 0.0103
-      },
-      "market_value": 1019048.91
-    },
-    {
-      "ticker": "GRID",
-      "name": "First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund",
-      "total_weight": 0.017,
-      "accounts": {
-        "HECA": 0.017
-      },
-      "market_value": 5933748.6
-    },
-    {
-      "ticker": "CAVA",
-      "name": "Cava Group Inc",
-      "total_weight": 0.017,
-      "accounts": {
-        "HELS": 0.0129,
-        "HGRO": 0.0041
-      },
-      "market_value": 807254.91
-    },
-    {
-      "ticker": "CRCL",
-      "name": "Circle Internet Group Inc",
-      "total_weight": 0.0164,
-      "accounts": {
-        "HELS": 0.0164
-      },
-      "market_value": 397255.04
-    },
-    {
-      "ticker": "ADI",
-      "name": "Analog Devices Inc",
-      "total_weight": 0.0164,
-      "accounts": {
-        "HGRO": 0.0164
-      },
-      "market_value": 1967155.2
-    },
-    {
-      "ticker": "NDAQ",
-      "name": "Nasdaq Inc",
-      "total_weight": 0.0164,
-      "accounts": {
-        "HGRO": 0.0164
-      },
-      "market_value": 1966417.5
-    },
-    {
-      "ticker": "MO",
-      "name": "Altria Group Inc",
-      "total_weight": 0.0161,
-      "accounts": {
-        "HEFT": 0.0161
-      },
-      "market_value": 1669310.37
-    },
-    {
-      "ticker": "WMT",
-      "name": "Walmart Inc",
-      "total_weight": 0.0159,
-      "accounts": {
-        "HEFT": 0.0159
-      },
-      "market_value": 1653136.16
-    },
-    {
-      "ticker": "ADM",
-      "name": "Archer-Daniels-Midland Co",
-      "total_weight": 0.0158,
-      "accounts": {
-        "HEFT": 0.0158
-      },
-      "market_value": 1640111.04
-    },
-    {
-      "ticker": "C",
-      "name": "Citigroup Inc",
-      "total_weight": 0.0158,
-      "accounts": {
-        "HGRO": 0.0158
-      },
-      "market_value": 1893827.28
-    },
-    {
-      "ticker": "XBI",
-      "name": "State Street SPDR S&P Biotech ETF",
-      "total_weight": 0.0156,
-      "accounts": {
-        "HEFT": 0.0156
-      },
-      "market_value": 1621376.58
-    },
-    {
-      "ticker": "LAMR",
-      "name": "Lamar Advertising Co",
-      "total_weight": 0.0156,
-      "accounts": {
-        "HELS": 0.0156
-      },
-      "market_value": 376336.26
-    },
-    {
-      "ticker": "GLASF",
-      "name": "Glass House Brands Inc",
-      "total_weight": 0.0155,
-      "accounts": {
-        "HELS": 0.0155
-      },
-      "market_value": 374117.02
-    },
-    {
-      "ticker": "EWW",
-      "name": "iShares MSCI Mexico ETF",
-      "total_weight": 0.0153,
-      "accounts": {
-        "HEFT": 0.0153
-      },
-      "market_value": 1583385.6
-    },
-    {
-      "ticker": "STT",
-      "name": "State Street Corp",
-      "total_weight": 0.0153,
-      "accounts": {
-        "HELS": 0.0153
-      },
-      "market_value": 370546.59
-    },
-    {
-      "ticker": "VPL",
-      "name": "Vanguard FTSE Pacific ETF",
-      "total_weight": 0.0152,
-      "accounts": {
-        "HEFT": 0.0152
-      },
-      "market_value": 1579135.35
-    },
-    {
-      "ticker": "ROBO",
-      "name": "ROBO Global Robotics and Automation Index ETF",
-      "total_weight": 0.0151,
-      "accounts": {
-        "HEFT": 0.0151
-      },
-      "market_value": 1571569.88
-    },
-    {
-      "ticker": "AFRM",
-      "name": "Affirm Holdings Inc",
-      "total_weight": 0.0151,
-      "accounts": {
-        "HELS": 0.0151
-      },
-      "market_value": 366131.0
-    },
-    {
-      "ticker": "PAVE",
-      "name": "Global X US Infrastructure Development ETF",
-      "total_weight": 0.015,
-      "accounts": {
-        "HEFT": 0.015
-      },
-      "market_value": 1552153.86
-    },
-    {
-      "ticker": "HBM",
-      "name": "Hudbay Minerals Inc",
-      "total_weight": 0.015,
-      "accounts": {
-        "HELS": 0.015
-      },
-      "market_value": 362317.3
-    },
-    {
-      "ticker": "MPC",
-      "name": "Marathon Petroleum Corp",
-      "total_weight": 0.015,
-      "accounts": {
-        "HELS": 0.015
-      },
-      "market_value": 361962.51
-    },
-    {
-      "ticker": "NVO",
-      "name": "Novo Nordisk A/S",
-      "total_weight": 0.015,
-      "accounts": {
-        "HELS": 0.015
-      },
-      "market_value": 362799.47
-    },
-    {
-      "ticker": "RSI",
-      "name": "Rush Street Interactive Inc",
-      "total_weight": 0.015,
-      "accounts": {
-        "HELS": 0.015
-      },
-      "market_value": 363132.2
-    },
-    {
-      "ticker": "CDNS",
-      "name": "Cadence Design Systems Inc",
-      "total_weight": 0.0148,
-      "accounts": {
-        "HELS": 0.0148
-      },
-      "market_value": 357384.62
-    },
-    {
-      "ticker": "WEAT",
-      "name": "Teucrium Wheat Fund",
-      "total_weight": 0.0147,
-      "accounts": {
-        "HEFT": 0.0147
-      },
-      "market_value": 1527207.5
-    },
-    {
-      "ticker": "DAR",
-      "name": "DARLING INGREDIENTS INC",
-      "total_weight": 0.0146,
-      "accounts": {
-        "HELS": 0.0146
-      },
-      "market_value": 352135.96
-    },
-    {
-      "ticker": "SOYB",
-      "name": "Teucrium Soybean Fund",
-      "total_weight": 0.0145,
-      "accounts": {
-        "HEFT": 0.0145
-      },
-      "market_value": 1508703.24
-    },
-    {
-      "ticker": "SPHR",
-      "name": "Sphere Entertainment Co",
-      "total_weight": 0.0144,
-      "accounts": {
-        "HELS": 0.0144
-      },
-      "market_value": 347323.41
-    },
-    {
-      "ticker": "DBA",
-      "name": "Invesco DB Agriculture Fund",
-      "total_weight": 0.0142,
-      "accounts": {
-        "HEFT": 0.0142
-      },
-      "market_value": 1474208.34
-    },
-    {
-      "ticker": "PLD",
-      "name": "Prologis Inc",
-      "total_weight": 0.0141,
-      "accounts": {
-        "HGRO": 0.0141
-      },
-      "market_value": 1684794.87
-    },
-    {
-      "ticker": "CF",
-      "name": "CF Industries Holdings Inc",
-      "total_weight": 0.0135,
-      "accounts": {
-        "HGRO": 0.0135
-      },
-      "market_value": 1623222.91
-    },
-    {
-      "ticker": "CARR",
-      "name": "Carrier Global Corp",
-      "total_weight": 0.0133,
-      "accounts": {
-        "HGRO": 0.0133
-      },
-      "market_value": 1598026.0
-    },
-    {
-      "ticker": "RIO",
-      "name": "Rio Tinto PLC",
-      "total_weight": 0.0125,
-      "accounts": {
-        "HGRO": 0.0125
-      },
-      "market_value": 1499744.16
-    },
-    {
-      "ticker": "BNY",
-      "name": "Bank of New York Mellon Corp/The",
-      "total_weight": 0.0122,
-      "accounts": {
-        "HGRO": 0.0122
-      },
-      "market_value": 1464988.18
-    },
-    {
-      "ticker": "PICK",
-      "name": "iShares MSCI Global Metals & Mining Producers ETF",
-      "total_weight": 0.0119,
-      "accounts": {
-        "HECA": 0.0119
-      },
-      "market_value": 4159039.43
-    },
-    {
-      "ticker": "EWY",
-      "name": "iShares MSCI South Korea ETF",
-      "total_weight": 0.0118,
-      "accounts": {
-        "HEFT": 0.0118
-      },
-      "market_value": 1224965.82
-    },
-    {
-      "ticker": "VLO",
-      "name": "Valero Energy Corp",
-      "total_weight": 0.0117,
-      "accounts": {
-        "HGRO": 0.0117
-      },
-      "market_value": 1399768.54
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk Corp/DE",
-      "total_weight": 0.0115,
-      "accounts": {
-        "HGRO": 0.0115
-      },
-      "market_value": 1377220.32
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle Corp",
-      "total_weight": 0.0113,
-      "accounts": {
-        "HGRO": 0.0113
-      },
-      "market_value": 1356475.96
-    },
-    {
-      "ticker": "ATI",
-      "name": "ATI Inc",
-      "total_weight": 0.011,
-      "accounts": {
-        "HGRO": 0.011
-      },
-      "market_value": 1322259.63
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology Holdings PLC",
-      "total_weight": 0.011,
-      "accounts": {
-        "HGRO": 0.011
-      },
-      "market_value": 1316187.04
-    },
-    {
-      "ticker": "APD",
-      "name": "Air Products and Chemicals Inc",
-      "total_weight": 0.0107,
-      "accounts": {
-        "HEFT": 0.0107
-      },
-      "market_value": 1110847.32
-    },
-    {
-      "ticker": "AM",
-      "name": "Antero Midstream Corp",
-      "total_weight": 0.0105,
-      "accounts": {
-        "HEFT": 0.0105
-      },
-      "market_value": 1088886.06
-    },
-    {
-      "ticker": "EPD",
-      "name": "Enterprise Products Partners LP",
-      "total_weight": 0.0105,
-      "accounts": {
-        "HEFT": 0.0105
-      },
-      "market_value": 1093950.52
-    },
-    {
-      "ticker": "KLAC",
-      "name": "KLA CORP",
-      "total_weight": 0.0104,
-      "accounts": {
-        "HGRO": 0.0104
-      },
-      "market_value": 1248998.04
-    },
-    {
-      "ticker": "EWC",
-      "name": "ISHARES INC MSCI CDA INDEX",
-      "total_weight": 0.0103,
-      "accounts": {
-        "HEFT": 0.0103
-      },
-      "market_value": 1069085.0
-    },
-    {
-      "ticker": "CIEN",
-      "name": "Ciena Corp",
-      "total_weight": 0.0102,
-      "accounts": {
-        "HGRO": 0.0102
-      },
-      "market_value": 1224374.55
-    },
-    {
-      "ticker": "CHRD",
-      "name": "Chord Energy Corp",
-      "total_weight": 0.0101,
-      "accounts": {
-        "HELS": 0.0101
-      },
-      "market_value": 244273.5
-    },
-    {
-      "ticker": "NORW",
-      "name": "Global X MSCI Norway ETF",
-      "total_weight": 0.0099,
-      "accounts": {
-        "HEFT": 0.0099
-      },
-      "market_value": 1029881.86
-    },
-    {
-      "ticker": "MEOH",
-      "name": "Methanex Corp",
-      "total_weight": 0.0099,
-      "accounts": {
-        "HELS": 0.0099
-      },
-      "market_value": 239214.93
-    },
-    {
-      "ticker": "XYZ",
-      "name": "Block Inc",
-      "total_weight": 0.0099,
-      "accounts": {
-        "HELS": 0.0099
-      },
-      "market_value": 238352.8
-    },
-    {
-      "ticker": "WELL",
-      "name": "Welltower Inc",
-      "total_weight": 0.0098,
-      "accounts": {
-        "HEFT": 0.0098
-      },
-      "market_value": 1018919.17
-    },
-    {
-      "ticker": "KMI",
-      "name": "Kinder Morgan Inc",
-      "total_weight": 0.0098,
-      "accounts": {
-        "HGRO": 0.0098
-      },
-      "market_value": 1180406.0
-    },
-    {
-      "ticker": "XLI",
-      "name": "State Street Industrial Select Sector SPDR ETF",
-      "total_weight": 0.0096,
-      "accounts": {
-        "HEFT": 0.0096
-      },
-      "market_value": 1000670.04
-    },
-    {
-      "ticker": "CVI",
-      "name": "CVR Energy Inc",
-      "total_weight": 0.0093,
-      "accounts": {
-        "HELS": 0.0093
-      },
-      "market_value": 226064.0
-    },
-    {
-      "ticker": "GFS",
-      "name": "GLOBALFOUNDRIES Inc",
-      "total_weight": 0.0083,
-      "accounts": {
-        "HGRO": 0.0083
-      },
-      "market_value": 991819.2
-    },
-    {
-      "ticker": "KO",
-      "name": "Coca-Cola Co/The",
-      "total_weight": 0.0078,
-      "accounts": {
-        "HEFT": 0.0078
-      },
-      "market_value": 807397.99
-    },
-    {
-      "ticker": "HTEC",
-      "name": "ROBO Global R Healthcare Technology and Innovation ETF",
-      "total_weight": 0.0077,
-      "accounts": {
-        "HEFT": 0.0077
-      },
-      "market_value": 797445.64
-    },
-    {
-      "ticker": "EZPW",
-      "name": "EZCORP Inc",
-      "total_weight": 0.0075,
-      "accounts": {
-        "HEFT": 0.0075
-      },
-      "market_value": 778516.64
-    },
-    {
-      "ticker": "GLW",
-      "name": "Corning Inc",
-      "total_weight": 0.0075,
-      "accounts": {
-        "HGRO": 0.0075
-      },
-      "market_value": 903418.12
-    },
-    {
-      "ticker": "COHR",
-      "name": "Coherent Corp",
-      "total_weight": 0.0053,
-      "accounts": {
-        "HGRO": 0.0053
-      },
-      "market_value": 632394.0
-    },
-    {
-      "ticker": "SPY   260717P00610000",
-      "name": "SPY US 07/17/26 P610",
-      "total_weight": 0.0014,
-      "accounts": {
-        "HEFT": 0.0014
-      },
-      "market_value": 148104.0
-    }
-  ],
+  "ham_holdings": {
+    "as_of_date": "2026-05-26",
+    "holdings": [
+      {
+        "ticker": "CERY",
+        "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
+        "weight": 13.96,
+        "price": 37.2569,
+        "shares": 389384.0
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc",
+        "weight": 9.19,
+        "price": 308.82,
+        "shares": 36021.0
+      },
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA Corp",
+        "weight": 9.16,
+        "price": 215.33,
+        "shares": 51499.0
+      },
+      {
+        "ticker": "UUP",
+        "name": "Invesco DB US Dollar Index Bullish Fund",
+        "weight": 9.09,
+        "price": 27.77,
+        "shares": 1156175.0
+      },
+      {
+        "ticker": "VTI",
+        "name": "Vanguard Total Stock Market ETF",
+        "weight": 9.02,
+        "price": 366.79,
+        "shares": 25567.0
+      },
+      {
+        "ticker": "DBMF",
+        "name": "iMGP DBi Managed Futures Strategy ETF",
+        "weight": 8.56,
+        "price": 31.09,
+        "shares": 972138.0
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "weight": 7.95,
+        "price": 382.97,
+        "shares": 25145.0
+      },
+      {
+        "ticker": "XTL",
+        "name": "State Street SPDR S&P Telecom ETF",
+        "weight": 6.24,
+        "price": 233.84,
+        "shares": 94220.0
+      },
+      {
+        "ticker": "VTIP",
+        "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
+        "weight": 6.14,
+        "price": 50.22,
+        "shares": 431920.0
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc",
+        "weight": 5.99,
+        "price": 266.32,
+        "shares": 27231.0
+      },
+      {
+        "ticker": "JAAA",
+        "name": "Janus Henderson AAA CLO ETF",
+        "weight": 5.96,
+        "price": 50.69,
+        "shares": 415568.0
+      },
+      {
+        "ticker": "DBJP",
+        "name": "Xtrackers MSCI Japan Hedged Equity ETF",
+        "weight": 5.8,
+        "price": 110.7336,
+        "shares": 185054.0
+      },
+      {
+        "ticker": "FWD",
+        "name": "AB Disruptors ETF",
+        "weight": 5.57,
+        "price": 136.85,
+        "shares": 143794.0
+      },
+      {
+        "ticker": "SLX",
+        "name": "VanEck Steel ETF",
+        "weight": 5.38,
+        "price": 106.67,
+        "shares": 178085.0
+      },
+      {
+        "ticker": "IHF",
+        "name": "iShares U.S. Healthcare Providers ETF",
+        "weight": 5.29,
+        "price": 50.66,
+        "shares": 368895.0
+      },
+      {
+        "ticker": "VYM",
+        "name": "Vanguard High Dividend Yield ETF",
+        "weight": 4.97,
+        "price": 158.7,
+        "shares": 110580.0
+      },
+      {
+        "ticker": "OIH",
+        "name": "VanEck Oil Services ETF",
+        "weight": 4.81,
+        "price": 443.96,
+        "shares": 38234.0
+      },
+      {
+        "ticker": "DBB",
+        "name": "Invesco DB Base Metals Fund",
+        "weight": 4.69,
+        "price": 25.9,
+        "shares": 639574.0
+      },
+      {
+        "ticker": "ARTY",
+        "name": "iShares Future AI & Tech ETF",
+        "weight": 4.53,
+        "price": 68.78,
+        "shares": 68515.0
+      },
+      {
+        "ticker": "OIH",
+        "name": "VanEck Oil Services ETF",
+        "weight": 4.12,
+        "price": 443.96,
+        "shares": 9643.0
+      },
+      {
+        "ticker": "IDMO",
+        "name": "Invesco S&P International Developed Momentum ETF",
+        "weight": 4.08,
+        "price": 59.75,
+        "shares": 241299.0
+      },
+      {
+        "ticker": "TAN",
+        "name": "Invesco Solar ETF",
+        "weight": 3.74,
+        "price": 65.95,
+        "shares": 200159.0
+      },
+      {
+        "ticker": "FESM",
+        "name": "Fidelity Enhanced Small Cap Core ETF",
+        "weight": 3.61,
+        "price": 44.81,
+        "shares": 284189.0
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc",
+        "weight": 3.13,
+        "price": 308.82,
+        "shares": 2455.0
+      },
+      {
+        "ticker": "DRAM",
+        "name": "Roundhill Memory ETF",
+        "weight": 3.1,
+        "price": 52.82,
+        "shares": 60940.0
+      },
+      {
+        "ticker": "XLE",
+        "name": "State Street Energy Select Sector SPDR ETF",
+        "weight": 3.08,
+        "price": 59.49,
+        "shares": 53745.0
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "weight": 3.02,
+        "price": 382.97,
+        "shares": 1911.0
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc",
+        "weight": 2.96,
+        "price": 414.14,
+        "shares": 8655.0
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corp",
+        "weight": 2.93,
+        "price": 45.52,
+        "shares": 15561.0
+      },
+      {
+        "ticker": "LLY",
+        "name": "Eli Lilly & Co",
+        "weight": 2.84,
+        "price": 1065.0,
+        "shares": 3225.0
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "weight": 2.83,
+        "price": 120.41,
+        "shares": 5693.0
+      },
+      {
+        "ticker": "CIBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
+        "weight": 2.76,
+        "price": 84.28,
+        "shares": 33987.0
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc",
+        "weight": 2.64,
+        "price": 432.16,
+        "shares": 1480.0
+      },
+      {
+        "ticker": "ROKU",
+        "name": "Roku Inc",
+        "weight": 2.63,
+        "price": 125.55,
+        "shares": 5065.0
+      },
+      {
+        "ticker": "JAZZ",
+        "name": "Jazz Pharmaceuticals PLC",
+        "weight": 2.61,
+        "price": 239.83,
+        "shares": 2638.0
+      },
+      {
+        "ticker": "ULS",
+        "name": "UL Solutions Inc",
+        "weight": 2.58,
+        "price": 102.85,
+        "shares": 6085.0
+      },
+      {
+        "ticker": "URI",
+        "name": "United Rentals Inc",
+        "weight": 2.5,
+        "price": 938.62,
+        "shares": 644.0
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 2.4,
+        "price": 825.02,
+        "shares": 705.0
+      },
+      {
+        "ticker": "GS",
+        "name": "Goldman Sachs Group Inc/The",
+        "weight": 2.31,
+        "price": 996.73,
+        "shares": 2806.0
+      },
+      {
+        "ticker": "MKSI",
+        "name": "MKS Inc",
+        "weight": 2.24,
+        "price": 320.62,
+        "shares": 1694.0
+      },
+      {
+        "ticker": "SXT",
+        "name": "Sensient Technologies Corp",
+        "weight": 2.22,
+        "price": 114.44,
+        "shares": 4687.0
+      },
+      {
+        "ticker": "CBOE",
+        "name": "Cboe Global Markets Inc",
+        "weight": 2.22,
+        "price": 357.35,
+        "shares": 7511.0
+      },
+      {
+        "ticker": "ENB",
+        "name": "Enbridge Inc",
+        "weight": 2.15,
+        "price": 58.04,
+        "shares": 8950.0
+      },
+      {
+        "ticker": "FITE",
+        "name": "State Street SPDR S&P Kensho Future Security ETF",
+        "weight": 2.14,
+        "price": 108.2995,
+        "shares": 20547.0
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "weight": 2.14,
+        "price": 119.84,
+        "shares": 18570.0
+      },
+      {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices Inc",
+        "weight": 2.12,
+        "price": 467.51,
+        "shares": 5484.0
+      },
+      {
+        "ticker": "V",
+        "name": "Visa Inc",
+        "weight": 2.12,
+        "price": 328.88,
+        "shares": 7808.0
+      },
+      {
+        "ticker": "JBHT",
+        "name": "JB Hunt Transport Services Inc",
+        "weight": 2.09,
+        "price": 258.77,
+        "shares": 1955.0
+      },
+      {
+        "ticker": "IHE",
+        "name": "iShares U.S. Pharmaceuticals ETF",
+        "weight": 2.07,
+        "price": 91.51,
+        "shares": 23511.0
+      },
+      {
+        "ticker": "VIK",
+        "name": "Viking Holdings Ltd",
+        "weight": 2.07,
+        "price": 84.23,
+        "shares": 5945.0
+      },
+      {
+        "ticker": "UNH",
+        "name": "UnitedHealth Group Inc",
+        "weight": 2.06,
+        "price": 388.47,
+        "shares": 6421.0
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 2.05,
+        "price": 227.59,
+        "shares": 2180.0
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar Inc",
+        "weight": 2.04,
+        "price": 879.89,
+        "shares": 562.0
+      },
+      {
+        "ticker": "UNH",
+        "name": "UnitedHealth Group Inc",
+        "weight": 2.02,
+        "price": 388.47,
+        "shares": 1257.0
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 2.0,
+        "price": 1038.74,
+        "shares": 467.0
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Shares",
+        "weight": 1.97,
+        "price": 413.82,
+        "shares": 4956.0
+      },
+      {
+        "ticker": "MUSA",
+        "name": "Murphy USA Inc",
+        "weight": 1.97,
+        "price": 542.74,
+        "shares": 879.0
+      },
+      {
+        "ticker": "RIG",
+        "name": "Transocean Ltd",
+        "weight": 1.96,
+        "price": 6.81,
+        "shares": 69597.0
+      },
+      {
+        "ticker": "TSN",
+        "name": "Tyson Foods Inc",
+        "weight": 1.96,
+        "price": 65.05,
+        "shares": 7279.0
+      },
+      {
+        "ticker": "XAR",
+        "name": "State Street SPDR S&P Aerospace & Defense ETF",
+        "weight": 1.95,
+        "price": 271.18,
+        "shares": 7484.0
+      },
+      {
+        "ticker": "AVEM",
+        "name": "Avantis Emerging Markets Equity ETF",
+        "weight": 1.94,
+        "price": 93.05,
+        "shares": 21662.0
+      },
+      {
+        "ticker": "NOV",
+        "name": "NOV Inc",
+        "weight": 1.94,
+        "price": 20.81,
+        "shares": 22543.0
+      },
+      {
+        "ticker": "HAL",
+        "name": "Halliburton Co",
+        "weight": 1.94,
+        "price": 41.47,
+        "shares": 56658.0
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corp",
+        "weight": 1.92,
+        "price": 103.11,
+        "shares": 4502.0
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "weight": 1.88,
+        "price": 119.84,
+        "shares": 3793.0
+      },
+      {
+        "ticker": "MRVL",
+        "name": "MARVELL TECHNOLOGY INC",
+        "weight": 1.87,
+        "price": 196.33,
+        "shares": 2300.0
+      },
+      {
+        "ticker": "WDC",
+        "name": "Western Digital Corp",
+        "weight": 1.86,
+        "price": 484.28,
+        "shares": 931.0
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "weight": 1.71,
+        "price": 517.58,
+        "shares": 4003.0
+      },
+      {
+        "ticker": "ADI",
+        "name": "Analog Devices Inc",
+        "weight": 1.69,
+        "price": 397.07,
+        "shares": 5159.0
+      },
+      {
+        "ticker": "TTWO",
+        "name": "Take-Two Interactive Software Inc",
+        "weight": 1.65,
+        "price": 227.55,
+        "shares": 1760.0
+      },
+      {
+        "ticker": "NDAQ",
+        "name": "Nasdaq Inc",
+        "weight": 1.65,
+        "price": 91.01,
+        "shares": 21918.0
+      },
+      {
+        "ticker": "CRCL",
+        "name": "Circle Internet Group Inc",
+        "weight": 1.62,
+        "price": 113.12,
+        "shares": 3458.0
+      },
+      {
+        "ticker": "MO",
+        "name": "Altria Group Inc",
+        "weight": 1.61,
+        "price": 73.9,
+        "shares": 22647.0
+      },
+      {
+        "ticker": "OUT",
+        "name": "Outfront Media Inc",
+        "weight": 1.6,
+        "price": 33.6,
+        "shares": 11535.0
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar Inc",
+        "weight": 1.6,
+        "price": 879.89,
+        "shares": 2199.0
+      },
+      {
+        "ticker": "ADM",
+        "name": "Archer-Daniels-Midland Co",
+        "weight": 1.59,
+        "price": 77.52,
+        "shares": 21267.0
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc",
+        "weight": 1.59,
+        "price": 432.16,
+        "shares": 4447.0
+      },
+      {
+        "ticker": "RIG",
+        "name": "Transocean Ltd",
+        "weight": 1.58,
+        "price": 6.81,
+        "shares": 240590.0
+      },
+      {
+        "ticker": "WMT",
+        "name": "Walmart Inc",
+        "weight": 1.58,
+        "price": 120.27,
+        "shares": 13624.0
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc/MD",
+        "weight": 1.58,
+        "price": 369.15,
+        "shares": 1039.0
+      },
+      {
+        "ticker": "C",
+        "name": "Citigroup Inc",
+        "weight": 1.57,
+        "price": 125.09,
+        "shares": 15241.0
+      },
+      {
+        "ticker": "GLASF",
+        "name": "Glass House Brands Inc",
+        "weight": 1.56,
+        "price": 10.16,
+        "shares": 37078.0
+      },
+      {
+        "ticker": "LAMR",
+        "name": "Lamar Advertising Co",
+        "weight": 1.56,
+        "price": 153.1,
+        "shares": 2466.0
+      },
+      {
+        "ticker": "ROBO",
+        "name": "ROBO Global Robotics and Automation Index ETF",
+        "weight": 1.55,
+        "price": 87.3,
+        "shares": 18437.0
+      },
+      {
+        "ticker": "XBI",
+        "name": "State Street SPDR S&P Biotech ETF",
+        "weight": 1.55,
+        "price": 131.66,
+        "shares": 12211.0
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment Inc",
+        "weight": 1.55,
+        "price": 28.47,
+        "shares": 13193.0
+      },
+      {
+        "ticker": "CDNS",
+        "name": "Cadence Design Systems Inc",
+        "weight": 1.54,
+        "price": 373.59,
+        "shares": 997.0
+      },
+      {
+        "ticker": "SLX",
+        "name": "VanEck Steel ETF",
+        "weight": 1.53,
+        "price": 106.67,
+        "shares": 14863.0
+      },
+      {
+        "ticker": "MPC",
+        "name": "Marathon Petroleum Corp",
+        "weight": 1.53,
+        "price": 254.65,
+        "shares": 1457.0
+      },
+      {
+        "ticker": "STT",
+        "name": "State Street Corp",
+        "weight": 1.53,
+        "price": 153.95,
+        "shares": 2411.0
+      },
+      {
+        "ticker": "EWW",
+        "name": "iShares MSCI Mexico ETF",
+        "weight": 1.52,
+        "price": 77.76,
+        "shares": 20352.0
+      },
+      {
+        "ticker": "NVO",
+        "name": "Novo Nordisk A/S",
+        "weight": 1.52,
+        "price": 44.96,
+        "shares": 8173.0
+      },
+      {
+        "ticker": "HGER",
+        "name": "Harbor Commodity All Weather Strategy ETF",
+        "weight": 1.51,
+        "price": 32.14,
+        "shares": 166203.0
+      },
+      {
+        "ticker": "VPL",
+        "name": "Vanguard FTSE Pacific ETF",
+        "weight": 1.51,
+        "price": 111.91,
+        "shares": 14043.0
+      },
+      {
+        "ticker": "PAVE",
+        "name": "Global X US Infrastructure Development ETF",
+        "weight": 1.5,
+        "price": 54.94,
+        "shares": 28459.0
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corp",
+        "weight": 1.5,
+        "price": 103.11,
+        "shares": 17568.0
+      },
+      {
+        "ticker": "HBM",
+        "name": "Hudbay Minerals Inc",
+        "weight": 1.48,
+        "price": 24.39,
+        "shares": 14645.0
+      },
+      {
+        "ticker": "RSI",
+        "name": "Rush Street Interactive Inc",
+        "weight": 1.48,
+        "price": 27.06,
+        "shares": 13253.0
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 1.47,
+        "price": 825.02,
+        "shares": 1846.0
+      },
+      {
+        "ticker": "WEAT",
+        "name": "Teucrium Wheat Fund",
+        "weight": 1.47,
+        "price": 24.55,
+        "shares": 62335.0
+      },
+      {
+        "ticker": "AFRM",
+        "name": "Affirm Holdings Inc",
+        "weight": 1.47,
+        "price": 65.22,
+        "shares": 5450.0
+      },
+      {
+        "ticker": "DAR",
+        "name": "DARLING INGREDIENTS INC",
+        "weight": 1.47,
+        "price": 58.6,
+        "shares": 6086.0
+      },
+      {
+        "ticker": "TWLO",
+        "name": "Twilio Inc",
+        "weight": 1.47,
+        "price": 187.88,
+        "shares": 1899.0
+      },
+      {
+        "ticker": "SOYB",
+        "name": "Teucrium Soybean Fund",
+        "weight": 1.45,
+        "price": 25.06,
+        "shares": 60324.0
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corp",
+        "weight": 1.45,
+        "price": 45.52,
+        "shares": 38660.0
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 1.45,
+        "price": 1038.74,
+        "shares": 1695.0
+      },
+      {
+        "ticker": "URI",
+        "name": "United Rentals Inc",
+        "weight": 1.45,
+        "price": 938.62,
+        "shares": 1870.0
+      },
+      {
+        "ticker": "PM",
+        "name": "Philip Morris International Inc",
+        "weight": 1.44,
+        "price": 188.99,
+        "shares": 9216.0
+      },
+      {
+        "ticker": "SPHR",
+        "name": "Sphere Entertainment Co",
+        "weight": 1.43,
+        "price": 129.37,
+        "shares": 2667.0
+      },
+      {
+        "ticker": "DBA",
+        "name": "Invesco DB Agriculture Fund",
+        "weight": 1.42,
+        "price": 27.56,
+        "shares": 53394.0
+      },
+      {
+        "ticker": "PLD",
+        "name": "Prologis Inc",
+        "weight": 1.41,
+        "price": 145.9,
+        "shares": 11739.0
+      },
+      {
+        "ticker": "PICK",
+        "name": "iShares MSCI Global Metals & Mining Producers ETF",
+        "weight": 1.4,
+        "price": 63.57,
+        "shares": 77588.0
+      },
+      {
+        "ticker": "CF",
+        "name": "CF Industries Holdings Inc",
+        "weight": 1.35,
+        "price": 121.7,
+        "shares": 13441.0
+      },
+      {
+        "ticker": "LIT",
+        "name": "Global X Lithium & Battery Tech ETF",
+        "weight": 1.31,
+        "price": 85.28,
+        "shares": 54385.0
+      },
+      {
+        "ticker": "CAVA",
+        "name": "Cava Group Inc",
+        "weight": 1.28,
+        "price": 80.42,
+        "shares": 3843.0
+      },
+      {
+        "ticker": "PM",
+        "name": "Philip Morris International Inc",
+        "weight": 1.24,
+        "price": 188.99,
+        "shares": 6832.0
+      },
+      {
+        "ticker": "RIO",
+        "name": "Rio Tinto PLC",
+        "weight": 1.24,
+        "price": 104.23,
+        "shares": 14427.0
+      },
+      {
+        "ticker": "BNY",
+        "name": "Bank of New York Mellon Corp/The",
+        "weight": 1.22,
+        "price": 139.15,
+        "shares": 10622.0
+      },
+      {
+        "ticker": "VLO",
+        "name": "Valero Energy Corp",
+        "weight": 1.19,
+        "price": 246.96,
+        "shares": 5851.0
+      },
+      {
+        "ticker": "EWY",
+        "name": "iShares MSCI South Korea ETF",
+        "weight": 1.15,
+        "price": 182.03,
+        "shares": 6571.0
+      },
+      {
+        "ticker": "ORCL",
+        "name": "Oracle Corp",
+        "weight": 1.14,
+        "price": 192.08,
+        "shares": 7202.0
+      },
+      {
+        "ticker": "IBIT",
+        "name": "iShares Bitcoin Trust ETF",
+        "weight": 1.12,
+        "price": 42.96,
+        "shares": 91985.0
+      },
+      {
+        "ticker": "ATI",
+        "name": "ATI Inc",
+        "weight": 1.11,
+        "price": 162.29,
+        "shares": 8306.0
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc/MD",
+        "weight": 1.11,
+        "price": 369.15,
+        "shares": 3627.0
+      },
+      {
+        "ticker": "SNDK",
+        "name": "Sandisk Corp/DE",
+        "weight": 1.1,
+        "price": 1478.69,
+        "shares": 899.0
+      },
+      {
+        "ticker": "STX",
+        "name": "Seagate Technology Holdings PLC",
+        "weight": 1.1,
+        "price": 812.73,
+        "shares": 1636.0
+      },
+      {
+        "ticker": "AM",
+        "name": "Antero Midstream Corp",
+        "weight": 1.07,
+        "price": 22.17,
+        "shares": 49926.0
+      },
+      {
+        "ticker": "APD",
+        "name": "Air Products and Chemicals Inc",
+        "weight": 1.07,
+        "price": 289.47,
+        "shares": 3828.0
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 1.07,
+        "price": 227.59,
+        "shares": 4907.0
+      },
+      {
+        "ticker": "EPD",
+        "name": "Enterprise Products Partners LP",
+        "weight": 1.06,
+        "price": 39.63,
+        "shares": 27716.0
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 1.06,
+        "price": 227.59,
+        "shares": 5650.0
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA CORP",
+        "weight": 1.06,
+        "price": 1888.38,
+        "shares": 681.0
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 1.05,
+        "price": 1038.74,
+        "shares": 1047.0
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 1.04,
+        "price": 15.47,
+        "shares": 16219.0
+      },
+      {
+        "ticker": "EWC",
+        "name": "ISHARES INC MSCI CDA INDEX",
+        "weight": 1.03,
+        "price": 58.51,
+        "shares": 18250.0
+      },
+      {
+        "ticker": "OUT",
+        "name": "Outfront Media Inc",
+        "weight": 1.03,
+        "price": 33.6,
+        "shares": 37185.0
+      },
+      {
+        "ticker": "ULS",
+        "name": "UL Solutions Inc",
+        "weight": 1.03,
+        "price": 102.85,
+        "shares": 12167.0
+      },
+      {
+        "ticker": "CHRD",
+        "name": "Chord Energy Corp",
+        "weight": 1.02,
+        "price": 143.98,
+        "shares": 1710.0
+      },
+      {
+        "ticker": "CIEN",
+        "name": "Ciena Corp",
+        "weight": 1.01,
+        "price": 583.74,
+        "shares": 2100.0
+      },
+      {
+        "ticker": "SXT",
+        "name": "Sensient Technologies Corp",
+        "weight": 1.01,
+        "price": 114.44,
+        "shares": 10654.0
+      },
+      {
+        "ticker": "VIK",
+        "name": "Viking Holdings Ltd",
+        "weight": 1.01,
+        "price": 84.23,
+        "shares": 14545.0
+      },
+      {
+        "ticker": "MEOH",
+        "name": "Methanex Corp",
+        "weight": 1.0,
+        "price": 60.12,
+        "shares": 4013.0
+      },
+      {
+        "ticker": "MRK",
+        "name": "Merck & Co Inc",
+        "weight": 1.0,
+        "price": 122.41,
+        "shares": 9881.0
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "weight": 0.99,
+        "price": 517.58,
+        "shares": 1978.0
+      },
+      {
+        "ticker": "KMI",
+        "name": "Kinder Morgan Inc",
+        "weight": 0.99,
+        "price": 33.79,
+        "shares": 35509.0
+      },
+      {
+        "ticker": "NORW",
+        "name": "Global X MSCI Norway ETF",
+        "weight": 0.98,
+        "price": 38.9,
+        "shares": 26179.0
+      },
+      {
+        "ticker": "WELL",
+        "name": "Welltower Inc",
+        "weight": 0.98,
+        "price": 216.17,
+        "shares": 4717.0
+      },
+      {
+        "ticker": "XYZ",
+        "name": "Block Inc",
+        "weight": 0.98,
+        "price": 68.08,
+        "shares": 3472.0
+      },
+      {
+        "ticker": "XLI",
+        "name": "State Street Industrial Select Sector SPDR ETF",
+        "weight": 0.97,
+        "price": 171.77,
+        "shares": 5868.0
+      },
+      {
+        "ticker": "MRVL",
+        "name": "MARVELL TECHNOLOGY INC",
+        "weight": 0.97,
+        "price": 196.33,
+        "shares": 5963.0
+      },
+      {
+        "ticker": "CVI",
+        "name": "CVR Energy Inc",
+        "weight": 0.95,
+        "price": 32.45,
+        "shares": 7100.0
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 0.94,
+        "price": 825.02,
+        "shares": 1373.0
+      },
+      {
+        "ticker": "TTWO",
+        "name": "Take-Two Interactive Software Inc",
+        "weight": 0.91,
+        "price": 227.55,
+        "shares": 4827.0
+      },
+      {
+        "ticker": "GFS",
+        "name": "GLOBALFOUNDRIES Inc",
+        "weight": 0.87,
+        "price": 85.64,
+        "shares": 12285.0
+      },
+      {
+        "ticker": "TWLO",
+        "name": "Twilio Inc",
+        "weight": 0.79,
+        "price": 187.88,
+        "shares": 5070.0
+      },
+      {
+        "ticker": "KO",
+        "name": "Coca-Cola Co/The",
+        "weight": 0.78,
+        "price": 81.48,
+        "shares": 9947.0
+      },
+      {
+        "ticker": "HTEC",
+        "name": "ROBO Global R Healthcare Technology and Innovation ETF",
+        "weight": 0.77,
+        "price": 34.1658,
+        "shares": 23289.0
+      },
+      {
+        "ticker": "EZPW",
+        "name": "EZCORP Inc",
+        "weight": 0.76,
+        "price": 33.79,
+        "shares": 23281.0
+      },
+      {
+        "ticker": "GLW",
+        "name": "Corning Inc",
+        "weight": 0.76,
+        "price": 194.05,
+        "shares": 4744.0
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 0.75,
+        "price": 15.47,
+        "shares": 50342.0
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment Inc",
+        "weight": 0.75,
+        "price": 28.47,
+        "shares": 31692.0
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "weight": 0.71,
+        "price": 120.41,
+        "shares": 7187.0
+      },
+      {
+        "ticker": "ZM",
+        "name": "Zoom Communications Inc",
+        "weight": 0.59,
+        "price": 105.64,
+        "shares": 6781.0
+      },
+      {
+        "ticker": "COHR",
+        "name": "Coherent Corp",
+        "weight": 0.53,
+        "price": 377.57,
+        "shares": 1685.0
+      },
+      {
+        "ticker": "TXG",
+        "name": "10X Genomics Inc",
+        "weight": 0.49,
+        "price": 23.68,
+        "shares": 24912.0
+      },
+      {
+        "ticker": "CAVA",
+        "name": "Cava Group Inc",
+        "weight": 0.41,
+        "price": 80.42,
+        "shares": 6135.0
+      },
+      {
+        "ticker": "CARR",
+        "name": "Carrier Global Corp",
+        "weight": 0.01,
+        "price": 63.14,
+        "shares": 198.0
+      },
+      {
+        "ticker": "EWQ",
+        "name": "ISHARES INC MSCI FRANCE",
+        "weight": -0.51,
+        "price": 45.17,
+        "shares": -11634.0
+      },
+      {
+        "ticker": "FLO",
+        "name": "Flowers Foods Inc",
+        "weight": -0.57,
+        "price": 7.94,
+        "shares": -17434.0
+      },
+      {
+        "ticker": "HCA",
+        "name": "HCA Healthcare Inc",
+        "weight": -0.72,
+        "price": 394.07,
+        "shares": -1908.0
+      },
+      {
+        "ticker": "CHTR",
+        "name": "Charter Communications Inc",
+        "weight": -0.75,
+        "price": 145.15,
+        "shares": -5349.0
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms Inc",
+        "weight": -0.77,
+        "price": 610.26,
+        "shares": -1308.0
+      },
+      {
+        "ticker": "USPH",
+        "name": "US Physical Therapy Inc",
+        "weight": -0.77,
+        "price": 61.96,
+        "shares": -12859.0
+      },
+      {
+        "ticker": "DDS",
+        "name": "Dillard's Inc",
+        "weight": -0.78,
+        "price": 561.8,
+        "shares": -1445.0
+      },
+      {
+        "ticker": "SYY",
+        "name": "Sysco Corp",
+        "weight": -0.78,
+        "price": 76.29,
+        "shares": -10622.0
+      },
+      {
+        "ticker": "BRBR",
+        "name": "BellRing Brands Inc",
+        "weight": -0.83,
+        "price": 8.91,
+        "shares": -96780.0
+      },
+      {
+        "ticker": "RBLX",
+        "name": "ROBLOX Corp",
+        "weight": -0.85,
+        "price": 48.16,
+        "shares": -18413.0
+      },
+      {
+        "ticker": "LCID",
+        "name": "Lucid Group Inc",
+        "weight": -0.92,
+        "price": 5.84,
+        "shares": -38097.0
+      },
+      {
+        "ticker": "RDDT",
+        "name": "Reddit Inc",
+        "weight": -0.93,
+        "price": 141.67,
+        "shares": -1587.0
+      },
+      {
+        "ticker": "UTWO",
+        "name": "F/m US Treasury 2 Year Note ETF",
+        "weight": -0.94,
+        "price": 48.095,
+        "shares": -20380.0
+      },
+      {
+        "ticker": "BALL",
+        "name": "Ball Corp",
+        "weight": -0.94,
+        "price": 56.51,
+        "shares": -4039.0
+      },
+      {
+        "ticker": "FLUT",
+        "name": "Flutter Entertainment PLC",
+        "weight": -0.94,
+        "price": 97.38,
+        "shares": -2346.0
+      },
+      {
+        "ticker": "TAP",
+        "name": "Molson Coors Beverage Co",
+        "weight": -0.94,
+        "price": 42.55,
+        "shares": -5371.0
+      },
+      {
+        "ticker": "IDX",
+        "name": "VanEck Indonesia Index ETF",
+        "weight": -0.96,
+        "price": 11.04,
+        "shares": -90187.0
+      },
+      {
+        "ticker": "DPZ",
+        "name": "Domino's Pizza Inc",
+        "weight": -0.96,
+        "price": 316.52,
+        "shares": -733.0
+      },
+      {
+        "ticker": "BRBR",
+        "name": "BellRing Brands Inc",
+        "weight": -0.97,
+        "price": 8.91,
+        "shares": -26251.0
+      },
+      {
+        "ticker": "SYY",
+        "name": "Sysco Corp",
+        "weight": -0.98,
+        "price": 76.29,
+        "shares": -3097.0
+      },
+      {
+        "ticker": "DASH",
+        "name": "DoorDash Inc",
+        "weight": -0.99,
+        "price": 160.25,
+        "shares": -1502.0
+      },
+      {
+        "ticker": "GIS",
+        "name": "General Mills Inc",
+        "weight": -0.99,
+        "price": 33.69,
+        "shares": -7149.0
+      },
+      {
+        "ticker": "PLAY",
+        "name": "Dave & Buster's Entertainment Inc",
+        "weight": -0.99,
+        "price": 11.75,
+        "shares": -20352.0
+      },
+      {
+        "ticker": "EWG",
+        "name": "ISHARES INC MSCI GERMAN",
+        "weight": -1.0,
+        "price": 42.91,
+        "shares": -24230.0
+      },
+      {
+        "ticker": "HYG",
+        "name": "iShares iBoxx USD High Yield Corporate Bond ETF",
+        "weight": -1.0,
+        "price": 79.91,
+        "shares": -13009.0
+      },
+      {
+        "ticker": "JNK",
+        "name": "State Street SPDR Bloomberg High Yield Bond ETF",
+        "weight": -1.0,
+        "price": 96.25,
+        "shares": -10805.0
+      },
+      {
+        "ticker": "CMG",
+        "name": "Chipotle Mexican Grill Inc",
+        "weight": -1.0,
+        "price": 32.89,
+        "shares": -7350.0
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms Inc",
+        "weight": -1.0,
+        "price": 610.26,
+        "shares": -395.0
+      },
+      {
+        "ticker": "NKE",
+        "name": "NIKE Inc",
+        "weight": -1.0,
+        "price": 44.67,
+        "shares": -5421.0
+      },
+      {
+        "ticker": "EPHE",
+        "name": "iShares MSCI Philippines ETF",
+        "weight": -1.01,
+        "price": 24.72,
+        "shares": -42278.0
+      },
+      {
+        "ticker": "JETS",
+        "name": "US Global Jets ETF",
+        "weight": -1.02,
+        "price": 27.13,
+        "shares": -39077.0
+      },
+      {
+        "ticker": "BKNG",
+        "name": "Booking Holdings Inc",
+        "weight": -1.02,
+        "price": 161.06,
+        "shares": -1530.0
+      },
+      {
+        "ticker": "CHTR",
+        "name": "Charter Communications Inc",
+        "weight": -1.02,
+        "price": 145.15,
+        "shares": -1706.0
+      },
+      {
+        "ticker": "IDXX",
+        "name": "IDEXX Laboratories Inc",
+        "weight": -1.02,
+        "price": 559.37,
+        "shares": -441.0
+      },
+      {
+        "ticker": "LUV",
+        "name": "Southwest Airlines Co",
+        "weight": -1.02,
+        "price": 40.86,
+        "shares": -6030.0
+      },
+      {
+        "ticker": "USPH",
+        "name": "US Physical Therapy Inc",
+        "weight": -1.03,
+        "price": 61.96,
+        "shares": -4020.0
+      },
+      {
+        "ticker": "SMPL",
+        "name": "Simply Good Foods Co/The",
+        "weight": -1.04,
+        "price": 11.86,
+        "shares": -21132.0
+      },
+      {
+        "ticker": "DDS",
+        "name": "Dillard's Inc",
+        "weight": -1.05,
+        "price": 561.8,
+        "shares": -451.0
+      },
+      {
+        "ticker": "RBLX",
+        "name": "ROBLOX Corp",
+        "weight": -1.05,
+        "price": 48.16,
+        "shares": -5260.0
+      },
+      {
+        "ticker": "SNAP",
+        "name": "Snap Inc",
+        "weight": -1.05,
+        "price": 5.72,
+        "shares": -44537.0
+      },
+      {
+        "ticker": "ONON",
+        "name": "On Holding AG",
+        "weight": -1.06,
+        "price": 39.81,
+        "shares": -6448.0
+      },
+      {
+        "ticker": "WING",
+        "name": "Wingstop Inc",
+        "weight": -1.11,
+        "price": 140.41,
+        "shares": -1921.0
+      },
+      {
+        "ticker": "KSS",
+        "name": "Kohl's Corp",
+        "weight": -1.13,
+        "price": 13.06,
+        "shares": -20904.0
+      },
+      {
+        "ticker": "IEF",
+        "name": "iShares 7-10 Year Treasury Bond ETF",
+        "weight": -1.44,
+        "price": 93.88,
+        "shares": -15907.0
+      },
+      {
+        "ticker": "INDA",
+        "name": "iShares MSCI India ETF",
+        "weight": -2.02,
+        "price": 48.39,
+        "shares": -43361.0
+      },
+      {
+        "ticker": "ITB",
+        "name": "ISHARES TRUST DJ HOME CONSTN",
+        "weight": -2.08,
+        "price": 90.97,
+        "shares": -23706.0
+      },
+      {
+        "ticker": "ZROZ",
+        "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
+        "weight": -2.39,
+        "price": 61.38,
+        "shares": -40500.0
+      },
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ETF",
+        "weight": -2.42,
+        "price": 84.68,
+        "shares": -29651.0
+      },
+      {
+        "ticker": "XTEN",
+        "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
+        "weight": -2.42,
+        "price": 45.0,
+        "shares": -55913.0
+      }
+    ]
+  },
   "rta": {
     "recent_trades": [
       {
@@ -3210,52 +3613,55 @@
   ],
   "pdf": {
     "early_look": {
-      "title": "Quad 2→3 Transition: Positioning for Inflation Acceleration",
-      "keith_thesis": "Quad shift Q2→Q3 is emerging. Sold XLI, shorted XRT, sold IBIT, staying long QTUM. Long energy (XOP, OIH), telecom (XTL), and commodity inflation plays. Short housing (ITB), healthcare (XLV), retail (XRT), airlines (JETS).",
-      "keith_notes": [
-        "Sold XLI — industrials move to headwind in Quad 3",
-        "Shorted XRT — consumer discretionary/retail short in Quad 3",
-        "Sold IBIT — Bitcoin a headwind in Quad 3",
-        "Staying long QTUM — secular quantum theme holds across quad shift",
-        "Quad 3 longs: XOP, OIH, XTL, EQRR, QTUM, ROBO"
-      ],
-      "vix_level": 17.5,
+      "title": "#Quad2 Fractal Gods At Play",
+      "date": "2026-05-26",
+      "vix_level": 16.7,
       "vix_bucket": "LOW VOL",
-      "date": "2026-05-22",
+      "keith_thesis": "#Quad2 confirmed with USD in Bullish TRADE/TREND Breakout Mode. Oil broke TRADE signal at $98.23 WTI \u2014 now below $98, reducing near-term buying pressure. Long: NORW (trimmed to min), IWM, SOYB, CORN, Copper. Short: IDX (down -33% YTD), PALL. KOSPI at new Quad2 all-time high 8047 \u2014 DRAM in play for new highs. VIX at 16.70, new 3-month lows, in Investible Bucket (<19).",
+      "keith_notes": [
+        "US Dollar Bullish TRADE and TREND Breakout Mode \u2014 key #Quad2 signal",
+        "Oil broke TRADE support at $98.23 WTI \u2014 trimmed BNO to minimum size",
+        "WTI LRR at $91.17, TREND support at $89.07 \u2014 wait for those levels to add",
+        "NORW trimmed to min after +1.1% last week (+10.2% 3-month); buy on red",
+        "KOSPI at new all-time high 8047 \u2014 DRAM confirms Cyclical Tech in Quad2",
+        "VIX 16.70 = new 3-month lows, Investible Bucket (<19), positive gamma",
+        "Corn +1.7% last week (+8.4% 3-mo), Copper +1.3% (+9.2% 3-mo)",
+        "Short Indonesia (IDX) down -33% since January \u2014 obey the Fractal Gods"
+      ],
       "keith_levels": {
-        "SPX": {
-          "lrr": 7334,
-          "trr": 7500,
-          "signal": "BULLISH"
-        },
-        "NASDAQ": {
-          "lrr": 25813,
-          "trr": 26675,
-          "signal": "BULLISH"
-        },
-        "RUT": {
-          "lrr": 2771,
-          "trr": 2897,
-          "signal": "BULLISH"
-        },
         "UST10Y": {
-          "lrr": 4.44,
-          "trr": 4.69,
+          "lrr": 4.45,
+          "trr": 4.7,
           "signal": "BULLISH"
         },
         "HYG": {
-          "lrr": 79.43,
-          "trr": 80.2,
+          "lrr": 79.46,
+          "trr": 80.22,
           "signal": "BULLISH"
         },
         "LQD": {
-          "lrr": 107.1,
-          "trr": 108.7,
+          "lrr": 107.2,
+          "trr": 109.1,
           "signal": "BEARISH"
         },
+        "SPX": {
+          "lrr": 7353,
+          "trr": 7531,
+          "signal": "BULLISH"
+        },
+        "NASDAQ": {
+          "lrr": 25900,
+          "trr": 26696,
+          "signal": "BULLISH"
+        },
+        "RUT": {
+          "lrr": 2788,
+          "trr": 2909,
+          "signal": "BULLISH"
+        },
         "XLK": {
-          "lrr": 172,
-          "trr": 181,
+          "lrr": 173,
+          "trr": 183,
           "signal": "BULLISH"
         },
         "XOP": {
@@ -3264,49 +3670,49 @@
           "signal": "BULLISH"
         },
         "XTL": {
-          "lrr": 220,
-          "trr": 233,
+          "lrr": 221,
+          "trr": 236,
           "signal": "BULLISH"
         },
         "XLU": {
-          "lrr": 43.49,
-          "trr": 45.65,
+          "lrr": 43.6,
+          "trr": 45.73,
           "signal": "BEARISH"
         },
         "VIX": {
-          "lrr": 16.44,
-          "trr": 18.81,
+          "lrr": 16.33,
+          "trr": 18.37,
           "signal": "BEARISH"
         },
         "USD": {
-          "lrr": 98.7,
-          "trr": 99.83,
+          "lrr": 98.72,
+          "trr": 99.59,
           "signal": "BULLISH"
         },
+        "WTI": {
+          "lrr": 91.17,
+          "trr": 105.41,
+          "signal": "BULLISH"
+        },
+        "NATGAS": {
+          "lrr": 2.81,
+          "trr": 3.11,
+          "signal": "BEARISH"
+        },
         "GOLD": {
-          "lrr": 4413,
-          "trr": 4645,
+          "lrr": 4430,
+          "trr": 4626,
           "signal": "NEUTRAL"
         },
         "COPPER": {
-          "lrr": 6.15,
-          "trr": 6.68,
+          "lrr": 6.16,
+          "trr": 6.65,
           "signal": "BULLISH"
         },
         "SLV": {
           "lrr": 69,
-          "trr": 78,
+          "trr": 79,
           "signal": "BEARISH"
-        },
-        "NATGAS": {
-          "lrr": 2.85,
-          "trr": 3.11,
-          "signal": "NEUTRAL"
-        },
-        "WTI": {
-          "lrr": 95.73,
-          "trr": 107.29,
-          "signal": "BULLISH"
         }
       }
     },
@@ -3315,7 +3721,7 @@
         "monthly": 3,
         "quarterly": 2
       },
-      "quad_sequence": "Q2 → Q3",
+      "quad_sequence": "Q2 \u2192 Q3",
       "growth_roc": "DECELERATING",
       "inflation_roc": "ACCELERATING",
       "vix": {
@@ -3324,32 +3730,19 @@
       },
       "keith_commentary": [
         "Monthly Quad 3: Growth decelerating, Inflation accelerating",
-        "Q2→Q3 transition — sold XLI and IBIT, adding short XRT",
+        "Q2\u2192Q3 transition \u2014 sold XLI and IBIT, adding short XRT",
         "Long XOP, OIH, XTL, EQRR, QTUM, ROBO in Quad 3",
         "Short XLV, ITB, XLU, JETS, XRT in Quad 3"
       ]
     },
     "macro_show_notes": {
-      "key_points": [
-        "Monthly Quad 3: Growth decelerating, Inflation accelerating",
-        "Quarterly Quad 2 backdrop — Q2→Q3 shift underway",
-        "VIX 16.44–18.81, LOW VOL regime — complacency risk",
-        "USD bullish 98.70–99.83 — dollar strength consistent with Quad 3",
-        "Gold neutral 4,413–4,645 — metals complex reassessing post-run",
-        "Copper bullish 6.15–6.68 — industrial metals still supported"
-      ],
-      "positioning_changes": [
-        "Sold XLI (industrials headwind, Quad 3)",
-        "Shorted XRT (retail/consumer discretionary headwind, Quad 3)",
-        "Sold IBIT (crypto moves to headwind, Quad 3)",
-        "Staying long QTUM (secular quantum computing theme)"
-      ],
-      "keith_watching": [
-        "Q2→Q3 shift timing — watch growth data inflections",
-        "Energy complex: XOP, OIH, BNO holding key trend levels",
-        "HYG 79.43–80.20 — credit spread key macro tell",
-        "XLU bearish — utilities signal, rates / Quad 3 dynamic"
-      ]
+      "date": "2026-05-26",
+      "vix": "16.70 \u2014 new 3-month TRENDING lows. Investible Bucket (<19). Positive gamma. Downside to 16.33 possible.",
+      "oil": "WTI broke immediate-term TRADE Signal at $98.23. Below that level WTI TRADE Momentum is bearish. LRR $91.17, TREND $89.07.",
+      "kospi": "8047 overnight \u2014 new #Quad2 all-time high above 7981 threshold. DRAM (Semis) in play for new all-time highs.",
+      "quad_context": "#Quad2 \u2014 Growth accelerating, Inflation accelerating. Cyclical/commodity/momentum longs favored.",
+      "week_theme": "Memorial Day week. Positive gamma into June OpEx. VIX suppression continuing. $33B/month 401k passive inflows.",
+      "source_file": "HE_TMS_KM_DJ_5.26.2026.pdf"
     },
     "msr": {
       "gamma_exposure": "POSITIVE",
@@ -3942,201 +4335,240 @@
     "investing_ideas": {
       "longs": {
         "DAR": {
-          "lrr": 60.05,
-          "trr": 65.0,
+          "direction": "LONG",
+          "lrr": 56.27,
+          "trr": 64.9,
           "sector": "Energy",
-          "thesis": "DAR is an Active Long with signal strength as rising diesel prices and widening crack spreads create a favorable margin environment for renewable diesel producers. The company benefits from a structural cost advantage because its feedstock—animal tallow and used cooking oil—has risen much more slowly than crude, allowing renewable diesel margins to expand as fuel prices increase...",
-          "weekend_update": null,
-          "source_date": "2026-05-18"
+          "analyst": "Fernando Valle (Energy)",
+          "thesis": "DAR is an Active Long with signal strength as rising diesel prices and widening crack spreads create a favorable margin environment for renewable diesel producers. The company benefits from a structural cost advantage because its feedstock\u2014animal tallow and used cooking oil\u2014has risen much more slowly than crude, allowing renewable diesel margins to expand as fuel prices increase. Additional upside catalysts include potential EPA policy updates supporting renewable diesel demand and DAR\u2019s strategic partnership with Valero, which enhances scale, distribution, and production advantages in the biofuels market.",
+          "weekend_update": "DAR remains a Best Idea Long as the stock approaches the low end of its trading range, creating an attractive entry point while supportive energy fundamentals and higher-for-longer oil prices continue to reinforce the medium-term bullish thesis. https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 2/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026 Attractive risk/reward setup developing near the low end of the range, with Keith highlighting the recent pullback as a compelling buy opportunity ahead of a potential move toward new cycle",
+          "source_date": "2026-05-26"
         },
         "SWBI": {
-          "lrr": 14.4,
-          "trr": 15.77,
+          "direction": "LONG",
+          "lrr": 14.41,
+          "trr": 16.15,
           "sector": "Retail",
-          "thesis": "Smith & Wesson Brands is a long as improving production and rising plant utilization are expected to drive meaningful margin expansion from depressed levels. The company is gaining market share amid competitor distraction and industry consolidation, while early signs suggest demand has already bottomed, providing incremental top-line support...",
-          "weekend_update": "SWBI remains a long bench idea as improving firearm demand trends and rising plant utilization support a multi-quarter margin recovery, while competitive dislocations continue to create market share opportunities...",
-          "source_date": "2026-05-18"
+          "analyst": "Brian McGough",
+          "thesis": "Smith & Wesson Brands is a long as improving production and rising plant utilization are expected to drive meaningful margin expansion from depressed levels. The company is gaining market share amid competitor distraction and industry consolidation, while early signs suggest demand has already bottomed, providing incremental top-line support. With limited sell-side coverage and significant operating leverage from its fixed-cost structure, the setup offers asymmetric upside as earnings power builds over the next several years.",
+          "weekend_update": "SWBI remains a long bench idea as improving firearm demand trends, rising plant utilization, and underappreciated gross margin upside support a multi-quarter margin recovery, while competitive dislocations continue to create market share opportunities. Added to the Signal Strength long discussion, with the key setup centered on gross margin upside as SWBI scales into newly added manufacturing capacity and begins to better absorb fixed costs. Management is still materially under-earning versus normalized margin potential, with improving production efficiency at the new",
+          "source_date": "2026-05-26"
         },
         "MUSA": {
-          "lrr": 545.0,
-          "trr": 605.0,
+          "direction": "LONG",
+          "lrr": 532.0,
+          "trr": 595.0,
           "sector": "Consumer Staples",
+          "analyst": "Daniel Biolsi",
           "thesis": "MUSA is levered to fuel price volatility and rate-of-change dynamics, which drive both margin expansion and traffic through its price-led model. Its higher mix of gasoline, energy drinks, and nicotine sales positions it to benefit disproportionately from improving consumer activity and C-store category strength. With industry consolidation accelerating and a structurally advantaged sourcing model, MUSA offers a differentiated and durable way to play both energy and consumer trends.",
-          "weekend_update": "MUSA remains a Long as year-round E15 approval and sustained fuel market tightness reinforce its low-price fuel strategy, positioning the company to capture incremental traffic and share gains in a price-sensitive consumer environment...",
-          "source_date": "2026-05-18"
+          "weekend_update": "MUSA remains a Long as year-round E15 approval and sustained fuel market tightness reinforce its low-price fuel strategy, positioning the company to capture incremental traffic and share gains in a price-sensitive consumer environment. Primary beneficiary of proposed year-round E15 legislation, with Murphy USA\u2019s large RIN position creating a significant wholesale cost advantage relative to peers and strengthening its ability to maintain price leadership Management is likely to reinvest E15-related cost savings into lower pump prices rather than allowing the benefit",
+          "source_date": "2026-05-26"
         },
         "ULS": {
-          "lrr": 92.79,
-          "trr": 105.95,
+          "direction": "LONG",
+          "lrr": 96.11,
+          "trr": 106.0,
           "sector": "Industrials",
-          "thesis": "ULS is a high-quality, capital-light TIC franchise benefiting from a structural shift to a for- profit model, unlocking sustained margin expansion, disciplined capital allocation, and long- term alpha generation. The company is positioned at the center of durable secular tailwinds— including rising global regulation, AI/data center buildout, and industrial complexity—which drive recurring demand for testing, inspection, and certification services across diverse end markets...",
-          "weekend_update": "ULS remains a long as strong earnings execution, accelerating M&A activity, and ongoing margin expansion reinforce the company’s positioning as a high-quality, capital-light compounder with multi-year rerating potential...",
-          "source_date": "2026-05-18"
+          "analyst": "Jay Van Sciver",
+          "thesis": "https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 4/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026 ULS is a high-quality, capital-light TIC franchise benefiting from a structural shift to a for- profit model, unlocking sustained margin expansion, disciplined capital allocation, and long- term alpha generation. The company is positioned at the center of durable secular tailwinds\u2014 including rising global regulation, AI/data center buildout, and industrial complexity\u2014which drive recurring demand for testing, inspection, and certification services across diverse end markets. With a fragmented industry enabling M&A consolidation, strong customer retention, and multiple levers for growth (organic + inorganic), ULS can continue compounding earnings even in a Quad 3 macro backdrop favoring defensive, services-oriented names.",
+          "weekend_update": "ULS remains a long as strong earnings execution, accelerating M&A activity, and ongoing margin expansion reinforce the company\u2019s positioning as a high-quality, capital-light compounder with multi-year rerating potential. Structural growth tailwinds across Testing, Inspection & Certification (TIC) markets \u2014 including electrification, AI infrastructure, data centers, reshoring, and rising regulatory complexity \u2014 continue to support durable demand growth and high customer retention Management continues to execute its transition from a not-for-profit structure toward a more optimized for-profit model, driving margin expansion,",
+          "source_date": "2026-05-26"
         },
         "CAVA": {
-          "lrr": 72.3,
-          "trr": 92.54,
+          "direction": "LONG",
+          "lrr": 72.5,
+          "trr": 87.07,
           "sector": "Restaurants",
-          "thesis": "CAVA is a Long as sustained traffic growth, best-in-class unit economics, and a differentiated Mediterranean positioning support a path back to HSD/double-digit comps and multiple expansion. The thesis rests on reinvestment in food quality, labor, hospitality, and loyalty, creating a traffic flywheel while peers lean more heavily on discounting or labor5/18/26, 9:18 AM Hedgeye - Investing Ideas Newsletter: May 18, 2026 5/16 optimization...",
-          "weekend_update": "CAVA remains a high-conviction Long as recent consumer discretionary weakness and restaurant volatility have created a more attractive setup ahead of earnings, while accelerating traffic trends and easing comparisons continue to support a bullish medium-term outlook...",
-          "source_date": "2026-05-18"
-        },
-        "APD": {
-          "lrr": 290.0,
-          "trr": 307.0,
-          "sector": "Industrials",
-          "thesis": "APD remains a Best Ideas Long on Jay's position monitor as new leadership shifts the company away from uneconomic “green” capital deployment and back toward shareholder discipline, positioning the business to recover from several years of self-inflicted underperformance. Industrial gases remain one of the highest-quality and most structurally resilient industries within Materials, supported by outsourcing trends, limited competition, pricing power, and durable end-market demand...",
-          "weekend_update": null,
-          "source_date": "2026-05-18"
+          "analyst": "Bennett Cheer",
+          "thesis": "CAVA is a Long as sustained traffic growth, best-in-class unit economics, and a differentiated Mediterranean positioning support a path back to HSD/double-digit comps and multiple expansion. The thesis rests on reinvestment in food quality, labor, hospitality, and loyalty, creating a traffic flywheel while peers lean more heavily on discounting or labor optimization. CAVA\u2019s unit growth remains productive, with infill expansion, rising AUVs, and direct share gains from nearby Chipotle locations reinforcing the case for FY26 upside. https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 5/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026",
+          "weekend_update": "CAVA remains a high-conviction Long and Best Idea as accelerating traffic, strong comp momentum, and easier comparisons support continued share gains and keep the medium-term setup bullish. Highlighted as a Best Idea Long after reporting a 9.7% comp on seven points of transaction growth, reinforcing that demand is being driven by real traffic rather than price alone. The company is capturing a cyclical health trend that is becoming more structural, with strong higher-income exposure and evidence that lower-income guests are",
+          "source_date": "2026-05-26"
         },
         "AMZN": {
-          "lrr": 259.0,
-          "trr": 279.0,
+          "direction": "LONG",
+          "lrr": 257.0,
+          "trr": 275.0,
           "sector": "Retail",
-          "thesis": "AMZN remains a high-conviction Long as accelerating AWS growth, expanding AI infrastructure capacity, and improving retail operating leverage continue to reinforce Amazon’s leadership across both cloud and commerce ecosystems...",
-          "weekend_update": "Keith's Real-Time BUY Signal on May 5: I'm old enough to remember signaling to sell-SOME AMZN on green earlier this week... Coaching Notes:5/18/26, 9:18 AM Hedgeye - Investing Ideas Newsletter: May 18, 2026 7/16 1. It probably didn't \"feel\" right to sell some up there ... 2...",
-          "source_date": "2026-05-18"
+          "analyst": "Brian McGough",
+          "thesis": "AMZN remains a high-conviction Long as accelerating AWS growth, expanding AI infrastructure capacity, and improving retail operating leverage continue to reinforce Amazon\u2019s leadership across both cloud and commerce ecosystems. Retail profitability and logistics optionality remain underappreciated, with robotics, automation, and rapid grocery delivery expansion driving meaningful efficiency gains while Amazon Supply Chain Services increasingly positions the company as a disruptive force across freight and logistics markets. Amazon\u2019s willingness to optimize for ecosystem scale rather than standalone freight margins has the potential to structurally reshape transportation and LTL pricing dynamics, further extending the company\u2019s competitive moat while creating incremental monetization opportunities beyond its core retail and cloud businesses.",
+          "weekend_update": "AMZN remains a high-conviction Long as AWS acceleration, retail automation upside, and Amazon\u2019s expanding third-party logistics platform support continued upside within a favorable Quad 2 macro backdrop. Keith\u2019s Real-Time Alert Buy Signal on Friday flagged AMZN as a buy near the low end of its risk range, with signal strength and macro positioning both supportive. https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 6/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026 AWS acceleration remains a key driver, with expanding infrastructure capacity reinforcing the",
+          "source_date": "2026-05-26"
         },
         "ROKU": {
-          "lrr": 120.0,
+          "direction": "LONG",
+          "lrr": 119.0,
           "trr": 132.0,
           "sector": "Communications",
-          "thesis": "Roku’s core thesis is centered on accelerating platform monetization, with high-margin advertising and subscription revenue increasingly transforming the business from a low- margin streaming hardware company into a scaled connected-TV software and media platform. The company is entering a powerful operating leverage cycle as revenue growth materially outpaces expense growth, driving expanding EBITDA margins, rising free cash flow generation, and growing investor confidence in Roku’s long-term earnings power...",
-          "weekend_update": "ROKU remains a Long as strong platform growth, accelerating profitability, and expanding advertising monetization continue to reinforce the company’s long-term streaming and connected TV leadership thesis despite a muted post-earnings stock reaction...",
-          "source_date": "2026-05-18"
-        },
-        "CARR": {
-          "lrr": 62.15,
-          "trr": 68.85,
-          "sector": "Industrials",
-          "thesis": "Carrier’s core thesis is driven by accelerating demand for climate and energy-efficiency solutions, with secular growth across HVAC replacement cycles, data center cooling, electrification, and global sustainability investment supporting durable organic revenue expansion...",
-          "weekend_update": "CARR remains a Long as improving HVAC demand, accelerating industrial pricing dynamics, and strong commercial order momentum continue to support a favorable earnings and sentiment backdrop for the sector...",
-          "source_date": "2026-05-18"
+          "analyst": "Andrew Freedman (Communications)",
+          "thesis": "Roku\u2019s core thesis is centered on accelerating platform monetization, with high-margin advertising and subscription revenue increasingly transforming the business from a low- margin streaming hardware company into a scaled connected-TV software and media platform. The company is entering a powerful operating leverage cycle as revenue growth materially outpaces expense growth, driving expanding EBITDA margins, rising free cash flow generation, and growing investor confidence in Roku\u2019s long-term earnings power. Additional upside is supported by structural tailwinds across political advertising, sports streaming, programmatic ad integration, and global connected-TV adoption, while management\u2019s conservative guidance framework leaves room for continued estimate revisions and multiple expansion.",
+          "weekend_update": "ROKU remains a Long as the bullish trend has been confirmed, advertising tailwinds are building into Q2/Q3, and post-earnings execution continues to support the long-term platform thesis. Bullish trend confirmed, with the stock still viewed favorably on the long side despite a muted post-earnings reaction to positive results. World Cup pre-marketing is expected to begin opening ad budgets in Q2 and Q3, while political ad spending provides an additional revenue tailwind. https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 7/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas",
+          "source_date": "2026-05-26"
         },
         "SXT": {
+          "direction": "LONG",
           "lrr": 110.0,
           "trr": 124.0,
           "sector": "Consumer Staples",
-          "thesis": "SXT’s thesis is centered on the accelerating industry-wide shift away from synthetic petroleum-based food dyes toward natural colors, driven by tightening regulation, consumer pressure, and large-scale food manufacturer reformulations. Sensient is uniquely positioned as the leading U.S...",
-          "weekend_update": "SXT remains a Long as the accelerating shift away from artificial food dyes and flavors creates a transformational multi-year growth opportunity for the natural ingredients industry, with Sensient uniquely positioned as the category leader...",
-          "source_date": "2026-05-18"
+          "analyst": "Daniel Biolsi",
+          "thesis": "SXT\u2019s thesis is centered on the accelerating industry-wide shift away from synthetic petroleum-based food dyes toward natural colors, driven by tightening regulation, consumer pressure, and large-scale food manufacturer reformulations. Sensient is uniquely positioned as the leading U.S. supplier of both synthetic and natural food colors, giving it direct access to incumbent customer relationships and a potentially transformational conversion opportunity as customers transition portfolios over the next several years. The company\u2019s proprietary sourcing network, formulation expertise, and expanding production capacity create a https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 8/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026 significant competitive moat that could drive sustained revenue acceleration, margin expansion, and meaningful EPS upside.",
+          "weekend_update": "SXT remains a Long as the accelerating shift away from artificial dyes and flavors continues to create a transformational multi-year growth opportunity, with Sensient uniquely positioned as the natural colors category leader. Recent product launches continue to validate the thesis, including Kraft Heinz\u2019s JELL-O Simply line with no artificial colors or sweeteners, less sugar, and premium pricing versus conventional JELL-O products. Target\u2019s food-forward strategy adds another proof point, with the company resetting nearly half of its center-store grocery assortment and",
+          "source_date": "2026-05-26"
+        },
+        "SITM": {
+          "direction": "LONG",
+          "lrr": 640.0,
+          "trr": 901.0,
+          "sector": "Technology",
+          "analyst": "Felix Wang (Technology)",
+          "thesis": "SITM is a hidden AI datacenter play executing a major beat-and-raise driven by accelerating demand across GPUs, XPUs, TPUs, switches, optical modules, and connectivity infrastructure. CED revenue grew 158% in Q1; Q2 guidance implies >110% revenue growth. Monopoly-like position in precision timing keeps near-term trend firmly higher despite steep valuation.",
+          "weekend_update": "Keith RTA BUY on May 19 ahead of NVDA earnings \u2014 'We're not the herd, we're executing the process.' RTA SELL on May 21: 'Buy on red, sell-SOME on green \u2014 hard to execute with discipline daily.'",
+          "source_date": "2026-05-26"
+        },
+        "UNH": {
+          "direction": "LONG",
+          "lrr": 368.0,
+          "trr": 407.0,
+          "sector": "Healthcare",
+          "analyst": "Tom Tobin",
+          "thesis": "UNH remains a Long as the managed care setup has been materially de-risked, with improving fundamentals supported by higher premium pricing, rising employer healthcare cost inflation, and AI-driven claims editing that can help suppress medical cost growth. The latest quarter was better than feared, but not clean, as EPS upside and raised guidance were helped by favorable prior-year reserve development and membership pruning rather than a clear decline in utilization, which management said remains elevated. The key bullish spread is that Medicare Advantage pricing is running ahead of medical cost trend, while the broader balance of power appears to be shifting back toward payors as provider upcoding peaks, claims editing improves, and cost pressure gradually moves back toward employees in",
+          "weekend_update": "https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 10/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026 Keith's Real-Time BUY Signal on May 21: \"UNH was added to our Signal Strength Stocksproduct on April 24th at $352... Coaching Notes: 1. You'll pay more for this winner today 2. But that doesn't mean you \"missed it\" 3. It means you get the process and WHEN to buy-more of a winner post a correction Tobin and I talked through this one on The Call@HedgeyeTV this morning,",
+          "source_date": "2026-05-26"
+        },
+        "SBUX": {
+          "direction": "LONG",
+          "lrr": 100.0,
+          "trr": 110.0,
+          "sector": "Restaurants",
+          "analyst": "Bennett Cheer",
+          "thesis": "SBUX remains an active Long and Signal Strength Long as the Back to Starbucks turnaround is gaining traction, with transaction-led comps, improving brand relevance, and easier comparisons supporting continued recovery. The recent pullback on news that Starbucks scrapped an AI inventory tool looks like a non-event relative to the broader technology rollout, including Smart Queue, AI headsets in drive-thrus, and partner-support tools designed to improve throughput and store execution. After its best quarter in two years, the story is shifting from \u201ccan comps recover?\u201d to \u201chow much margin flow-through can they get?\u201d as operational investments, loyalty improvements, store uplifts, and new product platforms begin converting better traffic into earnings upside. https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 11/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter:",
+          "weekend_update": "Keith's Real-Time BUY Signal on May 21: \"We take small losses because: A) It's better than letting them become bigger ones B) It's Tax Efficient C) It's a good way to free up capital to buy more of what's working Bennett remains The Bull on Starby's, KM\"",
+          "source_date": "2026-05-26"
         }
       },
       "shorts": {
         "ROP": {
-          "lrr": 301.0,
-          "trr": 344.0,
+          "direction": "SHORT",
+          "lrr": 306.0,
+          "trr": 334.0,
           "sector": "Industrials",
-          "thesis": "Roper Technologies (ROP) remains a serial acquisition story that depends on perpetual, near flawless capital allocation and ever larger deals to sustain the growth narrative. The model obscures underlying business quality, limits transparency for investors, and embeds significant execution risk as the pool of suitable assets shrinks...",
-          "weekend_update": "ROP remains a high-conviction short as structural concerns around its acquisition-driven model and weakening competitive positioning reinforce downside risk despite prior multiple support...",
-          "source_date": "2026-05-18"
+          "analyst": "Jay Van Sciver",
+          "thesis": "Roper Technologies (ROP) remains a serial acquisition story that depends on perpetual, near flawless capital allocation and ever larger deals to sustain the growth narrative. The model obscures underlying business quality, limits transparency for investors, and embeds significant execution risk as the pool of suitable assets shrinks. As software moats erode and niche verticals become more substitutable, the durability of Roper\u2019s portfolio is increasingly in question. Once the perception of Roper as a low risk compounder breaks, the strategy itself becomes vulnerable.",
+          "weekend_update": "ROP remains a high-conviction short as structural concerns around its acquisition-driven model and weakening competitive positioning reinforce downside risk despite prior multiple support. The company\u2019s growth model is increasingly dependent on large, execution-heavy acquisitions, raising the risk profile as deal sizes scale and integration complexity rises Core software assets face rising substitutability risk, with eroding competitive moats undermining the durability of long-term organic growth assumptions With fundamentals deteriorating beneath the surface and valuation still reflecting a premium roll-up multiple, ROP",
+          "source_date": "2026-05-26"
         },
         "RBLX": {
-          "lrr": 38.02,
-          "trr": 47.56,
+          "direction": "SHORT",
+          "lrr": 40.08,
+          "trr": 49.96,
           "sector": "Communications",
+          "analyst": "Andrew Freedman (Communications)",
           "thesis": "Roblox (RBLX) remains a short with slowing user growth. Freedman's data is pointing to much lower daily active user (DAU) and bookings growth than investors saw last quarter. After a sharp bounce in the stock, expectations remain too high relative to the clear deceleration in engagement trends and post-holiday activity. With growth normalizing and management guiding to slower momentum ahead, the risk is that estimates come down and the stock re-rates lower.",
-          "weekend_update": "RBLX remains a Short as decelerating new user growth, reduced bookings guidance, and multiple near-term headwinds converge into a high-risk Q3 trough setup...",
-          "source_date": "2026-05-18"
-        },
-        "ONON": {
-          "lrr": 33.02,
-          "trr": 38.63,
-          "sector": "Retail",
-          "thesis": "ONON is a short as the CEO departure signals an inflection toward slower growth, while current profitability and expectations remain unsustainably high. With gross margins above 60% and heavily concentrated product exposure, the company faces meaningful downside as scale drives margin normalization and competitive pressures from Nike intensify. In a Quad 3 backdrop with bearish signal strength, decelerating growth and overly optimistic sell-side assumptions set up for estimate cuts and multiple compression.",
-          "weekend_update": "ONON remains a Short as slowing growth across key segments, weakening direct-to-consumer trends, and ongoing management uncertainty continue to challenge the durability of the premium growth and margin narrative...",
-          "source_date": "2026-05-18"
+          "weekend_update": "RBLX remains a Short Bench idea as a brief improvement in CCU data does not offset the larger deceleration in engagement, bookings guidance, and new user acquisition heading into a likely Q3 trough. CCU data briefly accelerated from ~5% to ~11% YoY on a 7-day rolling basis, driving a short- lived stock rally, but engagement has still decelerated sharply from 70%+ YoY growth earlier this year. Q1\u2019s 43% top-line growth is masking the forward slowdown, with full-year guidance cut from",
+          "source_date": "2026-05-26"
         },
         "OLLI": {
-          "lrr": 72.38,
-          "trr": 85.14,
+          "direction": "SHORT",
+          "lrr": 73.0,
+          "trr": 85.99,
           "sector": "Retail",
-          "thesis": "OLLI remains a high-conviction short as the company is underperforming despite what should be a peak operating environment, signaling structural weakness in the model. Slowing comps, declining store productivity, and overexpansion into lower-quality locations point to an inevitable trade-off between unit growth and margins. With the business likely transitioning to ex-growth and valuation still in “no man’s land,” the stock faces meaningful downside as multiple compression accelerates.",
-          "weekend_update": "OLLI remains a high-conviction short as deteriorating traffic trends, weakening new-store productivity, and overly optimistic comp expectations continue to pressure the underlying growth narrative...",
-          "source_date": "2026-05-18"
+          "analyst": "Brian McGough",
+          "thesis": "OLLI remains a high-conviction short as the company is underperforming despite what should be a peak operating environment, signaling structural weakness in the model. Slowing comps, declining store productivity, and overexpansion into lower-quality locations point to an inevitable trade-off between unit growth and margins. With the business likely transitioning to ex-growth and valuation still in \u201cno man\u2019s land,\u201d the stock faces meaningful downside as multiple compression accelerates.",
+          "weekend_update": "OLLI remains a high-conviction short as deteriorating traffic trends, weakening new-store productivity, and overly optimistic comp expectations continue to pressure the underlying growth narrative. Traffic trends continue to weaken despite one of the most favorable competitive environments the company could ask for following Big Lots\u2019 bankruptcy, reinforcing concerns that consensus same-store sales expectations remain too high Peak unit growth continues to mask a weakening operating model, with new-store productivity having fallen materially below historical norms as OLLI expands into lower-",
+          "source_date": "2026-05-26"
         },
         "HCA": {
-          "lrr": 415.0,
-          "trr": 435.0,
+          "direction": "SHORT",
+          "lrr": 380.0,
+          "trr": 434.0,
           "sector": "Healthcare",
-          "thesis": "HCA remains a short as weak MA rate relief fails to offset broader structural pressure on hospital reimbursements and payer-driven cost containment. Fundamental trends are deteriorating across key metrics—including same-store admissions, wage inflation, surgical volumes, and real-time traffic data—signaling slowing demand and margin pressure ahead...",
-          "weekend_update": "HCA remains a Short as worsening healthcare consumption trends, ACA disenrollment risk, and affordability pressure continue to weigh on utilization, bad debt, and the broader hospital operator earnings setup...",
-          "source_date": "2026-05-18"
+          "analyst": "Tom Tobin",
+          "thesis": "HCA remains a short as weak MA rate relief fails to offset broader structural pressure on hospital reimbursements and payer-driven cost containment. Fundamental trends are deteriorating across key metrics\u2014including same-store admissions, wage inflation, surgical volumes, and real-time traffic data\u2014signaling slowing demand and margin pressure ahead. With Quad 3 macro headwinds and bearish Signal Strength aligned, the setup supports continued downside as earnings expectations reset lower over the next several quarters.",
+          "weekend_update": "HCA remains a Short as weak fundamentals, deteriorating U.S. healthcare macro trends, and weak signal strength continue to pressure the hospital operator setup into the second half and 2027. JPMorgan\u2019s downgrade adds another negative data point, while the long-standing inverse relationship between the 10-year yield and HCA reinforces the risk from rising rates and a https://app.hedgeye.com/feed_items/182659-investing-ideas-newsletter-may-26-2026/print 15/18 5/26/26, 9:34 AM Hedgeye - Investing Ideas Newsletter: May 26, 2026 weak Quad factor score. Provider-side healthcare remains under pressure as high fixed-cost",
+          "source_date": "2026-05-26"
         },
         "WING": {
-          "lrr": 110.0,
-          "trr": 151.0,
+          "direction": "SHORT",
+          "lrr": 112.0,
+          "trr": 148.0,
           "sector": "Restaurants",
-          "thesis": "Wingstop (WING) remains a short as transaction data continues to deteriorate sharply, with recent credit card activity down ~25% YoY and no evidence supporting the Street’s expected same-store sales acceleration. Core initiatives—including Smart Kitchen, loyalty, and increased ad spend—are failing to drive incremental traffic, while promotions appear defensive and margins face pressure...",
-          "weekend_update": "WING remains a Best Idea Short as worsening same-store sales trends, declining unit economics, and execution issues reinforce the need for downward revisions to both near-term expectations and the long-term growth algorithm. Reported a significant comp miss (-8.7% vs...",
-          "source_date": "2026-05-18"
+          "analyst": "Bennett Cheer",
+          "thesis": "Wingstop (WING) remains a short as transaction data continues to deteriorate sharply, with recent credit card activity down ~25% YoY and no evidence supporting the Street\u2019s expected same-store sales acceleration. Core initiatives\u2014including Smart Kitchen, loyalty, and increased ad spend\u2014are failing to drive incremental traffic, while promotions appear defensive and margins face pressure. With slowing unit growth, tighter franchise requirements, and a structurally weakening demand outlook, the long-term growth algorithm is likely to reset lower, creating downside risk to both estimates and valuation.",
+          "weekend_update": "WING remains a Best Idea Short as worsening same-store sales trends, declining unit economics, and execution issues reinforce the need for downward revisions to both near-term expectations and the long-term growth algorithm. Reported a significant comp miss (-8.7% vs. -5.4% expected) and lowered same-store sales outlook, confirming demand weakness with Q1 comps tracking ~-7.7% and Q2 still negative (~-6%), well below Street expectations Smart Kitchen initiative and third-party delivery inefficiencies continue to create operational friction, limiting throughput and undermining the",
+          "source_date": "2026-05-26"
         },
-        "DGX": {
-          "lrr": 181.0,
-          "trr": 192.0,
-          "sector": "Healthcare",
-          "thesis": "DGX remains a Short as investors are overestimating the durability of recent testing volume tailwinds tied to GLP-1 adoption and direct-to-consumer healthcare trends, which may prove less incremental and more cyclical than currently priced into expectations. The company remains exposed to deteriorating healthcare consumption trends, reimbursement pressure, and broader utilization weakness, while its low-growth core diagnostics business continues to face limited pricing power and rising competitive intensity...",
-          "weekend_update": "Keith's Real-Time SELL Signal on May 12: \"Looking for Shorts on a red stock market day? Good: find the green ones! Coaching Notes: 1. I'm shorting-MORE of theHealthcare (XLV) Sector Stylehere into the close 2. One of Tobin's former Longs is now one of his Best Active Shorts (DGX) 3. Play the fade...",
-          "source_date": "2026-05-18"
+        "DPZ": {
+          "direction": "SHORT",
+          "lrr": 296.0,
+          "trr": 331.0,
+          "sector": "Restaurants",
+          "analyst": "Bennett Cheer",
+          "thesis": "DPZ remains a Short as deteriorating same-store sales, value-focused consumer pressure, and discount fatigue point to further downside. Lower-income consumers under pressure, competitors copying promotions, aggregator proliferation reducing delivery advantage uniqueness. Menu complexity risks added execution pressure into 2Q/3Q.",
+          "weekend_update": "Keith RTA SELL on May 21: 'Long SBUX vs Short DPZ \u2014 same Sector Style, one Bullish, one Bearish.' RTA BUY on May 22: generating alpha on shorts that are red while SPY signal remains constructive.",
+          "source_date": "2026-05-26"
         }
       },
       "neutral": [],
-      "source_date": "2026-05-18"
+      "source_date": "2026-05-26"
     },
     "momo": {
+      "date": "2026-05-26",
+      "mag7_return": -0.1,
+      "bullish_trend_count": 6,
+      "total_count": 9,
+      "summary": "6/9=Bullish TREND, DRAM dialed in, VIX<19=Investible Bucket",
       "MSFT": {
         "signal": "BEARISH",
-        "lrr": 400,
-        "trr": 428,
+        "lrr": null,
+        "trr": null,
         "close": null
       },
       "AAPL": {
         "signal": "BULLISH",
-        "lrr": 293,
-        "trr": 307,
+        "lrr": null,
+        "trr": null,
         "close": null
       },
       "AMZN": {
         "signal": "BULLISH",
-        "lrr": 259,
-        "trr": 274,
+        "lrr": 257.0,
+        "trr": 275.0,
         "close": null
       },
       "META": {
         "signal": "BEARISH",
-        "lrr": 593,
-        "trr": 624,
+        "lrr": null,
+        "trr": null,
         "close": null
       },
       "GOOGL": {
         "signal": "BULLISH",
-        "lrr": 380,
-        "trr": 405,
+        "lrr": null,
+        "trr": null,
         "close": null
       },
       "NFLX": {
-        "signal": "BEARISH",
-        "lrr": 84,
-        "trr": 91,
-        "close": null
-      },
-      "TSLA": {
         "signal": "BULLISH",
-        "lrr": 396,
-        "trr": 445,
+        "lrr": null,
+        "trr": null,
         "close": null
       },
       "NVDA": {
         "signal": "BULLISH",
-        "lrr": 213,
-        "trr": 234,
+        "lrr": null,
+        "trr": null,
         "close": null
       },
-      "ORCL": {
-        "signal": "BULLISH",
-        "lrr": 180,
-        "trr": 198,
+      "TSLA": {
+        "signal": "BEARISH",
+        "lrr": null,
+        "trr": null,
         "close": null
+      },
+      "DRAM": {
+        "signal": "BULLISH",
+        "lrr": 48.04,
+        "trr": 56.67,
+        "close": 52.82
       }
     },
     "btc": {
@@ -4189,7 +4621,7 @@
         "close": null
       },
       "MSTR": {
-        "signal": "NEUTRAL",
+        "signal": "BEARISH",
         "lrr": null,
         "trr": null,
         "close": null
@@ -4199,1200 +4631,1517 @@
         "lrr": null,
         "trr": null,
         "close": null
+      },
+      "HYPE": {
+        "signal": "BULLISH",
+        "lrr": null,
+        "trr": null,
+        "close": null
       }
     },
-    "btc_source_date": "2026-05-21"
+    "btc_source_date": "2026-05-26",
+    "btc_summary": "BTC=NEUTRAL, MSTR=BEARISH, HYPE+9.4%, ETFs=-$1.48B W/W \u2014 Back In Distro Mode"
   },
   "ham_deltas": {
-    "as_of_date": "2026-05-21",
-    "prev_date": "2026-05-20",
-    "weekly_from": "2026-05-14",
+    "as_of_date": "2026-05-26",
+    "prev_date": "2026-05-21",
+    "weekly_from": "2026-05-19",
     "daily_added": [
-      "BNY",
-      "GFS",
-      "JETS",
-      "KMI",
-      "LUV"
+      "DASH",
+      "MRK",
+      "NVO",
+      "RDDT",
+      "TXG",
+      "ZM"
     ],
     "daily_removed": [
-      "BK",
-      "GPN",
-      "LNG",
-      "MMM",
-      "NOW",
-      "RDDT"
+      "ACHC",
+      "CAG",
+      "GRID",
+      "PDBA"
     ],
     "weekly_added": [
       "BNY",
-      "DBJP",
       "DDS",
       "EPHE",
       "EWG",
       "EWQ",
       "GFS",
-      "GRID",
-      "HBM",
-      "HYG",
-      "IDMO",
       "IDX",
       "IDXX",
       "JETS",
-      "JNK",
       "KMI",
-      "KSS",
-      "LAMR",
       "LUV",
-      "PICK",
-      "SLX",
-      "SNAP",
-      "STT",
-      "UUP",
-      "WING"
+      "MRK",
+      "NVO",
+      "TXG",
+      "ZM"
     ],
     "weekly_removed": [
       "ABNB",
+      "ACHC",
       "ACI",
-      "ALLY",
-      "ASHR",
       "BK",
-      "BSOL",
-      "CFG",
-      "CWEN",
-      "DASH",
-      "EWJ",
-      "FG",
-      "FLCA",
-      "FLKR",
-      "FXB",
-      "FXF",
-      "GII",
+      "CAG",
       "GPN",
-      "GTBIF",
-      "LH",
+      "GRID",
       "LNG",
       "MMM",
-      "MP",
-      "MRK",
-      "MSOS",
       "NOW",
-      "PPLT",
-      "ROST",
-      "TER",
-      "VGK",
-      "XLY"
+      "PDBA"
     ],
     "daily": {
-      "ADI": {
-        "delta": -0.0008,
-        "prev_weight": 0.0179,
-        "curr_weight": 0.0171
+      "DBB": {
+        "delta": 2.39,
+        "prev_weight": 2.3,
+        "curr_weight": 4.69
       },
-      "AMAT": {
-        "delta": 0.001,
-        "prev_weight": 0.025,
-        "curr_weight": 0.026
-      },
-      "AMD": {
-        "delta": 0.0014,
-        "prev_weight": 0.019,
-        "curr_weight": 0.0204
-      },
-      "AMZN": {
-        "delta": 0.0007,
-        "prev_weight": 0.0592,
-        "curr_weight": 0.0599
-      },
-      "APD": {
-        "delta": -0.0202,
-        "prev_weight": 0.0309,
-        "curr_weight": 0.0107
-      },
-      "ARTY": {
-        "delta": 0.0016,
-        "prev_weight": 0.0421,
-        "curr_weight": 0.0437
-      },
-      "BK": {
-        "delta": -0.0121,
-        "prev_weight": 0.0121,
-        "curr_weight": 0
-      },
-      "BNY": {
-        "delta": 0.0121,
-        "prev_weight": 0,
-        "curr_weight": 0.0121
-      },
-      "C": {
-        "delta": 0.0005,
-        "prev_weight": 0.0153,
-        "curr_weight": 0.0158
-      },
-      "CASY": {
-        "delta": -0.0061,
-        "prev_weight": 0.0557,
-        "curr_weight": 0.0496
-      },
-      "CERY": {
-        "delta": -0.0026,
-        "prev_weight": 0.1432,
-        "curr_weight": 0.1406
-      },
-      "CF": {
-        "delta": -0.0006,
-        "prev_weight": 0.0144,
-        "curr_weight": 0.0138
-      },
-      "CHTR": {
-        "delta": -0.0075,
-        "prev_weight": -0.0101,
-        "curr_weight": -0.0176
-      },
-      "CSCO": {
-        "delta": -0.0007,
-        "prev_weight": 0.0343,
-        "curr_weight": 0.0336
-      },
-      "DAR": {
-        "delta": -0.0192,
-        "prev_weight": 0.034,
-        "curr_weight": 0.0148
+      "DBJP": {
+        "delta": 0.31,
+        "prev_weight": 5.49,
+        "curr_weight": 5.8
       },
       "DBMF": {
-        "delta": -0.0009,
-        "prev_weight": 0.071,
-        "curr_weight": 0.0701
-      },
-      "DDS": {
-        "delta": -0.0075,
-        "prev_weight": -0.01,
-        "curr_weight": -0.0175
-      },
-      "DRAM": {
-        "delta": 0.001,
-        "prev_weight": 0.0292,
-        "curr_weight": 0.0302
-      },
-      "EPHE": {
-        "delta": -0.005,
-        "prev_weight": -0.005,
-        "curr_weight": -0.01
-      },
-      "EWG": {
-        "delta": -0.005,
-        "prev_weight": -0.005,
-        "curr_weight": -0.01
+        "delta": 1.55,
+        "prev_weight": 7.01,
+        "curr_weight": 8.56
       },
       "FESM": {
-        "delta": 0.0007,
-        "prev_weight": 0.0397,
-        "curr_weight": 0.0404
-      },
-      "FITE": {
-        "delta": 0.0005,
-        "prev_weight": 0.0201,
-        "curr_weight": 0.0206
+        "delta": -0.43,
+        "prev_weight": 4.04,
+        "curr_weight": 3.61
       },
       "FWD": {
-        "delta": 0.0011,
-        "prev_weight": 0.0537,
-        "curr_weight": 0.0548
-      },
-      "GEV": {
-        "delta": 0.0041,
-        "prev_weight": 0.0403,
-        "curr_weight": 0.0444
-      },
-      "GFS": {
-        "delta": 0.0072,
-        "prev_weight": 0,
-        "curr_weight": 0.0072
-      },
-      "GOOGL": {
-        "delta": -0.0007,
-        "prev_weight": 0.1125,
-        "curr_weight": 0.1118
-      },
-      "GPN": {
-        "delta": 0.0099,
-        "prev_weight": -0.0099,
-        "curr_weight": 0
-      },
-      "GS": {
-        "delta": 0.0011,
-        "prev_weight": 0.0218,
-        "curr_weight": 0.0229
-      },
-      "HAL": {
-        "delta": -0.0005,
-        "prev_weight": 0.0204,
-        "curr_weight": 0.0199
+        "delta": 0.09,
+        "prev_weight": 5.48,
+        "curr_weight": 5.57
       },
       "HGER": {
-        "delta": -0.0006,
-        "prev_weight": 0.034,
-        "curr_weight": 0.0334
+        "delta": -1.83,
+        "prev_weight": 3.34,
+        "curr_weight": 1.51
+      },
+      "IBIT": {
+        "delta": -3.99,
+        "prev_weight": 5.11,
+        "curr_weight": 1.12
+      },
+      "IDMO": {
+        "delta": 2.57,
+        "prev_weight": 1.51,
+        "curr_weight": 4.08
       },
       "IHF": {
-        "delta": -0.0005,
-        "prev_weight": 0.0473,
-        "curr_weight": 0.0468
+        "delta": 0.61,
+        "prev_weight": 4.68,
+        "curr_weight": 5.29
       },
-      "INTC": {
-        "delta": 0.0026,
-        "prev_weight": 0.0373,
-        "curr_weight": 0.0399
+      "JAAA": {
+        "delta": -0.04,
+        "prev_weight": 6.0,
+        "curr_weight": 5.96
       },
-      "ITB": {
-        "delta": -0.0009,
-        "prev_weight": -0.0197,
-        "curr_weight": -0.0206
+      "LIT": {
+        "delta": -1.57,
+        "prev_weight": 2.88,
+        "curr_weight": 1.31
       },
-      "JETS": {
-        "delta": -0.0099,
-        "prev_weight": 0,
-        "curr_weight": -0.0099
+      "OIH": {
+        "delta": -0.06,
+        "prev_weight": 4.18,
+        "curr_weight": 4.12
       },
-      "KMI": {
-        "delta": 0.0099,
-        "prev_weight": 0,
-        "curr_weight": 0.0099
-      },
-      "LLY": {
-        "delta": 0.0019,
-        "prev_weight": 0.0254,
-        "curr_weight": 0.0273
-      },
-      "LNG": {
-        "delta": -0.0124,
-        "prev_weight": 0.0124,
-        "curr_weight": 0
-      },
-      "LUV": {
-        "delta": -0.0099,
-        "prev_weight": 0,
-        "curr_weight": -0.0099
-      },
-      "MAR": {
-        "delta": 0.0005,
-        "prev_weight": 0.0264,
-        "curr_weight": 0.0269
-      },
-      "MEOH": {
-        "delta": -0.0095,
-        "prev_weight": 0.0195,
-        "curr_weight": 0.01
-      },
-      "MKSI": {
-        "delta": 0.001,
-        "prev_weight": 0.0207,
-        "curr_weight": 0.0217
-      },
-      "MMM": {
-        "delta": 0.005,
-        "prev_weight": -0.005,
-        "curr_weight": 0
-      },
-      "MRVL": {
-        "delta": 0.0014,
-        "prev_weight": 0.0256,
-        "curr_weight": 0.027
-      },
-      "MUSA": {
-        "delta": 0.0062,
-        "prev_weight": 0.0208,
-        "curr_weight": 0.027
-      },
-      "NDAQ": {
-        "delta": -0.0005,
-        "prev_weight": 0.0169,
-        "curr_weight": 0.0164
-      },
-      "NOW": {
-        "delta": 0.0083,
-        "prev_weight": -0.0083,
-        "curr_weight": 0
-      },
-      "PM": {
-        "delta": -0.0006,
-        "prev_weight": 0.0274,
-        "curr_weight": 0.0268
-      },
-      "RBLX": {
-        "delta": -0.0101,
-        "prev_weight": -0.0079,
-        "curr_weight": -0.018
-      },
-      "RDDT": {
-        "delta": 0.0101,
-        "prev_weight": -0.0101,
-        "curr_weight": 0
-      },
-      "RIG": {
-        "delta": -0.0007,
-        "prev_weight": 0.0354,
-        "curr_weight": 0.0347
-      },
-      "ROKU": {
-        "delta": 0.0005,
-        "prev_weight": 0.0254,
-        "curr_weight": 0.0259
-      },
-      "SBUX": {
-        "delta": -0.003,
-        "prev_weight": 0.0383,
-        "curr_weight": 0.0353
+      "PICK": {
+        "delta": 0.22,
+        "prev_weight": 1.18,
+        "curr_weight": 1.4
       },
       "SLX": {
-        "delta": 0.0006,
-        "prev_weight": 0.0502,
-        "curr_weight": 0.0508
-      },
-      "SXT": {
-        "delta": 0.0029,
-        "prev_weight": 0.0191,
-        "curr_weight": 0.022
+        "delta": 0.03,
+        "prev_weight": 1.5,
+        "curr_weight": 1.53
       },
       "TAN": {
-        "delta": 0.0011,
-        "prev_weight": 0.0445,
-        "curr_weight": 0.0456
-      },
-      "TTWO": {
-        "delta": 0.0036,
-        "prev_weight": 0.0283,
-        "curr_weight": 0.0319
-      },
-      "TWLO": {
-        "delta": 0.0009,
-        "prev_weight": 0.0219,
-        "curr_weight": 0.0228
-      },
-      "UNH": {
-        "delta": 0.0193,
-        "prev_weight": 0.021,
-        "curr_weight": 0.0403
+        "delta": -0.82,
+        "prev_weight": 4.56,
+        "curr_weight": 3.74
       },
       "UUP": {
-        "delta": -0.0005,
-        "prev_weight": 0.0559,
-        "curr_weight": 0.0554
-      },
-      "VLO": {
-        "delta": -0.0006,
-        "prev_weight": 0.0129,
-        "curr_weight": 0.0123
-      },
-      "VTI": {
-        "delta": 0.0009,
-        "prev_weight": 0.0887,
-        "curr_weight": 0.0896
+        "delta": 3.55,
+        "prev_weight": 5.54,
+        "curr_weight": 9.09
       },
       "VTIP": {
-        "delta": -0.0007,
-        "prev_weight": 0.1125,
-        "curr_weight": 0.1118
+        "delta": -5.04,
+        "prev_weight": 11.18,
+        "curr_weight": 6.14
       },
-      "XBI": {
-        "delta": 0.0006,
-        "prev_weight": 0.0149,
-        "curr_weight": 0.0155
+      "VYM": {
+        "delta": 0.85,
+        "prev_weight": 4.12,
+        "curr_weight": 4.97
+      },
+      "XTL": {
+        "delta": 0.22,
+        "prev_weight": 6.02,
+        "curr_weight": 6.24
+      },
+      "AM": {
+        "delta": 0.01,
+        "prev_weight": 1.06,
+        "curr_weight": 1.07
+      },
+      "ARTY": {
+        "delta": 0.16,
+        "prev_weight": 4.37,
+        "curr_weight": 4.53
+      },
+      "AVEM": {
+        "delta": 0.02,
+        "prev_weight": 1.92,
+        "curr_weight": 1.94
+      },
+      "CASY": {
+        "delta": -0.03,
+        "prev_weight": 0.97,
+        "curr_weight": 0.94
+      },
+      "CERY": {
+        "delta": -0.1,
+        "prev_weight": 14.06,
+        "curr_weight": 13.96
+      },
+      "CIBR": {
+        "delta": 0.09,
+        "prev_weight": 2.67,
+        "curr_weight": 2.76
+      },
+      "DBA": {
+        "delta": -0.02,
+        "prev_weight": 1.44,
+        "curr_weight": 1.42
+      },
+      "DDS": {
+        "delta": -0.05,
+        "prev_weight": -1.0,
+        "curr_weight": -1.05
+      },
+      "DRAM": {
+        "delta": 0.08,
+        "prev_weight": 3.02,
+        "curr_weight": 3.1
+      },
+      "EPD": {
+        "delta": 0.01,
+        "prev_weight": 1.05,
+        "curr_weight": 1.06
+      },
+      "EPHE": {
+        "delta": -0.01,
+        "prev_weight": -1.0,
+        "curr_weight": -1.01
+      },
+      "EWC": {
+        "delta": 0.01,
+        "prev_weight": 1.02,
+        "curr_weight": 1.03
+      },
+      "EWW": {
+        "delta": -0.02,
+        "prev_weight": 1.54,
+        "curr_weight": 1.52
+      },
+      "EWY": {
+        "delta": 0.01,
+        "prev_weight": 1.14,
+        "curr_weight": 1.15
+      },
+      "EZPW": {
+        "delta": 0.01,
+        "prev_weight": 0.75,
+        "curr_weight": 0.76
+      },
+      "FITE": {
+        "delta": 0.08,
+        "prev_weight": 2.06,
+        "curr_weight": 2.14
+      },
+      "GEV": {
+        "delta": 0.01,
+        "prev_weight": 1.44,
+        "curr_weight": 1.45
+      },
+      "GLD": {
+        "delta": -0.02,
+        "prev_weight": 1.99,
+        "curr_weight": 1.97
+      },
+      "HCA": {
+        "delta": 0.01,
+        "prev_weight": -0.73,
+        "curr_weight": -0.72
+      },
+      "HTEC": {
+        "delta": 0.01,
+        "prev_weight": 0.76,
+        "curr_weight": 0.77
+      },
+      "IDX": {
+        "delta": 0.03,
+        "prev_weight": -0.99,
+        "curr_weight": -0.96
+      },
+      "IEF": {
+        "delta": -0.01,
+        "prev_weight": -1.43,
+        "curr_weight": -1.44
+      },
+      "IHE": {
+        "delta": 0.05,
+        "prev_weight": 2.02,
+        "curr_weight": 2.07
+      },
+      "INDA": {
+        "delta": -0.02,
+        "prev_weight": -2.0,
+        "curr_weight": -2.02
+      },
+      "INTC": {
+        "delta": 0.02,
+        "prev_weight": 1.86,
+        "curr_weight": 1.88
+      },
+      "ITB": {
+        "delta": -0.02,
+        "prev_weight": -2.06,
+        "curr_weight": -2.08
+      },
+      "JETS": {
+        "delta": -0.03,
+        "prev_weight": -0.99,
+        "curr_weight": -1.02
+      },
+      "LIN": {
+        "delta": 0.03,
+        "prev_weight": 1.68,
+        "curr_weight": 1.71
+      },
+      "META": {
+        "delta": -0.02,
+        "prev_weight": -0.98,
+        "curr_weight": -1.0
+      },
+      "MO": {
+        "delta": 0.01,
+        "prev_weight": 1.6,
+        "curr_weight": 1.61
+      },
+      "NORW": {
+        "delta": -0.01,
+        "prev_weight": 0.99,
+        "curr_weight": 0.98
+      },
+      "PAVE": {
+        "delta": 0.01,
+        "prev_weight": 1.49,
+        "curr_weight": 1.5
+      },
+      "RBLX": {
+        "delta": -0.06,
+        "prev_weight": -0.99,
+        "curr_weight": -1.05
+      },
+      "RIG": {
+        "delta": 0.19,
+        "prev_weight": 1.77,
+        "curr_weight": 1.96
+      },
+      "ROBO": {
+        "delta": 0.06,
+        "prev_weight": 1.49,
+        "curr_weight": 1.55
+      },
+      "SOYB": {
+        "delta": -0.01,
+        "prev_weight": 1.46,
+        "curr_weight": 1.45
+      },
+      "SWBI": {
+        "delta": 0.03,
+        "prev_weight": 1.01,
+        "curr_weight": 1.04
+      },
+      "SYY": {
+        "delta": -0.02,
+        "prev_weight": -0.96,
+        "curr_weight": -0.98
+      },
+      "TLT": {
+        "delta": -0.03,
+        "prev_weight": -2.39,
+        "curr_weight": -2.42
+      },
+      "VTI": {
+        "delta": 0.06,
+        "prev_weight": 8.96,
+        "curr_weight": 9.02
+      },
+      "WEAT": {
+        "delta": -0.02,
+        "prev_weight": 1.49,
+        "curr_weight": 1.47
+      },
+      "WELL": {
+        "delta": -0.01,
+        "prev_weight": 0.99,
+        "curr_weight": 0.98
+      },
+      "WMT": {
+        "delta": -0.14,
+        "prev_weight": 1.72,
+        "curr_weight": 1.58
+      },
+      "XAR": {
+        "delta": 0.03,
+        "prev_weight": 1.92,
+        "curr_weight": 1.95
       },
       "XLE": {
-        "delta": -0.0009,
-        "prev_weight": 0.0318,
-        "curr_weight": 0.0309
+        "delta": -0.01,
+        "prev_weight": 3.09,
+        "curr_weight": 3.08
+      },
+      "XLI": {
+        "delta": 0.01,
+        "prev_weight": 0.96,
+        "curr_weight": 0.97
+      },
+      "XTEN": {
+        "delta": -0.01,
+        "prev_weight": -2.41,
+        "curr_weight": -2.42
+      },
+      "ZROZ": {
+        "delta": -0.04,
+        "prev_weight": -2.35,
+        "curr_weight": -2.39
+      },
+      "AAPL": {
+        "delta": 0.15,
+        "prev_weight": 9.04,
+        "curr_weight": 9.19
+      },
+      "AFRM": {
+        "delta": -0.04,
+        "prev_weight": 1.51,
+        "curr_weight": 1.47
+      },
+      "AMAT": {
+        "delta": -1.01,
+        "prev_weight": 2.6,
+        "curr_weight": 1.59
+      },
+      "BALL": {
+        "delta": 0.01,
+        "prev_weight": -0.95,
+        "curr_weight": -0.94
+      },
+      "BKNG": {
+        "delta": -0.03,
+        "prev_weight": -0.99,
+        "curr_weight": -1.02
+      },
+      "CDNS": {
+        "delta": 0.1,
+        "prev_weight": 1.44,
+        "curr_weight": 1.54
+      },
+      "CHRD": {
+        "delta": -0.01,
+        "prev_weight": 1.03,
+        "curr_weight": 1.02
+      },
+      "CRCL": {
+        "delta": 0.03,
+        "prev_weight": 1.59,
+        "curr_weight": 1.62
+      },
+      "CSCO": {
+        "delta": 0.03,
+        "prev_weight": 0.68,
+        "curr_weight": 0.71
+      },
+      "CSX": {
+        "delta": -0.03,
+        "prev_weight": 1.48,
+        "curr_weight": 1.45
+      },
+      "CVI": {
+        "delta": -0.03,
+        "prev_weight": 0.98,
+        "curr_weight": 0.95
+      },
+      "CZR": {
+        "delta": 0.02,
+        "prev_weight": 0.73,
+        "curr_weight": 0.75
+      },
+      "DAR": {
+        "delta": -0.01,
+        "prev_weight": 1.48,
+        "curr_weight": 1.47
+      },
+      "DPZ": {
+        "delta": -0.01,
+        "prev_weight": -0.95,
+        "curr_weight": -0.96
+      },
+      "ENB": {
+        "delta": 0.05,
+        "prev_weight": 2.1,
+        "curr_weight": 2.15
+      },
+      "FLO": {
+        "delta": 0.43,
+        "prev_weight": -1.0,
+        "curr_weight": -0.57
+      },
+      "FLUT": {
+        "delta": -0.01,
+        "prev_weight": -0.93,
+        "curr_weight": -0.94
+      },
+      "GLASF": {
+        "delta": 0.02,
+        "prev_weight": 1.54,
+        "curr_weight": 1.56
+      },
+      "GOOGL": {
+        "delta": -0.17,
+        "prev_weight": 8.12,
+        "curr_weight": 7.95
+      },
+      "IDXX": {
+        "delta": -0.02,
+        "prev_weight": -1.0,
+        "curr_weight": -1.02
+      },
+      "JAZZ": {
+        "delta": 0.01,
+        "prev_weight": 2.6,
+        "curr_weight": 2.61
+      },
+      "JBHT": {
+        "delta": -0.03,
+        "prev_weight": 2.12,
+        "curr_weight": 2.09
+      },
+      "KSS": {
+        "delta": -0.08,
+        "prev_weight": -1.05,
+        "curr_weight": -1.13
+      },
+      "LAMR": {
+        "delta": 0.02,
+        "prev_weight": 1.54,
+        "curr_weight": 1.56
+      },
+      "LCID": {
+        "delta": -0.03,
+        "prev_weight": -0.89,
+        "curr_weight": -0.92
+      },
+      "LUV": {
+        "delta": -0.03,
+        "prev_weight": -0.99,
+        "curr_weight": -1.02
+      },
+      "MKSI": {
+        "delta": 0.07,
+        "prev_weight": 2.17,
+        "curr_weight": 2.24
+      },
+      "MPC": {
+        "delta": -0.02,
+        "prev_weight": 1.55,
+        "curr_weight": 1.53
+      },
+      "MRVL": {
+        "delta": 0.04,
+        "prev_weight": 0.93,
+        "curr_weight": 0.97
+      },
+      "MUSA": {
+        "delta": 1.28,
+        "prev_weight": 0.69,
+        "curr_weight": 1.97
+      },
+      "NKE": {
+        "delta": -0.01,
+        "prev_weight": -0.99,
+        "curr_weight": -1.0
+      },
+      "NOV": {
+        "delta": -0.02,
+        "prev_weight": 1.96,
+        "curr_weight": 1.94
+      },
+      "ONON": {
+        "delta": -0.05,
+        "prev_weight": -1.01,
+        "curr_weight": -1.06
+      },
+      "OUT": {
+        "delta": 0.02,
+        "prev_weight": 1.01,
+        "curr_weight": 1.03
+      },
+      "PLAY": {
+        "delta": -0.06,
+        "prev_weight": -0.93,
+        "curr_weight": -0.99
+      },
+      "ROKU": {
+        "delta": 0.04,
+        "prev_weight": 2.59,
+        "curr_weight": 2.63
+      },
+      "RSI": {
+        "delta": -0.03,
+        "prev_weight": 1.51,
+        "curr_weight": 1.48
+      },
+      "SBUX": {
+        "delta": -0.05,
+        "prev_weight": 1.55,
+        "curr_weight": 1.5
+      },
+      "SMPL": {
+        "delta": -0.07,
+        "prev_weight": -0.97,
+        "curr_weight": -1.04
+      },
+      "SNAP": {
+        "delta": -0.02,
+        "prev_weight": -1.03,
+        "curr_weight": -1.05
+      },
+      "SPHR": {
+        "delta": -0.05,
+        "prev_weight": 1.48,
+        "curr_weight": 1.43
+      },
+      "SXT": {
+        "delta": -1.19,
+        "prev_weight": 2.2,
+        "curr_weight": 1.01
+      },
+      "TAP": {
+        "delta": 0.01,
+        "prev_weight": -0.95,
+        "curr_weight": -0.94
+      },
+      "TSN": {
+        "delta": 0.46,
+        "prev_weight": 1.5,
+        "curr_weight": 1.96
+      },
+      "TTWO": {
+        "delta": -0.04,
+        "prev_weight": 0.95,
+        "curr_weight": 0.91
+      },
+      "TWLO": {
+        "delta": -0.01,
+        "prev_weight": 0.8,
+        "curr_weight": 0.79
+      },
+      "UNH": {
+        "delta": 0.02,
+        "prev_weight": 2.04,
+        "curr_weight": 2.06
+      },
+      "URI": {
+        "delta": -0.01,
+        "prev_weight": 1.46,
+        "curr_weight": 1.45
+      },
+      "VIK": {
+        "delta": 0.01,
+        "prev_weight": 1.0,
+        "curr_weight": 1.01
+      },
+      "WDC": {
+        "delta": 0.1,
+        "prev_weight": 1.76,
+        "curr_weight": 1.86
+      },
+      "WING": {
+        "delta": -0.1,
+        "prev_weight": -1.01,
+        "curr_weight": -1.11
+      },
+      "XYZ": {
+        "delta": -1.02,
+        "prev_weight": 2.0,
+        "curr_weight": 0.98
+      },
+      "ADI": {
+        "delta": -0.02,
+        "prev_weight": 1.71,
+        "curr_weight": 1.69
+      },
+      "AMD": {
+        "delta": 0.08,
+        "prev_weight": 2.04,
+        "curr_weight": 2.12
+      },
+      "ATI": {
+        "delta": 0.05,
+        "prev_weight": 1.06,
+        "curr_weight": 1.11
+      },
+      "AVGO": {
+        "delta": -0.04,
+        "prev_weight": 3.0,
+        "curr_weight": 2.96
+      },
+      "BNY": {
+        "delta": 0.01,
+        "prev_weight": 1.21,
+        "curr_weight": 1.22
+      },
+      "C": {
+        "delta": -0.01,
+        "prev_weight": 1.58,
+        "curr_weight": 1.57
+      },
+      "CARR": {
+        "delta": -1.36,
+        "prev_weight": 1.37,
+        "curr_weight": 0.01
+      },
+      "CBOE": {
+        "delta": -0.03,
+        "prev_weight": 2.25,
+        "curr_weight": 2.22
+      },
+      "CF": {
+        "delta": -0.03,
+        "prev_weight": 1.38,
+        "curr_weight": 1.35
+      },
+      "CIEN": {
+        "delta": 0.04,
+        "prev_weight": 0.97,
+        "curr_weight": 1.01
+      },
+      "COHR": {
+        "delta": 0.03,
+        "prev_weight": 0.5,
+        "curr_weight": 0.53
+      },
+      "GFS": {
+        "delta": 0.15,
+        "prev_weight": 0.72,
+        "curr_weight": 0.87
+      },
+      "GLW": {
+        "delta": 0.05,
+        "prev_weight": 0.71,
+        "curr_weight": 0.76
+      },
+      "GS": {
+        "delta": 0.02,
+        "prev_weight": 2.29,
+        "curr_weight": 2.31
+      },
+      "HAL": {
+        "delta": -0.05,
+        "prev_weight": 1.99,
+        "curr_weight": 1.94
+      },
+      "KLAC": {
+        "delta": 0.02,
+        "prev_weight": 1.04,
+        "curr_weight": 1.06
+      },
+      "LLY": {
+        "delta": 0.11,
+        "prev_weight": 2.73,
+        "curr_weight": 2.84
+      },
+      "NDAQ": {
+        "delta": 0.01,
+        "prev_weight": 1.64,
+        "curr_weight": 1.65
+      },
+      "NVDA": {
+        "delta": -0.4,
+        "prev_weight": 9.56,
+        "curr_weight": 9.16
+      },
+      "ORCL": {
+        "delta": 0.01,
+        "prev_weight": 1.13,
+        "curr_weight": 1.14
+      },
+      "SNDK": {
+        "delta": 0.06,
+        "prev_weight": 1.04,
+        "curr_weight": 1.1
+      },
+      "STX": {
+        "delta": 0.08,
+        "prev_weight": 1.02,
+        "curr_weight": 1.1
+      },
+      "V": {
+        "delta": -0.02,
+        "prev_weight": 2.14,
+        "curr_weight": 2.12
+      },
+      "VLO": {
+        "delta": -0.04,
+        "prev_weight": 1.23,
+        "curr_weight": 1.19
       }
     },
     "weekly": {
-      "AAPL": {
-        "delta": 0.0025,
-        "prev_weight": 0.1185,
-        "curr_weight": 0.121
-      },
-      "ABNB": {
-        "delta": -0.0095,
-        "prev_weight": 0.0095,
-        "curr_weight": 0
-      },
-      "ACI": {
-        "delta": 0.0098,
-        "prev_weight": -0.0098,
-        "curr_weight": 0
-      },
-      "ADI": {
-        "delta": -0.0069,
-        "prev_weight": 0.024,
-        "curr_weight": 0.0171
-      },
-      "ADM": {
-        "delta": -0.0009,
-        "prev_weight": 0.0168,
-        "curr_weight": 0.0159
-      },
-      "AFRM": {
-        "delta": 0.0009,
-        "prev_weight": 0.0142,
-        "curr_weight": 0.0151
-      },
-      "ALLY": {
-        "delta": -0.0144,
-        "prev_weight": 0.0144,
-        "curr_weight": 0
-      },
-      "AMAT": {
-        "delta": 0.0067,
-        "prev_weight": 0.0193,
-        "curr_weight": 0.026
-      },
-      "AMZN": {
-        "delta": -0.0006,
-        "prev_weight": 0.0605,
-        "curr_weight": 0.0599
-      },
-      "APD": {
-        "delta": -0.0319,
-        "prev_weight": 0.0426,
-        "curr_weight": 0.0107
-      },
-      "ASHR": {
-        "delta": -0.0208,
-        "prev_weight": 0.0208,
-        "curr_weight": 0
-      },
-      "ATI": {
-        "delta": -0.0007,
-        "prev_weight": 0.0113,
-        "curr_weight": 0.0106
-      },
-      "AVEM": {
-        "delta": -0.0449,
-        "prev_weight": 0.0641,
-        "curr_weight": 0.0192
-      },
-      "AVGO": {
-        "delta": -0.0023,
-        "prev_weight": 0.0323,
-        "curr_weight": 0.03
-      },
-      "BK": {
-        "delta": -0.0118,
-        "prev_weight": 0.0118,
-        "curr_weight": 0
-      },
-      "BNY": {
-        "delta": 0.0121,
-        "prev_weight": 0,
-        "curr_weight": 0.0121
-      },
-      "BRBR": {
-        "delta": -0.0014,
-        "prev_weight": -0.0167,
-        "curr_weight": -0.0181
-      },
-      "BSOL": {
-        "delta": -0.0093,
-        "prev_weight": 0.0093,
-        "curr_weight": 0
-      },
-      "CASY": {
-        "delta": 0.0006,
-        "prev_weight": 0.049,
-        "curr_weight": 0.0496
-      },
-      "CAT": {
-        "delta": -0.001,
-        "prev_weight": 0.0372,
-        "curr_weight": 0.0362
-      },
-      "CAVA": {
-        "delta": -0.0016,
-        "prev_weight": 0.0184,
-        "curr_weight": 0.0168
-      },
-      "CERY": {
-        "delta": 0.0029,
-        "prev_weight": 0.1377,
-        "curr_weight": 0.1406
-      },
-      "CFG": {
-        "delta": -0.0143,
-        "prev_weight": 0.0143,
-        "curr_weight": 0
-      },
-      "CHRD": {
-        "delta": -0.0098,
-        "prev_weight": 0.0201,
-        "curr_weight": 0.0103
-      },
-      "CHTR": {
-        "delta": -0.0094,
-        "prev_weight": -0.0082,
-        "curr_weight": -0.0176
-      },
-      "CIBR": {
-        "delta": 0.0022,
-        "prev_weight": 0.0245,
-        "curr_weight": 0.0267
-      },
-      "COHR": {
-        "delta": -0.0027,
-        "prev_weight": 0.0077,
-        "curr_weight": 0.005
-      },
-      "CRCL": {
-        "delta": -0.002,
-        "prev_weight": 0.0179,
-        "curr_weight": 0.0159
-      },
-      "CSCO": {
-        "delta": -0.001,
-        "prev_weight": 0.0346,
-        "curr_weight": 0.0336
-      },
-      "CSX": {
-        "delta": 0.0019,
-        "prev_weight": 0.0424,
-        "curr_weight": 0.0443
-      },
-      "CWEN": {
-        "delta": -0.0064,
-        "prev_weight": 0.0064,
-        "curr_weight": 0
-      },
-      "CZR": {
-        "delta": -0.004,
-        "prev_weight": 0.0263,
-        "curr_weight": 0.0223
-      },
-      "DAR": {
-        "delta": -0.0182,
-        "prev_weight": 0.033,
-        "curr_weight": 0.0148
-      },
-      "DASH": {
-        "delta": 0.0096,
-        "prev_weight": -0.0096,
-        "curr_weight": 0
-      },
       "DBB": {
-        "delta": -0.0105,
-        "prev_weight": 0.0335,
-        "curr_weight": 0.023
+        "delta": 2.42,
+        "prev_weight": 2.27,
+        "curr_weight": 4.69
       },
       "DBJP": {
-        "delta": 0.0549,
-        "prev_weight": 0,
-        "curr_weight": 0.0549
+        "delta": 0.32,
+        "prev_weight": 5.48,
+        "curr_weight": 5.8
       },
       "DBMF": {
-        "delta": 0.0401,
-        "prev_weight": 0.03,
-        "curr_weight": 0.0701
-      },
-      "DDS": {
-        "delta": -0.0175,
-        "prev_weight": 0,
-        "curr_weight": -0.0175
-      },
-      "DRAM": {
-        "delta": 0.0026,
-        "prev_weight": 0.0276,
-        "curr_weight": 0.0302
-      },
-      "ENB": {
-        "delta": 0.0008,
-        "prev_weight": 0.0202,
-        "curr_weight": 0.021
-      },
-      "EPHE": {
-        "delta": -0.01,
-        "prev_weight": 0,
-        "curr_weight": -0.01
-      },
-      "EWG": {
-        "delta": -0.01,
-        "prev_weight": 0,
-        "curr_weight": -0.01
-      },
-      "EWJ": {
-        "delta": -0.0098,
-        "prev_weight": 0.0098,
-        "curr_weight": 0
-      },
-      "EWQ": {
-        "delta": -0.0051,
-        "prev_weight": 0,
-        "curr_weight": -0.0051
-      },
-      "FCFS": {
-        "delta": 0.0008,
-        "prev_weight": 0.0409,
-        "curr_weight": 0.0417
+        "delta": 2.55,
+        "prev_weight": 6.01,
+        "curr_weight": 8.56
       },
       "FESM": {
-        "delta": -0.0178,
-        "prev_weight": 0.0582,
-        "curr_weight": 0.0404
-      },
-      "FG": {
-        "delta": 0.0097,
-        "prev_weight": -0.0097,
-        "curr_weight": 0
-      },
-      "FITE": {
-        "delta": 0.001,
-        "prev_weight": 0.0196,
-        "curr_weight": 0.0206
-      },
-      "FLCA": {
-        "delta": -0.0101,
-        "prev_weight": 0.0101,
-        "curr_weight": 0
-      },
-      "FLKR": {
-        "delta": -0.0204,
-        "prev_weight": 0.0204,
-        "curr_weight": 0
-      },
-      "FLO": {
-        "delta": -0.0019,
-        "prev_weight": -0.0081,
-        "curr_weight": -0.01
+        "delta": -0.37,
+        "prev_weight": 3.98,
+        "curr_weight": 3.61
       },
       "FWD": {
-        "delta": 0.007,
-        "prev_weight": 0.0478,
-        "curr_weight": 0.0548
-      },
-      "FXB": {
-        "delta": -0.026,
-        "prev_weight": 0.026,
-        "curr_weight": 0
-      },
-      "FXF": {
-        "delta": -0.025,
-        "prev_weight": 0.025,
-        "curr_weight": 0
-      },
-      "GEV": {
-        "delta": -0.0126,
-        "prev_weight": 0.057,
-        "curr_weight": 0.0444
-      },
-      "GFS": {
-        "delta": 0.0072,
-        "prev_weight": 0,
-        "curr_weight": 0.0072
-      },
-      "GII": {
-        "delta": -0.0282,
-        "prev_weight": 0.0282,
-        "curr_weight": 0
-      },
-      "GLASF": {
-        "delta": 0.0017,
-        "prev_weight": 0.0137,
-        "curr_weight": 0.0154
-      },
-      "GLD": {
-        "delta": -0.0188,
-        "prev_weight": 0.0387,
-        "curr_weight": 0.0199
-      },
-      "GLW": {
-        "delta": -0.0033,
-        "prev_weight": 0.0104,
-        "curr_weight": 0.0071
-      },
-      "GOOGL": {
-        "delta": -0.003,
-        "prev_weight": 0.1148,
-        "curr_weight": 0.1118
-      },
-      "GPN": {
-        "delta": 0.0096,
-        "prev_weight": -0.0096,
-        "curr_weight": 0
-      },
-      "GRID": {
-        "delta": 0.0168,
-        "prev_weight": 0,
-        "curr_weight": 0.0168
-      },
-      "GS": {
-        "delta": 0.0008,
-        "prev_weight": 0.0221,
-        "curr_weight": 0.0229
-      },
-      "GTBIF": {
-        "delta": -0.0093,
-        "prev_weight": 0.0093,
-        "curr_weight": 0
-      },
-      "HAL": {
-        "delta": 0.0008,
-        "prev_weight": 0.0191,
-        "curr_weight": 0.0199
-      },
-      "HBM": {
-        "delta": 0.0148,
-        "prev_weight": 0,
-        "curr_weight": 0.0148
-      },
-      "HCA": {
-        "delta": 0.0101,
-        "prev_weight": -0.0174,
-        "curr_weight": -0.0073
+        "delta": 0.17,
+        "prev_weight": 5.4,
+        "curr_weight": 5.57
       },
       "HGER": {
-        "delta": -0.0181,
-        "prev_weight": 0.0515,
-        "curr_weight": 0.0334
-      },
-      "HTEC": {
-        "delta": -0.002,
-        "prev_weight": 0.0096,
-        "curr_weight": 0.0076
-      },
-      "HYG": {
-        "delta": -0.01,
-        "prev_weight": 0,
-        "curr_weight": -0.01
+        "delta": -0.97,
+        "prev_weight": 2.48,
+        "curr_weight": 1.51
       },
       "IBIT": {
-        "delta": 0.0027,
-        "prev_weight": 0.0484,
-        "curr_weight": 0.0511
+        "delta": -3.94,
+        "prev_weight": 5.06,
+        "curr_weight": 1.12
       },
       "IDMO": {
-        "delta": 0.0151,
-        "prev_weight": 0,
-        "curr_weight": 0.0151
-      },
-      "IDX": {
-        "delta": -0.0099,
-        "prev_weight": 0,
-        "curr_weight": -0.0099
-      },
-      "IDXX": {
-        "delta": -0.01,
-        "prev_weight": 0,
-        "curr_weight": -0.01
-      },
-      "IHE": {
-        "delta": 0.0104,
-        "prev_weight": 0.0098,
-        "curr_weight": 0.0202
+        "delta": 2.58,
+        "prev_weight": 1.5,
+        "curr_weight": 4.08
       },
       "IHF": {
-        "delta": -0.0007,
-        "prev_weight": 0.0475,
-        "curr_weight": 0.0468
-      },
-      "INDA": {
-        "delta": -0.0021,
-        "prev_weight": -0.0179,
-        "curr_weight": -0.02
-      },
-      "ITB": {
-        "delta": -0.0021,
-        "prev_weight": -0.0185,
-        "curr_weight": -0.0206
+        "delta": 0.56,
+        "prev_weight": 4.73,
+        "curr_weight": 5.29
       },
       "JAAA": {
-        "delta": 0.0031,
-        "prev_weight": 0.0569,
-        "curr_weight": 0.06
-      },
-      "JAZZ": {
-        "delta": 0.0009,
-        "prev_weight": 0.0251,
-        "curr_weight": 0.026
-      },
-      "JBHT": {
-        "delta": 0.0022,
-        "prev_weight": 0.019,
-        "curr_weight": 0.0212
-      },
-      "JETS": {
-        "delta": -0.0099,
-        "prev_weight": 0,
-        "curr_weight": -0.0099
-      },
-      "JNK": {
-        "delta": -0.01,
-        "prev_weight": 0,
-        "curr_weight": -0.01
-      },
-      "KLAC": {
-        "delta": -0.0032,
-        "prev_weight": 0.0136,
-        "curr_weight": 0.0104
-      },
-      "KMI": {
-        "delta": 0.0099,
-        "prev_weight": 0,
-        "curr_weight": 0.0099
-      },
-      "KSS": {
-        "delta": -0.0105,
-        "prev_weight": 0,
-        "curr_weight": -0.0105
-      },
-      "LAMR": {
-        "delta": 0.0154,
-        "prev_weight": 0,
-        "curr_weight": 0.0154
-      },
-      "LCID": {
-        "delta": 0.0011,
-        "prev_weight": -0.01,
-        "curr_weight": -0.0089
-      },
-      "LH": {
-        "delta": 0.0097,
-        "prev_weight": -0.0097,
-        "curr_weight": 0
-      },
-      "LIN": {
-        "delta": 0.0027,
-        "prev_weight": 0.0237,
-        "curr_weight": 0.0264
+        "delta": -0.05,
+        "prev_weight": 6.01,
+        "curr_weight": 5.96
       },
       "LIT": {
-        "delta": -0.017,
-        "prev_weight": 0.0458,
-        "curr_weight": 0.0288
-      },
-      "LLY": {
-        "delta": 0.0123,
-        "prev_weight": 0.015,
-        "curr_weight": 0.0273
-      },
-      "LNG": {
-        "delta": -0.0167,
-        "prev_weight": 0.0167,
-        "curr_weight": 0
-      },
-      "LUV": {
-        "delta": -0.0099,
-        "prev_weight": 0,
-        "curr_weight": -0.0099
-      },
-      "MAR": {
-        "delta": 0.0043,
-        "prev_weight": 0.0226,
-        "curr_weight": 0.0269
-      },
-      "MEOH": {
-        "delta": -0.0097,
-        "prev_weight": 0.0197,
-        "curr_weight": 0.01
-      },
-      "MMM": {
-        "delta": 0.0101,
-        "prev_weight": -0.0101,
-        "curr_weight": 0
-      },
-      "MO": {
-        "delta": 0.0006,
-        "prev_weight": 0.0154,
-        "curr_weight": 0.016
-      },
-      "MP": {
-        "delta": -0.009,
-        "prev_weight": 0.009,
-        "curr_weight": 0
-      },
-      "MPC": {
-        "delta": 0.0006,
-        "prev_weight": 0.0149,
-        "curr_weight": 0.0155
-      },
-      "MRK": {
-        "delta": -0.0142,
-        "prev_weight": 0.0142,
-        "curr_weight": 0
-      },
-      "MRVL": {
-        "delta": 0.0016,
-        "prev_weight": 0.0254,
-        "curr_weight": 0.027
-      },
-      "MSOS": {
-        "delta": -0.002,
-        "prev_weight": 0.002,
-        "curr_weight": 0
-      },
-      "MUSA": {
-        "delta": 0.0058,
-        "prev_weight": 0.0212,
-        "curr_weight": 0.027
-      },
-      "NKE": {
-        "delta": -0.0005,
-        "prev_weight": -0.0094,
-        "curr_weight": -0.0099
-      },
-      "NOV": {
-        "delta": 0.0007,
-        "prev_weight": 0.0189,
-        "curr_weight": 0.0196
-      },
-      "NOW": {
-        "delta": 0.0163,
-        "prev_weight": -0.0163,
-        "curr_weight": 0
+        "delta": -1.56,
+        "prev_weight": 2.87,
+        "curr_weight": 1.31
       },
       "OIH": {
-        "delta": 0.0152,
-        "prev_weight": 0.0624,
-        "curr_weight": 0.0776
-      },
-      "ONON": {
-        "delta": -0.0033,
-        "prev_weight": -0.0068,
-        "curr_weight": -0.0101
-      },
-      "ORCL": {
-        "delta": -0.0039,
-        "prev_weight": 0.0152,
-        "curr_weight": 0.0113
-      },
-      "OUT": {
-        "delta": 0.0008,
-        "prev_weight": 0.0249,
-        "curr_weight": 0.0257
-      },
-      "PAVE": {
-        "delta": -0.0282,
-        "prev_weight": 0.0431,
-        "curr_weight": 0.0149
+        "delta": -0.1,
+        "prev_weight": 4.22,
+        "curr_weight": 4.12
       },
       "PICK": {
-        "delta": 0.0118,
-        "prev_weight": 0,
-        "curr_weight": 0.0118
-      },
-      "PLAY": {
-        "delta": -0.001,
-        "prev_weight": -0.0083,
-        "curr_weight": -0.0093
-      },
-      "PM": {
-        "delta": 0.0146,
-        "prev_weight": 0.0122,
-        "curr_weight": 0.0268
-      },
-      "PPLT": {
-        "delta": -0.0102,
-        "prev_weight": 0.0102,
-        "curr_weight": 0
-      },
-      "RBLX": {
-        "delta": -0.0007,
-        "prev_weight": -0.0173,
-        "curr_weight": -0.018
-      },
-      "RIG": {
-        "delta": 0.0036,
-        "prev_weight": 0.0311,
-        "curr_weight": 0.0347
-      },
-      "RIO": {
-        "delta": -0.0009,
-        "prev_weight": 0.0133,
-        "curr_weight": 0.0124
-      },
-      "ROBO": {
-        "delta": -0.0057,
-        "prev_weight": 0.0206,
-        "curr_weight": 0.0149
-      },
-      "ROST": {
-        "delta": -0.0148,
-        "prev_weight": 0.0148,
-        "curr_weight": 0
-      },
-      "RSI": {
-        "delta": -0.0092,
-        "prev_weight": 0.0243,
-        "curr_weight": 0.0151
-      },
-      "SBUX": {
-        "delta": -0.0022,
-        "prev_weight": 0.0375,
-        "curr_weight": 0.0353
+        "delta": 0.22,
+        "prev_weight": 1.18,
+        "curr_weight": 1.4
       },
       "SLX": {
-        "delta": 0.0508,
-        "prev_weight": 0,
-        "curr_weight": 0.0508
-      },
-      "SMPL": {
-        "delta": -0.002,
-        "prev_weight": -0.0077,
-        "curr_weight": -0.0097
-      },
-      "SNAP": {
-        "delta": -0.0103,
-        "prev_weight": 0,
-        "curr_weight": -0.0103
-      },
-      "SPHR": {
-        "delta": -0.0044,
-        "prev_weight": 0.0192,
-        "curr_weight": 0.0148
-      },
-      "STT": {
-        "delta": 0.0153,
-        "prev_weight": 0,
-        "curr_weight": 0.0153
-      },
-      "STX": {
-        "delta": -0.0034,
-        "prev_weight": 0.0136,
-        "curr_weight": 0.0102
-      },
-      "SWBI": {
-        "delta": 0.0007,
-        "prev_weight": 0.0167,
-        "curr_weight": 0.0174
-      },
-      "SXT": {
-        "delta": 0.0075,
-        "prev_weight": 0.0145,
-        "curr_weight": 0.022
-      },
-      "SYY": {
-        "delta": -0.0006,
-        "prev_weight": -0.0167,
-        "curr_weight": -0.0173
+        "delta": 0.01,
+        "prev_weight": 1.52,
+        "curr_weight": 1.53
       },
       "TAN": {
-        "delta": 0.024,
-        "prev_weight": 0.0216,
-        "curr_weight": 0.0456
-      },
-      "TER": {
-        "delta": -0.0079,
-        "prev_weight": 0.0079,
-        "curr_weight": 0
-      },
-      "TSN": {
-        "delta": -0.0049,
-        "prev_weight": 0.0199,
-        "curr_weight": 0.015
-      },
-      "TTWO": {
-        "delta": 0.0054,
-        "prev_weight": 0.0265,
-        "curr_weight": 0.0319
-      },
-      "TWLO": {
-        "delta": 0.0166,
-        "prev_weight": 0.0062,
-        "curr_weight": 0.0228
-      },
-      "ULS": {
-        "delta": 0.0073,
-        "prev_weight": 0.0286,
-        "curr_weight": 0.0359
-      },
-      "UNH": {
-        "delta": 0.0191,
-        "prev_weight": 0.0212,
-        "curr_weight": 0.0403
-      },
-      "URI": {
-        "delta": 0.002,
-        "prev_weight": 0.0374,
-        "curr_weight": 0.0394
-      },
-      "USPH": {
-        "delta": -0.0007,
-        "prev_weight": -0.0173,
-        "curr_weight": -0.018
+        "delta": -0.8,
+        "prev_weight": 4.54,
+        "curr_weight": 3.74
       },
       "UUP": {
-        "delta": 0.0554,
-        "prev_weight": 0,
-        "curr_weight": 0.0554
-      },
-      "V": {
-        "delta": 0.0035,
-        "prev_weight": 0.0179,
-        "curr_weight": 0.0214
-      },
-      "VGK": {
-        "delta": -0.0121,
-        "prev_weight": 0.0121,
-        "curr_weight": 0
-      },
-      "VIK": {
-        "delta": 0.0091,
-        "prev_weight": 0.0213,
-        "curr_weight": 0.0304
-      },
-      "VLO": {
-        "delta": 0.0006,
-        "prev_weight": 0.0117,
-        "curr_weight": 0.0123
-      },
-      "VPL": {
-        "delta": -0.008,
-        "prev_weight": 0.0231,
-        "curr_weight": 0.0151
-      },
-      "VTI": {
-        "delta": 0.0008,
-        "prev_weight": 0.0888,
-        "curr_weight": 0.0896
+        "delta": 3.55,
+        "prev_weight": 5.54,
+        "curr_weight": 9.09
       },
       "VTIP": {
-        "delta": 0.026,
-        "prev_weight": 0.0858,
-        "curr_weight": 0.1118
+        "delta": -5.07,
+        "prev_weight": 11.21,
+        "curr_weight": 6.14
       },
       "VYM": {
-        "delta": 0.0195,
-        "prev_weight": 0.0217,
-        "curr_weight": 0.0412
-      },
-      "WDC": {
-        "delta": -0.0012,
-        "prev_weight": 0.0188,
-        "curr_weight": 0.0176
-      },
-      "WING": {
-        "delta": -0.0101,
-        "prev_weight": 0,
-        "curr_weight": -0.0101
-      },
-      "XBI": {
-        "delta": -0.003,
-        "prev_weight": 0.0185,
-        "curr_weight": 0.0155
-      },
-      "XLE": {
-        "delta": 0.0014,
-        "prev_weight": 0.0295,
-        "curr_weight": 0.0309
-      },
-      "XLY": {
-        "delta": -0.0097,
-        "prev_weight": 0.0097,
-        "curr_weight": 0
+        "delta": 0.85,
+        "prev_weight": 4.12,
+        "curr_weight": 4.97
       },
       "XTL": {
-        "delta": 0.0501,
-        "prev_weight": 0.0101,
-        "curr_weight": 0.0602
+        "delta": 0.21,
+        "prev_weight": 6.03,
+        "curr_weight": 6.24
+      },
+      "ADM": {
+        "delta": -0.07,
+        "prev_weight": 1.66,
+        "curr_weight": 1.59
+      },
+      "APD": {
+        "delta": -0.94,
+        "prev_weight": 2.01,
+        "curr_weight": 1.07
+      },
+      "ARTY": {
+        "delta": 0.27,
+        "prev_weight": 4.26,
+        "curr_weight": 4.53
+      },
+      "AVEM": {
+        "delta": 0.03,
+        "prev_weight": 1.91,
+        "curr_weight": 1.94
+      },
+      "BRBR": {
+        "delta": 0.03,
+        "prev_weight": -1.0,
+        "curr_weight": -0.97
+      },
+      "CASY": {
+        "delta": -0.04,
+        "prev_weight": 0.98,
+        "curr_weight": 0.94
+      },
+      "CERY": {
+        "delta": -0.31,
+        "prev_weight": 14.27,
+        "curr_weight": 13.96
+      },
+      "CHTR": {
+        "delta": -0.02,
+        "prev_weight": -1.0,
+        "curr_weight": -1.02
+      },
+      "CIBR": {
+        "delta": 0.11,
+        "prev_weight": 2.65,
+        "curr_weight": 2.76
+      },
+      "DBA": {
+        "delta": -0.03,
+        "prev_weight": 1.45,
+        "curr_weight": 1.42
+      },
+      "DRAM": {
+        "delta": 0.2,
+        "prev_weight": 2.9,
+        "curr_weight": 3.1
+      },
+      "EPD": {
+        "delta": 0.01,
+        "prev_weight": 1.05,
+        "curr_weight": 1.06
+      },
+      "EWC": {
+        "delta": 0.02,
+        "prev_weight": 1.01,
+        "curr_weight": 1.03
+      },
+      "EWW": {
+        "delta": -0.01,
+        "prev_weight": 1.53,
+        "curr_weight": 1.52
+      },
+      "EWY": {
+        "delta": 0.03,
+        "prev_weight": 1.12,
+        "curr_weight": 1.15
+      },
+      "EZPW": {
+        "delta": 0.01,
+        "prev_weight": 0.75,
+        "curr_weight": 0.76
+      },
+      "FITE": {
+        "delta": 0.11,
+        "prev_weight": 2.03,
+        "curr_weight": 2.14
+      },
+      "GEV": {
+        "delta": 0.02,
+        "prev_weight": 1.43,
+        "curr_weight": 1.45
+      },
+      "GLD": {
+        "delta": -0.03,
+        "prev_weight": 2.0,
+        "curr_weight": 1.97
+      },
+      "HCA": {
+        "delta": 0.24,
+        "prev_weight": -0.96,
+        "curr_weight": -0.72
+      },
+      "HTEC": {
+        "delta": -0.19,
+        "prev_weight": 0.96,
+        "curr_weight": 0.77
+      },
+      "IEF": {
+        "delta": -0.01,
+        "prev_weight": -1.43,
+        "curr_weight": -1.44
+      },
+      "IHE": {
+        "delta": 1.11,
+        "prev_weight": 0.96,
+        "curr_weight": 2.07
+      },
+      "INDA": {
+        "delta": -0.02,
+        "prev_weight": -2.0,
+        "curr_weight": -2.02
+      },
+      "INTC": {
+        "delta": 0.18,
+        "prev_weight": 1.7,
+        "curr_weight": 1.88
+      },
+      "ITB": {
+        "delta": -0.08,
+        "prev_weight": -2.0,
+        "curr_weight": -2.08
+      },
+      "LIN": {
+        "delta": 0.31,
+        "prev_weight": 1.4,
+        "curr_weight": 1.71
+      },
+      "PM": {
+        "delta": -0.03,
+        "prev_weight": 1.47,
+        "curr_weight": 1.44
+      },
+      "RBLX": {
+        "delta": 0.07,
+        "prev_weight": -1.12,
+        "curr_weight": -1.05
+      },
+      "RIG": {
+        "delta": 0.12,
+        "prev_weight": 1.84,
+        "curr_weight": 1.96
+      },
+      "ROBO": {
+        "delta": 0.05,
+        "prev_weight": 1.5,
+        "curr_weight": 1.55
+      },
+      "SOYB": {
+        "delta": -0.01,
+        "prev_weight": 1.46,
+        "curr_weight": 1.45
+      },
+      "SYY": {
+        "delta": -0.04,
+        "prev_weight": -0.94,
+        "curr_weight": -0.98
+      },
+      "TLT": {
+        "delta": -0.03,
+        "prev_weight": -2.39,
+        "curr_weight": -2.42
+      },
+      "USPH": {
+        "delta": 0.05,
+        "prev_weight": -1.08,
+        "curr_weight": -1.03
+      },
+      "UTWO": {
+        "delta": 0.01,
+        "prev_weight": -0.95,
+        "curr_weight": -0.94
+      },
+      "VPL": {
+        "delta": 0.01,
+        "prev_weight": 1.5,
+        "curr_weight": 1.51
+      },
+      "VTI": {
+        "delta": 0.09,
+        "prev_weight": 8.93,
+        "curr_weight": 9.02
+      },
+      "WEAT": {
+        "delta": -0.03,
+        "prev_weight": 1.5,
+        "curr_weight": 1.47
+      },
+      "WELL": {
+        "delta": 0.01,
+        "prev_weight": 0.97,
+        "curr_weight": 0.98
+      },
+      "WMT": {
+        "delta": -0.17,
+        "prev_weight": 1.75,
+        "curr_weight": 1.58
+      },
+      "XAR": {
+        "delta": 0.05,
+        "prev_weight": 1.9,
+        "curr_weight": 1.95
+      },
+      "XBI": {
+        "delta": -0.21,
+        "prev_weight": 1.76,
+        "curr_weight": 1.55
+      },
+      "XLE": {
+        "delta": -0.06,
+        "prev_weight": 3.14,
+        "curr_weight": 3.08
+      },
+      "XTEN": {
+        "delta": -0.01,
+        "prev_weight": -2.41,
+        "curr_weight": -2.42
+      },
+      "ZROZ": {
+        "delta": -0.04,
+        "prev_weight": -2.35,
+        "curr_weight": -2.39
+      },
+      "AAPL": {
+        "delta": 0.27,
+        "prev_weight": 8.92,
+        "curr_weight": 9.19
+      },
+      "AFRM": {
+        "delta": 0.02,
+        "prev_weight": 1.45,
+        "curr_weight": 1.47
+      },
+      "AMAT": {
+        "delta": -0.94,
+        "prev_weight": 2.53,
+        "curr_weight": 1.59
+      },
+      "BALL": {
+        "delta": -0.01,
+        "prev_weight": -0.93,
+        "curr_weight": -0.94
+      },
+      "BKNG": {
+        "delta": -0.04,
+        "prev_weight": -0.98,
+        "curr_weight": -1.02
+      },
+      "CAT": {
+        "delta": 0.02,
+        "prev_weight": 1.58,
+        "curr_weight": 1.6
+      },
+      "CAVA": {
+        "delta": -0.15,
+        "prev_weight": 0.56,
+        "curr_weight": 0.41
+      },
+      "CDNS": {
+        "delta": 0.11,
+        "prev_weight": 1.43,
+        "curr_weight": 1.54
+      },
+      "CHRD": {
+        "delta": -0.04,
+        "prev_weight": 1.06,
+        "curr_weight": 1.02
+      },
+      "CMG": {
+        "delta": 0.02,
+        "prev_weight": -1.02,
+        "curr_weight": -1.0
+      },
+      "CRCL": {
+        "delta": 0.03,
+        "prev_weight": 1.59,
+        "curr_weight": 1.62
+      },
+      "CSCO": {
+        "delta": -0.3,
+        "prev_weight": 1.01,
+        "curr_weight": 0.71
+      },
+      "CSX": {
+        "delta": -0.04,
+        "prev_weight": 1.49,
+        "curr_weight": 1.45
+      },
+      "CVI": {
+        "delta": -0.06,
+        "prev_weight": 1.01,
+        "curr_weight": 0.95
+      },
+      "CZR": {
+        "delta": 0.02,
+        "prev_weight": 0.73,
+        "curr_weight": 0.75
+      },
+      "DAR": {
+        "delta": 0.48,
+        "prev_weight": 0.99,
+        "curr_weight": 1.47
+      },
+      "DASH": {
+        "delta": 0.07,
+        "prev_weight": -1.06,
+        "curr_weight": -0.99
+      },
+      "DPZ": {
+        "delta": -0.03,
+        "prev_weight": -0.93,
+        "curr_weight": -0.96
+      },
+      "ENB": {
+        "delta": 0.07,
+        "prev_weight": 2.08,
+        "curr_weight": 2.15
+      },
+      "FLO": {
+        "delta": 0.21,
+        "prev_weight": -0.78,
+        "curr_weight": -0.57
+      },
+      "GLASF": {
+        "delta": 0.03,
+        "prev_weight": 1.53,
+        "curr_weight": 1.56
+      },
+      "GOOGL": {
+        "delta": -0.35,
+        "prev_weight": 8.3,
+        "curr_weight": 7.95
+      },
+      "HBM": {
+        "delta": 0.01,
+        "prev_weight": 1.47,
+        "curr_weight": 1.48
+      },
+      "JAZZ": {
+        "delta": 0.11,
+        "prev_weight": 2.5,
+        "curr_weight": 2.61
+      },
+      "JBHT": {
+        "delta": -0.02,
+        "prev_weight": 2.11,
+        "curr_weight": 2.09
+      },
+      "KSS": {
+        "delta": -0.12,
+        "prev_weight": -1.01,
+        "curr_weight": -1.13
+      },
+      "LAMR": {
+        "delta": 0.06,
+        "prev_weight": 1.5,
+        "curr_weight": 1.56
+      },
+      "LCID": {
+        "delta": -0.02,
+        "prev_weight": -0.9,
+        "curr_weight": -0.92
+      },
+      "MAR": {
+        "delta": 0.31,
+        "prev_weight": 0.8,
+        "curr_weight": 1.11
+      },
+      "MEOH": {
+        "delta": -0.94,
+        "prev_weight": 1.94,
+        "curr_weight": 1.0
+      },
+      "MKSI": {
+        "delta": 0.17,
+        "prev_weight": 2.07,
+        "curr_weight": 2.24
+      },
+      "MPC": {
+        "delta": -0.03,
+        "prev_weight": 1.56,
+        "curr_weight": 1.53
+      },
+      "MRVL": {
+        "delta": 0.13,
+        "prev_weight": 0.84,
+        "curr_weight": 0.97
+      },
+      "MUSA": {
+        "delta": -0.08,
+        "prev_weight": 2.05,
+        "curr_weight": 1.97
+      },
+      "NKE": {
+        "delta": -0.05,
+        "prev_weight": -0.95,
+        "curr_weight": -1.0
+      },
+      "NOV": {
+        "delta": -0.03,
+        "prev_weight": 1.97,
+        "curr_weight": 1.94
+      },
+      "ONON": {
+        "delta": -0.05,
+        "prev_weight": -1.01,
+        "curr_weight": -1.06
+      },
+      "OUT": {
+        "delta": 0.04,
+        "prev_weight": 0.99,
+        "curr_weight": 1.03
+      },
+      "PLAY": {
+        "delta": -0.12,
+        "prev_weight": -0.87,
+        "curr_weight": -0.99
+      },
+      "RDDT": {
+        "delta": 0.1,
+        "prev_weight": -1.03,
+        "curr_weight": -0.93
+      },
+      "ROKU": {
+        "delta": 0.03,
+        "prev_weight": 2.6,
+        "curr_weight": 2.63
+      },
+      "RSI": {
+        "delta": -0.04,
+        "prev_weight": 1.52,
+        "curr_weight": 1.48
+      },
+      "SBUX": {
+        "delta": -0.06,
+        "prev_weight": 1.56,
+        "curr_weight": 1.5
+      },
+      "SMPL": {
+        "delta": -0.01,
+        "prev_weight": -1.03,
+        "curr_weight": -1.04
+      },
+      "SNAP": {
+        "delta": -0.01,
+        "prev_weight": -1.04,
+        "curr_weight": -1.05
+      },
+      "SPHR": {
+        "delta": -0.08,
+        "prev_weight": 1.51,
+        "curr_weight": 1.43
+      },
+      "SXT": {
+        "delta": -0.89,
+        "prev_weight": 1.9,
+        "curr_weight": 1.01
+      },
+      "TAP": {
+        "delta": -0.02,
+        "prev_weight": -0.92,
+        "curr_weight": -0.94
+      },
+      "TSN": {
+        "delta": 0.45,
+        "prev_weight": 1.51,
+        "curr_weight": 1.96
+      },
+      "TTWO": {
+        "delta": -0.06,
+        "prev_weight": 0.97,
+        "curr_weight": 0.91
+      },
+      "TWLO": {
+        "delta": 0.15,
+        "prev_weight": 0.64,
+        "curr_weight": 0.79
+      },
+      "ULS": {
+        "delta": 0.03,
+        "prev_weight": 1.0,
+        "curr_weight": 1.03
+      },
+      "UNH": {
+        "delta": -0.03,
+        "prev_weight": 2.09,
+        "curr_weight": 2.06
+      },
+      "URI": {
+        "delta": -0.03,
+        "prev_weight": 1.48,
+        "curr_weight": 1.45
+      },
+      "VIK": {
+        "delta": -0.03,
+        "prev_weight": 1.04,
+        "curr_weight": 1.01
+      },
+      "WDC": {
+        "delta": 0.1,
+        "prev_weight": 1.76,
+        "curr_weight": 1.86
+      },
+      "WING": {
+        "delta": -0.09,
+        "prev_weight": -1.02,
+        "curr_weight": -1.11
       },
       "XYZ": {
-        "delta": 0.0066,
-        "prev_weight": 0.0134,
-        "curr_weight": 0.02
+        "delta": -1.02,
+        "prev_weight": 2.0,
+        "curr_weight": 0.98
+      },
+      "ADI": {
+        "delta": -0.66,
+        "prev_weight": 2.35,
+        "curr_weight": 1.69
+      },
+      "AMD": {
+        "delta": 0.2,
+        "prev_weight": 1.92,
+        "curr_weight": 2.12
+      },
+      "AMZN": {
+        "delta": -0.01,
+        "prev_weight": 6.0,
+        "curr_weight": 5.99
+      },
+      "ATI": {
+        "delta": 0.08,
+        "prev_weight": 1.03,
+        "curr_weight": 1.11
+      },
+      "AVGO": {
+        "delta": -0.07,
+        "prev_weight": 3.03,
+        "curr_weight": 2.96
+      },
+      "C": {
+        "delta": 0.02,
+        "prev_weight": 1.55,
+        "curr_weight": 1.57
+      },
+      "CARR": {
+        "delta": -1.38,
+        "prev_weight": 1.39,
+        "curr_weight": 0.01
+      },
+      "CBOE": {
+        "delta": -0.07,
+        "prev_weight": 2.29,
+        "curr_weight": 2.22
+      },
+      "CF": {
+        "delta": -0.05,
+        "prev_weight": 1.4,
+        "curr_weight": 1.35
+      },
+      "CIEN": {
+        "delta": 0.09,
+        "prev_weight": 0.92,
+        "curr_weight": 1.01
+      },
+      "COHR": {
+        "delta": -0.17,
+        "prev_weight": 0.7,
+        "curr_weight": 0.53
+      },
+      "GLW": {
+        "delta": -0.15,
+        "prev_weight": 0.91,
+        "curr_weight": 0.76
+      },
+      "GS": {
+        "delta": 0.1,
+        "prev_weight": 2.21,
+        "curr_weight": 2.31
+      },
+      "HAL": {
+        "delta": -0.08,
+        "prev_weight": 2.02,
+        "curr_weight": 1.94
+      },
+      "KLAC": {
+        "delta": -0.24,
+        "prev_weight": 1.3,
+        "curr_weight": 1.06
+      },
+      "LLY": {
+        "delta": 0.55,
+        "prev_weight": 2.29,
+        "curr_weight": 2.84
+      },
+      "NDAQ": {
+        "delta": -0.04,
+        "prev_weight": 1.69,
+        "curr_weight": 1.65
+      },
+      "NVDA": {
+        "delta": -0.36,
+        "prev_weight": 9.52,
+        "curr_weight": 9.16
+      },
+      "ORCL": {
+        "delta": 0.02,
+        "prev_weight": 1.12,
+        "curr_weight": 1.14
+      },
+      "PLD": {
+        "delta": 0.02,
+        "prev_weight": 1.39,
+        "curr_weight": 1.41
+      },
+      "SNDK": {
+        "delta": 0.1,
+        "prev_weight": 1.0,
+        "curr_weight": 1.1
+      },
+      "STX": {
+        "delta": -0.14,
+        "prev_weight": 1.24,
+        "curr_weight": 1.1
+      },
+      "V": {
+        "delta": -0.04,
+        "prev_weight": 2.16,
+        "curr_weight": 2.12
+      },
+      "VLO": {
+        "delta": -0.07,
+        "prev_weight": 1.26,
+        "curr_weight": 1.19
       }
     }
   }
