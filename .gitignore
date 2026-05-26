@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# OneDrive conflict/temp files
+*-MSI.json
+*.tmp
+~$*
+
+# Node / build artifacts
+node_modules/
+.wrangler/cache/
+
+# Uploads folder (PDFs, CSVs — tracked manually when needed)
+project/uploads/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Git lock (should never be committed but just in case)
+*.lock
