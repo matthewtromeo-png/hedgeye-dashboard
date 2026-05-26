@@ -14,7 +14,7 @@ const SizingTab = ({ macroCtx }) => {
     </div>
   );
 
-  const { positions = [], hyg_rank, hyg_threshold_pct, as_of_date } = ps;
+  const { positions = [], threshold_ticker, threshold_rank, threshold_pct, threshold_note, as_of_date } = ps;
   const active = positions.filter(p => p.estimated_pct > 0);
 
   // ── Sorting ────────────────────────────────────────────────────────────────
@@ -90,17 +90,17 @@ const SizingTab = ({ macroCtx }) => {
     );
   };
 
-  // ── HYG divider ────────────────────────────────────────────────────────────
-  const HYGDivider = () => (
+  // ── Size anchor divider (dynamic — based on current minimum-sized position) ──
+  const AnchorDivider = () => (
     <tr>
       <td colSpan={9} style={{padding:'4px 12px'}}>
         <div style={{display:'flex',alignItems:'center',gap:8}}>
-          <div style={{flex:1,height:1,background:'#C53030',opacity:0.4}} />
+          <div style={{flex:1,height:1,background:'#C53030',opacity:0.35}} />
           <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
             color:'#C53030',fontWeight:700,whiteSpace:'nowrap',letterSpacing:'0.08em'}}>
-            ▼ HYG THRESHOLD — BELOW THIS LINE: UNDER 3%
+            ▼ {threshold_ticker || 'ANCHOR'} AT MIN ({threshold_pct || '—'}%) — BELOW THIS: UNDER {threshold_pct || '—'}%
           </span>
-          <div style={{flex:1,height:1,background:'#C53030',opacity:0.4}} />
+          <div style={{flex:1,height:1,background:'#C53030',opacity:0.35}} />
         </div>
       </td>
     </tr>
@@ -155,17 +155,20 @@ const SizingTab = ({ macroCtx }) => {
           </div>
         </div>
 
-        {/* Rule callout */}
-        <div style={{marginTop:12,padding:'8px 12px',background:'#FFFBEB',border:'1px solid #FCD34D',
-          borderRadius:6,fontSize:11,color:'#92400E',fontFamily:'IBM Plex Mono,monospace',
-          display:'flex',alignItems:'center',gap:8}}>
-          <span style={{fontSize:14}}>⚡</span>
-          <span>
-            <strong>Rank rule:</strong> Positions ranked above HYG (#{hyg_rank}) are confirmed &gt;{hyg_threshold_pct}%.
-            &nbsp;Hatched bars = rank-floor estimate (exact add not in parsed PDFs).
-            &nbsp;Solid bars = confirmed from commentary.
-          </span>
-        </div>
+        {/* Dynamic threshold callout */}
+        {threshold_ticker && (
+          <div style={{marginTop:12,padding:'8px 12px',background:'#FFFBEB',border:'1px solid #FCD34D',
+            borderRadius:6,fontSize:11,color:'#92400E',fontFamily:'IBM Plex Mono,monospace',
+            display:'flex',alignItems:'center',gap:8}}>
+            <span style={{fontSize:14}}>⚡</span>
+            <span>
+              <strong>Today's anchor:</strong> {threshold_ticker} (rank #{threshold_rank}) is at minimum ({threshold_pct}%).
+              &nbsp;Positions ranked above it are confirmed &gt;{threshold_pct}%.
+              &nbsp;This anchor shifts daily as Keith adds/trims.
+              &nbsp;Hatched bars = rank-floor estimate · Solid = confirmed from commentary.
+            </span>
+          </div>
+        )}
 
         {/* Filter + sort controls */}
         <div style={{marginTop:12,display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}}>
@@ -203,12 +206,12 @@ const SizingTab = ({ macroCtx }) => {
           <tbody>
             {filtered.map((p, i) => {
               const ts = TIER_STYLE[p.tier] || TIER_STYLE.min;
-              const showDivider = !hygDividerShown && !p.above_hyg_threshold && sortBy === 'rank' && filter !== 'above';
+              const showDivider = !hygDividerShown && threshold_rank && p.rank > threshold_rank && sortBy === 'rank' && filter !== 'above';
               if (showDivider) hygDividerShown = true;
 
               return (
                 <React.Fragment key={p.ticker}>
-                  {showDivider && <HYGDivider />}
+                  {showDivider && <AnchorDivider />}
                   <tr style={{
                     borderBottom:'1px solid #EEF0F0',
                     background: p.above_hyg_threshold ? 'rgba(39,103,73,0.03)' : '#fff',
@@ -295,7 +298,7 @@ const SizingTab = ({ macroCtx }) => {
       <div style={{padding:'16px 20px',borderTop:'1px solid #E2E8F0',marginTop:8,
         display:'flex',gap:24,flexWrap:'wrap',fontSize:10,color:'#999',
         fontFamily:'IBM Plex Mono,monospace'}}>
-        <span>■ <span style={{color:'#276749'}}>GREEN</span> = above HYG threshold (≥3%)</span>
+        <span>■ <span style={{color:'#276749'}}>GREEN</span> = above anchor (≥{threshold_pct}%)</span>
         <span>■ <span style={{color:'#718096'}}>GRAY</span> = below threshold (&lt;3%)</span>
         <span>╱╱ HATCHED = rank-floor estimate (exact bps not in parsed PDFs)</span>
         <span>MIN marker = vertical line in bar</span>
