@@ -260,7 +260,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                 <div key={t} style={{...rowStyle,background:'transparent',borderBottom:'1px solid rgba(122,182,72,0.2)',padding:'5px 0'}}>
                   <span style={{fontWeight:700,minWidth:52}}>{t}</span>
                   <AlignBadge ticker={t} />
-                  <span style={{color:'#27500A',fontSize:10}}>{src[t]?.cur ? '+'+((src[t].cur||0)*100).toFixed(2)+'%' : ''}</span>
+                  <span style={{color:'#27500A',fontSize:10}}>{src[t]?.curr_weight ? '+'+((src[t].curr_weight||0)*100).toFixed(2)+'%' : ''}</span>
                 </div>
               ))
             }

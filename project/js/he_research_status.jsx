@@ -89,7 +89,7 @@ function rsKeyData(src, data) {
     case 'macro_show_notes':
       return d ? `${(d.key_points||[]).length} key points` : '—';
     case 'investing_ideas':
-      return d ? `${Object.keys(d.longs||{}).length}L / ${Object.keys(d.shorts||{}).length}S` : '—';
+      return d ? `${Object.keys(d.longs||{}).length}L / ${Object.keys(d.shorts||{}).length}S${d.source_date ? ' · ' + d.source_date.slice(5) : ''}` : '—';
     case 'founders_choice': {
       if (!d) return '—';
       return Object.entries(d).map(([s, v]) => `${s}: ${(v.longs||[]).length}L/${(v.shorts||[]).length}S`).join(' · ') || '—';
@@ -299,7 +299,17 @@ function InvestingIdeasPanel({ data }) {
                   {pos.lrr}–{pos.trr}
                 </span>
               </div>
-              {pos.thesis && <p style={{ fontSize:10, color:'#555', lineHeight:1.4, margin:0 }}>{pos.thesis}</p>}
+              {pos.thesis && (
+                <p style={{ fontSize:10, color:'#555', lineHeight:1.45, margin:'4px 0 0' }}>
+                  {pos.thesis}
+                </p>
+              )}
+              {pos.weekend_update && (
+                <p style={{ fontSize:9, color:'#888', lineHeight:1.4, margin:'4px 0 0',
+                  borderTop:'1px solid #F5F3EF', paddingTop:4 }}>
+                  <strong style={{color:color}}>This week: </strong>{pos.weekend_update}
+                </p>
+              )}
             </div>
           ))}
         </div>

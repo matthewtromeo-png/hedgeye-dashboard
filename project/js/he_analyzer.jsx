@@ -337,6 +337,25 @@ const AnalyzerTab = ({macroCtx}) => {
     : 'WATCH';
   const verdict = verdictKey ? VERDICT_META[verdictKey] : null;
 
+  // Portfolio signals — no FMP needed
+  const hamHoldings   = macroCtx?.ham_holdings ?? [];
+  const hamEntry      = ticker ? hamHoldings.find(h => h.ticker === ticker) : null;
+  const investLongs   = macroCtx?.pdf?.investing_ideas?.longs  ?? {};
+  const investShorts  = macroCtx?.pdf?.investing_ideas?.shorts ?? {};
+  const investNeutral = macroCtx?.pdf?.investing_ideas?.neutral ?? [];
+  const levelData     = ticker ? (macroCtx?.levels?.[ticker] ?? null) : null;
+  const ideaDir  = investLongs[ticker]   ? 'LONG'
+                 : investShorts[ticker]  ? 'SHORT'
+                 : investNeutral.includes(ticker) ? 'NEUTRAL' : null;
+  const ideaThesis = investLongs[ticker]?.thesis ?? investShorts[ticker]?.thesis ?? null;
+  // Actionability timeframe: MOAT=long-term, SCURVE=secular multi-year, IDIO=near-term
+  const TIMEFRAME_META = {
+    MOAT:   { label: 'LONG-TERM HOLD',    color: '#1A4D8F', bg: '#EBF2FB', desc: 'Durable competitive advantage — size over time, not in one trade.' },
+    SCURVE:  { label: 'SECULAR MULTI-YEAR', color: '#27500A', bg: '#EAF3DE', desc: 'S-Curve name — entry timing matters but thesis spans years.' },
+    IDIO:    { label: 'NEAR-TERM CATALYST',color: '#B8860B', bg: '#FFF8E1', desc: 'Idiosyncratic catalyst driven — watch for the event window.' },
+  };
+  const timeframeMeta = bucketKey ? TIMEFRAME_META[bucketKey] : null;
+
   const fmtMktCap = v => {
     if (v == null) return '—';
     if (v >= 1e12) return `$${(v / 1e12).toFixed(2)}T`;
@@ -527,6 +546,124 @@ const AnalyzerTab = ({macroCtx}) => {
             </div>
           </div>
 
+          {/* ── Portfolio Signals Row ── */}
+          {showResults && (
+            <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:10, marginBottom:12}}>
+
+              {/* Timeframe */}
+              <div style={{background: timeframeMeta ? timeframeMeta.bg : '#F9F8F5',
+                border:`1px solid ${timeframeMeta ? timeframeMeta.color+'30' : '#E4E1DA'}`,
+                borderRadius:8, padding:'12px 14px'}}>
+                <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:600,
+                  letterSpacing:'0.1em', color:'#9A9790', textTransform:'uppercase', marginBottom:6}}>
+                  Timeframe
+                </div>
+                {timeframeMeta ? (
+                  <>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:700,
+                      color:timeframeMeta.color, marginBottom:4}}>{timeframeMeta.label}</div>
+                    <div style={{fontSize:9, color:'#555', lineHeight:1.5}}>{timeframeMeta.desc}</div>
+                  </>
+                ) : (
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8C5BE'}}>—</div>
+                )}
+              </div>
+
+              {/* Risk Range */}
+              <div style={{background:'#F9F8F5', border:'1px solid #E4E1DA', borderRadius:8, padding:'12px 14px'}}>
+                <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:600,
+                  letterSpacing:'0.1em', color:'#9A9790', textTransform:'uppercase', marginBottom:6}}>
+                  Risk Range
+                </div>
+                {levelData ? (
+                  <div style={{display:'flex', flexDirection:'column', gap:4}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12, fontWeight:700,
+                      color: levelData.signal === 'BULLISH' ? '#27500A' : '#C8302A'}}>
+                      {levelData.signal ?? '—'}
+                    </div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#7A7770'}}>
+                      LRR <span style={{fontWeight:700, color:'#1A1A18'}}>${levelData.lrr ?? '—'}</span>
+                      {'  '}TRR <span style={{fontWeight:700, color:'#1A1A18'}}>${levelData.trr ?? '—'}</span>
+                    </div>
+                    {levelData.close && (
+                      <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790'}}>
+                        Close <span style={{fontWeight:700, color:'#1A1A18'}}>${levelData.close}</span>
+                        <span style={{marginLeft:6, color: levelData.close >= levelData.lrr ? '#27500A' : '#C8302A', fontWeight:700}}>
+                          {levelData.close >= (levelData.trr||0) ? '▲ ABOVE TRR'
+                           : levelData.close >= (levelData.lrr||0) ? '✓ IN RANGE'
+                           : '▼ BELOW LRR'}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#C8C5BE', lineHeight:1.6}}>
+                    No levels in tracker
+                  </div>
+                )}
+              </div>
+
+              {/* HAM Holdings */}
+              <div style={{background:'#F9F8F5', border:'1px solid #E4E1DA', borderRadius:8, padding:'12px 14px'}}>
+                <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:600,
+                  letterSpacing:'0.1em', color:'#9A9790', textTransform:'uppercase', marginBottom:6}}>
+                  HAM Portfolios
+                </div>
+                {hamEntry ? (
+                  <div>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:11, fontWeight:700,
+                      color:'#27500A', marginBottom:5}}>
+                      HELD ✓
+                    </div>
+                    {Object.entries(hamEntry.accounts ?? {}).map(([fund, wt]) => (
+                      <div key={fund} style={{display:'flex', justifyContent:'space-between',
+                        fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#555', marginBottom:2}}>
+                        <span style={{fontWeight:700}}>{fund}</span>
+                        <span>{(wt*100).toFixed(2)}%</span>
+                      </div>
+                    ))}
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
+                      marginTop:5, borderTop:'1px solid #EEECE8', paddingTop:4}}>
+                      Total {(hamEntry.total_weight*100).toFixed(2)}%
+                    </div>
+                  </div>
+                ) : (
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8C5BE'}}>
+                    Not in HAM ETFs
+                  </div>
+                )}
+              </div>
+
+              {/* Investing Idea */}
+              <div style={{
+                background: ideaDir === 'LONG' ? '#EAF3DE' : ideaDir === 'SHORT' ? '#FCEBEB' : '#F9F8F5',
+                border:`1px solid ${ideaDir === 'LONG' ? '#7AB648' : ideaDir === 'SHORT' ? '#E07070' : '#E4E1DA'}`,
+                borderRadius:8, padding:'12px 14px'}}>
+                <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, fontWeight:600,
+                  letterSpacing:'0.1em', color:'#9A9790', textTransform:'uppercase', marginBottom:6}}>
+                  Investing Idea
+                </div>
+                {ideaDir ? (
+                  <>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12, fontWeight:700,
+                      color: ideaDir === 'LONG' ? '#27500A' : ideaDir === 'SHORT' ? '#C8302A' : '#B8860B',
+                      marginBottom:5}}>
+                      {ideaDir}
+                    </div>
+                    {ideaThesis && (
+                      <div style={{fontSize:9, color:'#555', lineHeight:1.55}}>{ideaThesis}</div>
+                    )}
+                  </>
+                ) : (
+                  <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:'#C8C5BE'}}>
+                    No active idea
+                  </div>
+                )}
+              </div>
+
+            </div>
+          )}
+
           {/* ── Three analysis cards ── */}
           <div style={{display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:12, marginBottom:12}}>
 
@@ -646,13 +783,7 @@ const AnalyzerTab = ({macroCtx}) => {
               ) : (
                 <div style={{color:'#9A9790', fontSize:11, lineHeight:1.7}}>
                   Could not classify <strong style={{color:'#1A1A18'}}>{ticker}</strong> into a bucket.
-                  Bucket assignment uses known tickers, Hedgeye sector, and FMP industry data.
-                  {!fmpKey && (
-                    <div style={{marginTop:10, fontFamily:'IBM Plex Mono,monospace', fontSize:9,
-                      color:'#9A9790', borderTop:'1px solid #F5F3EF', paddingTop:8}}>
-                      Add FMP key in ⚙ Settings for industry-based classification
-                    </div>
-                  )}
+                  Bucket assignment uses known tickers and Hedgeye sector data.
                 </div>
               )}
             </div>
@@ -806,12 +937,7 @@ const AnalyzerTab = ({macroCtx}) => {
                     )}
                   </div>
                 </div>
-              ) : (
-                <div style={{marginBottom:14, fontFamily:'IBM Plex Mono,monospace', fontSize:9,
-                  color:'#9A9790', padding:'8px 0'}}>
-                  Revenue data unavailable — quarterly income statements may require FMP plan upgrade
-                </div>
-              )}
+              ) : null}
 
               {/* Metrics grid */}
               <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(155px,1fr))', gap:8}}>
@@ -892,11 +1018,10 @@ const AnalyzerTab = ({macroCtx}) => {
                 </div>
               ))}
             </div>
-            {(!fmpKey || fmpErr) && (
+            {fmpErr && (
               <div style={{marginTop:10, borderTop:'1px solid #F5F3EF', paddingTop:8,
-                fontFamily:'IBM Plex Mono,monospace', fontSize:9,
-                color: fmpErr ? '#C8302A' : '#9A9790'}}>
-                {fmpErr || 'Add an FMP API key in ⚙ Settings to unlock Fundamentals (financialmodelingprep.com free tier)'}
+                fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#C8302A'}}>
+                {fmpErr}
               </div>
             )}
           </div>
