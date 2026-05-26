@@ -487,1523 +487,985 @@
       "days_held": 4
     }
   ],
-  "ham_holdings": {
-    "as_of_date": "2026-05-26",
-    "holdings": [
-      {
-        "ticker": "CERY",
-        "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
-        "weight": 13.96,
-        "price": 37.2569,
-        "shares": 389384.0
-      },
-      {
-        "ticker": "AAPL",
-        "name": "Apple Inc",
-        "weight": 9.19,
-        "price": 308.82,
-        "shares": 36021.0
-      },
-      {
-        "ticker": "NVDA",
-        "name": "NVIDIA Corp",
-        "weight": 9.16,
-        "price": 215.33,
-        "shares": 51499.0
-      },
-      {
-        "ticker": "UUP",
-        "name": "Invesco DB US Dollar Index Bullish Fund",
-        "weight": 9.09,
-        "price": 27.77,
-        "shares": 1156175.0
-      },
-      {
-        "ticker": "VTI",
-        "name": "Vanguard Total Stock Market ETF",
-        "weight": 9.02,
-        "price": 366.79,
-        "shares": 25567.0
-      },
-      {
-        "ticker": "DBMF",
-        "name": "iMGP DBi Managed Futures Strategy ETF",
-        "weight": 8.56,
-        "price": 31.09,
-        "shares": 972138.0
-      },
-      {
-        "ticker": "GOOGL",
-        "name": "Alphabet Inc",
-        "weight": 7.95,
-        "price": 382.97,
-        "shares": 25145.0
-      },
-      {
-        "ticker": "XTL",
-        "name": "State Street SPDR S&P Telecom ETF",
-        "weight": 6.24,
-        "price": 233.84,
-        "shares": 94220.0
-      },
-      {
-        "ticker": "VTIP",
-        "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
-        "weight": 6.14,
-        "price": 50.22,
-        "shares": 431920.0
-      },
-      {
-        "ticker": "AMZN",
-        "name": "Amazon.com Inc",
-        "weight": 5.99,
-        "price": 266.32,
-        "shares": 27231.0
-      },
-      {
-        "ticker": "JAAA",
-        "name": "Janus Henderson AAA CLO ETF",
-        "weight": 5.96,
-        "price": 50.69,
-        "shares": 415568.0
-      },
-      {
-        "ticker": "DBJP",
-        "name": "Xtrackers MSCI Japan Hedged Equity ETF",
-        "weight": 5.8,
-        "price": 110.7336,
-        "shares": 185054.0
-      },
-      {
-        "ticker": "FWD",
-        "name": "AB Disruptors ETF",
-        "weight": 5.57,
-        "price": 136.85,
-        "shares": 143794.0
-      },
-      {
-        "ticker": "SLX",
-        "name": "VanEck Steel ETF",
-        "weight": 5.38,
-        "price": 106.67,
-        "shares": 178085.0
-      },
-      {
-        "ticker": "IHF",
-        "name": "iShares U.S. Healthcare Providers ETF",
-        "weight": 5.29,
-        "price": 50.66,
-        "shares": 368895.0
-      },
-      {
-        "ticker": "VYM",
-        "name": "Vanguard High Dividend Yield ETF",
-        "weight": 4.97,
-        "price": 158.7,
-        "shares": 110580.0
-      },
-      {
-        "ticker": "OIH",
-        "name": "VanEck Oil Services ETF",
-        "weight": 4.81,
-        "price": 443.96,
-        "shares": 38234.0
-      },
-      {
-        "ticker": "DBB",
-        "name": "Invesco DB Base Metals Fund",
-        "weight": 4.69,
-        "price": 25.9,
-        "shares": 639574.0
-      },
-      {
-        "ticker": "ARTY",
-        "name": "iShares Future AI & Tech ETF",
-        "weight": 4.53,
-        "price": 68.78,
-        "shares": 68515.0
-      },
-      {
-        "ticker": "OIH",
-        "name": "VanEck Oil Services ETF",
-        "weight": 4.12,
-        "price": 443.96,
-        "shares": 9643.0
-      },
-      {
-        "ticker": "IDMO",
-        "name": "Invesco S&P International Developed Momentum ETF",
-        "weight": 4.08,
-        "price": 59.75,
-        "shares": 241299.0
-      },
-      {
-        "ticker": "TAN",
-        "name": "Invesco Solar ETF",
-        "weight": 3.74,
-        "price": 65.95,
-        "shares": 200159.0
-      },
-      {
-        "ticker": "FESM",
-        "name": "Fidelity Enhanced Small Cap Core ETF",
-        "weight": 3.61,
-        "price": 44.81,
-        "shares": 284189.0
-      },
-      {
-        "ticker": "AAPL",
-        "name": "Apple Inc",
-        "weight": 3.13,
-        "price": 308.82,
-        "shares": 2455.0
-      },
-      {
-        "ticker": "DRAM",
-        "name": "Roundhill Memory ETF",
-        "weight": 3.1,
-        "price": 52.82,
-        "shares": 60940.0
-      },
-      {
-        "ticker": "XLE",
-        "name": "State Street Energy Select Sector SPDR ETF",
-        "weight": 3.08,
-        "price": 59.49,
-        "shares": 53745.0
-      },
-      {
-        "ticker": "GOOGL",
-        "name": "Alphabet Inc",
-        "weight": 3.02,
-        "price": 382.97,
-        "shares": 1911.0
-      },
-      {
-        "ticker": "AVGO",
-        "name": "Broadcom Inc",
-        "weight": 2.96,
-        "price": 414.14,
-        "shares": 8655.0
-      },
-      {
-        "ticker": "CSX",
-        "name": "CSX Corp",
-        "weight": 2.93,
-        "price": 45.52,
-        "shares": 15561.0
-      },
-      {
-        "ticker": "LLY",
-        "name": "Eli Lilly & Co",
-        "weight": 2.84,
-        "price": 1065.0,
-        "shares": 3225.0
-      },
-      {
-        "ticker": "CSCO",
-        "name": "Cisco Systems Inc",
-        "weight": 2.83,
-        "price": 120.41,
-        "shares": 5693.0
-      },
-      {
-        "ticker": "CIBR",
-        "name": "First Trust NASDAQ Cybersecurity ETF",
-        "weight": 2.76,
-        "price": 84.28,
-        "shares": 33987.0
-      },
-      {
-        "ticker": "AMAT",
-        "name": "Applied Materials Inc",
-        "weight": 2.64,
-        "price": 432.16,
-        "shares": 1480.0
-      },
-      {
-        "ticker": "ROKU",
-        "name": "Roku Inc",
-        "weight": 2.63,
-        "price": 125.55,
-        "shares": 5065.0
-      },
-      {
-        "ticker": "JAZZ",
-        "name": "Jazz Pharmaceuticals PLC",
-        "weight": 2.61,
-        "price": 239.83,
-        "shares": 2638.0
-      },
-      {
-        "ticker": "ULS",
-        "name": "UL Solutions Inc",
-        "weight": 2.58,
-        "price": 102.85,
-        "shares": 6085.0
-      },
-      {
-        "ticker": "URI",
-        "name": "United Rentals Inc",
-        "weight": 2.5,
-        "price": 938.62,
-        "shares": 644.0
-      },
-      {
-        "ticker": "CASY",
-        "name": "Casey's General Stores Inc",
-        "weight": 2.4,
-        "price": 825.02,
-        "shares": 705.0
-      },
-      {
-        "ticker": "GS",
-        "name": "Goldman Sachs Group Inc/The",
-        "weight": 2.31,
-        "price": 996.73,
-        "shares": 2806.0
-      },
-      {
-        "ticker": "MKSI",
-        "name": "MKS Inc",
-        "weight": 2.24,
-        "price": 320.62,
-        "shares": 1694.0
-      },
-      {
-        "ticker": "SXT",
-        "name": "Sensient Technologies Corp",
-        "weight": 2.22,
-        "price": 114.44,
-        "shares": 4687.0
-      },
-      {
-        "ticker": "CBOE",
-        "name": "Cboe Global Markets Inc",
-        "weight": 2.22,
-        "price": 357.35,
-        "shares": 7511.0
-      },
-      {
-        "ticker": "ENB",
-        "name": "Enbridge Inc",
-        "weight": 2.15,
-        "price": 58.04,
-        "shares": 8950.0
-      },
-      {
-        "ticker": "FITE",
-        "name": "State Street SPDR S&P Kensho Future Security ETF",
-        "weight": 2.14,
-        "price": 108.2995,
-        "shares": 20547.0
-      },
-      {
-        "ticker": "INTC",
-        "name": "Intel Corp",
-        "weight": 2.14,
-        "price": 119.84,
-        "shares": 18570.0
-      },
-      {
-        "ticker": "AMD",
-        "name": "Advanced Micro Devices Inc",
-        "weight": 2.12,
-        "price": 467.51,
-        "shares": 5484.0
-      },
-      {
-        "ticker": "V",
-        "name": "Visa Inc",
-        "weight": 2.12,
-        "price": 328.88,
-        "shares": 7808.0
-      },
-      {
-        "ticker": "JBHT",
-        "name": "JB Hunt Transport Services Inc",
-        "weight": 2.09,
-        "price": 258.77,
-        "shares": 1955.0
-      },
-      {
-        "ticker": "IHE",
-        "name": "iShares U.S. Pharmaceuticals ETF",
-        "weight": 2.07,
-        "price": 91.51,
-        "shares": 23511.0
-      },
-      {
-        "ticker": "VIK",
-        "name": "Viking Holdings Ltd",
-        "weight": 2.07,
-        "price": 84.23,
-        "shares": 5945.0
-      },
-      {
-        "ticker": "UNH",
-        "name": "UnitedHealth Group Inc",
-        "weight": 2.06,
-        "price": 388.47,
-        "shares": 6421.0
-      },
-      {
-        "ticker": "FCFS",
-        "name": "FirstCash Holdings Inc",
-        "weight": 2.05,
-        "price": 227.59,
-        "shares": 2180.0
-      },
-      {
-        "ticker": "CAT",
-        "name": "Caterpillar Inc",
-        "weight": 2.04,
-        "price": 879.89,
-        "shares": 562.0
-      },
-      {
-        "ticker": "UNH",
-        "name": "UnitedHealth Group Inc",
-        "weight": 2.02,
-        "price": 388.47,
-        "shares": 1257.0
-      },
-      {
-        "ticker": "GEV",
-        "name": "GE Vernova Inc",
-        "weight": 2.0,
-        "price": 1038.74,
-        "shares": 467.0
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Shares",
-        "weight": 1.97,
-        "price": 413.82,
-        "shares": 4956.0
-      },
-      {
-        "ticker": "MUSA",
-        "name": "Murphy USA Inc",
-        "weight": 1.97,
-        "price": 542.74,
-        "shares": 879.0
-      },
-      {
-        "ticker": "RIG",
-        "name": "Transocean Ltd",
-        "weight": 1.96,
-        "price": 6.81,
-        "shares": 69597.0
-      },
-      {
-        "ticker": "TSN",
-        "name": "Tyson Foods Inc",
-        "weight": 1.96,
-        "price": 65.05,
-        "shares": 7279.0
-      },
-      {
-        "ticker": "XAR",
-        "name": "State Street SPDR S&P Aerospace & Defense ETF",
-        "weight": 1.95,
-        "price": 271.18,
-        "shares": 7484.0
-      },
-      {
-        "ticker": "AVEM",
-        "name": "Avantis Emerging Markets Equity ETF",
-        "weight": 1.94,
-        "price": 93.05,
-        "shares": 21662.0
-      },
-      {
-        "ticker": "NOV",
-        "name": "NOV Inc",
-        "weight": 1.94,
-        "price": 20.81,
-        "shares": 22543.0
-      },
-      {
-        "ticker": "HAL",
-        "name": "Halliburton Co",
-        "weight": 1.94,
-        "price": 41.47,
-        "shares": 56658.0
-      },
-      {
-        "ticker": "SBUX",
-        "name": "Starbucks Corp",
-        "weight": 1.92,
-        "price": 103.11,
-        "shares": 4502.0
-      },
-      {
-        "ticker": "INTC",
-        "name": "Intel Corp",
-        "weight": 1.88,
-        "price": 119.84,
-        "shares": 3793.0
-      },
-      {
-        "ticker": "MRVL",
-        "name": "MARVELL TECHNOLOGY INC",
-        "weight": 1.87,
-        "price": 196.33,
-        "shares": 2300.0
-      },
-      {
-        "ticker": "WDC",
-        "name": "Western Digital Corp",
-        "weight": 1.86,
-        "price": 484.28,
-        "shares": 931.0
-      },
-      {
-        "ticker": "LIN",
-        "name": "Linde PLC",
-        "weight": 1.71,
-        "price": 517.58,
-        "shares": 4003.0
-      },
-      {
-        "ticker": "ADI",
-        "name": "Analog Devices Inc",
-        "weight": 1.69,
-        "price": 397.07,
-        "shares": 5159.0
-      },
-      {
-        "ticker": "TTWO",
-        "name": "Take-Two Interactive Software Inc",
-        "weight": 1.65,
-        "price": 227.55,
-        "shares": 1760.0
-      },
-      {
-        "ticker": "NDAQ",
-        "name": "Nasdaq Inc",
-        "weight": 1.65,
-        "price": 91.01,
-        "shares": 21918.0
-      },
-      {
-        "ticker": "CRCL",
-        "name": "Circle Internet Group Inc",
-        "weight": 1.62,
-        "price": 113.12,
-        "shares": 3458.0
-      },
-      {
-        "ticker": "MO",
-        "name": "Altria Group Inc",
-        "weight": 1.61,
-        "price": 73.9,
-        "shares": 22647.0
-      },
-      {
-        "ticker": "OUT",
-        "name": "Outfront Media Inc",
-        "weight": 1.6,
-        "price": 33.6,
-        "shares": 11535.0
-      },
-      {
-        "ticker": "CAT",
-        "name": "Caterpillar Inc",
-        "weight": 1.6,
-        "price": 879.89,
-        "shares": 2199.0
-      },
-      {
-        "ticker": "ADM",
-        "name": "Archer-Daniels-Midland Co",
-        "weight": 1.59,
-        "price": 77.52,
-        "shares": 21267.0
-      },
-      {
-        "ticker": "AMAT",
-        "name": "Applied Materials Inc",
-        "weight": 1.59,
-        "price": 432.16,
-        "shares": 4447.0
-      },
-      {
-        "ticker": "RIG",
-        "name": "Transocean Ltd",
-        "weight": 1.58,
-        "price": 6.81,
-        "shares": 240590.0
-      },
-      {
-        "ticker": "WMT",
-        "name": "Walmart Inc",
-        "weight": 1.58,
-        "price": 120.27,
-        "shares": 13624.0
-      },
-      {
-        "ticker": "MAR",
-        "name": "Marriott International Inc/MD",
-        "weight": 1.58,
-        "price": 369.15,
-        "shares": 1039.0
-      },
-      {
-        "ticker": "C",
-        "name": "Citigroup Inc",
-        "weight": 1.57,
-        "price": 125.09,
-        "shares": 15241.0
-      },
-      {
-        "ticker": "GLASF",
-        "name": "Glass House Brands Inc",
-        "weight": 1.56,
-        "price": 10.16,
-        "shares": 37078.0
-      },
-      {
-        "ticker": "LAMR",
-        "name": "Lamar Advertising Co",
-        "weight": 1.56,
-        "price": 153.1,
-        "shares": 2466.0
-      },
-      {
-        "ticker": "ROBO",
-        "name": "ROBO Global Robotics and Automation Index ETF",
-        "weight": 1.55,
-        "price": 87.3,
-        "shares": 18437.0
-      },
-      {
-        "ticker": "XBI",
-        "name": "State Street SPDR S&P Biotech ETF",
-        "weight": 1.55,
-        "price": 131.66,
-        "shares": 12211.0
-      },
-      {
-        "ticker": "CZR",
-        "name": "Caesars Entertainment Inc",
-        "weight": 1.55,
-        "price": 28.47,
-        "shares": 13193.0
-      },
-      {
-        "ticker": "CDNS",
-        "name": "Cadence Design Systems Inc",
-        "weight": 1.54,
-        "price": 373.59,
-        "shares": 997.0
-      },
-      {
-        "ticker": "SLX",
-        "name": "VanEck Steel ETF",
-        "weight": 1.53,
-        "price": 106.67,
-        "shares": 14863.0
-      },
-      {
-        "ticker": "MPC",
-        "name": "Marathon Petroleum Corp",
-        "weight": 1.53,
-        "price": 254.65,
-        "shares": 1457.0
-      },
-      {
-        "ticker": "STT",
-        "name": "State Street Corp",
-        "weight": 1.53,
-        "price": 153.95,
-        "shares": 2411.0
-      },
-      {
-        "ticker": "EWW",
-        "name": "iShares MSCI Mexico ETF",
-        "weight": 1.52,
-        "price": 77.76,
-        "shares": 20352.0
-      },
-      {
-        "ticker": "NVO",
-        "name": "Novo Nordisk A/S",
-        "weight": 1.52,
-        "price": 44.96,
-        "shares": 8173.0
-      },
-      {
-        "ticker": "HGER",
-        "name": "Harbor Commodity All Weather Strategy ETF",
-        "weight": 1.51,
-        "price": 32.14,
-        "shares": 166203.0
-      },
-      {
-        "ticker": "VPL",
-        "name": "Vanguard FTSE Pacific ETF",
-        "weight": 1.51,
-        "price": 111.91,
-        "shares": 14043.0
-      },
-      {
-        "ticker": "PAVE",
-        "name": "Global X US Infrastructure Development ETF",
-        "weight": 1.5,
-        "price": 54.94,
-        "shares": 28459.0
-      },
-      {
-        "ticker": "SBUX",
-        "name": "Starbucks Corp",
-        "weight": 1.5,
-        "price": 103.11,
-        "shares": 17568.0
-      },
-      {
-        "ticker": "HBM",
-        "name": "Hudbay Minerals Inc",
-        "weight": 1.48,
-        "price": 24.39,
-        "shares": 14645.0
-      },
-      {
-        "ticker": "RSI",
-        "name": "Rush Street Interactive Inc",
-        "weight": 1.48,
-        "price": 27.06,
-        "shares": 13253.0
-      },
-      {
-        "ticker": "CASY",
-        "name": "Casey's General Stores Inc",
-        "weight": 1.47,
-        "price": 825.02,
-        "shares": 1846.0
-      },
-      {
-        "ticker": "WEAT",
-        "name": "Teucrium Wheat Fund",
-        "weight": 1.47,
-        "price": 24.55,
-        "shares": 62335.0
-      },
-      {
-        "ticker": "AFRM",
-        "name": "Affirm Holdings Inc",
-        "weight": 1.47,
-        "price": 65.22,
-        "shares": 5450.0
-      },
-      {
-        "ticker": "DAR",
-        "name": "DARLING INGREDIENTS INC",
-        "weight": 1.47,
-        "price": 58.6,
-        "shares": 6086.0
-      },
-      {
-        "ticker": "TWLO",
-        "name": "Twilio Inc",
-        "weight": 1.47,
-        "price": 187.88,
-        "shares": 1899.0
-      },
-      {
-        "ticker": "SOYB",
-        "name": "Teucrium Soybean Fund",
-        "weight": 1.45,
-        "price": 25.06,
-        "shares": 60324.0
-      },
-      {
-        "ticker": "CSX",
-        "name": "CSX Corp",
-        "weight": 1.45,
-        "price": 45.52,
-        "shares": 38660.0
-      },
-      {
-        "ticker": "GEV",
-        "name": "GE Vernova Inc",
-        "weight": 1.45,
-        "price": 1038.74,
-        "shares": 1695.0
-      },
-      {
-        "ticker": "URI",
-        "name": "United Rentals Inc",
-        "weight": 1.45,
-        "price": 938.62,
-        "shares": 1870.0
-      },
-      {
-        "ticker": "PM",
-        "name": "Philip Morris International Inc",
-        "weight": 1.44,
-        "price": 188.99,
-        "shares": 9216.0
-      },
-      {
-        "ticker": "SPHR",
-        "name": "Sphere Entertainment Co",
-        "weight": 1.43,
-        "price": 129.37,
-        "shares": 2667.0
-      },
-      {
-        "ticker": "DBA",
-        "name": "Invesco DB Agriculture Fund",
-        "weight": 1.42,
-        "price": 27.56,
-        "shares": 53394.0
-      },
-      {
-        "ticker": "PLD",
-        "name": "Prologis Inc",
-        "weight": 1.41,
-        "price": 145.9,
-        "shares": 11739.0
-      },
-      {
-        "ticker": "PICK",
-        "name": "iShares MSCI Global Metals & Mining Producers ETF",
-        "weight": 1.4,
-        "price": 63.57,
-        "shares": 77588.0
-      },
-      {
-        "ticker": "CF",
-        "name": "CF Industries Holdings Inc",
-        "weight": 1.35,
-        "price": 121.7,
-        "shares": 13441.0
-      },
-      {
-        "ticker": "LIT",
-        "name": "Global X Lithium & Battery Tech ETF",
-        "weight": 1.31,
-        "price": 85.28,
-        "shares": 54385.0
-      },
-      {
-        "ticker": "CAVA",
-        "name": "Cava Group Inc",
-        "weight": 1.28,
-        "price": 80.42,
-        "shares": 3843.0
-      },
-      {
-        "ticker": "PM",
-        "name": "Philip Morris International Inc",
-        "weight": 1.24,
-        "price": 188.99,
-        "shares": 6832.0
-      },
-      {
-        "ticker": "RIO",
-        "name": "Rio Tinto PLC",
-        "weight": 1.24,
-        "price": 104.23,
-        "shares": 14427.0
-      },
-      {
-        "ticker": "BNY",
-        "name": "Bank of New York Mellon Corp/The",
-        "weight": 1.22,
-        "price": 139.15,
-        "shares": 10622.0
-      },
-      {
-        "ticker": "VLO",
-        "name": "Valero Energy Corp",
-        "weight": 1.19,
-        "price": 246.96,
-        "shares": 5851.0
-      },
-      {
-        "ticker": "EWY",
-        "name": "iShares MSCI South Korea ETF",
-        "weight": 1.15,
-        "price": 182.03,
-        "shares": 6571.0
-      },
-      {
-        "ticker": "ORCL",
-        "name": "Oracle Corp",
-        "weight": 1.14,
-        "price": 192.08,
-        "shares": 7202.0
-      },
-      {
-        "ticker": "IBIT",
-        "name": "iShares Bitcoin Trust ETF",
-        "weight": 1.12,
-        "price": 42.96,
-        "shares": 91985.0
-      },
-      {
-        "ticker": "ATI",
-        "name": "ATI Inc",
-        "weight": 1.11,
-        "price": 162.29,
-        "shares": 8306.0
-      },
-      {
-        "ticker": "MAR",
-        "name": "Marriott International Inc/MD",
-        "weight": 1.11,
-        "price": 369.15,
-        "shares": 3627.0
-      },
-      {
-        "ticker": "SNDK",
-        "name": "Sandisk Corp/DE",
-        "weight": 1.1,
-        "price": 1478.69,
-        "shares": 899.0
-      },
-      {
-        "ticker": "STX",
-        "name": "Seagate Technology Holdings PLC",
-        "weight": 1.1,
-        "price": 812.73,
-        "shares": 1636.0
-      },
-      {
-        "ticker": "AM",
-        "name": "Antero Midstream Corp",
-        "weight": 1.07,
-        "price": 22.17,
-        "shares": 49926.0
-      },
-      {
-        "ticker": "APD",
-        "name": "Air Products and Chemicals Inc",
-        "weight": 1.07,
-        "price": 289.47,
-        "shares": 3828.0
-      },
-      {
-        "ticker": "FCFS",
-        "name": "FirstCash Holdings Inc",
-        "weight": 1.07,
-        "price": 227.59,
-        "shares": 4907.0
-      },
-      {
-        "ticker": "EPD",
-        "name": "Enterprise Products Partners LP",
-        "weight": 1.06,
-        "price": 39.63,
-        "shares": 27716.0
-      },
-      {
-        "ticker": "FCFS",
-        "name": "FirstCash Holdings Inc",
-        "weight": 1.06,
-        "price": 227.59,
-        "shares": 5650.0
-      },
-      {
-        "ticker": "KLAC",
-        "name": "KLA CORP",
-        "weight": 1.06,
-        "price": 1888.38,
-        "shares": 681.0
-      },
-      {
-        "ticker": "GEV",
-        "name": "GE Vernova Inc",
-        "weight": 1.05,
-        "price": 1038.74,
-        "shares": 1047.0
-      },
-      {
-        "ticker": "SWBI",
-        "name": "Smith & Wesson Brands Inc",
-        "weight": 1.04,
-        "price": 15.47,
-        "shares": 16219.0
-      },
-      {
-        "ticker": "EWC",
-        "name": "ISHARES INC MSCI CDA INDEX",
-        "weight": 1.03,
-        "price": 58.51,
-        "shares": 18250.0
-      },
-      {
-        "ticker": "OUT",
-        "name": "Outfront Media Inc",
-        "weight": 1.03,
-        "price": 33.6,
-        "shares": 37185.0
-      },
-      {
-        "ticker": "ULS",
-        "name": "UL Solutions Inc",
-        "weight": 1.03,
-        "price": 102.85,
-        "shares": 12167.0
-      },
-      {
-        "ticker": "CHRD",
-        "name": "Chord Energy Corp",
-        "weight": 1.02,
-        "price": 143.98,
-        "shares": 1710.0
-      },
-      {
-        "ticker": "CIEN",
-        "name": "Ciena Corp",
-        "weight": 1.01,
-        "price": 583.74,
-        "shares": 2100.0
-      },
-      {
-        "ticker": "SXT",
-        "name": "Sensient Technologies Corp",
-        "weight": 1.01,
-        "price": 114.44,
-        "shares": 10654.0
-      },
-      {
-        "ticker": "VIK",
-        "name": "Viking Holdings Ltd",
-        "weight": 1.01,
-        "price": 84.23,
-        "shares": 14545.0
-      },
-      {
-        "ticker": "MEOH",
-        "name": "Methanex Corp",
-        "weight": 1.0,
-        "price": 60.12,
-        "shares": 4013.0
-      },
-      {
-        "ticker": "MRK",
-        "name": "Merck & Co Inc",
-        "weight": 1.0,
-        "price": 122.41,
-        "shares": 9881.0
-      },
-      {
-        "ticker": "LIN",
-        "name": "Linde PLC",
-        "weight": 0.99,
-        "price": 517.58,
-        "shares": 1978.0
-      },
-      {
-        "ticker": "KMI",
-        "name": "Kinder Morgan Inc",
-        "weight": 0.99,
-        "price": 33.79,
-        "shares": 35509.0
-      },
-      {
-        "ticker": "NORW",
-        "name": "Global X MSCI Norway ETF",
-        "weight": 0.98,
-        "price": 38.9,
-        "shares": 26179.0
-      },
-      {
-        "ticker": "WELL",
-        "name": "Welltower Inc",
-        "weight": 0.98,
-        "price": 216.17,
-        "shares": 4717.0
-      },
-      {
-        "ticker": "XYZ",
-        "name": "Block Inc",
-        "weight": 0.98,
-        "price": 68.08,
-        "shares": 3472.0
-      },
-      {
-        "ticker": "XLI",
-        "name": "State Street Industrial Select Sector SPDR ETF",
-        "weight": 0.97,
-        "price": 171.77,
-        "shares": 5868.0
-      },
-      {
-        "ticker": "MRVL",
-        "name": "MARVELL TECHNOLOGY INC",
-        "weight": 0.97,
-        "price": 196.33,
-        "shares": 5963.0
-      },
-      {
-        "ticker": "CVI",
-        "name": "CVR Energy Inc",
-        "weight": 0.95,
-        "price": 32.45,
-        "shares": 7100.0
-      },
-      {
-        "ticker": "CASY",
-        "name": "Casey's General Stores Inc",
-        "weight": 0.94,
-        "price": 825.02,
-        "shares": 1373.0
-      },
-      {
-        "ticker": "TTWO",
-        "name": "Take-Two Interactive Software Inc",
-        "weight": 0.91,
-        "price": 227.55,
-        "shares": 4827.0
-      },
-      {
-        "ticker": "GFS",
-        "name": "GLOBALFOUNDRIES Inc",
-        "weight": 0.87,
-        "price": 85.64,
-        "shares": 12285.0
-      },
-      {
-        "ticker": "TWLO",
-        "name": "Twilio Inc",
-        "weight": 0.79,
-        "price": 187.88,
-        "shares": 5070.0
-      },
-      {
-        "ticker": "KO",
-        "name": "Coca-Cola Co/The",
-        "weight": 0.78,
-        "price": 81.48,
-        "shares": 9947.0
-      },
-      {
-        "ticker": "HTEC",
-        "name": "ROBO Global R Healthcare Technology and Innovation ETF",
-        "weight": 0.77,
-        "price": 34.1658,
-        "shares": 23289.0
-      },
-      {
-        "ticker": "EZPW",
-        "name": "EZCORP Inc",
-        "weight": 0.76,
-        "price": 33.79,
-        "shares": 23281.0
-      },
-      {
-        "ticker": "GLW",
-        "name": "Corning Inc",
-        "weight": 0.76,
-        "price": 194.05,
-        "shares": 4744.0
-      },
-      {
-        "ticker": "SWBI",
-        "name": "Smith & Wesson Brands Inc",
-        "weight": 0.75,
-        "price": 15.47,
-        "shares": 50342.0
-      },
-      {
-        "ticker": "CZR",
-        "name": "Caesars Entertainment Inc",
-        "weight": 0.75,
-        "price": 28.47,
-        "shares": 31692.0
-      },
-      {
-        "ticker": "CSCO",
-        "name": "Cisco Systems Inc",
-        "weight": 0.71,
-        "price": 120.41,
-        "shares": 7187.0
-      },
-      {
-        "ticker": "ZM",
-        "name": "Zoom Communications Inc",
-        "weight": 0.59,
-        "price": 105.64,
-        "shares": 6781.0
-      },
-      {
-        "ticker": "COHR",
-        "name": "Coherent Corp",
-        "weight": 0.53,
-        "price": 377.57,
-        "shares": 1685.0
-      },
-      {
-        "ticker": "TXG",
-        "name": "10X Genomics Inc",
-        "weight": 0.49,
-        "price": 23.68,
-        "shares": 24912.0
-      },
-      {
-        "ticker": "CAVA",
-        "name": "Cava Group Inc",
-        "weight": 0.41,
-        "price": 80.42,
-        "shares": 6135.0
-      },
-      {
-        "ticker": "CARR",
-        "name": "Carrier Global Corp",
-        "weight": 0.01,
-        "price": 63.14,
-        "shares": 198.0
-      },
-      {
-        "ticker": "EWQ",
-        "name": "ISHARES INC MSCI FRANCE",
-        "weight": -0.51,
-        "price": 45.17,
-        "shares": -11634.0
-      },
-      {
-        "ticker": "FLO",
-        "name": "Flowers Foods Inc",
-        "weight": -0.57,
-        "price": 7.94,
-        "shares": -17434.0
-      },
-      {
-        "ticker": "HCA",
-        "name": "HCA Healthcare Inc",
-        "weight": -0.72,
-        "price": 394.07,
-        "shares": -1908.0
-      },
-      {
-        "ticker": "CHTR",
-        "name": "Charter Communications Inc",
-        "weight": -0.75,
-        "price": 145.15,
-        "shares": -5349.0
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms Inc",
-        "weight": -0.77,
-        "price": 610.26,
-        "shares": -1308.0
-      },
-      {
-        "ticker": "USPH",
-        "name": "US Physical Therapy Inc",
-        "weight": -0.77,
-        "price": 61.96,
-        "shares": -12859.0
-      },
-      {
-        "ticker": "DDS",
-        "name": "Dillard's Inc",
-        "weight": -0.78,
-        "price": 561.8,
-        "shares": -1445.0
-      },
-      {
-        "ticker": "SYY",
-        "name": "Sysco Corp",
-        "weight": -0.78,
-        "price": 76.29,
-        "shares": -10622.0
-      },
-      {
-        "ticker": "BRBR",
-        "name": "BellRing Brands Inc",
-        "weight": -0.83,
-        "price": 8.91,
-        "shares": -96780.0
-      },
-      {
-        "ticker": "RBLX",
-        "name": "ROBLOX Corp",
-        "weight": -0.85,
-        "price": 48.16,
-        "shares": -18413.0
-      },
-      {
-        "ticker": "LCID",
-        "name": "Lucid Group Inc",
-        "weight": -0.92,
-        "price": 5.84,
-        "shares": -38097.0
-      },
-      {
-        "ticker": "RDDT",
-        "name": "Reddit Inc",
-        "weight": -0.93,
-        "price": 141.67,
-        "shares": -1587.0
-      },
-      {
-        "ticker": "UTWO",
-        "name": "F/m US Treasury 2 Year Note ETF",
-        "weight": -0.94,
-        "price": 48.095,
-        "shares": -20380.0
-      },
-      {
-        "ticker": "BALL",
-        "name": "Ball Corp",
-        "weight": -0.94,
-        "price": 56.51,
-        "shares": -4039.0
-      },
-      {
-        "ticker": "FLUT",
-        "name": "Flutter Entertainment PLC",
-        "weight": -0.94,
-        "price": 97.38,
-        "shares": -2346.0
-      },
-      {
-        "ticker": "TAP",
-        "name": "Molson Coors Beverage Co",
-        "weight": -0.94,
-        "price": 42.55,
-        "shares": -5371.0
-      },
-      {
-        "ticker": "IDX",
-        "name": "VanEck Indonesia Index ETF",
-        "weight": -0.96,
-        "price": 11.04,
-        "shares": -90187.0
-      },
-      {
-        "ticker": "DPZ",
-        "name": "Domino's Pizza Inc",
-        "weight": -0.96,
-        "price": 316.52,
-        "shares": -733.0
-      },
-      {
-        "ticker": "BRBR",
-        "name": "BellRing Brands Inc",
-        "weight": -0.97,
-        "price": 8.91,
-        "shares": -26251.0
-      },
-      {
-        "ticker": "SYY",
-        "name": "Sysco Corp",
-        "weight": -0.98,
-        "price": 76.29,
-        "shares": -3097.0
-      },
-      {
-        "ticker": "DASH",
-        "name": "DoorDash Inc",
-        "weight": -0.99,
-        "price": 160.25,
-        "shares": -1502.0
-      },
-      {
-        "ticker": "GIS",
-        "name": "General Mills Inc",
-        "weight": -0.99,
-        "price": 33.69,
-        "shares": -7149.0
-      },
-      {
-        "ticker": "PLAY",
-        "name": "Dave & Buster's Entertainment Inc",
-        "weight": -0.99,
-        "price": 11.75,
-        "shares": -20352.0
-      },
-      {
-        "ticker": "EWG",
-        "name": "ISHARES INC MSCI GERMAN",
-        "weight": -1.0,
-        "price": 42.91,
-        "shares": -24230.0
-      },
-      {
-        "ticker": "HYG",
-        "name": "iShares iBoxx USD High Yield Corporate Bond ETF",
-        "weight": -1.0,
-        "price": 79.91,
-        "shares": -13009.0
-      },
-      {
-        "ticker": "JNK",
-        "name": "State Street SPDR Bloomberg High Yield Bond ETF",
-        "weight": -1.0,
-        "price": 96.25,
-        "shares": -10805.0
-      },
-      {
-        "ticker": "CMG",
-        "name": "Chipotle Mexican Grill Inc",
-        "weight": -1.0,
-        "price": 32.89,
-        "shares": -7350.0
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms Inc",
-        "weight": -1.0,
-        "price": 610.26,
-        "shares": -395.0
-      },
-      {
-        "ticker": "NKE",
-        "name": "NIKE Inc",
-        "weight": -1.0,
-        "price": 44.67,
-        "shares": -5421.0
-      },
-      {
-        "ticker": "EPHE",
-        "name": "iShares MSCI Philippines ETF",
-        "weight": -1.01,
-        "price": 24.72,
-        "shares": -42278.0
-      },
-      {
-        "ticker": "JETS",
-        "name": "US Global Jets ETF",
-        "weight": -1.02,
-        "price": 27.13,
-        "shares": -39077.0
-      },
-      {
-        "ticker": "BKNG",
-        "name": "Booking Holdings Inc",
-        "weight": -1.02,
-        "price": 161.06,
-        "shares": -1530.0
-      },
-      {
-        "ticker": "CHTR",
-        "name": "Charter Communications Inc",
-        "weight": -1.02,
-        "price": 145.15,
-        "shares": -1706.0
-      },
-      {
-        "ticker": "IDXX",
-        "name": "IDEXX Laboratories Inc",
-        "weight": -1.02,
-        "price": 559.37,
-        "shares": -441.0
-      },
-      {
-        "ticker": "LUV",
-        "name": "Southwest Airlines Co",
-        "weight": -1.02,
-        "price": 40.86,
-        "shares": -6030.0
-      },
-      {
-        "ticker": "USPH",
-        "name": "US Physical Therapy Inc",
-        "weight": -1.03,
-        "price": 61.96,
-        "shares": -4020.0
-      },
-      {
-        "ticker": "SMPL",
-        "name": "Simply Good Foods Co/The",
-        "weight": -1.04,
-        "price": 11.86,
-        "shares": -21132.0
-      },
-      {
-        "ticker": "DDS",
-        "name": "Dillard's Inc",
-        "weight": -1.05,
-        "price": 561.8,
-        "shares": -451.0
-      },
-      {
-        "ticker": "RBLX",
-        "name": "ROBLOX Corp",
-        "weight": -1.05,
-        "price": 48.16,
-        "shares": -5260.0
-      },
-      {
-        "ticker": "SNAP",
-        "name": "Snap Inc",
-        "weight": -1.05,
-        "price": 5.72,
-        "shares": -44537.0
-      },
-      {
-        "ticker": "ONON",
-        "name": "On Holding AG",
-        "weight": -1.06,
-        "price": 39.81,
-        "shares": -6448.0
-      },
-      {
-        "ticker": "WING",
-        "name": "Wingstop Inc",
-        "weight": -1.11,
-        "price": 140.41,
-        "shares": -1921.0
-      },
-      {
-        "ticker": "KSS",
-        "name": "Kohl's Corp",
-        "weight": -1.13,
-        "price": 13.06,
-        "shares": -20904.0
-      },
-      {
-        "ticker": "IEF",
-        "name": "iShares 7-10 Year Treasury Bond ETF",
-        "weight": -1.44,
-        "price": 93.88,
-        "shares": -15907.0
-      },
-      {
-        "ticker": "INDA",
-        "name": "iShares MSCI India ETF",
-        "weight": -2.02,
-        "price": 48.39,
-        "shares": -43361.0
-      },
-      {
-        "ticker": "ITB",
-        "name": "ISHARES TRUST DJ HOME CONSTN",
-        "weight": -2.08,
-        "price": 90.97,
-        "shares": -23706.0
-      },
-      {
-        "ticker": "ZROZ",
-        "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
-        "weight": -2.39,
-        "price": 61.38,
-        "shares": -40500.0
-      },
-      {
-        "ticker": "TLT",
-        "name": "iShares 20+ Year Treasury Bond ETF",
-        "weight": -2.42,
-        "price": 84.68,
-        "shares": -29651.0
-      },
-      {
-        "ticker": "XTEN",
-        "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
-        "weight": -2.42,
-        "price": 45.0,
-        "shares": -55913.0
+  "ham_holdings": [
+    {
+      "ticker": "CERY",
+      "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
+      "accounts": {
+        "HEFT": 0.1396
       }
-    ]
-  },
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc",
+      "accounts": {
+        "HELS": 0.0313,
+        "HGRO": 0.0919
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc",
+      "accounts": {
+        "HELS": 0.0302,
+        "HGRO": 0.0795
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corp",
+      "accounts": {
+        "HGRO": 0.0916
+      }
+    },
+    {
+      "ticker": "UUP",
+      "name": "Invesco DB US Dollar Index Bullish Fund",
+      "accounts": {
+        "HECA": 0.0909
+      }
+    },
+    {
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "accounts": {
+        "HEFT": 0.0902
+      }
+    },
+    {
+      "ticker": "OIH",
+      "name": "VanEck Oil Services ETF",
+      "accounts": {
+        "HECA": 0.0481,
+        "HEFT": 0.0412
+      }
+    },
+    {
+      "ticker": "DBMF",
+      "name": "iMGP DBi Managed Futures Strategy ETF",
+      "accounts": {
+        "HECA": 0.08560000000000001
+      }
+    },
+    {
+      "ticker": "SLX",
+      "name": "VanEck Steel ETF",
+      "accounts": {
+        "HECA": 0.0538,
+        "HEFT": 0.015300000000000001
+      }
+    },
+    {
+      "ticker": "XTL",
+      "name": "State Street SPDR S&P Telecom ETF",
+      "accounts": {
+        "HECA": 0.062400000000000004
+      }
+    },
+    {
+      "ticker": "VTIP",
+      "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
+      "accounts": {
+        "HECA": 0.061399999999999996
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc",
+      "accounts": {
+        "HGRO": 0.0599
+      }
+    },
+    {
+      "ticker": "JAAA",
+      "name": "Janus Henderson AAA CLO ETF",
+      "accounts": {
+        "HECA": 0.0596
+      }
+    },
+    {
+      "ticker": "DBJP",
+      "name": "Xtrackers MSCI Japan Hedged Equity ETF",
+      "accounts": {
+        "HECA": 0.057999999999999996
+      }
+    },
+    {
+      "ticker": "FWD",
+      "name": "AB Disruptors ETF",
+      "accounts": {
+        "HECA": 0.0557
+      }
+    },
+    {
+      "ticker": "IHF",
+      "name": "iShares U.S. Healthcare Providers ETF",
+      "accounts": {
+        "HECA": 0.0529
+      }
+    },
+    {
+      "ticker": "VYM",
+      "name": "Vanguard High Dividend Yield ETF",
+      "accounts": {
+        "HECA": 0.049699999999999994
+      }
+    },
+    {
+      "ticker": "CASY",
+      "name": "Casey's General Stores Inc",
+      "accounts": {
+        "HEFT": 0.0147,
+        "HELS": 0.024,
+        "HGRO": 0.009399999999999999
+      }
+    },
+    {
+      "ticker": "DBB",
+      "name": "Invesco DB Base Metals Fund",
+      "accounts": {
+        "HECA": 0.046900000000000004
+      }
+    },
+    {
+      "ticker": "ARTY",
+      "name": "iShares Future AI & Tech ETF",
+      "accounts": {
+        "HEFT": 0.0453
+      }
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova Inc",
+      "accounts": {
+        "HEFT": 0.0105,
+        "HELS": 0.02,
+        "HGRO": 0.014499999999999999
+      }
+    },
+    {
+      "ticker": "CSX",
+      "name": "CSX Corp",
+      "accounts": {
+        "HELS": 0.029300000000000003,
+        "HGRO": 0.014499999999999999
+      }
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials Inc",
+      "accounts": {
+        "HELS": 0.0264,
+        "HGRO": 0.0159
+      }
+    },
+    {
+      "ticker": "FCFS",
+      "name": "FirstCash Holdings Inc",
+      "accounts": {
+        "HEFT": 0.010700000000000001,
+        "HELS": 0.020499999999999997,
+        "HGRO": 0.0106
+      }
+    },
+    {
+      "ticker": "IDMO",
+      "name": "Invesco S&P International Developed Momentum ETF",
+      "accounts": {
+        "HECA": 0.0408
+      }
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group Inc",
+      "accounts": {
+        "HELS": 0.0202,
+        "HGRO": 0.0206
+      }
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel Corp",
+      "accounts": {
+        "HEFT": 0.021400000000000002,
+        "HELS": 0.018799999999999997
+      }
+    },
+    {
+      "ticker": "URI",
+      "name": "United Rentals Inc",
+      "accounts": {
+        "HELS": 0.025,
+        "HGRO": 0.014499999999999999
+      }
+    },
+    {
+      "ticker": "TAN",
+      "name": "Invesco Solar ETF",
+      "accounts": {
+        "HECA": 0.0374
+      }
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar Inc",
+      "accounts": {
+        "HELS": 0.0204,
+        "HGRO": 0.016
+      }
+    },
+    {
+      "ticker": "FESM",
+      "name": "Fidelity Enhanced Small Cap Core ETF",
+      "accounts": {
+        "HECA": 0.0361
+      }
+    },
+    {
+      "ticker": "ULS",
+      "name": "UL Solutions Inc",
+      "accounts": {
+        "HELS": 0.0258,
+        "HGRO": 0.0103
+      }
+    },
+    {
+      "ticker": "RIG",
+      "name": "Transocean Ltd",
+      "accounts": {
+        "HEFT": 0.0158,
+        "HELS": 0.0196
+      }
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco Systems Inc",
+      "accounts": {
+        "HELS": 0.028300000000000002,
+        "HGRO": 0.0070999999999999995
+      }
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks Corp",
+      "accounts": {
+        "HELS": 0.0192,
+        "HGRO": 0.015
+      }
+    },
+    {
+      "ticker": "SXT",
+      "name": "Sensient Technologies Corp",
+      "accounts": {
+        "HELS": 0.0222,
+        "HGRO": 0.0101
+      }
+    },
+    {
+      "ticker": "DRAM",
+      "name": "Roundhill Memory ETF",
+      "accounts": {
+        "HEFT": 0.031
+      }
+    },
+    {
+      "ticker": "XLE",
+      "name": "State Street Energy Select Sector SPDR ETF",
+      "accounts": {
+        "HEFT": 0.0308
+      }
+    },
+    {
+      "ticker": "VIK",
+      "name": "Viking Holdings Ltd",
+      "accounts": {
+        "HELS": 0.0207,
+        "HGRO": 0.0101
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom Inc",
+      "accounts": {
+        "HGRO": 0.0296
+      }
+    },
+    {
+      "ticker": "MRVL",
+      "name": "MARVELL TECHNOLOGY INC",
+      "accounts": {
+        "HELS": 0.0187,
+        "HGRO": 0.0097
+      }
+    },
+    {
+      "ticker": "LLY",
+      "name": "Eli Lilly & Co",
+      "accounts": {
+        "HGRO": 0.028399999999999998
+      }
+    },
+    {
+      "ticker": "CIBR",
+      "name": "First Trust NASDAQ Cybersecurity ETF",
+      "accounts": {
+        "HEFT": 0.0276
+      }
+    },
+    {
+      "ticker": "LIN",
+      "name": "Linde PLC",
+      "accounts": {
+        "HEFT": 0.009899999999999999,
+        "HGRO": 0.0171
+      }
+    },
+    {
+      "ticker": "MAR",
+      "name": "Marriott International Inc/MD",
+      "accounts": {
+        "HELS": 0.0158,
+        "HGRO": 0.0111
+      }
+    },
+    {
+      "ticker": "PM",
+      "name": "Philip Morris International Inc",
+      "accounts": {
+        "HEFT": 0.0124,
+        "HGRO": 0.0144
+      }
+    },
+    {
+      "ticker": "OUT",
+      "name": "Outfront Media Inc",
+      "accounts": {
+        "HELS": 0.016,
+        "HGRO": 0.0103
+      }
+    },
+    {
+      "ticker": "ROKU",
+      "name": "Roku Inc",
+      "accounts": {
+        "HELS": 0.0263
+      }
+    },
+    {
+      "ticker": "JAZZ",
+      "name": "Jazz Pharmaceuticals PLC",
+      "accounts": {
+        "HELS": 0.026099999999999998
+      }
+    },
+    {
+      "ticker": "TTWO",
+      "name": "Take-Two Interactive Software Inc",
+      "accounts": {
+        "HELS": 0.0165,
+        "HGRO": 0.0091
+      }
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs Group Inc/The",
+      "accounts": {
+        "HGRO": 0.0231
+      }
+    },
+    {
+      "ticker": "CZR",
+      "name": "Caesars Entertainment Inc",
+      "accounts": {
+        "HELS": 0.0155,
+        "HGRO": 0.0075
+      }
+    },
+    {
+      "ticker": "TWLO",
+      "name": "Twilio Inc",
+      "accounts": {
+        "HELS": 0.0147,
+        "HGRO": 0.0079
+      }
+    },
+    {
+      "ticker": "MKSI",
+      "name": "MKS Inc",
+      "accounts": {
+        "HELS": 0.022400000000000003
+      }
+    },
+    {
+      "ticker": "CBOE",
+      "name": "Cboe Global Markets Inc",
+      "accounts": {
+        "HGRO": 0.0222
+      }
+    },
+    {
+      "ticker": "ENB",
+      "name": "Enbridge Inc",
+      "accounts": {
+        "HELS": 0.0215
+      }
+    },
+    {
+      "ticker": "FITE",
+      "name": "State Street SPDR S&P Kensho Future Security ETF",
+      "accounts": {
+        "HEFT": 0.021400000000000002
+      }
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices Inc",
+      "accounts": {
+        "HGRO": 0.0212
+      }
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc",
+      "accounts": {
+        "HGRO": 0.0212
+      }
+    },
+    {
+      "ticker": "JBHT",
+      "name": "JB Hunt Transport Services Inc",
+      "accounts": {
+        "HELS": 0.0209
+      }
+    },
+    {
+      "ticker": "IHE",
+      "name": "iShares U.S. Pharmaceuticals ETF",
+      "accounts": {
+        "HEFT": 0.0207
+      }
+    },
+    {
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares",
+      "accounts": {
+        "HEFT": 0.0197
+      }
+    },
+    {
+      "ticker": "MUSA",
+      "name": "Murphy USA Inc",
+      "accounts": {
+        "HELS": 0.0197
+      }
+    },
+    {
+      "ticker": "TSN",
+      "name": "Tyson Foods Inc",
+      "accounts": {
+        "HELS": 0.0196
+      }
+    },
+    {
+      "ticker": "XAR",
+      "name": "State Street SPDR S&P Aerospace & Defense ETF",
+      "accounts": {
+        "HEFT": 0.0195
+      }
+    },
+    {
+      "ticker": "AVEM",
+      "name": "Avantis Emerging Markets Equity ETF",
+      "accounts": {
+        "HEFT": 0.0194
+      }
+    },
+    {
+      "ticker": "NOV",
+      "name": "NOV Inc",
+      "accounts": {
+        "HELS": 0.0194
+      }
+    },
+    {
+      "ticker": "HAL",
+      "name": "Halliburton Co",
+      "accounts": {
+        "HGRO": 0.0194
+      }
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital Corp",
+      "accounts": {
+        "HELS": 0.018600000000000002
+      }
+    },
+    {
+      "ticker": "SWBI",
+      "name": "Smith & Wesson Brands Inc",
+      "accounts": {
+        "HEFT": 0.0075,
+        "HELS": 0.0104
+      }
+    },
+    {
+      "ticker": "CAVA",
+      "name": "Cava Group Inc",
+      "accounts": {
+        "HELS": 0.0128,
+        "HGRO": 0.0040999999999999995
+      }
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices Inc",
+      "accounts": {
+        "HGRO": 0.0169
+      }
+    },
+    {
+      "ticker": "NDAQ",
+      "name": "Nasdaq Inc",
+      "accounts": {
+        "HGRO": 0.0165
+      }
+    },
+    {
+      "ticker": "CRCL",
+      "name": "Circle Internet Group Inc",
+      "accounts": {
+        "HELS": 0.016200000000000003
+      }
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria Group Inc",
+      "accounts": {
+        "HEFT": 0.0161
+      }
+    },
+    {
+      "ticker": "ADM",
+      "name": "Archer-Daniels-Midland Co",
+      "accounts": {
+        "HEFT": 0.0159
+      }
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart Inc",
+      "accounts": {
+        "HEFT": 0.0158
+      }
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup Inc",
+      "accounts": {
+        "HGRO": 0.015700000000000002
+      }
+    },
+    {
+      "ticker": "GLASF",
+      "name": "Glass House Brands Inc",
+      "accounts": {
+        "HELS": 0.015600000000000001
+      }
+    },
+    {
+      "ticker": "LAMR",
+      "name": "Lamar Advertising Co",
+      "accounts": {
+        "HELS": 0.015600000000000001
+      }
+    },
+    {
+      "ticker": "ROBO",
+      "name": "ROBO Global Robotics and Automation Index ETF",
+      "accounts": {
+        "HEFT": 0.0155
+      }
+    },
+    {
+      "ticker": "XBI",
+      "name": "State Street SPDR S&P Biotech ETF",
+      "accounts": {
+        "HEFT": 0.0155
+      }
+    },
+    {
+      "ticker": "CDNS",
+      "name": "Cadence Design Systems Inc",
+      "accounts": {
+        "HELS": 0.0154
+      }
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum Corp",
+      "accounts": {
+        "HELS": 0.015300000000000001
+      }
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corp",
+      "accounts": {
+        "HELS": 0.015300000000000001
+      }
+    },
+    {
+      "ticker": "EWW",
+      "name": "iShares MSCI Mexico ETF",
+      "accounts": {
+        "HEFT": 0.0152
+      }
+    },
+    {
+      "ticker": "NVO",
+      "name": "Novo Nordisk A/S",
+      "accounts": {
+        "HELS": 0.0152
+      }
+    },
+    {
+      "ticker": "HGER",
+      "name": "Harbor Commodity All Weather Strategy ETF",
+      "accounts": {
+        "HECA": 0.0151
+      }
+    },
+    {
+      "ticker": "VPL",
+      "name": "Vanguard FTSE Pacific ETF",
+      "accounts": {
+        "HEFT": 0.0151
+      }
+    },
+    {
+      "ticker": "PAVE",
+      "name": "Global X US Infrastructure Development ETF",
+      "accounts": {
+        "HEFT": 0.015
+      }
+    },
+    {
+      "ticker": "HBM",
+      "name": "Hudbay Minerals Inc",
+      "accounts": {
+        "HELS": 0.0148
+      }
+    },
+    {
+      "ticker": "RSI",
+      "name": "Rush Street Interactive Inc",
+      "accounts": {
+        "HELS": 0.0148
+      }
+    },
+    {
+      "ticker": "WEAT",
+      "name": "Teucrium Wheat Fund",
+      "accounts": {
+        "HEFT": 0.0147
+      }
+    },
+    {
+      "ticker": "AFRM",
+      "name": "Affirm Holdings Inc",
+      "accounts": {
+        "HELS": 0.0147
+      }
+    },
+    {
+      "ticker": "DAR",
+      "name": "DARLING INGREDIENTS INC",
+      "accounts": {
+        "HELS": 0.0147
+      }
+    },
+    {
+      "ticker": "SOYB",
+      "name": "Teucrium Soybean Fund",
+      "accounts": {
+        "HEFT": 0.014499999999999999
+      }
+    },
+    {
+      "ticker": "SPHR",
+      "name": "Sphere Entertainment Co",
+      "accounts": {
+        "HELS": 0.0143
+      }
+    },
+    {
+      "ticker": "DBA",
+      "name": "Invesco DB Agriculture Fund",
+      "accounts": {
+        "HEFT": 0.014199999999999999
+      }
+    },
+    {
+      "ticker": "PLD",
+      "name": "Prologis Inc",
+      "accounts": {
+        "HGRO": 0.0141
+      }
+    },
+    {
+      "ticker": "PICK",
+      "name": "iShares MSCI Global Metals & Mining Producers ETF",
+      "accounts": {
+        "HECA": 0.013999999999999999
+      }
+    },
+    {
+      "ticker": "CF",
+      "name": "CF Industries Holdings Inc",
+      "accounts": {
+        "HGRO": 0.013500000000000002
+      }
+    },
+    {
+      "ticker": "LIT",
+      "name": "Global X Lithium & Battery Tech ETF",
+      "accounts": {
+        "HECA": 0.0131
+      }
+    },
+    {
+      "ticker": "RIO",
+      "name": "Rio Tinto PLC",
+      "accounts": {
+        "HGRO": 0.0124
+      }
+    },
+    {
+      "ticker": "BNY",
+      "name": "Bank of New York Mellon Corp/The",
+      "accounts": {
+        "HGRO": 0.012199999999999999
+      }
+    },
+    {
+      "ticker": "VLO",
+      "name": "Valero Energy Corp",
+      "accounts": {
+        "HGRO": 0.011899999999999999
+      }
+    },
+    {
+      "ticker": "EWY",
+      "name": "iShares MSCI South Korea ETF",
+      "accounts": {
+        "HEFT": 0.0115
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle Corp",
+      "accounts": {
+        "HGRO": 0.011399999999999999
+      }
+    },
+    {
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust ETF",
+      "accounts": {
+        "HECA": 0.011200000000000002
+      }
+    },
+    {
+      "ticker": "ATI",
+      "name": "ATI Inc",
+      "accounts": {
+        "HGRO": 0.0111
+      }
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk Corp/DE",
+      "accounts": {
+        "HGRO": 0.011000000000000001
+      }
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology Holdings PLC",
+      "accounts": {
+        "HGRO": 0.011000000000000001
+      }
+    },
+    {
+      "ticker": "AM",
+      "name": "Antero Midstream Corp",
+      "accounts": {
+        "HEFT": 0.010700000000000001
+      }
+    },
+    {
+      "ticker": "APD",
+      "name": "Air Products and Chemicals Inc",
+      "accounts": {
+        "HEFT": 0.010700000000000001
+      }
+    },
+    {
+      "ticker": "EPD",
+      "name": "Enterprise Products Partners LP",
+      "accounts": {
+        "HEFT": 0.0106
+      }
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA CORP",
+      "accounts": {
+        "HGRO": 0.0106
+      }
+    },
+    {
+      "ticker": "EWC",
+      "name": "ISHARES INC MSCI CDA INDEX",
+      "accounts": {
+        "HEFT": 0.0103
+      }
+    },
+    {
+      "ticker": "CHRD",
+      "name": "Chord Energy Corp",
+      "accounts": {
+        "HELS": 0.0102
+      }
+    },
+    {
+      "ticker": "CIEN",
+      "name": "Ciena Corp",
+      "accounts": {
+        "HGRO": 0.0101
+      }
+    },
+    {
+      "ticker": "MEOH",
+      "name": "Methanex Corp",
+      "accounts": {
+        "HELS": 0.01
+      }
+    },
+    {
+      "ticker": "MRK",
+      "name": "Merck & Co Inc",
+      "accounts": {
+        "HGRO": 0.01
+      }
+    },
+    {
+      "ticker": "KMI",
+      "name": "Kinder Morgan Inc",
+      "accounts": {
+        "HGRO": 0.009899999999999999
+      }
+    },
+    {
+      "ticker": "NORW",
+      "name": "Global X MSCI Norway ETF",
+      "accounts": {
+        "HEFT": 0.0098
+      }
+    },
+    {
+      "ticker": "WELL",
+      "name": "Welltower Inc",
+      "accounts": {
+        "HEFT": 0.0098
+      }
+    },
+    {
+      "ticker": "XYZ",
+      "name": "Block Inc",
+      "accounts": {
+        "HELS": 0.0098
+      }
+    },
+    {
+      "ticker": "XLI",
+      "name": "State Street Industrial Select Sector SPDR ETF",
+      "accounts": {
+        "HEFT": 0.0097
+      }
+    },
+    {
+      "ticker": "CVI",
+      "name": "CVR Energy Inc",
+      "accounts": {
+        "HELS": 0.0095
+      }
+    },
+    {
+      "ticker": "GFS",
+      "name": "GLOBALFOUNDRIES Inc",
+      "accounts": {
+        "HGRO": 0.0087
+      }
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola Co/The",
+      "accounts": {
+        "HEFT": 0.0078000000000000005
+      }
+    },
+    {
+      "ticker": "HTEC",
+      "name": "ROBO Global R Healthcare Technology and Innovation ETF",
+      "accounts": {
+        "HEFT": 0.0077
+      }
+    },
+    {
+      "ticker": "EZPW",
+      "name": "EZCORP Inc",
+      "accounts": {
+        "HEFT": 0.0076
+      }
+    },
+    {
+      "ticker": "GLW",
+      "name": "Corning Inc",
+      "accounts": {
+        "HGRO": 0.0076
+      }
+    },
+    {
+      "ticker": "ZM",
+      "name": "Zoom Communications Inc",
+      "accounts": {
+        "HGRO": 0.0059
+      }
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent Corp",
+      "accounts": {
+        "HGRO": 0.0053
+      }
+    },
+    {
+      "ticker": "TXG",
+      "name": "10X Genomics Inc",
+      "accounts": {
+        "HGRO": 0.0049
+      }
+    },
+    {
+      "ticker": "CARR",
+      "name": "Carrier Global Corp",
+      "accounts": {
+        "HGRO": 0.0001
+      }
+    }
+  ],
   "rta": {
     "recent_trades": [
       {
@@ -6144,5 +5606,6 @@
         "curr_weight": 1.19
       }
     }
-  }
+  },
+  "ham_holdings_date": "2026-05-26"
 }
