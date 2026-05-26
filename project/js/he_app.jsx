@@ -928,11 +928,10 @@ const App = () => {
         )}
         {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
         {tab==='etfpro'   && <ETFProTab macroCtx={macroCtx} />}
-        {tab==='sizing'   && (typeof SizingTab !== 'undefined'
-          ? <SizingTab macroCtx={macroCtx} />
+        {tab==='sizing'   && (window.SizingTab
+          ? React.createElement(window.SizingTab, {macroCtx})
           : <div style={{padding:'40px 24px',fontFamily:'IBM Plex Mono,monospace',fontSize:13,color:'#C8302A'}}>
-              ⚠ SizingTab failed to load — he_sizing.jsx not found or has a compile error.
-              Check browser console and verify the file is deployed to GitHub.
+              ⚠ Position Sizing tab failed to load. Try a hard refresh (Ctrl+Shift+R).
             </div>
         )}
         {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
