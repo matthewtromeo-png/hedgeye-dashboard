@@ -88,6 +88,7 @@ window.HE.QUADS = {
 // ── ETF Re-Ranks ─────────────────────────────────────────────────────
 // Auto-generated from 28 Portfolio Solutions PDFs (4/8 → 5/21) — newest first
 window.HE.ETF_RERANKS = [
+  {date:'5/26',topMovers:[{ticker:'ROBO',pts:'+14'},{ticker:'OIH',pts:'+11'},{ticker:'VYM',pts:'+10'}]},
   {date:'5/21',topMovers:[{ticker:'VXF',pts:'+10'},{ticker:'QTUM',pts:'+9'},{ticker:'CNXT',pts:'+8'}]},
   {date:'5/20',topMovers:[{ticker:'OAEM',pts:'+13'},{ticker:'CNXT',pts:'+10'},{ticker:'VXF',pts:'+9'}]},
   {date:'5/19',topMovers:[{ticker:'CNXT',pts:'+14'},{ticker:'XLI',pts:'+9'},{ticker:'OAEM',pts:'+8'}]},
@@ -120,13 +121,13 @@ window.HE.ETF_RERANKS = [
 
 // ── ETF Streak (top-3 appearances, 4/8→5/21, 28 trading days) ────────
 window.HE.ETF_STREAK = {
-  dates: ['4/8','4/9','4/10','4/13','4/14','4/16','4/17','4/20','4/21','4/22','4/23','4/28','4/29','4/30','5/4','5/5','5/6','5/7','5/8','5/11','5/12','5/13','5/14','5/15','5/18','5/19','5/20','5/21'],
+  dates: ['4/8','4/9','4/10','4/13','4/14','4/16','4/17','4/20','4/21','4/22','4/23','4/28','4/29','4/30','5/4','5/5','5/6','5/7','5/8','5/11','5/12','5/13','5/14','5/15','5/18','5/19','5/20','5/21','5/26'],
   tickers: {
     XTL:  {desc:'S&P Telecom ETF',appearances:8,  data:{'4/8':2,'4/9':1,'4/10':1,'4/13':3,'4/21':2,'4/22':3,'4/23':2,'4/28':3}},
     AAAU: {desc:'Physical Gold ETF',appearances:7, data:{'4/13':1,'4/14':3,'4/16':1,'4/17':1,'4/21':1,'4/22':1,'5/11':3}},
     CNXT: {desc:'VanEck ChiNext ETF',appearances:6,data:{'5/14':1,'5/15':2,'5/18':2,'5/19':1,'5/20':2,'5/21':3}},
     XLI:  {desc:'Industrials SPDR',appearances:5,  data:{'4/22':2,'4/28':1,'4/30':3,'5/11':2,'5/19':2}},
-    OIH:  {desc:'Oil Services ETF',appearances:5,  data:{'5/4':2,'5/5':1,'5/6':1,'5/7':1,'5/8':1}},
+    OIH:  {desc:'Oil Services ETF',appearances:6,  data:{'5/4':2,'5/5':1,'5/6':1,'5/7':1,'5/8':1,'5/26':2}},
     EWC:  {desc:'iShares MSCI Canada',appearances:5,data:{'5/7':2,'5/8':2,'5/11':1,'5/12':1,'5/14':3}},
     OAEM: {desc:'Emerging Markets Access',appearances:5,data:{'5/12':2,'5/15':1,'5/18':1,'5/19':3,'5/20':1}},
     XLU:  {desc:'Utilities Select SPDR',appearances:4,data:{'4/10':3,'4/13':2,'4/14':2,'4/17':3}},
@@ -148,7 +149,9 @@ window.HE.ETF_STREAK = {
     YCS:  {desc:'ProShares Ultra Short Yen',appearances:1,data:{'4/16':3}},
     UFO:  {desc:'Procure Space ETF',appearances:1,data:{'4/30':1}},
     IWM:  {desc:'iShares Russell 2000',appearances:1,data:{'5/15':3}},
-    QTUM: {desc:'Defiance Quantum ETF',appearances:1,data:{'5/21':2}},
+    QTUM: {desc:'Defiance Quantum ETF',appearances:2,data:{'5/21':2,'5/26':3}},
+    ROBO: {desc:'Robotics & Automation ETF',appearances:1,data:{'5/26':1}},
+    VYM:  {desc:'Vanguard Dividend Yield ETF',appearances:1,data:{'5/26':3}},
   },
 };
 
