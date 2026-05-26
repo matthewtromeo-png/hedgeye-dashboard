@@ -13,8 +13,10 @@
     "btc": "Hedgeye BTC Trend Tracker 5.26.2026",
     "sss": "Hedgeye Signal Strength Stocks 5.22.2026",
     "macro_show": "HE_TMS_KM_DJ_5.26.2026.pdf",
-    "macro_show_notes": "HE_TMS_KM_DJ_5.26.2026.pdf",
-    "investing_ideas": "Hedgeye Investing Ideas Newsletter 5.26.2026"
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Tuesday, May 26th, 2026.pdf",
+    "investing_ideas": "Hedgeye Investing Ideas Newsletter 5.26.2026",
+    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_26_2026.pdf",
+    "founders_choice": "Hedgeye - Position Monitors _ Software - Best Idea Longs & Shorts.pdf"
   },
   "etf_rerank": [
     "BUXX",
@@ -3204,22 +3206,45 @@
       ]
     },
     "macro_show_notes": {
-      "date": "2026-05-26",
-      "vix": "16.70 \u2014 new 3-month TRENDING lows. Investible Bucket (<19). Positive gamma. Downside to 16.33 possible.",
-      "oil": "WTI broke immediate-term TRADE Signal at $98.23. Below that level WTI TRADE Momentum is bearish. LRR $91.17, TREND $89.07.",
-      "kospi": "8047 overnight \u2014 new #Quad2 all-time high above 7981 threshold. DRAM (Semis) in play for new all-time highs.",
-      "quad_context": "#Quad2 \u2014 Growth accelerating, Inflation accelerating. Cyclical/commodity/momentum longs favored.",
-      "week_theme": "Memorial Day week. Positive gamma into June OpEx. VIX suppression continuing. $33B/month 401k passive inflows.",
-      "source_file": "HE_TMS_KM_DJ_5.26.2026.pdf",
+      "source_date": "2026-05-26",
+      "bullish": [
+        "QTUM",
+        "ROBO",
+        "IWM",
+        "DRAM",
+        "KOSPI",
+        "NVDA",
+        "NORW",
+        "CNXT",
+        "CPER",
+        "SOYB",
+        "UUP"
+      ],
+      "bearish": [
+        "WTI",
+        "IDX",
+        "INQQ",
+        "EPHE",
+        "EWQ",
+        "GLD",
+        "SLV",
+        "PALL",
+        "XLU",
+        "TUR"
+      ],
       "key_points": [
-        "Oil broke TRADE support $98.23 WTI \u2014 LRR $91.17, TREND $89.07",
-        "KOSPI 8047 new Quad2 ATH \u2014 DRAM confirming Cyclical Tech momentum",
-        "VIX 16.70 new 3-month lows \u2014 positive gamma, investible bucket",
-        "USD Bullish TRADE/TREND Breakout Mode \u2014 Quad2 confirmation",
-        "SPX 7353\u20137531 (bullish), Gold 4430\u20134626 (neutral), WTI 91.17\u2013105.41",
-        "Memorial Day week: June OpEx gamma increasing \u2192 volatility suppression",
-        "$33B/month passive 401k inflows \u2014 price-insensitive demand floor",
-        "NORW trimmed to min after +10.2% 3-month run \u2014 wait for red to add"
+        "Oil broke TRADE support $98.23 WTI \u2014 below that level momentum is bearish (not a dip-buying setup); reducing to minimum, rebuild only near $89\u2013$91 trend support",
+        "KOSPI broke above 7,981 \u2192 closed at new Quad 2 ATH 8,047 (+2.6%) \u2014 keeps DRAM cyclical tech allocation in play for new ATH",
+        "High Beta Momentum core longs: DRAM, ROBO, QTUM, IWM \u2014 lower oil supportive for secular and small-cap growth longs",
+        "VIX 16.70 new 3-month low; positive gamma, stays in investable bucket; downside below 16.33 if it closes there",
+        "SPX risk range 7,353\u20137,531; higher ATH at 7,531; $33B/month passive 401k inflows providing price-insensitive demand floor",
+        "Healthcare and airlines shorts COVERED \u2014 Healthcare back to bullish trend; airlines squeezed on high short interest",
+        "Country positioning: LONG South Korea (DRAM), China (CNXT) / SHORT Indonesia (IDX, Quad 4), India (INQQ), Philippines (EPHE), France (EWQ, -2%)",
+        "Dollar bullish TRADE/TREND \u2014 bad for gold, Bitcoin, broad EM; sold broad EM, prefer select exposures: Korea/China",
+        "Gold at/below minimum size; Bitcoin sold (not waiting for bounce) \u2014 threatening trend breakdown near 75,601",
+        "Silver bearish signal confirmed; palladium short still crashing; copper and soybeans remain longs",
+        "Bond yield range 4.45%\u20134.70% unchanged; good spot to add rate-sensitive shorts including XLU",
+        "Process: signals not narratives \u2014 when TRADE breaks, move faster in that direction; reduce to min, rebuild only on confirm"
       ]
     },
     "msr": {
@@ -4190,7 +4215,81 @@
       }
     },
     "btc_source_date": "2026-05-26",
-    "btc_summary": "BTC=NEUTRAL, MSTR=BEARISH, HYPE+9.4%, ETFs=-$1.48B W/W \u2014 Back In Distro Mode"
+    "btc_summary": "BTC=NEUTRAL, MSTR=BEARISH, HYPE+9.4%, ETFs=-$1.48B W/W \u2014 Back In Distro Mode",
+    "call_summary": {
+      "source_date": "2026-05-26",
+      "quad": 2,
+      "quad3_transition": "July 2026",
+      "inflation_nowcast": 4.27,
+      "longs": [
+        "BBWI",
+        "AS",
+        "VVV",
+        "REAL",
+        "PLNT",
+        "NVO",
+        "LLY",
+        "CACC",
+        "FCFS",
+        "BP",
+        "LYV"
+      ],
+      "shorts": [
+        "WMT",
+        "KR",
+        "ACI",
+        "RKT",
+        "UBER",
+        "APP"
+      ],
+      "neutral": [
+        "EAT",
+        "HAL",
+        "BKR",
+        "INTC",
+        "TSMC"
+      ],
+      "key_points": [
+        "Three consecutive Quad 2 months (Apr/May/Jun) \u2014 Quad 3 transition expected July 2026",
+        "Inflation nowcast +1bp to 4.27% \u2014 Hedgeye street-high on May CPI estimate (due June 10)",
+        "EAT off long-bias list \u2014 Q2 comp decelerated to ~3.8% vs consensus 5.5%; signal bearish trend",
+        "NVO (GLP-1): bullish trade/trend reversal, stronger signal-strength territory; less short in healthcare into Quad 3",
+        "CACC best fundamental financials candidate; cleaner signal alignment vs FCFS into Quad 2\u21923",
+        "HAL actionable on pullback \u2014 oil services corrected while setup remains favorable; BKR also preferred",
+        "LYV: 33 states seeking Live Nation/Ticketmaster breakup; structural remedy risk, not just behavioral",
+        "USD flat on week \u2014 Bullish TRADE/TREND; EUR/USD and JPY both -0.3% and Bearish TRADE/TREND",
+        "DRAM bought on recent pullback; oil TRADE break confirmed $98.23; VIX in investable bucket",
+        "WMT/KR/ACI shorts: consumer staples pricing/tariff headwinds; RKT/UBER/APP tech shorts"
+      ]
+    },
+    "founders_choice": {
+      "source_date": "2026-05-26",
+      "software": {
+        "longs": [],
+        "shorts": [],
+        "note": "Image-rendered PDF \u2014 ticker table not extractable programmatically"
+      },
+      "communications": {
+        "longs": [],
+        "shorts": [],
+        "note": "Image-rendered PDF \u2014 ticker table not extractable programmatically"
+      },
+      "energy": {
+        "longs": [],
+        "shorts": [],
+        "note": "Image-rendered PDF \u2014 ticker table not extractable programmatically"
+      },
+      "financials": {
+        "longs": [],
+        "shorts": [],
+        "note": "Image-rendered PDF \u2014 ticker table not extractable programmatically"
+      },
+      "retail": {
+        "longs": [],
+        "shorts": [],
+        "note": "Image-rendered PDF \u2014 ticker table not extractable programmatically"
+      }
+    }
   },
   "ham_deltas": {
     "as_of_date": "2026-05-26",
