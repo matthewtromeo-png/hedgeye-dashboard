@@ -1,17 +1,20 @@
 {
-  "generated_at": "2026-05-26T13:54:28.398693",
+  "generated_at": "2026-05-26T14:27:02.631885",
   "source_date": "2026-05-26",
   "sources_used": {
-    "etf_pro": "etf-pro-all-active-tickers-1778080902.xlsx",
-    "ham_holdings": "ETF_Holdings 5.22.2026.csv",
+    "etf_pro": "Hedgeye ETF Pro Plus New Weekly Report 5.26.2026",
+    "ham_holdings": "ETF_Holdings 5.26.2026.csv",
     "rta": "real-time-alerts-history-2026-05-08.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "early_look": "Hedgeye Early Look 5.22.2026",
+    "early_look": "Hedgeye Early Look 5.26.2026",
     "call": "Hedgeye Call Summary 5.22.2026",
-    "msr": "Hedgeye Market Situation Report 5.22.2026",
-    "momo": "Hedgeye MOMO Tracker 5.22.2026",
-    "btc": "Hedgeye BTC Trend Tracker 5.22.2026",
-    "sss": "Hedgeye Signal Strength Stocks 5.22.2026 (1:52PM EDT)"
+    "msr": "Hedgeye May 26th 2026 WEEKLY GAME PLAN",
+    "momo": "Hedgeye MOMO Tracker 5.26.2026",
+    "btc": "Hedgeye BTC Trend Tracker 5.26.2026",
+    "sss": "Hedgeye Signal Strength Stocks 5.22.2026",
+    "macro_show": "HE_TMS_KM_DJ_5.26.2026.pdf",
+    "macro_show_notes": "HE_TMS_KM_DJ_5.26.2026.pdf",
+    "investing_ideas": "Hedgeye Investing Ideas Newsletter 5.26.2026"
   },
   "etf_rerank": [
     "BUXX",
@@ -3180,21 +3183,24 @@
     },
     "macro_show": {
       "quad": {
-        "monthly": 3,
+        "monthly": 2,
         "quarterly": 2
       },
-      "quad_sequence": "Q2 \u2192 Q3",
-      "growth_roc": "DECELERATING",
+      "quad_sequence": "#Quad2",
+      "growth_roc": "ACCELERATING",
       "inflation_roc": "ACCELERATING",
       "vix": {
-        "current": 17.5,
+        "current": 16.7,
         "bucket": "LOW VOL"
       },
       "keith_commentary": [
-        "Monthly Quad 3: Growth decelerating, Inflation accelerating",
-        "Q2\u2192Q3 transition \u2014 sold XLI and IBIT, adding short XRT",
-        "Long XOP, OIH, XTL, EQRR, QTUM, ROBO in Quad 3",
-        "Short XLV, ITB, XLU, JETS, XRT in Quad 3"
+        "#Quad2 confirmed \u2014 Growth accelerating, Inflation accelerating",
+        "USD in Bullish TRADE/TREND Breakout Mode \u2014 key Quad2 signal",
+        "KOSPI new all-time high 8047 \u2014 DRAM (Semis) in play",
+        "Oil broke TRADE support $98.23 WTI \u2014 trimmed BNO to min size",
+        "VIX 16.70 new 3-month lows \u2014 Investible Bucket (<19), positive gamma",
+        "Long: NORW, IWM, SOYB, CORN, Copper, DRAM, QTUM, ROBO",
+        "Short: IDX (-33% YTD), PALL, BTAL"
       ]
     },
     "macro_show_notes": {
@@ -3204,7 +3210,17 @@
       "kospi": "8047 overnight \u2014 new #Quad2 all-time high above 7981 threshold. DRAM (Semis) in play for new all-time highs.",
       "quad_context": "#Quad2 \u2014 Growth accelerating, Inflation accelerating. Cyclical/commodity/momentum longs favored.",
       "week_theme": "Memorial Day week. Positive gamma into June OpEx. VIX suppression continuing. $33B/month 401k passive inflows.",
-      "source_file": "HE_TMS_KM_DJ_5.26.2026.pdf"
+      "source_file": "HE_TMS_KM_DJ_5.26.2026.pdf",
+      "key_points": [
+        "Oil broke TRADE support $98.23 WTI \u2014 LRR $91.17, TREND $89.07",
+        "KOSPI 8047 new Quad2 ATH \u2014 DRAM confirming Cyclical Tech momentum",
+        "VIX 16.70 new 3-month lows \u2014 positive gamma, investible bucket",
+        "USD Bullish TRADE/TREND Breakout Mode \u2014 Quad2 confirmation",
+        "SPX 7353\u20137531 (bullish), Gold 4430\u20134626 (neutral), WTI 91.17\u2013105.41",
+        "Memorial Day week: June OpEx gamma increasing \u2192 volatility suppression",
+        "$33B/month passive 401k inflows \u2014 price-insensitive demand floor",
+        "NORW trimmed to min after +10.2% 3-month run \u2014 wait for red to add"
+      ]
     },
     "msr": {
       "gamma_exposure": "POSITIVE",
@@ -3297,502 +3313,574 @@
       "tickers_detail": {
         "CAT": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 343.4,
+          "signal_date": "2025-05-26",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 365
         },
         "OUT": {
-          "sector": "Real Estate",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Communications",
+          "entry_price": 22.1,
+          "signal_date": "2025-11-17",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 190
         },
         "CASY": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Consumer Staples",
+          "entry_price": 640.4,
+          "signal_date": "2026-01-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 127
         },
         "STKL": {
           "sector": "Consumer Staples",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 4.6,
+          "signal_date": "2026-02-02",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 113
         },
         "AMAT": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 322.5,
+          "signal_date": "2026-02-09",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 106
         },
         "ENB": {
           "sector": "Energy",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 51.5,
+          "signal_date": "2026-02-23",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Fernando Valle",
+          "days_on_signal": 92
         },
         "DAR": {
           "sector": "Energy",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 51.6,
+          "signal_date": "2026-02-23",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Fernando Valle",
+          "days_on_signal": 92
         },
         "CAVA": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Restaurants",
+          "entry_price": 82.5,
+          "signal_date": "2026-03-02",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Bennett Cheer",
+          "days_on_signal": 85
         },
         "MUSA": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Consumer Staples",
+          "entry_price": 438.4,
+          "signal_date": "2026-03-09",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 78
         },
         "SWBI": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Retail",
+          "entry_price": 14.0,
+          "signal_date": "2026-03-09",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Brian McGough",
+          "days_on_signal": 78
         },
         "RSI": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 20.3,
+          "signal_date": "2026-03-16",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 71
         },
         "CZR": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 28.1,
+          "signal_date": "2026-03-16",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 71
         },
         "FCFS": {
           "sector": "Financials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 192.1,
+          "signal_date": "2026-03-23",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 64
         },
         "ULS": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 83.9,
+          "signal_date": "2026-03-30",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 57
         },
         "MAR": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 354.1,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 46
         },
         "CSX": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 42.2,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 46
         },
         "MRVL": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 128.5,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 46
         },
         "LRCX": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 263.7,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 46
         },
         "SITM": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 420.3,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 46
         },
         "NVDA": {
-          "sector": "Technology",
-          "entry_price": 220.0,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 188.6,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 46
         },
         "AMZN": {
-          "sector": "Technology",
-          "entry_price": 268.0,
-          "signal_date": null,
+          "sector": "Retail",
+          "entry_price": 238.4,
+          "signal_date": "2026-04-10",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Brian McGough",
+          "days_on_signal": 46
         },
         "VIK": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 77.1,
+          "signal_date": "2026-04-13",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 43
         },
         "GOOGL": {
-          "sector": "Technology",
-          "entry_price": 388.0,
-          "signal_date": null,
+          "sector": "Communications",
+          "entry_price": 337.6,
+          "signal_date": "2026-04-16",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 40
         },
         "AAPL": {
-          "sector": "Technology",
-          "entry_price": 305.0,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 262.5,
+          "signal_date": "2026-04-16",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 40
         },
         "ROKU": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Communications",
+          "entry_price": 115.5,
+          "signal_date": "2026-04-20",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 36
         },
         "HST": {
-          "sector": "Real Estate",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 21.2,
+          "signal_date": "2026-04-20",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 36
         },
         "GLASF": {
           "sector": "Cannabis",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 8.7,
+          "signal_date": "2026-04-20",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Bennett Cheer",
+          "days_on_signal": 36
         },
         "CURLF": {
           "sector": "Cannabis",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 2.8,
+          "signal_date": "2026-04-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Bennett Cheer",
+          "days_on_signal": 35
         },
         "SBUX": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Restaurants",
+          "entry_price": 97.3,
+          "signal_date": "2026-04-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Bennett Cheer",
+          "days_on_signal": 35
         },
         "ROK": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 413.8,
+          "signal_date": "2026-04-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 35
         },
         "CP": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 82.4,
+          "signal_date": "2026-04-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 35
         },
         "LAMR": {
-          "sector": "Real Estate",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Communications",
+          "entry_price": 134.2,
+          "signal_date": "2026-04-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 35
         },
         "TWLO": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Software",
+          "entry_price": 150.4,
+          "signal_date": "2026-04-22",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 34
         },
         "LFST": {
           "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 6.8,
+          "signal_date": "2026-04-22",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Tom Tobin",
+          "days_on_signal": 34
         },
         "UNH": {
           "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 352.7,
+          "signal_date": "2026-04-24",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Tom Tobin",
+          "days_on_signal": 32
         },
         "SXT": {
-          "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Consumer Staples",
+          "entry_price": 122.4,
+          "signal_date": "2026-04-27",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 29
         },
         "CACC": {
           "sector": "Financials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 510.1,
+          "signal_date": "2026-04-28",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 28
         },
         "MARA": {
-          "sector": "Crypto/Mining",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Digital Assets",
+          "entry_price": 11.5,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 22
         },
         "CRCL": {
-          "sector": "Crypto/Fintech",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Digital Assets",
+          "entry_price": 115.4,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 22
         },
         "AFRM": {
           "sector": "Financials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 67.3,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 22
         },
         "URI": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 931.0,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 22
         },
         "LYB": {
           "sector": "Materials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 76.9,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 22
         },
         "RIO": {
           "sector": "Materials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 99.0,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 22
         },
         "BHP": {
           "sector": "Materials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 77.9,
+          "signal_date": "2026-05-04",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 22
         },
         "AKAM": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Software",
+          "entry_price": 115.5,
+          "signal_date": "2026-05-05",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 21
         },
         "TTWO": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Communications",
+          "entry_price": 222.9,
+          "signal_date": "2026-05-05",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 21
         },
         "APLE": {
-          "sector": "Real Estate",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 13.5,
+          "signal_date": "2026-05-05",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 21
         },
         "LOTMY": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 32.0,
+          "signal_date": "2026-05-06",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 20
         },
         "CMI": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 709.5,
+          "signal_date": "2026-05-06",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 20
         },
         "WRBY": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Retail",
+          "entry_price": 26.3,
+          "signal_date": "2026-05-07",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Brian McGough",
+          "days_on_signal": 19
         },
         "DDOG": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Software",
+          "entry_price": 200.2,
+          "signal_date": "2026-05-11",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 15
         },
         "MNST": {
           "sector": "Consumer Staples",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 86.3,
+          "signal_date": "2026-05-11",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 15
         },
         "PRMB": {
-          "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Consumer Staples",
+          "entry_price": 23.2,
+          "signal_date": "2026-05-11",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 15
         },
         "PM": {
           "sector": "Consumer Staples",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 182.1,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 14
         },
         "AZTAF": {
-          "sector": "Cannabis",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Retail",
+          "entry_price": 106.5,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Brian McGough",
+          "days_on_signal": 14
         },
         "BLMN": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Restaurants",
+          "entry_price": 8.4,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Bennett Cheer",
+          "days_on_signal": 14
         },
         "V": {
           "sector": "Financials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 325.6,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 14
         },
         "ATRO": {
           "sector": "Industrials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 73.8,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Jay Van Sciver",
+          "days_on_signal": 14
         },
         "ILMN": {
           "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 144.9,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Tom Tobin",
+          "days_on_signal": 14
         },
         "NVO": {
           "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 46.5,
+          "signal_date": "2026-05-12",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Tom Tobin",
+          "days_on_signal": 14
         },
         "RHP": {
-          "sector": "Real Estate",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 107.1,
+          "signal_date": "2026-05-13",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 13
         },
         "BTI": {
           "sector": "Consumer Staples",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 64.6,
+          "signal_date": "2026-05-13",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Daniel Biolsi",
+          "days_on_signal": 13
         },
         "BJRI": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Restaurants",
+          "entry_price": 42.0,
+          "signal_date": "2026-05-18",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Bennett Cheer",
+          "days_on_signal": 8
         },
         "CPAY": {
           "sector": "Financials",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 346.9,
+          "signal_date": "2026-05-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Josh Steiner",
+          "days_on_signal": 7
         },
         "HLT": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "GLL",
+          "entry_price": 317.8,
+          "signal_date": "2026-05-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Sean Jenkins",
+          "days_on_signal": 7
         },
         "TXG": {
           "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 21.7,
+          "signal_date": "2026-05-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Tom Tobin",
+          "days_on_signal": 7
         },
         "LYV": {
-          "sector": "Consumer Discretionary",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Communications",
+          "entry_price": 164.7,
+          "signal_date": "2026-05-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Andrew Freedman",
+          "days_on_signal": 7
         },
         "LLY": {
           "sector": "Healthcare",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 1012.0,
+          "signal_date": "2026-05-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Tom Tobin",
+          "days_on_signal": 7
         },
         "CBRS": {
-          "sector": "Technology",
-          "entry_price": null,
-          "signal_date": null,
+          "sector": "Global Tech",
+          "entry_price": 323.1,
+          "signal_date": "2026-05-19",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Felix Wang",
+          "days_on_signal": 7
         },
         "CVX": {
           "sector": "Energy",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 192.0,
+          "signal_date": "2026-05-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Fernando Valle",
+          "days_on_signal": 5
         },
         "XOM": {
           "sector": "Energy",
-          "entry_price": null,
-          "signal_date": null,
+          "entry_price": 156.1,
+          "signal_date": "2026-05-21",
           "days_on_list": null,
-          "analyst": null
+          "analyst": "Fernando Valle",
+          "days_on_signal": 5
         }
-      }
+      },
+      "source_date": "2026-05-22"
     },
     "investing_ideas": {
       "longs": {
