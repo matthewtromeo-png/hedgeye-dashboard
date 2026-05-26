@@ -221,6 +221,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const callSummPts  = macroCtx?.pdf?.call_summary?.key_points ?? [];
   const callSummDate = macroCtx?.pdf?.call_summary?.date ?? null;
   const hasIntel = showNotesPts.length > 0 || callSummPts.length > 0;
+  const usdCorrData  = macroCtx?.pdf?.macro_show_notes?.usd_correlations ?? null;
 
   const vixFallback = macroCtx?.pdf?.macro_show?.vix?.current
     ?? macroCtx?.pdf?.early_look?.vix_level
@@ -500,6 +501,83 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
         </div>
       )}
 
+
+      {/* USD Correlations card — from Macro Show slide 23 */}
+      {usdCorrData && (
+        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,
+          padding:'14px 18px',marginBottom:16}}>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',
+            marginBottom:10}}>
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <div style={{width:3,height:14,borderRadius:2,background:'#1A4D8F',flexShrink:0}} />
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:600,
+                textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>
+                Key $USD Correlations
+              </span>
+            </div>
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+              {usdCorrData.as_of_date} &nbsp;·&nbsp; 52-Wk Rolling 30D
+            </span>
+          </div>
+          <div style={{overflowX:'auto'}}>
+            <table style={{width:'100%',borderCollapse:'collapse',fontSize:11,
+              fontFamily:'IBM Plex Mono,monospace'}}>
+              <thead>
+                <tr style={{borderBottom:'1px solid #E4E1DA'}}>
+                  {['Metric','15D','30D','90D','120D','180D','%Time Pos','%Time Neg'].map(h => (
+                    <th key={h} style={{padding:'3px 8px',fontSize:8,color:'#9A9790',
+                      textTransform:'uppercase',letterSpacing:'0.06em',
+                      textAlign: h==='Metric' ? 'left' : 'right',fontWeight:600}}>
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {usdCorrData.data.map((row,i) => {
+                  const hl = row.highlighted;
+                  const cell = (v, key) => {
+                    if (v == null) return <td key={key} style={{padding:'4px 8px',textAlign:'right',color:'#C8C5BE'}}>—</td>;
+                    const isNeg = v < 0;
+                    const isStrong = Math.abs(v) >= 0.5;
+                    const bg = hl && isStrong ? (isNeg ? '#FADADD' : '#D4EDDA') : 'transparent';
+                    return (
+                      <td key={key} style={{padding:'4px 8px',textAlign:'right',
+                        fontWeight: isStrong ? 700 : 400,
+                        color: isNeg ? '#C8302A' : v > 0 ? '#27500A' : '#555',
+                        background: bg, borderRadius:3}}>
+                        {v > 0 ? '+' : ''}{v.toFixed(2)}
+                      </td>
+                    );
+                  };
+                  return (
+                    <tr key={i} style={{
+                      background: hl ? 'rgba(200,48,42,0.03)' : i%2===0 ? '#FAFAF8' : '#fff',
+                      borderBottom:'1px solid #F5F3EF'}}>
+                      <td style={{padding:'4px 8px',fontWeight: hl ? 700 : 500,
+                        color: hl ? '#C8302A' : '#1A1A18',whiteSpace:'nowrap'}}>
+                        {hl && <span style={{marginRight:4}}>→</span>}{row.metric}
+                      </td>
+                      {cell(row['15d'],'15d')}
+                      {cell(row['30d'],'30d')}
+                      {cell(row['90d'],'90d')}
+                      {cell(row['120d'],'120d')}
+                      {cell(row['180d'],'180d')}
+                      <td style={{padding:'4px 8px',textAlign:'right',color:'#27500A',fontWeight:500}}>
+                        {row.pct_pos}%
+                      </td>
+                      <td style={{padding:'4px 8px',textAlign:'right',color:'#C8302A',fontWeight:500}}>
+                        {row.pct_neg}%
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {/* Three feeds */}
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:16}}>
         {/* RTA Feed */}
@@ -636,6 +714,38 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
     </div>
   );
 };
+
+// ── ERROR BOUNDARY ─────────────────────────────────────────────────
+class ErrorBoundary extends React.Component {
+  constructor(props) { super(props); this.state = { error: null }; }
+  static getDerivedStateFromError(err) { return { error: err.message || String(err) }; }
+  componentDidCatch(err, info) { console.error('[ErrorBoundary]', err, info); }
+  render() {
+    if (this.state.error) {
+      return (
+        <div style={{padding:'32px 24px',fontFamily:'IBM Plex Mono,monospace'}}>
+          <div style={{background:'#FFF0F0',border:'1px solid #FDB8B8',borderRadius:8,
+            padding:'20px 24px',maxWidth:700}}>
+            <div style={{fontSize:13,fontWeight:700,color:'#C8302A',marginBottom:8}}>
+              ⚠ Component Error
+            </div>
+            <div style={{fontSize:11,color:'#555',marginBottom:16,lineHeight:1.6,
+              fontFamily:'monospace',background:'#F9F9F9',padding:'8px 12px',
+              borderRadius:4,whiteSpace:'pre-wrap',wordBreak:'break-all'}}>
+              {this.state.error}
+            </div>
+            <button onClick={() => this.setState({error:null})}
+              style={{padding:'5px 14px',background:'#1A1A18',color:'#fff',
+              border:'none',borderRadius:4,cursor:'pointer',fontSize:11}}>
+              Retry
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // ── MAIN APP ───────────────────────────────────────────────────────
 const App = () => {
@@ -802,25 +912,27 @@ const App = () => {
         ))}
       </div>
 
-      {/* CONTENT */}
-      {tab==='overview' && <OverviewTab qQuad={tweaks.quarterlyQuad} mQuad={tweaks.monthlyQuad} usd={tweaks.usdSignal} btc={tweaks.btcSignal} macroCtx={macroCtx} />}
-      {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
-      {tab==='rta'      && <RTATab />}
-      {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} macroCtx={macroCtx} />}
-      {tab==='signals'   && <SignalsTab macroCtx={macroCtx} />}
-      {tab==='riskrange' && (
-        <iframe
-          src="./risk_range_dashboard.html"
-          style={{width:'100%',height:'calc(100vh - 90px)',border:'none',display:'block'}}
-          title="Risk Range Dashboard"
-        />
-      )}
-      {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
-      {tab==='etfpro'   && <ETFProTab macroCtx={macroCtx} />}
-      {tab==='sizing'   && <SizingTab macroCtx={macroCtx} />}
-      {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
-      {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}
-      {tab==='ingest'   && <ResearchStatusTab />}
+      {/* CONTENT — wrapped in error boundary so a single component crash shows an error instead of blanking the whole page */}
+      <ErrorBoundary key={tab}>
+        {tab==='overview' && <OverviewTab qQuad={tweaks.quarterlyQuad} mQuad={tweaks.monthlyQuad} usd={tweaks.usdSignal} btc={tweaks.btcSignal} macroCtx={macroCtx} />}
+        {tab==='market'   && <MarketTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
+        {tab==='rta'      && <RTATab />}
+        {tab==='ham'      && <HAMTab myPositions={tweaks.myPositions} onMyPositionsChange={v=>setTweak('myPositions',v)} macroCtx={macroCtx} />}
+        {tab==='signals'   && <SignalsTab macroCtx={macroCtx} />}
+        {tab==='riskrange' && (
+          <iframe
+            src="./risk_range_dashboard.html"
+            style={{width:'100%',height:'calc(100vh - 90px)',border:'none',display:'block'}}
+            title="Risk Range Dashboard"
+          />
+        )}
+        {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
+        {tab==='etfpro'   && <ETFProTab macroCtx={macroCtx} />}
+        {tab==='sizing'   && <SizingTab macroCtx={macroCtx} />}
+        {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
+        {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}
+        {tab==='ingest'   && <ResearchStatusTab />}
+      </ErrorBoundary>
 
       {/* PDF VIEWER */}
       <PdfViewer pdf={openPdf} onClose={()=>setOpenPdf(null)} />
@@ -864,37 +976,12 @@ const App = () => {
                       fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:tweaks[key]===o?700:400,
                       border:'1px solid #E4E1DA',
                       background:tweaks[key]===o?'#1A1A18':'#fff',
-                      color:tweaks[key]===o?'#fff':'#7A7770'}}>
-                      {o.slice(0,4)}
-                    </button>
+                      color:tweaks[key]===o?'#fff':'#7A7770',
+                    }}>{o}</button>
                   ))}
                 </div>
               </div>
             ))}
-            <div>
-              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>My Positions (HAM cross-ref)</div>
-              <textarea value={tweaks.myPositions}
-                onChange={e=>setTweak('myPositions',e.target.value)}
-                placeholder="AAPL NVDA CASY XOM…"
-                style={{width:'100%',padding:8,border:'1px solid #E4E1DA',borderRadius:4,
-                  fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#1A1A18',
-                  background:'#FAFAF8',resize:'none',height:52,outline:'none',boxSizing:'border-box'}} />
-            </div>
-            <div>
-              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:5}}>FMP API Key (optional)</div>
-              <input
-                type="password"
-                value={tweaks.fmpKey}
-                onChange={e=>setTweak('fmpKey',e.target.value)}
-                placeholder="Enter key for analyst data…"
-                style={{width:'100%',padding:'6px 8px',border:'1px solid #E4E1DA',borderRadius:4,
-                  fontFamily:'IBM Plex Mono,monospace',fontSize:11,color:'#1A1A18',
-                  background:'#FAFAF8',outline:'none',boxSizing:'border-box'}}
-              />
-              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',marginTop:3}}>
-                financialmodelingprep.com — free tier works
-              </div>
-            </div>
           </div>
         </div>
       )}

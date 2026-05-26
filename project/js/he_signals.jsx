@@ -517,6 +517,8 @@ const VolTab = ({quad, macroCtx}) => {
   const V   = liveVix?.vix  || null;
   const V3  = liveVix?.vix3m|| null;
   const V9  = liveVix?.vix9m|| null;
+  const ivolData = macroCtx?.pdf?.macro_show_notes?.ivol_table ?? null;
+  const usdCorrData = macroCtx?.pdf?.macro_show_notes?.usd_correlations ?? null;
   const R1  = parseFloat(rv1) || null;
   const R3p = parseFloat(rv3) || null;
   const ratio = V && R1 ? V / R1 : null;
@@ -666,6 +668,176 @@ const VolTab = ({quad, macroCtx}) => {
           </div>
         )}
       </div>
+
+
+      {/* ── Implied & Realized Vol Table (Macro Show slide 27) ── */}
+      {ivolData && (() => {
+        const sections = ivolData.sections || {};
+        const SECTION_ORDER = ['US Equities','Intl Equities','Currencies','Commodities','Fixed Income','Mega-Cap'];
+        const fmtZ = z => z == null ? '—' : (z > 0 ? '+' : '') + z.toFixed(1);
+        const zColor = z => z == null ? '#C8C5BE' : z >= 1.5 ? '#C8302A' : z <= -1.5 ? '#27500A' : '#1A1A18';
+        const fmtPrem = v => v == null ? '—' : (v > 0 ? '+' : '') + v + '%';
+        const premColor = v => v == null ? '#C8C5BE' : v > 50 ? '#C8302A' : v > 20 ? '#B8860B' : v < 0 ? '#27500A' : '#555';
+        const fmtPctl = v => v == null ? '—' : v + '%';
+        const pctlColor = v => v == null ? '#C8C5BE' : v >= 80 ? '#27500A' : v <= 20 ? '#C8302A' : '#555';
+        const TH = ({children, right}) => (
+          <th style={{padding:'3px 6px',fontSize:8,color:'#9A9790',textTransform:'uppercase',
+            letterSpacing:'0.05em',fontWeight:600,whiteSpace:'nowrap',
+            textAlign: right ? 'right' : 'left',borderBottom:'1px solid #E4E1DA',
+            background:'#F8F7F4'}}>
+            {children}
+          </th>
+        );
+        return (
+          <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,
+            padding:'16px 20px',marginBottom:12}}>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                textTransform:'uppercase',letterSpacing:'0.12em',color:'#7A7770'}}>
+                Implied & Realized Volatility
+              </div>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+                {ivolData.window} &nbsp;·&nbsp; {ivolData.as_of_date}
+              </span>
+            </div>
+            <div style={{overflowX:'auto'}}>
+              <table style={{width:'100%',borderCollapse:'collapse',fontSize:11,
+                fontFamily:'IBM Plex Mono,monospace'}}>
+                <thead>
+                  <tr>
+                    <TH>Ticker</TH>
+                    <TH right>TR%</TH>
+                    <TH right>IVOL Prem</TH>
+                    <TH right>IV/RV Yest</TH>
+                    <TH right>1W Ago</TH>
+                    <TH right>1M Ago</TH>
+                    <TH right>TTM Z</TH>
+                    <TH right>3Y Z</TH>
+                    <TH right>MM%</TH>
+                    <TH right>Pctl</TH>
+                  </tr>
+                </thead>
+                <tbody>
+                  {SECTION_ORDER.filter(s => sections[s]).map(section => [
+                    <tr key={section + '_hdr'}>
+                      <td colSpan={10} style={{padding:'8px 6px 3px',fontFamily:'IBM Plex Mono,monospace',
+                        fontSize:8,fontWeight:700,color:'#7A7770',textTransform:'uppercase',
+                        letterSpacing:'0.1em',borderTop:'2px solid #E4E1DA',background:'#F8F7F4'}}>
+                        {section}
+                      </td>
+                    </tr>,
+                    ...(sections[section] || []).map((row, i) => (
+                      <tr key={row.ticker} style={{
+                        borderBottom:'1px solid #F5F3EF',
+                        background: i % 2 === 0 ? '#fff' : '#FAFAF8'}}
+                        onMouseEnter={e => e.currentTarget.style.background='#F4F3EF'}
+                        onMouseLeave={e => e.currentTarget.style.background = i % 2 === 0 ? '#fff' : '#FAFAF8'}>
+                        <td style={{padding:'5px 6px',fontWeight:700,color:'#1A1A18',whiteSpace:'nowrap'}}>
+                          {row.ticker}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',
+                          color: row.tr > 0 ? '#27500A' : row.tr < 0 ? '#C8302A' : '#555'}}>
+                          {row.tr > 0 ? '+' : ''}{row.tr?.toFixed(1) ?? '—'}%
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',color:premColor(row.ivol_prem)}}>
+                          {fmtPrem(row.ivol_prem)}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',color:premColor(row.ivol_rvol_yest)}}>
+                          {fmtPrem(row.ivol_rvol_yest)}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',color:premColor(row.ivol_rvol_1w)}}>
+                          {fmtPrem(row.ivol_rvol_1w)}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',color:premColor(row.ivol_rvol_1m)}}>
+                          {fmtPrem(row.ivol_rvol_1m)}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',fontWeight:600,
+                          color:zColor(row.ttm_z)}}>
+                          {fmtZ(row.ttm_z)}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',fontWeight:600,
+                          color:zColor(row.yr3_z)}}>
+                          {fmtZ(row.yr3_z)}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',
+                          color: row.mm_pct < 0 ? '#C8302A' : '#27500A'}}>
+                          {row.mm_pct != null ? (row.mm_pct > 0 ? '+' : '') + row.mm_pct + '%' : '—'}
+                        </td>
+                        <td style={{padding:'5px 6px',textAlign:'right',color:pctlColor(row.pctl)}}>
+                          {fmtPctl(row.pctl)}
+                        </td>
+                      </tr>
+                    ))
+                  ])}
+                </tbody>
+              </table>
+            </div>
+            <div style={{marginTop:8,fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+              display:'flex',gap:16,flexWrap:'wrap'}}>
+              <span><span style={{color:'#C8302A',fontWeight:700}}>RED Z</span> = elevated vol (≥1.5σ)</span>
+              <span><span style={{color:'#27500A',fontWeight:700}}>GREEN Z</span> = suppressed vol (≤-1.5σ)</span>
+              <span>IVOL Prem = implied over realized · Pctl = 52-wk percentile</span>
+            </div>
+          </div>
+        );
+      })()}
+
+      {/* ── USD Correlations (from Macro Show slide 23) ── */}
+      {usdCorrData && (() => {
+        const cell = (v, key) => {
+          if (v == null) return <td key={key} style={{padding:'4px 6px',textAlign:'right',color:'#C8C5BE',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>—</td>;
+          const isNeg = v < 0, isStrong = Math.abs(v) >= 0.5;
+          return <td key={key} style={{padding:'4px 6px',textAlign:'right',fontWeight:isStrong?700:400,
+            color:isNeg?'#C8302A':v>0?'#27500A':'#555',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>
+            {v > 0 ? '+' : ''}{v.toFixed(2)}
+          </td>;
+        };
+        return (
+          <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,
+            padding:'16px 20px',marginBottom:12}}>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                textTransform:'uppercase',letterSpacing:'0.12em',color:'#7A7770'}}>
+                Key $USD Correlations
+              </div>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+                {usdCorrData.as_of_date} &nbsp;·&nbsp; slide 23
+              </span>
+            </div>
+            <table style={{width:'100%',borderCollapse:'collapse',fontSize:10,fontFamily:'IBM Plex Mono,monospace'}}>
+              <thead>
+                <tr style={{borderBottom:'1px solid #E4E1DA'}}>
+                  {['Metric','15D','30D','90D','120D','180D','%+ Time','%- Time'].map(h => (
+                    <th key={h} style={{padding:'3px 6px',fontSize:8,color:'#9A9790',textTransform:'uppercase',
+                      letterSpacing:'0.05em',fontWeight:600,textAlign:h==='Metric'?'left':'right'}}>
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {usdCorrData.data.map((row,i) => (
+                  <tr key={i} style={{borderBottom:'1px solid #F5F3EF',
+                    background:row.highlighted?'rgba(200,48,42,0.04)':i%2===0?'#fff':'#FAFAF8'}}>
+                    <td style={{padding:'4px 6px',fontWeight:row.highlighted?700:500,
+                      color:row.highlighted?'#C8302A':'#1A1A18',whiteSpace:'nowrap'}}>
+                      {row.highlighted && <span style={{marginRight:4}}>→</span>}{row.metric}
+                    </td>
+                    {cell(row['15d'],'15d')}{cell(row['30d'],'30d')}{cell(row['90d'],'90d')}
+                    {cell(row['120d'],'120d')}{cell(row['180d'],'180d')}
+                    <td style={{padding:'4px 6px',textAlign:'right',color:'#27500A',fontWeight:500}}>
+                      {row.pct_pos}%
+                    </td>
+                    <td style={{padding:'4px 6px',textAlign:'right',color:'#C8302A',fontWeight:500}}>
+                      {row.pct_neg}%
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      })()}
 
       {/* ── Quad Vol Playbook ── */}
       <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:20,marginBottom:12}}>
