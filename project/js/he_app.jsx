@@ -725,6 +725,7 @@ const App = () => {
     {id:'riskrange', label:'Risk Range'},
     {id:'analyzer',  label:'Stock Analyzer'},
     {id:'etfpro',    label:'ETF Pro'},
+    {id:'sizing',    label:'Position Sizing'},
     {id:'vol',       label:'Volatility'},
     {id:'research',  label:'Daily Brief'},
     {id:'ingest',   label:'Research Status'},
@@ -816,6 +817,7 @@ const App = () => {
       )}
       {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
       {tab==='etfpro'   && <ETFProTab macroCtx={macroCtx} />}
+      {tab==='sizing'   && <SizingTab macroCtx={macroCtx} />}
       {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
       {tab==='research' && <ResearchTab onOpenPdf={setOpenPdf} macroCtx={macroCtx} />}
       {tab==='ingest'   && <ResearchStatusTab />}
