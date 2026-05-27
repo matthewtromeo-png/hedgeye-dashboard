@@ -40,9 +40,8 @@ const SignalsTab = ({macroCtx}) => {
   };
 
   // HAM from macroCtx
-  const _hamRaw     = macroCtx?.ham_holdings;
-  const hamHoldings = Array.isArray(_hamRaw) ? _hamRaw : (_hamRaw?.holdings ?? []);
-  const hamMap      = Object.fromEntries(hamHoldings.map(h => [h.ticker, h]));
+  const hamHoldings = HE.getHamArray(macroCtx);
+  const hamMap      = HE.getHamMap(macroCtx);
 
   // Investing ideas + RTA
   const iiLongs    = macroCtx?.pdf?.investing_ideas?.longs  ?? {};
@@ -213,7 +212,7 @@ const SignalsTab = ({macroCtx}) => {
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.sector ?? '—'}</TD>
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.analyst ?? '—'}</TD>
                       <TD right style={{fontWeight:ham?600:400, color:ham?'#27500A':'#ccc'}}>
-                        {ham ? (ham.weight ?? ham.total_weight != null ? (ham.total_weight*100).toFixed(2)+'%' : '—') : '—'}
+                        {HE.hamWeight(ham)}
                       </TD>
                     </tr>
                   );
@@ -282,7 +281,7 @@ const SignalsTab = ({macroCtx}) => {
                     </span>
                     <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
                       fontWeight:700, color:'#27500A'}}>
-                      {selHam.weight ?? (selHam.total_weight != null ? (selHam.total_weight*100).toFixed(2)+'%' : '—')}
+                      {HE.hamWeight(selHam)}
                     </span>
                   </div>
                   {selHam.accounts && Object.entries(selHam.accounts).map(([fund, w]) => (

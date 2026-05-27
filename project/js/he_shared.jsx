@@ -70,4 +70,47 @@ const TD = ({children,right,style={}}) => (
   <td style={{padding:'7px 8px',textAlign:right?'right':'left',...style}}>{children}</td>
 );
 
+// ── NORMALIZED DATA ACCESSORS ────────────────────────────────────────
+// Use these in every component instead of touching macroCtx fields directly.
+// When data shapes change (e.g. parser updates), only update here.
+
+window.HE = window.HE || {};
+
+// ham_holdings can arrive as:
+//   Wrapped:  {date, holdings:[{ticker,name,weight:"9.10%",price},...], added:[], removed:[]}
+//   Flat arr: [{ticker,name,weight:"9.10%",price}]         (legacy flat)
+//   Old shape: [{ticker,name,total_weight:0.09, accounts:{fund:w}}]
+HE.getHamArray = (macroCtx) => {
+  const raw = macroCtx?.ham_holdings;
+  if (!raw) return [];
+  const arr = Array.isArray(raw) ? raw : (raw.holdings ?? []);
+  return Array.isArray(arr) ? arr : [];
+};
+HE.getHamMap = (macroCtx) => {
+  return Object.fromEntries(HE.getHamArray(macroCtx).map(h => [h.ticker, h]));
+};
+// Weight as display string: "9.10%" from either data shape
+HE.hamWeight = (h) => {
+  if (!h) return '—';
+  if (h.weight) return h.weight;
+  if (h.total_weight != null) return (h.total_weight * 100).toFixed(2) + '%';
+  return '—';
+};
+// Weight as 0–1 number from either data shape
+HE.hamWeightNum = (h) => {
+  if (!h) return null;
+  if (h.total_weight != null) return h.total_weight;
+  if (h.weight) { const n = parseFloat(h.weight); return isNaN(n) ? null : n / 100; }
+  return null;
+};
+// Safe number format — never produces NaN/undefined in the UI
+HE.fmt = (val, decimals=2, suffix='%') => {
+  if (val == null || isNaN(Number(val))) return '—';
+  return Number(val).toFixed(decimals) + suffix;
+};
+// position_sizing positions array
+HE.getSizingPositions = (macroCtx) => macroCtx?.position_sizing?.positions ?? [];
+// SSS detail for a ticker (null-safe)
+HE.getSssDetail = (macroCtx, ticker) => macroCtx?.pdf?.sss?.tickers_detail?.[ticker] ?? null;
+
 Object.assign(window, {SignalBadge, StatCard, SectionTitle, LoadingSpinner, QuadBadge, TH, TD});

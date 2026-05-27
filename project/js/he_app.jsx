@@ -201,10 +201,10 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
     ? recentTrades.filter(t => (t.realized_return ?? 0) > 0).length / recentTrades.length
     : null;
 
-  const hamHighConv = macroCtx?.ham_holdings
-    ? (Array.isArray(macroCtx.ham_holdings) ? macroCtx.ham_holdings : (macroCtx.ham_holdings.holdings || []))
-        .filter(h => Object.keys(h.accounts || {}).length >= 3)
-        .sort((a,b) => Object.keys(b.accounts).length - Object.keys(a.accounts).length)
+  const hamHighConv = macroCtx
+    ? HE.getHamArray(macroCtx)
+        .filter(h => (HE.hamWeightNum(h) ?? 0) >= 0.015)
+        .sort((a,b) => (HE.hamWeightNum(b) ?? 0) - (HE.hamWeightNum(a) ?? 0))
         .slice(0, 10)
     : null;
 
@@ -629,7 +629,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
             <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',
               textAlign:'center',padding:'20px 0'}}>No holdings in 3+ funds</div>
           ) : hamHighConv.map((h,i) => {
-            const accts = Object.keys(h.accounts);
+            const wt   = HE.hamWeightNum(h);
             const isSss = (sssTickers || []).includes(h.ticker);
             return (
               <div key={i} style={{display:'flex',alignItems:'center',justifyContent:'space-between',
@@ -644,9 +644,9 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
                   {isSss && <span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 5px',borderRadius:3}}>SSS</span>}
                   <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:700,
                     padding:'2px 7px',borderRadius:3,
-                    background:accts.length===4?'#EAF3DE':'#E4EDF8',
-                    color:accts.length===4?'#27500A':'#1A4D8F'}}>
-                    {accts.length}/4
+                    background:wt!=null&&wt>=0.05?'#EAF3DE':'#E4EDF8',
+                    color:wt!=null&&wt>=0.05?'#27500A':'#1A4D8F'}}>
+                    {HE.fmt(wt!=null?wt*100:null,2,'%')}
                   </span>
                 </div>
               </div>
