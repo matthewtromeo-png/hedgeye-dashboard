@@ -117,6 +117,17 @@ if ($NewLevelsFiles) {
     Write-Host "==> No new official_levels_NEW_*.json found -- using existing file" -ForegroundColor DarkGray
 }
 
+# -- Step 1c: Sync ALL JS/JSX files from OneDrive -> repo --------------------
+$OneDriveJs = "C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\project\js"
+$RepoJs     = "$RepoDir\project\js"
+if (Test-Path $OneDriveJs) {
+    $jsFiles = Get-ChildItem "$OneDriveJs\*.js","$OneDriveJs\*.jsx" -ErrorAction SilentlyContinue
+    foreach ($jsf in $jsFiles) {
+        Copy-Item -Path $jsf.FullName -Destination "$RepoJs\$($jsf.Name)" -Force
+    }
+    Write-Host "==> Synced $($jsFiles.Count) JS/JSX files from OneDrive -> repo" -ForegroundColor Cyan
+}
+
 # -- Step 2: Commit everything and push ---------------------------------------
 Write-Host "==> Committing and pushing..." -ForegroundColor Cyan
 Set-Location $RepoDir
@@ -124,9 +135,7 @@ Set-Location $RepoDir
 & $GitExe add project/data/macro_context.json
 & $GitExe add project/data/official_levels.json
 & $GitExe add project/data/rta_latest.csv
-& $GitExe add project/js/he_data.js
-& $GitExe add project/js/he_app.jsx
-& $GitExe add project/js/he_prices.jsx
+& $GitExe add project/js/
 if ($Dashboard) { & $GitExe add project/risk_range_dashboard.html }
 
 $today = Get-Date -Format 'yyyy-MM-dd'
