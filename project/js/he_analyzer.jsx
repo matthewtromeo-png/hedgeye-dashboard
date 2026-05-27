@@ -338,7 +338,7 @@ const AnalyzerTab = ({macroCtx}) => {
   const verdict = verdictKey ? VERDICT_META[verdictKey] : null;
 
   // Portfolio signals — no FMP needed
-  const hamHoldings   = macroCtx?.ham_holdings ?? [];
+  const hamHoldings   = HE.getHamArray(macroCtx);
   const hamEntry      = ticker ? hamHoldings.find(h => h.ticker === ticker) : null;
   const investLongs   = macroCtx?.pdf?.investing_ideas?.longs  ?? {};
   const investShorts  = macroCtx?.pdf?.investing_ideas?.shorts ?? {};
@@ -624,7 +624,7 @@ const AnalyzerTab = ({macroCtx}) => {
                     ))}
                     <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:8, color:'#9A9790',
                       marginTop:5, borderTop:'1px solid #EEECE8', paddingTop:4}}>
-                      Total {(hamEntry.total_weight*100).toFixed(2)}%
+                      Total {HE.hamWeight(hamEntry)}
                     </div>
                   </div>
                 ) : (
