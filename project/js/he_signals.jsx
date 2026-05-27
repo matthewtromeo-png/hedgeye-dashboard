@@ -213,7 +213,7 @@ const SignalsTab = ({macroCtx}) => {
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.sector ?? '—'}</TD>
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.analyst ?? '—'}</TD>
                       <TD right style={{fontWeight:ham?600:400, color:ham?'#27500A':'#ccc'}}>
-                        {ham ? `${(ham.total_weight*100).toFixed(2)}%` : '—'}
+                        {ham ? (ham.weight ?? ham.total_weight != null ? (ham.total_weight*100).toFixed(2)+'%' : '—') : '—'}
                       </TD>
                     </tr>
                   );
@@ -282,15 +282,15 @@ const SignalsTab = ({macroCtx}) => {
                     </span>
                     <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
                       fontWeight:700, color:'#27500A'}}>
-                      {(selHam.total_weight * 100).toFixed(2)}%
+                      {selHam.weight ?? (selHam.total_weight != null ? (selHam.total_weight*100).toFixed(2)+'%' : '—')}
                     </span>
                   </div>
-                  {Object.entries(selHam.accounts).map(([fund, w]) => (
+                  {selHam.accounts && Object.entries(selHam.accounts).map(([fund, w]) => (
                     <div key={fund} style={{display:'flex', justifyContent:'space-between'}}>
                       <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9,
                         color:'#9A9790'}}>{fund}</span>
                       <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10,
-                        fontWeight:600, color:'#1A1A18'}}>{(w * 100).toFixed(2)}%</span>
+                        fontWeight:600, color:'#1A1A18'}}>{typeof w === 'number' ? (w*100).toFixed(2)+'%' : w}</span>
                     </div>
                   ))}
                 </div>
