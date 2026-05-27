@@ -40,7 +40,8 @@ const SignalsTab = ({macroCtx}) => {
   };
 
   // HAM from macroCtx
-  const hamHoldings = macroCtx?.ham_holdings ?? [];
+  const _hamRaw     = macroCtx?.ham_holdings;
+  const hamHoldings = Array.isArray(_hamRaw) ? _hamRaw : (_hamRaw?.holdings ?? []);
   const hamMap      = Object.fromEntries(hamHoldings.map(h => [h.ticker, h]));
 
   // Investing ideas + RTA
