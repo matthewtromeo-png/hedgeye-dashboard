@@ -202,8 +202,8 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
     : null;
 
   const hamHighConv = macroCtx?.ham_holdings
-    ? macroCtx.ham_holdings
-        .filter(h => Object.keys(h.accounts).length >= 3)
+    ? (Array.isArray(macroCtx.ham_holdings) ? macroCtx.ham_holdings : (macroCtx.ham_holdings.holdings || []))
+        .filter(h => Object.keys(h.accounts || {}).length >= 3)
         .sort((a,b) => Object.keys(b.accounts).length - Object.keys(a.accounts).length)
         .slice(0, 10)
     : null;
@@ -1070,6 +1070,8 @@ const App = () => {
   const [researchSource, setResearchSource] = React.useState(
     () => window.HE.loadQuadState().researchSource || null
   );
+  const [newResearchReady, setNewResearchReady] = React.useState(false);
+  const deployedAtRef = React.useRef(null);
 
   // Load macro_context.json and auto-initialize tweaks from pipeline data
   React.useEffect(() => {
@@ -1093,6 +1095,25 @@ const App = () => {
         setResearchSource('macro_context.json');
       })
       .catch(() => {});
+  }, []);
+
+  // Auto-refresh: poll version.json every 60s; show banner when new deploy detected
+  React.useEffect(() => {
+    const checkVersion = () => {
+      fetch('./data/version.json?_=' + Date.now())
+        .then(r => r.json())
+        .then(v => {
+          if (!deployedAtRef.current) {
+            deployedAtRef.current = v.deployed_at;
+          } else if (v.deployed_at !== deployedAtRef.current) {
+            setNewResearchReady(true);
+          }
+        })
+        .catch(() => {});
+    };
+    checkVersion();
+    const iv = setInterval(checkVersion, 60000);
+    return () => clearInterval(iv);
   }, []);
 
   // Tweaks host integration
@@ -1158,6 +1179,26 @@ const App = () => {
 
   return (
     <div style={{minHeight:'100vh',background:'#F4F3EF',color:'#1A1A18',fontFamily:'IBM Plex Sans,sans-serif'}}>
+      {/* NEW RESEARCH BANNER */}
+      {newResearchReady && (
+        <div style={{position:'fixed',bottom:20,right:20,zIndex:9999,
+          background:'#1A4D8F',color:'#fff',borderRadius:8,padding:'12px 18px',
+          display:'flex',alignItems:'center',gap:12,boxShadow:'0 4px 16px rgba(0,0,0,0.25)',
+          fontFamily:'IBM Plex Mono,monospace',fontSize:12}}>
+          <span>🔄 New research deployed</span>
+          <button onClick={() => window.location.reload()}
+            style={{background:'#fff',color:'#1A4D8F',border:'none',borderRadius:4,
+              padding:'4px 10px',fontSize:11,fontWeight:600,cursor:'pointer',
+              fontFamily:'IBM Plex Mono,monospace'}}>
+            Refresh
+          </button>
+          <button onClick={() => setNewResearchReady(false)}
+            style={{background:'none',border:'none',color:'rgba(255,255,255,0.6)',
+              cursor:'pointer',fontSize:14,padding:'0 2px',lineHeight:1}}>
+            ×
+          </button>
+        </div>
+      )}
       {/* HEADER */}
       <div style={{background:'#111',color:'#fff',padding:'0 20px',height:50,display:'flex',
         alignItems:'center',justifyContent:'space-between',position:'sticky',top:0,zIndex:100,gap:12}}>
