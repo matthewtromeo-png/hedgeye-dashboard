@@ -267,13 +267,23 @@ def main():
         'positions':           positions,
     }
 
-    # Write to macro_context.json
+    # Write to macro_context.json — atomic write to avoid truncation
     with open(MCJ_PATH) as f:
         mcj = json.load(f)
     mcj['position_sizing'] = result
-    mcj['sources_used']['position_sizing'] = f'Portfolio Solutions PDFs + ETF Pro table ({datetime.now().strftime("%Y-%m-%d")})'
-    with open(MCJ_PATH, 'w') as f:
-        json.dump(mcj, f, indent=2)
+    # sources_used may be a list (new format) or dict (old format) — handle both
+    src = mcj.get('sources_used', [])
+    src_entry = f'Portfolio Solutions PDFs + ETF Pro table ({datetime.now().strftime("%Y-%m-%d")})'
+    if isinstance(src, list):
+        if src_entry not in src:
+            src.append(src_entry)
+        mcj['sources_used'] = src
+    else:
+        mcj['sources_used']['position_sizing'] = src_entry
+    tmp_path = MCJ_PATH + '.tmp'
+    with open(tmp_path, 'w', encoding='utf-8') as f:
+        json.dump(mcj, f, indent=2, ensure_ascii=False)
+    os.replace(tmp_path, MCJ_PATH)
 
     print(f"\nWrote {len(positions)} positions to macro_context.json")
     print(f"Above threshold ({threshold_ticker} rank {threshold_rank} @ {threshold_pct}%): {sum(1 for p in positions if p['above_hyg_threshold'])} positions")
