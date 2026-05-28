@@ -131,6 +131,19 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
   const wlyAdded  = deltas.weekly_added  ?? [];
   const wlyRemoved= deltas.weekly_removed ?? [];
 
+  // Per-fund data from macro_context.json (days_held, first_seen, per-fund adds)
+  const hamPF       = macroCtx?.ham_per_fund ?? {};
+  const pfDate      = hamPF.date ?? macroCtx?.ham_holdings?.date ?? null;
+  const fundStrategy= deltas.fund_strategy ?? hamPF.fund_strategy ?? {};
+  const pfDailyAdds = deltas.per_fund_daily_adds ?? {};
+  const pfDailyRems = deltas.per_fund_daily_removes ?? {};
+  // Build lookup: fund -> ticker -> {days_held, first_seen}
+  const daysLookup = {};
+  ['HECA','HEFT','HGRO','HELS','ADDS'].forEach(f => {
+    daysLookup[f] = {};
+    (hamPF[f] || []).forEach(h => { daysLookup[f][h.ticker] = h; });
+  });
+
   React.useEffect(() => {
     try {
       const live = JSON.parse(localStorage.getItem('he_ham_live') || '{}');
@@ -151,9 +164,12 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
   if (!hamData) return <div style={{padding:40,color:'#C8302A',fontFamily:'IBM Plex Mono,monospace',fontSize:12}}>Could not load HAM data.</div>;
 
   const { funds, tickerMap, overlaps } = hamData;
-  const asOfStr = liveSource?.modifiedAt
-    ? new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
-    : 'May 21, 2026';
+  // Prefer pfDate from macroCtx (always fresh) over file mod time
+  const asOfStr = pfDate
+    ? new Date(pfDate + 'T12:00:00').toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
+    : liveSource?.modifiedAt
+      ? new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
+      : '—';
   const FUNDS = ['HECA','HEFT','HGRO','HELS'].filter(f => funds[f]);
   const myTickers = myInput.split(/[\s,\n]+/).map(s => s.trim().toUpperCase()).filter(Boolean);
   const sssSet = new Set(window.HE.SSS.map(s => s.ticker));
@@ -256,13 +272,54 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
             </div>
             {addedList.length === 0
               ? <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790'}}>None</div>
-              : addedList.map(t => (
-                <div key={t} style={{...rowStyle,background:'transparent',borderBottom:'1px solid rgba(122,182,72,0.2)',padding:'5px 0'}}>
-                  <span style={{fontWeight:700,minWidth:52}}>{t}</span>
-                  <AlignBadge ticker={t} />
-                  <span style={{color:'#27500A',fontSize:10}}>{src[t]?.curr_weight ? '+'+((src[t].curr_weight||0)*100).toFixed(2)+'%' : ''}</span>
-                </div>
-              ))
+              : (() => {
+                  // Group by fund for per-fund context
+                  const pfAdds = period === 'daily' ? pfDailyAdds : {};
+                  const fundTickers = new Set(
+                    Object.values(pfAdds).flatMap(arr => arr.map(x => x.ticker))
+                  );
+                  // Per-fund groups first
+                  const groups = Object.entries(pfAdds)
+                    .filter(([f, arr]) => arr && arr.length > 0 && f !== 'ADDS');
+                  // Remaining (ADDS account or not attributed)
+                  const attributed = new Set(groups.flatMap(([,arr]) => arr.map(x=>x.ticker)));
+                  const unattributed = addedList.filter(t => !attributed.has(t));
+                  return (
+                    <>
+                      {groups.map(([fund, arr]) => (
+                        <div key={fund} style={{marginBottom:8}}>
+                          <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,fontWeight:700,
+                            color:fundColors[fund]||'#555',letterSpacing:'0.06em',
+                            borderBottom:`1px solid ${fundColors[fund]||'#eee'}22`,paddingBottom:2,marginBottom:4}}>
+                            {fund}
+                            {fundStrategy[fund] && (
+                              <span style={{fontWeight:400,color:'#9A9790',marginLeft:5,fontSize:7,textTransform:'none',letterSpacing:0}}>
+                                — {fundStrategy[fund].split('—')[0].trim()}
+                              </span>
+                            )}
+                          </div>
+                          {arr.map(a => (
+                            <div key={a.ticker} style={{...rowStyle,background:'transparent',borderBottom:'1px solid rgba(122,182,72,0.15)',padding:'4px 0',gap:5}}>
+                              <span style={{fontWeight:700,minWidth:48}}>{a.ticker}</span>
+                              <AlignBadge ticker={a.ticker} />
+                              <span style={{color:'#9A9790',fontSize:9,marginLeft:'auto'}}>
+                                {a.weight ? `${a.weight.toFixed(2)}%` : ''}
+                                {a.days_held ? ` · ${a.days_held}d` : ''}
+                              </span>
+                            </div>
+                          ))}
+                        </div>
+                      ))}
+                      {unattributed.map(t => (
+                        <div key={t} style={{...rowStyle,background:'transparent',borderBottom:'1px solid rgba(122,182,72,0.2)',padding:'5px 0'}}>
+                          <span style={{fontWeight:700,minWidth:52}}>{t}</span>
+                          <AlignBadge ticker={t} />
+                          <span style={{color:'#27500A',fontSize:10,marginLeft:'auto'}}>{src[t]?.curr_weight ? '+'+((src[t].curr_weight||0)*100).toFixed(2)+'%' : ''}</span>
+                        </div>
+                      ))}
+                    </>
+                  );
+                })()
             }
           </div>
 
@@ -344,7 +401,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
         <thead>
           <tr>
             <TH>Ticker</TH><TH>Name</TH><TH right>Weight</TH>
-            <TH right>Day Δ</TH><TH right>Week Δ</TH>
+            <TH right>Days</TH><TH right>Day Δ</TH><TH right>Week Δ</TH>
             <TH>Quad</TH><TH>SSS</TH><TH>My Book</TH>
           </tr>
         </thead>
@@ -366,6 +423,20 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                 </TD>
                 <TD style={{color:'#7A7770',fontSize:10,maxWidth:160,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}>{h.name}</TD>
                 <TD right style={{fontWeight:600,color:h.isLong?'#27500A':'#C8302A'}}>{pct(h.weight)}</TD>
+                {(() => {
+                  const dh = (daysLookup[activeFund]?.[h.ticker]?.days_held) ?? null;
+                  const sssD = inSSS ? (sssInfo?.days ?? null) : null;
+                  const clr = dh === null ? '#ccc' : dh <= 14 ? '#27500A' : dh <= 60 ? '#B8860B' : '#9A9790';
+                  const tip = sssD !== null ? `HAM: ${dh}d | SSS: ${sssD}d (${dh < sssD ? 'HAM first' : dh > sssD ? 'SSS first' : 'same'})` : dh !== null ? `First seen ${daysLookup[activeFund]?.[h.ticker]?.first_seen}` : '';
+                  return (
+                    <TD right title={tip} style={{fontSize:10,fontWeight:dh<=14?700:400,color:clr}}>
+                      {dh !== null ? `${dh}d` : '—'}
+                      {sssD !== null && dh !== null && dh < sssD
+                        ? <span style={{fontSize:7,marginLeft:2,color:'#1A4D8F',fontWeight:700}}>⬆</span>
+                        : null}
+                    </TD>
+                  );
+                })()}
                 <TD right style={{fontSize:10, color: dd&&dd.delta>0?'#27500A':dd&&dd.delta<0?'#C8302A':'#ccc'}}>
                   {dd ? delta_fmt(dd.delta) : '—'}
                 </TD>
@@ -537,17 +608,13 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
   // ── RENDER ────────────────────────────────────────────────────────
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
-      {liveSource && (
-        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#27500A',
-          background:'#EAF3DE',padding:'3px 10px',borderRadius:3,marginBottom:12,display:'inline-flex',gap:10}}>
-          <span>📂 {liveSource.source}</span>
-          {liveSource.modifiedAt && (
-            <span style={{color:'#5A7770'}}>
-              Modified {new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'2-digit'})}
-            </span>
-          )}
-        </div>
-      )}
+      <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#27500A',
+        background:'#EAF3DE',padding:'3px 10px',borderRadius:3,marginBottom:12,display:'inline-flex',gap:10}}>
+        <span>📂 {liveSource?.source || 'ham_holdings_latest.csv'}</span>
+        <span style={{color:'#5A7770'}}>
+          As of {asOfStr}
+        </span>
+      </div>
       <FundSummary />
 
       {/* Sub-tabs */}

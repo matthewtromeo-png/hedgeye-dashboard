@@ -5241,49 +5241,4448 @@
     }
   },
   "ham_deltas": {
-    "date": "2026-05-28",
-    "added": [
+    "date": "2029-04-30",
+    "prev_date": "2026-05-28",
+    "prev_weekly_date": "2026-05-28",
+    "daily_added": [
+      "19247G107 SWP CS",
+      "46625H100-TRS-05/18/27-L-HELS",
+      "693656100-TRS-06/08/27-L-HELS",
+      "ACHC",
+      "ALGN",
+      "ALLY",
+      "APO",
+      "APP",
+      "ARCO",
+      "ARES",
+      "ARGT",
+      "ARHS",
+      "BK",
+      "BNO",
+      "BWXT",
+      "BX",
+      "CAG",
+      "CARR",
+      "CCJ",
+      "CFG",
+      "CLH",
+      "CPB",
+      "CPRT",
+      "CRWV",
+      "CWEN",
+      "DAR",
+      "DELL",
+      "DEO",
+      "ETHA",
+      "EWJ",
+      "FANG",
+      "FISV",
+      "FIVE",
+      "FLCA",
+      "FLKR",
+      "FOUR",
+      "GII",
+      "HGER",
+      "IAU",
+      "IBIT",
+      "JPM",
+      "KMX",
+      "KRE",
+      "LIT",
+      "LVS",
+      "MGM",
+      "MSFT",
+      "OLLI",
+      "ONON",
+      "PCAR",
+      "PDBA",
+      "PEP",
+      "PH",
+      "PSP",
+      "REAL",
+      "ROST",
+      "RTO",
+      "SBAR",
+      "SFM",
+      "SPHR",
+      "SPT",
+      "SPY   260618P00570000",
+      "TAP",
+      "TER",
+      "THC",
+      "TJX",
+      "TLT   260515P00086000",
+      "TLT   260717P00085000",
+      "TSLA",
+      "TSN",
+      "TSSI",
+      "TUR",
+      "VGK",
+      "WMT",
+      "XLF",
+      "XME",
+      "XSW"
+    ],
+    "daily_removed": [
+      "00971T101-TRS-06/08/27-L-HELS",
+      "023135106-TRS-06/15/27-L-HELS",
+      "19247G107-TRS-06/08/27-L-HELS",
+      "512807306-TRS-06/22/27-L-HELS",
+      "67066G104-TRS-06/08/27-L-HELS",
+      "82982T106-TRS-06/15/27-L-HELS",
+      "92826C839-TRS-06/22/27-L-HELS",
+      "AFRM",
       "ALAB",
       "ALNY",
       "AMRZ",
+      "BALL",
       "BE",
+      "BKNG",
+      "BNY",
       "BTI",
+      "CHTR",
+      "CNQ",
       "CRDO",
       "CW",
+      "DASH",
       "DAVE",
+      "DBJP",
+      "DBMF",
+      "DDS",
       "DKNG",
+      "DPZ",
+      "DRAM",
+      "EAT",
+      "ENB",
+      "EPHE",
+      "EWG",
+      "EWQ",
+      "FESM",
       "FIGS",
       "FLEX",
+      "FLUT",
       "FN",
       "FTAI",
       "FTI",
+      "FWD",
       "FWONK",
+      "GFS",
+      "GIS",
+      "GLASF",
       "GTX",
+      "HBM",
+      "HYG",
+      "IDMO",
+      "IDX",
       "IESC",
-      "LNG",
+      "IHE",
+      "IHF",
+      "ITB",
+      "JAAA",
+      "JBHT",
+      "JETS",
+      "JNK",
+      "KMI",
+      "LAMR",
+      "LCID",
+      "LLY",
       "LOAR",
       "LPLA",
       "LQDA",
+      "LUV",
+      "META",
+      "MKSI",
       "MOD",
+      "MPC",
       "MSGE",
+      "MSTR",
       "MTSI",
       "MTZ",
       "NCNO",
+      "NKE",
+      "NOBL",
+      "NVO",
       "NVT",
+      "ORCL",
       "PAWZ",
+      "PICK",
+      "PLAY",
       "PRMB",
+      "RBLX",
+      "RDDT",
+      "RIO",
       "RPRX",
       "SIRI",
+      "SLX",
+      "SNAP",
+      "SPY   260717P00610000",
+      "STT",
       "SUI",
+      "SXT",
+      "TTWO",
+      "TXG",
+      "URI",
+      "USO",
       "UTHR",
+      "V",
       "VG",
+      "VLO",
+      "VTIP",
       "WK",
-      "Z"
+      "XYZ",
+      "ZM"
     ],
-    "removed": [
-      "DAR"
+    "weekly_added": [
+      "19247G107 SWP CS",
+      "46625H100-TRS-05/18/27-L-HELS",
+      "693656100-TRS-06/08/27-L-HELS",
+      "ACHC",
+      "ALGN",
+      "ALLY",
+      "APO",
+      "APP",
+      "ARCO",
+      "ARES",
+      "ARGT",
+      "ARHS",
+      "BK",
+      "BNO",
+      "BWXT",
+      "BX",
+      "CAG",
+      "CARR",
+      "CCJ",
+      "CFG",
+      "CLH",
+      "CPB",
+      "CPRT",
+      "CRWV",
+      "CWEN",
+      "DAR",
+      "DELL",
+      "DEO",
+      "ETHA",
+      "EWJ",
+      "FANG",
+      "FISV",
+      "FIVE",
+      "FLCA",
+      "FLKR",
+      "FOUR",
+      "GII",
+      "HGER",
+      "IAU",
+      "IBIT",
+      "JPM",
+      "KMX",
+      "KRE",
+      "LIT",
+      "LVS",
+      "MGM",
+      "MSFT",
+      "OLLI",
+      "ONON",
+      "PCAR",
+      "PDBA",
+      "PEP",
+      "PH",
+      "PSP",
+      "REAL",
+      "ROST",
+      "RTO",
+      "SBAR",
+      "SFM",
+      "SPHR",
+      "SPT",
+      "SPY   260618P00570000",
+      "TAP",
+      "TER",
+      "THC",
+      "TJX",
+      "TLT   260515P00086000",
+      "TLT   260717P00085000",
+      "TSLA",
+      "TSN",
+      "TSSI",
+      "TUR",
+      "VGK",
+      "WMT",
+      "XLF",
+      "XME",
+      "XSW"
     ],
-    "prev_date": "2026-05-27"
+    "weekly_removed": [
+      "00971T101-TRS-06/08/27-L-HELS",
+      "023135106-TRS-06/15/27-L-HELS",
+      "19247G107-TRS-06/08/27-L-HELS",
+      "512807306-TRS-06/22/27-L-HELS",
+      "67066G104-TRS-06/08/27-L-HELS",
+      "82982T106-TRS-06/15/27-L-HELS",
+      "92826C839-TRS-06/22/27-L-HELS",
+      "AFRM",
+      "ALAB",
+      "ALNY",
+      "AMRZ",
+      "BALL",
+      "BE",
+      "BKNG",
+      "BNY",
+      "BTI",
+      "CHTR",
+      "CNQ",
+      "CRDO",
+      "CW",
+      "DASH",
+      "DAVE",
+      "DBJP",
+      "DBMF",
+      "DDS",
+      "DKNG",
+      "DPZ",
+      "DRAM",
+      "EAT",
+      "ENB",
+      "EPHE",
+      "EWG",
+      "EWQ",
+      "FESM",
+      "FIGS",
+      "FLEX",
+      "FLUT",
+      "FN",
+      "FTAI",
+      "FTI",
+      "FWD",
+      "FWONK",
+      "GFS",
+      "GIS",
+      "GLASF",
+      "GTX",
+      "HBM",
+      "HYG",
+      "IDMO",
+      "IDX",
+      "IESC",
+      "IHE",
+      "IHF",
+      "ITB",
+      "JAAA",
+      "JBHT",
+      "JETS",
+      "JNK",
+      "KMI",
+      "LAMR",
+      "LCID",
+      "LLY",
+      "LOAR",
+      "LPLA",
+      "LQDA",
+      "LUV",
+      "META",
+      "MKSI",
+      "MOD",
+      "MPC",
+      "MSGE",
+      "MSTR",
+      "MTSI",
+      "MTZ",
+      "NCNO",
+      "NKE",
+      "NOBL",
+      "NVO",
+      "NVT",
+      "ORCL",
+      "PAWZ",
+      "PICK",
+      "PLAY",
+      "PRMB",
+      "RBLX",
+      "RDDT",
+      "RIO",
+      "RPRX",
+      "SIRI",
+      "SLX",
+      "SNAP",
+      "SPY   260717P00610000",
+      "STT",
+      "SUI",
+      "SXT",
+      "TTWO",
+      "TXG",
+      "URI",
+      "USO",
+      "UTHR",
+      "V",
+      "VG",
+      "VLO",
+      "VTIP",
+      "WK",
+      "XYZ",
+      "ZM"
+    ],
+    "daily": {
+      "19247G107 SWP CS": {
+        "added": true,
+        "curr_weight": 0.0201
+      },
+      "46625H100-TRS-05/18/27-L-HELS": {
+        "added": true,
+        "curr_weight": 0.0294
+      },
+      "693656100-TRS-06/08/27-L-HELS": {
+        "added": true,
+        "curr_weight": 0.019
+      },
+      "ACHC": {
+        "added": true,
+        "curr_weight": 0.02
+      },
+      "ALGN": {
+        "added": true,
+        "curr_weight": 0.0148
+      },
+      "ALLY": {
+        "added": true,
+        "curr_weight": 0.0149
+      },
+      "APO": {
+        "added": true,
+        "curr_weight": -0.0071
+      },
+      "APP": {
+        "added": true,
+        "curr_weight": -0.0076
+      },
+      "ARCO": {
+        "added": true,
+        "curr_weight": 0.0123
+      },
+      "ARES": {
+        "added": true,
+        "curr_weight": -0.0069
+      },
+      "ARGT": {
+        "added": true,
+        "curr_weight": 0.0098
+      },
+      "ARHS": {
+        "added": true,
+        "curr_weight": -0.0047
+      },
+      "BK": {
+        "added": true,
+        "curr_weight": 0.0119
+      },
+      "BNO": {
+        "added": true,
+        "curr_weight": 0.0296
+      },
+      "BWXT": {
+        "added": true,
+        "curr_weight": 0.009
+      },
+      "BX": {
+        "added": true,
+        "curr_weight": -0.0069
+      },
+      "CAG": {
+        "added": true,
+        "curr_weight": -0.0073
+      },
+      "CARR": {
+        "added": true,
+        "curr_weight": 0.0076
+      },
+      "CCJ": {
+        "added": true,
+        "curr_weight": 0.0093
+      },
+      "CFG": {
+        "added": true,
+        "curr_weight": 0.0245
+      },
+      "CLH": {
+        "added": true,
+        "curr_weight": 0.0274
+      },
+      "CPB": {
+        "added": true,
+        "curr_weight": -0.0074
+      },
+      "CPRT": {
+        "added": true,
+        "curr_weight": -0.0041
+      },
+      "CRWV": {
+        "added": true,
+        "curr_weight": 0.0154
+      },
+      "CWEN": {
+        "added": true,
+        "curr_weight": 0.0067
+      },
+      "DAR": {
+        "added": true,
+        "curr_weight": 0.0247
+      },
+      "DELL": {
+        "added": true,
+        "curr_weight": 0.008
+      },
+      "DEO": {
+        "added": true,
+        "curr_weight": -0.0063
+      },
+      "ETHA": {
+        "added": true,
+        "curr_weight": 0.0166
+      },
+      "EWJ": {
+        "added": true,
+        "curr_weight": 0.0096
+      },
+      "FANG": {
+        "added": true,
+        "curr_weight": 0.0166
+      },
+      "FISV": {
+        "added": true,
+        "curr_weight": -0.0061
+      },
+      "FIVE": {
+        "added": true,
+        "curr_weight": 0.029
+      },
+      "FLCA": {
+        "added": true,
+        "curr_weight": 0.0435
+      },
+      "FLKR": {
+        "added": true,
+        "curr_weight": 0.0179
+      },
+      "FOUR": {
+        "added": true,
+        "curr_weight": -0.0059
+      },
+      "GII": {
+        "added": true,
+        "curr_weight": 0.0296
+      },
+      "HGER": {
+        "added": true,
+        "curr_weight": 0.0437
+      },
+      "IAU": {
+        "added": true,
+        "curr_weight": 0.0119
+      },
+      "IBIT": {
+        "added": true,
+        "curr_weight": 0.0097
+      },
+      "JPM": {
+        "added": true,
+        "curr_weight": 0.0249
+      },
+      "KMX": {
+        "added": true,
+        "curr_weight": -0.0098
+      },
+      "KRE": {
+        "added": true,
+        "curr_weight": 0.0407
+      },
+      "LIT": {
+        "added": true,
+        "curr_weight": 0.0466
+      },
+      "LVS": {
+        "added": true,
+        "curr_weight": -0.0074
+      },
+      "MGM": {
+        "added": true,
+        "curr_weight": 0.0155
+      },
+      "MSFT": {
+        "added": true,
+        "curr_weight": 0.0151
+      },
+      "OLLI": {
+        "added": true,
+        "curr_weight": -0.0069
+      },
+      "ONON": {
+        "added": true,
+        "curr_weight": -0.0047
+      },
+      "PCAR": {
+        "added": true,
+        "curr_weight": 0.0185
+      },
+      "PDBA": {
+        "added": true,
+        "curr_weight": 0.037
+      },
+      "PEP": {
+        "added": true,
+        "curr_weight": 0.0074
+      },
+      "PH": {
+        "added": true,
+        "curr_weight": 0.0116
+      },
+      "PSP": {
+        "added": true,
+        "curr_weight": -0.0096
+      },
+      "REAL": {
+        "added": true,
+        "curr_weight": 0.0143
+      },
+      "ROST": {
+        "added": true,
+        "curr_weight": 0.0248
+      },
+      "RTO": {
+        "added": true,
+        "curr_weight": 0.024
+      },
+      "SBAR": {
+        "added": true,
+        "curr_weight": 0.0302
+      },
+      "SFM": {
+        "added": true,
+        "curr_weight": -0.0056
+      },
+      "SPHR": {
+        "added": true,
+        "curr_weight": 0.0213
+      },
+      "SPT": {
+        "added": true,
+        "curr_weight": -0.0064
+      },
+      "SPY   260618P00570000": {
+        "added": true,
+        "curr_weight": 0.0011
+      },
+      "TAP": {
+        "added": true,
+        "curr_weight": -0.0058
+      },
+      "TER": {
+        "added": true,
+        "curr_weight": 0.0072
+      },
+      "THC": {
+        "added": true,
+        "curr_weight": -0.006
+      },
+      "TJX": {
+        "added": true,
+        "curr_weight": 0.0197
+      },
+      "TLT   260515P00086000": {
+        "added": true,
+        "curr_weight": 0.0036
+      },
+      "TLT   260717P00085000": {
+        "added": true,
+        "curr_weight": 0.0031
+      },
+      "TSLA": {
+        "added": true,
+        "curr_weight": -0.0061
+      },
+      "TSN": {
+        "added": true,
+        "curr_weight": 0.0127
+      },
+      "TSSI": {
+        "added": true,
+        "curr_weight": 0.0135
+      },
+      "TUR": {
+        "added": true,
+        "curr_weight": 0.0327
+      },
+      "VGK": {
+        "added": true,
+        "curr_weight": 0.0124
+      },
+      "WMT": {
+        "added": true,
+        "curr_weight": 0.0175
+      },
+      "XLF": {
+        "added": true,
+        "curr_weight": 0.0196
+      },
+      "XME": {
+        "added": true,
+        "curr_weight": 0.0362
+      },
+      "XSW": {
+        "added": true,
+        "curr_weight": -0.0065
+      },
+      "00971T101-TRS-06/08/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.02
+      },
+      "023135106-TRS-06/15/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0335
+      },
+      "19247G107-TRS-06/08/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.015
+      },
+      "512807306-TRS-06/22/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0232
+      },
+      "67066G104-TRS-06/08/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0208
+      },
+      "82982T106-TRS-06/15/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0176
+      },
+      "92826C839-TRS-06/22/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0245
+      },
+      "AFRM": {
+        "removed": true,
+        "prev_weight": 0.0158
+      },
+      "ALAB": {
+        "removed": true,
+        "prev_weight": 0.0078
+      },
+      "ALNY": {
+        "removed": true,
+        "prev_weight": 0.0095
+      },
+      "AMRZ": {
+        "removed": true,
+        "prev_weight": 0.0047
+      },
+      "BALL": {
+        "removed": true,
+        "prev_weight": -0.0094
+      },
+      "BE": {
+        "removed": true,
+        "prev_weight": 0.1022
+      },
+      "BKNG": {
+        "removed": true,
+        "prev_weight": -0.0106
+      },
+      "BNY": {
+        "removed": true,
+        "prev_weight": 0.0122
+      },
+      "BTI": {
+        "removed": true,
+        "prev_weight": 0.0151
+      },
+      "CHTR": {
+        "removed": true,
+        "prev_weight": -0.0076
+      },
+      "CNQ": {
+        "removed": true,
+        "prev_weight": 0.0145
+      },
+      "CRDO": {
+        "removed": true,
+        "prev_weight": 0.0142
+      },
+      "CW": {
+        "removed": true,
+        "prev_weight": 0.0475
+      },
+      "DASH": {
+        "removed": true,
+        "prev_weight": -0.0097
+      },
+      "DAVE": {
+        "removed": true,
+        "prev_weight": 0.0041
+      },
+      "DBJP": {
+        "removed": true,
+        "prev_weight": 0.0581
+      },
+      "DBMF": {
+        "removed": true,
+        "prev_weight": 0.0741
+      },
+      "DDS": {
+        "removed": true,
+        "prev_weight": -0.0082
+      },
+      "DKNG": {
+        "removed": true,
+        "prev_weight": 0.011
+      },
+      "DPZ": {
+        "removed": true,
+        "prev_weight": -0.0094
+      },
+      "DRAM": {
+        "removed": true,
+        "prev_weight": 0.0357
+      },
+      "EAT": {
+        "removed": true,
+        "prev_weight": -0.0102
+      },
+      "ENB": {
+        "removed": true,
+        "prev_weight": 0.0207
+      },
+      "EPHE": {
+        "removed": true,
+        "prev_weight": -0.01
+      },
+      "EWG": {
+        "removed": true,
+        "prev_weight": -0.0102
+      },
+      "EWQ": {
+        "removed": true,
+        "prev_weight": -0.0052
+      },
+      "FESM": {
+        "removed": true,
+        "prev_weight": 0.0655
+      },
+      "FIGS": {
+        "removed": true,
+        "prev_weight": 0.0027
+      },
+      "FLEX": {
+        "removed": true,
+        "prev_weight": 0.1085
+      },
+      "FLUT": {
+        "removed": true,
+        "prev_weight": -0.0092
+      },
+      "FN": {
+        "removed": true,
+        "prev_weight": 0.0357
+      },
+      "FTAI": {
+        "removed": true,
+        "prev_weight": 0.012
+      },
+      "FTI": {
+        "removed": true,
+        "prev_weight": 0.076
+      },
+      "FWD": {
+        "removed": true,
+        "prev_weight": 0.0566
+      },
+      "FWONK": {
+        "removed": true,
+        "prev_weight": 0.0047
+      },
+      "GFS": {
+        "removed": true,
+        "prev_weight": 0.0082
+      },
+      "GIS": {
+        "removed": true,
+        "prev_weight": -0.0099
+      },
+      "GLASF": {
+        "removed": true,
+        "prev_weight": 0.0168
+      },
+      "GTX": {
+        "removed": true,
+        "prev_weight": 0.0069
+      },
+      "HBM": {
+        "removed": true,
+        "prev_weight": 0.016
+      },
+      "HYG": {
+        "removed": true,
+        "prev_weight": -0.0101
+      },
+      "IDMO": {
+        "removed": true,
+        "prev_weight": 0.0187
+      },
+      "IDX": {
+        "removed": true,
+        "prev_weight": -0.0094
+      },
+      "IESC": {
+        "removed": true,
+        "prev_weight": 0.0139
+      },
+      "IHE": {
+        "removed": true,
+        "prev_weight": 0.0252
+      },
+      "IHF": {
+        "removed": true,
+        "prev_weight": 0.0256
+      },
+      "ITB": {
+        "removed": true,
+        "prev_weight": -0.0214
+      },
+      "JAAA": {
+        "removed": true,
+        "prev_weight": 0.063
+      },
+      "JBHT": {
+        "removed": true,
+        "prev_weight": 0.0218
+      },
+      "JETS": {
+        "removed": true,
+        "prev_weight": -0.011
+      },
+      "JNK": {
+        "removed": true,
+        "prev_weight": -0.0101
+      },
+      "KMI": {
+        "removed": true,
+        "prev_weight": 0.0127
+      },
+      "LAMR": {
+        "removed": true,
+        "prev_weight": 0.0154
+      },
+      "LCID": {
+        "removed": true,
+        "prev_weight": -0.0098
+      },
+      "LLY": {
+        "removed": true,
+        "prev_weight": 0.0287
+      },
+      "LOAR": {
+        "removed": true,
+        "prev_weight": 0.0025
+      },
+      "LPLA": {
+        "removed": true,
+        "prev_weight": 0.0033
+      },
+      "LQDA": {
+        "removed": true,
+        "prev_weight": 0.0248
+      },
+      "LUV": {
+        "removed": true,
+        "prev_weight": -0.0108
+      },
+      "META": {
+        "removed": true,
+        "prev_weight": -0.008
+      },
+      "MKSI": {
+        "removed": true,
+        "prev_weight": 0.0228
+      },
+      "MOD": {
+        "removed": true,
+        "prev_weight": 0.0168
+      },
+      "MPC": {
+        "removed": true,
+        "prev_weight": 0.0148
+      },
+      "MSGE": {
+        "removed": true,
+        "prev_weight": 0.0022
+      },
+      "MSTR": {
+        "removed": true,
+        "prev_weight": -0.0095
+      },
+      "MTSI": {
+        "removed": true,
+        "prev_weight": 0.0449
+      },
+      "MTZ": {
+        "removed": true,
+        "prev_weight": 0.0341
+      },
+      "NCNO": {
+        "removed": true,
+        "prev_weight": 0.0038
+      },
+      "NKE": {
+        "removed": true,
+        "prev_weight": -0.0102
+      },
+      "NOBL": {
+        "removed": true,
+        "prev_weight": 0.0449
+      },
+      "NVO": {
+        "removed": true,
+        "prev_weight": 0.02
+      },
+      "NVT": {
+        "removed": true,
+        "prev_weight": 0.0497
+      },
+      "ORCL": {
+        "removed": true,
+        "prev_weight": 0.0113
+      },
+      "PAWZ": {
+        "removed": true,
+        "prev_weight": -0.0009
+      },
+      "PICK": {
+        "removed": true,
+        "prev_weight": 0.0069
+      },
+      "PLAY": {
+        "removed": true,
+        "prev_weight": -0.011
+      },
+      "PRMB": {
+        "removed": true,
+        "prev_weight": 0.0064
+      },
+      "RBLX": {
+        "removed": true,
+        "prev_weight": -0.0081
+      },
+      "RDDT": {
+        "removed": true,
+        "prev_weight": -0.0101
+      },
+      "RIO": {
+        "removed": true,
+        "prev_weight": 0.0126
+      },
+      "RPRX": {
+        "removed": true,
+        "prev_weight": 0.0037
+      },
+      "SIRI": {
+        "removed": true,
+        "prev_weight": 0.0052
+      },
+      "SLX": {
+        "removed": true,
+        "prev_weight": 0.0546
+      },
+      "SNAP": {
+        "removed": true,
+        "prev_weight": -0.0051
+      },
+      "SPY   260717P00610000": {
+        "removed": true,
+        "prev_weight": 0.001
+      },
+      "STT": {
+        "removed": true,
+        "prev_weight": 0.0157
+      },
+      "SUI": {
+        "removed": true,
+        "prev_weight": 0.0025
+      },
+      "SXT": {
+        "removed": true,
+        "prev_weight": 0.0227
+      },
+      "TTWO": {
+        "removed": true,
+        "prev_weight": 0.0158
+      },
+      "TXG": {
+        "removed": true,
+        "prev_weight": 0.0072
+      },
+      "URI": {
+        "removed": true,
+        "prev_weight": 0.0262
+      },
+      "USO": {
+        "removed": true,
+        "prev_weight": 0.0307
+      },
+      "UTHR": {
+        "removed": true,
+        "prev_weight": 0.0274
+      },
+      "V": {
+        "removed": true,
+        "prev_weight": 0.021
+      },
+      "VG": {
+        "removed": true,
+        "prev_weight": 0.0028
+      },
+      "VLO": {
+        "removed": true,
+        "prev_weight": 0.0115
+      },
+      "VTIP": {
+        "removed": true,
+        "prev_weight": 0.0329
+      },
+      "WK": {
+        "removed": true,
+        "prev_weight": 0.0019
+      },
+      "XYZ": {
+        "removed": true,
+        "prev_weight": 0.0102
+      },
+      "ZM": {
+        "removed": true,
+        "prev_weight": 0.0496
+      },
+      "MEOH": {
+        "delta": 0.0109,
+        "curr_weight": 0.0207,
+        "prev_weight": 0.0098
+      },
+      "JAZZ": {
+        "delta": -0.003,
+        "curr_weight": 0.0228,
+        "prev_weight": 0.0258
+      },
+      "ZROZ": {
+        "delta": 0.0044,
+        "curr_weight": -0.0199,
+        "prev_weight": -0.0243
+      },
+      "SOYB": {
+        "delta": -0.0045,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0145
+      },
+      "EWY": {
+        "delta": -0.0024,
+        "curr_weight": 0.0102,
+        "prev_weight": 0.0126
+      },
+      "NVDA": {
+        "delta": 0.0006,
+        "curr_weight": 0.0905,
+        "prev_weight": 0.0899
+      },
+      "UNH": {
+        "delta": -0.0042,
+        "curr_weight": 0.021,
+        "prev_weight": 0.0252
+      },
+      "HAL": {
+        "delta": 0.0024,
+        "curr_weight": 0.0208,
+        "prev_weight": 0.0184
+      },
+      "APD": {
+        "delta": 0.0191,
+        "curr_weight": 0.0296,
+        "prev_weight": 0.0105
+      },
+      "FLO": {
+        "delta": 0.0025,
+        "curr_weight": -0.0073,
+        "prev_weight": -0.0098
+      },
+      "VTI": {
+        "delta": -0.0012,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0911
+      },
+      "ULS": {
+        "delta": -0.0013,
+        "curr_weight": 0.0239,
+        "prev_weight": 0.0252
+      },
+      "CAT": {
+        "delta": -0.0013,
+        "curr_weight": 0.0197,
+        "prev_weight": 0.021
+      },
+      "CMG": {
+        "delta": 0.0041,
+        "curr_weight": -0.0058,
+        "prev_weight": -0.0099
+      },
+      "USPH": {
+        "delta": 0.0035,
+        "curr_weight": -0.0045,
+        "prev_weight": -0.008
+      },
+      "TLT": {
+        "delta": 0.0047,
+        "curr_weight": -0.0197,
+        "prev_weight": -0.0244
+      },
+      "VIK": {
+        "delta": -0.0138,
+        "curr_weight": 0.0088,
+        "prev_weight": 0.0226
+      },
+      "MUSA": {
+        "delta": 0.0094,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0101
+      },
+      "CSX": {
+        "delta": -0.0056,
+        "curr_weight": 0.0246,
+        "prev_weight": 0.0302
+      },
+      "CAVA": {
+        "delta": 0.0105,
+        "curr_weight": 0.0146,
+        "prev_weight": 0.0041
+      },
+      "DBA": {
+        "delta": 0.006,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0141
+      },
+      "ROKU": {
+        "delta": -0.0197,
+        "curr_weight": 0.0246,
+        "prev_weight": 0.0443
+      },
+      "XLE": {
+        "delta": 0.0117,
+        "curr_weight": 0.0412,
+        "prev_weight": 0.0295
+      },
+      "CVI": {
+        "delta": 0.0122,
+        "curr_weight": 0.0215,
+        "prev_weight": 0.0093
+      },
+      "AVEM": {
+        "delta": -0.0054,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0202
+      },
+      "TAN": {
+        "delta": -0.019,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0452
+      },
+      "FITE": {
+        "delta": -0.0031,
+        "curr_weight": 0.019,
+        "prev_weight": 0.0221
+      },
+      "INDA": {
+        "delta": 0.001,
+        "curr_weight": -0.0193,
+        "prev_weight": -0.0203
+      },
+      "ARTY": {
+        "delta": -0.0076,
+        "curr_weight": 0.0394,
+        "prev_weight": 0.047
+      },
+      "GLD": {
+        "delta": 0.0201,
+        "curr_weight": 0.0396,
+        "prev_weight": 0.0195
+      },
+      "OIH": {
+        "delta": -0.0016,
+        "curr_weight": 0.0481,
+        "prev_weight": 0.0497
+      },
+      "HCA": {
+        "delta": 0.0015,
+        "curr_weight": -0.0057,
+        "prev_weight": -0.0072
+      },
+      "CIBR": {
+        "delta": -0.0074,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0269
+      },
+      "UUP": {
+        "delta": -0.0326,
+        "curr_weight": 0.0371,
+        "prev_weight": 0.0697
+      },
+      "RSI": {
+        "delta": 0.0005,
+        "curr_weight": 0.0153,
+        "prev_weight": 0.0148
+      },
+      "WING": {
+        "delta": 0.0018,
+        "curr_weight": -0.0102,
+        "prev_weight": -0.012
+      },
+      "CIEN": {
+        "delta": -0.004,
+        "curr_weight": 0.006,
+        "prev_weight": 0.01
+      },
+      "IDXX": {
+        "delta": 0.0038,
+        "curr_weight": -0.0062,
+        "prev_weight": -0.01
+      },
+      "ADI": {
+        "delta": 0.0061,
+        "curr_weight": 0.0282,
+        "prev_weight": 0.0221
+      },
+      "GOOGL": {
+        "delta": -0.0031,
+        "curr_weight": 0.0772,
+        "prev_weight": 0.0803
+      },
+      "VYM": {
+        "delta": 0.0106,
+        "curr_weight": 0.0599,
+        "prev_weight": 0.0493
+      },
+      "C": {
+        "delta": 0.004,
+        "curr_weight": 0.017,
+        "prev_weight": 0.013
+      },
+      "XBI": {
+        "delta": 0.0027,
+        "curr_weight": 0.0185,
+        "prev_weight": 0.0158
+      },
+      "SNDK": {
+        "delta": -0.0074,
+        "curr_weight": 0.0076,
+        "prev_weight": 0.015
+      },
+      "DBB": {
+        "delta": 0.0075,
+        "curr_weight": 0.0373,
+        "prev_weight": 0.0298
+      },
+      "CRCL": {
+        "delta": -0.0064,
+        "curr_weight": 0.0137,
+        "prev_weight": 0.0201
+      },
+      "WEAT": {
+        "delta": -0.0043,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0143
+      },
+      "NOV": {
+        "delta": 0.0015,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0187
+      },
+      "XTL": {
+        "delta": -0.0272,
+        "curr_weight": 0.0446,
+        "prev_weight": 0.0718
+      },
+      "KSS": {
+        "delta": 0.0031,
+        "curr_weight": -0.008,
+        "prev_weight": -0.0111
+      },
+      "LNG": {
+        "delta": 0.0125,
+        "curr_weight": 0.018,
+        "prev_weight": 0.0055
+      },
+      "VPL": {
+        "delta": 0.0068,
+        "curr_weight": 0.0223,
+        "prev_weight": 0.0155
+      },
+      "AM": {
+        "delta": 0.0007,
+        "curr_weight": 0.011,
+        "prev_weight": 0.0103
+      },
+      "NDAQ": {
+        "delta": -0.0013,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0163
+      },
+      "GS": {
+        "delta": -0.002,
+        "curr_weight": 0.021,
+        "prev_weight": 0.023
+      },
+      "ATI": {
+        "delta": -0.0066,
+        "curr_weight": 0.005,
+        "prev_weight": 0.0116
+      },
+      "GLW": {
+        "delta": 0.0008,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0074
+      },
+      "LIN": {
+        "delta": -0.002,
+        "curr_weight": 0.0147,
+        "prev_weight": 0.0167
+      },
+      "SYY": {
+        "delta": -0.0022,
+        "curr_weight": -0.0099,
+        "prev_weight": -0.0077
+      },
+      "CSCO": {
+        "delta": 0.0035,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0252
+      },
+      "BRBR": {
+        "delta": 0.0007,
+        "curr_weight": -0.0073,
+        "prev_weight": -0.008
+      },
+      "IEF": {
+        "delta": -0.0006,
+        "curr_weight": -0.0151,
+        "prev_weight": -0.0145
+      },
+      "HTEC": {
+        "delta": 0.0093,
+        "curr_weight": 0.0193,
+        "prev_weight": 0.01
+      },
+      "AMZN": {
+        "delta": -0.0035,
+        "curr_weight": 0.0573,
+        "prev_weight": 0.0608
+      },
+      "AVGO": {
+        "delta": 0.0092,
+        "curr_weight": 0.0392,
+        "prev_weight": 0.03
+      },
+      "STX": {
+        "delta": 0.0019,
+        "curr_weight": 0.0136,
+        "prev_weight": 0.0117
+      },
+      "Z": {
+        "delta": -0.0082,
+        "curr_weight": -0.0057,
+        "prev_weight": 0.0025
+      },
+      "XAR": {
+        "delta": -0.0013,
+        "curr_weight": 0.0188,
+        "prev_weight": 0.0201
+      },
+      "PM": {
+        "delta": -0.0147,
+        "curr_weight": 0.0052,
+        "prev_weight": 0.0199
+      },
+      "CZR": {
+        "delta": 0.0053,
+        "curr_weight": 0.0209,
+        "prev_weight": 0.0156
+      },
+      "XLI": {
+        "delta": 0.0097,
+        "curr_weight": 0.0196,
+        "prev_weight": 0.0099
+      },
+      "MAR": {
+        "delta": 0.0082,
+        "curr_weight": 0.0247,
+        "prev_weight": 0.0165
+      },
+      "SWBI": {
+        "delta": 0.0006,
+        "curr_weight": 0.0108,
+        "prev_weight": 0.0102
+      },
+      "RIG": {
+        "delta": -0.0006,
+        "curr_weight": 0.0171,
+        "prev_weight": 0.0177
+      },
+      "AMD": {
+        "delta": -0.0086,
+        "curr_weight": 0.0137,
+        "prev_weight": 0.0223
+      },
+      "MRVL": {
+        "delta": -0.1364,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.1446
+      },
+      "CASY": {
+        "delta": 0.0071,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.0227
+      },
+      "COHR": {
+        "delta": 0.0037,
+        "curr_weight": 0.009,
+        "prev_weight": 0.0053
+      },
+      "INTC": {
+        "delta": -0.0043,
+        "curr_weight": 0.0175,
+        "prev_weight": 0.0218
+      },
+      "MRK": {
+        "delta": 0.0028,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.012
+      },
+      "CF": {
+        "delta": -0.0025,
+        "curr_weight": 0.0103,
+        "prev_weight": 0.0128
+      },
+      "NET": {
+        "delta": 0.0104,
+        "curr_weight": 0.0152,
+        "prev_weight": 0.0048
+      },
+      "SBUX": {
+        "delta": 0.003,
+        "curr_weight": 0.0219,
+        "prev_weight": 0.0189
+      },
+      "ROBO": {
+        "delta": 0.0037,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0158
+      },
+      "AMAT": {
+        "delta": -0.0059,
+        "curr_weight": 0.0214,
+        "prev_weight": 0.0273
+      },
+      "PAVE": {
+        "delta": 0.0476,
+        "curr_weight": 0.0632,
+        "prev_weight": 0.0156
+      },
+      "AAPL": {
+        "delta": -0.011,
+        "curr_weight": 0.081,
+        "prev_weight": 0.092
+      },
+      "CERY": {
+        "delta": 0.0048,
+        "curr_weight": 0.1414,
+        "prev_weight": 0.1366
+      },
+      "CBOE": {
+        "delta": -0.0012,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0214
+      },
+      "TWLO": {
+        "delta": -0.0144,
+        "curr_weight": 0.0048,
+        "prev_weight": 0.0192
+      },
+      "XTEN": {
+        "delta": 0.0047,
+        "curr_weight": -0.0197,
+        "prev_weight": -0.0244
+      },
+      "CDNS": {
+        "delta": 0.0043,
+        "curr_weight": 0.0196,
+        "prev_weight": 0.0153
+      },
+      "WDC": {
+        "delta": -0.0008,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0203
+      }
+    },
+    "weekly": {
+      "19247G107 SWP CS": {
+        "added": true,
+        "curr_weight": 0.0201
+      },
+      "46625H100-TRS-05/18/27-L-HELS": {
+        "added": true,
+        "curr_weight": 0.0294
+      },
+      "693656100-TRS-06/08/27-L-HELS": {
+        "added": true,
+        "curr_weight": 0.019
+      },
+      "ACHC": {
+        "added": true,
+        "curr_weight": 0.02
+      },
+      "ALGN": {
+        "added": true,
+        "curr_weight": 0.0148
+      },
+      "ALLY": {
+        "added": true,
+        "curr_weight": 0.0149
+      },
+      "APO": {
+        "added": true,
+        "curr_weight": -0.0071
+      },
+      "APP": {
+        "added": true,
+        "curr_weight": -0.0076
+      },
+      "ARCO": {
+        "added": true,
+        "curr_weight": 0.0123
+      },
+      "ARES": {
+        "added": true,
+        "curr_weight": -0.0069
+      },
+      "ARGT": {
+        "added": true,
+        "curr_weight": 0.0098
+      },
+      "ARHS": {
+        "added": true,
+        "curr_weight": -0.0047
+      },
+      "BK": {
+        "added": true,
+        "curr_weight": 0.0119
+      },
+      "BNO": {
+        "added": true,
+        "curr_weight": 0.0296
+      },
+      "BWXT": {
+        "added": true,
+        "curr_weight": 0.009
+      },
+      "BX": {
+        "added": true,
+        "curr_weight": -0.0069
+      },
+      "CAG": {
+        "added": true,
+        "curr_weight": -0.0073
+      },
+      "CARR": {
+        "added": true,
+        "curr_weight": 0.0076
+      },
+      "CCJ": {
+        "added": true,
+        "curr_weight": 0.0093
+      },
+      "CFG": {
+        "added": true,
+        "curr_weight": 0.0245
+      },
+      "CLH": {
+        "added": true,
+        "curr_weight": 0.0274
+      },
+      "CPB": {
+        "added": true,
+        "curr_weight": -0.0074
+      },
+      "CPRT": {
+        "added": true,
+        "curr_weight": -0.0041
+      },
+      "CRWV": {
+        "added": true,
+        "curr_weight": 0.0154
+      },
+      "CWEN": {
+        "added": true,
+        "curr_weight": 0.0067
+      },
+      "DAR": {
+        "added": true,
+        "curr_weight": 0.0247
+      },
+      "DELL": {
+        "added": true,
+        "curr_weight": 0.008
+      },
+      "DEO": {
+        "added": true,
+        "curr_weight": -0.0063
+      },
+      "ETHA": {
+        "added": true,
+        "curr_weight": 0.0166
+      },
+      "EWJ": {
+        "added": true,
+        "curr_weight": 0.0096
+      },
+      "FANG": {
+        "added": true,
+        "curr_weight": 0.0166
+      },
+      "FISV": {
+        "added": true,
+        "curr_weight": -0.0061
+      },
+      "FIVE": {
+        "added": true,
+        "curr_weight": 0.029
+      },
+      "FLCA": {
+        "added": true,
+        "curr_weight": 0.0435
+      },
+      "FLKR": {
+        "added": true,
+        "curr_weight": 0.0179
+      },
+      "FOUR": {
+        "added": true,
+        "curr_weight": -0.0059
+      },
+      "GII": {
+        "added": true,
+        "curr_weight": 0.0296
+      },
+      "HGER": {
+        "added": true,
+        "curr_weight": 0.0437
+      },
+      "IAU": {
+        "added": true,
+        "curr_weight": 0.0119
+      },
+      "IBIT": {
+        "added": true,
+        "curr_weight": 0.0097
+      },
+      "JPM": {
+        "added": true,
+        "curr_weight": 0.0249
+      },
+      "KMX": {
+        "added": true,
+        "curr_weight": -0.0098
+      },
+      "KRE": {
+        "added": true,
+        "curr_weight": 0.0407
+      },
+      "LIT": {
+        "added": true,
+        "curr_weight": 0.0466
+      },
+      "LVS": {
+        "added": true,
+        "curr_weight": -0.0074
+      },
+      "MGM": {
+        "added": true,
+        "curr_weight": 0.0155
+      },
+      "MSFT": {
+        "added": true,
+        "curr_weight": 0.0151
+      },
+      "OLLI": {
+        "added": true,
+        "curr_weight": -0.0069
+      },
+      "ONON": {
+        "added": true,
+        "curr_weight": -0.0047
+      },
+      "PCAR": {
+        "added": true,
+        "curr_weight": 0.0185
+      },
+      "PDBA": {
+        "added": true,
+        "curr_weight": 0.037
+      },
+      "PEP": {
+        "added": true,
+        "curr_weight": 0.0074
+      },
+      "PH": {
+        "added": true,
+        "curr_weight": 0.0116
+      },
+      "PSP": {
+        "added": true,
+        "curr_weight": -0.0096
+      },
+      "REAL": {
+        "added": true,
+        "curr_weight": 0.0143
+      },
+      "ROST": {
+        "added": true,
+        "curr_weight": 0.0248
+      },
+      "RTO": {
+        "added": true,
+        "curr_weight": 0.024
+      },
+      "SBAR": {
+        "added": true,
+        "curr_weight": 0.0302
+      },
+      "SFM": {
+        "added": true,
+        "curr_weight": -0.0056
+      },
+      "SPHR": {
+        "added": true,
+        "curr_weight": 0.0213
+      },
+      "SPT": {
+        "added": true,
+        "curr_weight": -0.0064
+      },
+      "SPY   260618P00570000": {
+        "added": true,
+        "curr_weight": 0.0011
+      },
+      "TAP": {
+        "added": true,
+        "curr_weight": -0.0058
+      },
+      "TER": {
+        "added": true,
+        "curr_weight": 0.0072
+      },
+      "THC": {
+        "added": true,
+        "curr_weight": -0.006
+      },
+      "TJX": {
+        "added": true,
+        "curr_weight": 0.0197
+      },
+      "TLT   260515P00086000": {
+        "added": true,
+        "curr_weight": 0.0036
+      },
+      "TLT   260717P00085000": {
+        "added": true,
+        "curr_weight": 0.0031
+      },
+      "TSLA": {
+        "added": true,
+        "curr_weight": -0.0061
+      },
+      "TSN": {
+        "added": true,
+        "curr_weight": 0.0127
+      },
+      "TSSI": {
+        "added": true,
+        "curr_weight": 0.0135
+      },
+      "TUR": {
+        "added": true,
+        "curr_weight": 0.0327
+      },
+      "VGK": {
+        "added": true,
+        "curr_weight": 0.0124
+      },
+      "WMT": {
+        "added": true,
+        "curr_weight": 0.0175
+      },
+      "XLF": {
+        "added": true,
+        "curr_weight": 0.0196
+      },
+      "XME": {
+        "added": true,
+        "curr_weight": 0.0362
+      },
+      "XSW": {
+        "added": true,
+        "curr_weight": -0.0065
+      },
+      "00971T101-TRS-06/08/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.02
+      },
+      "023135106-TRS-06/15/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0335
+      },
+      "19247G107-TRS-06/08/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.015
+      },
+      "512807306-TRS-06/22/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0232
+      },
+      "67066G104-TRS-06/08/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0208
+      },
+      "82982T106-TRS-06/15/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0176
+      },
+      "92826C839-TRS-06/22/27-L-HELS": {
+        "removed": true,
+        "prev_weight": 0.0245
+      },
+      "AFRM": {
+        "removed": true,
+        "prev_weight": 0.0158
+      },
+      "ALAB": {
+        "removed": true,
+        "prev_weight": 0.0078
+      },
+      "ALNY": {
+        "removed": true,
+        "prev_weight": 0.0095
+      },
+      "AMRZ": {
+        "removed": true,
+        "prev_weight": 0.0047
+      },
+      "BALL": {
+        "removed": true,
+        "prev_weight": -0.0094
+      },
+      "BE": {
+        "removed": true,
+        "prev_weight": 0.1022
+      },
+      "BKNG": {
+        "removed": true,
+        "prev_weight": -0.0106
+      },
+      "BNY": {
+        "removed": true,
+        "prev_weight": 0.0122
+      },
+      "BTI": {
+        "removed": true,
+        "prev_weight": 0.0151
+      },
+      "CHTR": {
+        "removed": true,
+        "prev_weight": -0.0076
+      },
+      "CNQ": {
+        "removed": true,
+        "prev_weight": 0.0145
+      },
+      "CRDO": {
+        "removed": true,
+        "prev_weight": 0.0142
+      },
+      "CW": {
+        "removed": true,
+        "prev_weight": 0.0475
+      },
+      "DASH": {
+        "removed": true,
+        "prev_weight": -0.0097
+      },
+      "DAVE": {
+        "removed": true,
+        "prev_weight": 0.0041
+      },
+      "DBJP": {
+        "removed": true,
+        "prev_weight": 0.0581
+      },
+      "DBMF": {
+        "removed": true,
+        "prev_weight": 0.0741
+      },
+      "DDS": {
+        "removed": true,
+        "prev_weight": -0.0082
+      },
+      "DKNG": {
+        "removed": true,
+        "prev_weight": 0.011
+      },
+      "DPZ": {
+        "removed": true,
+        "prev_weight": -0.0094
+      },
+      "DRAM": {
+        "removed": true,
+        "prev_weight": 0.0357
+      },
+      "EAT": {
+        "removed": true,
+        "prev_weight": -0.0102
+      },
+      "ENB": {
+        "removed": true,
+        "prev_weight": 0.0207
+      },
+      "EPHE": {
+        "removed": true,
+        "prev_weight": -0.01
+      },
+      "EWG": {
+        "removed": true,
+        "prev_weight": -0.0102
+      },
+      "EWQ": {
+        "removed": true,
+        "prev_weight": -0.0052
+      },
+      "FESM": {
+        "removed": true,
+        "prev_weight": 0.0655
+      },
+      "FIGS": {
+        "removed": true,
+        "prev_weight": 0.0027
+      },
+      "FLEX": {
+        "removed": true,
+        "prev_weight": 0.1085
+      },
+      "FLUT": {
+        "removed": true,
+        "prev_weight": -0.0092
+      },
+      "FN": {
+        "removed": true,
+        "prev_weight": 0.0357
+      },
+      "FTAI": {
+        "removed": true,
+        "prev_weight": 0.012
+      },
+      "FTI": {
+        "removed": true,
+        "prev_weight": 0.076
+      },
+      "FWD": {
+        "removed": true,
+        "prev_weight": 0.0566
+      },
+      "FWONK": {
+        "removed": true,
+        "prev_weight": 0.0047
+      },
+      "GFS": {
+        "removed": true,
+        "prev_weight": 0.0082
+      },
+      "GIS": {
+        "removed": true,
+        "prev_weight": -0.0099
+      },
+      "GLASF": {
+        "removed": true,
+        "prev_weight": 0.0168
+      },
+      "GTX": {
+        "removed": true,
+        "prev_weight": 0.0069
+      },
+      "HBM": {
+        "removed": true,
+        "prev_weight": 0.016
+      },
+      "HYG": {
+        "removed": true,
+        "prev_weight": -0.0101
+      },
+      "IDMO": {
+        "removed": true,
+        "prev_weight": 0.0187
+      },
+      "IDX": {
+        "removed": true,
+        "prev_weight": -0.0094
+      },
+      "IESC": {
+        "removed": true,
+        "prev_weight": 0.0139
+      },
+      "IHE": {
+        "removed": true,
+        "prev_weight": 0.0252
+      },
+      "IHF": {
+        "removed": true,
+        "prev_weight": 0.0256
+      },
+      "ITB": {
+        "removed": true,
+        "prev_weight": -0.0214
+      },
+      "JAAA": {
+        "removed": true,
+        "prev_weight": 0.063
+      },
+      "JBHT": {
+        "removed": true,
+        "prev_weight": 0.0218
+      },
+      "JETS": {
+        "removed": true,
+        "prev_weight": -0.011
+      },
+      "JNK": {
+        "removed": true,
+        "prev_weight": -0.0101
+      },
+      "KMI": {
+        "removed": true,
+        "prev_weight": 0.0127
+      },
+      "LAMR": {
+        "removed": true,
+        "prev_weight": 0.0154
+      },
+      "LCID": {
+        "removed": true,
+        "prev_weight": -0.0098
+      },
+      "LLY": {
+        "removed": true,
+        "prev_weight": 0.0287
+      },
+      "LOAR": {
+        "removed": true,
+        "prev_weight": 0.0025
+      },
+      "LPLA": {
+        "removed": true,
+        "prev_weight": 0.0033
+      },
+      "LQDA": {
+        "removed": true,
+        "prev_weight": 0.0248
+      },
+      "LUV": {
+        "removed": true,
+        "prev_weight": -0.0108
+      },
+      "META": {
+        "removed": true,
+        "prev_weight": -0.008
+      },
+      "MKSI": {
+        "removed": true,
+        "prev_weight": 0.0228
+      },
+      "MOD": {
+        "removed": true,
+        "prev_weight": 0.0168
+      },
+      "MPC": {
+        "removed": true,
+        "prev_weight": 0.0148
+      },
+      "MSGE": {
+        "removed": true,
+        "prev_weight": 0.0022
+      },
+      "MSTR": {
+        "removed": true,
+        "prev_weight": -0.0095
+      },
+      "MTSI": {
+        "removed": true,
+        "prev_weight": 0.0449
+      },
+      "MTZ": {
+        "removed": true,
+        "prev_weight": 0.0341
+      },
+      "NCNO": {
+        "removed": true,
+        "prev_weight": 0.0038
+      },
+      "NKE": {
+        "removed": true,
+        "prev_weight": -0.0102
+      },
+      "NOBL": {
+        "removed": true,
+        "prev_weight": 0.0449
+      },
+      "NVO": {
+        "removed": true,
+        "prev_weight": 0.02
+      },
+      "NVT": {
+        "removed": true,
+        "prev_weight": 0.0497
+      },
+      "ORCL": {
+        "removed": true,
+        "prev_weight": 0.0113
+      },
+      "PAWZ": {
+        "removed": true,
+        "prev_weight": -0.0009
+      },
+      "PICK": {
+        "removed": true,
+        "prev_weight": 0.0069
+      },
+      "PLAY": {
+        "removed": true,
+        "prev_weight": -0.011
+      },
+      "PRMB": {
+        "removed": true,
+        "prev_weight": 0.0064
+      },
+      "RBLX": {
+        "removed": true,
+        "prev_weight": -0.0081
+      },
+      "RDDT": {
+        "removed": true,
+        "prev_weight": -0.0101
+      },
+      "RIO": {
+        "removed": true,
+        "prev_weight": 0.0126
+      },
+      "RPRX": {
+        "removed": true,
+        "prev_weight": 0.0037
+      },
+      "SIRI": {
+        "removed": true,
+        "prev_weight": 0.0052
+      },
+      "SLX": {
+        "removed": true,
+        "prev_weight": 0.0546
+      },
+      "SNAP": {
+        "removed": true,
+        "prev_weight": -0.0051
+      },
+      "SPY   260717P00610000": {
+        "removed": true,
+        "prev_weight": 0.001
+      },
+      "STT": {
+        "removed": true,
+        "prev_weight": 0.0157
+      },
+      "SUI": {
+        "removed": true,
+        "prev_weight": 0.0025
+      },
+      "SXT": {
+        "removed": true,
+        "prev_weight": 0.0227
+      },
+      "TTWO": {
+        "removed": true,
+        "prev_weight": 0.0158
+      },
+      "TXG": {
+        "removed": true,
+        "prev_weight": 0.0072
+      },
+      "URI": {
+        "removed": true,
+        "prev_weight": 0.0262
+      },
+      "USO": {
+        "removed": true,
+        "prev_weight": 0.0307
+      },
+      "UTHR": {
+        "removed": true,
+        "prev_weight": 0.0274
+      },
+      "V": {
+        "removed": true,
+        "prev_weight": 0.021
+      },
+      "VG": {
+        "removed": true,
+        "prev_weight": 0.0028
+      },
+      "VLO": {
+        "removed": true,
+        "prev_weight": 0.0115
+      },
+      "VTIP": {
+        "removed": true,
+        "prev_weight": 0.0329
+      },
+      "WK": {
+        "removed": true,
+        "prev_weight": 0.0019
+      },
+      "XYZ": {
+        "removed": true,
+        "prev_weight": 0.0102
+      },
+      "ZM": {
+        "removed": true,
+        "prev_weight": 0.0496
+      },
+      "MEOH": {
+        "delta": 0.0109,
+        "curr_weight": 0.0207,
+        "prev_weight": 0.0098
+      },
+      "JAZZ": {
+        "delta": -0.003,
+        "curr_weight": 0.0228,
+        "prev_weight": 0.0258
+      },
+      "ZROZ": {
+        "delta": 0.0044,
+        "curr_weight": -0.0199,
+        "prev_weight": -0.0243
+      },
+      "SOYB": {
+        "delta": -0.0045,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0145
+      },
+      "EWY": {
+        "delta": -0.0024,
+        "curr_weight": 0.0102,
+        "prev_weight": 0.0126
+      },
+      "NVDA": {
+        "delta": 0.0006,
+        "curr_weight": 0.0905,
+        "prev_weight": 0.0899
+      },
+      "UNH": {
+        "delta": -0.0042,
+        "curr_weight": 0.021,
+        "prev_weight": 0.0252
+      },
+      "HAL": {
+        "delta": 0.0024,
+        "curr_weight": 0.0208,
+        "prev_weight": 0.0184
+      },
+      "APD": {
+        "delta": 0.0191,
+        "curr_weight": 0.0296,
+        "prev_weight": 0.0105
+      },
+      "FLO": {
+        "delta": 0.0025,
+        "curr_weight": -0.0073,
+        "prev_weight": -0.0098
+      },
+      "VTI": {
+        "delta": -0.0012,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0911
+      },
+      "ULS": {
+        "delta": -0.0013,
+        "curr_weight": 0.0239,
+        "prev_weight": 0.0252
+      },
+      "CAT": {
+        "delta": -0.0013,
+        "curr_weight": 0.0197,
+        "prev_weight": 0.021
+      },
+      "CMG": {
+        "delta": 0.0041,
+        "curr_weight": -0.0058,
+        "prev_weight": -0.0099
+      },
+      "USPH": {
+        "delta": 0.0035,
+        "curr_weight": -0.0045,
+        "prev_weight": -0.008
+      },
+      "TLT": {
+        "delta": 0.0047,
+        "curr_weight": -0.0197,
+        "prev_weight": -0.0244
+      },
+      "VIK": {
+        "delta": -0.0138,
+        "curr_weight": 0.0088,
+        "prev_weight": 0.0226
+      },
+      "MUSA": {
+        "delta": 0.0094,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0101
+      },
+      "CSX": {
+        "delta": -0.0056,
+        "curr_weight": 0.0246,
+        "prev_weight": 0.0302
+      },
+      "CAVA": {
+        "delta": 0.0105,
+        "curr_weight": 0.0146,
+        "prev_weight": 0.0041
+      },
+      "DBA": {
+        "delta": 0.006,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0141
+      },
+      "ROKU": {
+        "delta": -0.0197,
+        "curr_weight": 0.0246,
+        "prev_weight": 0.0443
+      },
+      "XLE": {
+        "delta": 0.0117,
+        "curr_weight": 0.0412,
+        "prev_weight": 0.0295
+      },
+      "CVI": {
+        "delta": 0.0122,
+        "curr_weight": 0.0215,
+        "prev_weight": 0.0093
+      },
+      "AVEM": {
+        "delta": -0.0054,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0202
+      },
+      "TAN": {
+        "delta": -0.019,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0452
+      },
+      "FITE": {
+        "delta": -0.0031,
+        "curr_weight": 0.019,
+        "prev_weight": 0.0221
+      },
+      "INDA": {
+        "delta": 0.001,
+        "curr_weight": -0.0193,
+        "prev_weight": -0.0203
+      },
+      "ARTY": {
+        "delta": -0.0076,
+        "curr_weight": 0.0394,
+        "prev_weight": 0.047
+      },
+      "GLD": {
+        "delta": 0.0201,
+        "curr_weight": 0.0396,
+        "prev_weight": 0.0195
+      },
+      "OIH": {
+        "delta": -0.0016,
+        "curr_weight": 0.0481,
+        "prev_weight": 0.0497
+      },
+      "HCA": {
+        "delta": 0.0015,
+        "curr_weight": -0.0057,
+        "prev_weight": -0.0072
+      },
+      "CIBR": {
+        "delta": -0.0074,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0269
+      },
+      "UUP": {
+        "delta": -0.0326,
+        "curr_weight": 0.0371,
+        "prev_weight": 0.0697
+      },
+      "RSI": {
+        "delta": 0.0005,
+        "curr_weight": 0.0153,
+        "prev_weight": 0.0148
+      },
+      "WING": {
+        "delta": 0.0018,
+        "curr_weight": -0.0102,
+        "prev_weight": -0.012
+      },
+      "CIEN": {
+        "delta": -0.004,
+        "curr_weight": 0.006,
+        "prev_weight": 0.01
+      },
+      "IDXX": {
+        "delta": 0.0038,
+        "curr_weight": -0.0062,
+        "prev_weight": -0.01
+      },
+      "ADI": {
+        "delta": 0.0061,
+        "curr_weight": 0.0282,
+        "prev_weight": 0.0221
+      },
+      "GOOGL": {
+        "delta": -0.0031,
+        "curr_weight": 0.0772,
+        "prev_weight": 0.0803
+      },
+      "VYM": {
+        "delta": 0.0106,
+        "curr_weight": 0.0599,
+        "prev_weight": 0.0493
+      },
+      "C": {
+        "delta": 0.004,
+        "curr_weight": 0.017,
+        "prev_weight": 0.013
+      },
+      "XBI": {
+        "delta": 0.0027,
+        "curr_weight": 0.0185,
+        "prev_weight": 0.0158
+      },
+      "SNDK": {
+        "delta": -0.0074,
+        "curr_weight": 0.0076,
+        "prev_weight": 0.015
+      },
+      "DBB": {
+        "delta": 0.0075,
+        "curr_weight": 0.0373,
+        "prev_weight": 0.0298
+      },
+      "CRCL": {
+        "delta": -0.0064,
+        "curr_weight": 0.0137,
+        "prev_weight": 0.0201
+      },
+      "WEAT": {
+        "delta": -0.0043,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0143
+      },
+      "NOV": {
+        "delta": 0.0015,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0187
+      },
+      "XTL": {
+        "delta": -0.0272,
+        "curr_weight": 0.0446,
+        "prev_weight": 0.0718
+      },
+      "KSS": {
+        "delta": 0.0031,
+        "curr_weight": -0.008,
+        "prev_weight": -0.0111
+      },
+      "LNG": {
+        "delta": 0.0125,
+        "curr_weight": 0.018,
+        "prev_weight": 0.0055
+      },
+      "VPL": {
+        "delta": 0.0068,
+        "curr_weight": 0.0223,
+        "prev_weight": 0.0155
+      },
+      "AM": {
+        "delta": 0.0007,
+        "curr_weight": 0.011,
+        "prev_weight": 0.0103
+      },
+      "NDAQ": {
+        "delta": -0.0013,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0163
+      },
+      "GS": {
+        "delta": -0.002,
+        "curr_weight": 0.021,
+        "prev_weight": 0.023
+      },
+      "ATI": {
+        "delta": -0.0066,
+        "curr_weight": 0.005,
+        "prev_weight": 0.0116
+      },
+      "GLW": {
+        "delta": 0.0008,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0074
+      },
+      "LIN": {
+        "delta": -0.002,
+        "curr_weight": 0.0147,
+        "prev_weight": 0.0167
+      },
+      "SYY": {
+        "delta": -0.0022,
+        "curr_weight": -0.0099,
+        "prev_weight": -0.0077
+      },
+      "CSCO": {
+        "delta": 0.0035,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0252
+      },
+      "BRBR": {
+        "delta": 0.0007,
+        "curr_weight": -0.0073,
+        "prev_weight": -0.008
+      },
+      "IEF": {
+        "delta": -0.0006,
+        "curr_weight": -0.0151,
+        "prev_weight": -0.0145
+      },
+      "HTEC": {
+        "delta": 0.0093,
+        "curr_weight": 0.0193,
+        "prev_weight": 0.01
+      },
+      "AMZN": {
+        "delta": -0.0035,
+        "curr_weight": 0.0573,
+        "prev_weight": 0.0608
+      },
+      "AVGO": {
+        "delta": 0.0092,
+        "curr_weight": 0.0392,
+        "prev_weight": 0.03
+      },
+      "STX": {
+        "delta": 0.0019,
+        "curr_weight": 0.0136,
+        "prev_weight": 0.0117
+      },
+      "Z": {
+        "delta": -0.0082,
+        "curr_weight": -0.0057,
+        "prev_weight": 0.0025
+      },
+      "XAR": {
+        "delta": -0.0013,
+        "curr_weight": 0.0188,
+        "prev_weight": 0.0201
+      },
+      "PM": {
+        "delta": -0.0147,
+        "curr_weight": 0.0052,
+        "prev_weight": 0.0199
+      },
+      "CZR": {
+        "delta": 0.0053,
+        "curr_weight": 0.0209,
+        "prev_weight": 0.0156
+      },
+      "XLI": {
+        "delta": 0.0097,
+        "curr_weight": 0.0196,
+        "prev_weight": 0.0099
+      },
+      "MAR": {
+        "delta": 0.0082,
+        "curr_weight": 0.0247,
+        "prev_weight": 0.0165
+      },
+      "SWBI": {
+        "delta": 0.0006,
+        "curr_weight": 0.0108,
+        "prev_weight": 0.0102
+      },
+      "RIG": {
+        "delta": -0.0006,
+        "curr_weight": 0.0171,
+        "prev_weight": 0.0177
+      },
+      "AMD": {
+        "delta": -0.0086,
+        "curr_weight": 0.0137,
+        "prev_weight": 0.0223
+      },
+      "MRVL": {
+        "delta": -0.1364,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.1446
+      },
+      "CASY": {
+        "delta": 0.0071,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.0227
+      },
+      "COHR": {
+        "delta": 0.0037,
+        "curr_weight": 0.009,
+        "prev_weight": 0.0053
+      },
+      "INTC": {
+        "delta": -0.0043,
+        "curr_weight": 0.0175,
+        "prev_weight": 0.0218
+      },
+      "MRK": {
+        "delta": 0.0028,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.012
+      },
+      "CF": {
+        "delta": -0.0025,
+        "curr_weight": 0.0103,
+        "prev_weight": 0.0128
+      },
+      "NET": {
+        "delta": 0.0104,
+        "curr_weight": 0.0152,
+        "prev_weight": 0.0048
+      },
+      "SBUX": {
+        "delta": 0.003,
+        "curr_weight": 0.0219,
+        "prev_weight": 0.0189
+      },
+      "ROBO": {
+        "delta": 0.0037,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0158
+      },
+      "AMAT": {
+        "delta": -0.0059,
+        "curr_weight": 0.0214,
+        "prev_weight": 0.0273
+      },
+      "PAVE": {
+        "delta": 0.0476,
+        "curr_weight": 0.0632,
+        "prev_weight": 0.0156
+      },
+      "AAPL": {
+        "delta": -0.011,
+        "curr_weight": 0.081,
+        "prev_weight": 0.092
+      },
+      "CERY": {
+        "delta": 0.0048,
+        "curr_weight": 0.1414,
+        "prev_weight": 0.1366
+      },
+      "CBOE": {
+        "delta": -0.0012,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0214
+      },
+      "TWLO": {
+        "delta": -0.0144,
+        "curr_weight": 0.0048,
+        "prev_weight": 0.0192
+      },
+      "XTEN": {
+        "delta": 0.0047,
+        "curr_weight": -0.0197,
+        "prev_weight": -0.0244
+      },
+      "CDNS": {
+        "delta": 0.0043,
+        "curr_weight": 0.0196,
+        "prev_weight": 0.0153
+      },
+      "WDC": {
+        "delta": -0.0008,
+        "curr_weight": 0.0195,
+        "prev_weight": 0.0203
+      }
+    },
+    "per_fund_daily_adds": {
+      "HECA": [
+        {
+          "ticker": "BNO",
+          "name": "United States Brent Oil Fund LP",
+          "weight": 2.96,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "ETHA",
+          "name": "iShares Ethereum Trust ETF",
+          "weight": 1.66,
+          "first_seen": "2026-04-29",
+          "days_held": 1097
+        },
+        {
+          "ticker": "FLCA",
+          "name": "Franklin FTSE Canada ETF",
+          "weight": 4.35,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "FLKR",
+          "name": "Franklin FTSE South Korea ETF",
+          "weight": 1.79,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "HGER",
+          "name": "Harbor Commodity All Weather Strategy ETF",
+          "weight": 4.37,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "IAU",
+          "name": "iShares Gold Trust",
+          "weight": 1.19,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "KRE",
+          "name": "State Street SPDR S&P Regional Banking ETF",
+          "weight": 4.07,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "LIT",
+          "name": "Global X Lithium & Battery Tech ETF",
+          "weight": 4.66,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "PAVE",
+          "name": "Global X US Infrastructure Development ETF",
+          "weight": 6.32,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "PDBA",
+          "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
+          "weight": 3.7,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SBAR",
+          "name": "Simplify Barrier Income ETF",
+          "weight": 3.02,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "TLT   260515P00086000",
+          "name": "TLT US 05/15/26 P86",
+          "weight": 0.36,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "TLT   260717P00085000",
+          "name": "TLT US 07/17/26 P85",
+          "weight": 0.31,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "TUR",
+          "name": "iShares MSCI Turkey ETF",
+          "weight": 3.27,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "XLE",
+          "name": "State Street Energy Select Sector SPDR ETF",
+          "weight": 4.07,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "XME",
+          "name": "State Street SPDR S&P Metals & Mining ETF",
+          "weight": 3.62,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        }
+      ],
+      "HEFT": [
+        {
+          "ticker": "APO",
+          "name": "Apollo Global Management Inc",
+          "weight": -0.71,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ARES",
+          "name": "Ares Management Corp",
+          "weight": -0.69,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ARGT",
+          "name": "Global X MSCI Argentina ETF",
+          "weight": 0.98,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "BWXT",
+          "name": "BWX Technologies Inc",
+          "weight": 0.9,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "BX",
+          "name": "Blackstone Inc",
+          "weight": -0.69,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "CCJ",
+          "name": "Cameco Corp",
+          "weight": 0.93,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "CPRT",
+          "name": "Copart Inc",
+          "weight": -0.41,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "CWEN",
+          "name": "Clearway Energy Inc",
+          "weight": 0.67,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "EWJ",
+          "name": "iShares MSCI Japan ETF",
+          "weight": 0.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "GII",
+          "name": "State Street SPDR S&P Global Infrastructure ETF",
+          "weight": 2.96,
+          "first_seen": "2026-04-17",
+          "days_held": 1109
+        },
+        {
+          "ticker": "IBIT",
+          "name": "iShares Bitcoin Trust ETF",
+          "weight": 0.97,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "KSS",
+          "name": "Kohl's Corp",
+          "weight": -0.87,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "OLLI",
+          "name": "Ollie's Bargain Outlet Holdings Inc",
+          "weight": -0.69,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "PEP",
+          "name": "PepsiCo Inc",
+          "weight": 0.74,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "PSP",
+          "name": "Invesco Global Listed Private Equity ETF",
+          "weight": -0.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "SPY   260618P00570000",
+          "name": "SPY US 06/18/26 P570",
+          "weight": 0.11,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "TSN",
+          "name": "Tyson Foods Inc",
+          "weight": 1.27,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "VGK",
+          "name": "Vanguard FTSE Europe ETF",
+          "weight": 1.24,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "WMT",
+          "name": "Walmart Inc",
+          "weight": 1.75,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "XLF",
+          "name": "State Street Financial Select Sector SPDR ETF",
+          "weight": 1.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "XSW",
+          "name": "State Street SPDR S&P Software & Services ETF",
+          "weight": -0.65,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        }
+      ],
+      "HGRO": [
+        {
+          "ticker": "ACHC",
+          "name": "Acadia Healthcare Co Inc",
+          "weight": 0.8,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "BK",
+          "name": "Bank of New York Mellon Corp/The",
+          "weight": 1.19,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "CARR",
+          "name": "Carrier Global Corp",
+          "weight": 0.76,
+          "first_seen": "2026-05-01",
+          "days_held": 1095
+        },
+        {
+          "ticker": "CFG",
+          "name": "Citizens Financial Group Inc",
+          "weight": 0.95,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "DELL",
+          "name": "Dell Technologies Inc",
+          "weight": 0.8,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMORGAN CHASE & CO.",
+          "weight": 2.49,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "LNG",
+          "name": "Cheniere Energy Inc",
+          "weight": 1.8,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "MGM",
+          "name": "MGM Resorts International",
+          "weight": 1.55,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft Corp",
+          "weight": 1.51,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "PCAR",
+          "name": "PACCAR Inc",
+          "weight": 0.94,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "PH",
+          "name": "Parker-Hannifin Corp",
+          "weight": 1.16,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SPHR",
+          "name": "Sphere Entertainment Co",
+          "weight": 1.36,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "SWBI",
+          "name": "Smith & Wesson Brands Inc",
+          "weight": 0.71,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "TER",
+          "name": "Teradyne Inc",
+          "weight": 0.72,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        }
+      ],
+      "HELS": [
+        {
+          "ticker": "19247G107 SWP CS",
+          "name": "19247G107 SWP CS",
+          "weight": 2.01,
+          "first_seen": "2026-05-04",
+          "days_held": 1092
+        },
+        {
+          "ticker": "46625H100-TRS-05/18/27-L-HELS",
+          "name": "JPMORGAN CHASE & CO.-SWAP-CLST-L",
+          "weight": 2.94,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "693656100-TRS-06/08/27-L-HELS",
+          "name": "PVH CORP.-SWAP-CLST-L",
+          "weight": 1.9,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "ACHC",
+          "name": "Acadia Healthcare Co Inc",
+          "weight": 2.0,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ALGN",
+          "name": "Align Technology Inc",
+          "weight": 1.48,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "ALLY",
+          "name": "Ally Financial Inc",
+          "weight": 1.49,
+          "first_seen": "2026-05-01",
+          "days_held": 1095
+        },
+        {
+          "ticker": "APD",
+          "name": "Air Products and Chemicals Inc",
+          "weight": 2.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "APP",
+          "name": "AppLovin Corp",
+          "weight": -0.76,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "ARCO",
+          "name": "Arcos Dorados Holdings Inc",
+          "weight": 1.23,
+          "first_seen": "2026-04-17",
+          "days_held": 1109
+        },
+        {
+          "ticker": "ARES",
+          "name": "Ares Management Corp",
+          "weight": -0.77,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ARHS",
+          "name": "Arhaus Inc",
+          "weight": -0.47,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "CAG",
+          "name": "CONAGRA BRANDS INC",
+          "weight": -0.73,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "CAVA",
+          "name": "Cava Group Inc",
+          "weight": 1.46,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "CFG",
+          "name": "Citizens Financial Group Inc",
+          "weight": 2.45,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "CLH",
+          "name": "CLEAN HARBORS INC COM",
+          "weight": 2.74,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "CPB",
+          "name": "Campbell's Company/The",
+          "weight": -0.74,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "CRWV",
+          "name": "CoreWeave Inc",
+          "weight": 1.54,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "DAR",
+          "name": "DARLING INGREDIENTS INC",
+          "weight": 2.47,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "DEO",
+          "name": "Diageo PLC",
+          "weight": -0.63,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "FANG",
+          "name": "Diamondback Energy Inc",
+          "weight": 1.66,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "FISV",
+          "name": "Fiserv Inc",
+          "weight": -0.61,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "FIVE",
+          "name": "Five Below Inc",
+          "weight": 2.9,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "FOUR",
+          "name": "Shift4 Payments Inc",
+          "weight": -0.59,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "HCA",
+          "name": "HCA Healthcare Inc",
+          "weight": -0.57,
+          "first_seen": "2026-04-17",
+          "days_held": 1109
+        },
+        {
+          "ticker": "KMX",
+          "name": "CarMax Inc",
+          "weight": -0.98,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "LVS",
+          "name": "Las Vegas Sands Corp",
+          "weight": -0.74,
+          "first_seen": "2026-04-29",
+          "days_held": 1097
+        },
+        {
+          "ticker": "MGM",
+          "name": "MGM Resorts International",
+          "weight": 1.45,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "NET",
+          "name": "Cloudflare Inc",
+          "weight": 1.52,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ONON",
+          "name": "On Holding AG",
+          "weight": -0.47,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "PCAR",
+          "name": "PACCAR Inc",
+          "weight": 1.85,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "REAL",
+          "name": "RealReal Inc/The",
+          "weight": 1.43,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "ROST",
+          "name": "Ross Stores Inc",
+          "weight": 2.48,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "RTO",
+          "name": "Rentokil Initial PLC",
+          "weight": 2.4,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "SFM",
+          "name": "Sprouts Farmers Market Inc",
+          "weight": -0.56,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SPHR",
+          "name": "Sphere Entertainment Co",
+          "weight": 2.13,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SPT",
+          "name": "Sprout Social Inc",
+          "weight": -0.64,
+          "first_seen": "2026-05-01",
+          "days_held": 1095
+        },
+        {
+          "ticker": "TAP",
+          "name": "Molson Coors Beverage Co",
+          "weight": -0.58,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "THC",
+          "name": "Tenet Healthcare Corp",
+          "weight": -0.6,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "TJX",
+          "name": "TJX Cos Inc/The",
+          "weight": 1.97,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla Inc",
+          "weight": -0.61,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "TSN",
+          "name": "Tyson Foods Inc",
+          "weight": 1.0,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "TSSI",
+          "name": "TSS Inc/MD",
+          "weight": 1.35,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "XSW",
+          "name": "State Street SPDR S&P Software & Services ETF",
+          "weight": -0.97,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "Z",
+          "name": "Zillow Group Inc",
+          "weight": -0.57,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        }
+      ]
+    },
+    "per_fund_daily_removes": {
+      "HECA": [
+        "DBJP",
+        "DBMF",
+        "FESM",
+        "FWD",
+        "IDMO",
+        "IHF",
+        "JAAA",
+        "NOBL",
+        "PICK",
+        "SLX",
+        "USO",
+        "VTIP"
+      ],
+      "HEFT": [
+        "CHTR",
+        "DBMF",
+        "DDS",
+        "DRAM",
+        "EPHE",
+        "EWG",
+        "EWQ",
+        "HYG",
+        "IDX",
+        "IHE",
+        "ITB",
+        "JETS",
+        "JNK",
+        "META",
+        "PAVE",
+        "PAWZ",
+        "RBLX",
+        "SLX",
+        "SPY   260717P00610000",
+        "SYY",
+        "V"
+      ],
+      "HGRO": [
+        "AMAT",
+        "BNY",
+        "GFS",
+        "KMI",
+        "LLY",
+        "NET",
+        "ORCL",
+        "PM",
+        "RIO",
+        "SXT",
+        "TTWO",
+        "TXG",
+        "ULS",
+        "URI",
+        "V",
+        "VLO",
+        "ZM"
+      ],
+      "HELS": [
+        "00971T101-TRS-06/08/27-L-HELS",
+        "023135106-TRS-06/15/27-L-HELS",
+        "19247G107-TRS-06/08/27-L-HELS",
+        "512807306-TRS-06/22/27-L-HELS",
+        "67066G104-TRS-06/08/27-L-HELS",
+        "82982T106-TRS-06/15/27-L-HELS",
+        "92826C839-TRS-06/22/27-L-HELS",
+        "AFRM",
+        "BALL",
+        "BKNG",
+        "BTI",
+        "CHTR",
+        "CNQ",
+        "DASH",
+        "DDS",
+        "DPZ",
+        "EAT",
+        "ENB",
+        "FLUT",
+        "GIS",
+        "GLASF",
+        "GOOGL",
+        "HBM",
+        "JBHT",
+        "LAMR",
+        "LCID",
+        "LUV",
+        "META",
+        "MKSI",
+        "MPC",
+        "MRVL",
+        "MSTR",
+        "NKE",
+        "NVO",
+        "PLAY",
+        "PM",
+        "RBLX",
+        "RDDT",
+        "SNAP",
+        "STT",
+        "SXT",
+        "TTWO",
+        "TWLO",
+        "UNH",
+        "URI",
+        "USPH",
+        "VIK",
+        "XYZ"
+      ],
+      "ADDS": [
+        "AFRM",
+        "ALAB",
+        "ALNY",
+        "AMRZ",
+        "BE",
+        "CRCL",
+        "CRDO",
+        "CW",
+        "DAVE",
+        "DKNG",
+        "FIGS",
+        "FLEX",
+        "FN",
+        "FTAI",
+        "FTI",
+        "FWONK",
+        "GTX",
+        "IESC",
+        "LNG",
+        "LOAR",
+        "LPLA",
+        "LQDA",
+        "MOD",
+        "MRVL",
+        "MSGE",
+        "MTSI",
+        "MTZ",
+        "NCNO",
+        "NVT",
+        "PRMB",
+        "ROKU",
+        "RPRX",
+        "RSI",
+        "SIRI",
+        "SUI",
+        "UTHR",
+        "VG",
+        "WK",
+        "Z",
+        "ZM"
+      ]
+    },
+    "per_fund_weekly_adds": {
+      "HECA": [
+        {
+          "ticker": "BNO",
+          "name": "United States Brent Oil Fund LP",
+          "weight": 2.96,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "ETHA",
+          "name": "iShares Ethereum Trust ETF",
+          "weight": 1.66,
+          "first_seen": "2026-04-29",
+          "days_held": 1097
+        },
+        {
+          "ticker": "FLCA",
+          "name": "Franklin FTSE Canada ETF",
+          "weight": 4.35,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "FLKR",
+          "name": "Franklin FTSE South Korea ETF",
+          "weight": 1.79,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "HGER",
+          "name": "Harbor Commodity All Weather Strategy ETF",
+          "weight": 4.37,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "IAU",
+          "name": "iShares Gold Trust",
+          "weight": 1.19,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "KRE",
+          "name": "State Street SPDR S&P Regional Banking ETF",
+          "weight": 4.07,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "LIT",
+          "name": "Global X Lithium & Battery Tech ETF",
+          "weight": 4.66,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "PAVE",
+          "name": "Global X US Infrastructure Development ETF",
+          "weight": 6.32,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "PDBA",
+          "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
+          "weight": 3.7,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SBAR",
+          "name": "Simplify Barrier Income ETF",
+          "weight": 3.02,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "TLT   260515P00086000",
+          "name": "TLT US 05/15/26 P86",
+          "weight": 0.36,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "TLT   260717P00085000",
+          "name": "TLT US 07/17/26 P85",
+          "weight": 0.31,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "TUR",
+          "name": "iShares MSCI Turkey ETF",
+          "weight": 3.27,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "XLE",
+          "name": "State Street Energy Select Sector SPDR ETF",
+          "weight": 4.07,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "XME",
+          "name": "State Street SPDR S&P Metals & Mining ETF",
+          "weight": 3.62,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        }
+      ],
+      "HEFT": [
+        {
+          "ticker": "APO",
+          "name": "Apollo Global Management Inc",
+          "weight": -0.71,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ARES",
+          "name": "Ares Management Corp",
+          "weight": -0.69,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ARGT",
+          "name": "Global X MSCI Argentina ETF",
+          "weight": 0.98,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "BWXT",
+          "name": "BWX Technologies Inc",
+          "weight": 0.9,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "BX",
+          "name": "Blackstone Inc",
+          "weight": -0.69,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "CCJ",
+          "name": "Cameco Corp",
+          "weight": 0.93,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "CPRT",
+          "name": "Copart Inc",
+          "weight": -0.41,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "CWEN",
+          "name": "Clearway Energy Inc",
+          "weight": 0.67,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "EWJ",
+          "name": "iShares MSCI Japan ETF",
+          "weight": 0.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "GII",
+          "name": "State Street SPDR S&P Global Infrastructure ETF",
+          "weight": 2.96,
+          "first_seen": "2026-04-17",
+          "days_held": 1109
+        },
+        {
+          "ticker": "IBIT",
+          "name": "iShares Bitcoin Trust ETF",
+          "weight": 0.97,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "KSS",
+          "name": "Kohl's Corp",
+          "weight": -0.87,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "OLLI",
+          "name": "Ollie's Bargain Outlet Holdings Inc",
+          "weight": -0.69,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "PEP",
+          "name": "PepsiCo Inc",
+          "weight": 0.74,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "PSP",
+          "name": "Invesco Global Listed Private Equity ETF",
+          "weight": -0.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "SPY   260618P00570000",
+          "name": "SPY US 06/18/26 P570",
+          "weight": 0.11,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "TSN",
+          "name": "Tyson Foods Inc",
+          "weight": 1.27,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "VGK",
+          "name": "Vanguard FTSE Europe ETF",
+          "weight": 1.24,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "WMT",
+          "name": "Walmart Inc",
+          "weight": 1.75,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "XLF",
+          "name": "State Street Financial Select Sector SPDR ETF",
+          "weight": 1.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "XSW",
+          "name": "State Street SPDR S&P Software & Services ETF",
+          "weight": -0.65,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        }
+      ],
+      "HGRO": [
+        {
+          "ticker": "ACHC",
+          "name": "Acadia Healthcare Co Inc",
+          "weight": 0.8,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "BK",
+          "name": "Bank of New York Mellon Corp/The",
+          "weight": 1.19,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "CARR",
+          "name": "Carrier Global Corp",
+          "weight": 0.76,
+          "first_seen": "2026-05-01",
+          "days_held": 1095
+        },
+        {
+          "ticker": "CFG",
+          "name": "Citizens Financial Group Inc",
+          "weight": 0.95,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "DELL",
+          "name": "Dell Technologies Inc",
+          "weight": 0.8,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "JPM",
+          "name": "JPMORGAN CHASE & CO.",
+          "weight": 2.49,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "LNG",
+          "name": "Cheniere Energy Inc",
+          "weight": 1.8,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "MGM",
+          "name": "MGM Resorts International",
+          "weight": 1.55,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft Corp",
+          "weight": 1.51,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "PCAR",
+          "name": "PACCAR Inc",
+          "weight": 0.94,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "PH",
+          "name": "Parker-Hannifin Corp",
+          "weight": 1.16,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SPHR",
+          "name": "Sphere Entertainment Co",
+          "weight": 1.36,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "SWBI",
+          "name": "Smith & Wesson Brands Inc",
+          "weight": 0.71,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "TER",
+          "name": "Teradyne Inc",
+          "weight": 0.72,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        }
+      ],
+      "HELS": [
+        {
+          "ticker": "19247G107 SWP CS",
+          "name": "19247G107 SWP CS",
+          "weight": 2.01,
+          "first_seen": "2026-05-04",
+          "days_held": 1092
+        },
+        {
+          "ticker": "46625H100-TRS-05/18/27-L-HELS",
+          "name": "JPMORGAN CHASE & CO.-SWAP-CLST-L",
+          "weight": 2.94,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "693656100-TRS-06/08/27-L-HELS",
+          "name": "PVH CORP.-SWAP-CLST-L",
+          "weight": 1.9,
+          "first_seen": "2026-04-15",
+          "days_held": 1111
+        },
+        {
+          "ticker": "ACHC",
+          "name": "Acadia Healthcare Co Inc",
+          "weight": 2.0,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ALGN",
+          "name": "Align Technology Inc",
+          "weight": 1.48,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "ALLY",
+          "name": "Ally Financial Inc",
+          "weight": 1.49,
+          "first_seen": "2026-05-01",
+          "days_held": 1095
+        },
+        {
+          "ticker": "APD",
+          "name": "Air Products and Chemicals Inc",
+          "weight": 2.96,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "APP",
+          "name": "AppLovin Corp",
+          "weight": -0.76,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "ARCO",
+          "name": "Arcos Dorados Holdings Inc",
+          "weight": 1.23,
+          "first_seen": "2026-04-17",
+          "days_held": 1109
+        },
+        {
+          "ticker": "ARES",
+          "name": "Ares Management Corp",
+          "weight": -0.77,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ARHS",
+          "name": "Arhaus Inc",
+          "weight": -0.47,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "CAG",
+          "name": "CONAGRA BRANDS INC",
+          "weight": -0.73,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "CAVA",
+          "name": "Cava Group Inc",
+          "weight": 1.46,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "CFG",
+          "name": "Citizens Financial Group Inc",
+          "weight": 2.45,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "CLH",
+          "name": "CLEAN HARBORS INC COM",
+          "weight": 2.74,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "CPB",
+          "name": "Campbell's Company/The",
+          "weight": -0.74,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "CRWV",
+          "name": "CoreWeave Inc",
+          "weight": 1.54,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "DAR",
+          "name": "DARLING INGREDIENTS INC",
+          "weight": 2.47,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "DEO",
+          "name": "Diageo PLC",
+          "weight": -0.63,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "FANG",
+          "name": "Diamondback Energy Inc",
+          "weight": 1.66,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "FISV",
+          "name": "Fiserv Inc",
+          "weight": -0.61,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "FIVE",
+          "name": "Five Below Inc",
+          "weight": 2.9,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "FOUR",
+          "name": "Shift4 Payments Inc",
+          "weight": -0.59,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "HCA",
+          "name": "HCA Healthcare Inc",
+          "weight": -0.57,
+          "first_seen": "2026-04-17",
+          "days_held": 1109
+        },
+        {
+          "ticker": "KMX",
+          "name": "CarMax Inc",
+          "weight": -0.98,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "LVS",
+          "name": "Las Vegas Sands Corp",
+          "weight": -0.74,
+          "first_seen": "2026-04-29",
+          "days_held": 1097
+        },
+        {
+          "ticker": "MGM",
+          "name": "MGM Resorts International",
+          "weight": 1.45,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "NET",
+          "name": "Cloudflare Inc",
+          "weight": 1.52,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "ONON",
+          "name": "On Holding AG",
+          "weight": -0.47,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "PCAR",
+          "name": "PACCAR Inc",
+          "weight": 1.85,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "REAL",
+          "name": "RealReal Inc/The",
+          "weight": 1.43,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "ROST",
+          "name": "Ross Stores Inc",
+          "weight": 2.48,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "RTO",
+          "name": "Rentokil Initial PLC",
+          "weight": 2.4,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "SFM",
+          "name": "Sprouts Farmers Market Inc",
+          "weight": -0.56,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SPHR",
+          "name": "Sphere Entertainment Co",
+          "weight": 2.13,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "SPT",
+          "name": "Sprout Social Inc",
+          "weight": -0.64,
+          "first_seen": "2026-05-01",
+          "days_held": 1095
+        },
+        {
+          "ticker": "TAP",
+          "name": "Molson Coors Beverage Co",
+          "weight": -0.58,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        },
+        {
+          "ticker": "THC",
+          "name": "Tenet Healthcare Corp",
+          "weight": -0.6,
+          "first_seen": "2026-04-13",
+          "days_held": 1113
+        },
+        {
+          "ticker": "TJX",
+          "name": "TJX Cos Inc/The",
+          "weight": 1.97,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla Inc",
+          "weight": -0.61,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "TSN",
+          "name": "Tyson Foods Inc",
+          "weight": 1.0,
+          "first_seen": "2026-04-07",
+          "days_held": 1119
+        },
+        {
+          "ticker": "TSSI",
+          "name": "TSS Inc/MD",
+          "weight": 1.35,
+          "first_seen": "2026-04-22",
+          "days_held": 1104
+        },
+        {
+          "ticker": "XSW",
+          "name": "State Street SPDR S&P Software & Services ETF",
+          "weight": -0.97,
+          "first_seen": "2026-03-30",
+          "days_held": 1127
+        },
+        {
+          "ticker": "Z",
+          "name": "Zillow Group Inc",
+          "weight": -0.57,
+          "first_seen": "2026-04-27",
+          "days_held": 1099
+        }
+      ]
+    },
+    "per_fund_weekly_removes": {
+      "HECA": [
+        "DBJP",
+        "DBMF",
+        "FESM",
+        "FWD",
+        "IDMO",
+        "IHF",
+        "JAAA",
+        "NOBL",
+        "PICK",
+        "SLX",
+        "USO",
+        "VTIP"
+      ],
+      "HEFT": [
+        "CHTR",
+        "DBMF",
+        "DDS",
+        "DRAM",
+        "EPHE",
+        "EWG",
+        "EWQ",
+        "HYG",
+        "IDX",
+        "IHE",
+        "ITB",
+        "JETS",
+        "JNK",
+        "META",
+        "PAVE",
+        "PAWZ",
+        "RBLX",
+        "SLX",
+        "SPY   260717P00610000",
+        "SYY",
+        "V"
+      ],
+      "HGRO": [
+        "AMAT",
+        "BNY",
+        "GFS",
+        "KMI",
+        "LLY",
+        "NET",
+        "ORCL",
+        "PM",
+        "RIO",
+        "SXT",
+        "TTWO",
+        "TXG",
+        "ULS",
+        "URI",
+        "V",
+        "VLO",
+        "ZM"
+      ],
+      "HELS": [
+        "00971T101-TRS-06/08/27-L-HELS",
+        "023135106-TRS-06/15/27-L-HELS",
+        "19247G107-TRS-06/08/27-L-HELS",
+        "512807306-TRS-06/22/27-L-HELS",
+        "67066G104-TRS-06/08/27-L-HELS",
+        "82982T106-TRS-06/15/27-L-HELS",
+        "92826C839-TRS-06/22/27-L-HELS",
+        "AFRM",
+        "BALL",
+        "BKNG",
+        "BTI",
+        "CHTR",
+        "CNQ",
+        "DASH",
+        "DDS",
+        "DPZ",
+        "EAT",
+        "ENB",
+        "FLUT",
+        "GIS",
+        "GLASF",
+        "GOOGL",
+        "HBM",
+        "JBHT",
+        "LAMR",
+        "LCID",
+        "LUV",
+        "META",
+        "MKSI",
+        "MPC",
+        "MRVL",
+        "MSTR",
+        "NKE",
+        "NVO",
+        "PLAY",
+        "PM",
+        "RBLX",
+        "RDDT",
+        "SNAP",
+        "STT",
+        "SXT",
+        "TTWO",
+        "TWLO",
+        "UNH",
+        "URI",
+        "USPH",
+        "VIK",
+        "XYZ"
+      ],
+      "ADDS": [
+        "AFRM",
+        "ALAB",
+        "ALNY",
+        "AMRZ",
+        "BE",
+        "CRCL",
+        "CRDO",
+        "CW",
+        "DAVE",
+        "DKNG",
+        "FIGS",
+        "FLEX",
+        "FN",
+        "FTAI",
+        "FTI",
+        "FWONK",
+        "GTX",
+        "IESC",
+        "LNG",
+        "LOAR",
+        "LPLA",
+        "LQDA",
+        "MOD",
+        "MRVL",
+        "MSGE",
+        "MTSI",
+        "MTZ",
+        "NCNO",
+        "NVT",
+        "PRMB",
+        "ROKU",
+        "RPRX",
+        "RSI",
+        "SIRI",
+        "SUI",
+        "UTHR",
+        "VG",
+        "WK",
+        "Z",
+        "ZM"
+      ]
+    },
+    "fund_strategy": {
+      "HECA": "Macro ETFs & Fiji paper portfolios \u2014 broad macro themes, sector ETFs aligned with Hedgeye quads",
+      "HEFT": "Equity factor tilts \u2014 growth/value/momentum via Hedgeye quad framework",
+      "HGRO": "Growth equities \u2014 high-conviction S-curve & secular growth names",
+      "HELS": "Individual equities \u2014 SSS ideas, position monitors, call conversation picks",
+      "ADDS": "Recent additions across all funds"
+    }
   },
   "ham_holdings_date": "2026-05-26",
   "position_sizing": {
@@ -7326,5 +11725,2003 @@
       }
     ],
     "note": "VIX=SPX 30D IV, RVX=Russell 30D IV, NazVol=Nasdaq 30D IV, GVZ=Gold Vol, OVX=Oil Vol"
+  },
+  "ham_per_fund": {
+    "date": "2029-04-30",
+    "fund_strategy": {
+      "HECA": "Macro ETFs & Fiji paper portfolios \u2014 broad macro themes, sector ETFs aligned with Hedgeye quads",
+      "HEFT": "Equity factor tilts \u2014 growth/value/momentum via Hedgeye quad framework",
+      "HGRO": "Growth equities \u2014 high-conviction S-curve & secular growth names",
+      "HELS": "Individual equities \u2014 SSS ideas, position monitors, call conversation picks",
+      "ADDS": "Recent additions across all funds"
+    },
+    "HECA": [
+      {
+        "ticker": "PAVE",
+        "name": "Global X US Infrastructure Development ETF",
+        "weight": 6.32,
+        "price": 55.13,
+        "mv": 23611186.66,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "VYM",
+        "name": "Vanguard High Dividend Yield ETF",
+        "weight": 5.99,
+        "price": 154.5,
+        "mv": 22356922.5,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "OIH",
+        "name": "VanEck Oil Services ETF",
+        "weight": 4.81,
+        "price": 445.78,
+        "mv": 17979198.96,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "LIT",
+        "name": "Global X Lithium & Battery Tech ETF",
+        "weight": 4.66,
+        "price": 85.07,
+        "mv": 17396985.14,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "XTL",
+        "name": "State Street SPDR S&P Telecom ETF",
+        "weight": 4.46,
+        "price": 214.3,
+        "mv": 16650038.5,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "HGER",
+        "name": "Harbor Commodity All Weather Strategy ETF",
+        "weight": 4.37,
+        "price": 32.42,
+        "mv": 16312771.4,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "FLCA",
+        "name": "Franklin FTSE Canada ETF",
+        "weight": 4.35,
+        "price": 50.99,
+        "mv": 16236898.67,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "KRE",
+        "name": "State Street SPDR S&P Regional Banking ETF",
+        "weight": 4.07,
+        "price": 69.03,
+        "mv": 15218767.98,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "XLE",
+        "name": "State Street Energy Select Sector SPDR ETF",
+        "weight": 4.07,
+        "price": 59.03,
+        "mv": 15188596.09,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "DBB",
+        "name": "Invesco DB Base Metals Fund",
+        "weight": 3.73,
+        "price": 24.63,
+        "mv": 13945136.55,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "UUP",
+        "name": "Invesco DB US Dollar Index Bullish Fund",
+        "weight": 3.71,
+        "price": 27.61,
+        "mv": 13845282.99,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "PDBA",
+        "name": "Invesco Agriculture Commodity Strategy NO K-1 Etf",
+        "weight": 3.7,
+        "price": 37.42,
+        "mv": 13821563.46,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "XME",
+        "name": "State Street SPDR S&P Metals & Mining ETF",
+        "weight": 3.62,
+        "price": 114.61,
+        "mv": 13525584.54,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "TUR",
+        "name": "iShares MSCI Turkey ETF",
+        "weight": 3.27,
+        "price": 42.01,
+        "mv": 12227220.55,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "SBAR",
+        "name": "Simplify Barrier Income ETF",
+        "weight": 3.02,
+        "price": 25.39,
+        "mv": 11280345.37,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "BNO",
+        "name": "United States Brent Oil Fund LP",
+        "weight": 2.96,
+        "price": 58.81,
+        "mv": 11041577.5,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "TAN",
+        "name": "Invesco Solar ETF",
+        "weight": 2.62,
+        "price": 56.12,
+        "mv": 9784016.92,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "FLKR",
+        "name": "Franklin FTSE South Korea ETF",
+        "weight": 1.79,
+        "price": 50.13,
+        "mv": 6668944.29,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "ETHA",
+        "name": "iShares Ethereum Trust ETF",
+        "weight": 1.66,
+        "price": 16.85,
+        "mv": 6202333.35,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "IAU",
+        "name": "iShares Gold Trust",
+        "weight": 1.19,
+        "price": 85.55,
+        "mv": 4435083.1,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "TLT   260515P00086000",
+        "name": "TLT US 05/15/26 P86",
+        "weight": 0.36,
+        "price": 1.06,
+        "mv": 1338250.0,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "TLT   260717P00085000",
+        "name": "TLT US 07/17/26 P85",
+        "weight": 0.31,
+        "price": 1.675,
+        "mv": 1164962.5,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      }
+    ],
+    "HEFT": [
+      {
+        "ticker": "CERY",
+        "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
+        "weight": 14.14,
+        "price": 37.29,
+        "mv": 14742937.11,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "VTI",
+        "name": "Vanguard Total Stock Market ETF",
+        "weight": 8.99,
+        "price": 350.21,
+        "mv": 9372320.02,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "OIH",
+        "name": "VanEck Oil Services ETF",
+        "weight": 4.23,
+        "price": 445.78,
+        "mv": 4408318.42,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "XLE",
+        "name": "State Street Energy Select Sector SPDR ETF",
+        "weight": 4.12,
+        "price": 59.03,
+        "mv": 4293783.17,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Shares",
+        "weight": 3.96,
+        "price": 417.41,
+        "mv": 4126097.85,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "ARTY",
+        "name": "iShares Future AI & Tech ETF",
+        "weight": 3.94,
+        "price": 60.64,
+        "mv": 4111695.2,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "GII",
+        "name": "State Street SPDR S&P Global Infrastructure ETF",
+        "weight": 2.96,
+        "price": 75.53,
+        "mv": 3086080.27,
+        "first_seen": "2026-04-17",
+        "days_held": 1109
+      },
+      {
+        "ticker": "VPL",
+        "name": "Vanguard FTSE Pacific ETF",
+        "weight": 2.23,
+        "price": 104.34,
+        "mv": 2320208.58,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "DBA",
+        "name": "Invesco DB Agriculture Fund",
+        "weight": 2.01,
+        "price": 28.11,
+        "mv": 2100322.98,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "XLF",
+        "name": "State Street Financial Select Sector SPDR ETF",
+        "weight": 1.96,
+        "price": 51.92,
+        "mv": 2043207.76,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "XLI",
+        "name": "State Street Industrial Select Sector SPDR ETF",
+        "weight": 1.96,
+        "price": 169.93,
+        "mv": 2043748.11,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CIBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
+        "weight": 1.95,
+        "price": 67.87,
+        "mv": 2034878.34,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "ROBO",
+        "name": "ROBO Global Robotics and Automation Index ETF",
+        "weight": 1.95,
+        "price": 78.66,
+        "mv": 2037923.28,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "HTEC",
+        "name": "ROBO Global R Healthcare Technology and Innovation ETF",
+        "weight": 1.93,
+        "price": 32.2739,
+        "mv": 2007823.87,
+        "first_seen": "2026-04-28",
+        "days_held": 1098
+      },
+      {
+        "ticker": "FITE",
+        "name": "State Street SPDR S&P Kensho Future Security ETF",
+        "weight": 1.9,
+        "price": 92.1296,
+        "mv": 1981523.44,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "XAR",
+        "name": "State Street SPDR S&P Aerospace & Defense ETF",
+        "weight": 1.88,
+        "price": 249.75,
+        "mv": 1956541.5,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "XBI",
+        "name": "State Street SPDR S&P Biotech ETF",
+        "weight": 1.85,
+        "price": 128.9,
+        "mv": 1929246.3,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "WMT",
+        "name": "Walmart Inc",
+        "weight": 1.75,
+        "price": 128.01,
+        "mv": 1825550.61,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "ADM",
+        "name": "Archer-Daniels-Midland Co",
+        "weight": 1.59,
+        "price": 74.27,
+        "mv": 1653324.47,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "MO",
+        "name": "Altria Group Inc",
+        "weight": 1.55,
+        "price": 68.2,
+        "mv": 1616749.2,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "EWW",
+        "name": "iShares MSCI Mexico ETF",
+        "weight": 1.54,
+        "price": 75.4,
+        "mv": 1606246.2,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "AVEM",
+        "name": "Avantis Emerging Markets Equity ETF",
+        "weight": 1.48,
+        "price": 88.57,
+        "mv": 1548115.03,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "weight": 1.44,
+        "price": 94.75,
+        "mv": 1501029.5,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 1.32,
+        "price": 1063.11,
+        "mv": 1376727.45,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "TSN",
+        "name": "Tyson Foods Inc",
+        "weight": 1.27,
+        "price": 63.58,
+        "mv": 1326278.8,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "VGK",
+        "name": "Vanguard FTSE Europe ETF",
+        "weight": 1.24,
+        "price": 85.14,
+        "mv": 1297533.6,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 1.22,
+        "price": 781.5,
+        "mv": 1272282.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "RIG",
+        "name": "Transocean Ltd",
+        "weight": 1.17,
+        "price": 6.96,
+        "mv": 1224723.36,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "APD",
+        "name": "Air Products and Chemicals Inc",
+        "weight": 1.16,
+        "price": 302.5,
+        "mv": 1212420.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "AM",
+        "name": "Antero Midstream Corp",
+        "weight": 1.1,
+        "price": 21.88,
+        "mv": 1143426.92,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "EPD",
+        "name": "Enterprise Products Partners LP",
+        "weight": 1.06,
+        "price": 38.24,
+        "mv": 1109418.88,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 1.06,
+        "price": 215.67,
+        "mv": 1107896.79,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "EWC",
+        "name": "ISHARES INC MSCI CDA INDEX",
+        "weight": 1.04,
+        "price": 56.98,
+        "mv": 1088488.94,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "EWY",
+        "name": "iShares MSCI South Korea ETF",
+        "weight": 1.02,
+        "price": 153.96,
+        "mv": 1058936.88,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "weight": 1.0,
+        "price": 504.71,
+        "mv": 1045254.41,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "NORW",
+        "name": "Global X MSCI Norway ETF",
+        "weight": 1.0,
+        "price": 38.01,
+        "mv": 1041588.03,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "SOYB",
+        "name": "Teucrium Soybean Fund",
+        "weight": 1.0,
+        "price": 24.77,
+        "mv": 1042049.13,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "WEAT",
+        "name": "Teucrium Wheat Fund",
+        "weight": 1.0,
+        "price": 24.61,
+        "mv": 1038615.83,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "WELL",
+        "name": "Welltower Inc",
+        "weight": 1.0,
+        "price": 212.09,
+        "mv": 1047088.33,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "ARGT",
+        "name": "Global X MSCI Argentina ETF",
+        "weight": 0.98,
+        "price": 90.47,
+        "mv": 1025025.1,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "IBIT",
+        "name": "iShares Bitcoin Trust ETF",
+        "weight": 0.97,
+        "price": 42.75,
+        "mv": 1013602.5,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "EWJ",
+        "name": "iShares MSCI Japan ETF",
+        "weight": 0.96,
+        "price": 86.81,
+        "mv": 1005346.61,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CCJ",
+        "name": "Cameco Corp",
+        "weight": 0.93,
+        "price": 114.29,
+        "mv": 969064.91,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "BWXT",
+        "name": "BWX Technologies Inc",
+        "weight": 0.9,
+        "price": 208.08,
+        "mv": 934903.44,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "KO",
+        "name": "Coca-Cola Co/The",
+        "weight": 0.79,
+        "price": 78.87,
+        "mv": 821194.44,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 0.78,
+        "price": 15.41,
+        "mv": 812045.36,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "EZPW",
+        "name": "EZCORP Inc",
+        "weight": 0.75,
+        "price": 32.28,
+        "mv": 786631.32,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "PEP",
+        "name": "PepsiCo Inc",
+        "weight": 0.74,
+        "price": 155.29,
+        "mv": 776450.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CWEN",
+        "name": "Clearway Energy Inc",
+        "weight": 0.67,
+        "price": 38.19,
+        "mv": 700939.26,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "PM",
+        "name": "Philip Morris International Inc",
+        "weight": 0.52,
+        "price": 162.71,
+        "mv": 537431.13,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "SPY   260618P00570000",
+        "name": "SPY US 06/18/26 P570",
+        "weight": 0.11,
+        "price": 1.0,
+        "mv": 117800.0,
+        "first_seen": "2026-04-15",
+        "days_held": 1111
+      },
+      {
+        "ticker": "CPRT",
+        "name": "Copart Inc",
+        "weight": -0.41,
+        "price": 33.33,
+        "mv": -430323.63,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "USPH",
+        "name": "US Physical Therapy Inc",
+        "weight": -0.45,
+        "price": 71.51,
+        "mv": -465601.61,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "HCA",
+        "name": "HCA Healthcare Inc",
+        "weight": -0.64,
+        "price": 434.78,
+        "mv": -668256.86,
+        "first_seen": "2026-04-28",
+        "days_held": 1098
+      },
+      {
+        "ticker": "XSW",
+        "name": "State Street SPDR S&P Software & Services ETF",
+        "weight": -0.65,
+        "price": 150.88,
+        "mv": -682882.88,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "ARES",
+        "name": "Ares Management Corp",
+        "weight": -0.69,
+        "price": 110.86,
+        "mv": -719037.96,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "BX",
+        "name": "Blackstone Inc",
+        "weight": -0.69,
+        "price": 119.83,
+        "mv": -717182.55,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "OLLI",
+        "name": "Ollie's Bargain Outlet Holdings Inc",
+        "weight": -0.69,
+        "price": 85.4,
+        "mv": -715481.2,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "APO",
+        "name": "Apollo Global Management Inc",
+        "weight": -0.71,
+        "price": 122.28,
+        "mv": -740160.84,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "BRBR",
+        "name": "BellRing Brands Inc",
+        "weight": -0.73,
+        "price": 17.54,
+        "mv": -759236.44,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "KSS",
+        "name": "Kohl's Corp",
+        "weight": -0.87,
+        "price": 13.98,
+        "mv": -911286.3,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "PSP",
+        "name": "Invesco Global Listed Private Equity ETF",
+        "weight": -0.96,
+        "price": 58.96,
+        "mv": -996424.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "UTWO",
+        "name": "F/m US Treasury 2 Year Note ETF",
+        "weight": -0.98,
+        "price": 48.125,
+        "mv": -1026650.63,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "IEF",
+        "name": "iShares 7-10 Year Treasury Bond ETF",
+        "weight": -1.51,
+        "price": 94.8,
+        "mv": -1578609.6,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "INDA",
+        "name": "iShares MSCI India ETF",
+        "weight": -1.93,
+        "price": 49.03,
+        "mv": -2014642.7,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ETF",
+        "weight": -1.97,
+        "price": 85.7,
+        "mv": -2056371.5,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "XTEN",
+        "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
+        "weight": -1.97,
+        "price": 45.47,
+        "mv": -2059199.89,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "ZROZ",
+        "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
+        "weight": -1.99,
+        "price": 62.29,
+        "mv": -2073571.81,
+        "first_seen": "2026-04-28",
+        "days_held": 1098
+      }
+    ],
+    "HELS": [
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc",
+        "weight": 2.98,
+        "price": 270.17,
+        "mv": 731350.19,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 2.98,
+        "price": 781.5,
+        "mv": 732265.5,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "APD",
+        "name": "Air Products and Chemicals Inc",
+        "weight": 2.96,
+        "price": 302.5,
+        "mv": 725395.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "46625H100-TRS-05/18/27-L-HELS",
+        "name": "JPMORGAN CHASE & CO.-SWAP-CLST-L",
+        "weight": 2.94,
+        "price": 309.25,
+        "mv": 722098.75,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "FIVE",
+        "name": "Five Below Inc",
+        "weight": 2.9,
+        "price": 228.14,
+        "mv": 711796.8,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "weight": 2.87,
+        "price": 89.57,
+        "mv": 704826.33,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CLH",
+        "name": "CLEAN HARBORS INC COM",
+        "weight": 2.74,
+        "price": 306.44,
+        "mv": 672329.36,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "ROST",
+        "name": "Ross Stores Inc",
+        "weight": 2.48,
+        "price": 225.08,
+        "mv": 609066.48,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "DAR",
+        "name": "DARLING INGREDIENTS INC",
+        "weight": 2.47,
+        "price": 62.8,
+        "mv": 607150.4,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc/MD",
+        "weight": 2.47,
+        "price": 353.95,
+        "mv": 607378.2,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corp",
+        "weight": 2.46,
+        "price": 44.68,
+        "mv": 603403.4,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "ROKU",
+        "name": "Roku Inc",
+        "weight": 2.46,
+        "price": 112.62,
+        "mv": 604769.4,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "CFG",
+        "name": "Citizens Financial Group Inc",
+        "weight": 2.45,
+        "price": 63.94,
+        "mv": 600972.06,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "RTO",
+        "name": "Rentokil Initial PLC",
+        "weight": 2.4,
+        "price": 33.0,
+        "mv": 588159.0,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "ULS",
+        "name": "UL Solutions Inc",
+        "weight": 2.39,
+        "price": 88.01,
+        "mv": 587642.77,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 2.28,
+        "price": 1063.11,
+        "mv": 559195.86,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "JAZZ",
+        "name": "Jazz Pharmaceuticals PLC",
+        "weight": 2.28,
+        "price": 199.92,
+        "mv": 558776.4,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corp",
+        "weight": 2.19,
+        "price": 105.5,
+        "mv": 537944.5,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "CVI",
+        "name": "CVR Energy Inc",
+        "weight": 2.15,
+        "price": 34.13,
+        "mv": 528776.09,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc",
+        "weight": 2.14,
+        "price": 382.59,
+        "mv": 524913.48,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "SPHR",
+        "name": "Sphere Entertainment Co",
+        "weight": 2.13,
+        "price": 138.93,
+        "mv": 522376.8,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment Inc",
+        "weight": 2.09,
+        "price": 27.38,
+        "mv": 512088.14,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "MEOH",
+        "name": "Methanex Corp",
+        "weight": 2.07,
+        "price": 63.31,
+        "mv": 507872.82,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 2.03,
+        "price": 215.67,
+        "mv": 498197.7,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "NOV",
+        "name": "NOV Inc",
+        "weight": 2.02,
+        "price": 20.76,
+        "mv": 496060.2,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "19247G107 SWP CS",
+        "name": "19247G107 SWP CS",
+        "weight": 2.01,
+        "price": 304.93,
+        "mv": 493681.67,
+        "first_seen": "2026-05-04",
+        "days_held": 1092
+      },
+      {
+        "ticker": "ACHC",
+        "name": "Acadia Healthcare Co Inc",
+        "weight": 2.0,
+        "price": 28.26,
+        "mv": 491865.3,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar Inc",
+        "weight": 1.97,
+        "price": 810.05,
+        "mv": 482789.8,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "TJX",
+        "name": "TJX Cos Inc/The",
+        "weight": 1.97,
+        "price": 156.07,
+        "mv": 483192.72,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CDNS",
+        "name": "Cadence Design Systems Inc",
+        "weight": 1.96,
+        "price": 329.95,
+        "mv": 480737.15,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "MUSA",
+        "name": "Murphy USA Inc",
+        "weight": 1.95,
+        "price": 514.45,
+        "mv": 478952.95,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "WDC",
+        "name": "Western Digital Corp",
+        "weight": 1.95,
+        "price": 412.76,
+        "mv": 477976.08,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "693656100-TRS-06/08/27-L-HELS",
+        "name": "PVH CORP.-SWAP-CLST-L",
+        "weight": 1.9,
+        "price": 91.0,
+        "mv": 465192.0,
+        "first_seen": "2026-04-15",
+        "days_held": 1111
+      },
+      {
+        "ticker": "PCAR",
+        "name": "PACCAR Inc",
+        "weight": 1.85,
+        "price": 118.14,
+        "mv": 453539.46,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "weight": 1.75,
+        "price": 94.75,
+        "mv": 430259.75,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "RIG",
+        "name": "Transocean Ltd",
+        "weight": 1.71,
+        "price": 6.96,
+        "mv": 420140.4,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "FANG",
+        "name": "Diamondback Energy Inc",
+        "weight": 1.66,
+        "price": 205.32,
+        "mv": 406944.24,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CRWV",
+        "name": "CoreWeave Inc",
+        "weight": 1.54,
+        "price": 114.19,
+        "mv": 378539.85,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "RSI",
+        "name": "Rush Street Interactive Inc",
+        "weight": 1.53,
+        "price": 27.98,
+        "mv": 375267.76,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "NET",
+        "name": "Cloudflare Inc",
+        "weight": 1.52,
+        "price": 211.97,
+        "mv": 373915.08,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "OUT",
+        "name": "Outfront Media Inc",
+        "weight": 1.52,
+        "price": 30.46,
+        "mv": 372403.96,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "ALLY",
+        "name": "Ally Financial Inc",
+        "weight": 1.49,
+        "price": 43.81,
+        "mv": 365112.54,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "ALGN",
+        "name": "Align Technology Inc",
+        "weight": 1.48,
+        "price": 178.4,
+        "mv": 362687.2,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CAVA",
+        "name": "Cava Group Inc",
+        "weight": 1.46,
+        "price": 91.11,
+        "mv": 357151.2,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "MGM",
+        "name": "MGM Resorts International",
+        "weight": 1.45,
+        "price": 39.27,
+        "mv": 355393.5,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "REAL",
+        "name": "RealReal Inc/The",
+        "weight": 1.43,
+        "price": 11.77,
+        "mv": 351616.98,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CRCL",
+        "name": "Circle Internet Group Inc",
+        "weight": 1.37,
+        "price": 95.56,
+        "mv": 336562.32,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "TSSI",
+        "name": "TSS Inc/MD",
+        "weight": 1.35,
+        "price": 14.19,
+        "mv": 331662.87,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "ARCO",
+        "name": "Arcos Dorados Holdings Inc",
+        "weight": 1.23,
+        "price": 8.66,
+        "mv": 301740.38,
+        "first_seen": "2026-04-17",
+        "days_held": 1109
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 1.08,
+        "price": 15.41,
+        "mv": 264944.13,
+        "first_seen": "2026-04-15",
+        "days_held": 1111
+      },
+      {
+        "ticker": "TSN",
+        "name": "Tyson Foods Inc",
+        "weight": 1.0,
+        "price": 63.58,
+        "mv": 244465.1,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "ARHS",
+        "name": "Arhaus Inc",
+        "weight": -0.47,
+        "price": 7.34,
+        "mv": -115509.58,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "ONON",
+        "name": "On Holding AG",
+        "weight": -0.47,
+        "price": 35.33,
+        "mv": -116306.36,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "SFM",
+        "name": "Sprouts Farmers Market Inc",
+        "weight": -0.56,
+        "price": 71.13,
+        "mv": -138205.59,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "HCA",
+        "name": "HCA Healthcare Inc",
+        "weight": -0.57,
+        "price": 434.78,
+        "mv": -139129.6,
+        "first_seen": "2026-04-17",
+        "days_held": 1109
+      },
+      {
+        "ticker": "Z",
+        "name": "Zillow Group Inc",
+        "weight": -0.57,
+        "price": 43.41,
+        "mv": -140648.4,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CMG",
+        "name": "Chipotle Mexican Grill Inc",
+        "weight": -0.58,
+        "price": 32.99,
+        "mv": -141329.16,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "TAP",
+        "name": "Molson Coors Beverage Co",
+        "weight": -0.58,
+        "price": 42.41,
+        "mv": -143303.39,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "FOUR",
+        "name": "Shift4 Payments Inc",
+        "weight": -0.59,
+        "price": 45.09,
+        "mv": -143701.83,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "THC",
+        "name": "Tenet Healthcare Corp",
+        "weight": -0.6,
+        "price": 180.1,
+        "mv": -148222.3,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "FISV",
+        "name": "Fiserv Inc",
+        "weight": -0.61,
+        "price": 62.02,
+        "mv": -149034.06,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla Inc",
+        "weight": -0.61,
+        "price": 372.8,
+        "mv": -150611.2,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "IDXX",
+        "name": "IDEXX Laboratories Inc",
+        "weight": -0.62,
+        "price": 553.66,
+        "mv": -153363.82,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "DEO",
+        "name": "Diageo PLC",
+        "weight": -0.63,
+        "price": 77.4,
+        "mv": -155032.2,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "SPT",
+        "name": "Sprout Social Inc",
+        "weight": -0.64,
+        "price": 5.92,
+        "mv": -157839.04,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "CAG",
+        "name": "CONAGRA BRANDS INC",
+        "weight": -0.73,
+        "price": 13.88,
+        "mv": -179121.4,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "FLO",
+        "name": "Flowers Foods Inc",
+        "weight": -0.73,
+        "price": 8.87,
+        "mv": -179040.95,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CPB",
+        "name": "Campbell's Company/The",
+        "weight": -0.74,
+        "price": 20.45,
+        "mv": -180941.6,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "LVS",
+        "name": "Las Vegas Sands Corp",
+        "weight": -0.74,
+        "price": 53.72,
+        "mv": -180982.68,
+        "first_seen": "2026-04-29",
+        "days_held": 1097
+      },
+      {
+        "ticker": "APP",
+        "name": "AppLovin Corp",
+        "weight": -0.76,
+        "price": 443.43,
+        "mv": -185797.17,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "ARES",
+        "name": "Ares Management Corp",
+        "weight": -0.77,
+        "price": 110.86,
+        "mv": -189459.74,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "KSS",
+        "name": "Kohl's Corp",
+        "weight": -0.8,
+        "price": 13.98,
+        "mv": -195845.82,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "XSW",
+        "name": "State Street SPDR S&P Software & Services ETF",
+        "weight": -0.97,
+        "price": 150.88,
+        "mv": -238541.28,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "KMX",
+        "name": "CarMax Inc",
+        "weight": -0.98,
+        "price": 38.35,
+        "mv": -240224.4,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "SMPL",
+        "name": "Simply Good Foods Co/The",
+        "weight": -0.99,
+        "price": 13.59,
+        "mv": -242350.47,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "SYY",
+        "name": "Sysco Corp",
+        "weight": -0.99,
+        "price": 73.97,
+        "mv": -242843.51,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "BRBR",
+        "name": "BellRing Brands Inc",
+        "weight": -1.0,
+        "price": 17.54,
+        "mv": -244718.08,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "WING",
+        "name": "Wingstop Inc",
+        "weight": -1.02,
+        "price": 171.21,
+        "mv": -250480.23,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      }
+    ],
+    "HGRO": [
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA Corp",
+        "weight": 9.05,
+        "price": 209.25,
+        "mv": 8667344.25,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc",
+        "weight": 8.1,
+        "price": 270.17,
+        "mv": 7755500.02,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "weight": 7.72,
+        "price": 349.94,
+        "mv": 7388283.22,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc",
+        "weight": 5.73,
+        "price": 263.04,
+        "mv": 5489644.8,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc",
+        "weight": 3.92,
+        "price": 405.45,
+        "mv": 3756899.7,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "ADI",
+        "name": "Analog Devices Inc",
+        "weight": 2.82,
+        "price": 389.31,
+        "mv": 2699086.23,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "JPM",
+        "name": "JPMORGAN CHASE & CO.",
+        "weight": 2.49,
+        "price": 309.25,
+        "mv": 2381534.25,
+        "first_seen": "2026-04-15",
+        "days_held": 1111
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 2.18,
+        "price": 1063.11,
+        "mv": 2084758.71,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "GS",
+        "name": "Goldman Sachs Group Inc/The",
+        "weight": 2.1,
+        "price": 905.6,
+        "mv": 2014054.4,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "UNH",
+        "name": "UnitedHealth Group Inc",
+        "weight": 2.1,
+        "price": 370.74,
+        "mv": 2006815.62,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "HAL",
+        "name": "Halliburton Co",
+        "weight": 2.08,
+        "price": 41.81,
+        "mv": 1986936.63,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CBOE",
+        "name": "Cboe Global Markets Inc",
+        "weight": 2.02,
+        "price": 305.6,
+        "mv": 1929558.4,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "LNG",
+        "name": "Cheniere Energy Inc",
+        "weight": 1.8,
+        "price": 272.23,
+        "mv": 1723760.36,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "C",
+        "name": "Citigroup Inc",
+        "weight": 1.7,
+        "price": 127.61,
+        "mv": 1631366.24,
+        "first_seen": "2026-04-15",
+        "days_held": 1111
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar Inc",
+        "weight": 1.59,
+        "price": 810.05,
+        "mv": 1526134.2,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "weight": 1.59,
+        "price": 89.57,
+        "mv": 1524033.55,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "MGM",
+        "name": "MGM Resorts International",
+        "weight": 1.55,
+        "price": 39.27,
+        "mv": 1485780.45,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft Corp",
+        "weight": 1.51,
+        "price": 424.46,
+        "mv": 1447408.6,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "NDAQ",
+        "name": "Nasdaq Inc",
+        "weight": 1.5,
+        "price": 91.27,
+        "mv": 1439419.17,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "MRK",
+        "name": "Merck & Co Inc",
+        "weight": 1.48,
+        "price": 110.95,
+        "mv": 1415722.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "weight": 1.47,
+        "price": 504.71,
+        "mv": 1410664.45,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "PLD",
+        "name": "Prologis Inc",
+        "weight": 1.43,
+        "price": 138.82,
+        "mv": 1367238.18,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "OUT",
+        "name": "Outfront Media Inc",
+        "weight": 1.41,
+        "price": 30.46,
+        "mv": 1345357.28,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 1.4,
+        "price": 781.5,
+        "mv": 1341054.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices Inc",
+        "weight": 1.37,
+        "price": 337.11,
+        "mv": 1310009.46,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "SPHR",
+        "name": "Sphere Entertainment Co",
+        "weight": 1.36,
+        "price": 138.93,
+        "mv": 1298022.99,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "STX",
+        "name": "Seagate Technology Holdings PLC",
+        "weight": 1.36,
+        "price": 643.3,
+        "mv": 1306542.3,
+        "first_seen": "2026-04-13",
+        "days_held": 1113
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc/MD",
+        "weight": 1.29,
+        "price": 353.95,
+        "mv": 1233869.7,
+        "first_seen": "2026-04-22",
+        "days_held": 1104
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corp",
+        "weight": 1.29,
+        "price": 105.5,
+        "mv": 1232029.0,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corp",
+        "weight": 1.25,
+        "price": 44.68,
+        "mv": 1194966.6,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "BK",
+        "name": "Bank of New York Mellon Corp/The",
+        "weight": 1.19,
+        "price": 132.27,
+        "mv": 1135802.49,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment Inc",
+        "weight": 1.18,
+        "price": 27.38,
+        "mv": 1127207.22,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "PH",
+        "name": "Parker-Hannifin Corp",
+        "weight": 1.16,
+        "price": 947.5,
+        "mv": 1110470.0,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 1.07,
+        "price": 215.67,
+        "mv": 1028314.56,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA CORP",
+        "weight": 1.07,
+        "price": 1816.21,
+        "mv": 1024342.44,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CF",
+        "name": "CF Industries Holdings Inc",
+        "weight": 1.03,
+        "price": 126.78,
+        "mv": 982164.66,
+        "first_seen": "2026-04-17",
+        "days_held": 1109
+      },
+      {
+        "ticker": "CFG",
+        "name": "Citizens Financial Group Inc",
+        "weight": 0.95,
+        "price": 63.94,
+        "mv": 909290.74,
+        "first_seen": "2026-04-15",
+        "days_held": 1111
+      },
+      {
+        "ticker": "PCAR",
+        "name": "PACCAR Inc",
+        "weight": 0.94,
+        "price": 118.14,
+        "mv": 899754.24,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "COHR",
+        "name": "Coherent Corp",
+        "weight": 0.9,
+        "price": 304.93,
+        "mv": 862646.97,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "VIK",
+        "name": "Viking Holdings Ltd",
+        "weight": 0.88,
+        "price": 78.54,
+        "mv": 840456.54,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "GLW",
+        "name": "Corning Inc",
+        "weight": 0.82,
+        "price": 151.9,
+        "mv": 787601.5,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "MRVL",
+        "name": "MARVELL TECHNOLOGY INC",
+        "weight": 0.82,
+        "price": 156.57,
+        "mv": 785668.26,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "ACHC",
+        "name": "Acadia Healthcare Co Inc",
+        "weight": 0.8,
+        "price": 28.26,
+        "mv": 767259.0,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "DELL",
+        "name": "Dell Technologies Inc",
+        "weight": 0.8,
+        "price": 205.66,
+        "mv": 768551.42,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "CARR",
+        "name": "Carrier Global Corp",
+        "weight": 0.76,
+        "price": 61.74,
+        "mv": 730507.68,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "SNDK",
+        "name": "Sandisk Corp/DE",
+        "weight": 0.76,
+        "price": 1064.21,
+        "mv": 727919.64,
+        "first_seen": "2026-04-27",
+        "days_held": 1099
+      },
+      {
+        "ticker": "TER",
+        "name": "Teradyne Inc",
+        "weight": 0.72,
+        "price": 306.33,
+        "mv": 689548.83,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 0.71,
+        "price": 15.41,
+        "mv": 680382.32,
+        "first_seen": "2026-04-07",
+        "days_held": 1119
+      },
+      {
+        "ticker": "CAVA",
+        "name": "Cava Group Inc",
+        "weight": 0.67,
+        "price": 91.11,
+        "mv": 641869.95,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      },
+      {
+        "ticker": "CIEN",
+        "name": "Ciena Corp",
+        "weight": 0.6,
+        "price": 475.39,
+        "mv": 578549.63,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "ATI",
+        "name": "ATI Inc",
+        "weight": 0.5,
+        "price": 146.23,
+        "mv": 483290.15,
+        "first_seen": "2026-03-30",
+        "days_held": 1127
+      },
+      {
+        "ticker": "TWLO",
+        "name": "Twilio Inc",
+        "weight": 0.48,
+        "price": 140.91,
+        "mv": 460071.15,
+        "first_seen": "2026-05-01",
+        "days_held": 1095
+      }
+    ]
   }
 }
