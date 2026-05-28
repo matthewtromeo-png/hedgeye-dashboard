@@ -1,54 +1,171 @@
 {
-  "generated_at": "2026-05-26T14:27:02.631885",
+  "generated_at": "2026-05-28T16:52:09",
   "source_date": "2026-05-28",
-  "sources_used": {
-    "etf_pro": "Hedgeye ETF Pro Plus New Weekly Report 5.26.2026",
-    "ham_holdings": "ETF_Holdings 5.26.2026.csv",
-    "rta": "real-time-alerts-history-2026-05-08.csv",
-    "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "early_look": "Hedgeye Early Look 5.26.2026",
-    "call": "Hedgeye Call Summary 5.22.2026",
-    "msr": "Hedgeye May 26th 2026 WEEKLY GAME PLAN",
-    "momo": "Hedgeye MOMO Tracker 5.26.2026",
-    "btc": "Hedgeye BTC Trend Tracker 5.26.2026",
-    "sss": "Hedgeye Signal Strength Stocks 5.22.2026",
-    "macro_show": "HE_TMS_KM_DJ_5.26.2026.pdf",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Tuesday, May 26th, 2026.pdf",
-    "investing_ideas": "Hedgeye Investing Ideas Newsletter 5.26.2026",
-    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 5_26_2026.pdf",
-    "founders_choice": "Hedgeye - Position Monitors _ Software - Best Idea Longs & Shorts.pdf",
-    "position_sizing": "Portfolio Solutions PDFs + ETF Pro table (2026-05-27)"
-  },
-  "etf_rerank": [
-    "BUXX",
-    "AAAU",
-    "CLOX",
-    "XOP",
-    "OIH",
-    "BNO",
-    "NORW",
-    "COM",
-    "XTL",
-    "EQRR",
-    "EWW",
-    "SOYB",
-    "HYG",
-    "CLOZ",
-    "CPER",
-    "CNXT",
-    "STIP",
-    "IWM",
-    "VYM",
-    "QTUM",
-    "VXF",
-    "SLX",
-    "DRAM",
-    "DBB",
-    "ROBO",
-    "TAN",
-    "TILL",
-    "PFIX"
+  "sources_used": [
+    "The Call @ Hedgeye 5/28/2026",
+    "Macro Show Summary 5/28/2026",
+    "Portfolio Solutions ETF Re-Rank 5/28/2026"
   ],
+  "etf_rerank": {
+    "date": "2026-05-28",
+    "source": "Portfolio Solutions Daily ETF Re-Rank 5/28/2026",
+    "total_tickers": 29,
+    "new_additions": [
+      "BUG"
+    ],
+    "removals": [
+      "PFIX",
+      "TILL"
+    ],
+    "biggest_movers_up": [
+      {
+        "ticker": "ROBO",
+        "change": 10,
+        "note": "Robotics/automation \u2014 Quad 2 upgrade"
+      },
+      {
+        "ticker": "EQRR",
+        "change": 9,
+        "note": "Equal weight rate rotation"
+      },
+      {
+        "ticker": "OIH",
+        "change": 8,
+        "note": "Oil services \u2014 energy thesis"
+      }
+    ],
+    "biggest_movers_down": [],
+    "trades": {
+      "sold": [
+        {
+          "ticker": "PFIX",
+          "size_bps": null,
+          "note": "Full exit \u2014 rate hedge no longer needed"
+        },
+        {
+          "ticker": "TILL",
+          "size_bps": null,
+          "note": "Full exit"
+        },
+        {
+          "ticker": "UUP",
+          "size_bps": 50,
+          "note": "Trim 50bps \u2014 take partial profits"
+        },
+        {
+          "ticker": "SOYB",
+          "size_bps": 50,
+          "note": "Trim 50bps \u2014 soft commodity trim"
+        },
+        {
+          "ticker": "CNXT",
+          "size_bps": 50,
+          "note": "Trim 50bps"
+        }
+      ],
+      "bought": [
+        {
+          "ticker": "EQRR",
+          "size_bps": 50,
+          "note": "Add 50bps \u2014 rate rotation"
+        },
+        {
+          "ticker": "ROBO",
+          "size_bps": 50,
+          "note": "Add 50bps \u2014 robotics/automation"
+        },
+        {
+          "ticker": "IWM",
+          "size_bps": 50,
+          "note": "Add 50bps \u2014 small cap re-entry"
+        },
+        {
+          "ticker": "HYG",
+          "size_bps": 50,
+          "note": "Add 50bps \u2014 high yield credit"
+        }
+      ]
+    },
+    "rankings": [
+      {
+        "rank": 1,
+        "ticker": "MRVL",
+        "signal": "bullish"
+      },
+      {
+        "rank": 2,
+        "ticker": "NVDA",
+        "signal": "bullish"
+      },
+      {
+        "rank": 3,
+        "ticker": "ROBO",
+        "signal": "bullish"
+      },
+      {
+        "rank": 4,
+        "ticker": "EQRR",
+        "signal": "bullish"
+      },
+      {
+        "rank": 5,
+        "ticker": "OIH",
+        "signal": "bullish"
+      },
+      {
+        "rank": 6,
+        "ticker": "XTL",
+        "signal": "bullish"
+      },
+      {
+        "rank": 7,
+        "ticker": "DRAM",
+        "signal": "bullish"
+      },
+      {
+        "rank": 8,
+        "ticker": "UUP",
+        "signal": "bullish"
+      },
+      {
+        "rank": 9,
+        "ticker": "SOYB",
+        "signal": "bullish"
+      },
+      {
+        "rank": 10,
+        "ticker": "NORW",
+        "signal": "bullish"
+      },
+      {
+        "rank": 11,
+        "ticker": "IWM",
+        "signal": "bullish"
+      },
+      {
+        "rank": 12,
+        "ticker": "HYG",
+        "signal": "bullish"
+      },
+      {
+        "rank": 13,
+        "ticker": "BUG",
+        "signal": "bullish",
+        "note": "NEW"
+      },
+      {
+        "rank": 14,
+        "ticker": "QTUM",
+        "signal": "bullish"
+      },
+      {
+        "rank": 15,
+        "ticker": "AAPL",
+        "signal": "bullish"
+      }
+    ],
+    "quad_context": "Quad 2 operative \u2014 Growth/Inflation regime favors semis, energy, real assets over duration"
+  },
   "active_longs": [
     {
       "ticker": "BUXX",
@@ -5502,275 +5619,275 @@
         "removed": true,
         "prev_weight": 0.0147
       },
-      "CSX": {
-        "delta": 0.0006,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0296
-      },
-      "XTL": {
-        "delta": 0.0082,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0636
-      },
-      "FESM": {
-        "delta": 0.0291,
-        "curr_weight": 0.0655,
-        "prev_weight": 0.0364
-      },
-      "PLAY": {
-        "delta": -0.0007,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0103
-      },
-      "AAPL": {
-        "delta": 0.001,
-        "curr_weight": 0.092,
-        "prev_weight": 0.091
-      },
-      "023135106-TRS-06/15/27-L-HELS": {
-        "delta": 0.0011,
-        "curr_weight": 0.0335,
-        "prev_weight": 0.0324
-      },
-      "IHF": {
-        "delta": -0.0232,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0488
-      },
-      "RDDT": {
-        "delta": -0.0007,
-        "curr_weight": -0.0101,
-        "prev_weight": -0.0094
-      },
-      "TWLO": {
-        "delta": -0.0007,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0199
-      },
-      "TAN": {
-        "delta": 0.0065,
-        "curr_weight": 0.0452,
-        "prev_weight": 0.0387
-      },
-      "ITB": {
-        "delta": -0.0005,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0209
-      },
-      "JETS": {
-        "delta": -0.0005,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0105
-      },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
-      },
-      "WING": {
-        "delta": -0.001,
-        "curr_weight": -0.012,
-        "prev_weight": -0.011
-      },
-      "SLX": {
-        "delta": 0.0124,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0422
-      },
-      "CASY": {
-        "delta": -0.0006,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.0233
-      },
-      "USO": {
-        "delta": -0.005,
-        "curr_weight": 0.0307,
-        "prev_weight": 0.0357
-      },
-      "UNH": {
-        "delta": 0.0006,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0246
-      },
-      "NVDA": {
-        "delta": -0.0008,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0907
-      },
-      "CAVA": {
-        "delta": -0.0085,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0126
-      },
-      "82982T106-TRS-06/15/27-L-HELS": {
-        "delta": 0.0032,
-        "curr_weight": 0.0176,
-        "prev_weight": 0.0144
-      },
-      "MAR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0159
-      },
-      "CIBR": {
-        "delta": -0.0005,
-        "curr_weight": 0.0269,
-        "prev_weight": 0.0274
-      },
-      "LLY": {
-        "delta": 0.0006,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0281
-      },
-      "JAAA": {
-        "delta": 0.0039,
-        "curr_weight": 0.063,
-        "prev_weight": 0.0591
-      },
-      "RSI": {
-        "delta": 0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0141
-      },
-      "SNDK": {
-        "delta": 0.0033,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0117
-      },
-      "IDMO": {
-        "delta": -0.0184,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0371
-      },
-      "CSCO": {
-        "delta": -0.0023,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0275
-      },
-      "GEV": {
-        "delta": 0.002,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0204
-      },
-      "URI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0253
-      },
-      "CRCL": {
-        "delta": 0.0054,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0147
-      },
-      "ROKU": {
-        "delta": 0.0179,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0264
-      },
       "RIG": {
         "delta": -0.0007,
         "curr_weight": 0.0177,
         "prev_weight": 0.0184
-      },
-      "AMZN": {
-        "delta": 0.0016,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0592
-      },
-      "ADI": {
-        "delta": 0.0043,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0178
-      },
-      "VIK": {
-        "delta": 0.0013,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0213
-      },
-      "UUP": {
-        "delta": -0.0091,
-        "curr_weight": 0.0697,
-        "prev_weight": 0.0788
-      },
-      "DBB": {
-        "delta": -0.0063,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.0361
-      },
-      "ZM": {
-        "delta": 0.0406,
-        "curr_weight": 0.0496,
-        "prev_weight": 0.009
-      },
-      "MRVL": {
-        "delta": 0.125,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0196
-      },
-      "NOBL": {
-        "delta": 0.0029,
-        "curr_weight": 0.0449,
-        "prev_weight": 0.042
-      },
-      "19247G107-TRS-06/08/27-L-HELS": {
-        "delta": 0.0045,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0105
-      },
-      "NOV": {
-        "delta": -0.0007,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0194
-      },
-      "DBJP": {
-        "delta": 0.0092,
-        "curr_weight": 0.0581,
-        "prev_weight": 0.0489
-      },
-      "GLASF": {
-        "delta": 0.0005,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0163
       },
       "MUSA": {
         "delta": -0.009,
         "curr_weight": 0.0101,
         "prev_weight": 0.0191
       },
-      "VTI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0902
+      "AMZN": {
+        "delta": 0.0016,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0592
       },
-      "GFS": {
-        "delta": -0.0009,
-        "curr_weight": 0.0082,
-        "prev_weight": 0.0091
+      "PLAY": {
+        "delta": -0.0007,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0103
+      },
+      "LLY": {
+        "delta": 0.0006,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0281
+      },
+      "CSCO": {
+        "delta": -0.0023,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0275
+      },
+      "USO": {
+        "delta": -0.005,
+        "curr_weight": 0.0307,
+        "prev_weight": 0.0357
+      },
+      "JAAA": {
+        "delta": 0.0039,
+        "curr_weight": 0.063,
+        "prev_weight": 0.0591
+      },
+      "DBMF": {
+        "delta": 0.0052,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0689
+      },
+      "NOV": {
+        "delta": -0.0007,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0194
+      },
+      "MAR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0159
+      },
+      "IDMO": {
+        "delta": -0.0184,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0371
+      },
+      "VIK": {
+        "delta": 0.0013,
+        "curr_weight": 0.0226,
+        "prev_weight": 0.0213
+      },
+      "SNDK": {
+        "delta": 0.0033,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0117
+      },
+      "NOBL": {
+        "delta": 0.0029,
+        "curr_weight": 0.0449,
+        "prev_weight": 0.042
+      },
+      "AAPL": {
+        "delta": 0.001,
+        "curr_weight": 0.092,
+        "prev_weight": 0.091
+      },
+      "ZM": {
+        "delta": 0.0406,
+        "curr_weight": 0.0496,
+        "prev_weight": 0.009
+      },
+      "CASY": {
+        "delta": -0.0006,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.0233
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
       },
       "OIH": {
         "delta": -0.0031,
         "curr_weight": 0.0497,
         "prev_weight": 0.0528
       },
+      "RSI": {
+        "delta": 0.0007,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0141
+      },
       "VTIP": {
         "delta": -0.0051,
         "curr_weight": 0.0329,
         "prev_weight": 0.038
+      },
+      "UUP": {
+        "delta": -0.0091,
+        "curr_weight": 0.0697,
+        "prev_weight": 0.0788
+      },
+      "URI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0253
+      },
+      "82982T106-TRS-06/15/27-L-HELS": {
+        "delta": 0.0032,
+        "curr_weight": 0.0176,
+        "prev_weight": 0.0144
+      },
+      "MRVL": {
+        "delta": 0.125,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0196
+      },
+      "ITB": {
+        "delta": -0.0005,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0209
+      },
+      "GFS": {
+        "delta": -0.0009,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0091
+      },
+      "023135106-TRS-06/15/27-L-HELS": {
+        "delta": 0.0011,
+        "curr_weight": 0.0335,
+        "prev_weight": 0.0324
+      },
+      "GEV": {
+        "delta": 0.002,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0204
+      },
+      "ADI": {
+        "delta": 0.0043,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0178
+      },
+      "DBJP": {
+        "delta": 0.0092,
+        "curr_weight": 0.0581,
+        "prev_weight": 0.0489
+      },
+      "CRCL": {
+        "delta": 0.0054,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0147
+      },
+      "CSX": {
+        "delta": 0.0006,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0296
+      },
+      "CAVA": {
+        "delta": -0.0085,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0126
+      },
+      "WING": {
+        "delta": -0.001,
+        "curr_weight": -0.012,
+        "prev_weight": -0.011
+      },
+      "GLASF": {
+        "delta": 0.0005,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0163
+      },
+      "RDDT": {
+        "delta": -0.0007,
+        "curr_weight": -0.0101,
+        "prev_weight": -0.0094
+      },
+      "ROKU": {
+        "delta": 0.0179,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0264
+      },
+      "NVDA": {
+        "delta": -0.0008,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0907
+      },
+      "19247G107-TRS-06/08/27-L-HELS": {
+        "delta": 0.0045,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0105
       },
       "PICK": {
         "delta": -0.0042,
         "curr_weight": 0.0069,
         "prev_weight": 0.0111
       },
+      "JETS": {
+        "delta": -0.0005,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0105
+      },
+      "FESM": {
+        "delta": 0.0291,
+        "curr_weight": 0.0655,
+        "prev_weight": 0.0364
+      },
+      "IHF": {
+        "delta": -0.0232,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0488
+      },
+      "VTI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0902
+      },
+      "XTL": {
+        "delta": 0.0082,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0636
+      },
+      "TWLO": {
+        "delta": -0.0007,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0199
+      },
+      "SLX": {
+        "delta": 0.0124,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0422
+      },
+      "CIBR": {
+        "delta": -0.0005,
+        "curr_weight": 0.0269,
+        "prev_weight": 0.0274
+      },
       "HAL": {
         "delta": -0.0007,
         "curr_weight": 0.0184,
         "prev_weight": 0.0191
       },
-      "DBMF": {
-        "delta": 0.0052,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0689
+      "UNH": {
+        "delta": 0.0006,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0246
+      },
+      "DBB": {
+        "delta": -0.0063,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.0361
+      },
+      "TAN": {
+        "delta": 0.0065,
+        "curr_weight": 0.0452,
+        "prev_weight": 0.0387
       }
     },
     "weekly": {
@@ -6030,425 +6147,180 @@
         "removed": true,
         "prev_weight": 0.0172
       },
-      "CSX": {
-        "delta": 0.0007,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0295
+      "MUSA": {
+        "delta": -0.01,
+        "curr_weight": 0.0101,
+        "prev_weight": 0.0201
       },
-      "KLAC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0109,
-        "prev_weight": 0.0104
-      },
-      "CZR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.015
-      },
-      "VLO": {
-        "delta": -0.0008,
-        "curr_weight": 0.0115,
-        "prev_weight": 0.0123
-      },
-      "XTL": {
-        "delta": 0.0116,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0602
+      "SNAP": {
+        "delta": 0.0052,
+        "curr_weight": -0.0051,
+        "prev_weight": -0.0103
       },
       "AVEM": {
         "delta": 0.001,
         "curr_weight": 0.0202,
         "prev_weight": 0.0192
       },
-      "FESM": {
-        "delta": 0.0251,
-        "curr_weight": 0.0655,
-        "prev_weight": 0.0404
+      "AMZN": {
+        "delta": 0.0009,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0599
+      },
+      "IDX": {
+        "delta": 0.0005,
+        "curr_weight": -0.0094,
+        "prev_weight": -0.0099
       },
       "PLAY": {
         "delta": -0.0017,
         "curr_weight": -0.011,
         "prev_weight": -0.0093
       },
-      "AAPL": {
-        "delta": 0.0016,
-        "curr_weight": 0.092,
-        "prev_weight": 0.0904
-      },
-      "ARTY": {
-        "delta": 0.0033,
-        "curr_weight": 0.047,
-        "prev_weight": 0.0437
-      },
-      "023135106-TRS-06/15/27-L-HELS": {
-        "delta": 0.0036,
-        "curr_weight": 0.0335,
-        "prev_weight": 0.0299
-      },
-      "KMI": {
-        "delta": 0.0028,
-        "curr_weight": 0.0127,
-        "prev_weight": 0.0099
-      },
-      "SBUX": {
-        "delta": -0.0009,
-        "curr_weight": 0.0189,
-        "prev_weight": 0.0198
-      },
-      "CBOE": {
-        "delta": -0.0011,
-        "curr_weight": 0.0214,
-        "prev_weight": 0.0225
-      },
-      "IHF": {
-        "delta": -0.0212,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0468
-      },
-      "TTWO": {
-        "delta": -0.0066,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0224
-      },
-      "TWLO": {
-        "delta": 0.0044,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0148
-      },
-      "CERY": {
-        "delta": -0.004,
-        "curr_weight": 0.1366,
-        "prev_weight": 0.1406
-      },
-      "INTC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0213
-      },
-      "ITB": {
-        "delta": -0.0008,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0206
-      },
-      "AFRM": {
-        "delta": 0.0007,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0151
-      },
-      "JETS": {
-        "delta": -0.0011,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0099
-      },
-      "LCID": {
-        "delta": -0.0009,
-        "curr_weight": -0.0098,
-        "prev_weight": -0.0089
-      },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
-      },
-      "WING": {
-        "delta": -0.0019,
-        "curr_weight": -0.012,
-        "prev_weight": -0.0101
-      },
-      "SLX": {
-        "delta": 0.0188,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0358
-      },
-      "CASY": {
-        "delta": -0.0021,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.0248
-      },
-      "UNH": {
-        "delta": 0.0048,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0204
-      },
-      "DRAM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0357,
-        "prev_weight": 0.0302
-      },
-      "NVDA": {
-        "delta": -0.0057,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0956
-      },
-      "CAVA": {
-        "delta": -0.0086,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0127
-      },
-      "82982T106-TRS-06/15/27-L-HELS": {
-        "delta": 0.004,
-        "curr_weight": 0.0176,
-        "prev_weight": 0.0136
-      },
-      "MAR": {
-        "delta": 0.0007,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0158
-      },
-      "WDC": {
-        "delta": 0.0027,
-        "curr_weight": 0.0203,
-        "prev_weight": 0.0176
-      },
-      "GOOGL": {
-        "delta": -0.0009,
-        "curr_weight": 0.0803,
-        "prev_weight": 0.0812
+      "XYZ": {
+        "delta": -0.0098,
+        "curr_weight": 0.0102,
+        "prev_weight": 0.02
       },
       "LUV": {
         "delta": -0.0009,
         "curr_weight": -0.0108,
         "prev_weight": -0.0099
       },
-      "DDS": {
-        "delta": -0.0007,
-        "curr_weight": -0.0082,
-        "prev_weight": -0.0075
-      },
-      "MKSI": {
-        "delta": 0.0011,
-        "curr_weight": 0.0228,
-        "prev_weight": 0.0217
+      "INTC": {
+        "delta": 0.0005,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0213
       },
       "LLY": {
         "delta": 0.0014,
         "curr_weight": 0.0287,
         "prev_weight": 0.0273
       },
-      "JAAA": {
-        "delta": 0.003,
-        "curr_weight": 0.063,
-        "prev_weight": 0.06
-      },
-      "AMAT": {
-        "delta": 0.0013,
-        "curr_weight": 0.0273,
-        "prev_weight": 0.026
-      },
-      "VYM": {
-        "delta": 0.0081,
-        "curr_weight": 0.0493,
-        "prev_weight": 0.0412
-      },
-      "67066G104-TRS-06/08/27-L-HELS": {
-        "delta": -0.0012,
-        "curr_weight": 0.0208,
-        "prev_weight": 0.022
-      },
-      "SMPL": {
-        "delta": -0.0005,
-        "curr_weight": -0.0102,
-        "prev_weight": -0.0097
-      },
-      "CF": {
-        "delta": -0.001,
-        "curr_weight": 0.0128,
-        "prev_weight": 0.0138
-      },
-      "SNDK": {
-        "delta": 0.0046,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0104
-      },
-      "IDMO": {
-        "delta": 0.0036,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0151
-      },
-      "FITE": {
-        "delta": 0.0015,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0206
-      },
       "CSCO": {
         "delta": -0.0016,
         "curr_weight": 0.0252,
         "prev_weight": 0.0268
       },
-      "SPY   260717P00610000": {
-        "delta": -0.0006,
-        "curr_weight": 0.001,
-        "prev_weight": 0.0016
-      },
-      "GEV": {
-        "delta": 0.0027,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0197
-      },
-      "URI": {
-        "delta": 0.0014,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0248
+      "JAAA": {
+        "delta": 0.003,
+        "curr_weight": 0.063,
+        "prev_weight": 0.06
       },
       "HBM": {
         "delta": 0.0012,
         "curr_weight": 0.016,
         "prev_weight": 0.0148
       },
-      "EWY": {
-        "delta": 0.0012,
-        "curr_weight": 0.0126,
-        "prev_weight": 0.0114
+      "HTEC": {
+        "delta": 0.0024,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0076
       },
-      "CRCL": {
-        "delta": 0.0042,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0159
+      "XLE": {
+        "delta": -0.0014,
+        "curr_weight": 0.0295,
+        "prev_weight": 0.0309
       },
-      "ROKU": {
-        "delta": 0.0184,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0259
+      "VYM": {
+        "delta": 0.0081,
+        "curr_weight": 0.0493,
+        "prev_weight": 0.0412
       },
-      "FWD": {
-        "delta": 0.0018,
-        "curr_weight": 0.0566,
-        "prev_weight": 0.0548
-      },
-      "ZROZ": {
-        "delta": -0.0008,
-        "curr_weight": -0.0243,
-        "prev_weight": -0.0235
-      },
-      "PAVE": {
-        "delta": 0.0007,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.0149
-      },
-      "CAT": {
-        "delta": 0.0008,
-        "curr_weight": 0.021,
-        "prev_weight": 0.0202
+      "DBMF": {
+        "delta": 0.004,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0701
       },
       "512807306-TRS-06/22/27-L-HELS": {
         "delta": 0.0019,
         "curr_weight": 0.0232,
         "prev_weight": 0.0213
       },
-      "AMZN": {
-        "delta": 0.0009,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0599
-      },
-      "ADI": {
-        "delta": 0.005,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0171
-      },
-      "MPC": {
-        "delta": -0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0155
-      },
-      "VIK": {
-        "delta": 0.0022,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0204
-      },
-      "IHE": {
-        "delta": 0.005,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0202
-      },
-      "SXT": {
-        "delta": 0.0007,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.022
-      },
-      "KSS": {
-        "delta": -0.0006,
-        "curr_weight": -0.0111,
-        "prev_weight": -0.0105
-      },
-      "CDNS": {
-        "delta": 0.0009,
-        "curr_weight": 0.0153,
-        "prev_weight": 0.0144
-      },
-      "UUP": {
-        "delta": 0.0143,
-        "curr_weight": 0.0697,
-        "prev_weight": 0.0554
-      },
-      "DBB": {
-        "delta": 0.0068,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.023
-      },
-      "MRVL": {
-        "delta": 0.1269,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0177
-      },
-      "WEAT": {
-        "delta": -0.0006,
-        "curr_weight": 0.0143,
-        "prev_weight": 0.0149
-      },
-      "STX": {
-        "delta": 0.0015,
-        "curr_weight": 0.0117,
-        "prev_weight": 0.0102
-      },
-      "HTEC": {
-        "delta": 0.0024,
-        "curr_weight": 0.01,
-        "prev_weight": 0.0076
-      },
-      "19247G107-TRS-06/08/27-L-HELS": {
-        "delta": 0.005,
-        "curr_weight": 0.015,
-        "prev_weight": 0.01
+      "CF": {
+        "delta": -0.001,
+        "curr_weight": 0.0128,
+        "prev_weight": 0.0138
       },
       "NOV": {
         "delta": -0.0009,
         "curr_weight": 0.0187,
         "prev_weight": 0.0196
       },
-      "DBJP": {
-        "delta": 0.0032,
-        "curr_weight": 0.0581,
-        "prev_weight": 0.0549
+      "MAR": {
+        "delta": 0.0007,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0158
       },
-      "GLASF": {
-        "delta": 0.0014,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0154
+      "IDMO": {
+        "delta": 0.0036,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0151
       },
-      "MUSA": {
-        "delta": -0.01,
-        "curr_weight": 0.0101,
-        "prev_weight": 0.0201
-      },
-      "AMD": {
-        "delta": 0.0019,
-        "curr_weight": 0.0223,
+      "VIK": {
+        "delta": 0.0022,
+        "curr_weight": 0.0226,
         "prev_weight": 0.0204
       },
-      "BKNG": {
-        "delta": -0.0007,
-        "curr_weight": -0.0106,
-        "prev_weight": -0.0099
+      "JBHT": {
+        "delta": 0.0006,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0212
       },
-      "VTI": {
-        "delta": 0.0015,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0896
+      "IHE": {
+        "delta": 0.005,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0202
       },
-      "GFS": {
+      "DRAM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0357,
+        "prev_weight": 0.0302
+      },
+      "SNDK": {
+        "delta": 0.0046,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0104
+      },
+      "ATI": {
         "delta": 0.001,
-        "curr_weight": 0.0082,
-        "prev_weight": 0.0072
+        "curr_weight": 0.0116,
+        "prev_weight": 0.0106
+      },
+      "WEAT": {
+        "delta": -0.0006,
+        "curr_weight": 0.0143,
+        "prev_weight": 0.0149
+      },
+      "AAPL": {
+        "delta": 0.0016,
+        "curr_weight": 0.092,
+        "prev_weight": 0.0904
+      },
+      "MKSI": {
+        "delta": 0.0011,
+        "curr_weight": 0.0228,
+        "prev_weight": 0.0217
+      },
+      "CBOE": {
+        "delta": -0.0011,
+        "curr_weight": 0.0214,
+        "prev_weight": 0.0225
+      },
+      "CASY": {
+        "delta": -0.0021,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.0248
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
+      },
+      "PM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0199,
+        "prev_weight": 0.0144
       },
       "OIH": {
         "delta": 0.0079,
@@ -6460,65 +6332,310 @@
         "curr_weight": 0.0329,
         "prev_weight": 0.1118
       },
-      "IDX": {
+      "DDS": {
+        "delta": -0.0007,
+        "curr_weight": -0.0082,
+        "prev_weight": -0.0075
+      },
+      "EWY": {
+        "delta": 0.0012,
+        "curr_weight": 0.0126,
+        "prev_weight": 0.0114
+      },
+      "SPY   260717P00610000": {
+        "delta": -0.0006,
+        "curr_weight": 0.001,
+        "prev_weight": 0.0016
+      },
+      "UUP": {
+        "delta": 0.0143,
+        "curr_weight": 0.0697,
+        "prev_weight": 0.0554
+      },
+      "URI": {
+        "delta": 0.0014,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0248
+      },
+      "82982T106-TRS-06/15/27-L-HELS": {
+        "delta": 0.004,
+        "curr_weight": 0.0176,
+        "prev_weight": 0.0136
+      },
+      "STX": {
+        "delta": 0.0015,
+        "curr_weight": 0.0117,
+        "prev_weight": 0.0102
+      },
+      "MRVL": {
+        "delta": 0.1269,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0177
+      },
+      "TTWO": {
+        "delta": -0.0066,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0224
+      },
+      "ITB": {
+        "delta": -0.0008,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0206
+      },
+      "67066G104-TRS-06/08/27-L-HELS": {
+        "delta": -0.0012,
+        "curr_weight": 0.0208,
+        "prev_weight": 0.022
+      },
+      "GOOGL": {
+        "delta": -0.0009,
+        "curr_weight": 0.0803,
+        "prev_weight": 0.0812
+      },
+      "LCID": {
+        "delta": -0.0009,
+        "curr_weight": -0.0098,
+        "prev_weight": -0.0089
+      },
+      "MPC": {
+        "delta": -0.0007,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0155
+      },
+      "GFS": {
+        "delta": 0.001,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0072
+      },
+      "023135106-TRS-06/15/27-L-HELS": {
+        "delta": 0.0036,
+        "curr_weight": 0.0335,
+        "prev_weight": 0.0299
+      },
+      "FITE": {
+        "delta": 0.0015,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0206
+      },
+      "KLAC": {
         "delta": 0.0005,
-        "curr_weight": -0.0094,
-        "prev_weight": -0.0099
+        "curr_weight": 0.0109,
+        "prev_weight": 0.0104
+      },
+      "GEV": {
+        "delta": 0.0027,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0197
+      },
+      "KSS": {
+        "delta": -0.0006,
+        "curr_weight": -0.0111,
+        "prev_weight": -0.0105
+      },
+      "ADI": {
+        "delta": 0.005,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0171
+      },
+      "VLO": {
+        "delta": -0.0008,
+        "curr_weight": 0.0115,
+        "prev_weight": 0.0123
+      },
+      "DBJP": {
+        "delta": 0.0032,
+        "curr_weight": 0.0581,
+        "prev_weight": 0.0549
       },
       "ROBO": {
         "delta": 0.0009,
         "curr_weight": 0.0158,
         "prev_weight": 0.0149
       },
-      "SNAP": {
-        "delta": 0.0052,
-        "curr_weight": -0.0051,
-        "prev_weight": -0.0103
-      },
-      "ATI": {
-        "delta": 0.001,
-        "curr_weight": 0.0116,
-        "prev_weight": 0.0106
-      },
-      "XAR": {
-        "delta": 0.0009,
+      "CRCL": {
+        "delta": 0.0042,
         "curr_weight": 0.0201,
-        "prev_weight": 0.0192
+        "prev_weight": 0.0159
       },
-      "PM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0199,
-        "prev_weight": 0.0144
+      "CSX": {
+        "delta": 0.0007,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0295
       },
-      "XLE": {
-        "delta": -0.0014,
-        "curr_weight": 0.0295,
-        "prev_weight": 0.0309
+      "CAVA": {
+        "delta": -0.0086,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0127
+      },
+      "WING": {
+        "delta": -0.0019,
+        "curr_weight": -0.012,
+        "prev_weight": -0.0101
+      },
+      "GLASF": {
+        "delta": 0.0014,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0154
+      },
+      "ARTY": {
+        "delta": 0.0033,
+        "curr_weight": 0.047,
+        "prev_weight": 0.0437
+      },
+      "ROKU": {
+        "delta": 0.0184,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0259
+      },
+      "CAT": {
+        "delta": 0.0008,
+        "curr_weight": 0.021,
+        "prev_weight": 0.0202
+      },
+      "SXT": {
+        "delta": 0.0007,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.022
+      },
+      "NVDA": {
+        "delta": -0.0057,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0956
+      },
+      "19247G107-TRS-06/08/27-L-HELS": {
+        "delta": 0.005,
+        "curr_weight": 0.015,
+        "prev_weight": 0.01
       },
       "PICK": {
         "delta": -0.0049,
         "curr_weight": 0.0069,
         "prev_weight": 0.0118
       },
-      "JBHT": {
-        "delta": 0.0006,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0212
+      "WDC": {
+        "delta": 0.0027,
+        "curr_weight": 0.0203,
+        "prev_weight": 0.0176
+      },
+      "JETS": {
+        "delta": -0.0011,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0099
+      },
+      "AMAT": {
+        "delta": 0.0013,
+        "curr_weight": 0.0273,
+        "prev_weight": 0.026
+      },
+      "FESM": {
+        "delta": 0.0251,
+        "curr_weight": 0.0655,
+        "prev_weight": 0.0404
+      },
+      "PAVE": {
+        "delta": 0.0007,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.0149
+      },
+      "IHF": {
+        "delta": -0.0212,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0468
+      },
+      "KMI": {
+        "delta": 0.0028,
+        "curr_weight": 0.0127,
+        "prev_weight": 0.0099
+      },
+      "VTI": {
+        "delta": 0.0015,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0896
+      },
+      "XTL": {
+        "delta": 0.0116,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0602
+      },
+      "FWD": {
+        "delta": 0.0018,
+        "curr_weight": 0.0566,
+        "prev_weight": 0.0548
+      },
+      "AFRM": {
+        "delta": 0.0007,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0151
+      },
+      "SMPL": {
+        "delta": -0.0005,
+        "curr_weight": -0.0102,
+        "prev_weight": -0.0097
+      },
+      "BKNG": {
+        "delta": -0.0007,
+        "curr_weight": -0.0106,
+        "prev_weight": -0.0099
+      },
+      "TWLO": {
+        "delta": 0.0044,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0148
+      },
+      "CDNS": {
+        "delta": 0.0009,
+        "curr_weight": 0.0153,
+        "prev_weight": 0.0144
+      },
+      "SLX": {
+        "delta": 0.0188,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0358
+      },
+      "ZROZ": {
+        "delta": -0.0008,
+        "curr_weight": -0.0243,
+        "prev_weight": -0.0235
+      },
+      "CERY": {
+        "delta": -0.004,
+        "curr_weight": 0.1366,
+        "prev_weight": 0.1406
       },
       "HAL": {
         "delta": -0.0015,
         "curr_weight": 0.0184,
         "prev_weight": 0.0199
       },
-      "DBMF": {
-        "delta": 0.004,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0701
+      "XAR": {
+        "delta": 0.0009,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0192
       },
-      "XYZ": {
-        "delta": -0.0098,
-        "curr_weight": 0.0102,
-        "prev_weight": 0.02
+      "UNH": {
+        "delta": 0.0048,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0204
+      },
+      "DBB": {
+        "delta": 0.0068,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.023
+      },
+      "CZR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.015
+      },
+      "AMD": {
+        "delta": 0.0019,
+        "curr_weight": 0.0223,
+        "prev_weight": 0.0204
+      },
+      "SBUX": {
+        "delta": -0.0009,
+        "curr_weight": 0.0189,
+        "prev_weight": 0.0198
       }
     },
     "per_fund_daily_adds": {
@@ -7296,2048 +7413,6 @@
       "HELS": "Individual equities \u2014 SSS ideas, position monitors, call conversation picks",
       "ADDS": "Recent additions across all funds"
     }
-  },
-  "ham_holdings_date": "2026-05-26",
-  "position_sizing": {
-    "as_of_date": "2026-05-27",
-    "threshold_ticker": "HYG",
-    "threshold_rank": 21,
-    "threshold_pct": 3,
-    "threshold_note": "HYG is currently at minimum (3%). Positions ranked above it (rank < 21) are confirmed above 3%. This anchor shifts as the book changes.",
-    "source_pdfs": 31,
-    "positions": [
-      {
-        "rank": 2,
-        "ticker": "BUXX",
-        "asset_class": "Domestic FI",
-        "entry_date": "2023-10-16",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 30,
-        "tier": "min",
-        "above_hyg_threshold": true,
-        "room_to_add": 7,
-        "last_direction": "adding",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 6
-      },
-      {
-        "rank": 3,
-        "ticker": "CLOX",
-        "asset_class": "Fixed Income",
-        "entry_date": "2025-03-06",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 5.0,
-        "commentary_pct": 5.0,
-        "size_source": "commentary",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 5.0,
-        "last_direction": "trimming",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 9
-      },
-      {
-        "rank": 4,
-        "ticker": "CLOZ",
-        "asset_class": "Fixed Income",
-        "entry_date": "2026-04-22",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 5.5,
-        "commentary_pct": 5.5,
-        "size_source": "commentary",
-        "fill_pct": 55,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 4.5,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": 3,
-        "move_count": 5
-      },
-      {
-        "rank": 5,
-        "ticker": "UUP",
-        "asset_class": "Foreign Currency",
-        "entry_date": "2026-05-26",
-        "min_pct": 4,
-        "max_pct": 12,
-        "estimated_pct": 5.0,
-        "commentary_pct": 5.0,
-        "size_source": "commentary",
-        "fill_pct": 42,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 7.0,
-        "last_direction": "adding",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 5
-      },
-      {
-        "rank": 6,
-        "ticker": "VYM",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-12",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 10,
-        "rerank_1m": null,
-        "move_count": 3
-      },
-      {
-        "rank": 7,
-        "ticker": "QTUM",
-        "asset_class": "Global Equity",
-        "entry_date": "2026-05-13",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": null,
-        "move_count": 5
-      },
-      {
-        "rank": 8,
-        "ticker": "NORW",
-        "asset_class": "Intl Equity",
-        "entry_date": "2026-03-03",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 1.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 9,
-        "rerank_1m": 5,
-        "move_count": 8
-      },
-      {
-        "rank": 9,
-        "ticker": "ROBO",
-        "asset_class": "Global Equity",
-        "entry_date": "2026-05-19",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 14,
-        "rerank_1m": null,
-        "move_count": 3
-      },
-      {
-        "rank": 10,
-        "ticker": "DRAM",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-18",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": null,
-        "move_count": 3
-      },
-      {
-        "rank": 11,
-        "ticker": "IWM",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-07",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": -5,
-        "rerank_1m": null,
-        "move_count": 8
-      },
-      {
-        "rank": 12,
-        "ticker": "XTL",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-03-27",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 1.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": -1,
-        "rerank_1m": -2,
-        "move_count": 9
-      },
-      {
-        "rank": 13,
-        "ticker": "EQRR",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-03-31",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 6,
-        "rerank_1m": 1,
-        "move_count": 5
-      },
-      {
-        "rank": 14,
-        "ticker": "VXF",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-13",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 1.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": -6,
-        "rerank_1m": null,
-        "move_count": 4
-      },
-      {
-        "rank": 15,
-        "ticker": "COM",
-        "asset_class": "Commodity",
-        "entry_date": "2026-03-17",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 3,
-        "commentary_pct": 0.0,
-        "size_source": "rank_floor",
-        "fill_pct": 75,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 1,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": null,
-        "move_count": 14
-      },
-      {
-        "rank": 16,
-        "ticker": "TAN",
-        "asset_class": "Global Equity",
-        "entry_date": "2026-05-20",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 1
-      },
-      {
-        "rank": 17,
-        "ticker": "OIH",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-02-05",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 11,
-        "rerank_1m": 0,
-        "move_count": 9
-      },
-      {
-        "rank": 18,
-        "ticker": "AAAU",
-        "asset_class": "Foreign Currency",
-        "entry_date": "2025-02-28",
-        "min_pct": 4,
-        "max_pct": 12,
-        "estimated_pct": 4.0,
-        "commentary_pct": 4.0,
-        "size_source": "commentary",
-        "fill_pct": 33,
-        "tier": "min",
-        "above_hyg_threshold": true,
-        "room_to_add": 8.0,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": -10,
-        "move_count": 5
-      },
-      {
-        "rank": 19,
-        "ticker": "SOYB",
-        "asset_class": "Commodity",
-        "entry_date": "2026-04-17",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 3,
-        "commentary_pct": 1.0,
-        "size_source": "rank_floor",
-        "fill_pct": 75,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 1,
-        "last_direction": "trimming",
-        "rerank_1w": 3,
-        "rerank_1m": -3,
-        "move_count": 7
-      },
-      {
-        "rank": 20,
-        "ticker": "PFIX",
-        "asset_class": "US Fixed Income",
-        "entry_date": "2026-05-22",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 3.5,
-        "commentary_pct": 3.5,
-        "size_source": "commentary",
-        "fill_pct": 35,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 6.5,
-        "last_direction": "adding",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 3
-      },
-      {
-        "rank": 21,
-        "ticker": "HYG",
-        "asset_class": "Domestic FI",
-        "entry_date": "2026-04-21",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 2.5,
-        "commentary_pct": 2.5,
-        "size_source": "commentary",
-        "fill_pct": 25,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 7.5,
-        "last_direction": "trimming",
-        "rerank_1w": -11,
-        "rerank_1m": -17,
-        "move_count": 9
-      },
-      {
-        "rank": 22,
-        "ticker": "EWW",
-        "asset_class": "EM Equity",
-        "entry_date": "2026-04-16",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 1.5,
-        "commentary_pct": 1.5,
-        "size_source": "commentary",
-        "fill_pct": 25,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.5,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": -2,
-        "move_count": 4
-      },
-      {
-        "rank": 23,
-        "ticker": "CNXT",
-        "asset_class": "EM Equity",
-        "entry_date": "2026-04-28",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 2.5,
-        "commentary_pct": 2.5,
-        "size_source": "commentary",
-        "fill_pct": 42,
-        "tier": "mid",
-        "above_hyg_threshold": false,
-        "room_to_add": 3.5,
-        "last_direction": "trimming",
-        "rerank_1w": -10,
-        "rerank_1m": null,
-        "move_count": 8
-      },
-      {
-        "rank": 24,
-        "ticker": "SLX",
-        "asset_class": "Commodity",
-        "entry_date": "2026-05-15",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.5,
-        "commentary_pct": 0.5,
-        "size_source": "commentary",
-        "fill_pct": 12,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3.5,
-        "last_direction": "trimming",
-        "rerank_1w": -6,
-        "rerank_1m": null,
-        "move_count": 2
-      },
-      {
-        "rank": 25,
-        "ticker": "DBB",
-        "asset_class": "Commodity",
-        "entry_date": "2026-05-19",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 1,
-        "commentary_pct": 1,
-        "size_source": "commentary",
-        "fill_pct": 25,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 2,
-        "rerank_1m": null,
-        "move_count": 1
-      },
-      {
-        "rank": 26,
-        "ticker": "XOP",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-02-02",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 2.0,
-        "commentary_pct": 2.0,
-        "size_source": "commentary",
-        "fill_pct": 33,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.0,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": -4,
-        "move_count": 3
-      },
-      {
-        "rank": 27,
-        "ticker": "CPER",
-        "asset_class": "Commodity",
-        "entry_date": "2026-04-24",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.5,
-        "commentary_pct": 0.5,
-        "size_source": "commentary",
-        "fill_pct": 12,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3.5,
-        "last_direction": "trimming",
-        "rerank_1w": -2,
-        "rerank_1m": -4,
-        "move_count": 6
-      },
-      {
-        "rank": 28,
-        "ticker": "TILL",
-        "asset_class": "Commodity",
-        "entry_date": "2026-05-21",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 1,
-        "commentary_pct": 1,
-        "size_source": "commentary",
-        "fill_pct": 25,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 1
-      },
-      {
-        "rank": 29,
-        "ticker": "BNO",
-        "asset_class": "Commodity",
-        "entry_date": "2026-02-13",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.0,
-        "commentary_pct": 0.0,
-        "size_source": "commentary",
-        "fill_pct": 0,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.0,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": -4,
-        "move_count": 3
-      }
-    ]
-  },
-  "etf_pro": {
-    "longs": [
-      {
-        "ticker": "UUP",
-        "name": "US Dollar Bullish",
-        "asset_class": "Foreign Currencies",
-        "call": "Long",
-        "date_added": "2026-05-26",
-        "last_price": 27.75,
-        "abs_perf": -0.05,
-        "rel_perf": -0.61,
-        "days_held": 1
-      },
-      {
-        "ticker": "PFIX",
-        "name": "Interest Rate Hedge",
-        "asset_class": "US Fixed Income",
-        "call": "Long",
-        "date_added": "2026-05-22",
-        "last_price": 48.91,
-        "abs_perf": -2.48,
-        "rel_perf": -3.43,
-        "days_held": 2
-      },
-      {
-        "ticker": "TILL",
-        "name": "Agriculture Futures",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-05-21",
-        "last_price": 18.35,
-        "abs_perf": -1.48,
-        "rel_perf": -2.63,
-        "days_held": 3
-      },
-      {
-        "ticker": "TAN",
-        "name": "Solar Energy",
-        "asset_class": "Global Equities",
-        "call": "Long",
-        "date_added": "2026-05-20",
-        "last_price": 69.04,
-        "abs_perf": 13.23,
-        "rel_perf": 11.04,
-        "days_held": 4
-      },
-      {
-        "ticker": "ROBO",
-        "name": "Robotics Automation",
-        "asset_class": "Global Equities",
-        "call": "Long",
-        "date_added": "2026-05-19",
-        "last_price": 89.87,
-        "abs_perf": 6.68,
-        "rel_perf": 5.18,
-        "days_held": 5
-      },
-      {
-        "ticker": "DBB",
-        "name": "Base Metals",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-05-19",
-        "last_price": 26.02,
-        "abs_perf": 2.18,
-        "rel_perf": 0.67,
-        "days_held": 5
-      },
-      {
-        "ticker": "DRAM",
-        "name": "Computer Memory",
-        "asset_class": "International Equities",
-        "call": "Long",
-        "date_added": "2026-05-18",
-        "last_price": 61.0,
-        "abs_perf": 19.37,
-        "rel_perf": 17.94,
-        "days_held": 6
-      },
-      {
-        "ticker": "SLX",
-        "name": "Steel",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-05-15",
-        "last_price": 109.73,
-        "abs_perf": 0.38,
-        "rel_perf": 0.16,
-        "days_held": 7
-      },
-      {
-        "ticker": "VXF",
-        "name": "US Extended Market",
-        "asset_class": "Domestic Equities",
-        "call": "Long",
-        "date_added": "2026-05-13",
-        "last_price": 234.29,
-        "abs_perf": 3.01,
-        "rel_perf": 1.44,
-        "days_held": 9
-      },
-      {
-        "ticker": "QTUM",
-        "name": "Quantum Tech",
-        "asset_class": "Global Equities",
-        "call": "Long",
-        "date_added": "2026-05-13",
-        "last_price": 158.43,
-        "abs_perf": 10.04,
-        "rel_perf": 8.46,
-        "days_held": 9
-      },
-      {
-        "ticker": "VYM",
-        "name": "Dividend Yield",
-        "asset_class": "Domestic Equities",
-        "call": "Long",
-        "date_added": "2026-05-12",
-        "last_price": 158.64,
-        "abs_perf": 1.82,
-        "rel_perf": 0.4,
-        "days_held": 10
-      },
-      {
-        "ticker": "IWM",
-        "name": "US Small-Cap",
-        "asset_class": "Domestic Equities",
-        "call": "Long",
-        "date_added": "2026-05-07",
-        "last_price": 290.2,
-        "abs_perf": 1.19,
-        "rel_perf": -0.99,
-        "days_held": 13
-      },
-      {
-        "ticker": "CNXT",
-        "name": "VanEck ChiNext ETF",
-        "asset_class": "Global Equities",
-        "call": "Long",
-        "date_added": "2026-04-28",
-        "last_price": 57.09,
-        "abs_perf": 11.46,
-        "rel_perf": 6.62,
-        "days_held": 20
-      },
-      {
-        "ticker": "CPER",
-        "name": "Copper",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-04-24",
-        "last_price": 39.02,
-        "abs_perf": 5.59,
-        "rel_perf": -0.25,
-        "days_held": 22
-      },
-      {
-        "ticker": "CLOZ",
-        "name": "CLOs",
-        "asset_class": "Fixed Income",
-        "call": "Long",
-        "date_added": "2026-04-22",
-        "last_price": 26.48,
-        "abs_perf": 2.28,
-        "rel_perf": -4.21,
-        "days_held": 24
-      },
-      {
-        "ticker": "HYG",
-        "name": "High Yield Bonds",
-        "asset_class": "Domestic Fixed Income",
-        "call": "Long",
-        "date_added": "2026-04-21",
-        "last_price": 80.15,
-        "abs_perf": -0.01,
-        "rel_perf": -5.81,
-        "days_held": 25
-      },
-      {
-        "ticker": "SOYB",
-        "name": "Soybean",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-04-17",
-        "last_price": 24.91,
-        "abs_perf": 1.96,
-        "rel_perf": -4.89,
-        "days_held": 27
-      },
-      {
-        "ticker": "EWW",
-        "name": "Mexico",
-        "asset_class": "International Equities",
-        "call": "Long",
-        "date_added": "2026-04-16",
-        "last_price": 78.85,
-        "abs_perf": -0.73,
-        "rel_perf": -7.85,
-        "days_held": 28
-      },
-      {
-        "ticker": "EQRR",
-        "name": "Rising Rates Equities",
-        "asset_class": "Domestic Equities",
-        "call": "Long",
-        "date_added": "2026-03-31",
-        "last_price": 79.61,
-        "abs_perf": 16.22,
-        "rel_perf": -2.42,
-        "days_held": 39
-      },
-      {
-        "ticker": "XTL",
-        "name": "Telecom",
-        "asset_class": "Domestic Equities",
-        "call": "Long",
-        "date_added": "2026-03-27",
-        "last_price": 240.09,
-        "abs_perf": 26.58,
-        "rel_perf": 10.35,
-        "days_held": 41
-      },
-      {
-        "ticker": "COM",
-        "name": "Broad Commodity",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-03-17",
-        "last_price": 34.23,
-        "abs_perf": 2.77,
-        "rel_perf": -9.61,
-        "days_held": 49
-      },
-      {
-        "ticker": "NORW",
-        "name": "Norway",
-        "asset_class": "International Equities",
-        "call": "Long",
-        "date_added": "2026-03-03",
-        "last_price": 38.85,
-        "abs_perf": 7.59,
-        "rel_perf": -1.95,
-        "days_held": 59
-      },
-      {
-        "ticker": "BNO",
-        "name": "Brent Oil",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-02-13",
-        "last_price": 53.21,
-        "abs_perf": 66.91,
-        "rel_perf": 56.55,
-        "days_held": 70
-      },
-      {
-        "ticker": "OIH",
-        "name": "Oil Services",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-02-05",
-        "last_price": 444.78,
-        "abs_perf": 22.69,
-        "rel_perf": 13.12,
-        "days_held": 76
-      },
-      {
-        "ticker": "XOP",
-        "name": "Oil & Gas Equity",
-        "asset_class": "Commodities",
-        "call": "Long",
-        "date_added": "2026-02-02",
-        "last_price": 166.94,
-        "abs_perf": 19.52,
-        "rel_perf": 10.87,
-        "days_held": 79
-      },
-      {
-        "ticker": "CLOX",
-        "name": "AAA CLO",
-        "asset_class": "Fixed Income",
-        "call": "Long",
-        "date_added": "2025-03-07",
-        "last_price": 25.61,
-        "abs_perf": 6.22,
-        "rel_perf": -26.6,
-        "days_held": 306
-      },
-      {
-        "ticker": "AAAU",
-        "name": "Physical Gold",
-        "asset_class": "Foreign Currency",
-        "call": "Long",
-        "date_added": "2025-02-28",
-        "last_price": 44.4,
-        "abs_perf": 56.27,
-        "rel_perf": 26.25,
-        "days_held": 311
-      },
-      {
-        "ticker": "BUXX",
-        "name": "Income Short Maturity",
-        "asset_class": "Domestic Fixed Income",
-        "call": "Long",
-        "date_added": "2023-10-25",
-        "last_price": 20.27,
-        "abs_perf": 14.7,
-        "rel_perf": -67.9,
-        "days_held": 648
-      }
-    ],
-    "shorts": [
-      {
-        "ticker": "PSCD",
-        "name": "Consumer Discretionary",
-        "asset_class": "Domestic Equities",
-        "call": "Short",
-        "date_added": "2026-05-22",
-        "last_price": 106.75,
-        "abs_perf": -2.09,
-        "rel_perf": -1.14,
-        "days_held": 2
-      },
-      {
-        "ticker": "INQQ",
-        "name": "India Internet",
-        "asset_class": "Emerging Markets Equities",
-        "call": "Short",
-        "date_added": "2026-05-22",
-        "last_price": 12.21,
-        "abs_perf": -0.41,
-        "rel_perf": 0.54,
-        "days_held": 2
-      },
-      {
-        "ticker": "EWZ",
-        "name": "Brazil",
-        "asset_class": "Emerging Markets Equities",
-        "call": "Short",
-        "date_added": "2026-05-21",
-        "last_price": 36.33,
-        "abs_perf": 1.14,
-        "rel_perf": 2.29,
-        "days_held": 3
-      },
-      {
-        "ticker": "XRT",
-        "name": "Retail",
-        "asset_class": "Domestic Equities",
-        "call": "Short",
-        "date_added": "2026-05-21",
-        "last_price": 82.85,
-        "abs_perf": -2.33,
-        "rel_perf": -1.18,
-        "days_held": 3
-      },
-      {
-        "ticker": "IHI",
-        "name": "Medical Devices",
-        "asset_class": "Domestic Equities",
-        "call": "Short",
-        "date_added": "2026-05-18",
-        "last_price": 50.48,
-        "abs_perf": -4.16,
-        "rel_perf": -2.72,
-        "days_held": 6
-      },
-      {
-        "ticker": "BTAL",
-        "name": "US Market Neutral",
-        "asset_class": "Domestic Equities",
-        "call": "Short",
-        "date_added": "2026-05-18",
-        "last_price": 11.88,
-        "abs_perf": 2.38,
-        "rel_perf": 3.82,
-        "days_held": 6
-      },
-      {
-        "ticker": "EWQ",
-        "name": "France",
-        "asset_class": "International Equities",
-        "call": "Short",
-        "date_added": "2026-05-18",
-        "last_price": 45.88,
-        "abs_perf": -3.91,
-        "rel_perf": -2.47,
-        "days_held": 6
-      },
-      {
-        "ticker": "COLO",
-        "name": "Colombia",
-        "asset_class": "Emerging Markets Equities",
-        "call": "Short",
-        "date_added": "2026-05-15",
-        "last_price": 39.3,
-        "abs_perf": -6.81,
-        "rel_perf": -6.59,
-        "days_held": 7
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities Sector",
-        "asset_class": "Domestic Equities",
-        "call": "Short",
-        "date_added": "2026-05-11",
-        "last_price": 45.51,
-        "abs_perf": -1.77,
-        "rel_perf": -0.12,
-        "days_held": 11
-      },
-      {
-        "ticker": "IDX",
-        "name": "Indonesia",
-        "asset_class": "Emerging Markets Equities",
-        "call": "Short",
-        "date_added": "2026-05-07",
-        "last_price": 10.7,
-        "abs_perf": 19.55,
-        "rel_perf": 21.72,
-        "days_held": 13
-      },
-      {
-        "ticker": "ITB",
-        "name": "Home Construction",
-        "asset_class": "Domestic Equities",
-        "call": "Short",
-        "date_added": "2026-05-06",
-        "last_price": 92.0,
-        "abs_perf": 0.87,
-        "rel_perf": 4.47,
-        "days_held": 14
-      },
-      {
-        "ticker": "EPHE",
-        "name": "Philippines",
-        "asset_class": "Emerging Markets Equities",
-        "call": "Short",
-        "date_added": "2026-05-04",
-        "last_price": 24.54,
-        "abs_perf": -0.95,
-        "rel_perf": 3.1,
-        "days_held": 16
-      },
-      {
-        "ticker": "PALL",
-        "name": "Palladium",
-        "asset_class": "Commodities",
-        "call": "Short",
-        "date_added": "2026-05-01",
-        "last_price": 25.07,
-        "abs_perf": 9.54,
-        "rel_perf": 13.87,
-        "days_held": 17
-      },
-      {
-        "ticker": "INDA",
-        "name": "India",
-        "asset_class": "Emerging Markets Equities",
-        "call": "Short",
-        "date_added": "2026-04-28",
-        "last_price": 48.56,
-        "abs_perf": 1.65,
-        "rel_perf": 6.49,
-        "days_held": 20
-      },
-      {
-        "ticker": "ZROZ",
-        "name": "US Treasury Long",
-        "asset_class": "Domestic Fixed Income",
-        "call": "Short",
-        "date_added": "2026-04-17",
-        "last_price": 61.87,
-        "abs_perf": 1.48,
-        "rel_perf": 8.34,
-        "days_held": 27
-      },
-      {
-        "ticker": "TLT",
-        "name": "Long Treasury Bond",
-        "asset_class": "Domestic Fixed Income",
-        "call": "Short",
-        "date_added": "2026-04-02",
-        "last_price": 85.05,
-        "abs_perf": 1.04,
-        "rel_perf": 15.47,
-        "days_held": 37
-      }
-    ],
-    "as_of": "2026-05-26",
-    "total_longs": 28,
-    "total_shorts": 16
-  },
-  "key_levels": {
-    "date": "2026-05-27",
-    "source": "Early Look 5/27",
-    "levels": [
-      {
-        "ticker": "UST10Y",
-        "name": "10yr Treasury Yield",
-        "lrr": 4.44,
-        "trr": 4.69,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "HYG",
-        "name": "High Yield Bonds",
-        "lrr": 79.57,
-        "trr": 80.31,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "LQD",
-        "name": "Investment Grade Bonds",
-        "lrr": 107.1,
-        "trr": 109.2,
-        "signal": "bearish"
-      },
-      {
-        "ticker": "SPX",
-        "name": "S&P 500",
-        "lrr": 7354,
-        "trr": 7549,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "NDX",
-        "name": "NASDAQ",
-        "lrr": 25903,
-        "trr": 26804,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "RUT",
-        "name": "Russell 2000",
-        "lrr": 2835,
-        "trr": 2940,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "XLK",
-        "name": "Tech Sector",
-        "lrr": 175,
-        "trr": 187,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "XOP",
-        "name": "Oil & Gas Stocks",
-        "lrr": 163,
-        "trr": 179,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "XTL",
-        "name": "Telecom",
-        "lrr": 226,
-        "trr": 243,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities",
-        "lrr": 43.73,
-        "trr": 45.75,
-        "signal": "bearish"
-      },
-      {
-        "ticker": "VIX",
-        "name": "VIX",
-        "lrr": 16.32,
-        "trr": 18.37,
-        "signal": "bearish"
-      },
-      {
-        "ticker": "UUP",
-        "name": "USD",
-        "lrr": 98.8,
-        "trr": 99.49,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "WTI",
-        "name": "Oil (WTI)",
-        "lrr": 87.82,
-        "trr": 98.98,
-        "signal": "neutral"
-      },
-      {
-        "ticker": "NATGAS",
-        "name": "Natural Gas",
-        "lrr": 2.82,
-        "trr": 3.11,
-        "signal": "bearish"
-      },
-      {
-        "ticker": "GLD",
-        "name": "Gold",
-        "lrr": 4436,
-        "trr": 4618,
-        "signal": "neutral"
-      },
-      {
-        "ticker": "COPPER",
-        "name": "Copper",
-        "lrr": 6.1,
-        "trr": 6.55,
-        "signal": "bullish"
-      },
-      {
-        "ticker": "SLV",
-        "name": "Silver",
-        "lrr": 70,
-        "trr": 78,
-        "signal": "bearish"
-      }
-    ]
-  },
-  "last_updated": "2026-05-28",
-  "usd_correlations": {
-    "date": "2026-05-28",
-    "note": "*Days = Trading Days | 52-Wk Rolling 30D Correlation",
-    "data": [
-      {
-        "metric": "SPX",
-        "15d": 0.34,
-        "30d": 0.48,
-        "90d": -0.25,
-        "120d": -0.23,
-        "180d": -0.25,
-        "high": 0.48,
-        "low": -0.91,
-        "pct_pos": 28,
-        "pct_neg": 72
-      },
-      {
-        "metric": "BRENT Oil",
-        "15d": 0.0,
-        "30d": 0.17,
-        "90d": 0.77,
-        "120d": 0.56,
-        "180d": 0.25,
-        "high": 0.95,
-        "low": -0.75,
-        "pct_pos": 76,
-        "pct_neg": 24
-      },
-      {
-        "metric": "CRB Index",
-        "15d": 0.0,
-        "30d": 0.0,
-        "90d": 0.68,
-        "120d": 0.56,
-        "180d": 0.05,
-        "high": 0.89,
-        "low": -0.87,
-        "pct_pos": 28,
-        "pct_neg": 72
-      },
-      {
-        "metric": "GOLD",
-        "15d": -0.89,
-        "30d": -0.76,
-        "90d": -0.52,
-        "120d": -0.38,
-        "180d": -0.33,
-        "high": 0.74,
-        "low": -0.9,
-        "pct_pos": 24,
-        "pct_neg": 76
-      },
-      {
-        "metric": "Bitcoin",
-        "15d": -0.76,
-        "30d": -0.51,
-        "90d": -0.28,
-        "120d": -0.12,
-        "180d": 0.04,
-        "high": 0.75,
-        "low": -0.89,
-        "pct_pos": 49,
-        "pct_neg": 51
-      }
-    ]
-  },
-  "ivol_table": {
-    "date": "2026-05-28",
-    "note": "TIME WINDOW: VOLATILITY_30D | IVOL/RVOL ratios as percentiles",
-    "us_equities": [
-      {
-        "ticker": "SPY",
-        "name": "S&P 500 ETF",
-        "ytd": 10.05,
-        "ivol_prem": 68,
-        "ivol_rvol_yest": 74,
-        "ivol_rvol_1w": 53,
-        "ivol_rvol_1m": 22,
-        "z_ttm": 0.2,
-        "z_3yr": 0.8,
-        "rvol_mm": -42,
-        "rvol_10yr": 30,
-        "ivol_mm": -20,
-        "ivol_10yr": 43
-      },
-      {
-        "ticker": "QQQ",
-        "name": "Nasdaq 100 ETF",
-        "ytd": 18.74,
-        "ivol_prem": 47,
-        "ivol_rvol_yest": 52,
-        "ivol_rvol_1w": 40,
-        "ivol_rvol_1m": 27,
-        "z_ttm": 0.0,
-        "z_3yr": 0.7,
-        "rvol_mm": null,
-        "rvol_10yr": 42,
-        "ivol_mm": -20,
-        "ivol_10yr": 62
-      },
-      {
-        "ticker": "IWM",
-        "name": "Russell 2000 ETF",
-        "ytd": 17.96,
-        "ivol_prem": 28,
-        "ivol_rvol_yest": 33,
-        "ivol_rvol_1w": 27,
-        "ivol_rvol_1m": 23,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLC",
-        "name": "Comm Services SPDR",
-        "ytd": -1.24,
-        "ivol_prem": -3,
-        "ivol_rvol_yest": 216,
-        "ivol_rvol_1w": 88,
-        "ivol_rvol_1m": 34,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": -2,
-        "rvol_10yr": 12,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLE",
-        "name": "Energy Sector SPDR",
-        "ytd": 27.47,
-        "ivol_prem": null,
-        "ivol_rvol_yest": null,
-        "ivol_rvol_1w": null,
-        "ivol_rvol_1m": null,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLF",
-        "name": "Financials SPDR",
-        "ytd": -6.12,
-        "ivol_prem": 69,
-        "ivol_rvol_yest": 87,
-        "ivol_rvol_1w": 40,
-        "ivol_rvol_1m": 28,
-        "z_ttm": 2.0,
-        "z_3yr": 1.1,
-        "rvol_mm": -33,
-        "rvol_10yr": 7,
-        "ivol_mm": -12,
-        "ivol_10yr": 30
-      },
-      {
-        "ticker": "XLI",
-        "name": "Industrials SPDR",
-        "ytd": 12.36,
-        "ivol_prem": 24,
-        "ivol_rvol_yest": 44,
-        "ivol_rvol_1w": 26,
-        "ivol_rvol_1m": 5,
-        "z_ttm": -1.1,
-        "z_3yr": -0.6,
-        "rvol_mm": null,
-        "rvol_10yr": 63,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLK",
-        "name": "Tech Sector SPDR",
-        "ytd": 28.1,
-        "ivol_prem": 41,
-        "ivol_rvol_yest": 46,
-        "ivol_rvol_1w": 21,
-        "ivol_rvol_1m": 21,
-        "z_ttm": 0.1,
-        "z_3yr": 0.3,
-        "rvol_mm": -15,
-        "rvol_10yr": 62,
-        "ivol_mm": -1,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLP",
-        "name": "Consumer Staples SPDR",
-        "ytd": 8.88,
-        "ivol_prem": 36,
-        "ivol_rvol_yest": 30,
-        "ivol_rvol_1w": 25,
-        "ivol_rvol_1m": 108,
-        "z_ttm": -0.4,
-        "z_3yr": -0.3,
-        "rvol_mm": -12,
-        "rvol_10yr": 69,
-        "ivol_mm": -43,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLU",
-        "name": "Utilities SPDR",
-        "ytd": 10.61,
-        "ivol_prem": null,
-        "ivol_rvol_yest": 8,
-        "ivol_rvol_1w": -3,
-        "ivol_rvol_1m": 23,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLV",
-        "name": "Health Care SPDR",
-        "ytd": -3.88,
-        "ivol_prem": 39,
-        "ivol_rvol_yest": 63,
-        "ivol_rvol_1w": 23,
-        "ivol_rvol_1m": 23,
-        "z_ttm": 0.2,
-        "z_3yr": 0.1,
-        "rvol_mm": -6,
-        "rvol_10yr": 63,
-        "ivol_mm": 2,
-        "ivol_10yr": 74
-      },
-      {
-        "ticker": "XLY",
-        "name": "Consumer Disc SPDR",
-        "ytd": 1.79,
-        "ivol_prem": 34,
-        "ivol_rvol_yest": 68,
-        "ivol_rvol_1w": 49,
-        "ivol_rvol_1m": 27,
-        "z_ttm": 0.4,
-        "z_3yr": 0.9,
-        "rvol_mm": null,
-        "rvol_10yr": 57,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "XLRE",
-        "name": "Real Estate SPDR",
-        "ytd": -1.56,
-        "ivol_prem": 41,
-        "ivol_rvol_yest": 50,
-        "ivol_rvol_1w": 48,
-        "ivol_rvol_1m": 27,
-        "z_ttm": -0.2,
-        "z_3yr": 0.3,
-        "rvol_mm": null,
-        "rvol_10yr": 57,
-        "ivol_mm": null,
-        "ivol_10yr": 97
-      }
-    ],
-    "intl_equities": [
-      {
-        "ticker": "EEM",
-        "name": "Emerging Markets ETF",
-        "ytd": 25.0,
-        "ivol_prem": 16,
-        "ivol_rvol_yest": 18,
-        "ivol_rvol_1w": 2,
-        "ivol_rvol_1m": -8,
-        "z_ttm": -0.5,
-        "z_3yr": -0.1,
-        "rvol_mm": -11,
-        "rvol_10yr": 89,
-        "ivol_mm": 11,
-        "ivol_10yr": 95
-      },
-      {
-        "ticker": "FEZ",
-        "name": "Euro Stoxx 50 Index",
-        "ytd": 4.82,
-        "ivol_prem": 5,
-        "ivol_rvol_yest": 7,
-        "ivol_rvol_1w": 22,
-        "ivol_rvol_1m": 1,
-        "z_ttm": -1.2,
-        "z_3yr": -1.4,
-        "rvol_mm": null,
-        "rvol_10yr": 8,
-        "ivol_mm": -13,
-        "ivol_10yr": 59
-      },
-      {
-        "ticker": "FXI",
-        "name": "iShares China Large-Cap",
-        "ytd": 24.23,
-        "ivol_prem": 3,
-        "ivol_rvol_yest": -13,
-        "ivol_rvol_1w": 57,
-        "ivol_rvol_1m": -1,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": 48,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "EWJ",
-        "name": "iShares MSCI Japan ETF",
-        "ytd": 14.31,
-        "ivol_prem": -99,
-        "ivol_rvol_yest": 28,
-        "ivol_rvol_1w": -99,
-        "ivol_rvol_1m": -7,
-        "z_ttm": -3.2,
-        "z_3yr": -3.6,
-        "rvol_mm": -35,
-        "rvol_10yr": 69,
-        "ivol_mm": -99,
-        "ivol_10yr": null
-      }
-    ],
-    "currencies": [
-      {
-        "ticker": "UUP",
-        "name": "US Dollar Index",
-        "ytd": 2.66,
-        "ivol_prem": 74,
-        "ivol_rvol_yest": 74,
-        "ivol_rvol_1w": 25,
-        "ivol_rvol_1m": null,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "FXE",
-        "name": "Euro Trust ETF",
-        "ytd": -1.06,
-        "ivol_prem": 38,
-        "ivol_rvol_yest": 59,
-        "ivol_rvol_1w": 33,
-        "ivol_rvol_1m": 14,
-        "z_ttm": -0.1,
-        "z_3yr": -0.1,
-        "rvol_mm": -38,
-        "rvol_10yr": 2,
-        "ivol_mm": -25,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "FXB",
-        "name": "British Pound ETF",
-        "ytd": -0.45,
-        "ivol_prem": 17,
-        "ivol_rvol_yest": 32,
-        "ivol_rvol_1w": 10,
-        "ivol_rvol_1m": null,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "FXY",
-        "name": "Japanese Yen ETF",
-        "ytd": -1.93,
-        "ivol_prem": 8,
-        "ivol_rvol_yest": 8,
-        "ivol_rvol_1w": null,
-        "ivol_rvol_1m": null,
-        "z_ttm": 0.4,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      }
-    ],
-    "commodities": [
-      {
-        "ticker": "GLD",
-        "name": "Gold ETF",
-        "ytd": 3.07,
-        "ivol_prem": 9,
-        "ivol_rvol_yest": 4,
-        "ivol_rvol_1w": 12,
-        "ivol_rvol_1m": -24,
-        "z_ttm": 0.3,
-        "z_3yr": 0.2,
-        "rvol_mm": -38,
-        "rvol_10yr": 90,
-        "ivol_mm": -11,
-        "ivol_10yr": 63
-      },
-      {
-        "ticker": "USO",
-        "name": "US Oil Fund ETF",
-        "ytd": 89.46,
-        "ivol_prem": -5,
-        "ivol_rvol_yest": 4,
-        "ivol_rvol_1w": 6,
-        "ivol_rvol_1m": -8,
-        "z_ttm": -1.0,
-        "z_3yr": -1.8,
-        "rvol_mm": -20,
-        "rvol_10yr": 11,
-        "ivol_mm": -17,
-        "ivol_10yr": 20
-      },
-      {
-        "ticker": "UNG",
-        "name": "Natural Gas Fund",
-        "ytd": 8.81,
-        "ivol_prem": -13,
-        "ivol_rvol_yest": -25,
-        "ivol_rvol_1w": 19,
-        "ivol_rvol_1m": null,
-        "z_ttm": 2.0,
-        "z_3yr": 0.2,
-        "rvol_mm": null,
-        "rvol_10yr": 100,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "CORN",
-        "name": "Teucrium Corn ETF",
-        "ytd": 1.52,
-        "ivol_prem": -9,
-        "ivol_rvol_yest": -2,
-        "ivol_rvol_1w": 10,
-        "ivol_rvol_1m": 54,
-        "z_ttm": -1.8,
-        "z_3yr": -1.7,
-        "rvol_mm": 70,
-        "rvol_10yr": 100,
-        "ivol_mm": 1,
-        "ivol_10yr": 70
-      },
-      {
-        "ticker": "NGAS",
-        "name": "Natural Gas Fund (UNG)",
-        "ytd": 14.0,
-        "ivol_prem": -18,
-        "ivol_rvol_yest": -13,
-        "ivol_rvol_1w": 25,
-        "ivol_rvol_1m": 61,
-        "z_ttm": 2.1,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": 100,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      }
-    ],
-    "fixed_income": [
-      {
-        "ticker": "TLT",
-        "name": "20+ yr Treasury ETF",
-        "ytd": -2.13,
-        "ivol_prem": 19,
-        "ivol_rvol_yest": 24,
-        "ivol_rvol_1w": 57,
-        "ivol_rvol_1m": 20,
-        "z_ttm": -0.6,
-        "z_3yr": 0.3,
-        "rvol_mm": -11,
-        "rvol_10yr": 17,
-        "ivol_mm": -11,
-        "ivol_10yr": 38
-      },
-      {
-        "ticker": "IEF",
-        "name": "7-10 yr Treasury ETF",
-        "ytd": -1.91,
-        "ivol_prem": 13,
-        "ivol_rvol_yest": 21,
-        "ivol_rvol_1w": 39,
-        "ivol_rvol_1m": 6,
-        "z_ttm": -0.7,
-        "z_3yr": 0.6,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "LQD",
-        "name": "IG Corporate Bond ETF",
-        "ytd": -1.14,
-        "ivol_prem": 34,
-        "ivol_rvol_yest": 34,
-        "ivol_rvol_1w": 48,
-        "ivol_rvol_1m": 10,
-        "z_ttm": -0.7,
-        "z_3yr": -0.5,
-        "rvol_mm": -21,
-        "rvol_10yr": 50,
-        "ivol_mm": -4,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "JNK",
-        "name": "HY Corporate Bond ETF",
-        "ytd": -0.62,
-        "ivol_prem": 100,
-        "ivol_rvol_yest": 112,
-        "ivol_rvol_1w": 73,
-        "ivol_rvol_1m": 14,
-        "z_ttm": -0.8,
-        "z_3yr": -0.5,
-        "rvol_mm": -20,
-        "rvol_10yr": null,
-        "ivol_mm": -33,
-        "ivol_10yr": null
-      }
-    ],
-    "mega_cap": [
-      {
-        "ticker": "AAPL",
-        "name": "Apple",
-        "ytd": 14.34,
-        "ivol_prem": 15,
-        "ivol_rvol_yest": 16,
-        "ivol_rvol_1w": 17,
-        "ivol_rvol_1m": 34,
-        "z_ttm": 5.5,
-        "z_3yr": 0.2,
-        "rvol_mm": -5,
-        "rvol_10yr": 43,
-        "ivol_mm": -19,
-        "ivol_10yr": 37
-      },
-      {
-        "ticker": "AMZN",
-        "name": "Amazon",
-        "ytd": 17.78,
-        "ivol_prem": 59,
-        "ivol_rvol_yest": 68,
-        "ivol_rvol_1w": 17,
-        "ivol_rvol_1m": 22,
-        "z_ttm": 1.5,
-        "z_3yr": 1.3,
-        "rvol_mm": -36,
-        "rvol_10yr": 28,
-        "ivol_mm": -17,
-        "ivol_10yr": 62
-      },
-      {
-        "ticker": "GOOGL",
-        "name": "Alphabet",
-        "ytd": 24.23,
-        "ivol_prem": 8,
-        "ivol_rvol_yest": 15,
-        "ivol_rvol_1w": 56,
-        "ivol_rvol_1m": 5,
-        "z_ttm": -0.2,
-        "z_3yr": -0.7,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "META",
-        "name": "Facebook",
-        "ytd": -3.76,
-        "ivol_prem": 8,
-        "ivol_rvol_yest": -6,
-        "ivol_rvol_1w": -18,
-        "ivol_rvol_1m": -1,
-        "z_ttm": -0.2,
-        "z_3yr": -0.4,
-        "rvol_mm": -25,
-        "rvol_10yr": 59,
-        "ivol_mm": -18,
-        "ivol_10yr": 64
-      },
-      {
-        "ticker": "MSFT",
-        "name": "Microsoft",
-        "ytd": -14.62,
-        "ivol_prem": null,
-        "ivol_rvol_yest": null,
-        "ivol_rvol_1w": null,
-        "ivol_rvol_1m": null,
-        "z_ttm": null,
-        "z_3yr": null,
-        "rvol_mm": null,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "NVDA",
-        "name": "Nvidia",
-        "ytd": 13.99,
-        "ivol_prem": 7,
-        "ivol_rvol_yest": 23,
-        "ivol_rvol_1w": 23,
-        "ivol_rvol_1m": 34,
-        "z_ttm": 0.4,
-        "z_3yr": 0.2,
-        "rvol_mm": 42,
-        "rvol_10yr": 43,
-        "ivol_mm": 35,
-        "ivol_10yr": null
-      },
-      {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "ytd": -2.08,
-        "ivol_prem": 13,
-        "ivol_rvol_yest": 10,
-        "ivol_rvol_1w": 8,
-        "ivol_rvol_1m": -5,
-        "z_ttm": 0.4,
-        "z_3yr": null,
-        "rvol_mm": -6,
-        "rvol_10yr": null,
-        "ivol_mm": null,
-        "ivol_10yr": null
-      }
-    ],
-    "key_signals": {
-      "spx_ivol_rvol_ratio": 74,
-      "xle_ivol_discount": true,
-      "xlf_z_score_elevated": true,
-      "nvda_rvol_rising": true,
-      "aapl_z_ttm_extreme": true,
-      "summary": "Vol broadly compressing. AAPL TTM Z=5.5 (extreme outlier). XLF Z=2.0 elevated. NVDA RVOL rising (+42% MoM). OVX -23% MoM = oil vol collapsing. JNK IVOL Prem=100% = credit vol rich."
-    }
-  },
-  "macro_state": {
-    "quarterly_quad": 3,
-    "monthly_quad": 2,
-    "quarterly_label": "Stagflation",
-    "monthly_label": "Reflation",
-    "as_of": "2026-05-28"
-  },
-  "macro_research": {
-    "source": "2Q26 Mid-Quarter Update + Quads/GIP Update (Apr 21 + May 7, 2026); Q2 Mid-Quarter Replay (May 8, 2026); RoC Report: Stag On A Lag (Apr 14, 2026); Industrial Activity: Flowers, Togas & Old Guys (Apr 16, 2026); Monthly Inflation Nowcast (May 22, 2026); Macro Show KM EV (May 27, 2026)",
-    "quad_sequence": {
-      "label": "USA: Quad Count 2-2-2-3: THEN >>",
-      "monthly_progression": {
-        "Apr_2026": 2,
-        "May_2026": 1,
-        "Jun_2026": 1,
-        "Jul_2026": 3,
-        "Aug_2026": 3,
-        "Sep_Oct_Nov_Dec_2026": "Q1/Q2 favorable"
-      },
-      "quarterly": {
-        "Q2_2026": 3,
-        "Q3_2026": 3,
-        "Q4_2026": 4
-      },
-      "global": {
-        "G20": "Q3/Q3/Q4",
-        "China": "Q2/Q1/Q1 \u2014 favorable",
-        "Germany": "Q3/Q3/Q4 \u2014 stagflation",
-        "EM": "Q3 dominant \u2014 stagflation"
-      },
-      "key_risk": "July 2026 = Monthly Quad 3 phase transition. Storage drawdown critical by late July."
-    },
-    "themes": [
-      {
-        "title": "Flation Now, Stag-On-A-Lag",
-        "thesis": "Inflation accelerating now (Hedgeye CPI Q2=3.58%, Q3=3.63%, Q4=3.95% \u2014 well above consensus). Politics prevent the textbook rate-hike cure. Result: Long Gold (dollar debasement hedge), Short Treasuries (inflation going to higher highs).",
-        "trades": [
-          "Long GLD",
-          "Short TLT/LQD",
-          "Long SOYB/CORN/commodities"
-        ]
-      },
-      {
-        "title": "Hormuz Crisis \u2014 Energy Cascade",
-        "thesis": "Net supply gap 8-10M bbl/d. Cumulative loss >800M bbl. Critical storage drawdown timeline = late July. US relatively insulated (net energy exporter, domestic nat gas prices down -9% since war start). Japan, India, Philippines caught in FX-inflation trap.",
-        "trades": [
-          "Long XLE/OIH/energy",
-          "Short JPY exposure",
-          "Long EM energy importers short"
-        ]
-      },
-      {
-        "title": "USA's Diverging Profit Cycles",
-        "thesis": "Q2 small-cap earnings accelerators: Energy, Comms, Consumer Discretionary, Staples, Healthcare, Industrials, Tech. Q2 decelerators: Financials, Real Estate, Materials. Q3 most sectors decelerate \u2014 only Staples, Consumer Disc, Fins accelerate.",
-        "trades": [
-          "Overweight Q2 accelerators",
-          "Underweight Fins/Real Estate/Materials"
-        ]
-      },
-      {
-        "title": "Greedflation Party Over",
-        "thesis": "Stage 4 PPI input costs accelerating to 3Y+ highs. Margin pass-through worked until March, now reversing. Labor: Employment growth converging to zero. Real disposable income <1% \u2014 no consumer cushion to absorb inflation. Wage growth decelerating.",
-        "trades": [
-          "Short margin-thin retailers/restaurants",
-          "Watch consumer spending RoC carefully"
-        ]
-      },
-      {
-        "title": "Consumer Pain at $100 Oil",
-        "thesis": "Gasoline spending hits 4.2% of total spending at ~$100 oil \u2014 slowdown zone. Hits lowest income quintiles hardest (10%+ of spending). Energy commodity surge in late April pushed May CPI deeper into acceleration territory.",
-        "trades": [
-          "Watch WTI $100 as consumer pain threshold",
-          "Underweight consumer discretionary if oil sustains >$100"
-        ]
-      },
-      {
-        "title": "Fed Chair Warsh / Rate Path",
-        "thesis": "Warsh's trimmed mean PCE framework makes underlying inflation look closer to target \u2014 potentially opening door to front-end cuts even as Core PCE sticky. FOMC: 99% no change April 29 and June 17. July 29: 92% no change / 8% quarter-point cut. Warsh confirmation: likely before end of June.",
-        "trades": [
-          "PFIX (short duration hedge)",
-          "Watch June 10 May CPI for July FOMC setup"
-        ]
-      }
-    ],
-    "cpi_estimates": {
-      "Q2_2026": 3.58,
-      "Q3_2026": 3.63,
-      "Q4_2026": 3.95,
-      "vs_consensus": "+17bps Q2, +51bps Q3, +85bps Q4",
-      "april_nowcast": 3.62,
-      "march_actual": 3.26,
-      "may_nowcast_5_22": 4.27,
-      "may_nowcast_acceleration_bps": 46,
-      "may_nowcast_date": "2026-05-22",
-      "may_cpi_release": "2026-06-10",
-      "nowcast_note": "Iran War energy disruptions overwhelming disinflationary trends in shelter + core services. Energy commodities driving acceleration. Hedgeye directional accuracy 90% on 2nd derivative."
-    },
-    "fomc_calendar": [
-      {
-        "date": "2026-04-29",
-        "odds_hold": 0.99
-      },
-      {
-        "date": "2026-06-17",
-        "odds_hold": 0.99
-      },
-      {
-        "date": "2026-07-29",
-        "odds_hold": 0.92,
-        "odds_cut_25bps": 0.08
-      }
-    ],
-    "key_dates": {
-      "may_cpi": "2026-06-10",
-      "storage_drawdown_critical": "Late July 2026",
-      "warsh_confirmation": "Before end of June 2026 (likely)"
-    },
-    "earnings_outlook_2q26": {
-      "source": "Q2 2026 Mid-Quarter Replay (5/8/26)",
-      "sp500": {
-        "Q2_growth_est": "+20% Y/Y (up from +13% Q1)",
-        "Q2_ex_mag7": "+20% Y/Y (up from +12% Q1)",
-        "NTM_path": "RoC better Q2, slight step back Q3, then steadily better Q4 and Q1 2027"
-      },
-      "mag7": {
-        "note": "Broadly down YoY 2026 vs prior 2 years, bright spot Q2 on RoC basis",
-        "AAPL_NVDA": "Both peak on RoC terms in Q2",
-        "MSFT": "Slows in Q2",
-        "META_GOOGL": "Both expected to decelerate in Q2"
-      },
-      "small_cap_q2_accelerators": [
-        "Energy",
-        "Comms",
-        "Healthcare",
-        "Industrials",
-        "Tech",
-        "Consumer Discretionary",
-        "Staples"
-      ],
-      "small_cap_q2_decelerators": [
-        "Real Estate",
-        "Materials",
-        "Financials"
-      ],
-      "q3_warning": "Very few small-cap sectors poised to accelerate Q3. Only Staples, Consumer Disc, Fins (barely). Everything else slows."
-    },
-    "oil_shock_framework": {
-      "hormuz_supply_gap_mbpd": "8-10",
-      "cumulative_loss_mmbbl": ">800",
-      "drain_rate_mbbl_mo": "~200",
-      "storage_drawdown_critical": "Late July 2026",
-      "rate_peak_lag_history": "2-13 months from oil shock to peak long-term yields",
-      "gold_thesis": "Deficit spending \u2192 bond issuance \u2192 Fed monetization \u2192 currency debasement \u2192 gold up. Gold should work in Quad 2 but still trails risk assets. Will accelerate when Fed cuts.",
-      "fed_thesis": "Fed will be pressured to cut regardless of inflation. Political clock forces response. ~30% public support for Iran war constrains policy.",
-      "positioning": [
-        "Long Gold",
-        "Short Treasuries",
-        "Short Philippines",
-        "Short India"
-      ],
-      "roc_report_thesis": "'FLATION Now. STAG On A Lag. USD breaking to Bearish TREND confirmed 4/14.",
-      "usd_break_date": "2026-04-14"
-    }
-  },
-  "macro_vol": {
-    "date": "2026-05-28",
-    "series": [
-      {
-        "name": "VIX",
-        "last": 16.74,
-        "d1": 16.29,
-        "w1": 16.76,
-        "w4": 18.02,
-        "dod_bps": 46,
-        "dod_pct": 2.8,
-        "wow_bps": -2,
-        "wow_pct": -0.1,
-        "mom_bps": -128,
-        "mom_pct": -7.1
-      },
-      {
-        "name": "RVX",
-        "last": 23.38,
-        "d1": 24.13,
-        "w1": 24.84,
-        "w4": 25.58,
-        "dod_bps": -76,
-        "dod_pct": -3.1,
-        "wow_bps": -146,
-        "wow_pct": -5.8,
-        "mom_bps": -220,
-        "mom_pct": -8.6
-      },
-      {
-        "name": "NazVol",
-        "last": 23.39,
-        "d1": 23.9,
-        "w1": 24.09,
-        "w4": 23.32,
-        "dod_bps": -41,
-        "dod_pct": -2.1,
-        "wow_bps": -70,
-        "wow_pct": -2.9,
-        "mom_bps": 7,
-        "mom_pct": 0.3
-      },
-      {
-        "name": "GVZ",
-        "last": 24.47,
-        "d1": 24.27,
-        "w1": 26.63,
-        "w4": 27.87,
-        "dod_bps": 0,
-        "dod_pct": 0.0,
-        "wow_bps": -216,
-        "wow_pct": -8.0,
-        "mom_bps": -340,
-        "mom_pct": -12.2
-      },
-      {
-        "name": "OVX",
-        "last": 51.97,
-        "d1": 65.06,
-        "w1": 72.89,
-        "w4": 78.67,
-        "dod_bps": -1309,
-        "dod_pct": -7.8,
-        "wow_bps": -1292,
-        "wow_pct": -17.7,
-        "mom_bps": -4870,
-        "mom_pct": -23.3
-      }
-    ],
-    "note": "VIX=SPX 30D IV, RVX=Russell 30D IV, NazVol=Nasdaq 30D IV, GVZ=Gold Vol, OVX=Oil Vol"
   },
   "ham_per_fund": {
     "date": "2026-05-28",
@@ -11724,6 +9799,238 @@
         "first_seen": "2026-05-01",
         "days_held": 27
       }
+    ]
+  },
+  "call_summary": {
+    "date": "2026-05-28",
+    "source": "The Call @ Hedgeye 5/28/2026",
+    "longs": [
+      {
+        "ticker": "DLTR",
+        "name": "Dollar Tree",
+        "thesis": "Value consumer staples \u2014 beaten-down, inflection catalyst on cost savings"
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment",
+        "thesis": "Gaming/leisure re-acceleration; strong RTA signal, consumer still spending on experiences"
+      },
+      {
+        "ticker": "WST",
+        "name": "West Pharmaceutical",
+        "thesis": "Healthcare packaging; secular demand + margin improvement story"
+      },
+      {
+        "ticker": "DGX",
+        "name": "Quest Diagnostics",
+        "thesis": "Diagnostic lab demand + operational leverage; defensive growth"
+      },
+      {
+        "ticker": "LH",
+        "name": "Labcorp",
+        "thesis": "Lab services secular grower; pricing power + volume recovery"
+      },
+      {
+        "ticker": "ULS",
+        "name": "UL Solutions",
+        "thesis": "Testing/certification; non-cyclical revenue + margin expansion"
+      },
+      {
+        "ticker": "DAR",
+        "name": "Darling Ingredients",
+        "thesis": "Renewable diesel feedstock; Quad 2/3 energy commodity tailwind"
+      },
+      {
+        "ticker": "PSX",
+        "name": "Phillips 66",
+        "thesis": "Refining + midstream; energy tailwind in current quad"
+      },
+      {
+        "ticker": "SNOW",
+        "name": "Snowflake",
+        "thesis": "Data cloud re-acceleration; NRR improving, AI workloads expanding"
+      },
+      {
+        "ticker": "MRVL",
+        "name": "Marvell Technology",
+        "thesis": "Custom silicon + networking; AI infrastructure buildout beneficiary"
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms",
+        "thesis": "Ad revenue + Llama AI monetization; but note Keith is SHORT in HELS/HEFT"
+      }
+    ],
+    "shorts": [
+      {
+        "ticker": "WING",
+        "name": "Wingstop",
+        "thesis": "Consumer discretionary; unit economics pressure, crowded long"
+      },
+      {
+        "ticker": "DPZ",
+        "name": "Domino's Pizza",
+        "thesis": "Traffic declining, price-sensitive consumer pulling back"
+      },
+      {
+        "ticker": "DRI",
+        "name": "Darden Restaurants",
+        "thesis": "Full-service casual dining headwinds; labor cost pressure"
+      },
+      {
+        "ticker": "KSS",
+        "name": "Kohl's",
+        "thesis": "Department store secular decline; no catalyst for recovery"
+      },
+      {
+        "ticker": "LULU",
+        "name": "Lululemon",
+        "thesis": "Elevated valuation, slowing North America SSS, margin compression"
+      },
+      {
+        "ticker": "RMD",
+        "name": "ResMed",
+        "thesis": "GLP-1 secular headwind on CPAP volumes, de-rating ongoing"
+      },
+      {
+        "ticker": "RKT",
+        "name": "Rocket Companies",
+        "thesis": "Mortgage origination headwinds; rate-sensitive, refi volumes thin"
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "thesis": "Automotive margin compression + brand deterioration; valuation unjustified"
+      }
+    ],
+    "key_themes": [
+      "Healthcare services (DGX, LH, ULS) as defensive-growth in current quad",
+      "Semis/AI infrastructure (MRVL, SNOW) on AI capex cycle",
+      "Energy complex (DAR, PSX) as Quad 2/3 macro tailwind",
+      "Consumer discretionary shorts (WING, DPZ, DRI, LULU) \u2014 consumer under pressure",
+      "Rate-sensitive shorts (RKT) + secular losers (KSS, TSLA)"
+    ]
+  },
+  "macro_show_notes": {
+    "date": "2026-05-28",
+    "source": "Macro Show Summary 5/28/2026",
+    "vix_range": {
+      "low": 15.79,
+      "high": 18.14,
+      "note": "VIX 15.79-18.14 \u2014 low-vol regime intact"
+    },
+    "quad_positioning": "Quad 2 operative \u2014 Growth +, Inflation + (slowing into Quad 3 transition watch)",
+    "rta_stance": "Net SHORT RTA for the first time \u2014 significant signal reversal",
+    "bullish": [
+      {
+        "ticker": "UUP",
+        "note": "USD catching a bid \u2014 Quad 2 dollar strength"
+      },
+      {
+        "ticker": "XTL",
+        "note": "Telecom sector breakout \u2014 relative strength"
+      },
+      {
+        "ticker": "NVDA",
+        "note": "AI infrastructure leader; above trend"
+      },
+      {
+        "ticker": "AMZN",
+        "note": "AWS + ad revenue; dual tailwind"
+      },
+      {
+        "ticker": "AAPL",
+        "note": "Services momentum + share buybacks"
+      },
+      {
+        "ticker": "Natural Gas",
+        "note": "Energy commodity \u2014 Quad 2/3 setup"
+      },
+      {
+        "ticker": "WTI",
+        "note": "Oil above trend; geopolitical + demand supports"
+      },
+      {
+        "ticker": "DRAM",
+        "note": "Memory cycle inflecting; HBAM demand from AI"
+      },
+      {
+        "ticker": "QTUM",
+        "note": "Quantum computing ETF \u2014 early cycle"
+      },
+      {
+        "ticker": "ROBO",
+        "note": "Robotics/automation \u2014 secular + cyclical tailwind"
+      },
+      {
+        "ticker": "SOYB",
+        "note": "Soybean fund \u2014 Quad 2/3 soft commodity"
+      },
+      {
+        "ticker": "NORW",
+        "note": "Norway energy equity \u2014 USD/oil correlation play"
+      }
+    ],
+    "bearish": [
+      {
+        "ticker": "BTC",
+        "note": "Bitcoin breaking down \u2014 risk-off crypto signal"
+      },
+      {
+        "ticker": "MSTR",
+        "note": "Strategy Inc short \u2014 BTC proxy, leverage risk"
+      },
+      {
+        "ticker": "BMNR",
+        "note": "BitMiner short \u2014 crypto infrastructure"
+      },
+      {
+        "ticker": "ETH",
+        "note": "Ethereum underperforming; no Quad 2 catalyst"
+      },
+      {
+        "ticker": "TLT",
+        "note": "Long-duration bonds bearish \u2014 rate risk"
+      },
+      {
+        "ticker": "XLU",
+        "note": "Utilities underperform in Quad 2"
+      },
+      {
+        "ticker": "MSFT",
+        "note": "Relative underperformer vs AI peers"
+      },
+      {
+        "ticker": "JPM",
+        "note": "Financials softening vs expectations"
+      },
+      {
+        "ticker": "META",
+        "note": "Ad cycle risk + regulatory overhang"
+      },
+      {
+        "ticker": "PALL",
+        "note": "Palladium underperforming metals complex"
+      },
+      {
+        "ticker": "EPHE",
+        "note": "Philippines ETF \u2014 EM drag"
+      },
+      {
+        "ticker": "IDX",
+        "note": "Indonesia ETF \u2014 EM drag"
+      },
+      {
+        "ticker": "FXE",
+        "note": "Euro short \u2014 USD strength thesis"
+      }
+    ],
+    "key_calls": [
+      "Net SHORT RTA for first time \u2014 meaningful positioning shift",
+      "USD (UUP) and Telecom (XTL) as new leadership themes",
+      "Crypto complex (BTC, ETH, MSTR) under pressure across the board",
+      "Long-duration bonds (TLT) remain bearish \u2014 no rate pivot signal",
+      "VIX 15.79-18.14 \u2014 low vol regime, but watch for expansion above 18"
     ]
   }
 }
