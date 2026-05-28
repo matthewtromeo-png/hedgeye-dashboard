@@ -221,7 +221,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const callSummPts  = macroCtx?.pdf?.call_summary?.key_points ?? [];
   const callSummDate = macroCtx?.pdf?.call_summary?.date ?? null;
   const hasIntel = showNotesPts.length > 0 || callSummPts.length > 0;
-  const usdCorrData  = macroCtx?.pdf?.macro_show_notes?.usd_correlations ?? null;
+  const usdCorrData  = macroCtx?.usd_correlations ? { ...macroCtx.usd_correlations, as_of_date: macroCtx.usd_correlations.date } : null;
 
   const vixFallback = macroCtx?.pdf?.macro_show?.vix?.current
     ?? macroCtx?.pdf?.early_look?.vix_level
@@ -242,6 +242,15 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const sssAddedN    = sssAddedM   ? parseInt(sssAddedM[1])   : 0;
   const sssRemovedN  = sssRemovedM ? parseInt(sssRemovedM[1]) : 0;
   const sssPrevCount = sssFileCount !== null ? sssFileCount - sssAddedN + sssRemovedN : null;
+
+  const showCallouts    = macroCtx?.pdf?.macro_show?.callouts ?? [];
+  const showPositions   = macroCtx?.pdf?.macro_show?.signal_positions ?? [];
+  const msrData         = macroCtx?.pdf?.msr ?? null;
+  const momoData        = macroCtx?.pdf?.momo ?? null;
+  const elThemes        = macroCtx?.pdf?.early_look?.key_themes ?? [];
+  const elPositioning   = macroCtx?.pdf?.early_look?.positioning ?? [];
+  const macroResThemes  = macroCtx?.macro_research?.themes ?? [];
+  const hasCallouts     = showCallouts.length > 0;
 
   const bulletSentiment = (text) => {
     if (['BULLISH',' long ',' Long ','buying','added','long the'].some(k => text.includes(k))) return '#27500A';
@@ -443,6 +452,133 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
           </div>
         );
       })()}
+
+      {/* Macro Show Callouts */}
+      {hasCallouts && (
+        <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px',marginBottom:16}}>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:12}}>
+            <div style={{display:'flex',alignItems:'center',gap:8}}>
+              <div style={{width:3,height:14,borderRadius:2,background:'#27500A',flexShrink:0}} />
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                textTransform:'uppercase',letterSpacing:'0.12em',color:'#7A7770'}}>Macro Show Callouts</span>
+            </div>
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+              {macroCtx?.pdf?.macro_show?.date}
+            </span>
+          </div>
+          <div style={{display:'grid',gridTemplateColumns:`repeat(${Math.min(showCallouts.length,3)},1fr)`,gap:10,marginBottom: showPositions.length > 0 ? 12 : 0}}>
+            {showCallouts.map((c,i) => {
+              const isBull = c.detail?.toLowerCase().includes('bullish') || c.detail?.toLowerCase().includes('long ');
+              const isBear = c.detail?.toLowerCase().includes('bearish') || c.detail?.toLowerCase().includes('short ');
+              const accentColor = isBull ? '#27500A' : isBear ? '#C8302A' : '#B8860B';
+              const accentBg   = isBull ? '#EAF3DE' : isBear ? '#FCEBEB' : '#FFFBEB';
+              return (
+                <div key={i} style={{background:accentBg,borderRadius:6,padding:'10px 12px',
+                  borderLeft:`3px solid ${accentColor}`}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+                    color:accentColor,marginBottom:5}}>{c.title}</div>
+                  <div style={{fontSize:11,color:'#333',lineHeight:1.5}}>{c.detail}</div>
+                </div>
+              );
+            })}
+          </div>
+          {showPositions.length > 0 && (
+            <div style={{display:'flex',flexWrap:'wrap',gap:6,paddingTop:8,borderTop:'1px solid #F5F3EF'}}>
+              <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                textTransform:'uppercase',letterSpacing:'0.08em',alignSelf:'center',marginRight:4}}>Positions:</span>
+              {showPositions.map((p,i) => {
+                const isLong  = p.toLowerCase().startsWith('long');
+                const isShort = p.toLowerCase().startsWith('short');
+                return (
+                  <span key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
+                    padding:'2px 8px',borderRadius:3,
+                    background: isLong ? '#EAF3DE' : isShort ? '#FCEBEB' : '#F4F3EF',
+                    color: isLong ? '#27500A' : isShort ? '#C8302A' : '#1A1A18'}}>
+                    {p}
+                  </span>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* MSR + MOMO row */}
+      {(msrData || momoData) && (
+        <div style={{display:'grid',gridTemplateColumns:`repeat(${[msrData,momoData].filter(Boolean).length},1fr)`,gap:12,marginBottom:16}}>
+          {msrData && (
+            <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px'}}>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                  textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>MSR — {msrData.title || 'Market Situation'}</span>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>{msrData.date}</span>
+              </div>
+              {msrData.pv_band_resistance && (
+                <div style={{display:'flex',gap:16,marginBottom:8}}>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#C8302A',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Resistance</div>
+                    <div style={{fontSize:15,fontWeight:700,color:'#C8302A'}}>{msrData.pv_band_resistance}</div>
+                  </div>
+                  <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#27500A',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Support</div>
+                    <div style={{fontSize:15,fontWeight:700,color:'#27500A'}}>{msrData.pv_band_support}</div>
+                  </div>
+                  {msrData.gamma_exposure && (
+                    <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                      <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Gamma</div>
+                      <div style={{fontSize:12,fontWeight:600,color:'#1A4D8F'}}>{msrData.gamma_exposure}</div>
+                    </div>
+                  )}
+                </div>
+              )}
+              {(msrData.key_points||[]).slice(0,3).map((pt,i) => (
+                <div key={i} style={{display:'flex',gap:5,marginBottom:4,alignItems:'flex-start'}}>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#B8860B',
+                    marginTop:2,flexShrink:0}}>›</span>
+                  <span style={{fontSize:10,color:'#555',lineHeight:1.45}}>{pt}</span>
+                </div>
+              ))}
+            </div>
+          )}
+          {momoData && (
+            <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px'}}>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                  textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>MOMO Tracker</span>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>{momoData.date}</span>
+              </div>
+              {momoData.headline && (
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:700,
+                  color:'#1A1A18',marginBottom:8}}>{momoData.headline}</div>
+              )}
+              <div style={{display:'flex',gap:16,marginBottom:8}}>
+                {momoData.mag7_perf && (
+                  <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',letterSpacing:'0.06em',textTransform:'uppercase',marginBottom:2}}>Mag7</div>
+                    <div style={{fontSize:13,fontWeight:700,
+                      color: parseFloat(momoData.mag7_perf) >= 0 ? '#27500A' : '#C8302A'}}>
+                      {momoData.mag7_perf}
+                    </div>
+                  </div>
+                )}
+                {momoData.nvda_rr_room && (
+                  <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',letterSpacing:'0.06em',textTransform:'uppercase',marginBottom:2}}>NVDA RR Room</div>
+                    <div style={{fontSize:13,fontWeight:700,color:'#1A4D8F'}}>{momoData.nvda_rr_room}</div>
+                  </div>
+                )}
+              </div>
+              {(momoData.key_signals||[]).slice(0,3).map((s,i) => (
+                <div key={i} style={{display:'flex',gap:5,marginBottom:4,alignItems:'flex-start'}}>
+                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#B8860B',
+                    marginTop:2,flexShrink:0}}>›</span>
+                  <span style={{fontSize:10,color:'#555',lineHeight:1.45}}>{s}</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Macro Intel Panel */}
       {hasIntel && (
@@ -697,8 +833,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
            sssTickers === null ? (
              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A9790',
                textAlign:'center',padding:'20px 0',lineHeight:1.7}}>
-               <div>No research data.</div>
-               <div style={{fontSize:9,marginTop:4}}>Run update_full.ps1 to populate.</div>
+               <div>No SSS data available</div>
              </div>
            ) : (
             <div style={{display:'flex',flexWrap:'wrap',gap:4}}>

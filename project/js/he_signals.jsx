@@ -520,8 +520,8 @@ const VolTab = ({quad, macroCtx}) => {
   // Normalize ivol_table from top-level key into the sections format the renderer expects
   const ivolData = (() => {
     const raw = macroCtx?.ivol_table ?? null;
-    if (!raw || !raw.us_equities) return null;
-    const rows = raw.us_equities.map(r => ({
+    if (!raw) return null;
+    const normalizeRows = arr => (arr || []).map(r => ({
       ticker:         r.ticker,
       tr:             r.ytd,
       ivol_prem:      r.ivol_prem,
@@ -533,7 +533,15 @@ const VolTab = ({quad, macroCtx}) => {
       mm_pct:         r.rvol_mm,
       pctl:           r.rvol_10yr,
     }));
-    return { sections: { 'US Equities': rows }, window: raw.note || 'IVOL/RVOL 30D', as_of_date: raw.date };
+    const sections = {};
+    if (raw.us_equities?.length)    sections['US Equities']   = normalizeRows(raw.us_equities);
+    if (raw.intl_equities?.length)  sections['Intl Equities'] = normalizeRows(raw.intl_equities);
+    if (raw.currencies?.length)     sections['Currencies']    = normalizeRows(raw.currencies);
+    if (raw.commodities?.length)    sections['Commodities']   = normalizeRows(raw.commodities);
+    if (raw.fixed_income?.length)   sections['Fixed Income']  = normalizeRows(raw.fixed_income);
+    if (raw.mega_cap?.length)       sections['Mega-Cap']      = normalizeRows(raw.mega_cap);
+    if (!Object.keys(sections).length) return null;
+    return { sections, window: raw.note || 'IVOL/RVOL 30D', as_of_date: raw.date };
   })();
   // usd_correlations lives at top level; add as_of_date alias for the renderer
   const usdCorrData = macroCtx?.usd_correlations
