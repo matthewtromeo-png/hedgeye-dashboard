@@ -517,8 +517,28 @@ const VolTab = ({quad, macroCtx}) => {
   const V   = liveVix?.vix  || null;
   const V3  = liveVix?.vix3m|| null;
   const V9  = liveVix?.vix9m|| null;
-  const ivolData = macroCtx?.pdf?.macro_show_notes?.ivol_table ?? null;
-  const usdCorrData = macroCtx?.pdf?.macro_show_notes?.usd_correlations ?? null;
+  // Normalize ivol_table from top-level key into the sections format the renderer expects
+  const ivolData = (() => {
+    const raw = macroCtx?.ivol_table ?? null;
+    if (!raw || !raw.us_equities) return null;
+    const rows = raw.us_equities.map(r => ({
+      ticker:         r.ticker,
+      tr:             r.ytd,
+      ivol_prem:      r.ivol_prem,
+      ivol_rvol_yest: r.ivol_rvol_yest,
+      ivol_rvol_1w:   r.ivol_rvol_1w,
+      ivol_rvol_1m:   r.ivol_rvol_1m,
+      ttm_z:          r.z_ttm,
+      yr3_z:          r.z_3yr,
+      mm_pct:         r.rvol_mm,
+      pctl:           r.rvol_10yr,
+    }));
+    return { sections: { 'US Equities': rows }, window: raw.note || 'IVOL/RVOL 30D', as_of_date: raw.date };
+  })();
+  // usd_correlations lives at top level; add as_of_date alias for the renderer
+  const usdCorrData = macroCtx?.usd_correlations
+    ? { ...macroCtx.usd_correlations, as_of_date: macroCtx.usd_correlations.date }
+    : null;
   const R1  = parseFloat(rv1) || null;
   const R3p = parseFloat(rv3) || null;
   const ratio = V && R1 ? V / R1 : null;
