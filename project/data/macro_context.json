@@ -5502,55 +5502,90 @@
         "removed": true,
         "prev_weight": 0.0147
       },
-      "HAL": {
+      "CSX": {
+        "delta": 0.0006,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0296
+      },
+      "XTL": {
+        "delta": 0.0082,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0636
+      },
+      "FESM": {
+        "delta": 0.0291,
+        "curr_weight": 0.0655,
+        "prev_weight": 0.0364
+      },
+      "PLAY": {
         "delta": -0.0007,
-        "curr_weight": 0.0184,
-        "prev_weight": 0.0191
-      },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
-      },
-      "CIBR": {
-        "delta": -0.0005,
-        "curr_weight": 0.0269,
-        "prev_weight": 0.0274
+        "curr_weight": -0.011,
+        "prev_weight": -0.0103
       },
       "AAPL": {
         "delta": 0.001,
         "curr_weight": 0.092,
         "prev_weight": 0.091
       },
-      "MUSA": {
-        "delta": -0.009,
-        "curr_weight": 0.0101,
-        "prev_weight": 0.0191
+      "023135106-TRS-06/15/27-L-HELS": {
+        "delta": 0.0011,
+        "curr_weight": 0.0335,
+        "prev_weight": 0.0324
+      },
+      "IHF": {
+        "delta": -0.0232,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0488
+      },
+      "RDDT": {
+        "delta": -0.0007,
+        "curr_weight": -0.0101,
+        "prev_weight": -0.0094
+      },
+      "TWLO": {
+        "delta": -0.0007,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0199
+      },
+      "TAN": {
+        "delta": 0.0065,
+        "curr_weight": 0.0452,
+        "prev_weight": 0.0387
       },
       "ITB": {
         "delta": -0.0005,
         "curr_weight": -0.0214,
         "prev_weight": -0.0209
       },
-      "AMZN": {
-        "delta": 0.0016,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0592
+      "JETS": {
+        "delta": -0.0005,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0105
       },
-      "ADI": {
-        "delta": 0.0043,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0178
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
       },
-      "UUP": {
-        "delta": -0.0091,
-        "curr_weight": 0.0697,
-        "prev_weight": 0.0788
+      "WING": {
+        "delta": -0.001,
+        "curr_weight": -0.012,
+        "prev_weight": -0.011
       },
-      "DBMF": {
-        "delta": 0.0052,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0689
+      "SLX": {
+        "delta": 0.0124,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0422
+      },
+      "CASY": {
+        "delta": -0.0006,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.0233
+      },
+      "USO": {
+        "delta": -0.005,
+        "curr_weight": 0.0307,
+        "prev_weight": 0.0357
       },
       "UNH": {
         "delta": 0.0006,
@@ -5562,215 +5597,180 @@
         "curr_weight": 0.0899,
         "prev_weight": 0.0907
       },
-      "PLAY": {
-        "delta": -0.0007,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0103
-      },
-      "LLY": {
-        "delta": 0.0006,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0281
-      },
-      "OIH": {
-        "delta": -0.0031,
-        "curr_weight": 0.0497,
-        "prev_weight": 0.0528
-      },
-      "XTL": {
-        "delta": 0.0082,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0636
-      },
-      "RIG": {
-        "delta": -0.0007,
-        "curr_weight": 0.0177,
-        "prev_weight": 0.0184
-      },
-      "CSCO": {
-        "delta": -0.0023,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0275
-      },
-      "CSX": {
-        "delta": 0.0006,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0296
-      },
-      "ZM": {
-        "delta": 0.0406,
-        "curr_weight": 0.0496,
-        "prev_weight": 0.009
-      },
-      "CASY": {
-        "delta": -0.0006,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.0233
-      },
-      "NOBL": {
-        "delta": 0.0029,
-        "curr_weight": 0.0449,
-        "prev_weight": 0.042
-      },
-      "VTIP": {
-        "delta": -0.0051,
-        "curr_weight": 0.0329,
-        "prev_weight": 0.038
-      },
-      "JETS": {
-        "delta": -0.0005,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0105
-      },
-      "IDMO": {
-        "delta": -0.0184,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0371
-      },
-      "ROKU": {
-        "delta": 0.0179,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0264
-      },
-      "GLASF": {
-        "delta": 0.0005,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0163
-      },
-      "URI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0253
-      },
-      "RDDT": {
-        "delta": -0.0007,
-        "curr_weight": -0.0101,
-        "prev_weight": -0.0094
-      },
-      "VIK": {
-        "delta": 0.0013,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0213
-      },
-      "DBB": {
-        "delta": -0.0063,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.0361
-      },
-      "TWLO": {
-        "delta": -0.0007,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0199
+      "CAVA": {
+        "delta": -0.0085,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0126
       },
       "82982T106-TRS-06/15/27-L-HELS": {
         "delta": 0.0032,
         "curr_weight": 0.0176,
         "prev_weight": 0.0144
       },
-      "SLX": {
-        "delta": 0.0124,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0422
+      "MAR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0159
       },
-      "FESM": {
-        "delta": 0.0291,
-        "curr_weight": 0.0655,
-        "prev_weight": 0.0364
+      "CIBR": {
+        "delta": -0.0005,
+        "curr_weight": 0.0269,
+        "prev_weight": 0.0274
       },
-      "WING": {
-        "delta": -0.001,
-        "curr_weight": -0.012,
-        "prev_weight": -0.011
-      },
-      "MRVL": {
-        "delta": 0.125,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0196
-      },
-      "RSI": {
-        "delta": 0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0141
-      },
-      "GEV": {
-        "delta": 0.002,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0204
-      },
-      "IHF": {
-        "delta": -0.0232,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0488
-      },
-      "NOV": {
-        "delta": -0.0007,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0194
-      },
-      "023135106-TRS-06/15/27-L-HELS": {
-        "delta": 0.0011,
-        "curr_weight": 0.0335,
-        "prev_weight": 0.0324
+      "LLY": {
+        "delta": 0.0006,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0281
       },
       "JAAA": {
         "delta": 0.0039,
         "curr_weight": 0.063,
         "prev_weight": 0.0591
       },
-      "CAVA": {
-        "delta": -0.0085,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0126
-      },
-      "CRCL": {
-        "delta": 0.0054,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0147
-      },
-      "MAR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0159
-      },
-      "VTI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0902
-      },
-      "TAN": {
-        "delta": 0.0065,
-        "curr_weight": 0.0452,
-        "prev_weight": 0.0387
-      },
-      "19247G107-TRS-06/08/27-L-HELS": {
-        "delta": 0.0045,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0105
-      },
-      "GFS": {
-        "delta": -0.0009,
-        "curr_weight": 0.0082,
-        "prev_weight": 0.0091
-      },
-      "PICK": {
-        "delta": -0.0042,
-        "curr_weight": 0.0069,
-        "prev_weight": 0.0111
+      "RSI": {
+        "delta": 0.0007,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0141
       },
       "SNDK": {
         "delta": 0.0033,
         "curr_weight": 0.015,
         "prev_weight": 0.0117
       },
-      "USO": {
-        "delta": -0.005,
-        "curr_weight": 0.0307,
-        "prev_weight": 0.0357
+      "IDMO": {
+        "delta": -0.0184,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0371
+      },
+      "CSCO": {
+        "delta": -0.0023,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0275
+      },
+      "GEV": {
+        "delta": 0.002,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0204
+      },
+      "URI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0253
+      },
+      "CRCL": {
+        "delta": 0.0054,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0147
+      },
+      "ROKU": {
+        "delta": 0.0179,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0264
+      },
+      "RIG": {
+        "delta": -0.0007,
+        "curr_weight": 0.0177,
+        "prev_weight": 0.0184
+      },
+      "AMZN": {
+        "delta": 0.0016,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0592
+      },
+      "ADI": {
+        "delta": 0.0043,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0178
+      },
+      "VIK": {
+        "delta": 0.0013,
+        "curr_weight": 0.0226,
+        "prev_weight": 0.0213
+      },
+      "UUP": {
+        "delta": -0.0091,
+        "curr_weight": 0.0697,
+        "prev_weight": 0.0788
+      },
+      "DBB": {
+        "delta": -0.0063,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.0361
+      },
+      "ZM": {
+        "delta": 0.0406,
+        "curr_weight": 0.0496,
+        "prev_weight": 0.009
+      },
+      "MRVL": {
+        "delta": 0.125,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0196
+      },
+      "NOBL": {
+        "delta": 0.0029,
+        "curr_weight": 0.0449,
+        "prev_weight": 0.042
+      },
+      "19247G107-TRS-06/08/27-L-HELS": {
+        "delta": 0.0045,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0105
+      },
+      "NOV": {
+        "delta": -0.0007,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0194
       },
       "DBJP": {
         "delta": 0.0092,
         "curr_weight": 0.0581,
         "prev_weight": 0.0489
+      },
+      "GLASF": {
+        "delta": 0.0005,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0163
+      },
+      "MUSA": {
+        "delta": -0.009,
+        "curr_weight": 0.0101,
+        "prev_weight": 0.0191
+      },
+      "VTI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0902
+      },
+      "GFS": {
+        "delta": -0.0009,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0091
+      },
+      "OIH": {
+        "delta": -0.0031,
+        "curr_weight": 0.0497,
+        "prev_weight": 0.0528
+      },
+      "VTIP": {
+        "delta": -0.0051,
+        "curr_weight": 0.0329,
+        "prev_weight": 0.038
+      },
+      "PICK": {
+        "delta": -0.0042,
+        "curr_weight": 0.0069,
+        "prev_weight": 0.0111
+      },
+      "HAL": {
+        "delta": -0.0007,
+        "curr_weight": 0.0184,
+        "prev_weight": 0.0191
+      },
+      "DBMF": {
+        "delta": 0.0052,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0689
       }
     },
     "weekly": {
@@ -6030,65 +6030,310 @@
         "removed": true,
         "prev_weight": 0.0172
       },
-      "HBM": {
-        "delta": 0.0012,
-        "curr_weight": 0.016,
-        "prev_weight": 0.0148
+      "CSX": {
+        "delta": 0.0007,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0295
       },
-      "HAL": {
-        "delta": -0.0015,
-        "curr_weight": 0.0184,
-        "prev_weight": 0.0199
+      "KLAC": {
+        "delta": 0.0005,
+        "curr_weight": 0.0109,
+        "prev_weight": 0.0104
       },
-      "AMD": {
-        "delta": 0.0019,
-        "curr_weight": 0.0223,
-        "prev_weight": 0.0204
+      "CZR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.015
       },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
+      "VLO": {
+        "delta": -0.0008,
+        "curr_weight": 0.0115,
+        "prev_weight": 0.0123
       },
-      "FITE": {
-        "delta": 0.0015,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0206
+      "XTL": {
+        "delta": 0.0116,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0602
+      },
+      "AVEM": {
+        "delta": 0.001,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0192
+      },
+      "FESM": {
+        "delta": 0.0251,
+        "curr_weight": 0.0655,
+        "prev_weight": 0.0404
+      },
+      "PLAY": {
+        "delta": -0.0017,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0093
       },
       "AAPL": {
         "delta": 0.0016,
         "curr_weight": 0.092,
         "prev_weight": 0.0904
       },
+      "ARTY": {
+        "delta": 0.0033,
+        "curr_weight": 0.047,
+        "prev_weight": 0.0437
+      },
+      "023135106-TRS-06/15/27-L-HELS": {
+        "delta": 0.0036,
+        "curr_weight": 0.0335,
+        "prev_weight": 0.0299
+      },
+      "KMI": {
+        "delta": 0.0028,
+        "curr_weight": 0.0127,
+        "prev_weight": 0.0099
+      },
+      "SBUX": {
+        "delta": -0.0009,
+        "curr_weight": 0.0189,
+        "prev_weight": 0.0198
+      },
+      "CBOE": {
+        "delta": -0.0011,
+        "curr_weight": 0.0214,
+        "prev_weight": 0.0225
+      },
+      "IHF": {
+        "delta": -0.0212,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0468
+      },
+      "TTWO": {
+        "delta": -0.0066,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0224
+      },
+      "TWLO": {
+        "delta": 0.0044,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0148
+      },
+      "CERY": {
+        "delta": -0.004,
+        "curr_weight": 0.1366,
+        "prev_weight": 0.1406
+      },
+      "INTC": {
+        "delta": 0.0005,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0213
+      },
+      "ITB": {
+        "delta": -0.0008,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0206
+      },
+      "AFRM": {
+        "delta": 0.0007,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0151
+      },
+      "JETS": {
+        "delta": -0.0011,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0099
+      },
+      "LCID": {
+        "delta": -0.0009,
+        "curr_weight": -0.0098,
+        "prev_weight": -0.0089
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
+      },
+      "WING": {
+        "delta": -0.0019,
+        "curr_weight": -0.012,
+        "prev_weight": -0.0101
+      },
+      "SLX": {
+        "delta": 0.0188,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0358
+      },
+      "CASY": {
+        "delta": -0.0021,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.0248
+      },
+      "UNH": {
+        "delta": 0.0048,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0204
+      },
+      "DRAM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0357,
+        "prev_weight": 0.0302
+      },
+      "NVDA": {
+        "delta": -0.0057,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0956
+      },
+      "CAVA": {
+        "delta": -0.0086,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0127
+      },
+      "82982T106-TRS-06/15/27-L-HELS": {
+        "delta": 0.004,
+        "curr_weight": 0.0176,
+        "prev_weight": 0.0136
+      },
+      "MAR": {
+        "delta": 0.0007,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0158
+      },
+      "WDC": {
+        "delta": 0.0027,
+        "curr_weight": 0.0203,
+        "prev_weight": 0.0176
+      },
+      "GOOGL": {
+        "delta": -0.0009,
+        "curr_weight": 0.0803,
+        "prev_weight": 0.0812
+      },
+      "LUV": {
+        "delta": -0.0009,
+        "curr_weight": -0.0108,
+        "prev_weight": -0.0099
+      },
+      "DDS": {
+        "delta": -0.0007,
+        "curr_weight": -0.0082,
+        "prev_weight": -0.0075
+      },
+      "MKSI": {
+        "delta": 0.0011,
+        "curr_weight": 0.0228,
+        "prev_weight": 0.0217
+      },
+      "LLY": {
+        "delta": 0.0014,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0273
+      },
+      "JAAA": {
+        "delta": 0.003,
+        "curr_weight": 0.063,
+        "prev_weight": 0.06
+      },
       "AMAT": {
         "delta": 0.0013,
         "curr_weight": 0.0273,
         "prev_weight": 0.026
-      },
-      "PAVE": {
-        "delta": 0.0007,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.0149
-      },
-      "SMPL": {
-        "delta": -0.0005,
-        "curr_weight": -0.0102,
-        "prev_weight": -0.0097
-      },
-      "MUSA": {
-        "delta": -0.01,
-        "curr_weight": 0.0101,
-        "prev_weight": 0.0201
       },
       "VYM": {
         "delta": 0.0081,
         "curr_weight": 0.0493,
         "prev_weight": 0.0412
       },
-      "ITB": {
+      "67066G104-TRS-06/08/27-L-HELS": {
+        "delta": -0.0012,
+        "curr_weight": 0.0208,
+        "prev_weight": 0.022
+      },
+      "SMPL": {
+        "delta": -0.0005,
+        "curr_weight": -0.0102,
+        "prev_weight": -0.0097
+      },
+      "CF": {
+        "delta": -0.001,
+        "curr_weight": 0.0128,
+        "prev_weight": 0.0138
+      },
+      "SNDK": {
+        "delta": 0.0046,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0104
+      },
+      "IDMO": {
+        "delta": 0.0036,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0151
+      },
+      "FITE": {
+        "delta": 0.0015,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0206
+      },
+      "CSCO": {
+        "delta": -0.0016,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0268
+      },
+      "SPY   260717P00610000": {
+        "delta": -0.0006,
+        "curr_weight": 0.001,
+        "prev_weight": 0.0016
+      },
+      "GEV": {
+        "delta": 0.0027,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0197
+      },
+      "URI": {
+        "delta": 0.0014,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0248
+      },
+      "HBM": {
+        "delta": 0.0012,
+        "curr_weight": 0.016,
+        "prev_weight": 0.0148
+      },
+      "EWY": {
+        "delta": 0.0012,
+        "curr_weight": 0.0126,
+        "prev_weight": 0.0114
+      },
+      "CRCL": {
+        "delta": 0.0042,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0159
+      },
+      "ROKU": {
+        "delta": 0.0184,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0259
+      },
+      "FWD": {
+        "delta": 0.0018,
+        "curr_weight": 0.0566,
+        "prev_weight": 0.0548
+      },
+      "ZROZ": {
         "delta": -0.0008,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0206
+        "curr_weight": -0.0243,
+        "prev_weight": -0.0235
+      },
+      "PAVE": {
+        "delta": 0.0007,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.0149
+      },
+      "CAT": {
+        "delta": 0.0008,
+        "curr_weight": 0.021,
+        "prev_weight": 0.0202
+      },
+      "512807306-TRS-06/22/27-L-HELS": {
+        "delta": 0.0019,
+        "curr_weight": 0.0232,
+        "prev_weight": 0.0213
       },
       "AMZN": {
         "delta": 0.0009,
@@ -6100,385 +6345,60 @@
         "curr_weight": 0.0221,
         "prev_weight": 0.0171
       },
-      "SBUX": {
-        "delta": -0.0009,
-        "curr_weight": 0.0189,
-        "prev_weight": 0.0198
-      },
-      "UUP": {
-        "delta": 0.0143,
-        "curr_weight": 0.0697,
-        "prev_weight": 0.0554
-      },
-      "DBMF": {
-        "delta": 0.004,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0701
-      },
-      "XAR": {
-        "delta": 0.0009,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0192
-      },
-      "UNH": {
-        "delta": 0.0048,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0204
-      },
-      "ATI": {
-        "delta": 0.001,
-        "curr_weight": 0.0116,
-        "prev_weight": 0.0106
-      },
-      "NVDA": {
-        "delta": -0.0057,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0956
-      },
-      "CERY": {
-        "delta": -0.004,
-        "curr_weight": 0.1366,
-        "prev_weight": 0.1406
-      },
-      "ZROZ": {
-        "delta": -0.0008,
-        "curr_weight": -0.0243,
-        "prev_weight": -0.0235
-      },
-      "SNAP": {
-        "delta": 0.0052,
-        "curr_weight": -0.0051,
-        "prev_weight": -0.0103
-      },
-      "JBHT": {
-        "delta": 0.0006,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0212
-      },
-      "LCID": {
-        "delta": -0.0009,
-        "curr_weight": -0.0098,
-        "prev_weight": -0.0089
-      },
-      "DRAM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0357,
-        "prev_weight": 0.0302
-      },
-      "CZR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.015
-      },
-      "WEAT": {
-        "delta": -0.0006,
-        "curr_weight": 0.0143,
-        "prev_weight": 0.0149
-      },
-      "PLAY": {
-        "delta": -0.0017,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0093
-      },
-      "ARTY": {
-        "delta": 0.0033,
-        "curr_weight": 0.047,
-        "prev_weight": 0.0437
-      },
-      "GOOGL": {
-        "delta": -0.0009,
-        "curr_weight": 0.0803,
-        "prev_weight": 0.0812
-      },
-      "STX": {
-        "delta": 0.0015,
-        "curr_weight": 0.0117,
-        "prev_weight": 0.0102
-      },
-      "CBOE": {
-        "delta": -0.0011,
-        "curr_weight": 0.0214,
-        "prev_weight": 0.0225
-      },
-      "LUV": {
-        "delta": -0.0009,
-        "curr_weight": -0.0108,
-        "prev_weight": -0.0099
-      },
-      "LLY": {
-        "delta": 0.0014,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0273
-      },
-      "OIH": {
-        "delta": 0.0079,
-        "curr_weight": 0.0497,
-        "prev_weight": 0.0418
-      },
-      "XTL": {
-        "delta": 0.0116,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0602
-      },
-      "INTC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0213
-      },
-      "512807306-TRS-06/22/27-L-HELS": {
-        "delta": 0.0019,
-        "curr_weight": 0.0232,
-        "prev_weight": 0.0213
-      },
-      "TTWO": {
-        "delta": -0.0066,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0224
-      },
-      "IDX": {
-        "delta": 0.0005,
-        "curr_weight": -0.0094,
-        "prev_weight": -0.0099
-      },
-      "CSCO": {
-        "delta": -0.0016,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0268
-      },
-      "CSX": {
-        "delta": 0.0007,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0295
-      },
-      "XYZ": {
-        "delta": -0.0098,
-        "curr_weight": 0.0102,
-        "prev_weight": 0.02
-      },
-      "FWD": {
-        "delta": 0.0018,
-        "curr_weight": 0.0566,
-        "prev_weight": 0.0548
-      },
-      "WDC": {
-        "delta": 0.0027,
-        "curr_weight": 0.0203,
-        "prev_weight": 0.0176
-      },
-      "EWY": {
-        "delta": 0.0012,
-        "curr_weight": 0.0126,
-        "prev_weight": 0.0114
-      },
-      "CASY": {
-        "delta": -0.0021,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.0248
-      },
-      "CDNS": {
-        "delta": 0.0009,
-        "curr_weight": 0.0153,
-        "prev_weight": 0.0144
-      },
-      "AVEM": {
-        "delta": 0.001,
-        "curr_weight": 0.0202,
-        "prev_weight": 0.0192
-      },
-      "VTIP": {
-        "delta": -0.0789,
-        "curr_weight": 0.0329,
-        "prev_weight": 0.1118
-      },
-      "KLAC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0109,
-        "prev_weight": 0.0104
-      },
-      "AFRM": {
-        "delta": 0.0007,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0151
-      },
-      "IHE": {
-        "delta": 0.005,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0202
-      },
-      "JETS": {
-        "delta": -0.0011,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0099
-      },
-      "IDMO": {
-        "delta": 0.0036,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0151
-      },
-      "CAT": {
-        "delta": 0.0008,
-        "curr_weight": 0.021,
-        "prev_weight": 0.0202
-      },
-      "ROKU": {
-        "delta": 0.0184,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0259
-      },
-      "GLASF": {
-        "delta": 0.0014,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0154
-      },
-      "URI": {
-        "delta": 0.0014,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0248
+      "MPC": {
+        "delta": -0.0007,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0155
       },
       "VIK": {
         "delta": 0.0022,
         "curr_weight": 0.0226,
         "prev_weight": 0.0204
       },
-      "XLE": {
-        "delta": -0.0014,
-        "curr_weight": 0.0295,
-        "prev_weight": 0.0309
-      },
-      "PM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0199,
-        "prev_weight": 0.0144
-      },
-      "DBB": {
-        "delta": 0.0068,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.023
-      },
-      "BKNG": {
-        "delta": -0.0007,
-        "curr_weight": -0.0106,
-        "prev_weight": -0.0099
-      },
-      "TWLO": {
-        "delta": 0.0044,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0148
-      },
-      "DDS": {
-        "delta": -0.0007,
-        "curr_weight": -0.0082,
-        "prev_weight": -0.0075
-      },
-      "82982T106-TRS-06/15/27-L-HELS": {
-        "delta": 0.004,
-        "curr_weight": 0.0176,
-        "prev_weight": 0.0136
-      },
-      "SLX": {
-        "delta": 0.0188,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0358
-      },
-      "FESM": {
-        "delta": 0.0251,
-        "curr_weight": 0.0655,
-        "prev_weight": 0.0404
-      },
-      "WING": {
-        "delta": -0.0019,
-        "curr_weight": -0.012,
-        "prev_weight": -0.0101
-      },
-      "ROBO": {
-        "delta": 0.0009,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0149
-      },
-      "MRVL": {
-        "delta": 0.1269,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0177
+      "IHE": {
+        "delta": 0.005,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0202
       },
       "SXT": {
         "delta": 0.0007,
         "curr_weight": 0.0227,
         "prev_weight": 0.022
       },
-      "GEV": {
-        "delta": 0.0027,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0197
-      },
-      "IHF": {
-        "delta": -0.0212,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0468
-      },
-      "MPC": {
-        "delta": -0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0155
-      },
-      "CF": {
-        "delta": -0.001,
-        "curr_weight": 0.0128,
-        "prev_weight": 0.0138
-      },
-      "NOV": {
-        "delta": -0.0009,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0196
-      },
-      "023135106-TRS-06/15/27-L-HELS": {
-        "delta": 0.0036,
-        "curr_weight": 0.0335,
-        "prev_weight": 0.0299
-      },
-      "SPY   260717P00610000": {
+      "KSS": {
         "delta": -0.0006,
-        "curr_weight": 0.001,
-        "prev_weight": 0.0016
+        "curr_weight": -0.0111,
+        "prev_weight": -0.0105
       },
-      "67066G104-TRS-06/08/27-L-HELS": {
-        "delta": -0.0012,
-        "curr_weight": 0.0208,
-        "prev_weight": 0.022
+      "CDNS": {
+        "delta": 0.0009,
+        "curr_weight": 0.0153,
+        "prev_weight": 0.0144
       },
-      "MKSI": {
-        "delta": 0.0011,
-        "curr_weight": 0.0228,
-        "prev_weight": 0.0217
+      "UUP": {
+        "delta": 0.0143,
+        "curr_weight": 0.0697,
+        "prev_weight": 0.0554
       },
-      "JAAA": {
-        "delta": 0.003,
-        "curr_weight": 0.063,
-        "prev_weight": 0.06
+      "DBB": {
+        "delta": 0.0068,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.023
       },
-      "CAVA": {
-        "delta": -0.0086,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0127
+      "MRVL": {
+        "delta": 0.1269,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0177
       },
-      "CRCL": {
-        "delta": 0.0042,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0159
+      "WEAT": {
+        "delta": -0.0006,
+        "curr_weight": 0.0143,
+        "prev_weight": 0.0149
       },
-      "MAR": {
-        "delta": 0.0007,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0158
-      },
-      "VLO": {
-        "delta": -0.0008,
-        "curr_weight": 0.0115,
-        "prev_weight": 0.0123
-      },
-      "VTI": {
+      "STX": {
         "delta": 0.0015,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0896
+        "curr_weight": 0.0117,
+        "prev_weight": 0.0102
       },
       "HTEC": {
         "delta": 0.0024,
@@ -6490,35 +6410,115 @@
         "curr_weight": 0.015,
         "prev_weight": 0.01
       },
+      "NOV": {
+        "delta": -0.0009,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0196
+      },
+      "DBJP": {
+        "delta": 0.0032,
+        "curr_weight": 0.0581,
+        "prev_weight": 0.0549
+      },
+      "GLASF": {
+        "delta": 0.0014,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0154
+      },
+      "MUSA": {
+        "delta": -0.01,
+        "curr_weight": 0.0101,
+        "prev_weight": 0.0201
+      },
+      "AMD": {
+        "delta": 0.0019,
+        "curr_weight": 0.0223,
+        "prev_weight": 0.0204
+      },
+      "BKNG": {
+        "delta": -0.0007,
+        "curr_weight": -0.0106,
+        "prev_weight": -0.0099
+      },
+      "VTI": {
+        "delta": 0.0015,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0896
+      },
       "GFS": {
         "delta": 0.001,
         "curr_weight": 0.0082,
         "prev_weight": 0.0072
       },
-      "KMI": {
-        "delta": 0.0028,
-        "curr_weight": 0.0127,
-        "prev_weight": 0.0099
+      "OIH": {
+        "delta": 0.0079,
+        "curr_weight": 0.0497,
+        "prev_weight": 0.0418
+      },
+      "VTIP": {
+        "delta": -0.0789,
+        "curr_weight": 0.0329,
+        "prev_weight": 0.1118
+      },
+      "IDX": {
+        "delta": 0.0005,
+        "curr_weight": -0.0094,
+        "prev_weight": -0.0099
+      },
+      "ROBO": {
+        "delta": 0.0009,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0149
+      },
+      "SNAP": {
+        "delta": 0.0052,
+        "curr_weight": -0.0051,
+        "prev_weight": -0.0103
+      },
+      "ATI": {
+        "delta": 0.001,
+        "curr_weight": 0.0116,
+        "prev_weight": 0.0106
+      },
+      "XAR": {
+        "delta": 0.0009,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0192
+      },
+      "PM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0199,
+        "prev_weight": 0.0144
+      },
+      "XLE": {
+        "delta": -0.0014,
+        "curr_weight": 0.0295,
+        "prev_weight": 0.0309
       },
       "PICK": {
         "delta": -0.0049,
         "curr_weight": 0.0069,
         "prev_weight": 0.0118
       },
-      "SNDK": {
-        "delta": 0.0046,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0104
+      "JBHT": {
+        "delta": 0.0006,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0212
       },
-      "KSS": {
-        "delta": -0.0006,
-        "curr_weight": -0.0111,
-        "prev_weight": -0.0105
+      "HAL": {
+        "delta": -0.0015,
+        "curr_weight": 0.0184,
+        "prev_weight": 0.0199
       },
-      "DBJP": {
-        "delta": 0.0032,
-        "curr_weight": 0.0581,
-        "prev_weight": 0.0549
+      "DBMF": {
+        "delta": 0.004,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0701
+      },
+      "XYZ": {
+        "delta": -0.0098,
+        "curr_weight": 0.0102,
+        "prev_weight": 0.02
       }
     },
     "per_fund_daily_adds": {
