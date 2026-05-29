@@ -148,10 +148,17 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
     try {
       const live = JSON.parse(localStorage.getItem('he_ham_live') || '{}');
       if (live.rows?.length > 0) {
-        setHamData(buildHAMData(live.rows));
-        setLiveSource({ source: live.source, modifiedAt: live.modifiedAt });
-        setLoading(false);
-        return;
+        // Only trust localStorage if it's newer than the deployed ham_per_fund date
+        const deployedDate = hamPF?.date ? new Date(hamPF.date + 'T00:00:00') : null;
+        const liveDate = live.modifiedAt ? new Date(live.modifiedAt) : null;
+        if (!deployedDate || (liveDate && liveDate >= deployedDate)) {
+          setHamData(buildHAMData(live.rows));
+          setLiveSource({ source: live.source, modifiedAt: live.modifiedAt });
+          setLoading(false);
+          return;
+        }
+        // Deployed data is newer than localStorage -- clear stale cache
+        localStorage.removeItem('he_ham_live');
       }
     } catch {}
     fetch(window.__resources?.hamCsv || './data/ham_holdings_latest.csv')

@@ -7,9 +7,12 @@ Writes position_sizing block to macro_context.json.
 
 Usage: python parse_position_sizing.py
 """
-import json, os, re, sys
+import json, os, re, sys, logging
 from collections import defaultdict
 from datetime import datetime
+
+# Suppress pdfminer font warnings (FontBBox errors are cosmetic, not fatal)
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))

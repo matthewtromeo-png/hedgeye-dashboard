@@ -11,8 +11,11 @@ process_sss.py — Signal Strength Stocks pipeline
 Run from repo root: python scripts/process_sss.py
 """
 
-import csv, io, json, os, glob, re
+import csv, io, json, os, glob, re, logging
 from datetime import datetime
+
+# Suppress pdfminer font warnings (FontBBox errors are cosmetic, not fatal)
+logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 # ── Paths ──────────────────────────────────────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
