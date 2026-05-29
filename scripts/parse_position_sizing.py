@@ -283,6 +283,12 @@ def main():
         mcj['sources_used'] = src
     else:
         mcj['sources_used']['position_sizing'] = src_entry
+    # Safety guard: never write if we got fewer than 5 positions
+    # (protects against partial parse / PDF crash corrupting the file)
+    if len(positions) < 5:
+        print(f"[WARN] Only {len(positions)} positions parsed -- skipping JSON write to protect existing data")
+        return
+
     tmp_path = MCJ_PATH + '.tmp'
     with open(tmp_path, 'w', encoding='utf-8') as f:
         json.dump(mcj, f, indent=2, ensure_ascii=False)

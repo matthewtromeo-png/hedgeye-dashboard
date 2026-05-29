@@ -1,14 +1,18 @@
 {
-  "generated_at": "2026-05-28T19:23:29",
-  "source_date": "2026-05-28",
-  "sources_used": [
-    "The Call @ Hedgeye 5/28/2026",
-    "Macro Show Summary 5/28/2026",
-    "Portfolio Solutions ETF Re-Rank 5/28/2026",
-    "Signal Strength Stocks 5/28/2026 (85 tickers)",
-    "Portfolio Solutions PDFs + ETF Pro table (2026-05-28)",
-    "Portfolio Solutions PDFs + ETF Pro table (2026-05-29)"
-  ],
+  "generated_at": "2026-05-29T09:30:00",
+  "source_date": "2026-05-29",
+  "sources_used": {
+    "date": "2026-05-29",
+    "files": [
+      "Hedgeye - #Quad2 Squeeze & Gratitude.pdf (Early Look)",
+      "HE_TMS_KM_MC_5.29.2026.pdf (Macro Show Slides)",
+      "Hedgeye - May 29th 2026 | Rarely Resolves Quietly.pdf (Market Situation)",
+      "Hedgeye - CRYPTO QUANT BTC +0.1% CRCL=BULLISH.pdf (BTC Tracker)",
+      "Hedgeye - MOMO Tracker Mag7 +0.9% ORCL +6.7%.pdf (MOMO Tracker)",
+      "real-time-alerts-history-2026-05-29.csv (RTA)",
+      "etf-pro-all-active-tickers-1780061034.xlsx (ETF Pro)"
+    ]
+  },
   "etf_rerank": {
     "date": "2026-05-28",
     "source": "Portfolio Solutions Daily ETF Re-Rank 5/28/2026",
@@ -3196,398 +3200,79 @@
         "avg_cost": 38.16
       }
     ],
-    "signals_date": "2026-05-26"
+    "signals_date": "2026-05-26",
+    "as_of": "2026-05-29",
+    "latest_file": "real-time-alerts-history-2026-05-29.csv"
   },
   "levels": {
-    "UST30Y": {
-      "close": 5.1,
-      "lrr": 5.01,
-      "trr": 5.2,
-      "signal": "BULLISH"
-    },
-    "UST10Y": {
-      "close": 4.57,
-      "lrr": 4.44,
-      "trr": 4.69,
-      "signal": "BULLISH"
-    },
-    "UST2Y": {
-      "close": 4.08,
-      "lrr": 3.96,
-      "trr": 4.15,
-      "signal": "BULLISH"
+    "as_of": "2026-05-29",
+    "UST_10yr": {
+      "range": "4.43-4.68",
+      "signal": "bullish"
     },
     "HYG": {
-      "close": 79.9,
-      "lrr": 79.43,
-      "trr": 80.2,
-      "signal": "BULLISH"
+      "range": "79.52-80.46",
+      "signal": "bullish"
     },
     "LQD": {
-      "close": 108.2,
-      "lrr": 107.1,
-      "trr": 108.7,
-      "signal": "BEARISH"
+      "range": "107.2-109.6",
+      "signal": "neutral"
     },
     "SPX": {
-      "close": 7446.0,
-      "lrr": 7334.0,
-      "trr": 7500.0,
-      "signal": "BULLISH"
+      "range": "7355-7598",
+      "signal": "bullish"
     },
-    "COMPQ": {
-      "close": 26293.0,
-      "lrr": 25813.0,
-      "trr": 26675.0,
-      "signal": "BULLISH"
+    "NASDAQ": {
+      "range": "25903-27012",
+      "signal": "bullish"
     },
     "RUT": {
-      "close": 2843.0,
-      "lrr": 2771.0,
-      "trr": 2897.0,
-      "signal": "BULLISH"
+      "range": "2816-2985",
+      "signal": "bullish"
     },
     "XLK": {
-      "close": 179.0,
-      "lrr": 172.0,
-      "trr": 181.0,
-      "signal": "BULLISH"
-    },
-    "XLV": {
-      "close": 158.0,
-      "lrr": 156.0,
-      "trr": 160.0,
-      "signal": "BULLISH"
-    },
-    "SSEC": {
-      "close": 4105.0,
-      "lrr": 4058.0,
-      "trr": 4244.0,
-      "signal": "BULLISH"
-    },
-    "NIKK": {
-      "close": 63405.0,
-      "lrr": 59832.0,
-      "trr": 63882.0,
-      "signal": "BULLISH"
-    },
-    "DAX": {
-      "close": 24607.0,
-      "lrr": 23802.0,
-      "trr": 24890.0,
-      "signal": "BULLISH"
-    },
-    "VIX": {
-      "lrr": 15.79,
-      "trr": 18.14,
-      "signal": "BEARISH",
-      "close": 16.74
-    },
-    "USD": {
-      "close": 99.18,
-      "lrr": 98.7,
-      "trr": 99.83,
-      "signal": "BULLISH"
-    },
-    "EUR/USD": {
-      "close": 1.162,
-      "lrr": 1.154,
-      "trr": 1.172,
-      "signal": "BEARISH"
-    },
-    "USD/YEN": {
-      "close": 159.09,
-      "lrr": 157.32,
-      "trr": 159.75,
-      "signal": "BULLISH"
-    },
-    "GBP/USD": {
-      "close": 1.343,
-      "lrr": 1.328,
-      "trr": 1.347,
-      "signal": "BEARISH"
-    },
-    "CAD/USD": {
-      "close": 0.725,
-      "lrr": 0.722,
-      "trr": 0.729,
-      "signal": "BEARISH"
-    },
-    "WTIC": {
-      "close": 97.74,
-      "lrr": 95.73,
-      "trr": 107.29,
-      "signal": "BULLISH"
-    },
-    "BRENT": {
-      "close": 105.0,
-      "lrr": 100.0,
-      "trr": 113.0,
-      "signal": "BULLISH"
-    },
-    "NATGAS": {
-      "close": 3.14,
-      "lrr": 2.85,
-      "trr": 3.11,
-      "signal": "NEUTRAL"
-    },
-    "GOLD": {
-      "close": 4527.0,
-      "lrr": 4413.0,
-      "trr": 4645.0,
-      "signal": "NEUTRAL"
-    },
-    "COPPER": {
-      "close": 6.39,
-      "lrr": 6.15,
-      "trr": 6.68,
-      "signal": "BULLISH"
-    },
-    "SILVER": {
-      "close": 77.0,
-      "lrr": 69.0,
-      "trr": 78.0,
-      "signal": "BEARISH"
-    },
-    "MSFT": {
-      "close": 419.0,
-      "lrr": 400.0,
-      "trr": 428.0,
-      "signal": "BEARISH"
-    },
-    "AAPL": {
-      "close": 305.0,
-      "lrr": 293.0,
-      "trr": 307.0,
-      "signal": "BULLISH"
-    },
-    "AMZN": {
-      "close": 268.0,
-      "lrr": 259.0,
-      "trr": 274.0,
-      "signal": "BULLISH"
-    },
-    "META": {
-      "close": 607.0,
-      "lrr": 593.0,
-      "trr": 624.0,
-      "signal": "BEARISH"
-    },
-    "GOOGL": {
-      "close": 388.0,
-      "lrr": 380.0,
-      "trr": 405.0,
-      "signal": "BULLISH"
-    },
-    "NFLX": {
-      "close": 89.0,
-      "lrr": 84.0,
-      "trr": 91.0,
-      "signal": "BEARISH"
-    },
-    "TSLA": {
-      "close": 418.0,
-      "lrr": 396.0,
-      "trr": 445.0,
-      "signal": "BULLISH"
-    },
-    "NVDA": {
-      "close": 220.0,
-      "lrr": 213.0,
-      "trr": 234.0,
-      "signal": "BULLISH"
-    },
-    "ORCL": {
-      "close": 190.0,
-      "lrr": 180.0,
-      "trr": 198.0,
-      "signal": "BULLISH"
-    },
-    "BITCOIN": {
-      "close": 77555.0,
-      "lrr": 75306.0,
-      "trr": 80413.0,
-      "signal": "NEUTRAL"
-    },
-    "BSE": {
-      "close": 85106.0,
-      "lrr": 84516.0,
-      "trr": 86339.0,
-      "signal": "BULLISH"
-    },
-    "XLY": {
-      "close": 120.0,
-      "lrr": 118.0,
-      "trr": 124.0,
-      "signal": "BULLISH"
-    },
-    "XLI": {
-      "close": 171.0,
-      "lrr": 168.0,
-      "trr": 176.0,
-      "signal": "BULLISH"
-    },
-    "PPLT": {
-      "close": 182.0,
-      "lrr": 175.0,
-      "trr": 211.0,
-      "signal": "BULLISH"
-    },
-    "BTCUSD": {
-      "close": 67049.0,
-      "lrr": 62799.0,
-      "trr": 71743.0,
-      "signal": "BEARISH"
-    },
-    "ST30Y": {
-      "close": 4.85,
-      "lrr": 4.93,
-      "trr": 4.81,
-      "signal": "BULLISH"
-    },
-    "^SPX": {
-      "close": 6832.0,
-      "lrr": 6776.0,
-      "trr": 7013.0,
-      "signal": "BULLISH"
-    },
-    "^IXIC": {
-      "close": 22597.0,
-      "lrr": 22318.0,
-      "trr": 23252.0,
-      "signal": "BEARISH"
-    },
-    "^RUT": {
-      "close": 2615.0,
-      "lrr": 2565.0,
-      "trr": 2715.0,
-      "signal": "BULLISH"
-    },
-    "^N225": {
-      "close": 56941.0,
-      "lrr": 54868.0,
-      "trr": 58432.0,
-      "signal": "BULLISH"
-    },
-    "^GDAXI": {
-      "close": 24852.0,
-      "lrr": 24436.0,
-      "trr": 25117.0,
-      "signal": "BULLISH"
-    },
-    "^VIX": {
-      "close": 20.82,
-      "lrr": 15.29,
-      "trr": 21.93,
-      "signal": "BEARISH"
-    },
-    "DX-Y.NYB": {
-      "close": 97.05,
-      "lrr": 96.22,
-      "trr": 97.7,
-      "signal": "BEARISH"
-    },
-    "EURUSD": {
-      "close": 1.186,
-      "lrr": 1.174,
-      "trr": 1.194,
-      "signal": "BULLISH"
-    },
-    "USDJPY": {
-      "close": 153.29,
-      "lrr": 152.01,
-      "trr": 155.53,
-      "signal": "BEARISH"
-    },
-    "GBPUSD": {
-      "close": 1.361,
-      "lrr": 1.352,
-      "trr": 1.379,
-      "signal": "BULLISH"
-    },
-    "CADUSD": {
-      "close": 0.733,
-      "lrr": 0.731,
-      "trr": 0.742,
-      "signal": "BULLISH"
-    },
-    "CLUSD": {
-      "close": 62.91,
-      "lrr": 61.73,
-      "trr": 65.62,
-      "signal": "BULLISH"
-    },
-    "BZUSD": {
-      "close": 67.6,
-      "lrr": 66.41,
-      "trr": 70.39,
-      "signal": "BULLISH"
-    },
-    "NGUSD": {
-      "close": 3.22,
-      "lrr": 2.88,
-      "trr": 3.57,
-      "signal": "BEARISH"
-    },
-    "GCUSD": {
-      "close": 4893.0,
-      "lrr": 4842.0,
-      "trr": 5209.0,
-      "signal": "BULLISH"
-    },
-    "HGUSD": {
-      "close": 5.75,
-      "lrr": 5.67,
-      "trr": 6.12,
-      "signal": "BULLISH"
-    },
-    "SILUSD": {
-      "close": 74.0,
-      "lrr": 70.0,
-      "trr": 93.0,
-      "signal": "BULLISH"
+      "range": "179-190",
+      "signal": "bullish"
     },
     "XOP": {
-      "close": 171.0,
-      "lrr": 165.0,
-      "trr": 180.0,
-      "signal": "BULLISH"
-    },
-    "XLU": {
-      "close": 45.0,
-      "lrr": 43.49,
-      "trr": 45.65,
-      "signal": "BEARISH"
-    },
-    "ETH": {
-      "close": 2124.0,
-      "lrr": 2019.0,
-      "trr": null,
-      "signal": "BEARISH"
-    },
-    "SOL": {
-      "close": 86.88,
-      "lrr": 81.0,
-      "trr": 89.0,
-      "signal": "BEARISH"
-    },
-    "AVAX": {
-      "close": 9.48,
-      "lrr": 8.9,
-      "trr": 9.7,
-      "signal": "BEARISH"
-    },
-    "XRP": {
-      "close": 1.36,
-      "lrr": 1.3,
-      "trr": 1.43,
-      "signal": "BEARISH"
+      "range": "160-172",
+      "signal": "neutral"
     },
     "XTL": {
-      "close": 229.0,
-      "lrr": 220.0,
-      "trr": 233.0,
-      "signal": "BULLISH"
+      "range": "232-250",
+      "signal": "bullish"
+    },
+    "XLU": {
+      "range": "43.52-45.34",
+      "signal": "bearish"
+    },
+    "VIX": {
+      "range": "15.29-18.01",
+      "signal": "bearish"
+    },
+    "USD": {
+      "range": "98.87-99.51",
+      "signal": "bullish"
+    },
+    "WTI": {
+      "range": "82.28-96.31",
+      "signal": "bearish"
+    },
+    "NatGas": {
+      "range": "2.96-3.44",
+      "signal": "bullish"
+    },
+    "Gold": {
+      "range": "4443-4601",
+      "signal": "neutral"
+    },
+    "Copper": {
+      "range": "6.20-6.45",
+      "signal": "bullish"
+    },
+    "SLV": {
+      "range": "70-77",
+      "signal": "bearish"
     }
   },
   "sss_history": [
@@ -5959,235 +5644,51 @@
     "as_of": "2026-05-28"
   },
   "call_summary": {
-    "date": "2026-05-28",
-    "source": "The Call @ Hedgeye 5/28/2026",
-    "longs": [
-      {
-        "ticker": "DLTR",
-        "name": "Dollar Tree",
-        "thesis": "Value consumer staples — beaten-down, inflection catalyst on cost savings"
-      },
-      {
-        "ticker": "CZR",
-        "name": "Caesars Entertainment",
-        "thesis": "Gaming/leisure re-acceleration; strong RTA signal"
-      },
-      {
-        "ticker": "WST",
-        "name": "West Pharmaceutical",
-        "thesis": "Healthcare packaging; secular demand + margin improvement"
-      },
-      {
-        "ticker": "DGX",
-        "name": "Quest Diagnostics",
-        "thesis": "Diagnostic lab demand + operational leverage; defensive growth"
-      },
-      {
-        "ticker": "LH",
-        "name": "Labcorp",
-        "thesis": "Lab services secular grower; pricing power + volume recovery"
-      },
-      {
-        "ticker": "ULS",
-        "name": "UL Solutions",
-        "thesis": "Testing/certification; non-cyclical revenue + margin expansion"
-      },
-      {
-        "ticker": "DAR",
-        "name": "Darling Ingredients",
-        "thesis": "Renewable diesel feedstock; Quad 2/3 energy commodity tailwind"
-      },
-      {
-        "ticker": "PSX",
-        "name": "Phillips 66",
-        "thesis": "Refining + midstream; energy tailwind in current quad"
-      },
-      {
-        "ticker": "SNOW",
-        "name": "Snowflake",
-        "thesis": "Data cloud re-acceleration; NRR improving, AI workloads expanding"
-      },
-      {
-        "ticker": "MRVL",
-        "name": "Marvell Technology",
-        "thesis": "Custom silicon + networking; AI infrastructure buildout"
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms",
-        "thesis": "Ad revenue + Llama AI monetization (note: short in HELS/HEFT)"
-      }
+    "date": "2026-05-29",
+    "title": "#Quad2 Squeeze & Gratitude",
+    "key_points": [
+      "Quad2 Macro Short Squeezes confirmed long: XTL, EQRR, CNXT, IWM, VXF, SLX, DRAM, ROBO, TAN, BUG",
+      "Short side working: XLU -1.1%, EPHE -1.6%, short India (INDA)",
+      "SSS hat trick: SNOW, OKTA, MDB added before they ripped on news",
+      "Philippines (EPHE) potential crash call forming — Indonesia (IDX) fractal",
+      "SPX 21st ATH of 2026. VIX 4-month low 15.73. Skew in free fall — margin for error thin"
     ],
-    "shorts": [
-      {
-        "ticker": "WING",
-        "name": "Wingstop",
-        "thesis": "Consumer discretionary pressure; unit economics deteriorating"
-      },
-      {
-        "ticker": "DPZ",
-        "name": "Domino's Pizza",
-        "thesis": "Traffic declining, price-sensitive consumer pulling back"
-      },
-      {
-        "ticker": "DRI",
-        "name": "Darden Restaurants",
-        "thesis": "Full-service dining headwinds; labor cost pressure"
-      },
-      {
-        "ticker": "KSS",
-        "name": "Kohl's",
-        "thesis": "Department store secular decline; no catalyst"
-      },
-      {
-        "ticker": "LULU",
-        "name": "Lululemon",
-        "thesis": "Elevated valuation, slowing NA SSS, margin compression"
-      },
-      {
-        "ticker": "RMD",
-        "name": "ResMed",
-        "thesis": "GLP-1 secular headwind on CPAP volumes"
-      },
-      {
-        "ticker": "RKT",
-        "name": "Rocket Companies",
-        "thesis": "Mortgage origination headwinds; rate-sensitive"
-      },
-      {
-        "ticker": "TSLA",
-        "name": "Tesla",
-        "thesis": "Automotive margin compression + brand deterioration"
-      }
+    "active_longs_mentioned": [
+      "XTL",
+      "EQRR",
+      "CNXT",
+      "IWM",
+      "VXF",
+      "SLX",
+      "DRAM",
+      "ROBO",
+      "TAN",
+      "BUG",
+      "SNOW",
+      "OKTA",
+      "MDB"
     ],
-    "key_themes": [
-      "Healthcare services (DGX, LH, ULS) as defensive-growth in current quad",
-      "Semis/AI infrastructure (MRVL, SNOW) on AI capex cycle",
-      "Energy complex (DAR, PSX) as Quad 2/3 macro tailwind",
-      "Consumer discretionary shorts (WING, DPZ, DRI, LULU) — consumer under pressure"
+    "active_shorts_mentioned": [
+      "XLU",
+      "EPHE",
+      "INDA",
+      "MSTR"
     ]
   },
   "macro_show_notes": {
-    "date": "2026-05-28",
-    "source": "Macro Show Summary 5/28/2026",
-    "vix_range": {
-      "low": 15.79,
-      "high": 18.14,
-      "note": "VIX 15.79-18.14 — low-vol regime intact"
-    },
-    "quad_positioning": "Quad 2 operative — Growth +, Inflation + (watch for Quad 3 transition)",
-    "rta_stance": "Net SHORT RTA for the first time — significant signal reversal",
-    "bullish": [
-      {
-        "ticker": "UUP",
-        "note": "USD catching a bid — Quad 2 dollar strength"
-      },
-      {
-        "ticker": "XTL",
-        "note": "Telecom sector breakout — relative strength"
-      },
-      {
-        "ticker": "NVDA",
-        "note": "AI infrastructure leader; above trend"
-      },
-      {
-        "ticker": "AMZN",
-        "note": "AWS + ad revenue; dual tailwind"
-      },
-      {
-        "ticker": "AAPL",
-        "note": "Services momentum + share buybacks"
-      },
-      {
-        "ticker": "Natural Gas",
-        "note": "Energy commodity — Quad 2/3 setup"
-      },
-      {
-        "ticker": "WTI",
-        "note": "Oil above trend; geopolitical + demand supports"
-      },
-      {
-        "ticker": "DRAM",
-        "note": "Memory cycle inflecting; HBM demand from AI"
-      },
-      {
-        "ticker": "QTUM",
-        "note": "Quantum computing ETF — early cycle"
-      },
-      {
-        "ticker": "ROBO",
-        "note": "Robotics/automation — secular + cyclical tailwind"
-      },
-      {
-        "ticker": "SOYB",
-        "note": "Soybean fund — Quad 2/3 soft commodity"
-      },
-      {
-        "ticker": "NORW",
-        "note": "Norway energy equity — USD/oil correlation play"
-      }
+    "date": "2026-05-29",
+    "title": "The Macro Show – May 29, 2026",
+    "quad_context": "Quad2 deep — early Quad3 shift signals in sector behavior. Cyclicals (XLF, XLI) fading; Secular Growth (DRAM, QTUM, ROBO, TAN, BUG) leading.",
+    "key_themes": [
+      "OIL: WTI -2%, TREND Signal Breakdown confirmed — bearish below $88.98 TREND",
+      "ASIA: S. Korea KOSPI +3.6% overnight, +27% in 1 month, new ATH",
+      "PHILIPPINES: EPHE short -1.6%, potential crash call — Indonesia fractal pattern",
+      "SECTORS: Out of Cyclicals (XLF, XLI); long Secular Growth (DRAM, QTUM, ROBO, TAN, BUG)",
+      "SOFTWARE: SNOW, OKTA, MDB SSS adds before catalyst — Quad2 secular growth",
+      "CRYPTO: BTC +0.1%, CRCL=BULLISH, ETF outflow streak 12 days (-$4.3B)",
+      "MOMO: Mag7 +0.9%, ORCL +6.7%; RR=+1%/-9%, Quad2 ATH trifecta"
     ],
-    "bearish": [
-      {
-        "ticker": "BTC",
-        "note": "Bitcoin breaking down — risk-off crypto signal"
-      },
-      {
-        "ticker": "MSTR",
-        "note": "Strategy Inc short — BTC proxy, leverage risk"
-      },
-      {
-        "ticker": "BMNR",
-        "note": "BitMiner short — crypto infrastructure"
-      },
-      {
-        "ticker": "ETH",
-        "note": "Ethereum underperforming; no Quad 2 catalyst"
-      },
-      {
-        "ticker": "TLT",
-        "note": "Long-duration bonds bearish — rate risk"
-      },
-      {
-        "ticker": "XLU",
-        "note": "Utilities underperform in Quad 2"
-      },
-      {
-        "ticker": "MSFT",
-        "note": "Relative underperformer vs AI peers"
-      },
-      {
-        "ticker": "JPM",
-        "note": "Financials softening vs expectations"
-      },
-      {
-        "ticker": "META",
-        "note": "Ad cycle risk + regulatory overhang"
-      },
-      {
-        "ticker": "PALL",
-        "note": "Palladium underperforming metals complex"
-      },
-      {
-        "ticker": "EPHE",
-        "note": "Philippines ETF — EM drag"
-      },
-      {
-        "ticker": "IDX",
-        "note": "Indonesia ETF — EM drag"
-      },
-      {
-        "ticker": "FXE",
-        "note": "Euro short — USD strength thesis"
-      }
-    ],
-    "key_calls": [
-      "Net SHORT RTA for first time — meaningful positioning shift",
-      "USD (UUP) and Telecom (XTL) as new leadership themes",
-      "Crypto complex (BTC, ETH, MSTR) under pressure",
-      "Long-duration bonds (TLT) remain bearish",
-      "VIX 15.79-18.14 — low vol regime, watch for expansion above 18"
-    ]
+    "market_context": "SPX 21st record close 2026. VIX 4-month low 15.73. VVIX lowest of year. SPX skew approaching late-2024 levels. Dealers long gamma, realized vol compressed. Rally increasingly concentrated — margin for error thin."
   },
   "ham_deltas": {
     "date": "2026-05-28",
@@ -10695,411 +10196,353 @@
         "size_source": "rank_floor",
         "fill_pct": 50,
         "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 9,
-        "rerank_1m": 5,
-        "move_count": 8
+        "above_hyg_threshold": true
+      }
+    ]
+  },
+  "usd_correlations": {
+    "as_of": "2026-05-29",
+    "note": "Days = Trading Days. 52-Wk Rolling 30D Correlation.",
+    "metrics": [
+      {
+        "metric": "SPX",
+        "15d": 0.16,
+        "30d": 0.45,
+        "90d": -0.24,
+        "120d": -0.22,
+        "180d": -0.25,
+        "high": 0.47,
+        "low": -0.91,
+        "pct_pos": 28,
+        "pct_neg": 72
       },
       {
-        "rank": 9,
-        "ticker": "ROBO",
-        "asset_class": "Global Equity",
-        "entry_date": "2026-05-19",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 14,
-        "rerank_1m": null,
-        "move_count": 4
+        "metric": "BRENT Oil",
+        "15d": -0.04,
+        "30d": 0.06,
+        "90d": 0.77,
+        "120d": 0.56,
+        "180d": 0.25,
+        "high": 0.95,
+        "low": -0.75,
+        "pct_pos": 76,
+        "pct_neg": 24
       },
       {
-        "rank": 10,
-        "ticker": "DRAM",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-18",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": null,
-        "move_count": 3
+        "metric": "CRB Index",
+        "15d": 0.0,
+        "30d": 0.0,
+        "90d": 0.68,
+        "120d": 0.56,
+        "180d": 0.05,
+        "high": 0.89,
+        "low": -0.87,
+        "pct_pos": 29,
+        "pct_neg": 71
       },
       {
-        "rank": 11,
+        "metric": "GOLD",
+        "15d": -0.89,
+        "30d": -0.75,
+        "90d": -0.52,
+        "120d": -0.39,
+        "180d": -0.35,
+        "high": 0.74,
+        "low": -0.9,
+        "pct_pos": 23,
+        "pct_neg": 77
+      },
+      {
+        "metric": "Bitcoin",
+        "15d": -0.65,
+        "30d": -0.51,
+        "90d": -0.27,
+        "120d": -0.12,
+        "180d": 0.05,
+        "high": 0.75,
+        "low": -0.89,
+        "pct_pos": 49,
+        "pct_neg": 51
+      }
+    ]
+  },
+  "ivol_table": {
+    "as_of": "2026-05-29",
+    "window": "30D",
+    "note": "IVOL Premium/Discount vs realized vol. MM% = vs 1yr range.",
+    "rows": [
+      {
+        "ticker": "SPY",
+        "name": "SPDR S&P 500 ETF",
+        "ytd_pct": 10.66,
+        "ivol_prem_curr": 67,
+        "ivol_prem_1w": 76,
+        "ttm_z": 0.2,
+        "3y_z": 0.7,
+        "rvol_mm_pct": -40,
+        "rvol_10yr_pct": 30,
+        "ivol_mm_pct": -10,
+        "ivol_10yr_pct": 41
+      },
+      {
+        "ticker": "QQQ",
+        "name": "Power Shares QQQ",
+        "ytd_pct": 13.74,
+        "ivol_prem_curr": 48,
+        "ivol_prem_1w": 55,
+        "ttm_z": 0.0,
+        "3y_z": 0.7,
+        "rvol_mm_pct": -25,
+        "rvol_10yr_pct": 40,
+        "ivol_mm_pct": -8,
+        "ivol_10yr_pct": 38
+      },
+      {
         "ticker": "IWM",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-07",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3.0,
-        "commentary_pct": 3.0,
-        "size_source": "commentary",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3.0,
-        "last_direction": "adding",
-        "rerank_1w": -5,
-        "rerank_1m": null,
-        "move_count": 9
+        "name": "iShares Russell 2000 ETF",
+        "ytd_pct": 18.63,
+        "ivol_prem_curr": 25,
+        "ivol_prem_1w": 33,
+        "ttm_z": -0.2,
+        "3y_z": 0.3,
+        "rvol_mm_pct": -14,
+        "rvol_10yr_pct": 45,
+        "ivol_mm_pct": -5,
+        "ivol_10yr_pct": 55
       },
       {
-        "rank": 12,
-        "ticker": "XTL",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-03-27",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 1.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": -1,
-        "rerank_1m": -2,
-        "move_count": 9
+        "ticker": "XLE",
+        "name": "Energy Sector SPDR ETF",
+        "ytd_pct": 27.38,
+        "ivol_prem_curr": -3,
+        "ivol_prem_1w": 10,
+        "ttm_z": -1.5,
+        "3y_z": -1.1,
+        "rvol_mm_pct": 7,
+        "rvol_10yr_pct": 69,
+        "ivol_mm_pct": -7,
+        "ivol_10yr_pct": 57
       },
       {
-        "rank": 13,
-        "ticker": "EQRR",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-03-31",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 6,
-        "rerank_1m": 1,
-        "move_count": 6
+        "ticker": "XLF",
+        "name": "Financials Sector SPDR ETF",
+        "ytd_pct": 29.78,
+        "ivol_prem_curr": 31,
+        "ivol_prem_1w": 59,
+        "ttm_z": 2.8,
+        "3y_z": 1.6,
+        "rvol_mm_pct": -14,
+        "rvol_10yr_pct": 6,
+        "ivol_mm_pct": 1,
+        "ivol_10yr_pct": null
       },
       {
-        "rank": 14,
-        "ticker": "VXF",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-05-13",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 1.5,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": -6,
-        "rerank_1m": null,
-        "move_count": 4
+        "ticker": "XLI",
+        "name": "Industrials Sector SPDR ETF",
+        "ytd_pct": 12.04,
+        "ivol_prem_curr": 53,
+        "ivol_prem_1w": 43,
+        "ttm_z": -0.5,
+        "3y_z": -0.1,
+        "rvol_mm_pct": -18,
+        "rvol_10yr_pct": 73,
+        "ivol_mm_pct": -13,
+        "ivol_10yr_pct": 85
       },
       {
-        "rank": 15,
-        "ticker": "COM",
-        "asset_class": "Commodity",
-        "entry_date": "2026-03-17",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 3,
-        "commentary_pct": 0.0,
-        "size_source": "rank_floor",
-        "fill_pct": 75,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 1,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": null,
-        "move_count": 14
+        "ticker": "XLK",
+        "name": "Technology Sector SPDR ETF",
+        "ytd_pct": 29.78,
+        "ivol_prem_curr": 29,
+        "ivol_prem_1w": 69,
+        "ttm_z": -0.6,
+        "3y_z": -0.4,
+        "rvol_mm_pct": -7,
+        "rvol_10yr_pct": 66,
+        "ivol_mm_pct": -36,
+        "ivol_10yr_pct": 66
       },
       {
-        "rank": 16,
-        "ticker": "TAN",
-        "asset_class": "Global Equity",
-        "entry_date": "2026-05-20",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 1
+        "ticker": "XLU",
+        "name": "Utilities Sector SPDR ETF",
+        "ytd_pct": 4.54,
+        "ivol_prem_curr": 40,
+        "ivol_prem_1w": 86,
+        "ttm_z": -0.1,
+        "3y_z": -0.4,
+        "rvol_mm_pct": -8,
+        "rvol_10yr_pct": 91,
+        "ivol_mm_pct": -48,
+        "ivol_10yr_pct": 50
       },
       {
-        "rank": 17,
-        "ticker": "OIH",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-02-05",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 3,
-        "commentary_pct": 2.0,
-        "size_source": "rank_floor",
-        "fill_pct": 50,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 3,
-        "last_direction": "trimming",
-        "rerank_1w": 11,
-        "rerank_1m": 0,
-        "move_count": 9
+        "ticker": "XLV",
+        "name": "Health Care Sector SPDR ETF",
+        "ytd_pct": -2.53,
+        "ivol_prem_curr": 23,
+        "ivol_prem_1w": 40,
+        "ttm_z": 0.6,
+        "3y_z": 0.8,
+        "rvol_mm_pct": -62,
+        "rvol_10yr_pct": 66,
+        "ivol_mm_pct": -23,
+        "ivol_10yr_pct": 63
       },
       {
-        "rank": 18,
-        "ticker": "AAAU",
-        "asset_class": "Foreign Currency",
-        "entry_date": "2025-02-28",
-        "min_pct": 4,
-        "max_pct": 12,
-        "estimated_pct": 4.0,
-        "commentary_pct": 4.0,
-        "size_source": "commentary",
-        "fill_pct": 33,
-        "tier": "min",
-        "above_hyg_threshold": true,
-        "room_to_add": 8.0,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": -10,
-        "move_count": 5
+        "ticker": "UUP",
+        "name": "PowerShares US Dollar Index",
+        "ytd_pct": 2.48,
+        "ivol_prem_curr": 98,
+        "ivol_prem_1w": 64,
+        "ttm_z": 0.0,
+        "3y_z": 0.5,
+        "rvol_mm_pct": -24,
+        "rvol_10yr_pct": 50,
+        "ivol_mm_pct": -2,
+        "ivol_10yr_pct": 64
       },
       {
-        "rank": 19,
-        "ticker": "SOYB",
-        "asset_class": "Commodity",
-        "entry_date": "2026-04-17",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 3,
-        "commentary_pct": 0.5,
-        "size_source": "rank_floor",
-        "fill_pct": 75,
-        "tier": "mid",
-        "above_hyg_threshold": true,
-        "room_to_add": 1,
-        "last_direction": "trimming",
-        "rerank_1w": 3,
-        "rerank_1m": -3,
-        "move_count": 8
+        "ticker": "GLD",
+        "name": "SPDR Gold Shares ETF",
+        "ytd_pct": 4.15,
+        "ivol_prem_curr": 10,
+        "ivol_prem_1w": 7,
+        "ttm_z": 0.4,
+        "3y_z": 0.4,
+        "rvol_mm_pct": -35,
+        "rvol_10yr_pct": 90,
+        "ivol_mm_pct": -5,
+        "ivol_10yr_pct": 95
       },
       {
-        "rank": 20,
-        "ticker": "PFIX",
-        "asset_class": "US Fixed Income",
-        "entry_date": "2026-05-22",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 3,
-        "commentary_pct": 0.0,
-        "size_source": "rank_floor",
-        "fill_pct": 30,
-        "tier": "min",
-        "above_hyg_threshold": true,
-        "room_to_add": 7,
-        "last_direction": "closed",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 4
+        "ticker": "USO",
+        "name": "United States Oil Fund ETF",
+        "ytd_pct": 89.1,
+        "ivol_prem_curr": -7,
+        "ivol_prem_1w": 20,
+        "ttm_z": -1.1,
+        "3y_z": null,
+        "rvol_mm_pct": -20,
+        "rvol_10yr_pct": 85,
+        "ivol_mm_pct": -21,
+        "ivol_10yr_pct": null
       },
       {
-        "rank": 21,
+        "ticker": "TLT",
+        "name": "iShares 20yr Treasury Bond ETF",
+        "ytd_pct": -1.63,
+        "ivol_prem_curr": 20,
+        "ivol_prem_1w": 45,
+        "ttm_z": -0.6,
+        "3y_z": 0.4,
+        "rvol_mm_pct": -9,
+        "rvol_10yr_pct": 40,
+        "ivol_mm_pct": 3,
+        "ivol_10yr_pct": 17
+      },
+      {
         "ticker": "HYG",
-        "asset_class": "Domestic FI",
-        "entry_date": "2026-04-21",
-        "min_pct": 3,
-        "max_pct": 10,
-        "estimated_pct": 3.0,
-        "commentary_pct": 3.0,
-        "size_source": "commentary",
-        "fill_pct": 30,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 7.0,
-        "last_direction": "adding",
-        "rerank_1w": -11,
-        "rerank_1m": -17,
-        "move_count": 10
+        "name": "iShares iBoxx HY Corp Bond ETF",
+        "ytd_pct": 4.5,
+        "ivol_prem_curr": null,
+        "ivol_prem_1w": 141,
+        "ttm_z": null,
+        "3y_z": null,
+        "rvol_mm_pct": -31,
+        "rvol_10yr_pct": 30,
+        "ivol_mm_pct": -10,
+        "ivol_10yr_pct": null
       },
       {
-        "rank": 22,
-        "ticker": "EWW",
-        "asset_class": "EM Equity",
-        "entry_date": "2026-04-16",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 1.5,
-        "commentary_pct": 1.5,
-        "size_source": "commentary",
-        "fill_pct": 25,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.5,
-        "last_direction": "trimming",
-        "rerank_1w": 2,
-        "rerank_1m": -2,
-        "move_count": 4
+        "ticker": "AAPL",
+        "name": "Apple",
+        "ytd_pct": 14.95,
+        "ivol_prem_curr": 22,
+        "ivol_prem_1w": 18,
+        "ttm_z": -0.3,
+        "3y_z": 0.0,
+        "rvol_mm_pct": -7,
+        "rvol_10yr_pct": 36,
+        "ivol_mm_pct": -21,
+        "ivol_10yr_pct": 38
       },
       {
-        "rank": 23,
-        "ticker": "CNXT",
-        "asset_class": "EM Equity",
-        "entry_date": "2026-04-28",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 2.0,
-        "commentary_pct": 2.0,
-        "size_source": "commentary",
-        "fill_pct": 33,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.0,
-        "last_direction": "trimming",
-        "rerank_1w": -10,
-        "rerank_1m": null,
-        "move_count": 9
+        "ticker": "AMZN",
+        "name": "Amazon",
+        "ytd_pct": 18.71,
+        "ivol_prem_curr": 55,
+        "ivol_prem_1w": 20,
+        "ttm_z": -0.3,
+        "3y_z": null,
+        "rvol_mm_pct": -33,
+        "rvol_10yr_pct": 47,
+        "ivol_mm_pct": -8,
+        "ivol_10yr_pct": 58
       },
       {
-        "rank": 24,
-        "ticker": "SLX",
-        "asset_class": "Commodity",
-        "entry_date": "2026-05-15",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.5,
-        "commentary_pct": 0.5,
-        "size_source": "commentary",
-        "fill_pct": 12,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3.5,
-        "last_direction": "trimming",
-        "rerank_1w": -6,
-        "rerank_1m": null,
-        "move_count": 2
+        "ticker": "GOOGL",
+        "name": "Alphabet",
+        "ytd_pct": 24.64,
+        "ivol_prem_curr": -10,
+        "ivol_prem_1w": -6,
+        "ttm_z": -1.2,
+        "3y_z": -0.8,
+        "rvol_mm_pct": -15,
+        "rvol_10yr_pct": 82,
+        "ivol_mm_pct": -6,
+        "ivol_10yr_pct": 67
       },
       {
-        "rank": 25,
-        "ticker": "DBB",
-        "asset_class": "Commodity",
-        "entry_date": "2026-05-19",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 1,
-        "commentary_pct": 1,
-        "size_source": "commentary",
-        "fill_pct": 25,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3,
-        "last_direction": "adding",
-        "rerank_1w": 2,
-        "rerank_1m": null,
-        "move_count": 1
+        "ticker": "META",
+        "name": "Meta",
+        "ytd_pct": -3.76,
+        "ivol_prem_curr": -2,
+        "ivol_prem_1w": -8,
+        "ttm_z": -0.6,
+        "3y_z": -0.3,
+        "rvol_mm_pct": -32,
+        "rvol_10yr_pct": 61,
+        "ivol_mm_pct": 2,
+        "ivol_10yr_pct": 61
       },
       {
-        "rank": 26,
-        "ticker": "XOP",
-        "asset_class": "Domestic Equity",
-        "entry_date": "2026-02-02",
-        "min_pct": 2,
-        "max_pct": 6,
-        "estimated_pct": 2.0,
-        "commentary_pct": 2.0,
-        "size_source": "commentary",
-        "fill_pct": 33,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.0,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": -4,
-        "move_count": 3
+        "ticker": "MSFT",
+        "name": "Microsoft",
+        "ytd_pct": -11.71,
+        "ivol_prem_curr": 14,
+        "ivol_prem_1w": -8,
+        "ttm_z": 0.3,
+        "3y_z": 0.1,
+        "rvol_mm_pct": -7,
+        "rvol_10yr_pct": 62,
+        "ivol_mm_pct": -8,
+        "ivol_10yr_pct": 79
       },
       {
-        "rank": 27,
-        "ticker": "CPER",
-        "asset_class": "Commodity",
-        "entry_date": "2026-04-24",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.5,
-        "commentary_pct": 0.5,
-        "size_source": "commentary",
-        "fill_pct": 12,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 3.5,
-        "last_direction": "trimming",
-        "rerank_1w": -2,
-        "rerank_1m": -4,
-        "move_count": 6
+        "ticker": "NVDA",
+        "name": "Nvidia",
+        "ytd_pct": 14.88,
+        "ivol_prem_curr": 7,
+        "ivol_prem_1w": 22,
+        "ttm_z": 0.0,
+        "3y_z": -0.2,
+        "rvol_mm_pct": 0,
+        "rvol_10yr_pct": 42,
+        "ivol_mm_pct": 0,
+        "ivol_10yr_pct": 53
       },
       {
-        "rank": 28,
-        "ticker": "TILL",
-        "asset_class": "Commodity",
-        "entry_date": "2026-05-21",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.0,
-        "commentary_pct": 0.0,
-        "size_source": "commentary",
-        "fill_pct": 0,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.0,
-        "last_direction": "closed",
-        "rerank_1w": null,
-        "rerank_1m": null,
-        "move_count": 2
-      },
-      {
-        "rank": 29,
-        "ticker": "BNO",
-        "asset_class": "Commodity",
-        "entry_date": "2026-02-13",
-        "min_pct": 1,
-        "max_pct": 4,
-        "estimated_pct": 0.0,
-        "commentary_pct": 0.0,
-        "size_source": "commentary",
-        "fill_pct": 0,
-        "tier": "min",
-        "above_hyg_threshold": false,
-        "room_to_add": 4.0,
-        "last_direction": "trimming",
-        "rerank_1w": 0,
-        "rerank_1m": -4,
-        "move_count": 3
+        "ticker": "TSLA",
+        "name": "Tesla",
+        "ytd_pct": -1.69,
+        "ivol_prem_curr": 24,
+        "ivol_prem_1w": 9,
+        "ttm_z": 0.6,
+        "3y_z": null,
+        "rvol_mm_pct": -19,
+        "rvol_10yr_pct": 43,
+        "ivol_mm_pct": 2,
+        "ivol_10yr_pct": null
       }
     ]
   }
