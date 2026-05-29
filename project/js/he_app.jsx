@@ -577,14 +577,16 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
               <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
                 textTransform:'uppercase',letterSpacing:'0.08em',alignSelf:'center',marginRight:4}}>Positions:</span>
               {showPositions.map((p,i) => {
-                const isLong  = p.toLowerCase().startsWith('long');
-                const isShort = p.toLowerCase().startsWith('short');
+                const label   = (typeof p === 'object' && p !== null) ? (p.label ?? '') : (p ?? '');
+                const pType   = (typeof p === 'object' && p !== null) ? (p.type ?? '') : '';
+                const isLong  = pType === 'long'  || label.toLowerCase().startsWith('long');
+                const isShort = pType === 'short' || label.toLowerCase().startsWith('short');
                 return (
                   <span key={i} style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
                     padding:'2px 8px',borderRadius:3,
                     background: isLong ? '#EAF3DE' : isShort ? '#FCEBEB' : '#F4F3EF',
                     color: isLong ? '#27500A' : isShort ? '#C8302A' : '#1A1A18'}}>
-                    {p}
+                    {label}
                   </span>
                 );
               })}

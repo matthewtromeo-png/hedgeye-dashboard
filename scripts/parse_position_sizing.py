@@ -26,49 +26,48 @@ PS_FOLDER_LINUX = '/sessions/pensive-sharp-lovelace/mnt/Trading/hedgeye/Portfoli
 # ── ETF Pro table — from current Portfolio Solutions visual ───────────────────
 # Updated daily from the PDF table. rank=current ETF Pro rank.
 ETF_PRO_TABLE = [
+    # ── Updated 2026-05-29: removed EWW/XOP/BNO/PFIX/TILL (sold); added UFO/BUG/DBMF ──
     {'rank':1,  'ticker':'FDRXX','class':'Cash',              'min':0,  'max':100,'entry':''},
     {'rank':2,  'ticker':'BUXX', 'class':'Domestic FI',       'min':3,  'max':10, 'entry':'2023-10-16'},
     {'rank':3,  'ticker':'CLOX', 'class':'Fixed Income',      'min':3,  'max':10, 'entry':'2025-03-06'},
     {'rank':4,  'ticker':'CLOZ', 'class':'Fixed Income',      'min':3,  'max':10, 'entry':'2026-04-22'},
     {'rank':5,  'ticker':'UUP',  'class':'Foreign Currency',  'min':4,  'max':12, 'entry':'2026-05-26'},
-    {'rank':6,  'ticker':'VYM',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-12'},
-    {'rank':7,  'ticker':'QTUM', 'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-13'},
-    {'rank':8,  'ticker':'NORW', 'class':'Intl Equity',       'min':2,  'max':6,  'entry':'2026-03-03'},
-    {'rank':9,  'ticker':'ROBO', 'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-19'},
-    {'rank':10, 'ticker':'DRAM', 'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-18'},
-    {'rank':11, 'ticker':'IWM',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-07'},
-    {'rank':12, 'ticker':'XTL',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-03-27'},
+    {'rank':6,  'ticker':'XTL',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-03-27'},
+    {'rank':7,  'ticker':'ROBO', 'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-19'},
+    {'rank':8,  'ticker':'IWM',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-07'},
+    {'rank':9,  'ticker':'HYG',  'class':'Domestic FI',       'min':3,  'max':10, 'entry':'2026-04-21'},
+    {'rank':10, 'ticker':'QTUM', 'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-13'},
+    {'rank':11, 'ticker':'VYM',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-12'},
+    {'rank':12, 'ticker':'DRAM', 'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-18'},
     {'rank':13, 'ticker':'EQRR', 'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-03-31'},
-    {'rank':14, 'ticker':'VXF',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-13'},
-    {'rank':15, 'ticker':'COM',  'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-03-17'},
+    {'rank':14, 'ticker':'DBMF', 'class':'Alternative',       'min':2,  'max':6,  'entry':'2026-05-29'},
+    {'rank':15, 'ticker':'NORW', 'class':'Intl Equity',       'min':2,  'max':6,  'entry':'2026-03-03'},
     {'rank':16, 'ticker':'TAN',  'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-20'},
-    {'rank':17, 'ticker':'OIH',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-02-05'},
-    {'rank':18, 'ticker':'AAAU', 'class':'Foreign Currency',  'min':4,  'max':12, 'entry':'2025-02-28'},
-    {'rank':19, 'ticker':'SOYB', 'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-04-17'},
-    {'rank':20, 'ticker':'PFIX', 'class':'US Fixed Income',   'min':3,  'max':10, 'entry':'2026-05-22'},
-    {'rank':21, 'ticker':'HYG',  'class':'Domestic FI',       'min':3,  'max':10, 'entry':'2026-04-21'},
-    {'rank':22, 'ticker':'EWW',  'class':'EM Equity',         'min':2,  'max':6,  'entry':'2026-04-16'},
+    {'rank':17, 'ticker':'VXF',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-05-13'},
+    {'rank':18, 'ticker':'COM',  'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-03-17'},
+    {'rank':19, 'ticker':'AAAU', 'class':'Foreign Currency',  'min':4,  'max':12, 'entry':'2025-02-28'},
+    {'rank':20, 'ticker':'OIH',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-02-05'},
+    {'rank':21, 'ticker':'UFO',  'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-29'},
+    {'rank':22, 'ticker':'BUG',  'class':'Global Equity',     'min':2,  'max':6,  'entry':'2026-05-29'},
     {'rank':23, 'ticker':'CNXT', 'class':'EM Equity',         'min':2,  'max':6,  'entry':'2026-04-28'},
     {'rank':24, 'ticker':'SLX',  'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-05-15'},
     {'rank':25, 'ticker':'DBB',  'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-05-19'},
-    {'rank':26, 'ticker':'XOP',  'class':'Domestic Equity',   'min':2,  'max':6,  'entry':'2026-02-02'},
-    {'rank':27, 'ticker':'CPER', 'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-04-24'},
-    {'rank':28, 'ticker':'TILL', 'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-05-21'},
-    {'rank':29, 'ticker':'BNO',  'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-02-13'},
+    {'rank':26, 'ticker':'CPER', 'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-04-24'},
+    {'rank':27, 'ticker':'SOYB', 'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-04-17'},
 ]
 
 # Threshold anchor: dynamically determined from the book.
 # Find the highest-ranked (lowest rank number) position that's at its class minimum.
 # Everything ranked above that anchor = confirmed above anchor's minimum %.
 # This shifts daily as Keith adds/trims. Do NOT hardcode — recalculate each run.
-HYG_RANK      = 21    # starting seed only — overridden below after book is simulated
+HYG_RANK      = 9     # starting seed only — overridden below after book is simulated
 HYG_THRESHOLD = 3.0   # starting seed only — overridden below
 
 ETF_MAP  = {row['ticker']: row for row in ETF_PRO_TABLE}
 RERANK_1W  = {'ROBO':14,'OIH':11,'VYM':10,'NORW':9,'EQRR':6,'CNXT':-10,'QTUM':2,'DRAM':2,
-               'DBB':2,'EWW':2,'AAAU':2,'SOYB':3,'IWM':-5,'VXF':-6,'SLX':-6,'XTL':-1,
-               'HYG':-11,'CPER':-2,'XOP':0,'BNO':0,'COM':0,'CLOZ':0,'TILL':None}
-RERANK_1M  = {'OIH':0,'NORW':5,'EQRR':1,'EWW':-2,'AAAU':-10,'SOYB':-3,'XOP':-4,'BNO':-4,
+               'DBB':2,'AAAU':2,'SOYB':3,'IWM':-5,'VXF':-6,'SLX':-6,'XTL':-1,
+               'HYG':-11,'CPER':-2,'COM':0,'CLOZ':0}
+RERANK_1M  = {'OIH':0,'NORW':5,'EQRR':1,'AAAU':-10,'SOYB':-3,
                'CPER':-4,'HYG':-17,'CLOZ':3,'XTL':-2}
 
 # ── Commentary parser ─────────────────────────────────────────────────────────
