@@ -73,12 +73,10 @@ ETF_PRO_TABLE = [
     {'rank':27, 'ticker':'SOYB', 'class':'Commodity',         'min':1,  'max':4,  'entry':'2026-04-17'},
 ]
 
-# Threshold anchor: dynamically determined from the book.
-# Find the highest-ranked (lowest rank number) position that's at its class minimum.
-# Everything ranked above that anchor = confirmed above anchor's minimum %.
-# This shifts daily as Keith adds/trims. Do NOT hardcode — recalculate each run.
-HYG_RANK      = 9     # starting seed only — overridden below after book is simulated
-HYG_THRESHOLD = 3.0   # starting seed only — overridden below
+# Threshold anchor: HYG (rank 9, min 3%) — hardcoded per Keith's stated methodology.
+# Everything ranked above HYG is confirmed above 3%. Update if Keith changes his anchor.
+HYG_RANK      = 9     # HYG's current rank — update when ETF_PRO_TABLE changes
+HYG_THRESHOLD = 3.0   # HYG's minimum %
 
 ETF_MAP  = {row['ticker']: row for row in ETF_PRO_TABLE}
 RERANK_1W  = {'ROBO':14,'OIH':11,'VYM':10,'NORW':9,'EQRR':6,'CNXT':-10,'QTUM':2,'DRAM':2,
@@ -199,37 +197,27 @@ def main():
     if '2026-05-26' not in dates_parsed:
         all_moves.extend(parse_moves(commentary_526, '2026-05-26'))
         print('  2026-05-26: injected from screenshot (PDF not in folder)')
-    # PFIX entered 5/22 (confirmed by ETF Pro entry date)
-    all_moves.append(('2026-05-22', 'PFIX', 'add_min', get_min('PFIX')*100))
+    # PFIX was sold 2026-05-29 — no longer in ETF_PRO_TABLE, injection removed
 
     book, history = simulate_book(all_moves)
 
-    # ── Compute dynamic threshold anchor ─────────────────────────────────────
-    # Look for the deepest-ranked FI/FX position (min >= 3%) that is currently
-    # sitting at its class minimum. FI min=3%, FX min=4% — higher than equity
-    # min=2%. A FI/FX position at minimum ranked below equity positions means
-    # those equity positions must hold MORE than that FI/FX minimum.
-    # Example: HYG (FI, min 3%, rank 21) at minimum → everything ranked above
-    # rank 21 is confirmed >3%. This anchor shifts as the book changes.
-    threshold_ticker = None
-    threshold_rank   = None
-    threshold_pct    = None
-    for row in sorted(ETF_PRO_TABLE, key=lambda r: r['rank'], reverse=True):
-        t2 = row['ticker']
-        if t2 == 'FDRXX': continue
-        if row['min'] < 3: continue   # only FI/FX class positions (min >= 3%)
-        comm = round(book.get(t2, 0.0), 2)
-        at_min = 0 < comm <= row['min'] + 0.25
-        if at_min:
-            if threshold_rank is None or row['rank'] > threshold_rank:
-                threshold_ticker = t2
-                threshold_rank   = row['rank']
-                threshold_pct    = row['min']
-    if threshold_ticker:
-        print(f"  Anchor: {threshold_ticker} rank={threshold_rank} min={threshold_pct}% "
+    # ── Threshold anchor: HYG (hardcoded per user confirmation) ─────────────
+    # HYG is Keith's stated anchor — everything ranked above HYG is confirmed
+    # above HYG's minimum (3%). Dynamic detection was unreliable (picked AAAU
+    # which Keith actually holds below its 4% min, making it invalid as anchor).
+    # Update threshold_ticker/rank/pct here if Keith changes his anchor position.
+    HYG_ROW = next((r for r in ETF_PRO_TABLE if r['ticker'] == 'HYG'), None)
+    if HYG_ROW:
+        threshold_ticker = 'HYG'
+        threshold_rank   = HYG_ROW['rank']
+        threshold_pct    = HYG_ROW['min']
+        print(f"  Anchor: HYG rank={threshold_rank} min={threshold_pct}% "
               f"— positions above rank #{threshold_rank} confirmed >{threshold_pct}%")
     else:
-        print("  No FI/FX anchor at minimum — rank-floor not applied")
+        threshold_ticker = None
+        threshold_rank   = None
+        threshold_pct    = None
+        print("  [WARN] HYG not found in ETF_PRO_TABLE — rank-floor not applied")
 
     # Build position_sizing output
     positions = []
@@ -319,7 +307,7 @@ def main():
     print("\n--- Current book ---")
     for p in positions:
         if p['estimated_pct'] > 0:
-            flag = chr(9650) if (p['rerank_1w'] or 0) > 0 else (chr(9660) if (p['rerank_1w'] or 0) < 0 else '->')
+            flag = ' +' if (p['rerank_1w'] or 0) > 0 else (' -' if (p['rerank_1w'] or 0) < 0 else '->')
             adj  = ' [rank-adj]' if p['size_source'] == 'rank_floor' else ''
             print(f"  {p['rank']:>2}. {p['ticker']:<6} {p['estimated_pct']:>4.1f}% "
                   f"[{p['tier'].upper():<3}] {flag}{abs(p['rerank_1w'] or 0):>2} 1w  {adj}")
