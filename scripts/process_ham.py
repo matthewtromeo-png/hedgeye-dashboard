@@ -357,3 +357,29 @@ def main():
         print(f"Per-fund daily adds: {non_empty}")
     else:
         print("Per-fund daily adds: none (no new tickers vs yesterday)")
+
+    # ── Write to macro_context.json ───────────────────────────────────
+    if not os.path.exists(CTX_PATH):
+        ctx = {}
+    else:
+        with open(CTX_PATH, 'r', encoding='utf-8') as f:
+            try:
+                ctx = json.load(f)
+            except Exception:
+                print("[WARN] macro_context.json unreadable -- creating fresh")
+                ctx = {}
+
+    ctx['ham_per_fund'] = ham_per_fund
+    ctx['ham_deltas']   = ham_deltas
+
+    tmp_path = CTX_PATH + '.tmp'
+    with open(tmp_path, 'w', encoding='utf-8') as f:
+        json.dump(ctx, f, indent=2, ensure_ascii=False)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_path, CTX_PATH)
+    print(f"Written     : macro_context.json  (ham_per_fund + ham_deltas)")
+
+
+if __name__ == '__main__':
+    main()
