@@ -170,12 +170,12 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
     : liveSource?.modifiedAt
       ? new Date(liveSource.modifiedAt).toLocaleDateString([], {month:'short',day:'numeric',year:'numeric'})
       : '—';
-  const FUNDS = ['HECA','HEFT','HGRO','HELS'].filter(f => funds[f]);
+  const FUNDS = ['HECA','HEFT','HGRO','HELS','ADDS'].filter(f => funds[f]);
   const myTickers = myInput.split(/[\s,\n]+/).map(s => s.trim().toUpperCase()).filter(Boolean);
   const sssSet = new Set(window.HE.SSS.map(s => s.ticker));
   const pct = w => w === 0 ? '—' : (w > 0 ? '+' : '') + (w*100).toFixed(2) + '%';
   const delta_fmt = d => d === 0 ? '' : (d > 0 ? '+' : '') + (d*100).toFixed(2) + '%';
-  const fundColors = {HECA:'#1A4D8F',HEFT:'#27500A',HGRO:'#B8860B',HELS:'#C8302A'};
+  const fundColors = {HECA:'#1A4D8F',HEFT:'#27500A',HGRO:'#B8860B',HELS:'#C8302A',ADDS:'#6B21A8'};
 
   const AlignBadge = ({ticker}) => {
     const align = getQuadAlign(ticker);
@@ -208,7 +208,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
   };
 
   const FundSummary = () => (
-    <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:10,marginBottom:20}}>
+    <div style={{display:'grid',gridTemplateColumns:'repeat(5,1fr)',gap:10,marginBottom:20}}>
       {FUNDS.map(f => {
         const longs = (funds[f]||[]).filter(h => h.isLong && !h.isCash && !h.isSwap);
         const shorts = (funds[f]||[]).filter(h => h.isShort && !h.isSwap);
@@ -280,7 +280,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                   );
                   // Per-fund groups first
                   const groups = Object.entries(pfAdds)
-                    .filter(([f, arr]) => arr && arr.length > 0 && f !== 'ADDS');
+                    .filter(([f, arr]) => arr && arr.length > 0);
                   // Remaining (ADDS account or not attributed)
                   const attributed = new Set(groups.flatMap(([,arr]) => arr.map(x=>x.ticker)));
                   const unattributed = addedList.filter(t => !attributed.has(t));

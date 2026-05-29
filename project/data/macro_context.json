@@ -6,7 +6,8 @@
     "Macro Show Summary 5/28/2026",
     "Portfolio Solutions ETF Re-Rank 5/28/2026",
     "Signal Strength Stocks 5/28/2026 (85 tickers)",
-    "Portfolio Solutions PDFs + ETF Pro table (2026-05-28)"
+    "Portfolio Solutions PDFs + ETF Pro table (2026-05-28)",
+    "Portfolio Solutions PDFs + ETF Pro table (2026-05-29)"
   ],
   "etf_rerank": {
     "date": "2026-05-28",
@@ -4427,7 +4428,9 @@
           "signal_date": "2025-05-26",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 367,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 343.4,
+          "pct_since_entry": 0.0
         },
         "OUT": {
           "sector": "Communications",
@@ -4435,7 +4438,9 @@
           "signal_date": "2025-11-17",
           "analyst": "Andrew Freedman",
           "days_on_signal": 192,
-          "best_idea_rank": "4/8"
+          "best_idea_rank": "4/8",
+          "recent_price": 32.6,
+          "pct_since_entry": 47.5
         },
         "CASY": {
           "sector": "Consumer Staples",
@@ -4443,7 +4448,9 @@
           "signal_date": "2026-01-19",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 129,
-          "best_idea_rank": "1/11"
+          "best_idea_rank": "1/11",
+          "recent_price": 777.3,
+          "pct_since_entry": 21.4
         },
         "AMAT": {
           "sector": "Global Tech",
@@ -4451,7 +4458,9 @@
           "signal_date": "2026-02-09",
           "analyst": "Felix Wang",
           "days_on_signal": 108,
-          "best_idea_rank": "8/10"
+          "best_idea_rank": "8/10",
+          "recent_price": 456.5,
+          "pct_since_entry": 41.6
         },
         "ENB": {
           "sector": "Energy",
@@ -4459,7 +4468,9 @@
           "signal_date": "2026-02-23",
           "analyst": "Fernando Valle",
           "days_on_signal": 94,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 56.0,
+          "pct_since_entry": 8.7
         },
         "CAVA": {
           "sector": "Restaurants",
@@ -4467,7 +4478,9 @@
           "signal_date": "2026-03-02",
           "analyst": "Bennett Cheer",
           "days_on_signal": 87,
-          "best_idea_rank": "1/3"
+          "best_idea_rank": "1/3",
+          "recent_price": 79.5,
+          "pct_since_entry": -3.6
         },
         "MUSA": {
           "sector": "Consumer Staples",
@@ -4475,7 +4488,9 @@
           "signal_date": "2026-03-09",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 80,
-          "best_idea_rank": "2/11"
+          "best_idea_rank": "2/11",
+          "recent_price": 514.7,
+          "pct_since_entry": 17.4
         },
         "SWBI": {
           "sector": "Retail",
@@ -4483,7 +4498,9 @@
           "signal_date": "2026-03-09",
           "analyst": "Brian McGough",
           "days_on_signal": 80,
-          "best_idea_rank": "7/23"
+          "best_idea_rank": "7/23",
+          "recent_price": 15.1,
+          "pct_since_entry": 7.9
         },
         "RSI": {
           "sector": "GLL",
@@ -4491,7 +4508,9 @@
           "signal_date": "2026-03-16",
           "analyst": "Sean Jenkins",
           "days_on_signal": 73,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 26.5,
+          "pct_since_entry": 30.5
         },
         "CZR": {
           "sector": "GLL",
@@ -4499,7 +4518,9 @@
           "signal_date": "2026-03-16",
           "analyst": "Sean Jenkins",
           "days_on_signal": 73,
-          "best_idea_rank": "4/7"
+          "best_idea_rank": "4/7",
+          "recent_price": 29.0,
+          "pct_since_entry": 3.2
         },
         "FCFS": {
           "sector": "Financials",
@@ -4507,7 +4528,9 @@
           "signal_date": "2026-03-23",
           "analyst": "Josh Steiner",
           "days_on_signal": 66,
-          "best_idea_rank": "6/6"
+          "best_idea_rank": "6/6",
+          "recent_price": 223.8,
+          "pct_since_entry": 16.5
         },
         "ULS": {
           "sector": "Industrials",
@@ -4515,7 +4538,9 @@
           "signal_date": "2026-03-30",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 59,
-          "best_idea_rank": "4/12"
+          "best_idea_rank": "4/12",
+          "recent_price": 98.6,
+          "pct_since_entry": 17.5
         },
         "MAR": {
           "sector": "GLL",
@@ -4523,7 +4548,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Sean Jenkins",
           "days_on_signal": 48,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 386.7,
+          "pct_since_entry": 9.2
         },
         "CSX": {
           "sector": "Industrials",
@@ -4531,7 +4558,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 48,
-          "best_idea_rank": "12/12"
+          "best_idea_rank": "12/12",
+          "recent_price": 46.2,
+          "pct_since_entry": 9.5
         },
         "MRVL": {
           "sector": "Global Tech",
@@ -4539,7 +4568,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Felix Wang",
           "days_on_signal": 48,
-          "best_idea_rank": "1/10"
+          "best_idea_rank": "1/10",
+          "recent_price": 202.7,
+          "pct_since_entry": 57.7
         },
         "LRCX": {
           "sector": "Global Tech",
@@ -4547,7 +4578,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Felix Wang",
           "days_on_signal": 48,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 322.1,
+          "pct_since_entry": 22.1
         },
         "SITM": {
           "sector": "Global Tech",
@@ -4555,7 +4588,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Felix Wang",
           "days_on_signal": 48,
-          "best_idea_rank": "5/10"
+          "best_idea_rank": "5/10",
+          "recent_price": 737.0,
+          "pct_since_entry": 75.4
         },
         "NVDA": {
           "sector": "Global Tech",
@@ -4563,7 +4598,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Felix Wang",
           "days_on_signal": 48,
-          "best_idea_rank": "4/10"
+          "best_idea_rank": "4/10",
+          "recent_price": 212.9,
+          "pct_since_entry": 12.9
         },
         "AMZN": {
           "sector": "Retail",
@@ -4571,7 +4608,9 @@
           "signal_date": "2026-04-10",
           "analyst": "Brian McGough",
           "days_on_signal": 48,
-          "best_idea_rank": "5/23"
+          "best_idea_rank": "5/23",
+          "recent_price": 269.3,
+          "pct_since_entry": 13.0
         },
         "VIK": {
           "sector": "GLL",
@@ -4579,7 +4618,9 @@
           "signal_date": "2026-04-13",
           "analyst": "Sean Jenkins",
           "days_on_signal": 45,
-          "best_idea_rank": "1/7"
+          "best_idea_rank": "1/7",
+          "recent_price": 93.0,
+          "pct_since_entry": 20.6
         },
         "GOOGL": {
           "sector": "Communications",
@@ -4587,7 +4628,9 @@
           "signal_date": "2026-04-16",
           "analyst": "Andrew Freedman",
           "days_on_signal": 42,
-          "best_idea_rank": "1/8"
+          "best_idea_rank": "1/8",
+          "recent_price": 389.1,
+          "pct_since_entry": 15.3
         },
         "AAPL": {
           "sector": "Global Tech",
@@ -4595,7 +4638,9 @@
           "signal_date": "2026-04-16",
           "analyst": "Felix Wang",
           "days_on_signal": 42,
-          "best_idea_rank": "7/10"
+          "best_idea_rank": "7/10",
+          "recent_price": 309.8,
+          "pct_since_entry": 18.0
         },
         "ROKU": {
           "sector": "Communications",
@@ -4603,7 +4648,9 @@
           "signal_date": "2026-04-20",
           "analyst": "Andrew Freedman",
           "days_on_signal": 38,
-          "best_idea_rank": "2/8"
+          "best_idea_rank": "2/8",
+          "recent_price": 129.5,
+          "pct_since_entry": 12.1
         },
         "HST": {
           "sector": "GLL",
@@ -4611,7 +4658,9 @@
           "signal_date": "2026-04-20",
           "analyst": "Sean Jenkins",
           "days_on_signal": 38,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 23.5,
+          "pct_since_entry": 10.8
         },
         "GLASF": {
           "sector": "Cannabis",
@@ -4619,7 +4668,9 @@
           "signal_date": "2026-04-20",
           "analyst": "Bennett Cheer",
           "days_on_signal": 38,
-          "best_idea_rank": "1/1"
+          "best_idea_rank": "1/1",
+          "recent_price": 11.5,
+          "pct_since_entry": 32.2
         },
         "SBUX": {
           "sector": "Restaurants",
@@ -4627,7 +4678,9 @@
           "signal_date": "2026-04-21",
           "analyst": "Bennett Cheer",
           "days_on_signal": 37,
-          "best_idea_rank": "2/3"
+          "best_idea_rank": "2/3",
+          "recent_price": 101.5,
+          "pct_since_entry": 4.3
         },
         "ROK": {
           "sector": "Industrials",
@@ -4635,7 +4688,9 @@
           "signal_date": "2026-04-21",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 37,
-          "best_idea_rank": "8/12"
+          "best_idea_rank": "8/12",
+          "recent_price": 456.6,
+          "pct_since_entry": 10.3
         },
         "CP": {
           "sector": "Industrials",
@@ -4643,7 +4698,9 @@
           "signal_date": "2026-04-21",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 37,
-          "best_idea_rank": "11/12"
+          "best_idea_rank": "11/12",
+          "recent_price": 90.5,
+          "pct_since_entry": 9.8
         },
         "LAMR": {
           "sector": "Communications",
@@ -4651,7 +4708,9 @@
           "signal_date": "2026-04-21",
           "analyst": "Andrew Freedman",
           "days_on_signal": 37,
-          "best_idea_rank": "5/8"
+          "best_idea_rank": "5/8",
+          "recent_price": 152.1,
+          "pct_since_entry": 13.3
         },
         "TWLO": {
           "sector": "Software",
@@ -4659,7 +4718,9 @@
           "signal_date": "2026-04-22",
           "analyst": "Andrew Freedman",
           "days_on_signal": 36,
-          "best_idea_rank": "1/3"
+          "best_idea_rank": "1/3",
+          "recent_price": 185.9,
+          "pct_since_entry": 23.6
         },
         "LFST": {
           "sector": "Healthcare",
@@ -4667,7 +4728,9 @@
           "signal_date": "2026-04-22",
           "analyst": "Tom Tobin",
           "days_on_signal": 36,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 7.7,
+          "pct_since_entry": 13.2
         },
         "UNH": {
           "sector": "Healthcare",
@@ -4675,7 +4738,9 @@
           "signal_date": "2026-04-24",
           "analyst": "Tom Tobin",
           "days_on_signal": 34,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 384.5,
+          "pct_since_entry": 9.0
         },
         "SXT": {
           "sector": "Consumer Staples",
@@ -4683,7 +4748,9 @@
           "signal_date": "2026-04-27",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 31,
-          "best_idea_rank": "3/11"
+          "best_idea_rank": "3/11",
+          "recent_price": 117.3,
+          "pct_since_entry": -4.2
         },
         "CACC": {
           "sector": "Financials",
@@ -4691,7 +4758,9 @@
           "signal_date": "2026-04-28",
           "analyst": "Josh Steiner",
           "days_on_signal": 30,
-          "best_idea_rank": "2/6"
+          "best_idea_rank": "2/6",
+          "recent_price": 559.8,
+          "pct_since_entry": 9.7
         },
         "MARA": {
           "sector": "Digital Assets",
@@ -4699,7 +4768,9 @@
           "signal_date": "2026-05-04",
           "analyst": "Josh Steiner",
           "days_on_signal": 24,
-          "best_idea_rank": "1/6"
+          "best_idea_rank": "1/6",
+          "recent_price": 14.1,
+          "pct_since_entry": 22.6
         },
         "CRCL": {
           "sector": "Digital Assets",
@@ -4707,7 +4778,9 @@
           "signal_date": "2026-05-04",
           "analyst": "Josh Steiner",
           "days_on_signal": 24,
-          "best_idea_rank": "3/6"
+          "best_idea_rank": "3/6",
+          "recent_price": 104.7,
+          "pct_since_entry": -9.3
         },
         "AFRM": {
           "sector": "Financials",
@@ -4715,7 +4788,9 @@
           "signal_date": "2026-05-04",
           "analyst": "Josh Steiner",
           "days_on_signal": 24,
-          "best_idea_rank": "3/6"
+          "best_idea_rank": "3/6",
+          "recent_price": 72.5,
+          "pct_since_entry": 7.7
         },
         "URI": {
           "sector": "Industrials",
@@ -4723,7 +4798,9 @@
           "signal_date": "2026-05-04",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 24,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 991.9,
+          "pct_since_entry": 6.5
         },
         "RIO": {
           "sector": "Materials",
@@ -4731,7 +4808,9 @@
           "signal_date": "2026-05-04",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 24,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 106.9,
+          "pct_since_entry": 8.0
         },
         "BHP": {
           "sector": "Materials",
@@ -4739,7 +4818,9 @@
           "signal_date": "2026-05-04",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 24,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 88.3,
+          "pct_since_entry": 13.4
         },
         "AKAM": {
           "sector": "Software",
@@ -4747,7 +4828,9 @@
           "signal_date": "2026-05-05",
           "analyst": "Andrew Freedman",
           "days_on_signal": 23,
-          "best_idea_rank": "3/3"
+          "best_idea_rank": "3/3",
+          "recent_price": 144.0,
+          "pct_since_entry": 24.7
         },
         "APLE": {
           "sector": "GLL",
@@ -4755,7 +4838,9 @@
           "signal_date": "2026-05-05",
           "analyst": "Sean Jenkins",
           "days_on_signal": 23,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 15.0,
+          "pct_since_entry": 11.1
         },
         "CMI": {
           "sector": "Industrials",
@@ -4763,7 +4848,9 @@
           "signal_date": "2026-05-06",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 22,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 672.5,
+          "pct_since_entry": -5.2
         },
         "WRBY": {
           "sector": "Retail",
@@ -4771,7 +4858,9 @@
           "signal_date": "2026-05-07",
           "analyst": "Brian McGough",
           "days_on_signal": 21,
-          "best_idea_rank": "1/23"
+          "best_idea_rank": "1/23",
+          "recent_price": 25.5,
+          "pct_since_entry": -3.0
         },
         "DDOG": {
           "sector": "Software",
@@ -4779,7 +4868,9 @@
           "signal_date": "2026-05-11",
           "analyst": "Andrew Freedman",
           "days_on_signal": 17,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 228.6,
+          "pct_since_entry": 14.2
         },
         "MNST": {
           "sector": "Consumer Staples",
@@ -4787,7 +4878,9 @@
           "signal_date": "2026-05-11",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 17,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 88.9,
+          "pct_since_entry": 3.0
         },
         "PRMB": {
           "sector": "Consumer Staples",
@@ -4795,7 +4888,9 @@
           "signal_date": "2026-05-11",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 17,
-          "best_idea_rank": "6/11"
+          "best_idea_rank": "6/11",
+          "recent_price": 25.0,
+          "pct_since_entry": 7.8
         },
         "PM": {
           "sector": "Consumer Staples",
@@ -4803,7 +4898,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 16,
-          "best_idea_rank": "4/11"
+          "best_idea_rank": "4/11",
+          "recent_price": 179.7,
+          "pct_since_entry": -1.3
         },
         "AZTAF": {
           "sector": "Retail",
@@ -4811,7 +4908,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Brian McGough",
           "days_on_signal": 16,
-          "best_idea_rank": "6/23"
+          "best_idea_rank": "6/23",
+          "recent_price": 111.2,
+          "pct_since_entry": 4.4
         },
         "BLMN": {
           "sector": "Restaurants",
@@ -4819,7 +4918,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Bennett Cheer",
           "days_on_signal": 16,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 8.3,
+          "pct_since_entry": -1.2
         },
         "V": {
           "sector": "Financials",
@@ -4827,7 +4928,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Josh Steiner",
           "days_on_signal": 16,
-          "best_idea_rank": "5/6"
+          "best_idea_rank": "5/6",
+          "recent_price": 321.6,
+          "pct_since_entry": -1.2
         },
         "ATRO": {
           "sector": "Industrials",
@@ -4835,7 +4938,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Jay Van Sciver",
           "days_on_signal": 16,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 89.7,
+          "pct_since_entry": 21.5
         },
         "ILMN": {
           "sector": "Healthcare",
@@ -4843,7 +4948,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Tom Tobin",
           "days_on_signal": 16,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 156.0,
+          "pct_since_entry": 7.7
         },
         "NVO": {
           "sector": "Healthcare",
@@ -4851,7 +4958,9 @@
           "signal_date": "2026-05-12",
           "analyst": "Tom Tobin",
           "days_on_signal": 16,
-          "best_idea_rank": "4/4"
+          "best_idea_rank": "4/4",
+          "recent_price": 45.6,
+          "pct_since_entry": -1.9
         },
         "RHP": {
           "sector": "GLL",
@@ -4859,7 +4968,9 @@
           "signal_date": "2026-05-13",
           "analyst": "Tom Tobin",
           "days_on_signal": 15,
-          "best_idea_rank": "3/7"
+          "best_idea_rank": "3/7",
+          "recent_price": 115.8,
+          "pct_since_entry": 8.1
         },
         "BTI": {
           "sector": "Consumer Staples",
@@ -4867,7 +4978,9 @@
           "signal_date": "2026-05-13",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 15,
-          "best_idea_rank": "5/11"
+          "best_idea_rank": "5/11",
+          "recent_price": 63.3,
+          "pct_since_entry": -2.0
         },
         "BJRI": {
           "sector": "Restaurants",
@@ -4875,7 +4988,9 @@
           "signal_date": "2026-05-18",
           "analyst": "Bennett Cheer",
           "days_on_signal": 10,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 46.8,
+          "pct_since_entry": 11.4
         },
         "CPAY": {
           "sector": "Financials",
@@ -4883,7 +4998,9 @@
           "signal_date": "2026-05-19",
           "analyst": "Josh Steiner",
           "days_on_signal": 9,
-          "best_idea_rank": "4/6"
+          "best_idea_rank": "4/6",
+          "recent_price": 353.9,
+          "pct_since_entry": 2.0
         },
         "HLT": {
           "sector": "GLL",
@@ -4891,7 +5008,9 @@
           "signal_date": "2026-05-19",
           "analyst": "Sean Jenkins",
           "days_on_signal": 9,
-          "best_idea_rank": "5/7"
+          "best_idea_rank": "5/7",
+          "recent_price": 337.7,
+          "pct_since_entry": 6.3
         },
         "TXG": {
           "sector": "Healthcare",
@@ -4899,7 +5018,9 @@
           "signal_date": "2026-05-19",
           "analyst": "Tom Tobin",
           "days_on_signal": 9,
-          "best_idea_rank": "1/4"
+          "best_idea_rank": "1/4",
+          "recent_price": 27.2,
+          "pct_since_entry": 25.3
         },
         "LYV": {
           "sector": "GLL",
@@ -4907,7 +5028,9 @@
           "signal_date": "2026-05-19",
           "analyst": "Andrew Freedman",
           "days_on_signal": 9,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 167.3,
+          "pct_since_entry": 1.6
         },
         "LLY": {
           "sector": "Healthcare",
@@ -4915,7 +5038,9 @@
           "signal_date": "2026-05-19",
           "analyst": "Tom Tobin",
           "days_on_signal": 9,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 1127.7,
+          "pct_since_entry": 11.4
         },
         "WEN": {
           "sector": "Restaurants",
@@ -4923,7 +5048,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Bennett Cheer",
           "days_on_signal": 2,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 7.6,
+          "pct_since_entry": 1.3
         },
         "MPLX": {
           "sector": "Energy",
@@ -4931,7 +5058,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Fernando Valle",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 55.5,
+          "pct_since_entry": -1.8
         },
         "TXRH": {
           "sector": "Restaurants",
@@ -4939,7 +5068,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Bennett Cheer",
           "days_on_signal": 2,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 182.3,
+          "pct_since_entry": 1.8
         },
         "AS": {
           "sector": "Retail",
@@ -4947,7 +5078,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Brian McGough",
           "days_on_signal": 2,
-          "best_idea_rank": "3/23"
+          "best_idea_rank": "3/23",
+          "recent_price": 36.4,
+          "pct_since_entry": -5.7
         },
         "NET": {
           "sector": "Software",
@@ -4955,7 +5088,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "2/3"
+          "best_idea_rank": "2/3",
+          "recent_price": 225.2,
+          "pct_since_entry": 2.2
         },
         "CHEF": {
           "sector": "Consumer Staples",
@@ -4963,7 +5098,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 2,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 78.0,
+          "pct_since_entry": 3.2
         },
         "SNOW": {
           "sector": "Software",
@@ -4971,7 +5108,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 238.3,
+          "pct_since_entry": 33.6
         },
         "DT": {
           "sector": "Software",
@@ -4979,7 +5118,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 40.3,
+          "pct_since_entry": -1.9
         },
         "MDB": {
           "sector": "Software",
@@ -4987,7 +5128,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 324.9,
+          "pct_since_entry": 5.5
         },
         "CRWD": {
           "sector": "Software",
@@ -4995,7 +5138,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 671.9,
+          "pct_since_entry": -0.4
         },
         "OKTA": {
           "sector": "Software",
@@ -5003,7 +5148,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 94.9,
+          "pct_since_entry": -0.3
         },
         "PANW": {
           "sector": "Software",
@@ -5011,7 +5158,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Andrew Freedman",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 257.0,
+          "pct_since_entry": -0.5
         },
         "PSX": {
           "sector": "Energy",
@@ -5019,7 +5168,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Fernando Valle",
           "days_on_signal": 2,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 177.1,
+          "pct_since_entry": 0.0
         },
         "PAA": {
           "sector": "Energy",
@@ -5027,7 +5178,9 @@
           "signal_date": "2026-05-26",
           "analyst": "Fernando Valle",
           "days_on_signal": 2,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 22.9,
+          "pct_since_entry": -3.0
         },
         "ALLY": {
           "sector": "Financials",
@@ -5035,7 +5188,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Josh Steiner",
           "days_on_signal": 1,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 42.2,
+          "pct_since_entry": -1.9
         },
         "FICO": {
           "sector": "Financials",
@@ -5043,7 +5198,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Josh Steiner",
           "days_on_signal": 1,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 1316.2,
+          "pct_since_entry": 2.8
         },
         "SG": {
           "sector": "Restaurants",
@@ -5051,7 +5208,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Bennett Cheer",
           "days_on_signal": 1,
-          "best_idea_rank": "KM Signal"
+          "best_idea_rank": "KM Signal",
+          "recent_price": 10.4,
+          "pct_since_entry": 5.1
         },
         "MGM": {
           "sector": "GLL",
@@ -5059,7 +5218,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Sean Jenkins",
           "days_on_signal": 1,
-          "best_idea_rank": "6/7"
+          "best_idea_rank": "6/7",
+          "recent_price": 42.9,
+          "pct_since_entry": 0.9
         },
         "CFG": {
           "sector": "Financials",
@@ -5067,7 +5228,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Josh Steiner",
           "days_on_signal": 1,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 62.0,
+          "pct_since_entry": -1.9
         },
         "GPN": {
           "sector": "Financials",
@@ -5075,7 +5238,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Josh Steiner",
           "days_on_signal": 1,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 74.0,
+          "pct_since_entry": -0.8
         },
         "BBWI": {
           "sector": "Retail",
@@ -5083,7 +5248,9 @@
           "signal_date": "2026-05-27",
           "analyst": "Brian McGough",
           "days_on_signal": 1,
-          "best_idea_rank": "2/23"
+          "best_idea_rank": "2/23",
+          "recent_price": 20.1,
+          "pct_since_entry": 2.6
         },
         "WST": {
           "sector": "Healthcare",
@@ -5091,7 +5258,9 @@
           "signal_date": "2026-05-28",
           "analyst": "Tom Tobin",
           "days_on_signal": 0,
-          "best_idea_rank": "Bench"
+          "best_idea_rank": "Bench",
+          "recent_price": 321.6,
+          "pct_since_entry": 0.0
         },
         "DLTR": {
           "sector": "Consumer Staples",
@@ -5099,7 +5268,9 @@
           "signal_date": "2026-05-28",
           "analyst": "Daniel Biolsi",
           "days_on_signal": 0,
-          "best_idea_rank": "10/11"
+          "best_idea_rank": "10/11",
+          "recent_price": 113.2,
+          "pct_since_entry": 0.0
         }
       },
       "source_date": "2026-05-22",
@@ -8084,6 +8255,1949 @@
       "HELS": "Individual equities — SSS ideas, position monitors, call conversation picks",
       "ADDS": "Recent additions across all funds"
     },
+    "HECA": [
+      {
+        "ticker": "DBMF",
+        "name": "iMGP DBi Managed Futures Strategy ETF",
+        "weight": 7.41,
+        "price": 31.01,
+        "mv": 25842648.65,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "XTL",
+        "name": "State Street SPDR S&P Telecom ETF",
+        "weight": 7.18,
+        "price": 243.69,
+        "mv": 25033542.63,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "UUP",
+        "name": "Invesco DB US Dollar Index Bullish Fund",
+        "weight": 6.97,
+        "price": 27.75,
+        "mv": 24309915.75,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "FESM",
+        "name": "Fidelity Enhanced Small Cap Core ETF",
+        "weight": 6.55,
+        "price": 45.67,
+        "mv": 22851578.21,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "JAAA",
+        "name": "Janus Henderson AAA CLO ETF",
+        "weight": 6.3,
+        "price": 50.72,
+        "mv": 21972816.96,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "DBJP",
+        "name": "Xtrackers MSCI Japan Hedged Equity ETF",
+        "weight": 5.81,
+        "price": 111.6142,
+        "mv": 20278291.08,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "FWD",
+        "name": "AB Disruptors ETF",
+        "weight": 5.66,
+        "price": 139.9,
+        "mv": 19756398.2,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "SLX",
+        "name": "VanEck Steel ETF",
+        "weight": 5.46,
+        "price": 110.37,
+        "mv": 19054497.54,
+        "first_seen": "2026-05-15",
+        "days_held": 13
+      },
+      {
+        "ticker": "OIH",
+        "name": "VanEck Oil Services ETF",
+        "weight": 4.97,
+        "price": 425.53,
+        "mv": 17327581.6,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "VYM",
+        "name": "Vanguard High Dividend Yield ETF",
+        "weight": 4.93,
+        "price": 158.37,
+        "mv": 17199298.74,
+        "first_seen": "2026-04-29",
+        "days_held": 29
+      },
+      {
+        "ticker": "TAN",
+        "name": "Invesco Solar ETF",
+        "weight": 4.52,
+        "price": 70.51,
+        "mv": 15768080.79,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "NOBL",
+        "name": "ProShares S&P 500 Dividend Aristocrats ETF",
+        "weight": 4.49,
+        "price": 53.95,
+        "mv": 15646794.8,
+        "first_seen": "2026-05-27",
+        "days_held": 1
+      },
+      {
+        "ticker": "VTIP",
+        "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
+        "weight": 3.29,
+        "price": 50.34,
+        "mv": 11467452.0,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "USO",
+        "name": "United States Oil Fund LP",
+        "weight": 3.07,
+        "price": 131.03,
+        "mv": 10710523.23,
+        "first_seen": "2026-04-15",
+        "days_held": 43
+      },
+      {
+        "ticker": "DBB",
+        "name": "Invesco DB Base Metals Fund",
+        "weight": 2.98,
+        "price": 25.73,
+        "mv": 10410306.54,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "IHF",
+        "name": "iShares U.S. Healthcare Providers ETF",
+        "weight": 2.56,
+        "price": 50.44,
+        "mv": 8916228.36,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "IDMO",
+        "name": "Invesco S&P International Developed Momentum ETF",
+        "weight": 1.87,
+        "price": 60.5,
+        "mv": 6517604.5,
+        "first_seen": "2026-05-15",
+        "days_held": 13
+      },
+      {
+        "ticker": "PICK",
+        "name": "iShares MSCI Global Metals & Mining Producers ETF",
+        "weight": 0.69,
+        "price": 65.43,
+        "mv": 2420975.43,
+        "first_seen": "2026-05-15",
+        "days_held": 13
+      }
+    ],
+    "HEFT": [
+      {
+        "ticker": "CERY",
+        "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
+        "weight": 13.66,
+        "price": 36.37,
+        "mv": 14161896.08,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "VTI",
+        "name": "Vanguard Total Stock Market ETF",
+        "weight": 9.11,
+        "price": 369.36,
+        "mv": 9443427.12,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "ARTY",
+        "name": "iShares Future AI & Tech ETF",
+        "weight": 4.7,
+        "price": 71.09,
+        "mv": 4870731.35,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "OIH",
+        "name": "VanEck Oil Services ETF",
+        "weight": 3.96,
+        "price": 425.53,
+        "mv": 4103385.79,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "DRAM",
+        "name": "Roundhill Memory ETF",
+        "weight": 3.57,
+        "price": 60.73,
+        "mv": 3700886.2,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "XLE",
+        "name": "State Street Energy Select Sector SPDR ETF",
+        "weight": 2.95,
+        "price": 56.99,
+        "mv": 3062927.55,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "CIBR",
+        "name": "First Trust NASDAQ Cybersecurity ETF",
+        "weight": 2.69,
+        "price": 82.04,
+        "mv": 2788293.48,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "IHE",
+        "name": "iShares U.S. Pharmaceuticals ETF",
+        "weight": 2.52,
+        "price": 91.87,
+        "mv": 2615171.42,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "FITE",
+        "name": "State Street SPDR S&P Kensho Future Security ETF",
+        "weight": 2.21,
+        "price": 111.6235,
+        "mv": 2293528.05,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "weight": 2.18,
+        "price": 121.77,
+        "mv": 2261268.9,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "AVEM",
+        "name": "Avantis Emerging Markets Equity ETF",
+        "weight": 2.02,
+        "price": 96.53,
+        "mv": 2091032.86,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "XAR",
+        "name": "State Street SPDR S&P Aerospace & Defense ETF",
+        "weight": 2.01,
+        "price": 278.9,
+        "mv": 2087287.6,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "GLD",
+        "name": "SPDR Gold Shares",
+        "weight": 1.95,
+        "price": 408.49,
+        "mv": 2024476.44,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "ADM",
+        "name": "Archer-Daniels-Midland Co",
+        "weight": 1.63,
+        "price": 79.55,
+        "mv": 1691789.85,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "MO",
+        "name": "Altria Group Inc",
+        "weight": 1.58,
+        "price": 72.11,
+        "mv": 1633075.17,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "ROBO",
+        "name": "ROBO Global Robotics and Automation Index ETF",
+        "weight": 1.58,
+        "price": 88.66,
+        "mv": 1634624.42,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "SLX",
+        "name": "VanEck Steel ETF",
+        "weight": 1.58,
+        "price": 110.37,
+        "mv": 1640429.31,
+        "first_seen": "2026-05-18",
+        "days_held": 10
+      },
+      {
+        "ticker": "XBI",
+        "name": "State Street SPDR S&P Biotech ETF",
+        "weight": 1.58,
+        "price": 134.45,
+        "mv": 1641768.95,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "EWW",
+        "name": "iShares MSCI Mexico ETF",
+        "weight": 1.56,
+        "price": 79.56,
+        "mv": 1619205.12,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PAVE",
+        "name": "Global X US Infrastructure Development ETF",
+        "weight": 1.56,
+        "price": 56.72,
+        "mv": 1614194.48,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "VPL",
+        "name": "Vanguard FTSE Pacific ETF",
+        "weight": 1.55,
+        "price": 114.58,
+        "mv": 1609046.94,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "SOYB",
+        "name": "Teucrium Soybean Fund",
+        "weight": 1.45,
+        "price": 24.92,
+        "mv": 1503274.08,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "RIG",
+        "name": "Transocean Ltd",
+        "weight": 1.43,
+        "price": 6.18,
+        "mv": 1486846.2,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "WEAT",
+        "name": "Teucrium Wheat Fund",
+        "weight": 1.43,
+        "price": 23.76,
+        "mv": 1481079.6,
+        "first_seen": "2026-04-29",
+        "days_held": 29
+      },
+      {
+        "ticker": "DBA",
+        "name": "Invesco DB Agriculture Fund",
+        "weight": 1.41,
+        "price": 27.47,
+        "mv": 1466733.18,
+        "first_seen": "2026-04-29",
+        "days_held": 29
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 1.4,
+        "price": 784.38,
+        "mv": 1447965.48,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "EWY",
+        "name": "iShares MSCI South Korea ETF",
+        "weight": 1.26,
+        "price": 198.29,
+        "mv": 1302963.59,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PM",
+        "name": "Philip Morris International Inc",
+        "weight": 1.2,
+        "price": 182.04,
+        "mv": 1243697.28,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 1.09,
+        "price": 231.32,
+        "mv": 1135087.24,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "APD",
+        "name": "Air Products and Chemicals Inc",
+        "weight": 1.05,
+        "price": 285.73,
+        "mv": 1093774.44,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 1.04,
+        "price": 1031.89,
+        "mv": 1080388.83,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "AM",
+        "name": "Antero Midstream Corp",
+        "weight": 1.03,
+        "price": 21.31,
+        "mv": 1063923.06,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "EWC",
+        "name": "ISHARES INC MSCI CDA INDEX",
+        "weight": 1.03,
+        "price": 58.26,
+        "mv": 1063245.0,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "EPD",
+        "name": "Enterprise Products Partners LP",
+        "weight": 1.02,
+        "price": 37.99,
+        "mv": 1052930.84,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "DBMF",
+        "name": "iMGP DBi Managed Futures Strategy ETF",
+        "weight": 1.01,
+        "price": 31.01,
+        "mv": 1048541.13,
+        "first_seen": "2026-05-28",
+        "days_held": 0
+      },
+      {
+        "ticker": "V",
+        "name": "Visa Inc",
+        "weight": 1.01,
+        "price": 327.61,
+        "mv": 1043765.46,
+        "first_seen": "2026-05-27",
+        "days_held": 1
+      },
+      {
+        "ticker": "HTEC",
+        "name": "ROBO Global R Healthcare Technology and Innovation ETF",
+        "weight": 1.0,
+        "price": 34.1076,
+        "mv": 1038098.91,
+        "first_seen": "2026-04-28",
+        "days_held": 30
+      },
+      {
+        "ticker": "XLI",
+        "name": "State Street Industrial Select Sector SPDR ETF",
+        "weight": 0.99,
+        "price": 174.3,
+        "mv": 1022792.4,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "weight": 0.97,
+        "price": 507.87,
+        "mv": 1004566.86,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "NORW",
+        "name": "Global X MSCI Norway ETF",
+        "weight": 0.97,
+        "price": 38.29,
+        "mv": 1002393.91,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "WELL",
+        "name": "Welltower Inc",
+        "weight": 0.97,
+        "price": 214.18,
+        "mv": 1010287.06,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "KO",
+        "name": "Coca-Cola Co/The",
+        "weight": 0.78,
+        "price": 81.62,
+        "mv": 811874.14,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "EZPW",
+        "name": "EZCORP Inc",
+        "weight": 0.75,
+        "price": 33.41,
+        "mv": 777818.21,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 0.74,
+        "price": 15.24,
+        "mv": 767212.08,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PAWZ",
+        "name": "Proshares Pet Care ETF",
+        "weight": -0.09,
+        "price": 47.94,
+        "mv": -95880.0,
+        "first_seen": "2026-05-28",
+        "days_held": 0
+      },
+      {
+        "ticker": "EWQ",
+        "name": "ISHARES INC MSCI FRANCE",
+        "weight": -0.52,
+        "price": 46.0,
+        "mv": -535164.0,
+        "first_seen": "2026-05-20",
+        "days_held": 8
+      },
+      {
+        "ticker": "HCA",
+        "name": "HCA Healthcare Inc",
+        "weight": -0.72,
+        "price": 392.15,
+        "mv": -748222.2,
+        "first_seen": "2026-04-28",
+        "days_held": 30
+      },
+      {
+        "ticker": "CHTR",
+        "name": "Charter Communications Inc",
+        "weight": -0.76,
+        "price": 147.18,
+        "mv": -787265.82,
+        "first_seen": "2026-05-21",
+        "days_held": 7
+      },
+      {
+        "ticker": "SYY",
+        "name": "Sysco Corp",
+        "weight": -0.77,
+        "price": 75.22,
+        "mv": -798986.84,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "BRBR",
+        "name": "BellRing Brands Inc",
+        "weight": -0.8,
+        "price": 8.59,
+        "mv": -831340.2,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms Inc",
+        "weight": -0.8,
+        "price": 635.255,
+        "mv": -830913.54,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "USPH",
+        "name": "US Physical Therapy Inc",
+        "weight": -0.8,
+        "price": 64.17,
+        "mv": -825162.03,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "RBLX",
+        "name": "ROBLOX Corp",
+        "weight": -0.81,
+        "price": 45.63,
+        "mv": -840185.19,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "DDS",
+        "name": "Dillard's Inc",
+        "weight": -0.82,
+        "price": 589.83,
+        "mv": -852304.35,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "IDX",
+        "name": "VanEck Indonesia Index ETF",
+        "weight": -0.94,
+        "price": 10.81,
+        "mv": -974921.47,
+        "first_seen": "2026-05-20",
+        "days_held": 8
+      },
+      {
+        "ticker": "UTWO",
+        "name": "F/m US Treasury 2 Year Note ETF",
+        "weight": -0.94,
+        "price": 48.0152,
+        "mv": -978549.88,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "EPHE",
+        "name": "iShares MSCI Philippines ETF",
+        "weight": -1.0,
+        "price": 24.64,
+        "mv": -1041729.92,
+        "first_seen": "2026-05-20",
+        "days_held": 8
+      },
+      {
+        "ticker": "HYG",
+        "name": "iShares iBoxx USD High Yield Corporate Bond ETF",
+        "weight": -1.01,
+        "price": 80.13,
+        "mv": -1042411.17,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "JNK",
+        "name": "State Street SPDR Bloomberg High Yield Bond ETF",
+        "weight": -1.01,
+        "price": 96.52,
+        "mv": -1042898.6,
+        "first_seen": "2026-05-19",
+        "days_held": 9
+      },
+      {
+        "ticker": "EWG",
+        "name": "ISHARES INC MSCI GERMAN",
+        "weight": -1.02,
+        "price": 43.69,
+        "mv": -1058608.7,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "JETS",
+        "name": "US Global Jets ETF",
+        "weight": -1.1,
+        "price": 29.08,
+        "mv": -1136359.16,
+        "first_seen": "2026-05-21",
+        "days_held": 7
+      },
+      {
+        "ticker": "IEF",
+        "name": "iShares 7-10 Year Treasury Bond ETF",
+        "weight": -1.45,
+        "price": 94.32,
+        "mv": -1500348.24,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "INDA",
+        "name": "iShares MSCI India ETF",
+        "weight": -2.03,
+        "price": 48.55,
+        "mv": -2105176.55,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "ITB",
+        "name": "ISHARES TRUST DJ HOME CONSTN",
+        "weight": -2.14,
+        "price": 93.57,
+        "mv": -2218170.42,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "ZROZ",
+        "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
+        "weight": -2.43,
+        "price": 62.14,
+        "mv": -2516670.0,
+        "first_seen": "2026-04-28",
+        "days_held": 30
+      },
+      {
+        "ticker": "TLT",
+        "name": "iShares 20+ Year Treasury Bond ETF",
+        "weight": -2.44,
+        "price": 85.3,
+        "mv": -2529230.3,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "XTEN",
+        "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
+        "weight": -2.44,
+        "price": 45.28,
+        "mv": -2531740.64,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      }
+    ],
+    "HGRO": [
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc",
+        "weight": 9.2,
+        "price": 310.85,
+        "mv": 11197127.85,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA Corp",
+        "weight": 8.99,
+        "price": 212.6,
+        "mv": 10948687.4,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "weight": 8.03,
+        "price": 388.83,
+        "mv": 9777130.35,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc",
+        "weight": 6.08,
+        "price": 271.85,
+        "mv": 7402747.35,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc",
+        "weight": 3.0,
+        "price": 421.86,
+        "mv": 3651198.3,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "LLY",
+        "name": "Eli Lilly & Co",
+        "weight": 2.87,
+        "price": 1082.92,
+        "mv": 3492417.0,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "GS",
+        "name": "Goldman Sachs Group Inc/The",
+        "weight": 2.3,
+        "price": 996.47,
+        "mv": 2796094.82,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices Inc",
+        "weight": 2.23,
+        "price": 495.54,
+        "mv": 2717541.36,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "ADI",
+        "name": "Analog Devices Inc",
+        "weight": 2.21,
+        "price": 416.88,
+        "mv": 2688876.0,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "CBOE",
+        "name": "Cboe Global Markets Inc",
+        "weight": 2.14,
+        "price": 347.69,
+        "mv": 2611499.59,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "V",
+        "name": "Visa Inc",
+        "weight": 2.1,
+        "price": 327.61,
+        "mv": 2557978.88,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "UNH",
+        "name": "UnitedHealth Group Inc",
+        "weight": 2.02,
+        "price": 384.01,
+        "mv": 2465728.21,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "HAL",
+        "name": "Halliburton Co",
+        "weight": 1.84,
+        "price": 39.6,
+        "mv": 2243656.8,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde PLC",
+        "weight": 1.67,
+        "price": 507.87,
+        "mv": 2033003.61,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc",
+        "weight": 1.64,
+        "price": 448.25,
+        "mv": 1993367.75,
+        "first_seen": "2026-05-22",
+        "days_held": 6
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar Inc",
+        "weight": 1.64,
+        "price": 909.93,
+        "mv": 2000936.07,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "NDAQ",
+        "name": "Nasdaq Inc",
+        "weight": 1.63,
+        "price": 90.53,
+        "mv": 1984236.54,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "URI",
+        "name": "United Rentals Inc",
+        "weight": 1.52,
+        "price": 988.24,
+        "mv": 1848008.8,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corp",
+        "weight": 1.5,
+        "price": 47.14,
+        "mv": 1822432.4,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "SNDK",
+        "name": "Sandisk Corp/DE",
+        "weight": 1.5,
+        "price": 1589.94,
+        "mv": 1825251.12,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 1.44,
+        "price": 1031.89,
+        "mv": 1749053.55,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PLD",
+        "name": "Prologis Inc",
+        "weight": 1.41,
+        "price": 146.52,
+        "mv": 1719998.28,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PM",
+        "name": "Philip Morris International Inc",
+        "weight": 1.38,
+        "price": 182.04,
+        "mv": 1677680.64,
+        "first_seen": "2026-05-19",
+        "days_held": 9
+      },
+      {
+        "ticker": "C",
+        "name": "Citigroup Inc",
+        "weight": 1.3,
+        "price": 125.39,
+        "mv": 1588942.08,
+        "first_seen": "2026-04-15",
+        "days_held": 43
+      },
+      {
+        "ticker": "CF",
+        "name": "CF Industries Holdings Inc",
+        "weight": 1.28,
+        "price": 116.34,
+        "mv": 1563725.94,
+        "first_seen": "2026-04-17",
+        "days_held": 41
+      },
+      {
+        "ticker": "KMI",
+        "name": "Kinder Morgan Inc",
+        "weight": 1.27,
+        "price": 32.22,
+        "mv": 1542854.7,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "RIO",
+        "name": "Rio Tinto PLC",
+        "weight": 1.26,
+        "price": 106.61,
+        "mv": 1538062.47,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "BNY",
+        "name": "Bank of New York Mellon Corp/The",
+        "weight": 1.22,
+        "price": 139.74,
+        "mv": 1484318.28,
+        "first_seen": "2026-05-21",
+        "days_held": 7
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corp",
+        "weight": 1.21,
+        "price": 102.1,
+        "mv": 1472384.1,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "MRK",
+        "name": "Merck & Co Inc",
+        "weight": 1.2,
+        "price": 120.24,
+        "mv": 1461156.48,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "STX",
+        "name": "Seagate Technology Holdings PLC",
+        "weight": 1.17,
+        "price": 870.66,
+        "mv": 1424399.76,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "ATI",
+        "name": "ATI Inc",
+        "weight": 1.16,
+        "price": 169.84,
+        "mv": 1410691.04,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc/MD",
+        "weight": 1.15,
+        "price": 385.86,
+        "mv": 1399514.22,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "VLO",
+        "name": "Valero Energy Corp",
+        "weight": 1.15,
+        "price": 240.34,
+        "mv": 1406229.34,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "ORCL",
+        "name": "Oracle Corp",
+        "weight": 1.13,
+        "price": 190.96,
+        "mv": 1375293.92,
+        "first_seen": "2026-04-15",
+        "days_held": 43
+      },
+      {
+        "ticker": "VIK",
+        "name": "Viking Holdings Ltd",
+        "weight": 1.11,
+        "price": 92.55,
+        "mv": 1346139.75,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA CORP",
+        "weight": 1.09,
+        "price": 1957.19,
+        "mv": 1332846.39,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 1.07,
+        "price": 231.32,
+        "mv": 1306958.0,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "SXT",
+        "name": "Sensient Technologies Corp",
+        "weight": 1.03,
+        "price": 117.79,
+        "mv": 1254934.66,
+        "first_seen": "2026-05-22",
+        "days_held": 6
+      },
+      {
+        "ticker": "ULS",
+        "name": "UL Solutions Inc",
+        "weight": 1.01,
+        "price": 100.6,
+        "mv": 1224000.2,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "CIEN",
+        "name": "Ciena Corp",
+        "weight": 1.0,
+        "price": 582.08,
+        "mv": 1222368.0,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "OUT",
+        "name": "Outfront Media Inc",
+        "weight": 1.0,
+        "price": 32.61,
+        "mv": 1212602.85,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "MRVL",
+        "name": "MARVELL TECHNOLOGY INC",
+        "weight": 0.97,
+        "price": 198.7,
+        "mv": 1184848.1,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "ZM",
+        "name": "Zoom Communications Inc",
+        "weight": 0.9,
+        "price": 99.96,
+        "mv": 1092462.84,
+        "first_seen": "2026-05-23",
+        "days_held": 5
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 0.88,
+        "price": 784.38,
+        "mv": 1076953.74,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "TTWO",
+        "name": "Take-Two Interactive Software Inc",
+        "weight": 0.87,
+        "price": 218.46,
+        "mv": 1054506.42,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "GFS",
+        "name": "GLOBALFOUNDRIES Inc",
+        "weight": 0.82,
+        "price": 81.11,
+        "mv": 996436.35,
+        "first_seen": "2026-05-21",
+        "days_held": 7
+      },
+      {
+        "ticker": "TWLO",
+        "name": "Twilio Inc",
+        "weight": 0.76,
+        "price": 181.57,
+        "mv": 920559.9,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment Inc",
+        "weight": 0.75,
+        "price": 28.78,
+        "mv": 912095.76,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "GLW",
+        "name": "Corning Inc",
+        "weight": 0.74,
+        "price": 190.89,
+        "mv": 905582.16,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "TXG",
+        "name": "10X Genomics Inc",
+        "weight": 0.72,
+        "price": 25.51,
+        "mv": 881396.01,
+        "first_seen": "2026-04-17",
+        "days_held": 41
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "weight": 0.71,
+        "price": 119.67,
+        "mv": 860068.29,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "COHR",
+        "name": "Coherent Corp",
+        "weight": 0.53,
+        "price": 380.18,
+        "mv": 640603.3,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "NET",
+        "name": "Cloudflare Inc",
+        "weight": 0.48,
+        "price": 209.22,
+        "mv": 582259.26,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "CAVA",
+        "name": "Cava Group Inc",
+        "weight": 0.41,
+        "price": 82.2,
+        "mv": 504297.0,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      }
+    ],
+    "HELS": [
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc",
+        "weight": 3.14,
+        "price": 310.85,
+        "mv": 763136.75,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc",
+        "weight": 3.05,
+        "price": 388.83,
+        "mv": 743054.13,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corp",
+        "weight": 3.02,
+        "price": 47.14,
+        "mv": 733545.54,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "ROKU",
+        "name": "Roku Inc",
+        "weight": 2.75,
+        "price": 131.91,
+        "mv": 668124.15,
+        "first_seen": "2026-04-29",
+        "days_held": 29
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc",
+        "weight": 2.73,
+        "price": 448.25,
+        "mv": 663410.0,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "URI",
+        "name": "United Rentals Inc",
+        "weight": 2.62,
+        "price": 988.24,
+        "mv": 636426.56,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "JAZZ",
+        "name": "Jazz Pharmaceuticals PLC",
+        "weight": 2.58,
+        "price": 237.56,
+        "mv": 626683.28,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc",
+        "weight": 2.52,
+        "price": 119.67,
+        "mv": 613189.08,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "ULS",
+        "name": "UL Solutions Inc",
+        "weight": 2.52,
+        "price": 100.6,
+        "mv": 612151.0,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "UNH",
+        "name": "UnitedHealth Group Inc",
+        "weight": 2.52,
+        "price": 384.01,
+        "mv": 613263.97,
+        "first_seen": "2026-05-21",
+        "days_held": 7
+      },
+      {
+        "ticker": "MKSI",
+        "name": "MKS Inc",
+        "weight": 2.28,
+        "price": 328.01,
+        "mv": 555648.94,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "CASY",
+        "name": "Casey's General Stores Inc",
+        "weight": 2.27,
+        "price": 784.38,
+        "mv": 552987.9,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "SXT",
+        "name": "Sensient Technologies Corp",
+        "weight": 2.27,
+        "price": 117.79,
+        "mv": 552081.73,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "VIK",
+        "name": "Viking Holdings Ltd",
+        "weight": 2.26,
+        "price": 92.55,
+        "mv": 550209.75,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova Inc",
+        "weight": 2.24,
+        "price": 1031.89,
+        "mv": 543806.03,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "JBHT",
+        "name": "JB Hunt Transport Services Inc",
+        "weight": 2.18,
+        "price": 270.87,
+        "mv": 529550.85,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "CAT",
+        "name": "Caterpillar Inc",
+        "weight": 2.1,
+        "price": 909.93,
+        "mv": 511380.66,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "ENB",
+        "name": "Enbridge Inc",
+        "weight": 2.07,
+        "price": 56.15,
+        "mv": 502542.5,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "FCFS",
+        "name": "FirstCash Holdings Inc",
+        "weight": 2.07,
+        "price": 231.32,
+        "mv": 504277.6,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "WDC",
+        "name": "Western Digital Corp",
+        "weight": 2.03,
+        "price": 530.6,
+        "mv": 493988.6,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "NVO",
+        "name": "Novo Nordisk A/S",
+        "weight": 2.0,
+        "price": 44.55,
+        "mv": 486263.25,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PM",
+        "name": "Philip Morris International Inc",
+        "weight": 1.99,
+        "price": 182.04,
+        "mv": 482952.12,
+        "first_seen": "2026-05-27",
+        "days_held": 1
+      },
+      {
+        "ticker": "TWLO",
+        "name": "Twilio Inc",
+        "weight": 1.92,
+        "price": 181.57,
+        "mv": 466634.9,
+        "first_seen": "2026-05-15",
+        "days_held": 13
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corp",
+        "weight": 1.9,
+        "price": 121.77,
+        "mv": 461873.61,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corp",
+        "weight": 1.89,
+        "price": 102.1,
+        "mv": 459654.2,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "MRVL",
+        "name": "MARVELL TECHNOLOGY INC",
+        "weight": 1.88,
+        "price": 198.7,
+        "mv": 457010.0,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "NOV",
+        "name": "NOV Inc",
+        "weight": 1.87,
+        "price": 20.23,
+        "mv": 456044.89,
+        "first_seen": "2026-04-29",
+        "days_held": 29
+      },
+      {
+        "ticker": "RIG",
+        "name": "Transocean Ltd",
+        "weight": 1.77,
+        "price": 6.18,
+        "mv": 430109.46,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "GLASF",
+        "name": "Glass House Brands Inc",
+        "weight": 1.68,
+        "price": 11.01,
+        "mv": 408228.78,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc/MD",
+        "weight": 1.65,
+        "price": 385.86,
+        "mv": 400908.54,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "HBM",
+        "name": "Hudbay Minerals Inc",
+        "weight": 1.6,
+        "price": 26.59,
+        "mv": 389410.55,
+        "first_seen": "2026-05-18",
+        "days_held": 10
+      },
+      {
+        "ticker": "AFRM",
+        "name": "Affirm Holdings Inc",
+        "weight": 1.58,
+        "price": 70.44,
+        "mv": 383898.0,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "TTWO",
+        "name": "Take-Two Interactive Software Inc",
+        "weight": 1.58,
+        "price": 218.46,
+        "mv": 384489.6,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "STT",
+        "name": "State Street Corp",
+        "weight": 1.57,
+        "price": 157.92,
+        "mv": 380745.12,
+        "first_seen": "2026-05-15",
+        "days_held": 13
+      },
+      {
+        "ticker": "CZR",
+        "name": "Caesars Entertainment Inc",
+        "weight": 1.56,
+        "price": 28.78,
+        "mv": 379694.54,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      },
+      {
+        "ticker": "OUT",
+        "name": "Outfront Media Inc",
+        "weight": 1.55,
+        "price": 32.61,
+        "mv": 376156.35,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "LAMR",
+        "name": "Lamar Advertising Co",
+        "weight": 1.54,
+        "price": 152.07,
+        "mv": 375004.62,
+        "first_seen": "2026-05-15",
+        "days_held": 13
+      },
+      {
+        "ticker": "CDNS",
+        "name": "Cadence Design Systems Inc",
+        "weight": 1.53,
+        "price": 374.05,
+        "mv": 372927.85,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "BTI",
+        "name": "British American Tobacco PLC",
+        "weight": 1.51,
+        "price": 64.04,
+        "mv": 367845.76,
+        "first_seen": "2026-05-28",
+        "days_held": 0
+      },
+      {
+        "ticker": "MPC",
+        "name": "Marathon Petroleum Corp",
+        "weight": 1.48,
+        "price": 247.05,
+        "mv": 359951.85,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "RSI",
+        "name": "Rush Street Interactive Inc",
+        "weight": 1.48,
+        "price": 27.08,
+        "mv": 358891.24,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "CRCL",
+        "name": "Circle Internet Group Inc",
+        "weight": 1.46,
+        "price": 102.64,
+        "mv": 354929.12,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "CNQ",
+        "name": "Canadian Natural Resources Ltd",
+        "weight": 1.45,
+        "price": 45.75,
+        "mv": 352778.25,
+        "first_seen": "2026-05-27",
+        "days_held": 1
+      },
+      {
+        "ticker": "SWBI",
+        "name": "Smith & Wesson Brands Inc",
+        "weight": 1.02,
+        "price": 15.24,
+        "mv": 247177.56,
+        "first_seen": "2026-04-15",
+        "days_held": 43
+      },
+      {
+        "ticker": "XYZ",
+        "name": "Block Inc",
+        "weight": 1.02,
+        "price": 71.42,
+        "mv": 247970.24,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "MUSA",
+        "name": "Murphy USA Inc",
+        "weight": 1.01,
+        "price": 516.08,
+        "mv": 244621.92,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "MEOH",
+        "name": "Methanex Corp",
+        "weight": 0.98,
+        "price": 59.15,
+        "mv": 237368.95,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "CVI",
+        "name": "CVR Energy Inc",
+        "weight": 0.93,
+        "price": 32.02,
+        "mv": 227342.0,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "SNAP",
+        "name": "Snap Inc",
+        "weight": -0.51,
+        "price": 5.88,
+        "mv": -123685.8,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "FLUT",
+        "name": "Flutter Entertainment PLC",
+        "weight": -0.92,
+        "price": 95.75,
+        "mv": -224629.5,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "BRBR",
+        "name": "BellRing Brands Inc",
+        "weight": -0.93,
+        "price": 8.59,
+        "mv": -225496.09,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "BALL",
+        "name": "Ball Corp",
+        "weight": -0.94,
+        "price": 56.51,
+        "mv": -228243.89,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "DPZ",
+        "name": "Domino's Pizza Inc",
+        "weight": -0.94,
+        "price": 311.72,
+        "mv": -228490.76,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "MSTR",
+        "name": "Strategy Inc",
+        "weight": -0.95,
+        "price": 154.2,
+        "mv": -231762.6,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "SYY",
+        "name": "Sysco Corp",
+        "weight": -0.96,
+        "price": 75.22,
+        "mv": -232956.34,
+        "first_seen": "2026-04-22",
+        "days_held": 36
+      },
+      {
+        "ticker": "DASH",
+        "name": "DoorDash Inc",
+        "weight": -0.97,
+        "price": 157.58,
+        "mv": -236685.16,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "FLO",
+        "name": "Flowers Foods Inc",
+        "weight": -0.98,
+        "price": 7.81,
+        "mv": -238603.31,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "LCID",
+        "name": "Lucid Group Inc",
+        "weight": -0.98,
+        "price": 6.26,
+        "mv": -238487.22,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "CMG",
+        "name": "Chipotle Mexican Grill Inc",
+        "weight": -0.99,
+        "price": 32.69,
+        "mv": -240271.5,
+        "first_seen": "2026-04-27",
+        "days_held": 31
+      },
+      {
+        "ticker": "GIS",
+        "name": "General Mills Inc",
+        "weight": -0.99,
+        "price": 33.65,
+        "mv": -240563.85,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "RBLX",
+        "name": "ROBLOX Corp",
+        "weight": -0.99,
+        "price": 45.63,
+        "mv": -240013.8,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "IDXX",
+        "name": "IDEXX Laboratories Inc",
+        "weight": -1.0,
+        "price": 550.99,
+        "mv": -242986.59,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "RDDT",
+        "name": "Reddit Inc",
+        "weight": -1.01,
+        "price": 154.19,
+        "mv": -244699.53,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "EAT",
+        "name": "Brinker International Inc",
+        "weight": -1.02,
+        "price": 141.48,
+        "mv": -249004.8,
+        "first_seen": "2026-05-27",
+        "days_held": 1
+      },
+      {
+        "ticker": "NKE",
+        "name": "NIKE Inc",
+        "weight": -1.02,
+        "price": 45.98,
+        "mv": -249257.58,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "SMPL",
+        "name": "Simply Good Foods Co/The",
+        "weight": -1.02,
+        "price": 11.69,
+        "mv": -247033.08,
+        "first_seen": "2026-05-01",
+        "days_held": 27
+      },
+      {
+        "ticker": "CHTR",
+        "name": "Charter Communications Inc",
+        "weight": -1.03,
+        "price": 147.18,
+        "mv": -251089.08,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms Inc",
+        "weight": -1.03,
+        "price": 635.255,
+        "mv": -250925.73,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "BKNG",
+        "name": "Booking Holdings Inc",
+        "weight": -1.06,
+        "price": 168.37,
+        "mv": -257606.1,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "USPH",
+        "name": "US Physical Therapy Inc",
+        "weight": -1.06,
+        "price": 64.17,
+        "mv": -257963.4,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "LUV",
+        "name": "Southwest Airlines Co",
+        "weight": -1.08,
+        "price": 43.68,
+        "mv": -263390.4,
+        "first_seen": "2026-05-21",
+        "days_held": 7
+      },
+      {
+        "ticker": "DDS",
+        "name": "Dillard's Inc",
+        "weight": -1.09,
+        "price": 589.83,
+        "mv": -266013.33,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "PLAY",
+        "name": "Dave & Buster's Entertainment Inc",
+        "weight": -1.1,
+        "price": 13.15,
+        "mv": -267628.8,
+        "first_seen": "2026-05-13",
+        "days_held": 15
+      },
+      {
+        "ticker": "KSS",
+        "name": "Kohl's Corp",
+        "weight": -1.11,
+        "price": 12.93,
+        "mv": -270288.72,
+        "first_seen": "2026-03-30",
+        "days_held": 59
+      },
+      {
+        "ticker": "WING",
+        "name": "Wingstop Inc",
+        "weight": -1.2,
+        "price": 152.09,
+        "mv": -292164.89,
+        "first_seen": "2026-04-13",
+        "days_held": 45
+      }
+    ],
     "ADDS": [
       {
         "ticker": "MRVL",
@@ -8445,2025 +10559,10 @@
         "first_seen": "2026-05-28",
         "days_held": 0
       }
-    ],
-    "HECA": [
-      {
-        "ticker": "DBMF",
-        "name": "iMGP DBi Managed Futures Strategy ETF",
-        "weight": 7.41,
-        "price": 31.01,
-        "mv": 25842648.65,
-        "first_seen": "2026-05-07",
-        "days_held": 21
-      },
-      {
-        "ticker": "XTL",
-        "name": "State Street SPDR S&P Telecom ETF",
-        "weight": 7.18,
-        "price": 243.69,
-        "mv": 25033542.63,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "UUP",
-        "name": "Invesco DB US Dollar Index Bullish Fund",
-        "weight": 6.97,
-        "price": 27.75,
-        "mv": 24309915.75,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "FESM",
-        "name": "Fidelity Enhanced Small Cap Core ETF",
-        "weight": 6.55,
-        "price": 45.67,
-        "mv": 22851578.21,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "JAAA",
-        "name": "Janus Henderson AAA CLO ETF",
-        "weight": 6.3,
-        "price": 50.72,
-        "mv": 21972816.96,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "DBJP",
-        "name": "Xtrackers MSCI Japan Hedged Equity ETF",
-        "weight": 5.81,
-        "price": 111.6142,
-        "mv": 20278291.08,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "FWD",
-        "name": "AB Disruptors ETF",
-        "weight": 5.66,
-        "price": 139.9,
-        "mv": 19756398.2,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "SLX",
-        "name": "VanEck Steel ETF",
-        "weight": 5.46,
-        "price": 110.37,
-        "mv": 19054497.54,
-        "first_seen": "2026-05-15",
-        "days_held": 13
-      },
-      {
-        "ticker": "OIH",
-        "name": "VanEck Oil Services ETF",
-        "weight": 4.97,
-        "price": 425.53,
-        "mv": 17327581.6,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "VYM",
-        "name": "Vanguard High Dividend Yield ETF",
-        "weight": 4.93,
-        "price": 158.37,
-        "mv": 17199298.74,
-        "first_seen": "2026-04-29",
-        "days_held": 29
-      },
-      {
-        "ticker": "TAN",
-        "name": "Invesco Solar ETF",
-        "weight": 4.52,
-        "price": 70.51,
-        "mv": 15768080.79,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "NOBL",
-        "name": "ProShares S&P 500 Dividend Aristocrats ETF",
-        "weight": 4.49,
-        "price": 53.95,
-        "mv": 15646794.8,
-        "first_seen": "2026-05-27",
-        "days_held": 1
-      },
-      {
-        "ticker": "VTIP",
-        "name": "Vanguard Short-Term Inflation-Protected Securities ETF",
-        "weight": 3.29,
-        "price": 50.34,
-        "mv": 11467452.0,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "USO",
-        "name": "United States Oil Fund LP",
-        "weight": 3.07,
-        "price": 131.03,
-        "mv": 10710523.23,
-        "first_seen": "2026-04-15",
-        "days_held": 43
-      },
-      {
-        "ticker": "DBB",
-        "name": "Invesco DB Base Metals Fund",
-        "weight": 2.98,
-        "price": 25.73,
-        "mv": 10410306.54,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "IHF",
-        "name": "iShares U.S. Healthcare Providers ETF",
-        "weight": 2.56,
-        "price": 50.44,
-        "mv": 8916228.36,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "IDMO",
-        "name": "Invesco S&P International Developed Momentum ETF",
-        "weight": 1.87,
-        "price": 60.5,
-        "mv": 6517604.5,
-        "first_seen": "2026-05-15",
-        "days_held": 13
-      },
-      {
-        "ticker": "PICK",
-        "name": "iShares MSCI Global Metals & Mining Producers ETF",
-        "weight": 0.69,
-        "price": 65.43,
-        "mv": 2420975.43,
-        "first_seen": "2026-05-15",
-        "days_held": 13
-      }
-    ],
-    "HEFT": [
-      {
-        "ticker": "CERY",
-        "name": "State Street SPDR Bloomberg Enhanced Roll Yield Commodity Strategy No K-1 ETF",
-        "weight": 13.66,
-        "price": 36.37,
-        "mv": 14161896.08,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "VTI",
-        "name": "Vanguard Total Stock Market ETF",
-        "weight": 9.11,
-        "price": 369.36,
-        "mv": 9443427.12,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "ARTY",
-        "name": "iShares Future AI & Tech ETF",
-        "weight": 4.7,
-        "price": 71.09,
-        "mv": 4870731.35,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "OIH",
-        "name": "VanEck Oil Services ETF",
-        "weight": 3.96,
-        "price": 425.53,
-        "mv": 4103385.79,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "DRAM",
-        "name": "Roundhill Memory ETF",
-        "weight": 3.57,
-        "price": 60.73,
-        "mv": 3700886.2,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "XLE",
-        "name": "State Street Energy Select Sector SPDR ETF",
-        "weight": 2.95,
-        "price": 56.99,
-        "mv": 3062927.55,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "CIBR",
-        "name": "First Trust NASDAQ Cybersecurity ETF",
-        "weight": 2.69,
-        "price": 82.04,
-        "mv": 2788293.48,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "IHE",
-        "name": "iShares U.S. Pharmaceuticals ETF",
-        "weight": 2.52,
-        "price": 91.87,
-        "mv": 2615171.42,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "FITE",
-        "name": "State Street SPDR S&P Kensho Future Security ETF",
-        "weight": 2.21,
-        "price": 111.6235,
-        "mv": 2293528.05,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "INTC",
-        "name": "Intel Corp",
-        "weight": 2.18,
-        "price": 121.77,
-        "mv": 2261268.9,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "AVEM",
-        "name": "Avantis Emerging Markets Equity ETF",
-        "weight": 2.02,
-        "price": 96.53,
-        "mv": 2091032.86,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "XAR",
-        "name": "State Street SPDR S&P Aerospace & Defense ETF",
-        "weight": 2.01,
-        "price": 278.9,
-        "mv": 2087287.6,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "GLD",
-        "name": "SPDR Gold Shares",
-        "weight": 1.95,
-        "price": 408.49,
-        "mv": 2024476.44,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "ADM",
-        "name": "Archer-Daniels-Midland Co",
-        "weight": 1.63,
-        "price": 79.55,
-        "mv": 1691789.85,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "MO",
-        "name": "Altria Group Inc",
-        "weight": 1.58,
-        "price": 72.11,
-        "mv": 1633075.17,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "ROBO",
-        "name": "ROBO Global Robotics and Automation Index ETF",
-        "weight": 1.58,
-        "price": 88.66,
-        "mv": 1634624.42,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "SLX",
-        "name": "VanEck Steel ETF",
-        "weight": 1.58,
-        "price": 110.37,
-        "mv": 1640429.31,
-        "first_seen": "2026-05-18",
-        "days_held": 10
-      },
-      {
-        "ticker": "XBI",
-        "name": "State Street SPDR S&P Biotech ETF",
-        "weight": 1.58,
-        "price": 134.45,
-        "mv": 1641768.95,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "EWW",
-        "name": "iShares MSCI Mexico ETF",
-        "weight": 1.56,
-        "price": 79.56,
-        "mv": 1619205.12,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "PAVE",
-        "name": "Global X US Infrastructure Development ETF",
-        "weight": 1.56,
-        "price": 56.72,
-        "mv": 1614194.48,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "VPL",
-        "name": "Vanguard FTSE Pacific ETF",
-        "weight": 1.55,
-        "price": 114.58,
-        "mv": 1609046.94,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "SOYB",
-        "name": "Teucrium Soybean Fund",
-        "weight": 1.45,
-        "price": 24.92,
-        "mv": 1503274.08,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "RIG",
-        "name": "Transocean Ltd",
-        "weight": 1.43,
-        "price": 6.18,
-        "mv": 1486846.2,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "WEAT",
-        "name": "Teucrium Wheat Fund",
-        "weight": 1.43,
-        "price": 23.76,
-        "mv": 1481079.6,
-        "first_seen": "2026-04-29",
-        "days_held": 29
-      },
-      {
-        "ticker": "DBA",
-        "name": "Invesco DB Agriculture Fund",
-        "weight": 1.41,
-        "price": 27.47,
-        "mv": 1466733.18,
-        "first_seen": "2026-04-29",
-        "days_held": 29
-      },
-      {
-        "ticker": "CASY",
-        "name": "Casey's General Stores Inc",
-        "weight": 1.4,
-        "price": 784.38,
-        "mv": 1447965.48,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "EWY",
-        "name": "iShares MSCI South Korea ETF",
-        "weight": 1.26,
-        "price": 198.29,
-        "mv": 1302963.59,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "PM",
-        "name": "Philip Morris International Inc",
-        "weight": 1.2,
-        "price": 182.04,
-        "mv": 1243697.28,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "FCFS",
-        "name": "FirstCash Holdings Inc",
-        "weight": 1.09,
-        "price": 231.32,
-        "mv": 1135087.24,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "APD",
-        "name": "Air Products and Chemicals Inc",
-        "weight": 1.05,
-        "price": 285.73,
-        "mv": 1093774.44,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "GEV",
-        "name": "GE Vernova Inc",
-        "weight": 1.04,
-        "price": 1031.89,
-        "mv": 1080388.83,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "AM",
-        "name": "Antero Midstream Corp",
-        "weight": 1.03,
-        "price": 21.31,
-        "mv": 1063923.06,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "EWC",
-        "name": "ISHARES INC MSCI CDA INDEX",
-        "weight": 1.03,
-        "price": 58.26,
-        "mv": 1063245.0,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "EPD",
-        "name": "Enterprise Products Partners LP",
-        "weight": 1.02,
-        "price": 37.99,
-        "mv": 1052930.84,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "DBMF",
-        "name": "iMGP DBi Managed Futures Strategy ETF",
-        "weight": 1.01,
-        "price": 31.01,
-        "mv": 1048541.13,
-        "first_seen": "2026-05-28",
-        "days_held": 0
-      },
-      {
-        "ticker": "V",
-        "name": "Visa Inc",
-        "weight": 1.01,
-        "price": 327.61,
-        "mv": 1043765.46,
-        "first_seen": "2026-05-27",
-        "days_held": 1
-      },
-      {
-        "ticker": "HTEC",
-        "name": "ROBO Global R Healthcare Technology and Innovation ETF",
-        "weight": 1.0,
-        "price": 34.1076,
-        "mv": 1038098.91,
-        "first_seen": "2026-04-28",
-        "days_held": 30
-      },
-      {
-        "ticker": "XLI",
-        "name": "State Street Industrial Select Sector SPDR ETF",
-        "weight": 0.99,
-        "price": 174.3,
-        "mv": 1022792.4,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "LIN",
-        "name": "Linde PLC",
-        "weight": 0.97,
-        "price": 507.87,
-        "mv": 1004566.86,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "NORW",
-        "name": "Global X MSCI Norway ETF",
-        "weight": 0.97,
-        "price": 38.29,
-        "mv": 1002393.91,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "WELL",
-        "name": "Welltower Inc",
-        "weight": 0.97,
-        "price": 214.18,
-        "mv": 1010287.06,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "KO",
-        "name": "Coca-Cola Co/The",
-        "weight": 0.78,
-        "price": 81.62,
-        "mv": 811874.14,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "EZPW",
-        "name": "EZCORP Inc",
-        "weight": 0.75,
-        "price": 33.41,
-        "mv": 777818.21,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "SWBI",
-        "name": "Smith & Wesson Brands Inc",
-        "weight": 0.74,
-        "price": 15.24,
-        "mv": 767212.08,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "SPY   260717P00610000",
-        "name": "SPY US 07/17/26 P610",
-        "weight": 0.1,
-        "price": 0.945,
-        "mv": 102910.5,
-        "first_seen": "2026-05-19",
-        "days_held": 9
-      },
-      {
-        "ticker": "PAWZ",
-        "name": "Proshares Pet Care ETF",
-        "weight": -0.09,
-        "price": 47.94,
-        "mv": -95880.0,
-        "first_seen": "2026-05-28",
-        "days_held": 0
-      },
-      {
-        "ticker": "EWQ",
-        "name": "ISHARES INC MSCI FRANCE",
-        "weight": -0.52,
-        "price": 46.0,
-        "mv": -535164.0,
-        "first_seen": "2026-05-20",
-        "days_held": 8
-      },
-      {
-        "ticker": "HCA",
-        "name": "HCA Healthcare Inc",
-        "weight": -0.72,
-        "price": 392.15,
-        "mv": -748222.2,
-        "first_seen": "2026-04-28",
-        "days_held": 30
-      },
-      {
-        "ticker": "CHTR",
-        "name": "Charter Communications Inc",
-        "weight": -0.76,
-        "price": 147.18,
-        "mv": -787265.82,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "SYY",
-        "name": "Sysco Corp",
-        "weight": -0.77,
-        "price": 75.22,
-        "mv": -798986.84,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "BRBR",
-        "name": "BellRing Brands Inc",
-        "weight": -0.8,
-        "price": 8.59,
-        "mv": -831340.2,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms Inc",
-        "weight": -0.8,
-        "price": 635.255,
-        "mv": -830913.54,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "USPH",
-        "name": "US Physical Therapy Inc",
-        "weight": -0.8,
-        "price": 64.17,
-        "mv": -825162.03,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "RBLX",
-        "name": "ROBLOX Corp",
-        "weight": -0.81,
-        "price": 45.63,
-        "mv": -840185.19,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "DDS",
-        "name": "Dillard's Inc",
-        "weight": -0.82,
-        "price": 589.83,
-        "mv": -852304.35,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "IDX",
-        "name": "VanEck Indonesia Index ETF",
-        "weight": -0.94,
-        "price": 10.81,
-        "mv": -974921.47,
-        "first_seen": "2026-05-20",
-        "days_held": 8
-      },
-      {
-        "ticker": "UTWO",
-        "name": "F/m US Treasury 2 Year Note ETF",
-        "weight": -0.94,
-        "price": 48.0152,
-        "mv": -978549.88,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "EPHE",
-        "name": "iShares MSCI Philippines ETF",
-        "weight": -1.0,
-        "price": 24.64,
-        "mv": -1041729.92,
-        "first_seen": "2026-05-20",
-        "days_held": 8
-      },
-      {
-        "ticker": "HYG",
-        "name": "iShares iBoxx USD High Yield Corporate Bond ETF",
-        "weight": -1.01,
-        "price": 80.13,
-        "mv": -1042411.17,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "JNK",
-        "name": "State Street SPDR Bloomberg High Yield Bond ETF",
-        "weight": -1.01,
-        "price": 96.52,
-        "mv": -1042898.6,
-        "first_seen": "2026-05-19",
-        "days_held": 9
-      },
-      {
-        "ticker": "EWG",
-        "name": "ISHARES INC MSCI GERMAN",
-        "weight": -1.02,
-        "price": 43.69,
-        "mv": -1058608.7,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "JETS",
-        "name": "US Global Jets ETF",
-        "weight": -1.1,
-        "price": 29.08,
-        "mv": -1136359.16,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "IEF",
-        "name": "iShares 7-10 Year Treasury Bond ETF",
-        "weight": -1.45,
-        "price": 94.32,
-        "mv": -1500348.24,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "INDA",
-        "name": "iShares MSCI India ETF",
-        "weight": -2.03,
-        "price": 48.55,
-        "mv": -2105176.55,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "ITB",
-        "name": "ISHARES TRUST DJ HOME CONSTN",
-        "weight": -2.14,
-        "price": 93.57,
-        "mv": -2218170.42,
-        "first_seen": "2026-05-07",
-        "days_held": 21
-      },
-      {
-        "ticker": "ZROZ",
-        "name": "PIMCO 25+ Year Zero Coupon U.S. Treasury Index Exchange-Traded Fund",
-        "weight": -2.43,
-        "price": 62.14,
-        "mv": -2516670.0,
-        "first_seen": "2026-04-28",
-        "days_held": 30
-      },
-      {
-        "ticker": "TLT",
-        "name": "iShares 20+ Year Treasury Bond ETF",
-        "weight": -2.44,
-        "price": 85.3,
-        "mv": -2529230.3,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "XTEN",
-        "name": "BondBloxx Bloomberg Ten Year Target Duration US Treasury ETF",
-        "weight": -2.44,
-        "price": 45.28,
-        "mv": -2531740.64,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      }
-    ],
-    "HELS": [
-      {
-        "ticker": "023135106-TRS-06/15/27-L-HELS",
-        "name": "AMAZON.COM, INC.-SWAP-CLST-L",
-        "weight": 3.35,
-        "price": 271.85,
-        "mv": 814190.75,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "AAPL",
-        "name": "Apple Inc",
-        "weight": 3.14,
-        "price": 310.85,
-        "mv": 763136.75,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "GOOGL",
-        "name": "Alphabet Inc",
-        "weight": 3.05,
-        "price": 388.83,
-        "mv": 743054.13,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "CSX",
-        "name": "CSX Corp",
-        "weight": 3.02,
-        "price": 47.14,
-        "mv": 733545.54,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "ROKU",
-        "name": "Roku Inc",
-        "weight": 2.75,
-        "price": 131.91,
-        "mv": 668124.15,
-        "first_seen": "2026-04-29",
-        "days_held": 29
-      },
-      {
-        "ticker": "AMAT",
-        "name": "Applied Materials Inc",
-        "weight": 2.73,
-        "price": 448.25,
-        "mv": 663410.0,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "URI",
-        "name": "United Rentals Inc",
-        "weight": 2.62,
-        "price": 988.24,
-        "mv": 636426.56,
-        "first_seen": "2026-05-06",
-        "days_held": 22
-      },
-      {
-        "ticker": "JAZZ",
-        "name": "Jazz Pharmaceuticals PLC",
-        "weight": 2.58,
-        "price": 237.56,
-        "mv": 626683.28,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "CSCO",
-        "name": "Cisco Systems Inc",
-        "weight": 2.52,
-        "price": 119.67,
-        "mv": 613189.08,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "ULS",
-        "name": "UL Solutions Inc",
-        "weight": 2.52,
-        "price": 100.6,
-        "mv": 612151.0,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "UNH",
-        "name": "UnitedHealth Group Inc",
-        "weight": 2.52,
-        "price": 384.01,
-        "mv": 613263.97,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "92826C839-TRS-06/22/27-L-HELS",
-        "name": "VISA INC.-SWAP-CLST-L",
-        "weight": 2.45,
-        "price": 327.61,
-        "mv": 594939.76,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "512807306-TRS-06/22/27-L-HELS",
-        "name": "LAM RESEARCH CORPORATION-SWAP-CLST-L",
-        "weight": 2.32,
-        "price": 318.93,
-        "mv": 564187.17,
-        "first_seen": "2026-05-20",
-        "days_held": 8
-      },
-      {
-        "ticker": "MKSI",
-        "name": "MKS Inc",
-        "weight": 2.28,
-        "price": 328.01,
-        "mv": 555648.94,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "CASY",
-        "name": "Casey's General Stores Inc",
-        "weight": 2.27,
-        "price": 784.38,
-        "mv": 552987.9,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "SXT",
-        "name": "Sensient Technologies Corp",
-        "weight": 2.27,
-        "price": 117.79,
-        "mv": 552081.73,
-        "first_seen": "2026-05-06",
-        "days_held": 22
-      },
-      {
-        "ticker": "VIK",
-        "name": "Viking Holdings Ltd",
-        "weight": 2.26,
-        "price": 92.55,
-        "mv": 550209.75,
-        "first_seen": "2026-05-04",
-        "days_held": 24
-      },
-      {
-        "ticker": "GEV",
-        "name": "GE Vernova Inc",
-        "weight": 2.24,
-        "price": 1031.89,
-        "mv": 543806.03,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "JBHT",
-        "name": "JB Hunt Transport Services Inc",
-        "weight": 2.18,
-        "price": 270.87,
-        "mv": 529550.85,
-        "first_seen": "2026-05-06",
-        "days_held": 22
-      },
-      {
-        "ticker": "CAT",
-        "name": "Caterpillar Inc",
-        "weight": 2.1,
-        "price": 909.93,
-        "mv": 511380.66,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "67066G104-TRS-06/08/27-L-HELS",
-        "name": "NVIDIA CORPORATION-SWAP-CLST-L",
-        "weight": 2.08,
-        "price": 212.6,
-        "mv": 507051.0,
-        "first_seen": "2026-05-06",
-        "days_held": 22
-      },
-      {
-        "ticker": "ENB",
-        "name": "Enbridge Inc",
-        "weight": 2.07,
-        "price": 56.15,
-        "mv": 502542.5,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "FCFS",
-        "name": "FirstCash Holdings Inc",
-        "weight": 2.07,
-        "price": 231.32,
-        "mv": 504277.6,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "WDC",
-        "name": "Western Digital Corp",
-        "weight": 2.03,
-        "price": 530.6,
-        "mv": 493988.6,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "00971T101-TRS-06/08/27-L-HELS",
-        "name": "AKAMAI TECHNOLOGIES, INC.-SWAP-CLST-L",
-        "weight": 2.0,
-        "price": 144.43,
-        "mv": 487451.25,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "NVO",
-        "name": "Novo Nordisk A/S",
-        "weight": 2.0,
-        "price": 44.55,
-        "mv": 486263.25,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "PM",
-        "name": "Philip Morris International Inc",
-        "weight": 1.99,
-        "price": 182.04,
-        "mv": 482952.12,
-        "first_seen": "2026-05-27",
-        "days_held": 1
-      },
-      {
-        "ticker": "TWLO",
-        "name": "Twilio Inc",
-        "weight": 1.92,
-        "price": 181.57,
-        "mv": 466634.9,
-        "first_seen": "2026-05-15",
-        "days_held": 13
-      },
-      {
-        "ticker": "INTC",
-        "name": "Intel Corp",
-        "weight": 1.9,
-        "price": 121.77,
-        "mv": 461873.61,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "SBUX",
-        "name": "Starbucks Corp",
-        "weight": 1.89,
-        "price": 102.1,
-        "mv": 459654.2,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "MRVL",
-        "name": "MARVELL TECHNOLOGY INC",
-        "weight": 1.88,
-        "price": 198.7,
-        "mv": 457010.0,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "NOV",
-        "name": "NOV Inc",
-        "weight": 1.87,
-        "price": 20.23,
-        "mv": 456044.89,
-        "first_seen": "2026-04-29",
-        "days_held": 29
-      },
-      {
-        "ticker": "RIG",
-        "name": "Transocean Ltd",
-        "weight": 1.77,
-        "price": 6.18,
-        "mv": 430109.46,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "82982T106-TRS-06/15/27-L-HELS",
-        "name": "SITIME CORPORATION-SWAP-CLST-L",
-        "weight": 1.76,
-        "price": 726.21,
-        "mv": 427737.69,
-        "first_seen": "2026-05-19",
-        "days_held": 9
-      },
-      {
-        "ticker": "GLASF",
-        "name": "Glass House Brands Inc",
-        "weight": 1.68,
-        "price": 11.01,
-        "mv": 408228.78,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "MAR",
-        "name": "Marriott International Inc/MD",
-        "weight": 1.65,
-        "price": 385.86,
-        "mv": 400908.54,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "HBM",
-        "name": "Hudbay Minerals Inc",
-        "weight": 1.6,
-        "price": 26.59,
-        "mv": 389410.55,
-        "first_seen": "2026-05-18",
-        "days_held": 10
-      },
-      {
-        "ticker": "AFRM",
-        "name": "Affirm Holdings Inc",
-        "weight": 1.58,
-        "price": 70.44,
-        "mv": 383898.0,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "TTWO",
-        "name": "Take-Two Interactive Software Inc",
-        "weight": 1.58,
-        "price": 218.46,
-        "mv": 384489.6,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "STT",
-        "name": "State Street Corp",
-        "weight": 1.57,
-        "price": 157.92,
-        "mv": 380745.12,
-        "first_seen": "2026-05-15",
-        "days_held": 13
-      },
-      {
-        "ticker": "CZR",
-        "name": "Caesars Entertainment Inc",
-        "weight": 1.56,
-        "price": 28.78,
-        "mv": 379694.54,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "OUT",
-        "name": "Outfront Media Inc",
-        "weight": 1.55,
-        "price": 32.61,
-        "mv": 376156.35,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "LAMR",
-        "name": "Lamar Advertising Co",
-        "weight": 1.54,
-        "price": 152.07,
-        "mv": 375004.62,
-        "first_seen": "2026-05-15",
-        "days_held": 13
-      },
-      {
-        "ticker": "CDNS",
-        "name": "Cadence Design Systems Inc",
-        "weight": 1.53,
-        "price": 374.05,
-        "mv": 372927.85,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "BTI",
-        "name": "British American Tobacco PLC",
-        "weight": 1.51,
-        "price": 64.04,
-        "mv": 367845.76,
-        "first_seen": "2026-05-28",
-        "days_held": 0
-      },
-      {
-        "ticker": "19247G107-TRS-06/08/27-L-HELS",
-        "name": "COHERENT CORP.-SWAP-CLST-L",
-        "weight": 1.5,
-        "price": 380.18,
-        "mv": 365733.16,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "MPC",
-        "name": "Marathon Petroleum Corp",
-        "weight": 1.48,
-        "price": 247.05,
-        "mv": 359951.85,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "RSI",
-        "name": "Rush Street Interactive Inc",
-        "weight": 1.48,
-        "price": 27.08,
-        "mv": 358891.24,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "CRCL",
-        "name": "Circle Internet Group Inc",
-        "weight": 1.46,
-        "price": 102.64,
-        "mv": 354929.12,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "CNQ",
-        "name": "Canadian Natural Resources Ltd",
-        "weight": 1.45,
-        "price": 45.75,
-        "mv": 352778.25,
-        "first_seen": "2026-05-27",
-        "days_held": 1
-      },
-      {
-        "ticker": "SWBI",
-        "name": "Smith & Wesson Brands Inc",
-        "weight": 1.02,
-        "price": 15.24,
-        "mv": 247177.56,
-        "first_seen": "2026-04-15",
-        "days_held": 43
-      },
-      {
-        "ticker": "XYZ",
-        "name": "Block Inc",
-        "weight": 1.02,
-        "price": 71.42,
-        "mv": 247970.24,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "MUSA",
-        "name": "Murphy USA Inc",
-        "weight": 1.01,
-        "price": 516.08,
-        "mv": 244621.92,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "MEOH",
-        "name": "Methanex Corp",
-        "weight": 0.98,
-        "price": 59.15,
-        "mv": 237368.95,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "CVI",
-        "name": "CVR Energy Inc",
-        "weight": 0.93,
-        "price": 32.02,
-        "mv": 227342.0,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "SNAP",
-        "name": "Snap Inc",
-        "weight": -0.51,
-        "price": 5.88,
-        "mv": -123685.8,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "FLUT",
-        "name": "Flutter Entertainment PLC",
-        "weight": -0.92,
-        "price": 95.75,
-        "mv": -224629.5,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "BRBR",
-        "name": "BellRing Brands Inc",
-        "weight": -0.93,
-        "price": 8.59,
-        "mv": -225496.09,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "BALL",
-        "name": "Ball Corp",
-        "weight": -0.94,
-        "price": 56.51,
-        "mv": -228243.89,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "DPZ",
-        "name": "Domino's Pizza Inc",
-        "weight": -0.94,
-        "price": 311.72,
-        "mv": -228490.76,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "MSTR",
-        "name": "Strategy Inc",
-        "weight": -0.95,
-        "price": 154.2,
-        "mv": -231762.6,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "SYY",
-        "name": "Sysco Corp",
-        "weight": -0.96,
-        "price": 75.22,
-        "mv": -232956.34,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "DASH",
-        "name": "DoorDash Inc",
-        "weight": -0.97,
-        "price": 157.58,
-        "mv": -236685.16,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "FLO",
-        "name": "Flowers Foods Inc",
-        "weight": -0.98,
-        "price": 7.81,
-        "mv": -238603.31,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "LCID",
-        "name": "Lucid Group Inc",
-        "weight": -0.98,
-        "price": 6.26,
-        "mv": -238487.22,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "CMG",
-        "name": "Chipotle Mexican Grill Inc",
-        "weight": -0.99,
-        "price": 32.69,
-        "mv": -240271.5,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "GIS",
-        "name": "General Mills Inc",
-        "weight": -0.99,
-        "price": 33.65,
-        "mv": -240563.85,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "RBLX",
-        "name": "ROBLOX Corp",
-        "weight": -0.99,
-        "price": 45.63,
-        "mv": -240013.8,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "IDXX",
-        "name": "IDEXX Laboratories Inc",
-        "weight": -1.0,
-        "price": 550.99,
-        "mv": -242986.59,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "RDDT",
-        "name": "Reddit Inc",
-        "weight": -1.01,
-        "price": 154.19,
-        "mv": -244699.53,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "EAT",
-        "name": "Brinker International Inc",
-        "weight": -1.02,
-        "price": 141.48,
-        "mv": -249004.8,
-        "first_seen": "2026-05-27",
-        "days_held": 1
-      },
-      {
-        "ticker": "NKE",
-        "name": "NIKE Inc",
-        "weight": -1.02,
-        "price": 45.98,
-        "mv": -249257.58,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "SMPL",
-        "name": "Simply Good Foods Co/The",
-        "weight": -1.02,
-        "price": 11.69,
-        "mv": -247033.08,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "CHTR",
-        "name": "Charter Communications Inc",
-        "weight": -1.03,
-        "price": 147.18,
-        "mv": -251089.08,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "META",
-        "name": "Meta Platforms Inc",
-        "weight": -1.03,
-        "price": 635.255,
-        "mv": -250925.73,
-        "first_seen": "2026-05-07",
-        "days_held": 21
-      },
-      {
-        "ticker": "BKNG",
-        "name": "Booking Holdings Inc",
-        "weight": -1.06,
-        "price": 168.37,
-        "mv": -257606.1,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "USPH",
-        "name": "US Physical Therapy Inc",
-        "weight": -1.06,
-        "price": 64.17,
-        "mv": -257963.4,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "LUV",
-        "name": "Southwest Airlines Co",
-        "weight": -1.08,
-        "price": 43.68,
-        "mv": -263390.4,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "DDS",
-        "name": "Dillard's Inc",
-        "weight": -1.09,
-        "price": 589.83,
-        "mv": -266013.33,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "PLAY",
-        "name": "Dave & Buster's Entertainment Inc",
-        "weight": -1.1,
-        "price": 13.15,
-        "mv": -267628.8,
-        "first_seen": "2026-05-04",
-        "days_held": 24
-      },
-      {
-        "ticker": "KSS",
-        "name": "Kohl's Corp",
-        "weight": -1.11,
-        "price": 12.93,
-        "mv": -270288.72,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "WING",
-        "name": "Wingstop Inc",
-        "weight": -1.2,
-        "price": 152.09,
-        "mv": -292164.89,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      }
-    ],
-    "HGRO": [
-      {
-        "ticker": "AAPL",
-        "name": "Apple Inc",
-        "weight": 9.2,
-        "price": 310.85,
-        "mv": 11197127.85,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "NVDA",
-        "name": "NVIDIA Corp",
-        "weight": 8.99,
-        "price": 212.6,
-        "mv": 10948687.4,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "GOOGL",
-        "name": "Alphabet Inc",
-        "weight": 8.03,
-        "price": 388.83,
-        "mv": 9777130.35,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "AMZN",
-        "name": "Amazon.com Inc",
-        "weight": 6.08,
-        "price": 271.85,
-        "mv": 7402747.35,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "AVGO",
-        "name": "Broadcom Inc",
-        "weight": 3.0,
-        "price": 421.86,
-        "mv": 3651198.3,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "LLY",
-        "name": "Eli Lilly & Co",
-        "weight": 2.87,
-        "price": 1082.92,
-        "mv": 3492417.0,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "GS",
-        "name": "Goldman Sachs Group Inc/The",
-        "weight": 2.3,
-        "price": 996.47,
-        "mv": 2796094.82,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "AMD",
-        "name": "Advanced Micro Devices Inc",
-        "weight": 2.23,
-        "price": 495.54,
-        "mv": 2717541.36,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "ADI",
-        "name": "Analog Devices Inc",
-        "weight": 2.21,
-        "price": 416.88,
-        "mv": 2688876.0,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "CBOE",
-        "name": "Cboe Global Markets Inc",
-        "weight": 2.14,
-        "price": 347.69,
-        "mv": 2611499.59,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "V",
-        "name": "Visa Inc",
-        "weight": 2.1,
-        "price": 327.61,
-        "mv": 2557978.88,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "UNH",
-        "name": "UnitedHealth Group Inc",
-        "weight": 2.02,
-        "price": 384.01,
-        "mv": 2465728.21,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "HAL",
-        "name": "Halliburton Co",
-        "weight": 1.84,
-        "price": 39.6,
-        "mv": 2243656.8,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "LIN",
-        "name": "Linde PLC",
-        "weight": 1.67,
-        "price": 507.87,
-        "mv": 2033003.61,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "AMAT",
-        "name": "Applied Materials Inc",
-        "weight": 1.64,
-        "price": 448.25,
-        "mv": 1993367.75,
-        "first_seen": "2026-05-22",
-        "days_held": 6
-      },
-      {
-        "ticker": "CAT",
-        "name": "Caterpillar Inc",
-        "weight": 1.64,
-        "price": 909.93,
-        "mv": 2000936.07,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "NDAQ",
-        "name": "Nasdaq Inc",
-        "weight": 1.63,
-        "price": 90.53,
-        "mv": 1984236.54,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "URI",
-        "name": "United Rentals Inc",
-        "weight": 1.52,
-        "price": 988.24,
-        "mv": 1848008.8,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "CSX",
-        "name": "CSX Corp",
-        "weight": 1.5,
-        "price": 47.14,
-        "mv": 1822432.4,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "SNDK",
-        "name": "Sandisk Corp/DE",
-        "weight": 1.5,
-        "price": 1589.94,
-        "mv": 1825251.12,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "GEV",
-        "name": "GE Vernova Inc",
-        "weight": 1.44,
-        "price": 1031.89,
-        "mv": 1749053.55,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "PLD",
-        "name": "Prologis Inc",
-        "weight": 1.41,
-        "price": 146.52,
-        "mv": 1719998.28,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "PM",
-        "name": "Philip Morris International Inc",
-        "weight": 1.38,
-        "price": 182.04,
-        "mv": 1677680.64,
-        "first_seen": "2026-05-19",
-        "days_held": 9
-      },
-      {
-        "ticker": "C",
-        "name": "Citigroup Inc",
-        "weight": 1.3,
-        "price": 125.39,
-        "mv": 1588942.08,
-        "first_seen": "2026-04-15",
-        "days_held": 43
-      },
-      {
-        "ticker": "CF",
-        "name": "CF Industries Holdings Inc",
-        "weight": 1.28,
-        "price": 116.34,
-        "mv": 1563725.94,
-        "first_seen": "2026-04-17",
-        "days_held": 41
-      },
-      {
-        "ticker": "KMI",
-        "name": "Kinder Morgan Inc",
-        "weight": 1.27,
-        "price": 32.22,
-        "mv": 1542854.7,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "RIO",
-        "name": "Rio Tinto PLC",
-        "weight": 1.26,
-        "price": 106.61,
-        "mv": 1538062.47,
-        "first_seen": "2026-05-05",
-        "days_held": 23
-      },
-      {
-        "ticker": "BNY",
-        "name": "Bank of New York Mellon Corp/The",
-        "weight": 1.22,
-        "price": 139.74,
-        "mv": 1484318.28,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "SBUX",
-        "name": "Starbucks Corp",
-        "weight": 1.21,
-        "price": 102.1,
-        "mv": 1472384.1,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "MRK",
-        "name": "Merck & Co Inc",
-        "weight": 1.2,
-        "price": 120.24,
-        "mv": 1461156.48,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "STX",
-        "name": "Seagate Technology Holdings PLC",
-        "weight": 1.17,
-        "price": 870.66,
-        "mv": 1424399.76,
-        "first_seen": "2026-04-13",
-        "days_held": 45
-      },
-      {
-        "ticker": "ATI",
-        "name": "ATI Inc",
-        "weight": 1.16,
-        "price": 169.84,
-        "mv": 1410691.04,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "MAR",
-        "name": "Marriott International Inc/MD",
-        "weight": 1.15,
-        "price": 385.86,
-        "mv": 1399514.22,
-        "first_seen": "2026-04-22",
-        "days_held": 36
-      },
-      {
-        "ticker": "VLO",
-        "name": "Valero Energy Corp",
-        "weight": 1.15,
-        "price": 240.34,
-        "mv": 1406229.34,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "ORCL",
-        "name": "Oracle Corp",
-        "weight": 1.13,
-        "price": 190.96,
-        "mv": 1375293.92,
-        "first_seen": "2026-04-15",
-        "days_held": 43
-      },
-      {
-        "ticker": "VIK",
-        "name": "Viking Holdings Ltd",
-        "weight": 1.11,
-        "price": 92.55,
-        "mv": 1346139.75,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "KLAC",
-        "name": "KLA CORP",
-        "weight": 1.09,
-        "price": 1957.19,
-        "mv": 1332846.39,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "FCFS",
-        "name": "FirstCash Holdings Inc",
-        "weight": 1.07,
-        "price": 231.32,
-        "mv": 1306958.0,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "SXT",
-        "name": "Sensient Technologies Corp",
-        "weight": 1.03,
-        "price": 117.79,
-        "mv": 1254934.66,
-        "first_seen": "2026-05-22",
-        "days_held": 6
-      },
-      {
-        "ticker": "ULS",
-        "name": "UL Solutions Inc",
-        "weight": 1.01,
-        "price": 100.6,
-        "mv": 1224000.2,
-        "first_seen": "2026-05-08",
-        "days_held": 20
-      },
-      {
-        "ticker": "CIEN",
-        "name": "Ciena Corp",
-        "weight": 1.0,
-        "price": 582.08,
-        "mv": 1222368.0,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "OUT",
-        "name": "Outfront Media Inc",
-        "weight": 1.0,
-        "price": 32.61,
-        "mv": 1212602.85,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "MRVL",
-        "name": "MARVELL TECHNOLOGY INC",
-        "weight": 0.97,
-        "price": 198.7,
-        "mv": 1184848.1,
-        "first_seen": "2026-04-07",
-        "days_held": 51
-      },
-      {
-        "ticker": "ZM",
-        "name": "Zoom Communications Inc",
-        "weight": 0.9,
-        "price": 99.96,
-        "mv": 1092462.84,
-        "first_seen": "2026-05-23",
-        "days_held": 5
-      },
-      {
-        "ticker": "CASY",
-        "name": "Casey's General Stores Inc",
-        "weight": 0.88,
-        "price": 784.38,
-        "mv": 1076953.74,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "TTWO",
-        "name": "Take-Two Interactive Software Inc",
-        "weight": 0.87,
-        "price": 218.46,
-        "mv": 1054506.42,
-        "first_seen": "2026-05-13",
-        "days_held": 15
-      },
-      {
-        "ticker": "GFS",
-        "name": "GLOBALFOUNDRIES Inc",
-        "weight": 0.82,
-        "price": 81.11,
-        "mv": 996436.35,
-        "first_seen": "2026-05-21",
-        "days_held": 7
-      },
-      {
-        "ticker": "TWLO",
-        "name": "Twilio Inc",
-        "weight": 0.76,
-        "price": 181.57,
-        "mv": 920559.9,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      },
-      {
-        "ticker": "CZR",
-        "name": "Caesars Entertainment Inc",
-        "weight": 0.75,
-        "price": 28.78,
-        "mv": 912095.76,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "GLW",
-        "name": "Corning Inc",
-        "weight": 0.74,
-        "price": 190.89,
-        "mv": 905582.16,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "TXG",
-        "name": "10X Genomics Inc",
-        "weight": 0.72,
-        "price": 25.51,
-        "mv": 881396.01,
-        "first_seen": "2026-04-17",
-        "days_held": 41
-      },
-      {
-        "ticker": "CSCO",
-        "name": "Cisco Systems Inc",
-        "weight": 0.71,
-        "price": 119.67,
-        "mv": 860068.29,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "COHR",
-        "name": "Coherent Corp",
-        "weight": 0.53,
-        "price": 380.18,
-        "mv": 640603.3,
-        "first_seen": "2026-04-27",
-        "days_held": 31
-      },
-      {
-        "ticker": "NET",
-        "name": "Cloudflare Inc",
-        "weight": 0.48,
-        "price": 209.22,
-        "mv": 582259.26,
-        "first_seen": "2026-03-30",
-        "days_held": 59
-      },
-      {
-        "ticker": "CAVA",
-        "name": "Cava Group Inc",
-        "weight": 0.41,
-        "price": 82.2,
-        "mv": 504297.0,
-        "first_seen": "2026-05-01",
-        "days_held": 27
-      }
     ]
   },
   "position_sizing": {
-    "as_of_date": "2026-05-28",
+    "as_of_date": "2026-05-29",
     "threshold_ticker": "HYG",
     "threshold_rank": 21,
     "threshold_pct": 3,

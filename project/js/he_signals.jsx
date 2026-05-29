@@ -35,7 +35,9 @@ const SignalsTab = ({macroCtx}) => {
       sector:     det.sector      ?? null,
       days:       det.days_on_list ?? calcDays(det.signal_date),
       signalDate: det.signal_date  ?? null,
-      entryPrice: det.entry_price  ?? null,
+      entryPrice:  det.entry_price   ?? null,
+      recentPrice: det.recent_price  ?? null,
+      pctChg:      det.pct_since_entry ?? null,
     };
   };
 
@@ -178,7 +180,7 @@ const SignalsTab = ({macroCtx}) => {
               <thead>
                 <tr>
                   <TH right>Days</TH><TH>Conv</TH><TH>Ticker</TH><TH>Signal Date</TH>
-                  <TH right>Entry $</TH><TH>Sector</TH><TH>Analyst</TH><TH right>HAM Wt</TH>
+                  <TH right>Entry $</TH><TH right>Recent $</TH><TH right>% Chg</TH><TH>Sector</TH><TH>Analyst</TH><TH right>HAM Wt</TH>
                 </tr>
               </thead>
               <tbody>
@@ -209,6 +211,11 @@ const SignalsTab = ({macroCtx}) => {
                       </TD>
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.signalDate ?? '—'}</TD>
                       <TD right>{meta?.entryPrice != null ? `$${meta.entryPrice.toFixed(2)}` : '—'}</TD>
+                      <TD right style={{color:'#1A1A18'}}>{meta?.recentPrice != null ? `$${meta.recentPrice.toFixed(2)}` : '—'}</TD>
+                      <TD right style={{
+                        fontWeight: meta?.pctChg != null ? 600 : 400,
+                        color: meta?.pctChg == null ? '#ccc' : meta.pctChg >= 0 ? '#27500A' : '#C8302A'
+                      }}>{meta?.pctChg != null ? `${meta.pctChg >= 0 ? '+' : ''}${meta.pctChg.toFixed(1)}%` : '—'}</TD>
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.sector ?? '—'}</TD>
                       <TD style={{color:'#7A7770', fontSize:10}}>{meta?.analyst ?? '—'}</TD>
                       <TD right style={{fontWeight:ham?600:400, color:ham?'#27500A':'#ccc'}}>

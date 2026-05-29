@@ -283,6 +283,8 @@ def main():
     tmp_path = MCJ_PATH + '.tmp'
     with open(tmp_path, 'w', encoding='utf-8') as f:
         json.dump(mcj, f, indent=2, ensure_ascii=False)
+        f.flush()
+        os.fsync(f.fileno())
     os.replace(tmp_path, MCJ_PATH)
 
     print(f"\nWrote {len(positions)} positions to macro_context.json")
