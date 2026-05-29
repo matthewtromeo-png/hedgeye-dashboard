@@ -300,13 +300,15 @@ function CalloutsPanel({ callouts, signalPositions }) {
     <div>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))', gap:10, marginBottom:12 }}>
         {(callouts || []).map((c, i) => {
-          const col = CALLOUT_COLORS[c.title] || { border:'#E4E1DA', bg:'#FAFAF8', label:'#555' };
+          const ctitle = c.title ?? c.topic ?? '';
+        const detail = c.detail ?? c.text ?? '';
+        const col = CALLOUT_COLORS[ctitle] || { border:'#E4E1DA', bg:'#FAFAF8', label:'#555' };
           return (
             <div key={i} style={{ border:`1px solid ${col.border}40`, borderLeft:`3px solid ${col.border}`,
               background:col.bg, borderRadius:4, padding:'10px 14px' }}>
               <div style={{ fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
-                color:col.label, letterSpacing:'0.06em', marginBottom:6 }}>{c.title}</div>
-              <p style={{ fontSize:11, color:'#333', lineHeight:1.55, margin:0 }}>{c.detail}</p>
+                color:col.label, letterSpacing:'0.06em', marginBottom:6 }}>{ctitle}</div>
+              <p style={{ fontSize:11, color:'#333', lineHeight:1.55, margin:0 }}>{detail}</p>
             </div>
           );
         })}
@@ -315,13 +317,15 @@ function CalloutsPanel({ callouts, signalPositions }) {
         <div style={{ display:'flex', gap:6, flexWrap:'wrap', alignItems:'center' }}>
           <span style={{ fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#888', marginRight:4 }}>ACTIVE SIGNALS</span>
           {signalPositions.map((p, i) => {
-            const isShort = p.toLowerCase().startsWith('short');
+            const label   = (typeof p === 'object' && p !== null) ? (p.label ?? '') : (p ?? '');
+            const pType   = (typeof p === 'object' && p !== null) ? (p.type  ?? '') : '';
+            const isShort = pType === 'short' || label.toLowerCase().startsWith('short');
             return (
               <span key={i} style={{ fontFamily:'IBM Plex Mono,monospace', fontSize:10, fontWeight:600,
                 padding:'2px 8px', borderRadius:3,
                 background: isShort ? '#FFF5F5' : '#EAF3DE',
                 color: isShort ? '#C53030' : '#276749' }}>
-                {p}
+                {label}
               </span>
             );
           })}
@@ -387,13 +391,14 @@ function ThemesPanel({ macroResearch }) {
               {t.trades && t.trades.length > 0 && (
                 <div style={{ display:'flex', gap:4, flexWrap:'wrap' }}>
                   {t.trades.map((tr, j) => {
-                    const isShort = tr.toLowerCase().startsWith('short');
+                    const trLabel = (typeof tr === 'object' && tr !== null) ? (tr.label ?? '') : (tr ?? '');
+                    const isShort = trLabel.toLowerCase().startsWith('short');
                     return (
                       <span key={j} style={{ fontFamily:'IBM Plex Mono,monospace', fontSize:9,
                         padding:'1px 5px', borderRadius:2,
                         background: isShort ? '#FFF5F5' : '#EAF3DE',
                         color: isShort ? '#C53030' : '#276749' }}>
-                        {tr}
+                        {trLabel}
                       </span>
                     );
                   })}
@@ -618,6 +623,95 @@ function ResearchStatusTab() {
 
   return (
     <div style={{ padding:'16px 20px', maxWidth:1280, margin:'0 auto', animation:'fadeIn 0.2s ease' }}>
+
+      {/* ── Data Freshness Checklist ── */}
+      {(() => {
+        const macroCtx = ctx;
+        const today = macroCtx?.source_date ?? null;
+        if (!today) return null;
+
+        const daysDiff = (dateStr) => {
+          if (!dateStr) return null;
+          const d = dateStr.slice(0, 10);
+          const now = new Date(today + 'T00:00:00');
+          const then = new Date(d + 'T00:00:00');
+          return Math.round((now - then) / 86400000);
+        };
+
+        const products = [
+          { label: 'Early Look',        date: macroCtx?.pdf?.early_look?.date,        delayed: false },
+          { label: 'Macro Show Slides', date: macroCtx?.pdf?.macro_show?.date,        delayed: false },
+          { label: 'MSR',               date: macroCtx?.pdf?.msr?.date,               delayed: false },
+          { label: 'MOMO Tracker',      date: macroCtx?.pdf?.momo?.date,              delayed: false },
+          { label: 'BTC Tracker',       date: macroCtx?.pdf?.btc?.date,               delayed: false },
+          { label: 'ETF Pro',           date: macroCtx?.etf_pro?.as_of,               delayed: false },
+          { label: 'SSS',               date: macroCtx?.pdf?.sss?.date,               delayed: false, weekly: true },
+          { label: 'HAM Holdings',      date: macroCtx?.ham_per_fund?.date,           delayed: false, weekly: true },
+          { label: 'Call Summary',      date: macroCtx?.call_summary?.date,           delayed: true  },
+          { label: 'Show Notes',        date: macroCtx?.macro_show_notes?.date,       delayed: true  },
+        ];
+
+        const getStatus = (p) => {
+          const d = daysDiff(p.date);
+          if (d === null) return 'missing';
+          if (d === 0)    return 'current';
+          if (d === 1)    return p.delayed ? 'waiting' : (p.weekly ? 'current' : 'stale1');
+          if (d <= 3 && p.weekly) return 'current';
+          return p.delayed ? 'waiting' : 'stale';
+        };
+
+        const STATUS_CFG = {
+          current: { dot: '#27500A', bg: '#EAF3DE', border: '#C6DFAC', text: '#27500A', label: 'Current' },
+          waiting: { dot: '#B8860B', bg: '#FFFBEB', border: '#F0D060', text: '#7A5C00', label: 'Waiting for upload' },
+          stale1:  { dot: '#B8860B', bg: '#FFFBEB', border: '#F0D060', text: '#7A5C00', label: '1 day stale' },
+          stale:   { dot: '#C8302A', bg: '#FCEBEB', border: '#E8A8A8', text: '#C8302A', label: 'Stale' },
+          missing: { dot: '#9A9790', bg: '#F4F3EF', border: '#D8D5CE', text: '#9A9790', label: 'No data' },
+        };
+
+        const staleCount  = products.filter(p => ['stale','stale1'].includes(getStatus(p))).length;
+        const waitCount   = products.filter(p => getStatus(p) === 'waiting').length;
+        const allCurrent  = staleCount === 0 && waitCount === 0;
+
+        const panelBg     = allCurrent ? '#F4FAF0' : staleCount > 0 ? '#FFF8F8' : '#FFFCF0';
+        const panelBorder = allCurrent ? '#C6DFAC' : staleCount > 0 ? '#E8A8A8' : '#F0D060';
+        const headerColor = allCurrent ? '#27500A' : staleCount > 0 ? '#C8302A' : '#7A5C00';
+
+        return (
+          <div style={{background:panelBg, border:`1px solid ${panelBorder}`, borderRadius:8,
+            padding:'10px 16px', marginBottom:16}}>
+            <div style={{display:'flex', alignItems:'center', gap:10, marginBottom:8}}>
+              <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
+                letterSpacing:'0.12em', textTransform:'uppercase', color:headerColor}}>
+                {allCurrent ? '✓ All data current' : staleCount > 0 ? `⚠ ${staleCount} stale · ${waitCount} waiting` : `○ ${waitCount} waiting for upload`}
+              </span>
+              <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginLeft:'auto'}}>
+                as of {today}
+              </span>
+            </div>
+            <div style={{display:'flex', flexWrap:'wrap', gap:'6px 10px'}}>
+              {products.map(p => {
+                const s = getStatus(p);
+                const cfg = STATUS_CFG[s];
+                const d = daysDiff(p.date);
+                const dayTxt = d === null ? '' : d === 0 ? '' : ` (${d}d ago)`;
+                return (
+                  <div key={p.label} title={cfg.label + dayTxt}
+                    style={{display:'flex', alignItems:'center', gap:5, padding:'3px 8px',
+                      background:cfg.bg, border:`1px solid ${cfg.border}`, borderRadius:20,
+                      cursor:'default'}}>
+                    <span style={{width:6, height:6, borderRadius:'50%',
+                      background:cfg.dot, display:'inline-block', flexShrink:0}} />
+                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:cfg.text,
+                      fontWeight:s==='current'?400:600, whiteSpace:'nowrap'}}>
+                      {p.label}{s !== 'current' ? dayTxt : ''}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })()}
 
       {/* ── HEADER ── */}
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between',

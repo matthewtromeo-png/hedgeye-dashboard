@@ -22,9 +22,26 @@ S3_URL = "https://hedgeye.s3.us-east-1.amazonaws.com/ham/ETF_Holdings.csv"
 # ── Paths ──────────────────────────────────────────────────────────────
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT   = os.path.dirname(SCRIPT_DIR)
+# Always write to the git repo, NOT OneDrive — avoids OneDrive sync corruption
+REPO_DATA_DIR    = r'C:\repos\hedgeye-dashboard\project\data'
+ONEDRIVE_CTX     = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'project', 'data', 'macro_context.json'))
+
+def safe_read_ctx(write_path, fallback_path):
+    """Read macro_context.json: try repo first, fall back to OneDrive if repo is missing/corrupt."""
+    import json as _json
+    for label, p in [('repo', write_path), ('OneDrive', fallback_path)]:
+        if not os.path.exists(p):
+            continue
+        try:
+            with open(p, 'r', encoding='utf-8') as _f:
+                return _json.load(_f)
+        except Exception as e:
+            print(f"  [WARN] Could not read {label} JSON ({p}): {e}")
+    print("  [ERROR] No readable macro_context.json found — starting fresh")
+    return {}
 ONEDRIVE    = r"C:\Users\matth\OneDrive\Desktop\Trading"
 HAM_DIR     = os.path.join(ONEDRIVE, "hedgeye", "HAM holdings")
-DATA_DIR    = os.path.join(REPO_ROOT, "project", "data")
+DATA_DIR    = REPO_DATA_DIR  # write directly to repo, not OneDrive
 CTX_PATH    = os.path.join(DATA_DIR, "macro_context.json")
 OUT_CSV     = os.path.join(DATA_DIR, "ham_holdings_latest.csv")
 
@@ -358,16 +375,8 @@ def main():
     else:
         print("Per-fund daily adds: none (no new tickers vs yesterday)")
 
-    # ── Write to macro_context.json ───────────────────────────────────
-    if not os.path.exists(CTX_PATH):
-        ctx = {}
-    else:
-        with open(CTX_PATH, 'r', encoding='utf-8') as f:
-            try:
-                ctx = json.load(f)
-            except Exception:
-                print("[WARN] macro_context.json unreadable -- creating fresh")
-                ctx = {}
+    # ── Write to macro_context.json (reads repo first, falls back to OneDrive) ──
+    ctx = safe_read_ctx(CTX_PATH, ONEDRIVE_CTX)
 
     ctx['ham_per_fund'] = ham_per_fund
     ctx['ham_deltas']   = ham_deltas

@@ -365,95 +365,6 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
       </div>
 
 
-      {/* ── Data Freshness Checklist ── */}
-      {(() => {
-        const today = macroCtx?.source_date ?? null;
-        if (!today) return null;
-
-        const daysDiff = (dateStr) => {
-          if (!dateStr) return null;
-          const d = dateStr.slice(0, 10);
-          const now = new Date(today + 'T00:00:00');
-          const then = new Date(d + 'T00:00:00');
-          return Math.round((now - then) / 86400000);
-        };
-
-        // Products: [label, dateKey value, isDelayed (call-replay type)]
-        const products = [
-          { label: 'Early Look',        date: macroCtx?.pdf?.early_look?.date,        delayed: false },
-          { label: 'Macro Show Slides', date: macroCtx?.pdf?.macro_show?.date,        delayed: false },
-          { label: 'MSR',               date: macroCtx?.pdf?.msr?.date,               delayed: false },
-          { label: 'MOMO Tracker',      date: macroCtx?.pdf?.momo?.date,              delayed: false },
-          { label: 'BTC Tracker',       date: macroCtx?.pdf?.btc?.date,               delayed: false },
-          { label: 'ETF Pro',           date: macroCtx?.etf_pro?.as_of,               delayed: false },
-          { label: 'SSS',               date: macroCtx?.pdf?.sss?.date,               delayed: false, weekly: true },
-          { label: 'HAM Holdings',      date: macroCtx?.ham_per_fund?.date,           delayed: false, weekly: true },
-          { label: 'Call Summary',      date: macroCtx?.call_summary?.date,           delayed: true  },
-          { label: 'Show Notes',        date: macroCtx?.macro_show_notes?.date,       delayed: true  },
-        ];
-
-        const getStatus = (p) => {
-          const d = daysDiff(p.date);
-          if (d === null) return 'missing';
-          if (d === 0)    return 'current';
-          if (d === 1)    return p.delayed ? 'waiting' : (p.weekly ? 'current' : 'stale1');
-          if (d <= 3 && p.weekly) return 'current';
-          return p.delayed ? 'waiting' : 'stale';
-        };
-
-        const STATUS_CFG = {
-          current: { dot: '#27500A', bg: '#EAF3DE', border: '#C6DFAC', text: '#27500A', label: 'Current' },
-          waiting: { dot: '#B8860B', bg: '#FFFBEB', border: '#F0D060', text: '#7A5C00', label: 'Waiting for upload' },
-          stale1:  { dot: '#B8860B', bg: '#FFFBEB', border: '#F0D060', text: '#7A5C00', label: '1 day stale' },
-          stale:   { dot: '#C8302A', bg: '#FCEBEB', border: '#E8A8A8', text: '#C8302A', label: 'Stale' },
-          missing: { dot: '#9A9790', bg: '#F4F3EF', border: '#D8D5CE', text: '#9A9790', label: 'No data' },
-        };
-
-        const staleCount  = products.filter(p => ['stale','stale1'].includes(getStatus(p))).length;
-        const waitCount   = products.filter(p => getStatus(p) === 'waiting').length;
-        const allCurrent  = staleCount === 0 && waitCount === 0;
-
-        const panelBg     = allCurrent ? '#F4FAF0' : staleCount > 0 ? '#FFF8F8' : '#FFFCF0';
-        const panelBorder = allCurrent ? '#C6DFAC' : staleCount > 0 ? '#E8A8A8' : '#F0D060';
-        const headerColor = allCurrent ? '#27500A' : staleCount > 0 ? '#C8302A' : '#7A5C00';
-
-        return (
-          <div style={{background:panelBg, border:`1px solid ${panelBorder}`, borderRadius:8,
-            padding:'10px 16px', marginBottom:14}}>
-            <div style={{display:'flex', alignItems:'center', gap:10, marginBottom:8}}>
-              <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, fontWeight:700,
-                letterSpacing:'0.12em', textTransform:'uppercase', color:headerColor}}>
-                {allCurrent ? '✓ All data current' : staleCount > 0 ? `⚠ ${staleCount} stale · ${waitCount} waiting` : `○ ${waitCount} waiting for upload`}
-              </span>
-              <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790', marginLeft:'auto'}}>
-                as of {today}
-              </span>
-            </div>
-            <div style={{display:'flex', flexWrap:'wrap', gap:'6px 10px'}}>
-              {products.map(p => {
-                const s = getStatus(p);
-                const cfg = STATUS_CFG[s];
-                const d = daysDiff(p.date);
-                const dayTxt = d === null ? '' : d === 0 ? '' : ` (${d}d ago)`;
-                return (
-                  <div key={p.label} title={cfg.label + dayTxt}
-                    style={{display:'flex', alignItems:'center', gap:5, padding:'3px 8px',
-                      background:cfg.bg, border:`1px solid ${cfg.border}`, borderRadius:20,
-                      cursor:'default'}}>
-                    <span style={{width:6, height:6, borderRadius:'50%',
-                      background:cfg.dot, display:'inline-block', flexShrink:0}} />
-                    <span style={{fontFamily:'IBM Plex Mono,monospace', fontSize:10, color:cfg.text,
-                      fontWeight:s==='current'?400:600, whiteSpace:'nowrap'}}>
-                      {p.label}{s !== 'current' ? dayTxt : ''}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        );
-      })()}
-
       {/* VIX Bucket Banner */}
       {vixLoading && vixLevel === null ? (
         <div style={{background:'#F9F8F5',border:'1px solid #E4E1DA',borderRadius:8,
@@ -558,16 +469,18 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
           </div>
           <div style={{display:'grid',gridTemplateColumns:`repeat(${Math.min(showCallouts.length,3)},1fr)`,gap:10,marginBottom: showPositions.length > 0 ? 12 : 0}}>
             {showCallouts.map((c,i) => {
-              const isBull = c.detail?.toLowerCase().includes('bullish') || c.detail?.toLowerCase().includes('long ');
-              const isBear = c.detail?.toLowerCase().includes('bearish') || c.detail?.toLowerCase().includes('short ');
+              const detail  = c.detail ?? c.text ?? '';
+              const ctitle  = c.title  ?? c.topic ?? '';
+              const isBull = detail.toLowerCase().includes('bullish') || detail.toLowerCase().includes('long ');
+              const isBear = detail.toLowerCase().includes('bearish') || detail.toLowerCase().includes('short ');
               const accentColor = isBull ? '#27500A' : isBear ? '#C8302A' : '#B8860B';
               const accentBg   = isBull ? '#EAF3DE' : isBear ? '#FCEBEB' : '#FFFBEB';
               return (
                 <div key={i} style={{background:accentBg,borderRadius:6,padding:'10px 12px',
                   borderLeft:`3px solid ${accentColor}`}}>
                   <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,fontWeight:700,
-                    color:accentColor,marginBottom:5}}>{c.title}</div>
-                  <div style={{fontSize:11,color:'#333',lineHeight:1.5}}>{c.detail}</div>
+                    color:accentColor,marginBottom:5}}>{ctitle}</div>
+                  <div style={{fontSize:11,color:'#333',lineHeight:1.5}}>{detail}</div>
                 </div>
               );
             })}

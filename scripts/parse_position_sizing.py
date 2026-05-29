@@ -17,7 +17,24 @@ logging.getLogger("pdfminer").setLevel(logging.ERROR)
 # ── Paths ─────────────────────────────────────────────────────────────────────
 SCRIPT_DIR  = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.join(SCRIPT_DIR, '..', 'project')
-DATA_DIR    = os.path.join(PROJECT_DIR, 'data')
+# Always write to the git repo, NOT OneDrive — avoids OneDrive sync corruption
+REPO_DATA_DIR    = r'C:\repos\hedgeye-dashboard\project\data'
+ONEDRIVE_CTX     = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'project', 'data', 'macro_context.json'))
+
+def safe_read_ctx(write_path, fallback_path):
+    """Read macro_context.json: try repo first, fall back to OneDrive if repo is missing/corrupt."""
+    import json as _json
+    for label, p in [('repo', write_path), ('OneDrive', fallback_path)]:
+        if not os.path.exists(p):
+            continue
+        try:
+            with open(p, 'r', encoding='utf-8') as _f:
+                return _json.load(_f)
+        except Exception as e:
+            print(f"  [WARN] Could not read {label} JSON ({p}): {e}")
+    print("  [ERROR] No readable macro_context.json found — starting fresh")
+    return {}
+DATA_DIR    = REPO_DATA_DIR
 MCJ_PATH    = os.path.join(DATA_DIR, 'macro_context.json')
 PS_FOLDER   = r'C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Portfolio solutions'
 # Linux mount path (for sandbox):
@@ -270,8 +287,7 @@ def main():
     }
 
     # Write to macro_context.json — atomic write to avoid truncation
-    with open(MCJ_PATH) as f:
-        mcj = json.load(f)
+    mcj = safe_read_ctx(MCJ_PATH, ONEDRIVE_CTX)
     mcj['position_sizing'] = result
     # sources_used may be a list (new format) or dict (old format) — handle both
     src = mcj.get('sources_used', [])
