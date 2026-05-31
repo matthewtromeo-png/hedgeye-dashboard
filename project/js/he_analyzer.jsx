@@ -316,7 +316,6 @@ const AnalyzerTab = ({macroCtx}) => {
   const liveSssTickers  = new Set(macroCtx?.pdf?.sss?.tickers ?? []);
   const isOnSss = ticker ? liveSssTickers.has(ticker) : false;
   const qs = window.HE.loadQuadState();
-  console.log('[AnalyzerTab] FMP key:', qs.fmpKey ? 'SET' : 'NOT SET', '| live SSS tickers:', liveSssTickers.size || 'none');
   const currentQuad = qs.monthly || qs.quarterly || 'Q3';
   const quadDef     = window.HE.QUADS[currentQuad];
   const fmpKey      = qs.fmpKey;
@@ -344,6 +343,14 @@ const AnalyzerTab = ({macroCtx}) => {
   const investShorts  = macroCtx?.pdf?.investing_ideas?.shorts ?? {};
   const investNeutral = macroCtx?.pdf?.investing_ideas?.neutral ?? [];
   const levelData     = ticker ? (macroCtx?.levels?.[ticker] ?? null) : null;
+  // Pre-parse the range string so we can use values directly in JSX without an IIFE
+  const _lvlParts  = (levelData?.range || '').split('-');
+  const levelLrr   = _lvlParts[0] || null;
+  const levelTrr   = _lvlParts[1] || null;
+  const levelSig   = (levelData?.signal || '').toUpperCase();
+  const levelClose = levelData?.close ?? null;
+  const levelLrrN  = parseFloat(levelLrr);
+  const levelTrrN  = parseFloat(levelTrr);
   const ideaDir  = investLongs[ticker]   ? 'LONG'
                  : investShorts[ticker]  ? 'SHORT'
                  : investNeutral.includes(ticker) ? 'NEUTRAL' : null;
@@ -578,19 +585,19 @@ const AnalyzerTab = ({macroCtx}) => {
                 {levelData ? (
                   <div style={{display:'flex', flexDirection:'column', gap:4}}>
                     <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:12, fontWeight:700,
-                      color: levelData.signal === 'BULLISH' ? '#27500A' : '#C8302A'}}>
-                      {levelData.signal ?? '—'}
+                      color: levelSig === 'BULLISH' ? '#27500A' : '#C8302A'}}>
+                      {levelSig || '—'}
                     </div>
                     <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#7A7770'}}>
-                      LRR <span style={{fontWeight:700, color:'#1A1A18'}}>${levelData.lrr ?? '—'}</span>
-                      {'  '}TRR <span style={{fontWeight:700, color:'#1A1A18'}}>${levelData.trr ?? '—'}</span>
+                      LRR <span style={{fontWeight:700, color:'#1A1A18'}}>{levelLrr ?? '—'}</span>
+                      {'  '}TRR <span style={{fontWeight:700, color:'#1A1A18'}}>{levelTrr ?? '—'}</span>
                     </div>
-                    {levelData.close && (
+                    {levelClose != null && levelLrrN > 0 && (
                       <div style={{fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#9A9790'}}>
-                        Close <span style={{fontWeight:700, color:'#1A1A18'}}>${levelData.close}</span>
-                        <span style={{marginLeft:6, color: levelData.close >= levelData.lrr ? '#27500A' : '#C8302A', fontWeight:700}}>
-                          {levelData.close >= (levelData.trr||0) ? '▲ ABOVE TRR'
-                           : levelData.close >= (levelData.lrr||0) ? '✓ IN RANGE'
+                        Close <span style={{fontWeight:700, color:'#1A1A18'}}>{levelClose}</span>
+                        <span style={{marginLeft:6, color: levelClose >= levelLrrN ? '#27500A' : '#C8302A', fontWeight:700}}>
+                          {levelClose >= levelTrrN ? '▲ ABOVE TRR'
+                           : levelClose >= levelLrrN ? '✓ IN RANGE'
                            : '▼ BELOW LRR'}
                         </span>
                       </div>
@@ -1020,6 +1027,19 @@ const AnalyzerTab = ({macroCtx}) => {
             </div>
             {fmpErr && (
               <div style={{marginTop:10, borderTop:'1px solid #F5F3EF', paddingTop:8,
+                fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#C8302A'}}>
+                {fmpErr}
+              </div>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
+
+Object.assign(window, { AnalyzerTab });
+8,
                 fontFamily:'IBM Plex Mono,monospace', fontSize:9, color:'#C8302A'}}>
                 {fmpErr}
               </div>

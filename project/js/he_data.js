@@ -358,25 +358,3 @@ window.HE.computeRTAStats = function(trades) {
       .slice(0,300),
   };
 };
-
-// ── Live source metadata (written by ingestion, read by tabs) ────────────────
-window.HE.setLiveSource = function(category, meta) {
-  try {
-    const all = JSON.parse(localStorage.getItem('he_live_sources') || '{}');
-    all[category] = meta;
-    localStorage.setItem('he_live_sources', JSON.stringify(all));
-  } catch (e) { console.warn('[HE] setLiveSource:', e.message); }
-};
-window.HE.getLiveSource = function(category) {
-  try {
-    return JSON.parse(localStorage.getItem('he_live_sources') || '{}')[category] || null;
-  } catch { return null; }
-};
-
-// Apply persisted live SSS at startup (before React mounts)
-;(function() {
-  try {
-    const live = JSON.parse(localStorage.getItem('he_sss_live') || '{}');
-    if (live.entries?.length > 3) window.HE.SSS = live.entries;
-  } catch {}
-})();

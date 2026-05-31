@@ -179,7 +179,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
       : '—';
   const FUNDS = ['HECA','HEFT','HGRO','HELS','ADDS'].filter(f => funds[f]);
   const myTickers = myInput.split(/[\s,\n]+/).map(s => s.trim().toUpperCase()).filter(Boolean);
-  const sssSet = new Set(window.HE.SSS.map(s => s.ticker));
+  const sssSet = new Set(macroCtx?.pdf?.sss?.tickers ?? []);
   const pct = w => w === 0 ? '—' : (w > 0 ? '+' : '') + (w*100).toFixed(2) + '%';
   const delta_fmt = d => d === 0 ? '' : (d > 0 ? '+' : '') + (d*100).toFixed(2) + '%';
   const fundColors = {HECA:'#1A4D8F',HEFT:'#27500A',HGRO:'#B8860B',HELS:'#C8302A',ADDS:'#6B21A8'};
@@ -416,7 +416,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
           {holdings.map((h,i) => {
             const inSSS = sssSet.has(h.ticker);
             const isMine = myTickers.includes(h.ticker);
-            const sssInfo = inSSS ? window.HE.SSS.find(s=>s.ticker===h.ticker) : null;
+            const sssInfo = inSSS ? (macroCtx?.pdf?.sss?.tickers_detail?.[h.ticker] ?? null) : null;
             const dd = daily[h.ticker];
             const wd = weekly[h.ticker];
             return (
@@ -432,7 +432,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                 <TD right style={{fontWeight:600,color:h.isLong?'#27500A':'#C8302A'}}>{pct(h.weight)}</TD>
                 {(() => {
                   const dh = (daysLookup[activeFund]?.[h.ticker]?.days_held) ?? null;
-                  const sssD = inSSS ? (sssInfo?.days ?? null) : null;
+                  const sssD = inSSS ? (sssInfo?.days_on_list ?? null) : null;
                   const clr = dh === null ? '#ccc' : dh <= 14 ? '#27500A' : dh <= 60 ? '#B8860B' : '#9A9790';
                   const tip = sssD !== null ? `HAM: ${dh}d | SSS: ${sssD}d (${dh < sssD ? 'HAM first' : dh > sssD ? 'SSS first' : 'same'})` : dh !== null ? `First seen ${daysLookup[activeFund]?.[h.ticker]?.first_seen}` : '';
                   return (
@@ -490,7 +490,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
           <tbody>
             {overlaps.map((o,i) => {
               const cnt = Object.keys(o.funds).length;
-              const inSSS = window.HE.SSS.find(s=>s.ticker===o.ticker);
+              const inSSS = macroCtx?.pdf?.sss?.tickers_detail?.[o.ticker] ?? null;
               const isMine = myTickers.includes(o.ticker);
               const dd = daily[o.ticker];
               const wd = weekly[o.ticker];
@@ -527,7 +527,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                   </TD>
                   <TD><AlignBadge ticker={o.ticker} /></TD>
                   <TD>{inSSS?<span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 6px',borderRadius:3}}>
-                    ✓ {inSSS.days}d +{inSSS.pct.toFixed(1)}%
+                    ✓ {inSSS.days_on_list ?? '—'}d
                   </span>:''}</TD>
                   <TD>{isMine?<span style={{fontSize:9,background:'#E4EDF8',color:'#1A4D8F',padding:'1px 6px',borderRadius:3,fontWeight:600}}>MY</span>:''}</TD>
                 </tr>
@@ -567,7 +567,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
             <tbody>
               {myTickers.map((ticker,i) => {
                 const info = tickerMap[ticker];
-                const sssInfo = window.HE.SSS.find(s=>s.ticker===ticker);
+                const sssInfo = macroCtx?.pdf?.sss?.tickers_detail?.[ticker] ?? null;
                 const cnt = info ? Object.keys(info.funds).length : 0;
                 const dd = daily[ticker];
                 const wd = weekly[ticker];
@@ -598,7 +598,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                     <TD>
                       {sssInfo
                         ? <span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 7px',borderRadius:3}}>
-                            {sssInfo.days}d · +{sssInfo.pct.toFixed(1)}% · {sssInfo.sector}
+                            {sssInfo.days_on_list ?? '—'}d · {sssInfo.sector ?? '—'}
                           </span>
                         : <span style={{color:'#ccc',fontSize:10}}>—</span>}
                     </TD>

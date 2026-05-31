@@ -1215,6 +1215,7 @@ const App = () => {
   );
   const [newResearchReady, setNewResearchReady] = React.useState(false);
   const deployedAtRef = React.useRef(null);
+  const navRef        = React.useRef(null);
 
   // Load macro_context.json and auto-initialize tweaks from pipeline data
   React.useEffect(() => {
@@ -1225,8 +1226,8 @@ const App = () => {
         const ms = data.pdf?.macro_show || {};
         const qQuart = ms.quad?.quarterly;
         const qMo    = ms.quad?.monthly;
-        const usd    = data.levels?.USD?.signal;
-        const btc    = data.pdf?.btc?.BTC?.signal;
+        const usd    = data.levels?.USD?.signal?.toUpperCase();
+        const btc    = data.pdf?.btc?.btc_signal;
         setTweaks(t => ({
           ...t,
           ...(qQuart != null ? { quarterlyQuad: 'Q' + qQuart } : {}),
@@ -1395,39 +1396,33 @@ const App = () => {
       </div>
 
       {/* NAV — scrollable with arrow buttons for split-screen use */}
-      {(()=>{
-        const navRef = React.useRef(null);
-        const scroll = dir => { if(navRef.current) navRef.current.scrollLeft += dir * 120; };
-        return (
-          <div style={{background:'#fff',borderBottom:'1px solid #E4E1DA',
-            display:'flex',position:'sticky',top:50,zIndex:99,alignItems:'stretch'}}>
-            {/* Left arrow */}
-            <button onClick={()=>scroll(-1)} style={{
-              flexShrink:0,width:28,border:'none',borderRight:'1px solid #F0EDE8',
-              background:'#fff',cursor:'pointer',color:'#9A9790',fontSize:14,
-              display:'flex',alignItems:'center',justifyContent:'center',padding:0}}>‹</button>
-            {/* Tab strip */}
-            <div ref={navRef} style={{flex:1,display:'flex',overflowX:'auto',scrollbarWidth:'none',
-              msOverflowStyle:'none', scrollBehavior:'smooth'}}>
-              {TABS.map(t=>(
-                <button key={t.id} onClick={()=>setTab(t.id)} style={{
-                  height:40,padding:'0 14px',fontFamily:'IBM Plex Mono,monospace',fontSize:11,
-                  color:tab===t.id?'#1A4D8F':'#7A7770',border:'none',
-                  borderBottom:tab===t.id?'2px solid #1A4D8F':'2px solid transparent',
-                  background:'none',cursor:'pointer',whiteSpace:'nowrap',flexShrink:0,
-                  fontWeight:tab===t.id?500:400,transition:'color 0.1s'}}>
-                  {t.label}
-                </button>
-              ))}
-            </div>
-            {/* Right arrow */}
-            <button onClick={()=>scroll(1)} style={{
-              flexShrink:0,width:28,border:'none',borderLeft:'1px solid #F0EDE8',
-              background:'#fff',cursor:'pointer',color:'#9A9790',fontSize:14,
-              display:'flex',alignItems:'center',justifyContent:'center',padding:0}}>›</button>
-          </div>
-        );
-      })()}
+      <div style={{background:'#fff',borderBottom:'1px solid #E4E1DA',
+        display:'flex',position:'sticky',top:50,zIndex:99,alignItems:'stretch'}}>
+        {/* Left arrow */}
+        <button onClick={()=>{ if(navRef.current) navRef.current.scrollLeft -= 120; }} style={{
+          flexShrink:0,width:28,border:'none',borderRight:'1px solid #F0EDE8',
+          background:'#fff',cursor:'pointer',color:'#9A9790',fontSize:14,
+          display:'flex',alignItems:'center',justifyContent:'center',padding:0}}>‹</button>
+        {/* Tab strip */}
+        <div ref={navRef} style={{flex:1,display:'flex',overflowX:'auto',scrollbarWidth:'none',
+          msOverflowStyle:'none', scrollBehavior:'smooth'}}>
+          {TABS.map(t=>(
+            <button key={t.id} onClick={()=>setTab(t.id)} style={{
+              height:40,padding:'0 14px',fontFamily:'IBM Plex Mono,monospace',fontSize:11,
+              color:tab===t.id?'#1A4D8F':'#7A7770',border:'none',
+              borderBottom:tab===t.id?'2px solid #1A4D8F':'2px solid transparent',
+              background:'none',cursor:'pointer',whiteSpace:'nowrap',flexShrink:0,
+              fontWeight:tab===t.id?500:400,transition:'color 0.1s'}}>
+              {t.label}
+            </button>
+          ))}
+        </div>
+        {/* Right arrow */}
+        <button onClick={()=>{ if(navRef.current) navRef.current.scrollLeft += 120; }} style={{
+          flexShrink:0,width:28,border:'none',borderLeft:'1px solid #F0EDE8',
+          background:'#fff',cursor:'pointer',color:'#9A9790',fontSize:14,
+          display:'flex',alignItems:'center',justifyContent:'center',padding:0}}>›</button>
+      </div>
 
       {/* CONTENT — wrapped in error boundary so a single component crash shows an error instead of blanking the whole page */}
       <ErrorBoundary key={tab}>

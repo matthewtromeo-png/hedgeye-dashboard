@@ -8,11 +8,7 @@ const SignalsTab = ({macroCtx}) => {
   const VALID_TICKER = /^[A-Z]{1,5}[0-9]?$/;
   const rawLiveTickers = macroCtx?.pdf?.sss?.tickers ?? null;
   const liveTickers = rawLiveTickers ? rawLiveTickers.filter(t => VALID_TICKER.test(t)) : null;
-  if (rawLiveTickers && liveTickers.length < rawLiveTickers.length) {
-    console.log('[SignalsTab] Filtered', rawLiveTickers.length - liveTickers.length, 'artifact ticker(s):',
-      rawLiveTickers.filter(t => !VALID_TICKER.test(t)));
-  }
-  console.log('[SignalsTab] SSS tickers from pipeline:', liveTickers?.length ?? 'null (using fallback)');
+  // (artifact ticker filtering happens silently — no console.log in production)
   const sssCount    = macroCtx?.pdf?.sss?.count ?? null;
   const sssAdded    = new Set(macroCtx?.pdf?.sss?.added ?? []);
   const sssRemoved  = new Set(macroCtx?.pdf?.sss?.removed ?? []);
