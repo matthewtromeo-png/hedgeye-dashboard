@@ -452,7 +452,7 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
                 </TD>
                 <TD><AlignBadge ticker={h.ticker} /></TD>
                 <TD>{inSSS?<span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 6px',borderRadius:3}}>
-                  {sssInfo.days}d +{sssInfo.pct>0?'+':''}{sssInfo.pct.toFixed(1)}%
+                  {sssInfo.days_on_list ?? '—'}d
                 </span>:''}</TD>
                 <TD>{isMine?<span style={{fontSize:9,background:'#E4EDF8',color:'#1A4D8F',padding:'1px 6px',borderRadius:3,fontWeight:600}}>MY</span>:''}</TD>
               </tr>

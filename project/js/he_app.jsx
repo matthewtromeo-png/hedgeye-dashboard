@@ -861,7 +861,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
 // ── ERROR BOUNDARY ─────────────────────────────────────────────────
 class ErrorBoundary extends React.Component {
   constructor(props) { super(props); this.state = { error: null }; }
-  static getDerivedStateFromError(err) { return { error: err.message || String(err) }; }
+  static getDerivedStateFromError(err) { return { error: err.message || String(err) || 'Unknown render error' }; }
   componentDidCatch(err, info) { console.error('[ErrorBoundary]', err, info); }
   render() {
     if (this.state.error) {
@@ -907,12 +907,13 @@ const SizingTab = ({ macroCtx }) => {
   );
 
   const { positions = [], threshold_ticker, threshold_rank, threshold_pct, threshold_note, as_of_date } = ps;
-  const active = positions.filter(p => p.estimated_pct > 0);
+  // Include all ranked positions; estimated_pct may be null if parser couldn't extract a %
+  const active = positions.filter(p => p.rank != null);
 
   // ── Sorting ────────────────────────────────────────────────────────────────
   const sorted = [...active].sort((a, b) => {
-    if (sortBy === 'size') return b.estimated_pct - a.estimated_pct;
-    if (sortBy === 'room') return b.room_to_add - a.room_to_add;
+    if (sortBy === 'size') return (b.estimated_pct ?? 0) - (a.estimated_pct ?? 0);
+    if (sortBy === 'room') return (b.room_to_add ?? 0) - (a.room_to_add ?? 0);
     return a.rank - b.rank;
   });
 
@@ -921,7 +922,7 @@ const SizingTab = ({ macroCtx }) => {
                  : sorted;
 
   // ── Portfolio summary ──────────────────────────────────────────────────────
-  const totalDeployed  = active.reduce((s, p) => s + p.estimated_pct, 0);
+  const totalDeployed  = active.reduce((s, p) => s + (p.estimated_pct ?? 0), 0);
   const aboveThreshold = active.filter(p => p.above_hyg_threshold).length;
   const avgFill        = active.length
     ? Math.round(active.reduce((s, p) => s + p.fill_pct, 0) / active.length)
@@ -951,7 +952,7 @@ const SizingTab = ({ macroCtx }) => {
   // ── Size bar component ─────────────────────────────────────────────────────
   const SizeBar = ({ p }) => {
     const { min_pct, max_pct, estimated_pct, size_source, above_hyg_threshold } = p;
-    if (max_pct === 0) return null;
+    if (max_pct === 0 || estimated_pct == null) return null;
     const fillPct  = Math.min(100, (estimated_pct / max_pct) * 100);
     const minMark  = (min_pct / max_pct) * 100;
     const barColor = above_hyg_threshold ? '#276749' : '#718096';
@@ -1170,7 +1171,7 @@ const SizingTab = ({ macroCtx }) => {
                     <td style={{padding:'9px 10px',textAlign:'right',
                       fontFamily:'IBM Plex Mono,monospace',fontSize:11,
                       color: p.room_to_add > 2 ? '#276749' : '#999'}}>
-                      +{p.room_to_add.toFixed(1)}%
+                      {p.room_to_add != null ? `+${p.room_to_add.toFixed(1)}%` : '—'}
                     </td>
 
                     {/* Entry date */}
@@ -1501,4 +1502,5 @@ const App = () => {
   );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+ReactDOM.createRoot(document.getElementById("app")).render(<App />);
