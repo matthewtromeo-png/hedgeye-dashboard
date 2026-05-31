@@ -12,7 +12,7 @@
       "RTA 5/29",
       "ETF Pro xlsx"
     ],
-    "position_sizing": "Portfolio Solutions PDFs + ETF Pro table (2026-05-29)"
+    "position_sizing": "Portfolio Solutions PDFs + ETF Pro table (2026-05-31)"
   },
   "etf_rerank": {
     "date": "2026-05-29",
@@ -5622,260 +5622,260 @@
         "removed": true,
         "prev_weight": 0.0147
       },
-      "GLASF": {
-        "delta": 0.0005,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0163
-      },
-      "XTL": {
-        "delta": 0.0082,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0636
-      },
-      "DBB": {
-        "delta": -0.0063,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.0361
-      },
-      "ITB": {
-        "delta": -0.0005,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0209
-      },
-      "RIG": {
-        "delta": -0.0007,
-        "curr_weight": 0.0177,
-        "prev_weight": 0.0184
-      },
-      "CAVA": {
-        "delta": -0.0085,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0126
-      },
-      "MRVL": {
-        "delta": 0.125,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0196
-      },
-      "TWLO": {
-        "delta": -0.0007,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0199
-      },
       "ROKU": {
         "delta": 0.0179,
         "curr_weight": 0.0443,
         "prev_weight": 0.0264
-      },
-      "SLX": {
-        "delta": 0.0124,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0422
-      },
-      "URI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0253
-      },
-      "OIH": {
-        "delta": -0.0031,
-        "curr_weight": 0.0497,
-        "prev_weight": 0.0528
-      },
-      "NOV": {
-        "delta": -0.0007,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0194
-      },
-      "JAAA": {
-        "delta": 0.0039,
-        "curr_weight": 0.063,
-        "prev_weight": 0.0591
-      },
-      "ZM": {
-        "delta": 0.0406,
-        "curr_weight": 0.0496,
-        "prev_weight": 0.009
-      },
-      "AAPL": {
-        "delta": 0.001,
-        "curr_weight": 0.092,
-        "prev_weight": 0.091
-      },
-      "LLY": {
-        "delta": 0.0006,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0281
-      },
-      "PICK": {
-        "delta": -0.0042,
-        "curr_weight": 0.0069,
-        "prev_weight": 0.0111
-      },
-      "PLAY": {
-        "delta": -0.0007,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0103
-      },
-      "NOBL": {
-        "delta": 0.0029,
-        "curr_weight": 0.0449,
-        "prev_weight": 0.042
-      },
-      "WING": {
-        "delta": -0.001,
-        "curr_weight": -0.012,
-        "prev_weight": -0.011
       },
       "UUP": {
         "delta": -0.0091,
         "curr_weight": 0.0697,
         "prev_weight": 0.0788
       },
-      "UNH": {
-        "delta": 0.0006,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0246
-      },
-      "NVDA": {
-        "delta": -0.0008,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0907
-      },
-      "JETS": {
-        "delta": -0.0005,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0105
-      },
-      "CIBR": {
-        "delta": -0.0005,
-        "curr_weight": 0.0269,
-        "prev_weight": 0.0274
-      },
-      "TAN": {
-        "delta": 0.0065,
-        "curr_weight": 0.0452,
-        "prev_weight": 0.0387
-      },
-      "IDMO": {
-        "delta": -0.0184,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0371
-      },
-      "VIK": {
-        "delta": 0.0013,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0213
-      },
-      "GFS": {
-        "delta": -0.0009,
-        "curr_weight": 0.0082,
-        "prev_weight": 0.0091
-      },
-      "MUSA": {
-        "delta": -0.009,
-        "curr_weight": 0.0101,
-        "prev_weight": 0.0191
-      },
-      "GEV": {
-        "delta": 0.002,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0204
-      },
-      "CSX": {
-        "delta": 0.0006,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0296
-      },
-      "VTI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0902
-      },
-      "MAR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0159
-      },
-      "CASY": {
-        "delta": -0.0006,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.0233
-      },
       "CSCO": {
         "delta": -0.0023,
         "curr_weight": 0.0252,
         "prev_weight": 0.0275
-      },
-      "ADI": {
-        "delta": 0.0043,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0178
-      },
-      "VTIP": {
-        "delta": -0.0051,
-        "curr_weight": 0.0329,
-        "prev_weight": 0.038
-      },
-      "IHF": {
-        "delta": -0.0232,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0488
       },
       "FESM": {
         "delta": 0.0291,
         "curr_weight": 0.0655,
         "prev_weight": 0.0364
       },
+      "HAL": {
+        "delta": -0.0007,
+        "curr_weight": 0.0184,
+        "prev_weight": 0.0191
+      },
       "RDDT": {
         "delta": -0.0007,
         "curr_weight": -0.0101,
         "prev_weight": -0.0094
       },
-      "RSI": {
-        "delta": 0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0141
+      "IDMO": {
+        "delta": -0.0184,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0371
       },
-      "DBMF": {
-        "delta": 0.0052,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0689
+      "PLAY": {
+        "delta": -0.0007,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0103
       },
-      "CRCL": {
-        "delta": 0.0054,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0147
+      "VIK": {
+        "delta": 0.0013,
+        "curr_weight": 0.0226,
+        "prev_weight": 0.0213
       },
-      "AMZN": {
-        "delta": 0.0016,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0592
+      "CAVA": {
+        "delta": -0.0085,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0126
       },
-      "USO": {
-        "delta": -0.005,
-        "curr_weight": 0.0307,
-        "prev_weight": 0.0357
+      "IHF": {
+        "delta": -0.0232,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0488
       },
       "SNDK": {
         "delta": 0.0033,
         "curr_weight": 0.015,
         "prev_weight": 0.0117
       },
-      "HAL": {
-        "delta": -0.0007,
-        "curr_weight": 0.0184,
-        "prev_weight": 0.0191
+      "NOBL": {
+        "delta": 0.0029,
+        "curr_weight": 0.0449,
+        "prev_weight": 0.042
       },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
+      "ZM": {
+        "delta": 0.0406,
+        "curr_weight": 0.0496,
+        "prev_weight": 0.009
+      },
+      "ITB": {
+        "delta": -0.0005,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0209
+      },
+      "JETS": {
+        "delta": -0.0005,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0105
+      },
+      "LLY": {
+        "delta": 0.0006,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0281
+      },
+      "VTI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0902
+      },
+      "NOV": {
+        "delta": -0.0007,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0194
+      },
+      "URI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0253
+      },
+      "ADI": {
+        "delta": 0.0043,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0178
       },
       "DBJP": {
         "delta": 0.0092,
         "curr_weight": 0.0581,
         "prev_weight": 0.0489
+      },
+      "USO": {
+        "delta": -0.005,
+        "curr_weight": 0.0307,
+        "prev_weight": 0.0357
+      },
+      "AAPL": {
+        "delta": 0.001,
+        "curr_weight": 0.092,
+        "prev_weight": 0.091
+      },
+      "TWLO": {
+        "delta": -0.0007,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0199
+      },
+      "SLX": {
+        "delta": 0.0124,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0422
+      },
+      "UNH": {
+        "delta": 0.0006,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0246
+      },
+      "RSI": {
+        "delta": 0.0007,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0141
+      },
+      "MUSA": {
+        "delta": -0.009,
+        "curr_weight": 0.0101,
+        "prev_weight": 0.0191
+      },
+      "RIG": {
+        "delta": -0.0007,
+        "curr_weight": 0.0177,
+        "prev_weight": 0.0184
+      },
+      "OIH": {
+        "delta": -0.0031,
+        "curr_weight": 0.0497,
+        "prev_weight": 0.0528
+      },
+      "VTIP": {
+        "delta": -0.0051,
+        "curr_weight": 0.0329,
+        "prev_weight": 0.038
+      },
+      "CASY": {
+        "delta": -0.0006,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.0233
+      },
+      "XTL": {
+        "delta": 0.0082,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0636
+      },
+      "GEV": {
+        "delta": 0.002,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0204
+      },
+      "JAAA": {
+        "delta": 0.0039,
+        "curr_weight": 0.063,
+        "prev_weight": 0.0591
+      },
+      "CIBR": {
+        "delta": -0.0005,
+        "curr_weight": 0.0269,
+        "prev_weight": 0.0274
+      },
+      "GLASF": {
+        "delta": 0.0005,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0163
+      },
+      "TAN": {
+        "delta": 0.0065,
+        "curr_weight": 0.0452,
+        "prev_weight": 0.0387
+      },
+      "WING": {
+        "delta": -0.001,
+        "curr_weight": -0.012,
+        "prev_weight": -0.011
+      },
+      "PICK": {
+        "delta": -0.0042,
+        "curr_weight": 0.0069,
+        "prev_weight": 0.0111
+      },
+      "MRVL": {
+        "delta": 0.125,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0196
+      },
+      "CSX": {
+        "delta": 0.0006,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0296
+      },
+      "NVDA": {
+        "delta": -0.0008,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0907
+      },
+      "AMZN": {
+        "delta": 0.0016,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0592
+      },
+      "DBB": {
+        "delta": -0.0063,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.0361
+      },
+      "DBMF": {
+        "delta": 0.0052,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0689
+      },
+      "GFS": {
+        "delta": -0.0009,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0091
+      },
+      "CRCL": {
+        "delta": 0.0054,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0147
+      },
+      "MAR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0159
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
       }
     },
     "weekly": {
@@ -6131,435 +6131,90 @@
         "removed": true,
         "prev_weight": 0.0172
       },
-      "MPC": {
-        "delta": -0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0155
-      },
-      "SXT": {
-        "delta": 0.0007,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.022
-      },
-      "GLASF": {
-        "delta": 0.0014,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0154
-      },
-      "ARTY": {
-        "delta": 0.0033,
-        "curr_weight": 0.047,
-        "prev_weight": 0.0437
-      },
-      "XTL": {
-        "delta": 0.0116,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0602
-      },
-      "DBB": {
-        "delta": 0.0068,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.023
-      },
-      "ITB": {
-        "delta": -0.0008,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0206
-      },
-      "CAVA": {
-        "delta": -0.0086,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0127
-      },
-      "HTEC": {
-        "delta": 0.0024,
-        "curr_weight": 0.01,
-        "prev_weight": 0.0076
-      },
-      "VYM": {
-        "delta": 0.0081,
-        "curr_weight": 0.0493,
-        "prev_weight": 0.0412
-      },
-      "EWY": {
-        "delta": 0.0012,
-        "curr_weight": 0.0126,
-        "prev_weight": 0.0114
-      },
-      "CZR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.015
-      },
-      "MRVL": {
-        "delta": 0.1269,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0177
-      },
-      "TWLO": {
-        "delta": 0.0044,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0148
-      },
-      "MKSI": {
-        "delta": 0.0011,
-        "curr_weight": 0.0228,
-        "prev_weight": 0.0217
-      },
-      "ROKU": {
-        "delta": 0.0184,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0259
-      },
-      "INTC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0213
-      },
-      "PM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0199,
-        "prev_weight": 0.0144
-      },
-      "XLE": {
-        "delta": -0.0014,
-        "curr_weight": 0.0295,
-        "prev_weight": 0.0309
-      },
-      "KLAC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0109,
-        "prev_weight": 0.0104
-      },
-      "SLX": {
-        "delta": 0.0188,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0358
-      },
-      "URI": {
-        "delta": 0.0014,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0248
-      },
-      "OIH": {
-        "delta": 0.0079,
-        "curr_weight": 0.0497,
-        "prev_weight": 0.0418
+      "ROBO": {
+        "delta": 0.0009,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0149
       },
       "CDNS": {
         "delta": 0.0009,
         "curr_weight": 0.0153,
         "prev_weight": 0.0144
       },
-      "VLO": {
-        "delta": -0.0008,
-        "curr_weight": 0.0115,
-        "prev_weight": 0.0123
-      },
-      "NOV": {
-        "delta": -0.0009,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0196
-      },
-      "JAAA": {
-        "delta": 0.003,
-        "curr_weight": 0.063,
-        "prev_weight": 0.06
-      },
-      "ATI": {
-        "delta": 0.001,
-        "curr_weight": 0.0116,
-        "prev_weight": 0.0106
-      },
-      "AAPL": {
-        "delta": 0.0016,
-        "curr_weight": 0.092,
-        "prev_weight": 0.0904
-      },
-      "AMD": {
-        "delta": 0.0019,
-        "curr_weight": 0.0223,
-        "prev_weight": 0.0204
-      },
-      "STX": {
-        "delta": 0.0015,
-        "curr_weight": 0.0117,
-        "prev_weight": 0.0102
-      },
-      "LLY": {
-        "delta": 0.0014,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0273
-      },
-      "PICK": {
-        "delta": -0.0049,
-        "curr_weight": 0.0069,
-        "prev_weight": 0.0118
-      },
-      "AFRM": {
-        "delta": 0.0007,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0151
-      },
-      "SNAP": {
-        "delta": 0.0052,
-        "curr_weight": -0.0051,
-        "prev_weight": -0.0103
-      },
-      "PLAY": {
-        "delta": -0.0017,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0093
-      },
-      "AVEM": {
-        "delta": 0.001,
-        "curr_weight": 0.0202,
-        "prev_weight": 0.0192
-      },
-      "GOOGL": {
-        "delta": -0.0009,
-        "curr_weight": 0.0803,
-        "prev_weight": 0.0812
-      },
-      "WING": {
-        "delta": -0.0019,
-        "curr_weight": -0.012,
-        "prev_weight": -0.0101
-      },
-      "FWD": {
-        "delta": 0.0018,
-        "curr_weight": 0.0566,
-        "prev_weight": 0.0548
+      "ROKU": {
+        "delta": 0.0184,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0259
       },
       "UUP": {
         "delta": 0.0143,
         "curr_weight": 0.0697,
         "prev_weight": 0.0554
       },
-      "UNH": {
-        "delta": 0.0048,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0204
-      },
-      "CAT": {
-        "delta": 0.0008,
-        "curr_weight": 0.021,
-        "prev_weight": 0.0202
-      },
-      "NVDA": {
-        "delta": -0.0057,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0956
-      },
-      "JETS": {
-        "delta": -0.0011,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0099
-      },
-      "IDMO": {
-        "delta": 0.0036,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0151
-      },
-      "VIK": {
-        "delta": 0.0022,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0204
-      },
-      "GFS": {
-        "delta": 0.001,
-        "curr_weight": 0.0082,
-        "prev_weight": 0.0072
-      },
-      "HBM": {
-        "delta": 0.0012,
-        "curr_weight": 0.016,
-        "prev_weight": 0.0148
-      },
-      "MUSA": {
-        "delta": -0.01,
-        "curr_weight": 0.0101,
-        "prev_weight": 0.0201
-      },
-      "GEV": {
-        "delta": 0.0027,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0197
-      },
-      "TTWO": {
-        "delta": -0.0066,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0224
-      },
-      "CSX": {
-        "delta": 0.0007,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0295
-      },
-      "CERY": {
-        "delta": -0.004,
-        "curr_weight": 0.1366,
-        "prev_weight": 0.1406
-      },
-      "WDC": {
-        "delta": 0.0027,
-        "curr_weight": 0.0203,
-        "prev_weight": 0.0176
-      },
-      "WEAT": {
-        "delta": -0.0006,
-        "curr_weight": 0.0143,
-        "prev_weight": 0.0149
-      },
-      "KMI": {
-        "delta": 0.0028,
-        "curr_weight": 0.0127,
-        "prev_weight": 0.0099
-      },
-      "VTI": {
-        "delta": 0.0015,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0896
-      },
-      "CBOE": {
-        "delta": -0.0011,
-        "curr_weight": 0.0214,
-        "prev_weight": 0.0225
-      },
-      "AMAT": {
-        "delta": 0.0013,
-        "curr_weight": 0.0273,
-        "prev_weight": 0.026
-      },
-      "BKNG": {
-        "delta": -0.0007,
-        "curr_weight": -0.0106,
-        "prev_weight": -0.0099
-      },
-      "MAR": {
-        "delta": 0.0007,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0158
-      },
-      "CASY": {
-        "delta": -0.0021,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.0248
-      },
-      "CF": {
-        "delta": -0.001,
-        "curr_weight": 0.0128,
-        "prev_weight": 0.0138
-      },
-      "JBHT": {
-        "delta": 0.0006,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0212
-      },
-      "LUV": {
-        "delta": -0.0009,
-        "curr_weight": -0.0108,
-        "prev_weight": -0.0099
-      },
-      "XAR": {
-        "delta": 0.0009,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0192
-      },
       "CSCO": {
         "delta": -0.0016,
         "curr_weight": 0.0252,
         "prev_weight": 0.0268
-      },
-      "IHE": {
-        "delta": 0.005,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0202
-      },
-      "DDS": {
-        "delta": -0.0007,
-        "curr_weight": -0.0082,
-        "prev_weight": -0.0075
-      },
-      "SBUX": {
-        "delta": -0.0009,
-        "curr_weight": 0.0189,
-        "prev_weight": 0.0198
-      },
-      "DRAM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0357,
-        "prev_weight": 0.0302
-      },
-      "ZROZ": {
-        "delta": -0.0008,
-        "curr_weight": -0.0243,
-        "prev_weight": -0.0235
-      },
-      "XYZ": {
-        "delta": -0.0098,
-        "curr_weight": 0.0102,
-        "prev_weight": 0.02
-      },
-      "ADI": {
-        "delta": 0.005,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0171
-      },
-      "VTIP": {
-        "delta": -0.0789,
-        "curr_weight": 0.0329,
-        "prev_weight": 0.1118
-      },
-      "IHF": {
-        "delta": -0.0212,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0468
-      },
-      "ROBO": {
-        "delta": 0.0009,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0149
       },
       "FESM": {
         "delta": 0.0251,
         "curr_weight": 0.0655,
         "prev_weight": 0.0404
       },
-      "PAVE": {
+      "LUV": {
+        "delta": -0.0009,
+        "curr_weight": -0.0108,
+        "prev_weight": -0.0099
+      },
+      "HAL": {
+        "delta": -0.0015,
+        "curr_weight": 0.0184,
+        "prev_weight": 0.0199
+      },
+      "AFRM": {
         "delta": 0.0007,
-        "curr_weight": 0.0156,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0151
+      },
+      "WEAT": {
+        "delta": -0.0006,
+        "curr_weight": 0.0143,
         "prev_weight": 0.0149
       },
-      "LCID": {
-        "delta": -0.0009,
-        "curr_weight": -0.0098,
-        "prev_weight": -0.0089
+      "IDMO": {
+        "delta": 0.0036,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0151
       },
-      "DBMF": {
-        "delta": 0.004,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0701
+      "CAT": {
+        "delta": 0.0008,
+        "curr_weight": 0.021,
+        "prev_weight": 0.0202
       },
-      "SMPL": {
-        "delta": -0.0005,
-        "curr_weight": -0.0102,
-        "prev_weight": -0.0097
+      "PLAY": {
+        "delta": -0.0017,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0093
       },
-      "CRCL": {
-        "delta": 0.0042,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0159
+      "VIK": {
+        "delta": 0.0022,
+        "curr_weight": 0.0226,
+        "prev_weight": 0.0204
       },
-      "AMZN": {
-        "delta": 0.0009,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0599
+      "CAVA": {
+        "delta": -0.0086,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0127
       },
-      "IDX": {
-        "delta": 0.0005,
-        "curr_weight": -0.0094,
-        "prev_weight": -0.0099
+      "STX": {
+        "delta": 0.0015,
+        "curr_weight": 0.0117,
+        "prev_weight": 0.0102
+      },
+      "IHF": {
+        "delta": -0.0212,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0468
       },
       "FITE": {
         "delta": 0.0015,
@@ -6571,25 +6226,370 @@
         "curr_weight": 0.015,
         "prev_weight": 0.0104
       },
-      "HAL": {
-        "delta": -0.0015,
-        "curr_weight": 0.0184,
-        "prev_weight": 0.0199
+      "ITB": {
+        "delta": -0.0008,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0206
       },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
+      "JETS": {
+        "delta": -0.0011,
+        "curr_weight": -0.011,
+        "prev_weight": -0.0099
+      },
+      "LLY": {
+        "delta": 0.0014,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0273
+      },
+      "GOOGL": {
+        "delta": -0.0009,
+        "curr_weight": 0.0803,
+        "prev_weight": 0.0812
+      },
+      "VTI": {
+        "delta": 0.0015,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0896
+      },
+      "XAR": {
+        "delta": 0.0009,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0192
+      },
+      "ARTY": {
+        "delta": 0.0033,
+        "curr_weight": 0.047,
+        "prev_weight": 0.0437
+      },
+      "IHE": {
+        "delta": 0.005,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0202
+      },
+      "NOV": {
+        "delta": -0.0009,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0196
+      },
+      "URI": {
+        "delta": 0.0014,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0248
+      },
+      "HBM": {
+        "delta": 0.0012,
+        "curr_weight": 0.016,
+        "prev_weight": 0.0148
+      },
+      "AVEM": {
+        "delta": 0.001,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0192
+      },
+      "ADI": {
+        "delta": 0.005,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0171
+      },
+      "DRAM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0357,
+        "prev_weight": 0.0302
+      },
+      "DBJP": {
+        "delta": 0.0032,
+        "curr_weight": 0.0581,
+        "prev_weight": 0.0549
+      },
+      "IDX": {
+        "delta": 0.0005,
+        "curr_weight": -0.0094,
+        "prev_weight": -0.0099
+      },
+      "CBOE": {
+        "delta": -0.0011,
+        "curr_weight": 0.0214,
+        "prev_weight": 0.0225
+      },
+      "HTEC": {
+        "delta": 0.0024,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0076
+      },
+      "TTWO": {
+        "delta": -0.0066,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0224
+      },
+      "AMAT": {
+        "delta": 0.0013,
+        "curr_weight": 0.0273,
+        "prev_weight": 0.026
       },
       "KSS": {
         "delta": -0.0006,
         "curr_weight": -0.0111,
         "prev_weight": -0.0105
       },
-      "DBJP": {
-        "delta": 0.0032,
-        "curr_weight": 0.0581,
-        "prev_weight": 0.0549
+      "DDS": {
+        "delta": -0.0007,
+        "curr_weight": -0.0082,
+        "prev_weight": -0.0075
+      },
+      "AAPL": {
+        "delta": 0.0016,
+        "curr_weight": 0.092,
+        "prev_weight": 0.0904
+      },
+      "TWLO": {
+        "delta": 0.0044,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0148
+      },
+      "SLX": {
+        "delta": 0.0188,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0358
+      },
+      "UNH": {
+        "delta": 0.0048,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0204
+      },
+      "CF": {
+        "delta": -0.001,
+        "curr_weight": 0.0128,
+        "prev_weight": 0.0138
+      },
+      "XLE": {
+        "delta": -0.0014,
+        "curr_weight": 0.0295,
+        "prev_weight": 0.0309
+      },
+      "MUSA": {
+        "delta": -0.01,
+        "curr_weight": 0.0101,
+        "prev_weight": 0.0201
+      },
+      "OIH": {
+        "delta": 0.0079,
+        "curr_weight": 0.0497,
+        "prev_weight": 0.0418
+      },
+      "ATI": {
+        "delta": 0.001,
+        "curr_weight": 0.0116,
+        "prev_weight": 0.0106
+      },
+      "SNAP": {
+        "delta": 0.0052,
+        "curr_weight": -0.0051,
+        "prev_weight": -0.0103
+      },
+      "SMPL": {
+        "delta": -0.0005,
+        "curr_weight": -0.0102,
+        "prev_weight": -0.0097
+      },
+      "BKNG": {
+        "delta": -0.0007,
+        "curr_weight": -0.0106,
+        "prev_weight": -0.0099
+      },
+      "VTIP": {
+        "delta": -0.0789,
+        "curr_weight": 0.0329,
+        "prev_weight": 0.1118
+      },
+      "CASY": {
+        "delta": -0.0021,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.0248
+      },
+      "XTL": {
+        "delta": 0.0116,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0602
+      },
+      "FWD": {
+        "delta": 0.0018,
+        "curr_weight": 0.0566,
+        "prev_weight": 0.0548
+      },
+      "CERY": {
+        "delta": -0.004,
+        "curr_weight": 0.1366,
+        "prev_weight": 0.1406
+      },
+      "GEV": {
+        "delta": 0.0027,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0197
+      },
+      "PAVE": {
+        "delta": 0.0007,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.0149
+      },
+      "XYZ": {
+        "delta": -0.0098,
+        "curr_weight": 0.0102,
+        "prev_weight": 0.02
+      },
+      "JAAA": {
+        "delta": 0.003,
+        "curr_weight": 0.063,
+        "prev_weight": 0.06
+      },
+      "WDC": {
+        "delta": 0.0027,
+        "curr_weight": 0.0203,
+        "prev_weight": 0.0176
+      },
+      "SBUX": {
+        "delta": -0.0009,
+        "curr_weight": 0.0189,
+        "prev_weight": 0.0198
+      },
+      "GLASF": {
+        "delta": 0.0014,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0154
+      },
+      "CZR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.015
+      },
+      "WING": {
+        "delta": -0.0019,
+        "curr_weight": -0.012,
+        "prev_weight": -0.0101
+      },
+      "PICK": {
+        "delta": -0.0049,
+        "curr_weight": 0.0069,
+        "prev_weight": 0.0118
+      },
+      "JBHT": {
+        "delta": 0.0006,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0212
+      },
+      "VLO": {
+        "delta": -0.0008,
+        "curr_weight": 0.0115,
+        "prev_weight": 0.0123
+      },
+      "MRVL": {
+        "delta": 0.1269,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0177
+      },
+      "ZROZ": {
+        "delta": -0.0008,
+        "curr_weight": -0.0243,
+        "prev_weight": -0.0235
+      },
+      "CSX": {
+        "delta": 0.0007,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0295
+      },
+      "NVDA": {
+        "delta": -0.0057,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0956
+      },
+      "AMZN": {
+        "delta": 0.0009,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0599
+      },
+      "PM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0199,
+        "prev_weight": 0.0144
+      },
+      "VYM": {
+        "delta": 0.0081,
+        "curr_weight": 0.0493,
+        "prev_weight": 0.0412
+      },
+      "EWY": {
+        "delta": 0.0012,
+        "curr_weight": 0.0126,
+        "prev_weight": 0.0114
+      },
+      "LCID": {
+        "delta": -0.0009,
+        "curr_weight": -0.0098,
+        "prev_weight": -0.0089
+      },
+      "DBB": {
+        "delta": 0.0068,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.023
+      },
+      "DBMF": {
+        "delta": 0.004,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0701
+      },
+      "GFS": {
+        "delta": 0.001,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0072
+      },
+      "CRCL": {
+        "delta": 0.0042,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0159
+      },
+      "INTC": {
+        "delta": 0.0005,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0213
+      },
+      "MAR": {
+        "delta": 0.0007,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0158
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
+      },
+      "MPC": {
+        "delta": -0.0007,
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0155
+      },
+      "MKSI": {
+        "delta": 0.0011,
+        "curr_weight": 0.0228,
+        "prev_weight": 0.0217
+      },
+      "SXT": {
+        "delta": 0.0007,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.022
+      },
+      "AMD": {
+        "delta": 0.0019,
+        "curr_weight": 0.0223,
+        "prev_weight": 0.0204
+      },
+      "KMI": {
+        "delta": 0.0028,
+        "curr_weight": 0.0127,
+        "prev_weight": 0.0099
+      },
+      "KLAC": {
+        "delta": 0.0005,
+        "curr_weight": 0.0109,
+        "prev_weight": 0.0104
       }
     },
     "per_fund_daily_adds": {
@@ -42929,7 +42929,7 @@
     ]
   },
   "position_sizing": {
-    "as_of_date": "2026-05-29",
+    "as_of_date": "2026-05-31",
     "threshold_ticker": "HYG",
     "threshold_rank": 9,
     "threshold_pct": 3,

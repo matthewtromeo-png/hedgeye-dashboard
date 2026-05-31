@@ -409,7 +409,7 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
                 <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
                   textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>Early Look</span>
                 <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790'}}>
-                  {macroCtx?.source_date}
+                  {macroCtx?.pdf?.early_look?.date ?? macroCtx?.source_date}
                 </span>
               </div>
               <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:12,fontWeight:700,
@@ -433,17 +433,20 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
                 padding:'10px 12px',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>
                 <div style={{fontWeight:600,color:'#7A7770',letterSpacing:'0.06em',
                   textTransform:'uppercase',fontSize:8,marginBottom:8}}>Today's Ranges</div>
-                {['SPX','NVDA','BTC','VIX','HYG'].map(t => {
+                {['SPX','VIX','HYG','Gold','USD'].map(t => {
                   const l = macroCtx.levels[t]; if (!l) return null;
+                  const parts = (l.range || '').split('-');
+                  const lo = parts[0] || ''; const hi = parts[1] || '';
+                  const sig = (l.signal || '').toUpperCase();
                   return (
                     <div key={t} style={{display:'flex',justifyContent:'space-between',
                       gap:8,marginBottom:4,alignItems:'center'}}>
                       <span style={{fontWeight:700,color:'#1A1A18',minWidth:36}}>{t}</span>
-                      <span style={{color:'#9A9790',fontSize:9}}>{l.lrr}–{l.trr}</span>
+                      <span style={{color:'#9A9790',fontSize:9}}>{lo}–{hi}</span>
                       <span style={{fontSize:8,fontWeight:700,padding:'1px 4px',borderRadius:2,
-                        background:l.signal==='BULLISH'?'#EAF3DE':l.signal==='BEARISH'?'#FCEBEB':'#F5F3EF',
-                        color:l.signal==='BULLISH'?'#27500A':l.signal==='BEARISH'?'#C8302A':'#9A9790'}}>
-                        {(l.signal||'').slice(0,4)}
+                        background:sig==='BULLISH'?'#EAF3DE':sig==='BEARISH'?'#FCEBEB':'#F5F3EF',
+                        color:sig==='BULLISH'?'#27500A':sig==='BEARISH'?'#C8302A':'#9A9790'}}>
+                        {sig.slice(0,4)}
                       </span>
                     </div>
                   );

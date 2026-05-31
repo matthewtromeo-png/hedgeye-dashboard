@@ -614,11 +614,9 @@ function ResearchStatusTab() {
     { label:'Show Notes',       freq:'daily',   date: pdf.macro_show_notes?.source_date,                    note: pdf.macro_show_notes?.key_points?.length ? `${pdf.macro_show_notes.key_points.length} points` : null },
     { label:'MOMO Tracker',     freq:'daily',   date: pdf.momo?.date,                                       note: pdf.momo?.headline ? rsTrunc(pdf.momo.headline, 40) : null },
     { label:'BTC / Crypto',     freq:'daily',   date: (pdf.btc || pdf.crypto)?.date,                        note: (pdf.btc || pdf.crypto)?.btc_signal ?? null },
-    { label:'USD Correlations', freq:'weekly',  date: ctx.usd_correlations?.date,                           note: ctx.usd_correlations?.data ? `${ctx.usd_correlations.data.length} assets` : null },
-    { label:'Implied Vol',      freq:'weekly',  date: ctx.ivol_table?.date,                                 note: ctx.ivol_table?.us_equities ? `${ctx.ivol_table.us_equities.length} ETFs` : null },
     { label:'Investing Ideas',  freq:'weekly',  date: pdf.investing_ideas?.source_date,                     note: pdf.investing_ideas ? `${Object.keys(pdf.investing_ideas.longs||{}).length}L / ${Object.keys(pdf.investing_ideas.shorts||{}).length}S` : null },
     { label:'Founders Choice',  freq:'weekly',  date: pdf.founders_choice?.source_date,                     note: pdf.founders_choice ? Object.keys(pdf.founders_choice).filter(k=>k!=='source_date').join(', ') : null },
-    { label:'Macro Research',   freq:'special', date: mr ? '2026-05-27' : null,                             note: mr?.themes ? `${mr.themes.length} themes processed` : null },
+    { label:'Macro Research',   freq:'special', date: mr?.date ?? null,                                      note: mr?.themes ? `${mr.themes.length} themes processed` : null },
   ];
 
   return (
