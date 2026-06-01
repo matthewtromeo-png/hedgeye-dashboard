@@ -906,7 +906,7 @@ const SizingTab = ({ macroCtx }) => {
     </div>
   );
 
-  const { positions = [], threshold_ticker, threshold_rank, threshold_pct, threshold_note, as_of_date } = ps;
+  const { positions = [], anchor: threshold_ticker, anchor_rank: threshold_rank, anchor_min: threshold_pct, note: threshold_note, as_of: as_of_date } = ps;
   // Include all ranked positions; estimated_pct may be null if parser couldn't extract a %
   const active = positions.filter(p => p.rank != null);
 
@@ -917,16 +917,14 @@ const SizingTab = ({ macroCtx }) => {
     return a.rank - b.rank;
   });
 
-  const filtered = filter === 'above' ? sorted.filter(p => p.above_hyg_threshold)
-                 : filter === 'below' ? sorted.filter(p => !p.above_hyg_threshold)
+  const filtered = filter === 'above' ? sorted.filter(p => p.above_anchor)
+                 : filter === 'below' ? sorted.filter(p => !p.above_anchor)
                  : sorted;
 
   // ── Portfolio summary ──────────────────────────────────────────────────────
   const totalDeployed  = active.reduce((s, p) => s + (p.estimated_pct ?? 0), 0);
-  const aboveThreshold = active.filter(p => p.above_hyg_threshold).length;
-  const avgFill        = active.length
-    ? Math.round(active.reduce((s, p) => s + p.fill_pct, 0) / active.length)
-    : 0;
+  const aboveThreshold = active.filter(p => p.above_anchor).length;
+  const avgFill        = null; // fill_pct not available in current data schema
 
   // ── Helpers ────────────────────────────────────────────────────────────────
   const TIER_STYLE = {
@@ -951,7 +949,7 @@ const SizingTab = ({ macroCtx }) => {
 
   // ── Size bar component ─────────────────────────────────────────────────────
   const SizeBar = ({ p }) => {
-    const { min_pct, max_pct, estimated_pct, size_source, above_hyg_threshold } = p;
+    const { min_pct, max_pct, estimated_pct, size_source, above_anchor } = p;
     if (max_pct === 0 || estimated_pct == null) return null;
     const fillPct  = Math.min(100, (estimated_pct / max_pct) * 100);
     const minMark  = (min_pct / max_pct) * 100;
@@ -1032,7 +1030,7 @@ const SizingTab = ({ macroCtx }) => {
             {[
               { label:'Active Positions', value: active.length },
               { label:'Above 3% Threshold', value: aboveThreshold, color:'#276749' },
-              { label:'Avg Fill', value: avgFill+'%' },
+              { label:'Avg Fill', value: avgFill != null ? avgFill+'%' : '—' },
               { label:'Total Deployed', value: totalDeployed.toFixed(1)+'%' },
             ].map(pill => (
               <div key={pill.label} style={{background:'#fff',border:'1px solid #E2E8F0',
@@ -1107,12 +1105,12 @@ const SizingTab = ({ macroCtx }) => {
                   {showDivider && <AnchorDivider />}
                   <tr style={{
                     borderBottom:'1px solid #EEF0F0',
-                    background: p.above_hyg_threshold ? 'rgba(39,103,73,0.03)' : '#fff',
+                    background: p.above_anchor ? 'rgba(39,103,73,0.03)' : '#fff',
                     transition:'background 0.15s',
                   }}
                   onMouseEnter={e => e.currentTarget.style.background = '#F4F3EF'}
                   onMouseLeave={e => e.currentTarget.style.background =
-                    p.above_hyg_threshold ? 'rgba(39,103,73,0.03)' : '#fff'}>
+                    p.above_anchor ? 'rgba(39,103,73,0.03)' : '#fff'}>
 
                     {/* Rank */}
                     <td style={{padding:'9px 10px',fontFamily:'IBM Plex Mono,monospace',
@@ -1177,7 +1175,7 @@ const SizingTab = ({ macroCtx }) => {
                     {/* Entry date */}
                     <td style={{padding:'9px 10px',textAlign:'right',
                       fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#999'}}>
-                      {fmtDate(p.entry_date)}
+                      {fmtDate(p.entry)}
                     </td>
                   </tr>
                 </React.Fragment>
@@ -1191,7 +1189,7 @@ const SizingTab = ({ macroCtx }) => {
       <div style={{padding:'16px 20px',borderTop:'1px solid #E2E8F0',marginTop:8,
         display:'flex',gap:24,flexWrap:'wrap',fontSize:10,color:'#999',
         fontFamily:'IBM Plex Mono,monospace'}}>
-        <span>■ <span style={{color:'#276749'}}>GREEN</span> = above anchor (≥{threshold_pct}%)</span>
+        <span>■ <span style={{color:'#276749'}}>GREEN</span> = above anchor (≥{threshold_pct != null ? threshold_pct : '—'}%)</span>
         <span>■ <span style={{color:'#718096'}}>GRAY</span> = below threshold (&lt;3%)</span>
         <span>╱╱ HATCHED = rank-floor estimate (exact bps not in parsed PDFs)</span>
         <span>MIN marker = vertical line in bar</span>
@@ -1206,6 +1204,8 @@ const SizingTab = ({ macroCtx }) => {
 
 // ── MAIN APP ───────────────────────────────────────────────────────
 const App = () => {
+  // Resolve externally-defined tab components from window at render time
+  const AnalyzerTab = window.AnalyzerTab;
   const [tweaks, setTweaks]         = React.useState(initTweaks);
   const [tab, setTab]               = React.useState('overview');
   const [showTweaks, setShowTweaks] = React.useState(false);
@@ -1439,7 +1439,7 @@ const App = () => {
             title="Risk Range Dashboard"
           />
         )}
-        {tab==='analyzer' && <AnalyzerTab macroCtx={macroCtx} />}
+        {tab==='analyzer' && (AnalyzerTab ? <AnalyzerTab macroCtx={macroCtx} /> : <div style={{padding:40,fontFamily:'IBM Plex Mono,monospace',fontSize:12,color:'#999'}}>Analyzer loading…</div>)}
         {tab==='etfpro'   && <ETFProTab macroCtx={macroCtx} />}
         {tab==='sizing'   && <SizingTab macroCtx={macroCtx} />}
         {tab==='vol'      && <VolTab quad={tweaks.monthlyQuad} macroCtx={macroCtx} />}
