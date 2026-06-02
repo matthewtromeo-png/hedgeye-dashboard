@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-02T15:31:11.601377+00:00",
+  "generated_at": "2026-06-02T13:28:46.960179+00:00",
   "source_date": "2026-06-02",
   "sources_used": {
     "etf_pro": "etf-pro-all-active-tickers-1780065121.xlsx",
     "ham_holdings": "ETF_Holdings 5.28.2026.csv",
     "rta": "real-time-alerts-history-2026-05-29.csv",
     "risk_range": "risk_range_tracker_excelworkbook.xlsx",
-    "macro_show": "HE_TMS_KM_DJ_6.2.2026.pdf@1780412986",
+    "macro_show": "HE_TMS_SR_RPK_6.1.2026.pdf@1780320489",
     "msr": "MSR_2.0.pdf@1780406436",
     "sss": "Hedgeye - Signal Strength Stocks_ 81 Stocks (3 Added, 4 Removed).pdf@1780340649",
     "momo": "Hedgeye - MOMO Tracker _ Dispersion ↑ → Mag7 (-1)_NVDA (+6.3%), Concentration Risk ↑, Breadth ↓.pdf@1780406078",
     "early_look": "Hedgeye - The Room Has No Exit.pdf@1780406352",
     "portfolio": "Hedgeye - Portfolio Solutions_ Daily ETF Re-Rank (6_1_2026) _ Top Movers_ IWM (+9), XTL (+9), QTUM (+4).pdf@1780340952",
     "btc": "Hedgeye - CRYPTO QUANT _ ₿TC (-3%), CRCL=BEARISH, Saylor=Seller, 😬ETF Outflows= 14 Days, -$4.97B.pdf@1780406243",
-    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 6_2_2026.pdf@1780413014",
-    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Tuesday, June 2nd, 2026.pdf@1780412968",
+    "call_summary": "Hedgeye - The Call @ Hedgeye _ REPLAY _ 6_1_2026.pdf@1780324156",
+    "macro_show_notes": "Hedgeye - Summary Notes & Replay _ Monday, June 1st, 2026.pdf@1780324142",
     "investing_ideas": "Hedgeye - Investing Ideas Newsletter_ June 1, 2026.pdf@1780320402|Hedgeye - Investing Ideas Newsletter_ May 26, 2026.pdf@1779802481",
     "founders_choice": "Hedgeye - Founder's Choice_ Global Technology - Best Idea Longs & Shorts.pdf@1779805830|Hedgeye - Position Monitors _ Software - Best Idea Longs & Shorts.pdf@1779805895",
     "from_desk": "Hedgeye - ETF Pro Plus - New Weekly Report.pdf@1779801970|Macro_Week_Summary_Notes_5.29.2026.pdf@1780240449",
@@ -3820,7 +3820,32 @@
     }
   },
   "pdf": {
-    "macro_show": null,
+    "macro_show": {
+      "quad": {
+        "monthly": null,
+        "quarterly": 2,
+        "depth": "SHALLOW"
+      },
+      "vix": {
+        "current": null,
+        "lrr": null,
+        "trr": null,
+        "bucket": null
+      },
+      "cpi_nowcast": null,
+      "growth_roc": "ACCELERATING",
+      "inflation_roc": "DECELERATING",
+      "quad_sequence": "2-2-3-3",
+      "high_beta_1m": 10.1,
+      "low_beta_1m": -3.4,
+      "keith_commentary": [
+        "Nominal Growth = ~+7%, Earnings Growth = Accelerating, EPS Estimates = Rising",
+        "Oil = Bearish TREND, VIX = Bearish TREND, SPX/NDX/RTY = Bullish TREND, SPX Gamma = (+)",
+        "9-consecutive weeks of positive performance and longest winning streak in 25 years",
+        "Industrial Manufacturing data remains strong with organic underlying activity accelerating",
+        "Labor market showing marginal improvement with job loss at multi-decade lows and positive NFP gains continuing"
+      ]
+    },
     "msr": {
       "gamma_exposure": "POSITIVE",
       "systematic_flow": "NEUTRAL",
@@ -4919,236 +4944,341 @@
       }
     },
     "call_summary": {
-      "date": "2026-06-02",
-      "quad": 1,
+      "date": "2026-06-01",
+      "quad": 3,
       "key_points": [
-        "Market near top of risk ranges with narrow megacap tech and NVIDIA leadership; Hedgeye emphasizes higher-for-longer rates and caution toward Bitcoin",
-        "May CPI Nowcast at 4.24% YoY with June shifting to disinflationary Quad 1 setup due to easing commodity inflation and lower geopolitical risk premiums",
-        "ISM Manufacturing improved to 54 with expanding new orders; industrial recovery underway with inventory and logistics indicators constructive",
-        "AI infrastructure demand driving data-center construction and power spending; reversing years of declining OECD energy demand growth",
-        "Geopolitical risks elevated with Russia-Ukraine escalation and Iran nuclear deal negotiations paused; policy uncertainty remains key variable"
+        "Quad 3 stagflation setup affecting banks and cyclicals; narrow market led by large-cap growth with AI as dominant theme",
+        "JPM moved to short bench due to rising expenses ($106B guidance) and poor consumer outlook; NII does not offset pressure",
+        "Oil moved back to bearish TREND but physical backdrop remains tight in refined products with strong diesel demand",
+        "Macau gaming decelerating sharply (May +6.5%, QTD ~6%) versus low-double-digit/mid-teens expectations entering year",
+        "WING stock rally unsupported by fundamentals; Q2 comps tracking down 7.5% with Tyson chicken social-media backlash adding perception risk"
       ],
       "trades_mentioned": [
-        "BROS, SBUX, CAVA, DG, BTI, PM, MGM, LTMC.MI, WRBY, FIVE, GOOGL, META added/maintained to longs",
-        "MCD, BOOT, SIG, HCA maintained/added to shorts",
-        "FIVE position removed to avoid beat-the-whisper dynamics ahead of earnings",
-        "CZR coverage removed as deal substantially priced in at ~$31",
-        "CAVA jumped off signal strength long list despite strong fundamentals"
+        "JPM: Moved from Long Bench to Short Bench",
+        "HQY: Returned to Signal Strength",
+        "AS: Added to signal strength list",
+        "TTWO: Moved from active long to top idea long",
+        "MSTR: Sold 32 Bitcoin (first-ever sale), proceeds for preferred stock distributions"
       ],
-      "keith_outlook": null,
+      "keith_outlook": "Market backdrop remains narrow with large-cap growth dominance and AI concentration risk. Stagflation setup pressures financials and cyclicals while uncertainty around Iran/Strait of Hormuz, oil bearish trends, and crypto weakness add volatility.",
       "ticker_mentions": {
-        "MCD": {
+        "WING": {
           "pod1_revenue": "DECELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Bearish TREND setup intact; McDonald's Next initiatives not expected to improve near-term comp trends which remain negative in Q2",
+          "key_thesis": "Q2 comps tracking down 7.5% at slow pace versus consensus; Tyson chicken backlash adds perception risk with lower-income consumer",
           "catalysts": [
-            "Q2 comp run rate remains negative",
-            "System rollout targeted for 2027",
-            "September Analyst Day financial targets disclosure"
+            "NBA Finals advertising leverage (5% of locations in Spurs territory)",
+            "Easier negative comps for remainder of 2026"
           ],
           "signal": "BEARISH"
-        },
-        "BTI": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "First-half update increased expectations for double-digit U.S. vaping growth and stronger non-combustible category performance",
-          "catalysts": [
-            "Double-digit U.S. vaping growth expected",
-            "Stronger non-combustible category performance",
-            "Regulatory changes supporting nicotine alternatives"
-          ],
-          "signal": "BULLISH"
         },
         "MGM": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Free-cash-flow inflection, Las Vegas growth exposure, and potential strategic interest support upside; deal price expected closer to $53-$60 (~5x 2027 EBITDA)",
+          "key_thesis": "Preferred large-market gaming exposure with 75% of economic EBITDA tied to Las Vegas Strip; Macau less central to thesis",
           "catalysts": [
-            "Privatization process with Barry Diller/IAC and Tilman Fertitta interest",
-            "Free cash flow inflection to high-teens FCF yield expected",
-            "Japan and Dubai pipeline optionality",
-            "BetMGM #3 online gaming brand positioning"
+            "Las Vegas Strip EBITDA growth",
+            "Macau share gains additive"
           ],
           "signal": "BULLISH"
         },
-        "SIG": {
-          "pod1_revenue": "DECELERATING",
+        "AS": {
+          "pod1_revenue": "ACCELERATING",
           "eps_trend": "BEAT",
-          "gross_margin": "CONTRACTING",
-          "key_thesis": "Q1 comp +0.81% below expectations; EPS beat driven by tax benefits and buybacks not operations; lab-grown diamonds pressuring category with weak unit trends",
+          "gross_margin": "EXPANDING",
+          "key_thesis": "Arc'teryx comped 19% on 19% compare; women's growing 40% YoY and now 25% of business; U.S. productivity per door ~$5M vs ~$10M in China with convergence potential",
           "catalysts": [
-            "Lab-grown diamond proliferation reducing barriers to entry",
-            "Gross margin -300 bps from James Allen wind-down writedowns",
-            "Unit trends remain negative since COVID"
+            "Arc'teryx women's segment growth",
+            "Salomon XT-6 and XT Whisper franchise momentum",
+            "U.S. productivity per door convergence upside",
+            "FY EPS power $1.37 vs Street $1.26; tail closer to $4"
+          ],
+          "signal": "BULLISH"
+        },
+        "JPM": {
+          "pod1_revenue": "DECELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Full-year expense guidance raised to $106B from $105B; capital-markets upside decelerates as growth slows and asset-sensitive NII does not offset consumer pressure",
+          "catalysts": [
+            "Quad 3 stagflation pressure on consumer",
+            "Capital-markets deceleration as growth slows",
+            "Expense inflation headwinds"
           ],
           "signal": "BEARISH"
         },
-        "GOOGL": {
+        "HQY": {
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Conducting ~$80B secondary equity offering to fund AI infrastructure; Buffett/Berkshire participating; viewed as sound capital allocation",
+          "gross_margin": "EXPANDING",
+          "key_thesis": "Net interest margin business that benefits from higher inflation and higher rates; HSA demand re-emerging from employers and price-sensitive consumers",
           "catalysts": [
-            "Secondary offering highlights continued AI and infrastructure investment demand",
-            "Anthropic IPO plans and accelerating AI deployment",
-            "Broader platform and infrastructure spending trends"
+            "Rising interest rates supporting NIM expansion",
+            "HSA transaction volume growth",
+            "Employer demand for lower per-member-per-month costs"
           ],
           "signal": "BULLISH"
+        },
+        "TSN": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": "CONTRACTING",
+          "key_thesis": "New CEO Jeff Schomberg's 35-year P&G background less suited to protein business where margins created on cost side; beef-cycle rebuild delayed until 2028",
+          "catalysts": [
+            "Chicken margin pressure from tender demand normalization",
+            "Beef-cycle rebuild delayed by Western drought"
+          ],
+          "signal": "BEARISH"
+        },
+        "LVS": {
+          "pod1_revenue": "DECELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Clearest Macau funding-short candidate with short interest ~5% and less squeeze risk; Macau growth likely to remain laggard",
+          "catalysts": [
+            "Macau growth deceleration",
+            "Near-term EBITDA risk from weaker operating leverage"
+          ],
+          "signal": "BEARISH"
         },
         "SBUX": {
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": "EXPANDING",
-          "key_thesis": "Turnaround thesis intact with top-line growth validated by in-store labor investment; two-year comp stack improving from ~4% to double digits by Q2 FY2027",
+          "key_thesis": "AI ordering, AI headsets, and order-flow automation becoming part of operating catalyst path; speeding up ordering and improving execution",
           "catalysts": [
-            "Margin improvement as Green Apron labor spend lap begins in fiscal Q4",
-            "Two-year comp stack expected to improve to double digits",
-            "Q3 calendar Q2 results expected to show moderation before comp ramp"
+            "AI-driven ordering process acceleration",
+            "AI headset deployment",
+            "Execution improvement before orders reach baristas"
           ],
           "signal": "BULLISH"
         },
-        "DG": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": "BEAT",
-          "gross_margin": null,
-          "key_thesis": "Q1 EPS exceeded expectations with management guidance raised; results alleviate low-income consumer concerns and mirror Dollar Tree positives",
-          "catalysts": [
-            "Q1 EPS beat and guidance raise",
-            "Positive read-throughs on low-income consumer",
-            "Alignment with Dollar Tree strength"
-          ],
-          "signal": "BULLISH"
-        },
-        "PM": {
+        "DGX": {
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Launching ZYN Ultra at lower price points as FDA-related changes accelerate nicotine-pouch adoption; competitive positioning improves in growth categories",
+          "key_thesis": "Cleaner volume play benefiting from GLP-1-driven testing demand and improved healthcare macro forecasts for organic volume",
           "catalysts": [
-            "ZYN Ultra launch at lower price points",
-            "FDA-related industry changes accelerating nicotine-pouch adoption",
-            "Improved competitive positioning in growth categories"
+            "Medicare bridge-program dynamics",
+            "GLP-1-driven HbA1c, lipid profile testing volume",
+            "Broader access to affordable weight-loss products"
           ],
           "signal": "BULLISH"
         },
-        "LTMC.MI": {
+        "LH": {
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Thinly traded with concentrated holder base; online gaming penetration story with 20%+ free cash flow per share growth at ~7.5x EBITDA",
+          "key_thesis": "Screens better than DGX on Quad-factor basis; benefits from GLP-1-related volume and pricing while retaining phase-one CRO exposure for biotech activity",
           "catalysts": [
-            "May iGaming data expected imminently",
-            "Expected consistent two-year stack growth or acceleration",
-            "Management actively buying back stock"
+            "GLP-1-related volume and pricing upside",
+            "Phase-one CRO exposure to stronger biotech activity",
+            "ASCO-related clinical-trial momentum"
           ],
           "signal": "BULLISH"
         },
-        "WRBY": {
+        "NVO": {
           "pod1_revenue": "ACCELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Stock hitting higher highs and higher lows at ~$24; upcoming quarter expected to beat on strong early trends with low guidance bar",
+          "key_thesis": "Mass-market weight-loss access drives incremental diagnostic testing volume through GLP-1 adoption",
           "catalysts": [
-            "Expected beat on strong early trends",
-            "Google and Samsung partnership products rolling out September",
-            "Particularly strong catalyst calendar over next 2-4 quarters"
+            "Incremental HSA and diagnostic testing demand",
+            "Broader weight-loss product access"
           ],
           "signal": "BULLISH"
         },
-        "FIVE": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": "BEAT",
+        "CFG": {
+          "pod1_revenue": "DECELERATING",
+          "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Expected to put up ~25% comp and crush sell-side consensus; position removed to avoid beat-the-whisper dynamics as base effects become difficult",
+          "key_thesis": "Came off Signal Strength; stagflation not favorable macro setup for financials",
           "catalysts": [
-            "Reports in next 24-36 hours",
-            "Expected ~25% comp beat"
+            "Quad 3 stagflation pressure"
           ],
           "signal": "NEUTRAL"
         },
-        "BOOT": {
+        "TTWO": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Most catalyst-rich name in Communications universe; GTA VI unit assumptions above Street expectations, survey work supporting fiscal 2027 units ~2x prior GTA launch monthly rate",
+          "catalysts": [
+            "GTA VI launch and unit sales potential",
+            "12-month catalyst-rich period",
+            "Unit estimate upside to Street expectations"
+          ],
+          "signal": "BULLISH"
+        },
+        "NVDA": {
+          "pod1_revenue": "ACCELERATING",
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Entry into PC market boosting software complex and broad AI-related sentiment",
+          "catalysts": [
+            "PC market expansion",
+            "AI infrastructure investment tailwinds"
+          ],
+          "signal": "BULLISH"
+        },
+        "ODFL": {
           "pod1_revenue": "DECELERATING",
           "eps_trend": null,
           "gross_margin": "CONTRACTING",
-          "key_thesis": "Stock rallied $140 to $165; forensic work reveals double-digit rent escalators creating deleverage risk as comps moderate and fixed costs rise double digits",
+          "key_thesis": "High-margin benchmark with typical operating ratios ~70, but broader competitive setup problematic for LTL incumbents",
           "catalysts": [
-            "Double-digit rent escalators in operating leases",
-            "Western trend cycle naturally reversing after 5-6 years",
-            "At 14x EBITDA, seen trading closer to 7x in downturn scenario"
+            "Industry structure deterioration from non-union competitors",
+            "FedEx Freight independence creating new dynamics",
+            "Amazon participation pressure"
           ],
           "signal": "BEARISH"
         },
-        "CAVA": {
-          "pod1_revenue": "ACCELERATING",
-          "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Jumped off signal strength long list; fundamental case remains strong with premium valuation supported by growth rate but signal potentially reflects deceleration ahead",
-          "catalysts": [
-            "Potential deceleration ahead of fundamentals",
-            "Premium valuation supported by growth run rate"
-          ],
-          "signal": "NEUTRAL"
-        },
-        "HCA": {
+        "SAIA": {
           "pod1_revenue": "DECELERATING",
           "eps_trend": null,
-          "gross_margin": null,
-          "key_thesis": "Short thesis performing; high fixed-cost structure with 3-4 year pricing contracts and significant government payor exposure creates duration risk",
+          "gross_margin": "CONTRACTING",
+          "key_thesis": "LTL trucking competitive setup deteriorating; excess capacity pressuring pricing",
           "catalysts": [
-            "Q1 numbers building negative momentum",
-            "Quad factor score in bottom quintile",
-            "Monthly trackers (admissions, pricing) to be updated this week"
+            "Non-union competitor share gains",
+            "Amazon participation growth",
+            "Limited growth for three years"
           ],
           "signal": "BEARISH"
         },
-        "META": {
+        "ARCB": {
+          "pod1_revenue": "DECELERATING",
+          "eps_trend": null,
+          "gross_margin": "CONTRACTING",
+          "key_thesis": "LTL incumbent facing industry structure deterioration and competitive headwinds",
+          "catalysts": [
+            "Non-union competitor pressure",
+            "Excess capacity pricing pressure",
+            "Limited growth environment"
+          ],
+          "signal": "BEARISH"
+        },
+        "MSTR": {
           "pod1_revenue": null,
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "FTC and state AGs continue appealing antitrust dismissal related to Instagram; probability of forced divestiture remains low",
+          "key_thesis": "Sold 32 Bitcoin (first-ever sale); Bitcoin on bearish trend signal and crypto-sensitive equities under pressure",
           "catalysts": [
-            "Antitrust litigation appeal proceedings"
+            "Bitcoin bearish TREND signal",
+            "Crypto weakness",
+            "Preferred stock distribution funding"
           ],
-          "signal": "BULLISH"
+          "signal": "BEARISH"
         },
-        "BROS": {
+        "FDX": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": "CONTRACTING",
+          "key_thesis": "FedEx Freight now trading separately as FDXF; margins lower than other LTL leaders with questionable assumption it can raise margins on higher-yield volume",
+          "catalysts": [
+            "FedEx Freight independence competitive dynamics",
+            "Margin expansion potential",
+            "Competitive defense risk"
+          ],
+          "signal": "NEUTRAL"
+        },
+        "CI": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Lagged broader managed-care group despite no clear setup change and fewer headwinds than peers",
+          "catalysts": [
+            "Managed-care group revaluation"
+          ],
+          "signal": "NEUTRAL"
+        },
+        "EC": {
           "pod1_revenue": "DECELERATING",
           "eps_trend": null,
           "gross_margin": null,
-          "key_thesis": "Came onto signal strength long list; habitual consumption category in beverages exhibiting moderating data",
+          "key_thesis": "Colombian elections created runoff with pro-Trump candidate; meaningful implications for Ecopetrol given government ownership and President Petro's ban on new oil/gas exploration",
           "catalysts": [
-            "Signal strength long positioning",
-            "Habitual consumption category exposure"
+            "Colombian election runoff outcome",
+            "Oil exploration policy changes",
+            "Colombian production decline (1.1M bpd in 2014 to 700k-750k bpd current)"
+          ],
+          "signal": "NEUTRAL"
+        },
+        "MLCO": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Remains difficult to invest behind because execution has repeatedly failed to sustain improvement",
+          "catalysts": [
+            "Execution sustainability risk"
+          ],
+          "signal": "NEUTRAL"
+        },
+        "WYNN": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Tricky given UAE influence and lack of same Vegas catalyst as MGM",
+          "catalysts": [
+            "UAE influence/exposure",
+            "Vegas market dynamics"
+          ],
+          "signal": "NEUTRAL"
+        },
+        "MU": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Anthropic commentary on logic chips has implications for Micron alongside Samsung and SK Hynix",
+          "catalysts": [
+            "Logic chip demand from Anthropic growth",
+            "AI infrastructure expansion"
+          ],
+          "signal": "NEUTRAL"
+        },
+        "005930.KS": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "Samsung: Anthropic commentary on logic chips has implications for Samsung AI chip demand",
+          "catalysts": [
+            "Logic chip demand from AI infrastructure",
+            "Anthropic/OpenAI speed battle implications"
           ],
           "signal": "BULLISH"
+        },
+        "000660.KS": {
+          "pod1_revenue": null,
+          "eps_trend": null,
+          "gross_margin": null,
+          "key_thesis": "SK Hynix: Anthropic commentary on logic chips has implications for SK Hynix AI chip demand",
+          "catalysts": [
+            "Logic chip demand from AI infrastructure",
+            "Anthropic/OpenAI competition"
+          ],
+          "signal": "NEUTRAL"
         }
       }
     },
     "macro_show_notes": {
       "key_points": [
-        "Crypto remains broadly bearish across the board; MicroStrategy selling into bearish Bitcoin trend",
-        "Cyclicals, CapEx, and Quad 2 reflation are core macro setup with ISM manufacturing at fresh highs and five straight months of expansion",
-        "Next CPI report expected to show meaningful acceleration with a 'four handle,' followed by potential deceleration dependent on oil prices",
-        "Yields remain in bullish trend with 'higher for longer' setup likely; short-term yields showing stronger signals than long-term",
-        "AI/Semi/Software longs (NVDA, ORCL, MSFT) leading with software swinging from AI loser to 'back in vogue' narrative"
+        "Market trend remains bullish with S&P 500, Nasdaq, and Russell 2000 all in bullish trend; nominal GDP tracking ~7%, earnings accelerating, 10-year yield down 14bps",
+        "Technology dominates but team warns against chasing extended moves after 9 consecutive weeks of positive performance; maintain diversified strategy as leadership can change violently",
+        "Healthcare emerging as important hedge against tech exposure with Novo Nordisk and Eli Lilly trending bullishly; positioned to gain importance in potential Quad 2 to Quad 3 transition",
+        "Labor holding up on jobs but consumer real spending capacity under pressure due to inflation; savings rate fallen to 2005-2006 levels, unsustainable long-term",
+        "Oil in bearish trend with very wide risk range around 88.9; path unclear due to supply/demand/geopolitical uncertainty; Microsoft shifted from bearish/neutral to bullish trend"
       ],
       "positioning_changes": [
-        "Added cybersecurity exposure through BUG",
-        "Trimmed significant oil-related equity exposure; reduced to minimum position size or sold several positions; still own OIH, NORW, and one other oil position",
-        "Took off Brent Oil and became more selective in commodity exposure",
-        "Reduced gold allocation to minimum position; capital better deployed elsewhere",
-        "Hedgai expanded from 15 signals/algos to 42; building natural gas position (up ~10%), copper, silver, and gold positions"
+        "Microsoft (MSFT): moved from bearish trend to neutral on Friday, now in bullish trend - meaningful signal change for large index component that was negative for months",
+        "Healthcare sector: gaining importance as hedge against technology exposure through bullish trends in large-cap defensive names like Novo Nordisk (NVO) and Eli Lilly (LLY)"
       ],
       "keith_watching": [
-        "Oil price action - deceleration of future inflation heavily dependent on where oil trades in coming days",
-        "Next CPI report expected to show 'four handle' acceleration",
-        "Russell 2000 sitting around middle of risk range; top position at time of show",
-        "High-momentum areas (DRAM, QTUM, BUG, ROBO) approaching top end of risk ranges",
-        "Geopolitical risk from Iran; ceasefire extension priced by end of June, permanent peace deal not expected until October-December",
-        "Yields trajectory - if yields break down, gold could improve; if yields break higher, gold likely continues to struggle"
+        "S&P 500 risk range top at 7,628 (new all-time high); sell at top, buy at low end rather than chasing",
+        "WTI crude near key level around 88.9 with insanely high volatility; monitor supply, demand, and geopolitical developments",
+        "Industrial manufacturing deceleration risk: watch for order momentum slowing in hottest industrial areas despite current strength",
+        "Consumer savings rate sustainability: cannot keep declining indefinitely; eventual headwind to consumption",
+        "SpaceX IPO supply risks: lockups begin mattering later in year; Elon Musk potential stake sales toward year-end; IPO will absorb significant market volume"
       ]
     },
     "investing_ideas": {
@@ -5690,18 +5820,6 @@
         "CAT",
         "SXT"
       ]
-    },
-    {
-      "date": "2026-06-02",
-      "count": 81,
-      "added": 3,
-      "removed": 4
-    },
-    {
-      "date": "2026-06-02",
-      "count": 81,
-      "added": 3,
-      "removed": 4
     },
     {
       "date": "2026-06-02",
@@ -8286,165 +8404,175 @@
         "removed": true,
         "prev_weight": 0.0147
       },
-      "IDMO": {
-        "delta": -0.0184,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0371
-      },
-      "ZM": {
-        "delta": 0.0406,
-        "curr_weight": 0.0496,
-        "prev_weight": 0.009
-      },
-      "DBMF": {
-        "delta": 0.0052,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0689
-      },
-      "ROKU": {
-        "delta": 0.0179,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0264
-      },
-      "CIBR": {
-        "delta": -0.0005,
-        "curr_weight": 0.0269,
-        "prev_weight": 0.0274
-      },
-      "GLASF": {
-        "delta": 0.0005,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0163
-      },
-      "NVDA": {
-        "delta": -0.0008,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0907
-      },
-      "ADI": {
-        "delta": 0.0043,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0178
-      },
-      "TWLO": {
-        "delta": -0.0007,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0199
+      "SNDK": {
+        "delta": 0.0033,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0117
       },
       "RSI": {
         "delta": 0.0007,
         "curr_weight": 0.0148,
         "prev_weight": 0.0141
       },
-      "PICK": {
-        "delta": -0.0042,
-        "curr_weight": 0.0069,
-        "prev_weight": 0.0111
-      },
       "CASY": {
         "delta": -0.0006,
         "curr_weight": 0.0227,
         "prev_weight": 0.0233
       },
-      "LLY": {
-        "delta": 0.0006,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0281
-      },
-      "TAN": {
-        "delta": 0.0065,
-        "curr_weight": 0.0452,
-        "prev_weight": 0.0387
-      },
-      "DBJP": {
-        "delta": 0.0092,
-        "curr_weight": 0.0581,
-        "prev_weight": 0.0489
-      },
-      "OIH": {
-        "delta": -0.0031,
-        "curr_weight": 0.0497,
-        "prev_weight": 0.0528
-      },
-      "GEV": {
-        "delta": 0.002,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0204
-      },
-      "WING": {
-        "delta": -0.001,
-        "curr_weight": -0.012,
-        "prev_weight": -0.011
-      },
-      "JAAA": {
-        "delta": 0.0039,
-        "curr_weight": 0.063,
-        "prev_weight": 0.0591
-      },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
-      },
-      "USO": {
-        "delta": -0.005,
-        "curr_weight": 0.0307,
-        "prev_weight": 0.0357
-      },
-      "RIG": {
-        "delta": -0.0007,
-        "curr_weight": 0.0177,
-        "prev_weight": 0.0184
-      },
-      "MUSA": {
-        "delta": -0.009,
-        "curr_weight": 0.0101,
-        "prev_weight": 0.0191
-      },
-      "FESM": {
-        "delta": 0.0291,
-        "curr_weight": 0.0655,
-        "prev_weight": 0.0364
-      },
-      "HAL": {
-        "delta": -0.0007,
-        "curr_weight": 0.0184,
-        "prev_weight": 0.0191
+      "DBMF": {
+        "delta": 0.0052,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0689
       },
       "CSX": {
         "delta": 0.0006,
         "curr_weight": 0.0302,
         "prev_weight": 0.0296
       },
-      "IHF": {
-        "delta": -0.0232,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0488
+      "JAAA": {
+        "delta": 0.0039,
+        "curr_weight": 0.063,
+        "prev_weight": 0.0591
+      },
+      "MUSA": {
+        "delta": -0.009,
+        "curr_weight": 0.0101,
+        "prev_weight": 0.0191
+      },
+      "AMZN": {
+        "delta": 0.0016,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0592
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
+      },
+      "GEV": {
+        "delta": 0.002,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0204
+      },
+      "MRVL": {
+        "delta": 0.125,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0196
+      },
+      "VIK": {
+        "delta": 0.0013,
+        "curr_weight": 0.0226,
+        "prev_weight": 0.0213
+      },
+      "DBJP": {
+        "delta": 0.0092,
+        "curr_weight": 0.0581,
+        "prev_weight": 0.0489
+      },
+      "MAR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0159
+      },
+      "URI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0253
+      },
+      "DBB": {
+        "delta": -0.0063,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.0361
+      },
+      "NOBL": {
+        "delta": 0.0029,
+        "curr_weight": 0.0449,
+        "prev_weight": 0.042
+      },
+      "CSCO": {
+        "delta": -0.0023,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0275
+      },
+      "WING": {
+        "delta": -0.001,
+        "curr_weight": -0.012,
+        "prev_weight": -0.011
+      },
+      "ITB": {
+        "delta": -0.0005,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0209
+      },
+      "VTI": {
+        "delta": 0.0009,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0902
       },
       "UNH": {
         "delta": 0.0006,
         "curr_weight": 0.0252,
         "prev_weight": 0.0246
       },
-      "SNDK": {
-        "delta": 0.0033,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0117
+      "CIBR": {
+        "delta": -0.0005,
+        "curr_weight": 0.0269,
+        "prev_weight": 0.0274
       },
-      "XTL": {
-        "delta": 0.0082,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0636
+      "USO": {
+        "delta": -0.005,
+        "curr_weight": 0.0307,
+        "prev_weight": 0.0357
       },
-      "UUP": {
-        "delta": -0.0091,
-        "curr_weight": 0.0697,
-        "prev_weight": 0.0788
+      "NVDA": {
+        "delta": -0.0008,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0907
       },
       "GFS": {
         "delta": -0.0009,
         "curr_weight": 0.0082,
         "prev_weight": 0.0091
+      },
+      "ROKU": {
+        "delta": 0.0179,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0264
+      },
+      "LLY": {
+        "delta": 0.0006,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0281
+      },
+      "OIH": {
+        "delta": -0.0031,
+        "curr_weight": 0.0497,
+        "prev_weight": 0.0528
+      },
+      "AAPL": {
+        "delta": 0.001,
+        "curr_weight": 0.092,
+        "prev_weight": 0.091
+      },
+      "FESM": {
+        "delta": 0.0291,
+        "curr_weight": 0.0655,
+        "prev_weight": 0.0364
+      },
+      "TWLO": {
+        "delta": -0.0007,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0199
+      },
+      "HAL": {
+        "delta": -0.0007,
+        "curr_weight": 0.0184,
+        "prev_weight": 0.0191
+      },
+      "TAN": {
+        "delta": 0.0065,
+        "curr_weight": 0.0452,
+        "prev_weight": 0.0387
       },
       "VTIP": {
         "delta": -0.0051,
@@ -8456,90 +8584,80 @@
         "curr_weight": 0.0546,
         "prev_weight": 0.0422
       },
-      "MAR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0159
-      },
       "CAVA": {
         "delta": -0.0085,
         "curr_weight": 0.0041,
         "prev_weight": 0.0126
       },
-      "NOBL": {
-        "delta": 0.0029,
-        "curr_weight": 0.0449,
-        "prev_weight": 0.042
+      "UUP": {
+        "delta": -0.0091,
+        "curr_weight": 0.0697,
+        "prev_weight": 0.0788
       },
-      "RDDT": {
+      "RIG": {
         "delta": -0.0007,
-        "curr_weight": -0.0101,
-        "prev_weight": -0.0094
+        "curr_weight": 0.0177,
+        "prev_weight": 0.0184
       },
-      "CSCO": {
-        "delta": -0.0023,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0275
+      "GLASF": {
+        "delta": 0.0005,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0163
       },
-      "JETS": {
-        "delta": -0.0005,
-        "curr_weight": -0.011,
-        "prev_weight": -0.0105
+      "XTL": {
+        "delta": 0.0082,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0636
       },
-      "VTI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0902
+      "IDMO": {
+        "delta": -0.0184,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0371
+      },
+      "PICK": {
+        "delta": -0.0042,
+        "curr_weight": 0.0069,
+        "prev_weight": 0.0111
       },
       "CRCL": {
         "delta": 0.0054,
         "curr_weight": 0.0201,
         "prev_weight": 0.0147
       },
-      "URI": {
-        "delta": 0.0009,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0253
-      },
-      "VIK": {
-        "delta": 0.0013,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0213
+      "IHF": {
+        "delta": -0.0232,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0488
       },
       "NOV": {
         "delta": -0.0007,
         "curr_weight": 0.0187,
         "prev_weight": 0.0194
       },
-      "AMZN": {
-        "delta": 0.0016,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0592
-      },
-      "AAPL": {
-        "delta": 0.001,
-        "curr_weight": 0.092,
-        "prev_weight": 0.091
-      },
-      "MRVL": {
-        "delta": 0.125,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0196
-      },
-      "DBB": {
-        "delta": -0.0063,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.0361
-      },
       "PLAY": {
         "delta": -0.0007,
         "curr_weight": -0.011,
         "prev_weight": -0.0103
       },
-      "ITB": {
+      "ZM": {
+        "delta": 0.0406,
+        "curr_weight": 0.0496,
+        "prev_weight": 0.009
+      },
+      "ADI": {
+        "delta": 0.0043,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0178
+      },
+      "RDDT": {
+        "delta": -0.0007,
+        "curr_weight": -0.0101,
+        "prev_weight": -0.0094
+      },
+      "JETS": {
         "delta": -0.0005,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0209
+        "curr_weight": -0.011,
+        "prev_weight": -0.0105
       }
     },
     "weekly": {
@@ -8795,225 +8913,280 @@
         "removed": true,
         "prev_weight": 0.0172
       },
-      "HTEC": {
-        "delta": 0.0024,
-        "curr_weight": 0.01,
-        "prev_weight": 0.0076
-      },
-      "JBHT": {
-        "delta": 0.0006,
-        "curr_weight": 0.0218,
-        "prev_weight": 0.0212
-      },
-      "IDMO": {
-        "delta": 0.0036,
-        "curr_weight": 0.0187,
-        "prev_weight": 0.0151
-      },
-      "IDX": {
-        "delta": 0.0005,
-        "curr_weight": -0.0094,
-        "prev_weight": -0.0099
-      },
-      "STX": {
-        "delta": 0.0015,
-        "curr_weight": 0.0117,
-        "prev_weight": 0.0102
-      },
-      "DBMF": {
-        "delta": 0.004,
-        "curr_weight": 0.0741,
-        "prev_weight": 0.0701
-      },
-      "ROKU": {
-        "delta": 0.0184,
-        "curr_weight": 0.0443,
-        "prev_weight": 0.0259
-      },
-      "XAR": {
-        "delta": 0.0009,
-        "curr_weight": 0.0201,
-        "prev_weight": 0.0192
+      "SNDK": {
+        "delta": 0.0046,
+        "curr_weight": 0.015,
+        "prev_weight": 0.0104
       },
       "INTC": {
         "delta": 0.0005,
         "curr_weight": 0.0218,
         "prev_weight": 0.0213
       },
-      "AVEM": {
+      "ATI": {
         "delta": 0.001,
-        "curr_weight": 0.0202,
-        "prev_weight": 0.0192
-      },
-      "GLASF": {
-        "delta": 0.0014,
-        "curr_weight": 0.0168,
-        "prev_weight": 0.0154
-      },
-      "CAT": {
-        "delta": 0.0008,
-        "curr_weight": 0.021,
-        "prev_weight": 0.0202
-      },
-      "NVDA": {
-        "delta": -0.0057,
-        "curr_weight": 0.0899,
-        "prev_weight": 0.0956
-      },
-      "KMI": {
-        "delta": 0.0028,
-        "curr_weight": 0.0127,
-        "prev_weight": 0.0099
-      },
-      "WDC": {
-        "delta": 0.0027,
-        "curr_weight": 0.0203,
-        "prev_weight": 0.0176
-      },
-      "ADI": {
-        "delta": 0.005,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0171
-      },
-      "CZR": {
-        "delta": 0.0006,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.015
-      },
-      "TWLO": {
-        "delta": 0.0044,
-        "curr_weight": 0.0192,
-        "prev_weight": 0.0148
-      },
-      "MKSI": {
-        "delta": 0.0011,
-        "curr_weight": 0.0228,
-        "prev_weight": 0.0217
-      },
-      "CF": {
-        "delta": -0.001,
-        "curr_weight": 0.0128,
-        "prev_weight": 0.0138
-      },
-      "PICK": {
-        "delta": -0.0049,
-        "curr_weight": 0.0069,
-        "prev_weight": 0.0118
-      },
-      "CDNS": {
-        "delta": 0.0009,
-        "curr_weight": 0.0153,
-        "prev_weight": 0.0144
-      },
-      "VYM": {
-        "delta": 0.0081,
-        "curr_weight": 0.0493,
-        "prev_weight": 0.0412
-      },
-      "ARTY": {
-        "delta": 0.0033,
-        "curr_weight": 0.047,
-        "prev_weight": 0.0437
-      },
-      "SMPL": {
-        "delta": -0.0005,
-        "curr_weight": -0.0102,
-        "prev_weight": -0.0097
-      },
-      "FWD": {
-        "delta": 0.0018,
-        "curr_weight": 0.0566,
-        "prev_weight": 0.0548
+        "curr_weight": 0.0116,
+        "prev_weight": 0.0106
       },
       "CASY": {
         "delta": -0.0021,
         "curr_weight": 0.0227,
         "prev_weight": 0.0248
       },
-      "LLY": {
-        "delta": 0.0014,
-        "curr_weight": 0.0287,
-        "prev_weight": 0.0273
+      "DBMF": {
+        "delta": 0.004,
+        "curr_weight": 0.0741,
+        "prev_weight": 0.0701
       },
-      "DBJP": {
-        "delta": 0.0032,
-        "curr_weight": 0.0581,
-        "prev_weight": 0.0549
+      "FITE": {
+        "delta": 0.0015,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0206
       },
-      "BKNG": {
-        "delta": -0.0007,
-        "curr_weight": -0.0106,
-        "prev_weight": -0.0099
-      },
-      "HBM": {
-        "delta": 0.0012,
-        "curr_weight": 0.016,
-        "prev_weight": 0.0148
-      },
-      "SNAP": {
-        "delta": 0.0052,
-        "curr_weight": -0.0051,
-        "prev_weight": -0.0103
-      },
-      "OIH": {
-        "delta": 0.0079,
-        "curr_weight": 0.0497,
-        "prev_weight": 0.0418
-      },
-      "GEV": {
-        "delta": 0.0027,
-        "curr_weight": 0.0224,
-        "prev_weight": 0.0197
-      },
-      "WEAT": {
-        "delta": -0.0006,
-        "curr_weight": 0.0143,
+      "ROBO": {
+        "delta": 0.0009,
+        "curr_weight": 0.0158,
         "prev_weight": 0.0149
       },
-      "XYZ": {
-        "delta": -0.0098,
-        "curr_weight": 0.0102,
-        "prev_weight": 0.02
+      "CSX": {
+        "delta": 0.0007,
+        "curr_weight": 0.0302,
+        "prev_weight": 0.0295
       },
-      "WING": {
-        "delta": -0.0019,
-        "curr_weight": -0.012,
-        "prev_weight": -0.0101
-      },
-      "MPC": {
-        "delta": -0.0007,
-        "curr_weight": 0.0148,
-        "prev_weight": 0.0155
+      "MKSI": {
+        "delta": 0.0011,
+        "curr_weight": 0.0228,
+        "prev_weight": 0.0217
       },
       "JAAA": {
         "delta": 0.003,
         "curr_weight": 0.063,
         "prev_weight": 0.06
       },
-      "C": {
-        "delta": -0.0028,
-        "curr_weight": 0.013,
-        "prev_weight": 0.0158
-      },
       "LCID": {
         "delta": -0.0009,
         "curr_weight": -0.0098,
         "prev_weight": -0.0089
       },
-      "KLAC": {
-        "delta": 0.0005,
-        "curr_weight": 0.0109,
-        "prev_weight": 0.0104
+      "WEAT": {
+        "delta": -0.0006,
+        "curr_weight": 0.0143,
+        "prev_weight": 0.0149
       },
       "MUSA": {
         "delta": -0.01,
         "curr_weight": 0.0101,
         "prev_weight": 0.0201
       },
+      "AMZN": {
+        "delta": 0.0009,
+        "curr_weight": 0.0608,
+        "prev_weight": 0.0599
+      },
+      "ZROZ": {
+        "delta": -0.0008,
+        "curr_weight": -0.0243,
+        "prev_weight": -0.0235
+      },
+      "EWY": {
+        "delta": 0.0012,
+        "curr_weight": 0.0126,
+        "prev_weight": 0.0114
+      },
+      "BKNG": {
+        "delta": -0.0007,
+        "curr_weight": -0.0106,
+        "prev_weight": -0.0099
+      },
+      "C": {
+        "delta": -0.0028,
+        "curr_weight": 0.013,
+        "prev_weight": 0.0158
+      },
+      "IHE": {
+        "delta": 0.005,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0202
+      },
+      "GEV": {
+        "delta": 0.0027,
+        "curr_weight": 0.0224,
+        "prev_weight": 0.0197
+      },
+      "MRVL": {
+        "delta": 0.1269,
+        "curr_weight": 0.1446,
+        "prev_weight": 0.0177
+      },
+      "JBHT": {
+        "delta": 0.0006,
+        "curr_weight": 0.0218,
+        "prev_weight": 0.0212
+      },
+      "VYM": {
+        "delta": 0.0081,
+        "curr_weight": 0.0493,
+        "prev_weight": 0.0412
+      },
+      "VIK": {
+        "delta": 0.0022,
+        "curr_weight": 0.0226,
+        "prev_weight": 0.0204
+      },
+      "DBJP": {
+        "delta": 0.0032,
+        "curr_weight": 0.0581,
+        "prev_weight": 0.0549
+      },
+      "PAVE": {
+        "delta": 0.0007,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.0149
+      },
+      "MAR": {
+        "delta": 0.0007,
+        "curr_weight": 0.0165,
+        "prev_weight": 0.0158
+      },
+      "URI": {
+        "delta": 0.0014,
+        "curr_weight": 0.0262,
+        "prev_weight": 0.0248
+      },
+      "KMI": {
+        "delta": 0.0028,
+        "curr_weight": 0.0127,
+        "prev_weight": 0.0099
+      },
+      "DBB": {
+        "delta": 0.0068,
+        "curr_weight": 0.0298,
+        "prev_weight": 0.023
+      },
+      "SXT": {
+        "delta": 0.0007,
+        "curr_weight": 0.0227,
+        "prev_weight": 0.022
+      },
+      "SMPL": {
+        "delta": -0.0005,
+        "curr_weight": -0.0102,
+        "prev_weight": -0.0097
+      },
+      "AMAT": {
+        "delta": 0.0013,
+        "curr_weight": 0.0273,
+        "prev_weight": 0.026
+      },
+      "XLE": {
+        "delta": -0.0014,
+        "curr_weight": 0.0295,
+        "prev_weight": 0.0309
+      },
+      "SNAP": {
+        "delta": 0.0052,
+        "curr_weight": -0.0051,
+        "prev_weight": -0.0103
+      },
+      "VLO": {
+        "delta": -0.0008,
+        "curr_weight": 0.0115,
+        "prev_weight": 0.0123
+      },
+      "ARTY": {
+        "delta": 0.0033,
+        "curr_weight": 0.047,
+        "prev_weight": 0.0437
+      },
+      "CSCO": {
+        "delta": -0.0016,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0268
+      },
+      "WING": {
+        "delta": -0.0019,
+        "curr_weight": -0.012,
+        "prev_weight": -0.0101
+      },
+      "ITB": {
+        "delta": -0.0008,
+        "curr_weight": -0.0214,
+        "prev_weight": -0.0206
+      },
+      "CF": {
+        "delta": -0.001,
+        "curr_weight": 0.0128,
+        "prev_weight": 0.0138
+      },
+      "VTI": {
+        "delta": 0.0015,
+        "curr_weight": 0.0911,
+        "prev_weight": 0.0896
+      },
+      "XAR": {
+        "delta": 0.0009,
+        "curr_weight": 0.0201,
+        "prev_weight": 0.0192
+      },
+      "TTWO": {
+        "delta": -0.0066,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0224
+      },
+      "UNH": {
+        "delta": 0.0048,
+        "curr_weight": 0.0252,
+        "prev_weight": 0.0204
+      },
+      "CERY": {
+        "delta": -0.004,
+        "curr_weight": 0.1366,
+        "prev_weight": 0.1406
+      },
+      "NVDA": {
+        "delta": -0.0057,
+        "curr_weight": 0.0899,
+        "prev_weight": 0.0956
+      },
+      "GFS": {
+        "delta": 0.001,
+        "curr_weight": 0.0082,
+        "prev_weight": 0.0072
+      },
+      "ROKU": {
+        "delta": 0.0184,
+        "curr_weight": 0.0443,
+        "prev_weight": 0.0259
+      },
+      "LLY": {
+        "delta": 0.0014,
+        "curr_weight": 0.0287,
+        "prev_weight": 0.0273
+      },
+      "OIH": {
+        "delta": 0.0079,
+        "curr_weight": 0.0497,
+        "prev_weight": 0.0418
+      },
+      "AAPL": {
+        "delta": 0.0016,
+        "curr_weight": 0.092,
+        "prev_weight": 0.0904
+      },
       "FESM": {
         "delta": 0.0251,
         "curr_weight": 0.0655,
         "prev_weight": 0.0404
+      },
+      "TWLO": {
+        "delta": 0.0044,
+        "curr_weight": 0.0192,
+        "prev_weight": 0.0148
+      },
+      "FWD": {
+        "delta": 0.0018,
+        "curr_weight": 0.0566,
+        "prev_weight": 0.0548
       },
       "HAL": {
         "delta": -0.0015,
@@ -9025,235 +9198,180 @@
         "curr_weight": 0.0199,
         "prev_weight": 0.0144
       },
-      "CSX": {
-        "delta": 0.0007,
-        "curr_weight": 0.0302,
-        "prev_weight": 0.0295
-      },
-      "GOOGL": {
-        "delta": -0.0009,
-        "curr_weight": 0.0803,
-        "prev_weight": 0.0812
-      },
-      "AFRM": {
-        "delta": 0.0007,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0151
-      },
-      "IHF": {
-        "delta": -0.0212,
-        "curr_weight": 0.0256,
-        "prev_weight": 0.0468
-      },
-      "DRAM": {
-        "delta": 0.0055,
-        "curr_weight": 0.0357,
-        "prev_weight": 0.0302
-      },
-      "PAVE": {
-        "delta": 0.0007,
-        "curr_weight": 0.0156,
-        "prev_weight": 0.0149
-      },
-      "UNH": {
-        "delta": 0.0048,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0204
-      },
-      "SNDK": {
-        "delta": 0.0046,
-        "curr_weight": 0.015,
-        "prev_weight": 0.0104
-      },
-      "XTL": {
-        "delta": 0.0116,
-        "curr_weight": 0.0718,
-        "prev_weight": 0.0602
-      },
-      "KSS": {
-        "delta": -0.0006,
-        "curr_weight": -0.0111,
-        "prev_weight": -0.0105
-      },
-      "UUP": {
-        "delta": 0.0143,
-        "curr_weight": 0.0697,
-        "prev_weight": 0.0554
-      },
-      "ROBO": {
-        "delta": 0.0009,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0149
-      },
-      "GFS": {
-        "delta": 0.001,
-        "curr_weight": 0.0082,
-        "prev_weight": 0.0072
-      },
-      "XLE": {
-        "delta": -0.0014,
-        "curr_weight": 0.0295,
-        "prev_weight": 0.0309
-      },
       "VTIP": {
         "delta": -0.0789,
         "curr_weight": 0.0329,
         "prev_weight": 0.1118
-      },
-      "SLX": {
-        "delta": 0.0188,
-        "curr_weight": 0.0546,
-        "prev_weight": 0.0358
-      },
-      "MAR": {
-        "delta": 0.0007,
-        "curr_weight": 0.0165,
-        "prev_weight": 0.0158
-      },
-      "CAVA": {
-        "delta": -0.0086,
-        "curr_weight": 0.0041,
-        "prev_weight": 0.0127
       },
       "SBUX": {
         "delta": -0.0009,
         "curr_weight": 0.0189,
         "prev_weight": 0.0198
       },
-      "IHE": {
-        "delta": 0.005,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0202
+      "AMD": {
+        "delta": 0.0019,
+        "curr_weight": 0.0223,
+        "prev_weight": 0.0204
       },
-      "CSCO": {
-        "delta": -0.0016,
-        "curr_weight": 0.0252,
-        "prev_weight": 0.0268
+      "AVEM": {
+        "delta": 0.001,
+        "curr_weight": 0.0202,
+        "prev_weight": 0.0192
       },
-      "ZROZ": {
-        "delta": -0.0008,
-        "curr_weight": -0.0243,
-        "prev_weight": -0.0235
+      "KSS": {
+        "delta": -0.0006,
+        "curr_weight": -0.0111,
+        "prev_weight": -0.0105
       },
-      "DDS": {
+      "KLAC": {
+        "delta": 0.0005,
+        "curr_weight": 0.0109,
+        "prev_weight": 0.0104
+      },
+      "SLX": {
+        "delta": 0.0188,
+        "curr_weight": 0.0546,
+        "prev_weight": 0.0358
+      },
+      "CZR": {
+        "delta": 0.0006,
+        "curr_weight": 0.0156,
+        "prev_weight": 0.015
+      },
+      "CAVA": {
+        "delta": -0.0086,
+        "curr_weight": 0.0041,
+        "prev_weight": 0.0127
+      },
+      "MPC": {
         "delta": -0.0007,
-        "curr_weight": -0.0082,
-        "prev_weight": -0.0075
+        "curr_weight": 0.0148,
+        "prev_weight": 0.0155
       },
-      "JETS": {
-        "delta": -0.0011,
-        "curr_weight": -0.011,
+      "STX": {
+        "delta": 0.0015,
+        "curr_weight": 0.0117,
+        "prev_weight": 0.0102
+      },
+      "UUP": {
+        "delta": 0.0143,
+        "curr_weight": 0.0697,
+        "prev_weight": 0.0554
+      },
+      "XYZ": {
+        "delta": -0.0098,
+        "curr_weight": 0.0102,
+        "prev_weight": 0.02
+      },
+      "AFRM": {
+        "delta": 0.0007,
+        "curr_weight": 0.0158,
+        "prev_weight": 0.0151
+      },
+      "GLASF": {
+        "delta": 0.0014,
+        "curr_weight": 0.0168,
+        "prev_weight": 0.0154
+      },
+      "XTL": {
+        "delta": 0.0116,
+        "curr_weight": 0.0718,
+        "prev_weight": 0.0602
+      },
+      "HBM": {
+        "delta": 0.0012,
+        "curr_weight": 0.016,
+        "prev_weight": 0.0148
+      },
+      "IDMO": {
+        "delta": 0.0036,
+        "curr_weight": 0.0187,
+        "prev_weight": 0.0151
+      },
+      "IDX": {
+        "delta": 0.0005,
+        "curr_weight": -0.0094,
         "prev_weight": -0.0099
       },
-      "VTI": {
-        "delta": 0.0015,
-        "curr_weight": 0.0911,
-        "prev_weight": 0.0896
+      "CDNS": {
+        "delta": 0.0009,
+        "curr_weight": 0.0153,
+        "prev_weight": 0.0144
+      },
+      "PICK": {
+        "delta": -0.0049,
+        "curr_weight": 0.0069,
+        "prev_weight": 0.0118
       },
       "CRCL": {
         "delta": 0.0042,
         "curr_weight": 0.0201,
         "prev_weight": 0.0159
       },
-      "TTWO": {
-        "delta": -0.0066,
-        "curr_weight": 0.0158,
-        "prev_weight": 0.0224
+      "IHF": {
+        "delta": -0.0212,
+        "curr_weight": 0.0256,
+        "prev_weight": 0.0468
       },
-      "CERY": {
-        "delta": -0.004,
-        "curr_weight": 0.1366,
-        "prev_weight": 0.1406
-      },
-      "EWY": {
-        "delta": 0.0012,
-        "curr_weight": 0.0126,
-        "prev_weight": 0.0114
-      },
-      "SXT": {
-        "delta": 0.0007,
-        "curr_weight": 0.0227,
-        "prev_weight": 0.022
-      },
-      "URI": {
-        "delta": 0.0014,
-        "curr_weight": 0.0262,
-        "prev_weight": 0.0248
-      },
-      "VIK": {
-        "delta": 0.0022,
-        "curr_weight": 0.0226,
-        "prev_weight": 0.0204
+      "DDS": {
+        "delta": -0.0007,
+        "curr_weight": -0.0082,
+        "prev_weight": -0.0075
       },
       "NOV": {
         "delta": -0.0009,
         "curr_weight": 0.0187,
         "prev_weight": 0.0196
       },
-      "VLO": {
-        "delta": -0.0008,
-        "curr_weight": 0.0115,
-        "prev_weight": 0.0123
+      "HTEC": {
+        "delta": 0.0024,
+        "curr_weight": 0.01,
+        "prev_weight": 0.0076
       },
-      "CBOE": {
-        "delta": -0.0011,
-        "curr_weight": 0.0214,
-        "prev_weight": 0.0225
+      "GOOGL": {
+        "delta": -0.0009,
+        "curr_weight": 0.0803,
+        "prev_weight": 0.0812
       },
-      "AMZN": {
-        "delta": 0.0009,
-        "curr_weight": 0.0608,
-        "prev_weight": 0.0599
+      "WDC": {
+        "delta": 0.0027,
+        "curr_weight": 0.0203,
+        "prev_weight": 0.0176
       },
-      "FITE": {
-        "delta": 0.0015,
-        "curr_weight": 0.0221,
-        "prev_weight": 0.0206
+      "CAT": {
+        "delta": 0.0008,
+        "curr_weight": 0.021,
+        "prev_weight": 0.0202
       },
-      "ATI": {
-        "delta": 0.001,
-        "curr_weight": 0.0116,
-        "prev_weight": 0.0106
+      "LUV": {
+        "delta": -0.0009,
+        "curr_weight": -0.0108,
+        "prev_weight": -0.0099
       },
-      "AAPL": {
-        "delta": 0.0016,
-        "curr_weight": 0.092,
-        "prev_weight": 0.0904
-      },
-      "AMAT": {
-        "delta": 0.0013,
-        "curr_weight": 0.0273,
-        "prev_weight": 0.026
-      },
-      "MRVL": {
-        "delta": 0.1269,
-        "curr_weight": 0.1446,
-        "prev_weight": 0.0177
-      },
-      "DBB": {
-        "delta": 0.0068,
-        "curr_weight": 0.0298,
-        "prev_weight": 0.023
+      "DRAM": {
+        "delta": 0.0055,
+        "curr_weight": 0.0357,
+        "prev_weight": 0.0302
       },
       "PLAY": {
         "delta": -0.0017,
         "curr_weight": -0.011,
         "prev_weight": -0.0093
       },
-      "AMD": {
-        "delta": 0.0019,
-        "curr_weight": 0.0223,
-        "prev_weight": 0.0204
+      "ADI": {
+        "delta": 0.005,
+        "curr_weight": 0.0221,
+        "prev_weight": 0.0171
       },
-      "ITB": {
-        "delta": -0.0008,
-        "curr_weight": -0.0214,
-        "prev_weight": -0.0206
-      },
-      "LUV": {
-        "delta": -0.0009,
-        "curr_weight": -0.0108,
+      "JETS": {
+        "delta": -0.0011,
+        "curr_weight": -0.011,
         "prev_weight": -0.0099
+      },
+      "CBOE": {
+        "delta": -0.0011,
+        "curr_weight": 0.0214,
+        "prev_weight": 0.0225
       }
     },
     "per_fund_daily_adds": {

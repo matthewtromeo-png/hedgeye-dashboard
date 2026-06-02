@@ -37,8 +37,14 @@ def safe_read_ctx(write_path, fallback_path):
 DATA_DIR    = REPO_DATA_DIR
 MCJ_PATH    = os.path.join(DATA_DIR, 'macro_context.json')
 PS_FOLDER   = r'C:\Users\matth\OneDrive\Desktop\Trading\hedgeye\Portfolio solutions'
-# Linux mount path (for sandbox):
-PS_FOLDER_LINUX = '/sessions/pensive-sharp-lovelace/mnt/Trading/hedgeye/Portfolio solutions'
+# Linux mount path (for sandbox): derive from session mount dynamically so it survives session restarts.
+# Looks for any /sessions/*/mnt/Trading path that exists at runtime.
+def _find_linux_ps_folder():
+    import glob as _glob
+    for p in _glob.glob('/sessions/*/mnt/Trading/hedgeye/Portfolio solutions'):
+        return p
+    return None
+PS_FOLDER_LINUX = _find_linux_ps_folder()
 
 # ── ETF Pro table — from current Portfolio Solutions visual ───────────────────
 # Updated daily from the PDF table. rank=current ETF Pro rank.
@@ -178,7 +184,7 @@ def main():
     print("Parsing Portfolio Solutions commentary...")
 
     # Detect correct folder path
-    folder = PS_FOLDER_LINUX if os.path.exists(PS_FOLDER_LINUX) else PS_FOLDER
+    folder = PS_FOLDER_LINUX if PS_FOLDER_LINUX and os.path.exists(PS_FOLDER_LINUX) else PS_FOLDER
     all_moves = extract_from_pdfs(folder)
 
     # Seed pre-history positions (entered before first PDF ~2026-04-08)

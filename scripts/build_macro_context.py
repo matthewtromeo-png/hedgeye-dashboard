@@ -36,6 +36,13 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+# Safe console output — handles Unicode filenames (arrows, bullets, etc.) on Windows cp1252
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 try:
     import openpyxl
 except ImportError:
@@ -101,7 +108,7 @@ def iso_date(v) -> str:
 # ── ETF PRO ───────────────────────────────────────────────────────────────────
 
 def read_etf_pro() -> dict:
-    print("\n── ETF Pro ──")
+    print("\n--- ETF Pro ---")
     path = newest_file(HEDGEYE_BASE / "etf pro dash board", "etf-pro-all-active-tickers-*.xlsx")
     if not path:
         warn("etf pro: no file found")
@@ -194,7 +201,7 @@ def read_etf_pro() -> dict:
 # ── HAM HOLDINGS ─────────────────────────────────────────────────────────────
 
 def read_ham_holdings() -> dict:
-    print("\n── HAM Holdings ──")
+    print("\n--- HAM Holdings ---")
     path = newest_file(HEDGEYE_BASE / "HAM holdings", "ETF_Holdings*.csv")
     if not path:
         warn("HAM holdings: no file found")
@@ -287,7 +294,7 @@ def _parse_date(raw: str) -> date | None:
 
 
 def read_rta_trades() -> dict:
-    print("\n── RTA ──")
+    print("\n--- RTA ---")
     path = newest_file(HEDGEYE_BASE / "RTA", "real-time-alerts-history-*.csv")
     if not path:
         warn("RTA: no file found")
@@ -846,7 +853,7 @@ def _split_pdf_pages(pdf_path: Path, chunk_size: int = 50) -> list[Path]:
         tmp = Path(tempfile.mktemp(suffix=f'_{pdf_path.stem}_p{start+1}-{end}.pdf'))
         with open(tmp, 'wb') as fh:
             writer.write(fh)
-        print(f"  [split] pages {start+1}–{end} → {tmp.name}")
+        print(f"  [split] pages {start+1}-{end} -> {tmp.name}")
         chunks.append(tmp)
 
     return chunks
@@ -1016,7 +1023,7 @@ def _merge_macro_research(results: list[dict]) -> dict:
 
 def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
     """Stage 2: extract structured data from PDFs via Claude API, with per-source caching."""
-    print("\n── PDF Extraction (Stage 2) ──")
+    print("\n--- PDF Extraction (Stage 2) ---")
 
     api_key = os.environ.get('ANTHROPIC_API_KEY')
     if not api_key:
@@ -1282,12 +1289,19 @@ def main():
     output["sss_history"] = sss_history
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_PATH, 'w', encoding='utf-8') as fh:
+    # Atomic write: write to a sibling temp file then rename so we never leave
+    # a partially-written or null-padded file (happens on OneDrive when new content
+    # is shorter than the previous file and the OS does not truncate on open).
+    _tmp = OUTPUT_PATH.with_suffix('.tmp')
+    with open(_tmp, 'w', encoding='utf-8') as fh:
         json.dump(output, fh, indent=2, ensure_ascii=False)
+        fh.flush()
+        os.fsync(fh.fileno())
+    _tmp.replace(OUTPUT_PATH)
 
     rta_data = output.get('rta', {})
     pdf_data  = output.get('pdf', {})
-    print(f"\n── Summary ──")
+    print(f"\n--- Summary ---")
     print(f"  etf_rerank:              {len(output.get('etf_rerank', []))} tickers")
     print(f"  active_longs/shorts:     {len(output.get('active_longs', []))} / {len(output.get('active_shorts', []))}")
     print(f"  ham_holdings:            {len(output.get('ham_holdings', []))} tickers")
