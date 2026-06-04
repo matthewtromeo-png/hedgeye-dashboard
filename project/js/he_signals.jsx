@@ -870,6 +870,60 @@ const VolTab = ({quad, macroCtx}) => {
         );
       })()}
 
+      {/* ── Macro Show Charts: Key $USD Correlations + Implied & Realized Vol ── */}
+      {(() => {
+        const manifest = macroCtx?.chart_manifest;
+        const charts = [
+          {key:'usd_corr', label:'Key $USD Correlations',    src:'assets/generated/macro_show_usd_corr.png'},
+          {key:'ivol',     label:'Implied & Realized Volatility', src:'assets/generated/macro_show_ivol.png'},
+        ];
+        const anyChart = charts.some(c => manifest?.charts?.[c.key]?.status === 'ok');
+        if (!anyChart && !manifest) return null;
+        return (
+          <div style={{marginBottom:12}}>
+            <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
+              {charts.map(({key, label, src}) => {
+                const info = manifest?.charts?.[key];
+                const available = info?.status === 'ok';
+                return (
+                  <div key={key} style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'16px 20px'}}>
+                    <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
+                      <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
+                        textTransform:'uppercase',letterSpacing:'0.12em',color:'#7A7770'}}>{label}</div>
+                      {available && manifest?.source_pdf && (
+                        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+                          {manifest.source_pdf.replace(/^HE_TMS_/,'').replace(/\.pdf$/,'')} · p.{info.page}
+                        </span>
+                      )}
+                    </div>
+                    {available ? (
+                      <img src={src} alt={label}
+                        onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }}
+                        style={{width:'100%',borderRadius:4,display:'block'}} />
+                    ) : null}
+                    <div style={{display: available ? 'none' : 'flex', height:120,
+                      alignItems:'center',justifyContent:'center',
+                      fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#C8C5BE',
+                      background:'#F9F8F5',borderRadius:4,flexDirection:'column',gap:6}}>
+                      <span>Unavailable from source</span>
+                      {info?.status && info.status !== 'ok' && (
+                        <span style={{fontSize:8,color:'#C8C5BE'}}>{info.status}</span>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            {manifest && (
+              <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                marginTop:6,paddingLeft:2}}>
+                Extracted {manifest.extracted_at} from {manifest.source_pdf}
+              </div>
+            )}
+          </div>
+        );
+      })()}
+
       {/* ── Quad Vol Playbook ── */}
       <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:20,marginBottom:12}}>
         <SectionTitle mono>Vol Expectations by Quad</SectionTitle>

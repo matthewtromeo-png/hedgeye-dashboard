@@ -1,10 +1,19 @@
 # update_cowork.ps1
 # -----------------------------------------------------------------------------
-# Hedgeye Dashboard deploy script.
+# Hedgeye Dashboard deploy controller.
+#
+# !! ALWAYS RUN FROM THE REPO, NOT FROM ONEDRIVE !!
+#
+#   cd C:\repos\hedgeye-dashboard
+#   .\update_cowork.ps1 [flags]
+#
+# Running from OneDrive risks executing a stale copy of this script that does
+# not have the latest changes. The repo copy is kept in sync by Block 3 of
+# this script (self-sync), but the source of truth for EXECUTION is C:\repos.
 #
 # USAGE:
 #   .\update_cowork.ps1                      -- validate + sync + commit/push
-#   .\update_cowork.ps1 -Research            -- run research parsers + deploy
+#   .\update_cowork.ps1 -Research            -- run research parsers (R1-R6) + deploy
 #   .\update_cowork.ps1 -Dashboard           -- regenerate Risk Range + deploy
 #   .\update_cowork.ps1 -Research -Dashboard -- full refresh
 #   .\update_cowork.ps1 -Research -NoPush    -- dry run: parsers + validation only
@@ -12,10 +21,22 @@
 # -NoPush skips ALL git operations: no add, no commit, no push.
 #
 # ARCHITECTURE:
-#   Source files (OneDrive) : C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\
-#   Git repo (local only)   : C:\repos\hedgeye-dashboard\
+#   Execution root          : C:\repos\hedgeye-dashboard\                  (run from here)
+#   Source/edit mirror      : C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\
+#   Deploy output paths     : C:\repos\hedgeye-dashboard\project\data\
+#                             C:\repos\hedgeye-dashboard\project\assets\
+#                             C:\repos\hedgeye-dashboard\project\risk_range_dashboard.html
+#
+#   Rule: ALL generated output goes to C:\repos. Scripts must use hardcoded
+#   C:\repos paths, never __file__-relative paths (those write to wherever
+#   the script lives, which may be OneDrive).
+#
+#   Exception: build_macro_context.py (R1) writes to its own folder (OneDrive)
+#   first, then this script explicitly copies macro_context.json into the repo
+#   before R2-R4 run. That explicit copy is the contract -- see R1 block.
+#
+#   Validation reads ONLY from C:\repos -- that is what gets committed/deployed.
 #   OneDrive must NOT contain the git repo -- it corrupts git objects.
-#   All parser scripts write directly to C:\repos\hedgeye-dashboard\project\data\
 # -----------------------------------------------------------------------------
 
 param(
@@ -232,6 +253,17 @@ if ($Research) {
         Write-Host "  [WARN] No RTA CSV found at $RtaGlob" -ForegroundColor Yellow
     }
 
+    # R6: extract_macro_show_charts.py -- extract chart images from newest Macro Show PDF
+    $ChartScript = "$ScriptsDir\extract_macro_show_charts.py"
+    if (Test-Path $ChartScript) {
+        Write-Host '==> [R6] extract_macro_show_charts.py...' -ForegroundColor Cyan
+        $rc = Run-PythonScript -ScriptPath $ChartScript -Label 'extract_macro_show_charts.py' -FilterFontBBox
+        if ($rc -eq 0) { Write-Host '    Macro Show chart images extracted' -ForegroundColor DarkGray }
+        else           { Write-Host '  [WARN] Chart extraction failed -- charts will show Unavailable' -ForegroundColor Yellow }
+    } else {
+        Write-Host '  [WARN] extract_macro_show_charts.py not found' -ForegroundColor Yellow
+    }
+
     Write-Host '==> [RESEARCH] Pipeline complete.' -ForegroundColor Green
 }
 
@@ -319,6 +351,22 @@ foreach ($f in $jsFiles) {
     }
 }
 
+# Chart assets: extract_macro_show_charts.py (R6) writes directly to C:\repos.
+# Just ensure the directory exists and report what's present.
+$RepoAssetsDir = "$RepoJsDir\assets\generated"
+if (-not (Test-Path $RepoAssetsDir)) {
+    New-Item -ItemType Directory -Path $RepoAssetsDir -Force | Out-Null
+}
+$chartPngs = Get-ChildItem "$RepoAssetsDir\*.png" -ErrorAction SilentlyContinue
+if ($chartPngs) {
+    foreach ($cp in $chartPngs) {
+        Write-Host "    Chart asset present: assets/generated/$($cp.Name)" -ForegroundColor DarkGray
+    }
+} else {
+    Write-Host "    (no chart assets yet -- R6 will create them on -Research run)" -ForegroundColor DarkGray
+}
+# chart_manifest.json also goes directly to C:\repos\project\data via R6 -- no copy needed.
+
 # Sync update_cowork.ps1 itself -- keeps repo copy in sync with OneDrive source
 $selfSrc = 'C:\Users\matth\OneDrive\Desktop\Trading\hedgeye-dashboard\update_cowork.ps1'
 if (Test-Path $selfSrc) {
@@ -329,7 +377,7 @@ if (Test-Path $selfSrc) {
 # Sync pipeline scripts to repo
 $destScripts = "$RepoDir\scripts"
 if (-not (Test-Path $destScripts)) { New-Item -ItemType Directory -Path $destScripts | Out-Null }
-foreach ($script in @('build_macro_context.py', 'parse_position_sizing.py', 'process_ham.py', 'process_sss.py', 'validate_pipeline.py')) {
+foreach ($script in @('build_macro_context.py', 'parse_position_sizing.py', 'process_ham.py', 'process_sss.py', 'validate_pipeline.py', 'extract_macro_show_charts.py')) {
     if (Test-Path "$ScriptsDir\$script") {
         Copy-Item -Path "$ScriptsDir\$script" -Destination "$destScripts\$script" -Force
         Write-Host "    Copied: scripts\$script" -ForegroundColor DarkGray
@@ -348,23 +396,34 @@ if (Test-Path $hamCsv) {
     Write-Host '    Copied: ham_holdings_latest.csv' -ForegroundColor DarkGray
 }
 
-# official_levels_NEW_*.json: only process during -Dashboard run.
-# These are Risk Range level exports and belong in the Dashboard pipeline,
-# not the Research pipeline.
+# official_levels_NEW_*.json: legacy manual-export fallback.
+# When -Dashboard is set, import_official_levels.py (D2) has already written a
+# fresh official_levels.json from the current Excel workbook -- do NOT override it.
+# When -Dashboard is NOT set, apply the NEW file only if it is strictly newer
+# than the current repo copy (prevents stale exports from silently replacing good data).
 if ($Dashboard) {
+    Write-Host '    official_levels.json: generated by D2 (import_official_levels.py) -- NEW file fallback skipped' -ForegroundColor DarkGray
+} else {
     $TradingDir     = 'C:\Users\matth\OneDrive\Desktop\Trading'
     $NewLevelsFiles = Get-ChildItem "$TradingDir\official_levels_NEW_*.json" -ErrorAction SilentlyContinue |
                       Sort-Object LastWriteTime -Descending
+    $olRepoPath     = "$RepoDataDir\official_levels.json"
     if ($NewLevelsFiles) {
         $newest = $NewLevelsFiles[0]
-        Write-Host "==> New levels file found: $($newest.Name)" -ForegroundColor Cyan
-        Copy-Item -Path $newest.FullName -Destination "$RepoDataDir\official_levels.json" -Force
-        Copy-Item -Path $newest.FullName -Destination "$SourceDataDir\official_levels.json" -Force
-        Write-Host "    official_levels.json updated from $($newest.Name)" -ForegroundColor DarkGray
+        $repoExists = Test-Path $olRepoPath
+        $newerThanRepo = (-not $repoExists) -or ($newest.LastWriteTime -gt (Get-Item $olRepoPath).LastWriteTime)
+        if ($newerThanRepo) {
+            Write-Host "==> New levels file found and is newer: $($newest.Name)" -ForegroundColor Cyan
+            Copy-Item -Path $newest.FullName -Destination $olRepoPath -Force
+            Copy-Item -Path $newest.FullName -Destination "$SourceDataDir\official_levels.json" -Force
+            Write-Host "    official_levels.json updated from $($newest.Name)" -ForegroundColor DarkGray
+        } else {
+            Write-Host "    official_levels_NEW file ($($newest.Name)) is not newer than repo copy -- skipping" -ForegroundColor DarkGray
+        }
     } else {
         $olSrc = "$SourceDataDir\official_levels.json"
-        if ((Test-Path $olSrc) -and (-not (Test-Path "$RepoDataDir\official_levels.json"))) {
-            Copy-Item -Path $olSrc -Destination "$RepoDataDir\official_levels.json" -Force
+        if ((Test-Path $olSrc) -and (-not (Test-Path $olRepoPath))) {
+            Copy-Item -Path $olSrc -Destination $olRepoPath -Force
             Write-Host '    Copied: official_levels.json (repo was missing)' -ForegroundColor DarkGray
         }
     }

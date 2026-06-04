@@ -521,31 +521,45 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
                   textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>MSR — {msrData.title || 'Market Situation'}</span>
                 <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>{msrData.date}</span>
               </div>
-              {msrData.pv_band_resistance && (
-                <div style={{display:'flex',gap:16,marginBottom:8}}>
-                  <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+              {(msrData.resistance || msrData.support) && (
+                <div style={{display:'flex',gap:16,marginBottom:8,flexWrap:'wrap'}}>
+                  {msrData.resistance && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
                     <div style={{fontSize:8,color:'#C8302A',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Resistance</div>
-                    <div style={{fontSize:15,fontWeight:700,color:'#C8302A'}}>{msrData.pv_band_resistance}</div>
-                  </div>
-                  <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:15,fontWeight:700,color:'#C8302A'}}>{msrData.resistance}</div>
+                  </div>}
+                  {msrData.support && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
                     <div style={{fontSize:8,color:'#27500A',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Support</div>
-                    <div style={{fontSize:15,fontWeight:700,color:'#27500A'}}>{msrData.pv_band_support}</div>
-                  </div>
+                    <div style={{fontSize:15,fontWeight:700,color:'#27500A'}}>{msrData.support}</div>
+                  </div>}
                   {msrData.gamma_exposure && (
                     <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
                       <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Gamma</div>
                       <div style={{fontSize:12,fontWeight:600,color:'#1A4D8F'}}>{msrData.gamma_exposure}</div>
                     </div>
                   )}
+                  {msrData.gex_flip && (
+                    <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                      <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>GEX Flip</div>
+                      <div style={{fontSize:12,fontWeight:600,color:'#B8860B'}}>{msrData.gex_flip}</div>
+                    </div>
+                  )}
                 </div>
               )}
-              {(msrData.key_points||[]).slice(0,3).map((pt,i) => (
-                <div key={i} style={{display:'flex',gap:5,marginBottom:4,alignItems:'flex-start'}}>
-                  <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#B8860B',
-                    marginTop:2,flexShrink:0}}>›</span>
-                  <span style={{fontSize:10,color:'#555',lineHeight:1.45}}>{pt}</span>
+              {msrData.pv_band && (
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',marginBottom:5}}>
+                  <span style={{fontWeight:600,color:'#7A7770',textTransform:'uppercase',fontSize:8,letterSpacing:'0.06em',marginRight:6}}>PV Band</span>{msrData.pv_band}
                 </div>
-              ))}
+              )}
+              {msrData.systematic_flow && (
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',marginBottom:4}}>
+                  <span style={{fontWeight:600,color:'#7A7770',textTransform:'uppercase',fontSize:8,letterSpacing:'0.06em',marginRight:6}}>Systematic</span>{msrData.systematic_flow}
+                </div>
+              )}
+              {msrData.strategic_allocation && (
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',marginBottom:4}}>
+                  <span style={{fontWeight:600,color:'#7A7770',textTransform:'uppercase',fontSize:8,letterSpacing:'0.06em',marginRight:6}}>Allocation</span>{msrData.strategic_allocation}
+                </div>
+              )}
             </div>
           )}
           {momoData && (

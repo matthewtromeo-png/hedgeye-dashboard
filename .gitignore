@@ -27,3 +27,6 @@ desktop.ini
 
 # Git lock (should never be committed but just in case)
 *.lock
+
+project/data/backups/
+

@@ -32,6 +32,8 @@ MACRO_CTX        = os.path.join(REPO_DATA, "macro_context.json")
 OFFICIAL_LEVELS  = os.path.join(REPO_DATA, "official_levels.json")
 RR_HTML          = r"C:\repos\hedgeye-dashboard\project\risk_range_dashboard.html"
 RTA_DEST         = os.path.join(REPO_DATA, "rta_latest.csv")
+CHART_MANIFEST   = os.path.join(REPO_DATA, "chart_manifest.json")
+CHART_ASSETS_DIR = r"C:\repos\hedgeye-dashboard\project\assets\generated"
 
 HE_ROOT          = r"C:\Users\matth\OneDrive\Desktop\Trading\hedgeye"
 RTA_SRC_GLOB     = os.path.join(HE_ROOT, "RTA", "real-time-alerts-history-*.csv")
@@ -337,6 +339,31 @@ def tier1_checks(ctx):
     else:
         ok(f"generated_at = {gen_at}")
 
+    # 11. Chart manifest + assets (only warn, not fail — R6 is non-fatal)
+    if os.path.exists(CHART_MANIFEST):
+        try:
+            with open(CHART_MANIFEST, "r", encoding="utf-8") as f:
+                manifest = json.load(f)
+            charts = manifest.get("charts", {})
+            source_pdf = manifest.get("source_pdf", "?")
+            extracted_at = manifest.get("extracted_at", "?")
+            for key, info in charts.items():
+                status = info.get("status")
+                page   = info.get("page")
+                if status == "ok":
+                    asset_path = os.path.join(CHART_ASSETS_DIR, f"macro_show_{key}.png")
+                    if os.path.exists(asset_path):
+                        size_kb = info.get("size_kb", "?")
+                        ok(f"chart:{key}  p.{page}  {size_kb} KB  source={source_pdf}  extracted={extracted_at}")
+                    else:
+                        warn(f"chart:{key}  manifest says OK but asset file missing: {asset_path}")
+                else:
+                    warn(f"chart:{key}  status={status}  (chart will show 'Unavailable from source')")
+        except Exception as e:
+            warn(f"chart_manifest.json read error: {e}")
+    else:
+        warn("chart_manifest.json not found — run with -Research to extract Macro Show charts (R6)")
+
 # ---------------------------------------------------------------------------
 # Tier 2: Freshness checks (run with --research or --dashboard)
 # ---------------------------------------------------------------------------
@@ -487,6 +514,18 @@ def print_deploy_report(ctx):
 
     warn_count = len(warnings)
 
+    # Chart assets summary
+    chart_summary = "-"
+    if os.path.exists(CHART_MANIFEST):
+        try:
+            with open(CHART_MANIFEST, "r", encoding="utf-8") as f:
+                m = json.load(f)
+            ok_charts = [k for k,v in m.get("charts",{}).items() if v.get("status")=="ok"]
+            pages = {k: m["charts"][k].get("page") for k in ok_charts}
+            chart_summary = f"{len(ok_charts)}/2 extracted  " + "  ".join(f"{k}=p{p}" for k,p in pages.items()) + f"  source={m.get('source_pdf','?')}"
+        except Exception:
+            chart_summary = "manifest unreadable"
+
     print()
     print(f"=== DEPLOY REPORT [{now}] " + "=" * 20)
     print(f"  macro_context.json   generated={gen_at}   size={macro_kb} KB")
@@ -496,6 +535,7 @@ def print_deploy_report(ctx):
     print(f"  sss                  {sss_count} tickers")
     print(f"  etf_pro              {etf_long} longs / {etf_short} shorts")
     print(f"  Risk Range HTML      {rr_status}")
+    print(f"  Macro Show charts    {chart_summary}")
     print(f"  Warnings             {warn_count}")
     print(f"  Validation           PASSED")
     print("=" * 46)
