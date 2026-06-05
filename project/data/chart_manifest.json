@@ -1,17 +1,17 @@
 {
-  "source_pdf": "HE_TMS_RPK_RR_6.4.2026.pdf",
-  "extracted_at": "2026-06-04",
+  "source_pdf": "HE_TMS_JS_MC_6.5.2026.pdf",
+  "extracted_at": "2026-06-05",
   "charts": {
     "usd_corr": {
       "status": "ok",
-      "page": 38,
-      "size_kb": 48,
+      "page": 18,
+      "size_kb": 678,
       "label": "Key $USD Correlations"
     },
     "ivol": {
       "status": "ok",
-      "page": 42,
-      "size_kb": 543,
+      "page": 22,
+      "size_kb": 596,
       "label": "Implied & Realized Volatility"
     }
   }
