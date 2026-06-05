@@ -350,8 +350,17 @@ const VolTab = ({quad, macroCtx}) => {
   const [vixStatus,setVixStatus]= React.useState('loading');
   const [rv1, setRv1] = React.useState('');
   const [rv3, setRv3] = React.useState('');
+  const [chartManifest, setChartManifest] = React.useState(null);
   const q = window.HE.QUADS[quad] || window.HE.QUADS.Q3;
   const vixRange = macroCtx?.levels?.VIX || null;
+
+  // Fetch chart_manifest.json (separate file, not in macro_context.json)
+  React.useEffect(() => {
+    fetch('./data/chart_manifest.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d) setChartManifest(d); })
+      .catch(() => {});
+  }, []);
 
   React.useEffect(() => {
     fetch(window.HE.apiUrl.yfQuote(['^VIX', '^VIX3M', '^VIX9M']),
@@ -872,13 +881,12 @@ const VolTab = ({quad, macroCtx}) => {
 
       {/* ── Macro Show Charts: Key $USD Correlations + Implied & Realized Vol ── */}
       {(() => {
-        const manifest = macroCtx?.chart_manifest;
+        const manifest = chartManifest;   // fetched from ./data/chart_manifest.json
         const charts = [
-          {key:'usd_corr', label:'Key $USD Correlations',    src:'assets/generated/macro_show_usd_corr.png'},
-          {key:'ivol',     label:'Implied & Realized Volatility', src:'assets/generated/macro_show_ivol.png'},
+          {key:'usd_corr', label:'Key $USD Correlations',    src:'./assets/generated/macro_show_usd_corr.png'},
+          {key:'ivol',     label:'Implied & Realized Volatility', src:'./assets/generated/macro_show_ivol.png'},
         ];
-        const anyChart = charts.some(c => manifest?.charts?.[c.key]?.status === 'ok');
-        if (!anyChart && !manifest) return null;
+        // Always render the cards — show "Unavailable" placeholder until manifest loads
         return (
           <div style={{marginBottom:12}}>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
