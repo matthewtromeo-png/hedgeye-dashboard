@@ -880,44 +880,84 @@ const VolTab = ({quad, macroCtx}) => {
       })()}
 
       {/* ── Macro Show Charts: Key $USD Correlations + Implied & Realized Vol ── */}
+      {/* NOTE: Both slides are fully rasterized — no text layer exists in the PDF.    */}
+      {/* Table data cannot be extracted without OCR. Images are shown at full width.  */}
       {(() => {
         const manifest = chartManifest;   // fetched from ./data/chart_manifest.json
         const charts = [
           {key:'usd_corr', label:'Key $USD Correlations',    src:'./assets/generated/macro_show_usd_corr.png'},
           {key:'ivol',     label:'Implied & Realized Volatility', src:'./assets/generated/macro_show_ivol.png'},
         ];
-        // Always render the cards — show "Unavailable" placeholder until manifest loads
+        // Compute natural aspect-ratio height from manifest dimensions (fallback: auto)
+        const cardHeight = (key) => {
+          const info = manifest?.charts?.[key];
+          if (!info?.width_px || !info?.height_px) return 'auto';
+          // Clamp: usd_corr is wide/short, ivol is tall — cap both to reasonable heights
+          const ratio = info.height_px / info.width_px;
+          return `calc(100vw * ${(ratio * 0.45).toFixed(3)})`;  // approximate card width
+        };
         return (
           <div style={{marginBottom:12}}>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
               {charts.map(({key, label, src}) => {
                 const info = manifest?.charts?.[key];
                 const available = info?.status === 'ok';
+                const pdfLabel = manifest?.source_pdf
+                  ? manifest.source_pdf.replace(/^HE_TMS_/,'').replace(/\.pdf$/,'')
+                  : null;
                 return (
-                  <div key={key} style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'16px 20px'}}>
-                    <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
+                  <div key={key} style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 16px'}}>
+                    {/* Header: label + source + open-full-size link */}
+                    <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
                       <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
                         textTransform:'uppercase',letterSpacing:'0.12em',color:'#7A7770'}}>{label}</div>
-                      {available && manifest?.source_pdf && (
-                        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
-                          {manifest.source_pdf.replace(/^HE_TMS_/,'').replace(/\.pdf$/,'')} · p.{info.page}
-                        </span>
-                      )}
+                      <div style={{display:'flex',gap:10,alignItems:'center'}}>
+                        {available && pdfLabel && (
+                          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+                            {pdfLabel} · p.{info.page}
+                          </span>
+                        )}
+                        {available && (
+                          <a href={src} target="_blank" rel="noopener noreferrer"
+                            style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,
+                              color:'#1A4D8F',textDecoration:'none',whiteSpace:'nowrap'}}>
+                            ↗ full size
+                          </a>
+                        )}
+                      </div>
                     </div>
+                    {/* Image — rendered at full card width; aspect ratio from manifest */}
                     {available ? (
-                      <img src={src} alt={label}
-                        onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='flex'; }}
-                        style={{width:'100%',borderRadius:4,display:'block'}} />
+                      <a href={src} target="_blank" rel="noopener noreferrer" style={{display:'block'}}>
+                        <img src={src} alt={label}
+                          onError={e => {
+                            e.currentTarget.parentElement.style.display='none';
+                            e.currentTarget.parentElement.nextSibling.style.display='flex';
+                          }}
+                          style={{
+                            width:'100%', display:'block', borderRadius:4,
+                            cursor:'zoom-in',
+                            border:'1px solid #F0EEE9',
+                          }} />
+                      </a>
                     ) : null}
-                    <div style={{display: available ? 'none' : 'flex', height:120,
-                      alignItems:'center',justifyContent:'center',
+                    {/* Fallback — shown when not available or image fails */}
+                    <div style={{display: available ? 'none' : 'flex',
+                      minHeight:80, alignItems:'center', justifyContent:'center',
                       fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#C8C5BE',
-                      background:'#F9F8F5',borderRadius:4,flexDirection:'column',gap:6}}>
-                      <span>Unavailable from source</span>
+                      background:'#F9F8F5',borderRadius:4,flexDirection:'column',gap:6,padding:16}}>
+                      <span>{manifest === null ? 'Loading…' : 'Unavailable from source'}</span>
                       {info?.status && info.status !== 'ok' && (
                         <span style={{fontSize:8,color:'#C8C5BE'}}>{info.status}</span>
                       )}
                     </div>
+                    {/* Note: slide is image-only, no text extraction without OCR */}
+                    {available && (
+                      <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:7,
+                        color:'#C8C5BE',marginTop:6,lineHeight:1.4}}>
+                        Slide image only · table data requires OCR to extract
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -925,7 +965,7 @@ const VolTab = ({quad, macroCtx}) => {
             {manifest && (
               <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
                 marginTop:6,paddingLeft:2}}>
-                Extracted {manifest.extracted_at} from {manifest.source_pdf}
+                Source: {manifest.source_pdf} · extracted {manifest.extracted_at}
               </div>
             )}
           </div>

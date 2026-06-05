@@ -5,14 +5,20 @@
     "usd_corr": {
       "status": "ok",
       "page": 18,
-      "size_kb": 678,
-      "label": "Key $USD Correlations"
+      "size_kb": 720,
+      "label": "Key $USD Correlations",
+      "width_px": 2640,
+      "height_px": 428,
+      "note": "slide image only \u2014 table data requires OCR"
     },
     "ivol": {
       "status": "ok",
       "page": 22,
       "size_kb": 596,
-      "label": "Implied & Realized Volatility"
+      "label": "Implied & Realized Volatility",
+      "width_px": 2001,
+      "height_px": 1253,
+      "note": "slide image only \u2014 table data requires OCR"
     }
   }
 }

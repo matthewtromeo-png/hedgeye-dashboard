@@ -97,14 +97,39 @@ def _find_pages(pdf_path: Path) -> dict[str, int]:
 
 
 def _extract_largest_image(reader: "PdfReader", pg_idx: int) -> bytes | None:
-    """Extract the largest embedded image from a page (the slide chart PNG)."""
+    """Extract the largest embedded image from a page and return PNG bytes.
+
+    Uses img.image (pypdf PIL wrapper) so the image is always decoded and
+    re-encoded as PNG regardless of the original format embedded in the PDF
+    (PNG, JPEG, JPEG2000/JP2, etc.).  This fixes slides where the chart is
+    stored as JPEG2000, which browsers cannot display.
+    """
+    try:
+        from PIL import Image as PILImage
+        import io as _io
+    except ImportError:
+        print("[ERROR] Pillow not installed. Run: pip install Pillow --break-system-packages")
+        return None
+
     page = reader.pages[pg_idx]
     imgs = list(page.images)
     if not imgs:
         return None
-    # The slide content is always the largest image; logos are tiny
+
+    # Slide chart is always the largest embedded image; logos are tiny
     largest = max(imgs, key=lambda img: len(img.data))
-    return largest.data if len(largest.data) > 10_000 else None   # guard against logo-only page
+    if len(largest.data) <= 10_000:
+        return None   # guard against logo-only page
+
+    # Use .image (PIL Image) to decode and re-encode as PNG
+    pil_img = largest.image
+    if pil_img is None:
+        # Fallback: raw bytes (only works if already PNG)
+        return largest.data if largest.data[:4] == b'\x89PNG' else None
+
+    buf = _io.BytesIO()
+    pil_img.save(buf, format='PNG')
+    return buf.getvalue()
 
 
 # ---------------------------------------------------------------------------
@@ -174,11 +199,22 @@ def main() -> int:
         tmp.replace(out_path)
         size_kb = len(img_data) // 1024
         print(f"  [OK]  {key}: {out_path.name}  ({size_kb} KB  from page {pg_idx + 1})")
+        # Record dimensions for the UI (aspect ratio helps lay out the card)
+        try:
+            from PIL import Image as _PIL
+            import io as _io
+            _im = _PIL.open(_io.BytesIO(img_data))
+            _w, _h = _im.size
+        except Exception:
+            _w, _h = None, None
         manifest["charts"][key] = {
             "status":    "ok",
             "page":      pg_idx + 1,
             "size_kb":   size_kb,
             "label":     cfg["label"],
+            "width_px":  _w,
+            "height_px": _h,
+            "note":      "slide image only — table data requires OCR",
         }
         any_ok = True
 
