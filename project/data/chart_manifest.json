@@ -1,20 +1,20 @@
 {
-  "source_pdf": "HE_TMS_KM_DJ_6.8.2026.pdf",
-  "extracted_at": "2026-06-08",
+  "source_pdf": "HE_TMS_KM_RR_6.11.2026.pdf",
+  "extracted_at": "2026-06-11",
   "charts": {
     "usd_corr": {
       "status": "ok",
-      "page": 23,
-      "size_kb": 48,
+      "page": 21,
+      "size_kb": 47,
       "label": "Key $USD Correlations",
-      "width_px": 959,
+      "width_px": 960,
       "height_px": 147,
       "note": "slide image only \u2014 table data requires OCR"
     },
     "ivol": {
       "status": "ok",
-      "page": 27,
-      "size_kb": 541,
+      "page": 25,
+      "size_kb": 529,
       "label": "Implied & Realized Volatility",
       "width_px": 2001,
       "height_px": 1275,

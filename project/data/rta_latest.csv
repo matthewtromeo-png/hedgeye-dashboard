@@ -1,4 +1,11 @@
 Symbol,Position,Open Date,Open Price,Doubled Date,Doubled Price,Tripled Date,Tripled Price,Close Date,Close Price,Average Cost Basis,Realized Return,Duration
+DPZ,short,2026-06-08 15:03:06 -0400,315.035,,,,,2026-06-11 10:34:56 -0400,311.1,315.035,0.012490699999999999,short-trade & short-trend & short-tail
+DDOG,long,2026-06-08 14:57:16 -0400,231.275,,,,,2026-06-10 09:51:58 -0400,231.51,231.275,0.0010161100000000002,long-trade & long-trend & long-tail
+NCLH,short,2026-05-26 15:32:57 -0400,16.905,2026-06-09 15:38:54 -0400,18.992,,,2026-06-10 09:50:13 -0400,18.705,17.948500000000003,-0.042148399999999996,short-trade & short-trend & short-tail
+WMT,short,2026-06-08 15:07:12 -0400,119.985,,,,,2026-06-09 15:31:29 -0400,118.51,119.985,0.0122932,short-trade & short-trend & short-tail
+SWBI,long,2026-06-02 15:36:37 -0400,15.16,,,,,2026-06-09 15:29:27 -0400,14.9,15.16,-0.0171504,long-trade & long-trend & long-tail
+IWM,long,2026-06-05 10:08:28 -0400,286.54,,,,,2026-06-09 10:06:06 -0400,290.13,286.54,0.0125288,long-trade & long-trend & long-tail
+LAMR,long,2026-06-03 14:54:17 -0400,149.15,,,,,2026-06-04 13:56:33 -0400,150.23,149.15,0.007241030000000001,long-trade & long-trend & long-tail
 ULS,long,2026-06-02 15:39:09 -0400,97.625,,,,,2026-06-03 14:48:01 -0400,99.99,97.625,0.0242254,long-trade & long-trend & long-tail
 WING,short,2026-05-26 15:31:00 -0400,140.52,2026-05-28 15:23:14 -0400,157.598,,,2026-06-02 15:26:32 -0400,151.155,149.05900000000003,-0.014061500000000001,short-trade & short-trend & short-tail
 SBUX,long,2026-05-21 15:19:50 -0400,104.35,2026-06-01 12:50:14 -0400,96.09,,,2026-06-02 12:00:59 -0400,97.66,100.22,-0.025543800000000002,long-trade & long-trend & long-tail
