@@ -51,9 +51,165 @@ def find_latest_sss_pdf():
     return max(pdfs, key=os.path.getmtime)
 
 
+def _ocr_extract_tickers(pdf_path):
+    """
+    OCR fallback: when pdfplumber can't extract the table (image-only PDF),
+    use pypdf + pytesseract to read the embedded slide image and parse rows.
+
+    Returns list of dicts: {ticker, days_on_list, signal_date, entry_price,
+    recent_price, pct_since_entry, sector, analyst, ocr_raw, ocr_uncertain}
+    """
+    try:
+        from pypdf import PdfReader
+        from PIL import Image
+        import pytesseract
+        import io as _io
+    except ImportError as e:
+        print(f"  [WARN] OCR fallback unavailable: {e}")
+        return []
+
+    reader = PdfReader(str(pdf_path))
+    rows = []
+    seen_hashes = set()
+
+    # Row pattern: DAYS  TICKER  DATE  PRICE  PRICE  [rest...]
+    # OCR frequently garbles:
+    #   - days col:   "28" → "2B", "54" → "5t", "34" → "M"
+    #   - dates:      "2/19/2026" → "219/2026", "6/11/2026" → "6112/2026",
+    #                 trailing comma "4/10/2026,"
+    #   - prices:     digit→letter confusion: "44.5" → "aa", "54.0" → "a4"
+    #   - tickers:    mixed-case ("cP","casy"), dropped/swapped chars
+    ROW_RE = re.compile(
+        r'^([\dA-Za-z]{1,3})\s+'               # days (OCR-noisy: "28","2B","5t","M")
+        r'([A-Za-z][A-Za-z0-9./]{0,7}):?\s+'   # ticker + optional trailing colon
+        r'([\d/]{4,12}),?\s+'                  # signal date (relaxed: garbled digits/slashes OK, trailing comma OK)
+        r'([A-Za-z\d,.]+)[,]?\s+'              # entry price (OCR may garble digits as letters: "aa","a4")
+        r'([A-Za-z\d,.]+)'                     # recent price
+    )
+
+    # Known OCR misreads — applied after uppercasing ticker.
+    # These are empirically observed artifacts from SSS PDF image OCR.
+    # Key = garbled OCR result (uppercase); Value = correct ticker.
+    OCR_CORRECTIONS = {
+        'CZ':   'CZR',
+        'ESX':  'CSX',
+        'POS':  'DDOG',
+        'TX':   'TXG',
+        'OT':   'DT',
+        'MOE':  'MDB',
+        'MOM':  'MGM',
+        'HAY':  'HQY',
+        'CRC':  'CFG',
+        'KOP':  'KDP',
+        'SUM':  'SJM',
+        'LV':   'LYV',
+        'GT':   'TGT',
+        'ET':   'TGT',   # OCR variant of GT→TGT (ET is Energy Transfer but doesn't appear on SSS)
+        'BURI': 'BJRI',  # BJ's Restaurants — OCR drops J and misreads J→U
+    }
+
+    for page in reader.pages:
+        for img_obj in page.images:
+            pil = img_obj.image
+            if pil is None or pil.size[0] < 400:   # skip tiny logos
+                continue
+            h = hash(img_obj.data[:512])
+            if h in seen_hashes:
+                continue
+            seen_hashes.add(h)
+
+            # Ensure RGB for tesseract
+            if pil.mode != 'RGB':
+                bg = Image.new('RGB', pil.size, (255, 255, 255))
+                if 'A' in pil.mode:
+                    bg.paste(pil, mask=pil.split()[-1])
+                else:
+                    bg.paste(pil)
+                pil = bg
+
+            ocr_text = pytesseract.image_to_string(pil, config='--psm 6 --oem 1')
+
+            for line in ocr_text.splitlines():
+                line = line.strip()
+                m = ROW_RE.match(line)
+                if not m:
+                    continue
+
+                days_raw   = m.group(1)
+                ticker_raw = m.group(2)
+                date_raw   = m.group(3)
+                ep_raw     = m.group(4)
+                rp_raw     = m.group(5)
+
+                # Normalize ticker: uppercase, strip trailing punctuation
+                ticker = ticker_raw.upper().rstrip('.:,;')
+                # Flag if OCR returned mixed/lower case — likely misread
+                ocr_uncertain = (ticker_raw != ticker_raw.upper()) or (len(ticker) < 2)
+                # Apply known OCR correction map (corrections always flagged as uncertain)
+                if ticker in OCR_CORRECTIONS:
+                    ticker = OCR_CORRECTIONS[ticker]
+                    ocr_uncertain = True
+
+                # Parse signal date
+                signal_date = None
+                for fmt in ['%m/%d/%Y', '%m/%d/%y']:
+                    try:
+                        signal_date = datetime.strptime(date_raw, fmt).strftime('%Y-%m-%d')
+                        break
+                    except ValueError:
+                        pass
+
+                def _pp(s):
+                    try:
+                        return round(float(re.sub(r'[,$%]', '', s.strip())), 2)
+                    except Exception:
+                        return None
+
+                entry  = _pp(ep_raw)
+                recent = _pp(rp_raw)
+                pct = None
+                if entry and recent and entry > 0:
+                    pct = round((recent - entry) / entry * 100, 1)
+
+                # Extract sector/analyst from remainder of line (best-effort)
+                remainder = line[m.end():].strip()
+                sector = analyst = None
+                rem_parts = remainder.split()
+                # Sector is usually 1-3 capitalized words before analyst name
+                if len(rem_parts) >= 2:
+                    # Simple heuristic: sector ends before first name-like word
+                    pct_str = rem_parts[0] if rem_parts else ''
+                    # Skip pct field if present
+                    rest_after_pct = rem_parts[1:] if re.match(r'[\d.]+%?$', pct_str.rstrip('%')) else rem_parts
+                    if rest_after_pct:
+                        sector = rest_after_pct[0] if rest_after_pct else None
+
+                # Extract leading digits from days field (handles "2B"→2, "5t"→5, "M"→None)
+                _dm = re.match(r'(\d+)', days_raw)
+                days_int = int(_dm.group(1)) if _dm else None
+
+                rows.append({
+                    'ticker':           ticker,
+                    'days_on_list':     days_int,
+                    'signal_date':      signal_date,
+                    'entry_price':      entry,
+                    'recent_price':     recent,
+                    'pct_since_entry':  pct,
+                    'sector':           None,    # OCR sector parsing is unreliable; skip
+                    'analyst':          None,
+                    'best_idea_rank':   None,
+                    'ocr_raw':          line[:120],
+                    'ocr_uncertain':    ocr_uncertain,
+                })
+
+    print(f"  OCR extracted: {len(rows)} rows from {pdf_path.rsplit('/', 1)[-1]}")
+    return rows
+
+
 def parse_sss_pdf(pdf_path):
     """
     Extract SSS data from a Hedgeye Signal Strength PDF using pdfplumber.
+    Falls back to OCR when the table is image-only.
     Returns dict with: count, added[], removed[], tickers_detail{}, date_str
     """
     try:
@@ -172,12 +328,57 @@ def parse_sss_pdf(pdf_path):
                     'best_idea_rank':   rank_raw if rank_raw and rank_raw not in ('None','') else None,
                 }
 
+    # ── OCR fallback when table extraction yielded nothing ─────────────
+    extraction_method  = 'text'
+    extraction_warning = None
+    ocr_uncertain_list = []
+
+    if len(tickers_detail) < 10:
+        print("  Text table extraction yielded 0 rows — trying OCR fallback...")
+        try:
+            ocr_rows = _ocr_extract_tickers(pdf_path)
+            if len(ocr_rows) >= 5:
+                for r in ocr_rows:
+                    t = r.pop('ocr_raw',    None)   # don't store raw line
+                    unc = r.pop('ocr_uncertain', False)
+                    ticker = r['ticker']
+                    tickers_detail[ticker] = {k: v for k, v in r.items() if k != 'ticker'}
+                    if unc:
+                        ocr_uncertain_list.append(ticker)
+                extraction_method = 'ocr'
+                if ocr_uncertain_list:
+                    extraction_warning = (
+                        f"Ticker list extracted via OCR — {len(ocr_uncertain_list)} symbol(s) "
+                        f"may be misread: {', '.join(ocr_uncertain_list)}. "
+                        f"Verify against source PDF."
+                    )
+                else:
+                    extraction_warning = "Ticker list extracted via OCR — verify against source PDF if accuracy is critical."
+                print(f"  OCR fallback produced {len(tickers_detail)} tickers "
+                      f"({len(ocr_uncertain_list)} uncertain)")
+            else:
+                print("  [WARN] OCR fallback also yielded too few rows — tickers_detail will be cleared")
+                tickers_detail = {}
+                extraction_method  = 'failed'
+                extraction_warning = (
+                    "Full ticker list could not be extracted (table is image-only and OCR produced insufficient results). "
+                    "Showing count/added/removed only."
+                )
+        except Exception as e:
+            print(f"  [WARN] OCR fallback failed: {e}")
+            tickers_detail = {}
+            extraction_method  = 'failed'
+            extraction_warning = f"Ticker extraction failed: {e}. Showing count/added/removed only."
+
     return {
-        'count':          count or len(tickers_detail),
-        'added':          added,
-        'removed':        removed,
-        'date_str':       date_str,
-        'tickers_detail': tickers_detail,
+        'count':              count or len(tickers_detail),
+        'added':              added,
+        'removed':            removed,
+        'date_str':           date_str,
+        'tickers_detail':     tickers_detail,
+        'extraction_method':  extraction_method,
+        'extraction_warning': extraction_warning,
+        'ocr_uncertain':      ocr_uncertain_list,
     }
 
 
@@ -204,36 +405,38 @@ def main():
     print(f"Removed     : {removed}")
     print(f"Tickers     : {len(td)}")
 
-    if len(td) < 10:
-        print("[WARN] Very few tickers extracted — PDF may be image-only or table format changed.")
-        print("       Keeping existing tickers_detail and only updating added/removed/count/history.")
+    extraction_method  = result.get('extraction_method', 'text')
+    extraction_warning = result.get('extraction_warning')
+    ocr_uncertain      = result.get('ocr_uncertain', [])
+
+    print(f"Extraction  : {extraction_method}"
+          + (f"  [{len(ocr_uncertain)} uncertain]" if ocr_uncertain else ""))
+    if extraction_warning:
+        print(f"[WARN] {extraction_warning}")
 
     # ── Update macro_context.json ───────────────────────────────────────
     ctx = safe_read_ctx(CTX_PATH, ONEDRIVE_CTX)
-
     sss = ctx.setdefault('pdf', {}).setdefault('sss', {})
 
-    if len(td) >= 10:
-        # Full update: merge new data into existing tickers_detail
-        existing = sss.get('tickers_detail', {})
-        # Remove tickers that are no longer on the list
-        for t in removed:
+    if len(td) >= 5:
+        # Full or OCR update: replace tickers_detail with current extraction.
+        # Do NOT silently keep stale tickers — always overwrite with current data.
+        existing = dict(td)          # start from freshly extracted tickers
+        for t in removed:            # ensure removed tickers are gone
             existing.pop(t, None)
-        # Merge new data (preserves any extra fields we've manually added)
-        for t, data in td.items():
-            if t not in existing:
-                existing[t] = data
-            else:
-                # Update mutable fields but preserve ones not in PDF
-                existing[t].update({k: v for k, v in data.items() if v is not None})
         sss['tickers_detail'] = existing
-        sss['tickers']  = list(td.keys())
+        sss['tickers']        = list(existing.keys())
     else:
-        # Partial update: just remove the removed tickers
-        existing = sss.get('tickers_detail', {})
-        for t in removed:
-            existing.pop(t, None)
-        sss['tickers_detail'] = existing
+        # Extraction truly failed: clear tickers_detail rather than show stale data.
+        # The UI will show count/added/removed with a clear warning.
+        print("[WARN] Clearing tickers_detail — current extraction failed. UI will show warning.")
+        sss['tickers_detail'] = {}
+        sss['tickers']        = []
+
+    # Record extraction provenance
+    sss['extraction_method']  = extraction_method
+    sss['extraction_warning'] = extraction_warning
+    sss['ocr_uncertain']      = ocr_uncertain
 
     sss['count']   = count
     sss['added']   = added

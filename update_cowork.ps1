@@ -294,12 +294,24 @@ if ($Dashboard) {
     }
 
     # D2: import_official_levels.py -> official_levels.json
-    # NOTE: parse_rr_history.py does NOT write official_levels.json -- this is the sole source.
+    # NOTE: The script writes to OneDrive (its own folder). We sync to repo immediately
+    # after success so D3 and validation read the fresh file, not a stale repo copy.
     $ImportLevelsScript = "$ScriptsDir\import_official_levels.py"
+    $OlOneDrivePath     = "$SourceDataDir\official_levels.json"
     if (Test-Path $ImportLevelsScript) {
         Write-Host '==> [D2] import_official_levels.py...' -ForegroundColor Cyan
         $rc = Run-PythonScript -ScriptPath $ImportLevelsScript -Label 'import_official_levels.py'
-        if ($rc -eq 0) { Write-Host '    official_levels.json updated from Excel' -ForegroundColor DarkGray }
+        if ($rc -eq 0) {
+            Write-Host '    official_levels.json updated from Excel' -ForegroundColor DarkGray
+            # Sync OneDrive output -> repo immediately (before D3 and validation)
+            if (Test-Path $OlOneDrivePath) {
+                Copy-Item -Path $OlOneDrivePath -Destination "$RepoDataDir\official_levels.json" -Force
+                Write-Host '    official_levels.json synced OneDrive -> repo after D2' -ForegroundColor DarkGray
+            } else {
+                Write-Host "  [ERROR] official_levels.json not found at $OlOneDrivePath after D2 -- aborting" -ForegroundColor Red
+                exit 1
+            }
+        }
     } else {
         Write-Host "  [WARN] import_official_levels.py not found at $ImportLevelsScript" -ForegroundColor Yellow
     }
@@ -377,7 +389,7 @@ if (Test-Path $selfSrc) {
 # Sync pipeline scripts to repo
 $destScripts = "$RepoDir\scripts"
 if (-not (Test-Path $destScripts)) { New-Item -ItemType Directory -Path $destScripts | Out-Null }
-foreach ($script in @('build_macro_context.py', 'parse_position_sizing.py', 'process_ham.py', 'process_sss.py', 'validate_pipeline.py', 'extract_macro_show_charts.py')) {
+foreach ($script in @('build_macro_context.py', 'parse_position_sizing.py', 'process_ham.py', 'process_sss.py', 'validate_pipeline.py', 'extract_macro_show_charts.py', 'parse_rr_history.py', 'import_official_levels.py')) {
     if (Test-Path "$ScriptsDir\$script") {
         Copy-Item -Path "$ScriptsDir\$script" -Destination "$destScripts\$script" -Force
         Write-Host "    Copied: scripts\$script" -ForegroundColor DarkGray
