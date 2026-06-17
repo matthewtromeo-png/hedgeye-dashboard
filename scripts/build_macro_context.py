@@ -1139,6 +1139,45 @@ def extract_pdf_data(existing: dict | None, force_pdf: bool) -> dict:
             sss_result['tickers_detail'] = detail_clean
         results['sss'] = sss_result
 
+    # ── Inject MSR provenance metadata into pdf.msr ───────────────────────────
+    # Adds _source_file, _last_parsed, _report_date, _cached, _freshness so the
+    # UI card can show staleness and source attribution without a separate lookup.
+    if results.get("msr") is not None:
+        msr_source_id = sources_used.get("msr") or ""
+        msr_filename  = msr_source_id.split("@")[0] if msr_source_id else None
+        msr_mtime_str = msr_source_id.split("@")[1] if "@" in msr_source_id else None
+        is_cached     = (cache_stats.get("msr") == "cached")
+
+        # report_date: try date pattern in filename, fall back to file mtime
+        report_date = None
+        if msr_filename:
+            dm = re.search(r'(\d{4}[-_]\d{2}[-_]\d{2}|\d{2}[-_]\d{2}[-_]\d{4}|\d{8})', msr_filename)
+            if dm:
+                raw = dm.group(1).replace('_', '-')
+                for fmt in ('%Y-%m-%d', '%m-%d-%Y', '%Y%m%d'):
+                    try:
+                        report_date = datetime.strptime(raw, fmt).strftime('%Y-%m-%d')
+                        break
+                    except ValueError:
+                        pass
+        if not report_date and msr_mtime_str:
+            try:
+                report_date = datetime.fromtimestamp(int(msr_mtime_str)).strftime('%Y-%m-%d')
+            except (ValueError, OSError):
+                pass
+
+        # For cached results: preserve existing _last_parsed so it reflects
+        # when the data was actually extracted, not just loaded from cache.
+        preserved = results["msr"].get("_last_parsed") if is_cached else None
+
+        results["msr"].update({
+            "_source_file": msr_filename,
+            "_last_parsed": preserved or datetime.now(tz=timezone.utc).isoformat(),
+            "_report_date": report_date or results["msr"].get("_report_date"),
+            "_cached":      is_cached,
+            "_freshness":   "cached" if is_cached else "fresh",
+        })
+
     # ── Macro research: each file individually, merge results ─────────────────
     # Window reduced to 14 days; cap at 4 files; one API call per file.
     # Results are merged oldest-to-newest so newer files win on conflicts.

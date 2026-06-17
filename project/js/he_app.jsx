@@ -246,6 +246,18 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
   const showCallouts    = macroCtx?.pdf?.macro_show?.callouts ?? [];
   const showPositions   = macroCtx?.pdf?.macro_show?.signal_positions ?? [];
   const msrData         = macroCtx?.pdf?.msr ?? null;
+  const msrIsStale      = !msrData ? false
+    : (!msrData._last_parsed || new Date(msrData._last_parsed).toDateString() !== new Date().toDateString());
+  const msrSourceLine   = (() => {
+    if (!msrData) return null;
+    const d    = msrData._report_date || (msrData._last_parsed ? msrData._last_parsed.slice(0,10) : null);
+    const disp = d ? new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'numeric',day:'numeric',year:'numeric'}) : null;
+    const parts = [
+      disp && `MSR updated ${disp}`,
+      msrData._source_file && `source: ${msrData._source_file}${msrData._cached ? ' (cached)' : ''}`,
+    ].filter(Boolean);
+    return parts.length ? parts.join(' · ') : null;
+  })();
   const momoData        = macroCtx?.pdf?.momo ?? null;
   const elThemes        = macroCtx?.pdf?.early_look?.key_themes ?? [];
   const elPositioning   = macroCtx?.pdf?.early_look?.positioning ?? [];
@@ -515,13 +527,26 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
       {(msrData || momoData) && (
         <div style={{display:'grid',gridTemplateColumns:`repeat(${[msrData,momoData].filter(Boolean).length},1fr)`,gap:12,marginBottom:16}}>
           {msrData && (
-            <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,padding:'14px 18px'}}>
+            <div style={{background:'#fff',border:`1px solid ${msrIsStale ? '#D4A017' : '#E4E1DA'}`,borderRadius:8,padding:'14px 18px'}}>
+              {/* Header */}
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
                 <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,fontWeight:600,
-                  textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>MSR — {msrData.title || 'Market Situation'}</span>
-                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>{msrData.date}</span>
+                  textTransform:'uppercase',letterSpacing:'0.1em',color:'#7A7770'}}>MSR — Market Situation</span>
+                <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790'}}>
+                  {msrData._last_parsed
+                    ? new Date(msrData._last_parsed).toLocaleDateString('en-US',{month:'short',day:'numeric'})
+                    : msrData.date || ''}
+                </span>
               </div>
-              {(msrData.resistance || msrData.support) && (
+              {/* Stale warning */}
+              {msrIsStale && (
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#8B6914',
+                  background:'#FEF3C7',borderRadius:3,padding:'3px 6px',marginBottom:8}}>
+                  ⚠ Data may be stale — last parsed {msrData._last_parsed ? msrData._last_parsed.slice(0,10) : 'unknown'}
+                </div>
+              )}
+              {/* Row 1: Resistance / Support / SPX Last */}
+              {(msrData.resistance || msrData.support || msrData.spx_last) && (
                 <div style={{display:'flex',gap:16,marginBottom:8,flexWrap:'wrap'}}>
                   {msrData.resistance && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
                     <div style={{fontSize:8,color:'#C8302A',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Resistance</div>
@@ -531,20 +556,47 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
                     <div style={{fontSize:8,color:'#27500A',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Support</div>
                     <div style={{fontSize:15,fontWeight:700,color:'#27500A'}}>{msrData.support}</div>
                   </div>}
-                  {msrData.gamma_exposure && (
-                    <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
-                      <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Gamma</div>
-                      <div style={{fontSize:12,fontWeight:600,color:'#1A4D8F'}}>{msrData.gamma_exposure}</div>
-                    </div>
-                  )}
-                  {msrData.gex_flip && (
-                    <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
-                      <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>GEX Flip</div>
-                      <div style={{fontSize:12,fontWeight:600,color:'#B8860B'}}>{msrData.gex_flip}</div>
-                    </div>
-                  )}
+                  {msrData.spx_last != null && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>SPX Last</div>
+                    <div style={{fontSize:15,fontWeight:700,color:'#1A1A18'}}>{msrData.spx_last}</div>
+                  </div>}
                 </div>
               )}
+              {/* Row 2: Upper PV / Lower PV / GEX Flip */}
+              {(msrData.spx_upper_pv || msrData.spx_lower_pv || msrData.gex_flip) && (
+                <div style={{display:'flex',gap:16,marginBottom:8,flexWrap:'wrap'}}>
+                  {msrData.spx_upper_pv != null && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Upper PV</div>
+                    <div style={{fontSize:12,fontWeight:600,color:'#555'}}>{msrData.spx_upper_pv}</div>
+                  </div>}
+                  {msrData.spx_lower_pv != null && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Lower PV</div>
+                    <div style={{fontSize:12,fontWeight:600,color:'#555'}}>{msrData.spx_lower_pv}</div>
+                  </div>}
+                  {msrData.gex_flip != null && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>GEX Flip</div>
+                    <div style={{fontSize:12,fontWeight:600,color:'#B8860B'}}>{msrData.gex_flip}</div>
+                  </div>}
+                </div>
+              )}
+              {/* Row 3: Gamma / GVT / 10D RVol */}
+              {(msrData.gamma_exposure || msrData.gvt != null || msrData.realized_vol_10d != null) && (
+                <div style={{display:'flex',gap:16,marginBottom:8,flexWrap:'wrap'}}>
+                  {msrData.gamma_exposure && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>Gamma</div>
+                    <div style={{fontSize:12,fontWeight:600,color:'#1A4D8F'}}>{msrData.gamma_exposure}</div>
+                  </div>}
+                  {msrData.gvt != null && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>GVT</div>
+                    <div style={{fontSize:12,fontWeight:600,color:'#555'}}>{msrData.gvt}</div>
+                  </div>}
+                  {msrData.realized_vol_10d != null && <div style={{fontFamily:'IBM Plex Mono,monospace'}}>
+                    <div style={{fontSize:8,color:'#9A9790',fontWeight:600,letterSpacing:'0.06em',textTransform:'uppercase'}}>10D RVol</div>
+                    <div style={{fontSize:12,fontWeight:600,color:'#555'}}>{msrData.realized_vol_10d}%</div>
+                  </div>}
+                </div>
+              )}
+              {/* Signal text rows */}
               {msrData.pv_band && (
                 <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',marginBottom:5}}>
                   <span style={{fontWeight:600,color:'#7A7770',textTransform:'uppercase',fontSize:8,letterSpacing:'0.06em',marginRight:6}}>PV Band</span>{msrData.pv_band}
@@ -558,6 +610,13 @@ const OverviewTab = ({qQuad, mQuad, usd, btc, macroCtx, onTabChange}) => {
               {msrData.strategic_allocation && (
                 <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#555',marginBottom:4}}>
                   <span style={{fontWeight:600,color:'#7A7770',textTransform:'uppercase',fontSize:8,letterSpacing:'0.06em',marginRight:6}}>Allocation</span>{msrData.strategic_allocation}
+                </div>
+              )}
+              {/* Source footer */}
+              {msrSourceLine && (
+                <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:8,color:'#9A9790',
+                  marginTop:8,paddingTop:6,borderTop:'1px solid #F0EDE6'}}>
+                  {msrSourceLine}
                 </div>
               )}
             </div>

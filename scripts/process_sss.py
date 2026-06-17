@@ -91,6 +91,7 @@ def _ocr_extract_tickers(pdf_path):
     # These are empirically observed artifacts from SSS PDF image OCR.
     # Key = garbled OCR result (uppercase); Value = correct ticker.
     OCR_CORRECTIONS = {
+        # ── Original corrections ─────────────────────────────────────────
         'CZ':   'CZR',
         'ESX':  'CSX',
         'POS':  'DDOG',
@@ -104,8 +105,17 @@ def _ocr_extract_tickers(pdf_path):
         'SUM':  'SJM',
         'LV':   'LYV',
         'GT':   'TGT',
-        'ET':   'TGT',   # OCR variant of GT→TGT (ET is Energy Transfer but doesn't appear on SSS)
-        'BURI': 'BJRI',  # BJ's Restaurants — OCR drops J and misreads J→U
+        'ET':   'TGT',   # OCR variant of GT→TGT (ET=Energy Transfer doesn't appear on SSS)
+        'BURI': 'BJRI',  # BJ's Restaurants — OCR drops J, misreads J→U
+        # ── 6/16 PDF additions ───────────────────────────────────────────
+        'SX':    'CSX',   # CSX Railroad — alternate OCR drop of leading C (ESX also mapped above)
+        'CR':    'CP',    # Canadian Pacific (Jay Van Sciver/Industrials) — CR=Crane unlikely on SSS
+        'LO':    'TWLO',  # Twilio (Andrew Freedman/Software) — LO=Lorillard inactive/acquired
+        'ATZAF': 'AZTAF', # Letter transposition artifact
+        'CRAY':  'CPAY',  # Corpay (Josh Steiner/Financials) — CRAY=Cray Inc acquired by HPE, delisted
+        'MEM':   'MGM',   # MGM Resorts — OCR variant of MOM→MGM
+        'TET':   'TGT',   # Target — OCR variant of GT/ET→TGT
+        'SC':    'SG',    # Sweetgreen (Bennett Cheer/Restaurants) — SC=Santander Consumer unlikely on SSS
     }
 
     for page in reader.pages:
@@ -370,6 +380,26 @@ def parse_sss_pdf(pdf_path):
             extraction_method  = 'failed'
             extraction_warning = f"Ticker extraction failed: {e}. Showing count/added/removed only."
 
+    # ── Count validation ────────────────────────────────────────────────
+    # Strict check: header count must equal number of extracted tickers.
+    # A mismatch means OCR missed rows or the corrections map has gaps.
+    # We warn but still return the extracted data (never discard partial results
+    # — caller can decide how to handle a mismatch).
+    count_match = True
+    if count is not None and len(tickers_detail) > 0:
+        if len(tickers_detail) != count:
+            count_match = False
+            mismatch_msg = (
+                f"Count mismatch: header says {count} stocks, "
+                f"extracted {len(tickers_detail)}. "
+                f"Possible OCR miss or unresolved misread in OCR_CORRECTIONS."
+            )
+            print(f"  [WARN] {mismatch_msg}")
+            if extraction_warning:
+                extraction_warning += f" {mismatch_msg}"
+            else:
+                extraction_warning = mismatch_msg
+
     return {
         'count':              count or len(tickers_detail),
         'added':              added,
@@ -379,6 +409,7 @@ def parse_sss_pdf(pdf_path):
         'extraction_method':  extraction_method,
         'extraction_warning': extraction_warning,
         'ocr_uncertain':      ocr_uncertain_list,
+        'count_match':        count_match,
     }
 
 
