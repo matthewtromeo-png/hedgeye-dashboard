@@ -81,7 +81,7 @@ def _ocr_extract_tickers(pdf_path):
     #   - tickers:    mixed-case ("cP","casy"), dropped/swapped chars
     ROW_RE = re.compile(
         r'^([\dA-Za-z]{1,3})\s+'               # days (OCR-noisy: "28","2B","5t","M")
-        r'([A-Za-z][A-Za-z0-9./]{0,7}):?\s+'   # ticker + optional trailing colon
+        r'([A-Za-z0-9][A-Za-z0-9./]{0,7}):?\s+'  # ticker + optional trailing colon (leading digit allowed: OCR reads T→1)
         r'([\d/]{4,12}),?\s+'                  # signal date (relaxed: garbled digits/slashes OK, trailing comma OK)
         r'([A-Za-z\d,.]+)[,]?\s+'              # entry price (OCR may garble digits as letters: "aa","a4")
         r'([A-Za-z\d,.]+)'                     # recent price
@@ -116,6 +116,12 @@ def _ocr_extract_tickers(pdf_path):
         'MEM':   'MGM',   # MGM Resorts — OCR variant of MOM→MGM
         'TET':   'TGT',   # Target — OCR variant of GT/ET→TGT
         'SC':    'SG',    # Sweetgreen (Bennett Cheer/Restaurants) — SC=Santander Consumer unlikely on SSS
+        # ── 6/17 PDF additions ───────────────────────────────────────────
+        'XG':    'TXG',   # 10x Genomics — alternate OCR drop of leading T (TX also mapped above)
+        'PPOS':  'DDOG',  # Datadog — OCR variant of POS→DDOG (non-deterministic P prefix)
+        'DPOS':  'DDOG',  # Datadog — OCR variant of POS→DDOG (non-deterministic D prefix)
+        '1X6':   'TXG',   # 10x Genomics — OCR reads capital T as digit 1, G as 6
+        '1XG':   'TXG',   # 10x Genomics — OCR reads capital T as digit 1
     }
 
     for page in reader.pages:
@@ -140,7 +146,7 @@ def _ocr_extract_tickers(pdf_path):
             ocr_text = pytesseract.image_to_string(pil, config='--psm 6 --oem 1')
 
             for line in ocr_text.splitlines():
-                line = line.strip()
+                line = line.strip().replace("'", "").replace("`", "").replace("‘", "").replace("’", "")
                 m = ROW_RE.match(line)
                 if not m:
                     continue
@@ -416,9 +422,9 @@ def parse_sss_pdf(pdf_path):
 def main():
     pdf_path = find_latest_sss_pdf()
     if not pdf_path:
-        print(f"[ERROR] No SSS PDFs found in {SSS_DIR}")
+        print(f'[ERROR] No SSS PDFs found in {SSS_DIR}')
         return
-    print(f"SSS PDF     : {os.path.basename(pdf_path)}")
+    print(f'SSS PDF     : {os.path.basename(pdf_path)}')
 
     result = parse_sss_pdf(pdf_path)
     if not result:
@@ -430,51 +436,44 @@ def main():
     date_str = result['date_str']
     td      = result['tickers_detail']
 
-    print(f"Date        : {date_str}")
-    print(f"Count       : {count}")
-    print(f"Added       : {added}")
-    print(f"Removed     : {removed}")
-    print(f"Tickers     : {len(td)}")
+    print(f'Date        : {date_str}')
+    print(f'Count       : {count}')
+    print(f'Added       : {added}')
+    print(f'Removed     : {removed}')
+    print(f'Tickers     : {len(td)}')
 
     extraction_method  = result.get('extraction_method', 'text')
     extraction_warning = result.get('extraction_warning')
     ocr_uncertain      = result.get('ocr_uncertain', [])
 
-    print(f"Extraction  : {extraction_method}"
-          + (f"  [{len(ocr_uncertain)} uncertain]" if ocr_uncertain else ""))
+    print(f'Extraction  : {extraction_method}'
+          + (f'  [{len(ocr_uncertain)} uncertain]' if ocr_uncertain else ''))
     if extraction_warning:
-        print(f"[WARN] {extraction_warning}")
+        print(f'[WARN] {extraction_warning}')
 
-    # ── Update macro_context.json ───────────────────────────────────────
+    # ── Update macro_context.json ───────────────────────
     ctx = safe_read_ctx(CTX_PATH, ONEDRIVE_CTX)
     sss = ctx.setdefault('pdf', {}).setdefault('sss', {})
 
     if len(td) >= 5:
-        # Full or OCR update: replace tickers_detail with current extraction.
-        # Do NOT silently keep stale tickers — always overwrite with current data.
-        existing = dict(td)          # start from freshly extracted tickers
-        for t in removed:            # ensure removed tickers are gone
+        existing = dict(td)
+        for t in removed:
             existing.pop(t, None)
         sss['tickers_detail'] = existing
         sss['tickers']        = list(existing.keys())
     else:
-        # Extraction truly failed: clear tickers_detail rather than show stale data.
-        # The UI will show count/added/removed with a clear warning.
-        print("[WARN] Clearing tickers_detail — current extraction failed. UI will show warning.")
+        print('[WARN] Clearing tickers_detail — current extraction failed. UI will show warning.')
         sss['tickers_detail'] = {}
         sss['tickers']        = []
 
-    # Record extraction provenance
     sss['extraction_method']  = extraction_method
     sss['extraction_warning'] = extraction_warning
     sss['ocr_uncertain']      = ocr_uncertain
-
     sss['count']   = count
     sss['added']   = added
     sss['removed'] = removed
     sss['as_of']   = date_str
 
-    # Append to sss_history (avoid duplicates for same date)
     history = ctx.setdefault('sss_history', [])
     existing_dates = {h['date'] for h in history}
     if date_str not in existing_dates:
@@ -485,15 +484,14 @@ def main():
             if h['date'] == date_str:
                 h.update({'count': count, 'added': added, 'removed': removed})
 
-    # ── Atomic write with fsync ────────────────────────────────────────
     tmp_path = CTX_PATH + '.tmp'
     with open(tmp_path, 'w', encoding='utf-8') as f:
         json.dump(ctx, f, indent=2, ensure_ascii=False)
         f.flush()
         os.fsync(f.fileno())
     os.replace(tmp_path, CTX_PATH)
-    print(f"Updated     : macro_context.json  (pdf.sss + sss_history)")
-    print("\nDone.")
+    print(f'Updated     : macro_context.json  (pdf.sss + sss_history)')
+    print('\nDone.')
 
 
 if __name__ == '__main__':
