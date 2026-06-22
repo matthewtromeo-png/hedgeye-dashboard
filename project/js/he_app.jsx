@@ -2007,312 +2007,215 @@ const AnalyzerTab = ({macroCtx}) => {
 // ── end he_analyzer inline ────────────────────────────────────────────────
 
 // he_sizing.jsx — Position Sizing tab
-// Reads position_sizing block from macro_context.json
-// Data built by scripts/parse_position_sizing.py from Portfolio Solutions PDFs + ETF Pro rank table
-// Key rule: positions ranked above HYG (rank 21) are confirmed above 3%
+// Macro ETFs by Rank -- official Portfolio Solutions rank table
+// Data from scripts/parse_position_sizing.py -- reads latest Portfolio Solutions PDF directly
 
 const SizingTab = ({ macroCtx }) => {
-  const [sortBy, setSortBy] = React.useState('rank');   // 'rank' | 'size' | 'room'
-  const [filter, setFilter]  = React.useState('all');   // 'all' | 'above' | 'below'
+  const [w1Open, setW1Open] = React.useState(true);
+  const [m1Open, setM1Open] = React.useState(false);
 
   const ps = macroCtx?.position_sizing;
   if (!ps) return (
     <div style={{padding:40,textAlign:'center',color:'#999',fontFamily:'IBM Plex Mono,monospace',fontSize:13}}>
-      No position sizing data — run scripts/parse_position_sizing.py
+      No position sizing data -- run scripts/parse_position_sizing.py
     </div>
   );
 
-  const { positions = [], threshold_ticker, threshold_rank, threshold_pct, threshold_note, as_of_date } = ps;
-  // Include all ranked positions; estimated_pct may be null if parser couldn't extract a %
-  const active = positions.filter(p => p.rank != null);
+  const positions  = ps.positions || [];
+  const as_of      = ps.as_of_date || ps.source_date || '';
+  const commentary = ps.keith_commentary;
+  const source_pdf = ps.source_pdf || '';
+  const rw1        = ps.rerank_1w || {};
+  const rm1        = ps.rerank_1m || {};
 
-  // ── Sorting ────────────────────────────────────────────────────────────────
-  const sorted = [...active].sort((a, b) => {
-    if (sortBy === 'size') return (b.estimated_pct ?? 0) - (a.estimated_pct ?? 0);
-    if (sortBy === 'room') return (b.room_to_add ?? 0) - (a.room_to_add ?? 0);
-    return a.rank - b.rank;
-  });
+  const fmtDate = d => d ? d.slice(5).replace('-', '/') : '—';
 
-  const filtered = filter === 'above' ? sorted.filter(p => p.above_hyg_threshold)
-                 : filter === 'below' ? sorted.filter(p => !p.above_hyg_threshold)
-                 : sorted;
-
-  // ── Portfolio summary ──────────────────────────────────────────────────────
-  const totalDeployed  = active.reduce((s, p) => s + (p.estimated_pct ?? 0), 0);
-  const aboveThreshold = active.filter(p => p.above_hyg_threshold).length;
-  const avgFill        = null; // fill_pct not available in current data schema
-
-  // ── Helpers ────────────────────────────────────────────────────────────────
-  const TIER_STYLE = {
-    max: { bg:'#276749', color:'#fff',    label:'MAX' },
-    mid: { bg:'#D97706', color:'#fff',    label:'MID' },
-    min: { bg:'#E2E8F0', color:'#4A5568', label:'MIN' },
-  };
-
-  const dirIcon = d =>
-    d === 'adding'   ? <span style={{color:'#276749',fontWeight:700}}>↑</span>
-  : d === 'trimming' ? <span style={{color:'#C53030',fontWeight:700}}>↓</span>
-  : d === 'closed'   ? <span style={{color:'#999'}}>✕</span>
-  :                    <span style={{color:'#ccc'}}>—</span>;
-
-  const rkIcon = v =>
-    v == null  ? <span style={{color:'#ccc',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>—</span>
-  : v > 0      ? <span style={{color:'#276749',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>↑{v}</span>
-  : v < 0      ? <span style={{color:'#C53030',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>↓{Math.abs(v)}</span>
-  :              <span style={{color:'#999',fontFamily:'IBM Plex Mono,monospace',fontSize:10}}>—</span>;
-
-  const fmtDate = d => d ? d.slice(5).replace('-','/') : '—';
-
-  // ── Size bar component ─────────────────────────────────────────────────────
-  const SizeBar = ({ p }) => {
-    const { min_pct, max_pct, estimated_pct, size_source, above_hyg_threshold } = p;
-    if (max_pct === 0 || estimated_pct == null) return null;
-    const fillPct  = Math.min(100, (estimated_pct / max_pct) * 100);
-    const minMark  = (min_pct / max_pct) * 100;
-    const barColor = above_hyg_threshold ? '#276749' : '#718096';
-    const isFloor  = size_source === 'rank_floor';
-
+  const ChangeCell = ({val}) => {
+    if (val === null || val === undefined)
+      return <span style={{color:'#C0BBB0',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>—</span>;
+    if (val === 0)
+      return <span style={{color:'#9A9790',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>0</span>;
+    const up = val > 0;
     return (
-      <div style={{display:'flex',alignItems:'center',gap:6,minWidth:160}}>
-        {/* Bar track */}
-        <div style={{flex:1,position:'relative',height:8,borderRadius:4,
-          background:'#E2E8F0',overflow:'visible'}}>
-          {/* Min marker */}
-          <div style={{position:'absolute',left:`${minMark}%`,top:-2,width:2,height:12,
-            background:'#A0AEC0',borderRadius:1,zIndex:2}} title={`Min: ${min_pct}%`} />
-          {/* Fill */}
-          <div style={{position:'absolute',left:0,top:0,height:'100%',
-            width:`${fillPct}%`,borderRadius:4,
-            background: isFloor ? `repeating-linear-gradient(45deg,${barColor},${barColor} 3px,${barColor}aa 3px,${barColor}aa 6px)` : barColor,
-            transition:'width 0.4s ease'}} />
-        </div>
-        {/* Label */}
-        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,
-          color: above_hyg_threshold ? '#276749' : '#4A5568',
-          fontWeight:600,minWidth:38,textAlign:'right'}}>
-          {estimated_pct.toFixed(1)}%
-          {isFloor && <span style={{fontSize:9,color:'#999',marginLeft:2}}>≥</span>}
-        </span>
-      </div>
+      <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:12,fontWeight:700,
+        color: up ? '#27500A' : '#C8302A'}}>
+        {up ? '▲' : '▼'}{Math.abs(val)}
+      </span>
     );
   };
 
-  // ── Size anchor divider (dynamic — based on current minimum-sized position) ──
-  const AnchorDivider = () => (
-    <tr>
-      <td colSpan={9} style={{padding:'4px 12px'}}>
-        <div style={{display:'flex',alignItems:'center',gap:8}}>
-          <div style={{flex:1,height:1,background:'#C53030',opacity:0.35}} />
-          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
-            color:'#C53030',fontWeight:700,whiteSpace:'nowrap',letterSpacing:'0.08em'}}>
-            ▼ {threshold_ticker || 'ANCHOR'} AT MIN ({threshold_pct || '—'}%) — BELOW THIS: UNDER {threshold_pct || '—'}%
-          </span>
-          <div style={{flex:1,height:1,background:'#C53030',opacity:0.35}} />
+  const MoverBadge = ({t, d, isTop}) => (
+    <span style={{
+      display:'inline-flex',alignItems:'center',gap:4,
+      fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:700,
+      padding:'3px 8px',borderRadius:4,marginRight:4,marginBottom:4,
+      background: isTop ? '#EAF3DE' : '#FDECEA',
+      color:       isTop ? '#27500A' : '#C8302A',
+      border:     `1px solid ${isTop ? '#7AB648' : '#E8A09D'}`,
+    }}>
+      {t} <span style={{fontWeight:400,opacity:0.8}}>({d > 0 ? '+' : ''}{d})</span>
+    </span>
+  );
+
+  const CalloutSection = ({title, data, openState, setOpen}) => (
+    <div style={{border:'1px solid #E4E1DA',borderRadius:6,marginBottom:10}}>
+      <div onClick={() => setOpen(o => !o)}
+        style={{display:'flex',justifyContent:'space-between',alignItems:'center',
+          padding:'10px 16px',cursor:'pointer',background:'#F8F7F4',
+          borderRadius: openState ? '6px 6px 0 0' : 6}}>
+        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:11,fontWeight:700,
+          color:'#4A4A40',letterSpacing:'0.05em'}}>{title}</span>
+        <span style={{fontSize:11,color:'#9A9790'}}>{openState ? '▲' : '▼'}</span>
+      </div>
+      {openState && (
+        <div style={{padding:'12px 16px'}}>
+          <div style={{marginBottom:10}}>
+            <div style={{fontSize:10,color:'#9A9790',fontFamily:'IBM Plex Mono,monospace',
+              letterSpacing:'0.06em',marginBottom:6}}>TOP MOVERS</div>
+            <div style={{display:'flex',flexWrap:'wrap',gap:2}}>
+              {(data.top_movers || []).map(m => <MoverBadge key={m.ticker} t={m.ticker} d={m.delta} isTop={true} />)}
+              {!(data.top_movers || []).length && <span style={{color:'#C0BBB0',fontSize:11}}>—</span>}
+            </div>
+          </div>
+          <div>
+            <div style={{fontSize:10,color:'#9A9790',fontFamily:'IBM Plex Mono,monospace',
+              letterSpacing:'0.06em',marginBottom:6}}>BOTTOM MOVERS</div>
+            <div style={{display:'flex',flexWrap:'wrap',gap:2}}>
+              {(data.bottom_movers || []).map(m => <MoverBadge key={m.ticker} t={m.ticker} d={m.delta} isTop={false} />)}
+              {!(data.bottom_movers || []).length && <span style={{color:'#C0BBB0',fontSize:11}}>—</span>}
+            </div>
+          </div>
         </div>
-      </td>
-    </tr>
+      )}
+    </div>
   );
 
-  // ── Render ─────────────────────────────────────────────────────────────────
-  const COL = { color:'#718096', fontSize:10, fontFamily:'IBM Plex Mono,monospace',
-                letterSpacing:'0.06em', textTransform:'uppercase', padding:'6px 10px',
-                whiteSpace:'nowrap', userSelect:'none' };
-  const SortBtn = ({ field, label }) => (
-    <span onClick={() => setSortBy(field)} style={{
-      ...COL, cursor:'pointer',
-      color: sortBy === field ? '#1A1A18' : '#718096',
-      borderBottom: sortBy === field ? '2px solid #1A1A18' : '2px solid transparent',
-    }}>{label}</span>
-  );
-
-  let hygDividerShown = false;
+  const TH_STYLE = {
+    fontSize:10,color:'#9A9790',fontFamily:'IBM Plex Mono,monospace',
+    letterSpacing:'0.06em',textTransform:'uppercase',padding:'8px 12px 8px 0',
+    whiteSpace:'nowrap',fontWeight:600,borderBottom:'2px solid #E4E1DA',
+  };
 
   return (
-    <div style={{fontFamily:'IBM Plex Sans,sans-serif',padding:'0 0 40px'}}>
+    <div style={{fontFamily:'IBM Plex Sans,sans-serif',padding:'20px 24px',maxWidth:1100}}>
 
-      {/* ── Header ──────────────────────────────────────────────────────── */}
-      <div style={{padding:'20px 20px 12px',borderBottom:'1px solid #E2E8F0'}}>
-        <div style={{display:'flex',alignItems:'flex-start',justifyContent:'space-between',gap:16,flexWrap:'wrap'}}>
-          <div>
-            <div style={{fontSize:18,fontWeight:700,color:'#1A1A18',marginBottom:4}}>
-              Position Sizing Tracker
-            </div>
-            <div style={{fontSize:11,color:'#718096',fontFamily:'IBM Plex Mono,monospace'}}>
-              Source: Portfolio Solutions commentary + ETF Pro rank &nbsp;·&nbsp; as of {as_of_date}
-            </div>
-          </div>
-          {/* Summary pills */}
-          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
-            {[
-              { label:'Active Positions', value: active.length },
-              { label:'Above 3% Threshold', value: aboveThreshold, color:'#276749' },
-              { label:'Avg Fill', value: avgFill != null ? avgFill+'%' : '—' },
-              { label:'Total Deployed', value: totalDeployed > 0 ? totalDeployed.toFixed(1)+'%' : '—' },
-            ].map(pill => (
-              <div key={pill.label} style={{background:'#fff',border:'1px solid #E2E8F0',
-                borderRadius:6,padding:'6px 12px',textAlign:'center',minWidth:100}}>
-                <div style={{fontSize:18,fontWeight:700,color:pill.color||'#1A1A18',
-                  fontFamily:'IBM Plex Mono,monospace',lineHeight:1}}>
-                  {pill.value}
-                </div>
-                <div style={{fontSize:9,color:'#999',marginTop:2,letterSpacing:'0.06em',
-                  textTransform:'uppercase'}}>{pill.label}</div>
-              </div>
-            ))}
-          </div>
+      {/* ── Header ──────────────────────────────────────────────────────────── */}
+      <div style={{marginBottom:16}}>
+        <div style={{display:'flex',alignItems:'baseline',gap:12,flexWrap:'wrap',marginBottom:6}}>
+          <SectionTitle mono style={{margin:0}}>Macro ETFs by Rank</SectionTitle>
+          <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:12,color:'#4A4A40',fontWeight:600}}>
+            {positions.length} positions
+          </span>
         </div>
-
-        {/* Dynamic threshold callout */}
-        {threshold_ticker && (
-          <div style={{marginTop:12,padding:'8px 12px',background:'#FFFBEB',border:'1px solid #FCD34D',
-            borderRadius:6,fontSize:11,color:'#92400E',fontFamily:'IBM Plex Mono,monospace',
-            display:'flex',alignItems:'center',gap:8}}>
-            <span style={{fontSize:14}}>⚡</span>
-            <span>
-              <strong>Today's anchor:</strong> {threshold_ticker} (rank #{threshold_rank}) is at minimum ({threshold_pct}%).
-              &nbsp;Positions ranked above it are confirmed &gt;{threshold_pct}%.
-              &nbsp;This anchor shifts daily as Keith adds/trims.
-              &nbsp;Hatched bars = rank-floor estimate · Solid = confirmed from commentary.
+        <div style={{display:'flex',alignItems:'center',gap:8,flexWrap:'wrap'}}>
+          {as_of && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,
+              color:'#27500A',background:'#EAF3DE',border:'1px solid #7AB648',
+              padding:'2px 8px',borderRadius:3}}>
+              as of {as_of}
             </span>
-          </div>
-        )}
-
-        {/* Filter + sort controls */}
-        <div style={{marginTop:12,display:'flex',alignItems:'center',gap:16,flexWrap:'wrap'}}>
-          <div style={{display:'flex',gap:4}}>
-            {[['all','All'],['above','Above 3%'],['below','Below 3%']].map(([val,label]) => (
-              <button key={val} onClick={() => setFilter(val)} style={{
-                padding:'4px 10px',border:'1px solid #E2E8F0',borderRadius:4,cursor:'pointer',
-                fontSize:11,background: filter===val ? '#1A1A18' : '#fff',
-                color: filter===val ? '#fff' : '#4A5568',
-              }}>{label}</button>
-            ))}
-          </div>
-          <div style={{fontSize:10,color:'#999',marginLeft:'auto'}}>
-            Sort by: <SortBtn field="rank" label="Rank" /> <SortBtn field="size" label="Size" /> <SortBtn field="room" label="Room" />
-          </div>
+          )}
+          {source_pdf && (
+            <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,color:'#9A9790',
+              background:'#F4F3EF',border:'1px solid #E4E1DA',padding:'2px 8px',borderRadius:3,
+              maxWidth:400,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}}
+              title={source_pdf}>
+              {source_pdf}
+            </span>
+          )}
         </div>
       </div>
 
-      {/* ── Table ───────────────────────────────────────────────────────── */}
-      <div style={{overflowX:'auto'}}>
-        <table style={{width:'100%',borderCollapse:'collapse',fontSize:13}}>
-          <thead>
-            <tr style={{background:'#F8F7F4',borderBottom:'2px solid #E2E8F0'}}>
-              <th style={{...COL,textAlign:'left'}}>Rank</th>
-              <th style={{...COL,textAlign:'left'}}>Ticker</th>
-              <th style={{...COL,textAlign:'left'}}>Class</th>
-              <th style={{...COL,textAlign:'left',minWidth:200}}>Size ← min · max →</th>
-              <th style={{...COL,textAlign:'center'}}>Tier</th>
-              <th style={{...COL,textAlign:'center'}}>1W ▲▼</th>
-              <th style={{...COL,textAlign:'center'}}>Dir</th>
-              <th style={{...COL,textAlign:'right'}}>Room</th>
-              <th style={{...COL,textAlign:'right'}}>Entry</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtered.map((p, i) => {
-              const ts = TIER_STYLE[p.tier] || TIER_STYLE.min;
-              const showDivider = !hygDividerShown && threshold_rank && p.rank > threshold_rank && sortBy === 'rank' && filter !== 'above';
-              if (showDivider) hygDividerShown = true;
+      {/* ── Keith's Commentary ──────────────────────────────────────────────── */}
+      {commentary && (
+        <div style={{background:'#FFFBF0',border:'1px solid #F5D67A',borderRadius:6,
+          padding:'12px 16px',marginBottom:16,display:'flex',gap:12,alignItems:'flex-start'}}>
+          <span style={{fontSize:16,flexShrink:0}}>💬</span>
+          <div>
+            <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#9A7A00',
+              letterSpacing:'0.06em',fontWeight:700,marginBottom:4}}>
+              KEITH'S COMMENTARY
+            </div>
+            <div style={{fontSize:13,color:'#3A3000',lineHeight:1.5}}>"{commentary}"</div>
+          </div>
+        </div>
+      )}
 
-              return (
-                <React.Fragment key={p.ticker}>
-                  {showDivider && <AnchorDivider />}
-                  <tr style={{
-                    borderBottom:'1px solid #EEF0F0',
-                    background: p.above_hyg_threshold ? 'rgba(39,103,73,0.03)' : '#fff',
-                    transition:'background 0.15s',
+      {/* ── 1-week / 1-month callout sections ───────────────────────────────── */}
+      <div style={{marginBottom:16}}>
+        <CalloutSection title="1-WEEK RE-RANK HISTORY & CALLOUTS"
+          data={rw1} openState={w1Open} setOpen={setW1Open} />
+        <CalloutSection title="1-MONTH RE-RANK HISTORY & CALLOUTS"
+          data={rm1} openState={m1Open} setOpen={setM1Open} />
+      </div>
+
+      {/* ── Rank table ──────────────────────────────────────────────────────── */}
+      <div style={{background:'#fff',border:'1px solid #E4E1DA',borderRadius:8,overflow:'hidden'}}>
+        <div style={{overflowX:'auto'}}>
+          <table style={{width:'100%',borderCollapse:'collapse',
+            fontFamily:'IBM Plex Mono,monospace',fontSize:12}}>
+            <thead>
+              <tr style={{background:'#F8F7F4'}}>
+                <th style={{...TH_STYLE,textAlign:'right',paddingLeft:16}}>RANK</th>
+                <th style={{...TH_STYLE,textAlign:'left'}}>TICKER</th>
+                <th style={{...TH_STYLE,textAlign:'center'}}>1-WEEK</th>
+                <th style={{...TH_STYLE,textAlign:'center'}}>1-MONTH</th>
+                <th style={{...TH_STYLE,textAlign:'left'}}>ENTRY DATE</th>
+                <th style={{...TH_STYLE,textAlign:'left'}}>ASSET CLASS</th>
+                <th style={{...TH_STYLE,textAlign:'right',paddingRight:16}}>POSITION SIZING</th>
+              </tr>
+            </thead>
+            <tbody>
+              {positions.map((p, i) => (
+                <tr key={p.ticker}
+                  style={{
+                    borderBottom:'1px solid #F5F3EF',
+                    background: i % 2 === 0 ? '#fff' : '#FAFAF8',
                   }}
                   onMouseEnter={e => e.currentTarget.style.background = '#F4F3EF'}
-                  onMouseLeave={e => e.currentTarget.style.background =
-                    p.above_hyg_threshold ? 'rgba(39,103,73,0.03)' : '#fff'}>
+                  onMouseLeave={e => e.currentTarget.style.background = i % 2 === 0 ? '#fff' : '#FAFAF8'}>
 
-                    {/* Rank */}
-                    <td style={{padding:'9px 10px',fontFamily:'IBM Plex Mono,monospace',
-                      fontSize:11,color:'#999'}}>
-                      {p.rank}
-                    </td>
+                  <td style={{padding:'9px 12px 9px 16px',textAlign:'right',
+                    color:'#9A9790',fontSize:11}}>
+                    {p.rank}
+                  </td>
 
-                    {/* Ticker */}
-                    <td style={{padding:'9px 10px'}}>
-                      <span style={{fontWeight:700,fontSize:13,letterSpacing:'0.02em',
-                        color:'#1A1A18'}}>
-                        {p.ticker}
-                      </span>
-                    </td>
+                  <td style={{padding:'9px 12px 9px 0'}}>
+                    <span style={{fontWeight:700,fontSize:13,color:'#1A1A18',letterSpacing:'0.02em'}}>
+                      {p.ticker}
+                    </span>
+                  </td>
 
-                    {/* Class */}
-                    <td style={{padding:'9px 10px',fontSize:11,color:'#718096',whiteSpace:'nowrap'}}>
-                      {p.asset_class}
-                    </td>
+                  <td style={{padding:'9px 12px 9px 0',textAlign:'center'}}>
+                    <ChangeCell val={p.rerank_1w} />
+                  </td>
 
-                    {/* Size bar */}
-                    <td style={{padding:'9px 10px'}}>
-                      <div style={{display:'flex',alignItems:'center',gap:6}}>
-                        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
-                          color:'#999',minWidth:22,textAlign:'right'}}>
-                          {p.min_pct}%
-                        </span>
-                        <SizeBar p={p} />
-                        <span style={{fontFamily:'IBM Plex Mono,monospace',fontSize:9,
-                          color:'#999',minWidth:22}}>
-                          {p.max_pct}%
-                        </span>
-                      </div>
-                    </td>
+                  <td style={{padding:'9px 12px 9px 0',textAlign:'center'}}>
+                    <ChangeCell val={p.rerank_1m} />
+                  </td>
 
-                    {/* Tier badge */}
-                    <td style={{padding:'9px 10px',textAlign:'center'}}>
-                      <span style={{display:'inline-block',padding:'2px 7px',borderRadius:4,
-                        fontSize:10,fontWeight:700,fontFamily:'IBM Plex Mono,monospace',
-                        letterSpacing:'0.06em',background:ts.bg,color:ts.color}}>
-                        {ts.label}
-                      </span>
-                    </td>
+                  <td style={{padding:'9px 12px 9px 0',color:'#7A7770',fontSize:11,whiteSpace:'nowrap'}}>
+                    {fmtDate(p.entry_date)}
+                  </td>
 
-                    {/* 1W re-rank */}
-                    <td style={{padding:'9px 10px',textAlign:'center'}}>
-                      {rkIcon(p.rerank_1w)}
-                    </td>
+                  <td style={{padding:'9px 12px 9px 0',color:'#5A5750',fontSize:11,whiteSpace:'nowrap'}}>
+                    {p.asset_class}
+                  </td>
 
-                    {/* Direction */}
-                    <td style={{padding:'9px 10px',textAlign:'center',fontSize:14}}>
-                      {dirIcon(p.last_direction)}
-                    </td>
-
-                    {/* Room */}
-                    <td style={{padding:'9px 10px',textAlign:'right',
-                      fontFamily:'IBM Plex Mono,monospace',fontSize:11,
-                      color: p.room_to_add > 2 ? '#276749' : '#999'}}>
-                      {p.room_to_add != null ? `+${p.room_to_add.toFixed(1)}%` : '—'}
-                    </td>
-
-                    {/* Entry date */}
-                    <td style={{padding:'9px 10px',textAlign:'right',
-                      fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#999'}}>
-                      {fmtDate(p.entry_date)}
-                    </td>
-                  </tr>
-                </React.Fragment>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-
-      {/* ── Legend ──────────────────────────────────────────────────────── */}
-      <div style={{padding:'16px 20px',borderTop:'1px solid #E2E8F0',marginTop:8,
-        display:'flex',gap:24,flexWrap:'wrap',fontSize:10,color:'#999',
-        fontFamily:'IBM Plex Mono,monospace'}}>
-        <span>■ <span style={{color:'#276749'}}>GREEN</span> = above anchor (≥{threshold_pct != null ? threshold_pct : '—'}%)</span>
-        <span>■ <span style={{color:'#718096'}}>GRAY</span> = below threshold (&lt;3%)</span>
-        <span>╱╱ HATCHED = rank-floor estimate (exact bps not in parsed PDFs)</span>
-        <span>MIN marker = vertical line in bar</span>
-        <span>↑ DIR = last commentary move was an add &nbsp;·&nbsp; ↓ = trim</span>
-        <span style={{marginLeft:'auto'}}>
-          {ps.source_pdfs} PDFs parsed &nbsp;·&nbsp; {positions.length} ranked positions
-        </span>
+                  <td style={{padding:'9px 16px 9px 0',textAlign:'right',
+                    fontWeight:600,color:'#1A1A18',whiteSpace:'nowrap'}}>
+                    {p.min_pct}% – {p.max_pct}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div style={{padding:'10px 16px',borderTop:'1px solid #E4E1DA',fontSize:10,
+          color:'#9A9790',fontFamily:'IBM Plex Mono,monospace'}}>
+          {source_pdf || 'Portfolio Solutions'} &nbsp;&middot;&nbsp;
+          "—" = new to list (no prior rank) &nbsp;&middot;&nbsp; "0" = rank unchanged
+        </div>
       </div>
     </div>
   );

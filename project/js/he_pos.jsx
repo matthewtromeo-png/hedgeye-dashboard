@@ -4,8 +4,9 @@
 // Key rule: positions ranked above HYG (rank 21) are confirmed above 3%
 
 const SizingTab = ({ macroCtx }) => {
-  const [sortBy, setSortBy] = React.useState('rank');   // 'rank' | 'size' | 'room'
-  const [filter, setFilter]  = React.useState('all');   // 'all' | 'above' | 'below'
+  const [sortBy,      setSortBy]      = React.useState('rank');   // 'rank' | 'size' | 'room'
+  const [filter,       setFilter]       = React.useState('all');   // 'all' | 'above' | 'below'
+  const [unallocOpen,  setUnallocOpen]  = React.useState(false);
 
   const ps = macroCtx?.position_sizing;
   if (!ps) return (
@@ -15,7 +16,9 @@ const SizingTab = ({ macroCtx }) => {
   );
 
   const { positions = [], threshold_ticker, threshold_rank, threshold_pct, threshold_note, as_of_date } = ps;
-  const active = positions.filter(p => p.estimated_pct > 0);
+  // Robust filter: treat null / 0 / "0" / 0.0 all as unallocated
+  const active      = positions.filter(p => p.estimated_pct != null && Number(p.estimated_pct) > 0);
+  const unallocated = positions.filter(p => p.estimated_pct == null || Number(p.estimated_pct) <= 0);
 
   // ── Sorting ────────────────────────────────────────────────────────────────
   const sorted = [...active].sort((a, b) => {
@@ -304,9 +307,60 @@ const SizingTab = ({ macroCtx }) => {
         <span>MIN marker = vertical line in bar</span>
         <span>↑ DIR = last commentary move was an add &nbsp;·&nbsp; ↓ = trim</span>
         <span style={{marginLeft:'auto'}}>
-          {ps.source_pdfs} PDFs parsed &nbsp;·&nbsp; {positions.length} ranked positions
+          {ps.source_pdfs} PDFs parsed &nbsp;·&nbsp; {active.length} active · {unallocated.length} unallocated
         </span>
       </div>
+
+      {/* ── Unallocated / Watchlist (collapsed) ──────────────────────────── */}
+      {unallocated.length > 0 && (
+        <div style={{borderTop:'1px solid #E2E8F0'}}>
+          <button
+            onClick={() => setUnallocOpen(o => !o)}
+            style={{width:'100%', display:'flex', justifyContent:'space-between',
+              alignItems:'center', padding:'10px 20px', background:'#F8F7F4',
+              border:'none', cursor:'pointer', fontFamily:'IBM Plex Mono,monospace',
+              fontSize:11, color:'#718096', textAlign:'left'}}>
+            <span style={{display:'flex', alignItems:'center', gap:10}}>
+              <strong style={{color:'#4A5568'}}>Parsed · No Active Size ({unallocated.length})</strong>
+              <span style={{fontSize:10, color:'#999'}}>
+                ranked in re-rank table but size = 0 in latest Portfolio Solutions commentary
+              </span>
+            </span>
+            <span style={{fontSize:11, color:'#999'}}>{unallocOpen ? '▲ collapse' : '▼ expand'}</span>
+          </button>
+
+          {unallocOpen && (
+            <table style={{width:'100%', borderCollapse:'collapse', fontSize:12,
+              fontFamily:'IBM Plex Mono,monospace'}}>
+              <thead>
+                <tr style={{background:'#F8F7F4', borderBottom:'1px solid #E2E8F0'}}>
+                  <th style={{textAlign:'left', padding:'6px 10px', fontSize:10,
+                    color:'#999', letterSpacing:'0.06em'}}>RANK</th>
+                  <th style={{textAlign:'left', padding:'6px 10px', fontSize:10,
+                    color:'#999', letterSpacing:'0.06em'}}>TICKER</th>
+                  <th style={{textAlign:'left', padding:'6px 10px', fontSize:10,
+                    color:'#999', letterSpacing:'0.06em'}}>CLASS</th>
+                  <th style={{textAlign:'left', padding:'6px 10px', fontSize:10,
+                    color:'#999', letterSpacing:'0.06em'}}>SIZE SOURCE</th>
+                </tr>
+              </thead>
+              <tbody>
+                {unallocated.map((p, i) => (
+                  <tr key={p.ticker} style={{
+                    borderBottom:'1px solid #F5F3EF',
+                    background: i % 2 === 0 ? '#fff' : '#FAFAF8',
+                  }}>
+                    <td style={{padding:'7px 10px', color:'#ccc'}}>{p.rank}</td>
+                    <td style={{padding:'7px 10px', fontWeight:600, color:'#718096'}}>{p.ticker}</td>
+                    <td style={{padding:'7px 10px', color:'#999', fontSize:11}}>{p.asset_class}</td>
+                    <td style={{padding:'7px 10px', color:'#bbb', fontSize:10}}>{p.size_source || '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      )}
     </div>
   );
 };

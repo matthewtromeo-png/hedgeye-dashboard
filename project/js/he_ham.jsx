@@ -539,79 +539,6 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
     </div>
   );
 
-  // ── MY BOOK ───────────────────────────────────────────────────────
-  const MyBookTab = () => (
-    <div>
-      <div style={{marginBottom:16}}>
-        <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:6}}>
-          Enter your tickers (space, comma, or line separated):
-        </div>
-        <textarea value={myInput}
-          onChange={e=>{setMyInput(e.target.value); onMyPositionsChange&&onMyPositionsChange(e.target.value);}}
-          placeholder="e.g. AAPL NVDA CASY XOM TSN SWBI"
-          style={{width:'100%',padding:10,border:'1px solid #E4E1DA',borderRadius:6,
-            fontFamily:'IBM Plex Mono,monospace',fontSize:12,color:'#1A1A18',
-            background:'#FAFAF8',resize:'vertical',minHeight:72,outline:'none'}} />
-      </div>
-      {myTickers.length > 0 && (
-        <div style={{overflowX:'auto'}}>
-          <table style={{width:'100%',borderCollapse:'collapse',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>
-            <thead>
-              <tr>
-                <TH>Ticker</TH>
-                {FUNDS.map(f=><TH key={f} right>{f}</TH>)}
-                <TH right>Day Δ</TH><TH right>Wk Δ</TH>
-                <TH>Quad</TH><TH>Overlap</TH><TH>SSS Signal</TH>
-              </tr>
-            </thead>
-            <tbody>
-              {myTickers.map((ticker,i) => {
-                const info = tickerMap[ticker];
-                const sssInfo = macroCtx?.pdf?.sss?.tickers_detail?.[ticker] ?? null;
-                const cnt = info ? Object.keys(info.funds).length : 0;
-                const dd = daily[ticker];
-                const wd = weekly[ticker];
-                return (
-                  <tr key={i} style={{borderBottom:'1px solid #F5F3EF',background:i%2===0?'#fff':'#FAFAF8'}}>
-                    <TD><span style={{fontWeight:700}}>{ticker}</span></TD>
-                    {FUNDS.map(f=>{
-                      const w = info?.funds[f];
-                      return <TD key={f} right style={{fontWeight:w?600:400,color:w?'#27500A':'#ccc'}}>{w?`${(w*100).toFixed(2)}%`:'—'}</TD>;
-                    })}
-                    <TD right style={{fontSize:10,color:dd&&dd.delta>0?'#27500A':dd&&dd.delta<0?'#C8302A':'#ccc'}}>
-                      {dd ? delta_fmt(dd.delta) : '—'}
-                    </TD>
-                    <TD right style={{fontSize:10,color:wd&&wd.delta>0?'#27500A':wd&&wd.delta<0?'#C8302A':'#ccc'}}>
-                      {wd ? delta_fmt(wd.delta) : '—'}
-                    </TD>
-                    <TD><AlignBadge ticker={ticker} /></TD>
-                    <TD>
-                      {cnt===0
-                        ? <span style={{fontSize:9,background:'#F1EFE8',color:'#888',padding:'1px 7px',borderRadius:3}}>Not held</span>
-                        : <span style={{fontSize:9,fontWeight:700,padding:'2px 7px',borderRadius:3,
-                            background:cnt===FUNDS.length?'#EAF3DE':cnt>=3?'#E4EDF8':'#FFF8E1',
-                            color:cnt===FUNDS.length?'#27500A':cnt>=3?'#1A4D8F':'#B8860B'}}>
-                            {cnt===FUNDS.length?'All 4 funds':`${cnt}/${FUNDS.length} funds`}
-                          </span>
-                      }
-                    </TD>
-                    <TD>
-                      {sssInfo
-                        ? <span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 7px',borderRadius:3}}>
-                            {sssInfo.days_on_list ?? '—'}d · {sssInfo.sector ?? '—'}
-                          </span>
-                        : <span style={{color:'#ccc',fontSize:10}}>—</span>}
-                    </TD>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </div>
-  );
-
   // ── RENDER ────────────────────────────────────────────────────────
   return (
     <div style={{padding:'20px 24px', maxWidth:1400}}>
@@ -667,7 +594,77 @@ const HAMTab = ({myPositions, onMyPositionsChange, macroCtx}) => {
           </>
         )}
         {subTab==='overlaps' && <OverlapsTable />}
-        {subTab==='mybook' && <MyBookTab />}
+        {subTab==='mybook' && (
+                <div>
+                  <div style={{marginBottom:16}}>
+                    <div style={{fontFamily:'IBM Plex Mono,monospace',fontSize:10,color:'#7A7770',marginBottom:6}}>
+                      Enter your tickers (space, comma, or line separated):
+                    </div>
+                    <textarea value={myInput}
+                      onChange={e=>{setMyInput(e.target.value); onMyPositionsChange&&onMyPositionsChange(e.target.value);}}
+                      placeholder="e.g. AAPL NVDA CASY XOM TSN SWBI"
+                      style={{width:'100%',padding:10,border:'1px solid #E4E1DA',borderRadius:6,
+                        fontFamily:'IBM Plex Mono,monospace',fontSize:12,color:'#1A1A18',
+                        background:'#FAFAF8',resize:'vertical',minHeight:72,outline:'none'}} />
+                  </div>
+                  {myTickers.length > 0 && (
+                    <div style={{overflowX:'auto'}}>
+                      <table style={{width:'100%',borderCollapse:'collapse',fontFamily:'IBM Plex Mono,monospace',fontSize:11}}>
+                        <thead>
+                          <tr>
+                            <TH>Ticker</TH>
+                            {FUNDS.map(f=><TH key={f} right>{f}</TH>)}
+                            <TH right>Day Δ</TH><TH right>Wk Δ</TH>
+                            <TH>Quad</TH><TH>Overlap</TH><TH>SSS Signal</TH>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {myTickers.map((ticker,i) => {
+                            const info = tickerMap[ticker];
+                            const sssInfo = macroCtx?.pdf?.sss?.tickers_detail?.[ticker] ?? null;
+                            const cnt = info ? Object.keys(info.funds).length : 0;
+                            const dd = daily[ticker];
+                            const wd = weekly[ticker];
+                            return (
+                              <tr key={i} style={{borderBottom:'1px solid #F5F3EF',background:i%2===0?'#fff':'#FAFAF8'}}>
+                                <TD><span style={{fontWeight:700}}>{ticker}</span></TD>
+                                {FUNDS.map(f=>{
+                                  const w = info?.funds[f];
+                                  return <TD key={f} right style={{fontWeight:w?600:400,color:w?'#27500A':'#ccc'}}>{w?`${(w*100).toFixed(2)}%`:'—'}</TD>;
+                                })}
+                                <TD right style={{fontSize:10,color:dd&&dd.delta>0?'#27500A':dd&&dd.delta<0?'#C8302A':'#ccc'}}>
+                                  {dd ? delta_fmt(dd.delta) : '—'}
+                                </TD>
+                                <TD right style={{fontSize:10,color:wd&&wd.delta>0?'#27500A':wd&&wd.delta<0?'#C8302A':'#ccc'}}>
+                                  {wd ? delta_fmt(wd.delta) : '—'}
+                                </TD>
+                                <TD><AlignBadge ticker={ticker} /></TD>
+                                <TD>
+                                  {cnt===0
+                                    ? <span style={{fontSize:9,background:'#F1EFE8',color:'#888',padding:'1px 7px',borderRadius:3}}>Not held</span>
+                                    : <span style={{fontSize:9,fontWeight:700,padding:'2px 7px',borderRadius:3,
+                                        background:cnt===FUNDS.length?'#EAF3DE':cnt>=3?'#E4EDF8':'#FFF8E1',
+                                        color:cnt===FUNDS.length?'#27500A':cnt>=3?'#1A4D8F':'#B8860B'}}>
+                                        {cnt===FUNDS.length?'All 4 funds':`${cnt}/${FUNDS.length} funds`}
+                                      </span>
+                                  }
+                                </TD>
+                                <TD>
+                                  {sssInfo
+                                    ? <span style={{fontSize:9,background:'#EAF3DE',color:'#27500A',padding:'1px 7px',borderRadius:3}}>
+                                        {sssInfo.days_on_list ?? '—'}d · {sssInfo.sector ?? '—'}
+                                      </span>
+                                    : <span style={{color:'#ccc',fontSize:10}}>—</span>}
+                                </TD>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+        )}
       </div>
     </div>
   );

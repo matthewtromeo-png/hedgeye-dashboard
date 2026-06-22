@@ -283,12 +283,14 @@ const MarketTab = ({quad, macroCtx}) => {
               {SSS_SYMS.map((ticker, i) => {
                 const p           = sssP[ticker];
                 const det         = sssDetail[ticker];
-                const signalPrice = det?.entry_price ?? macroCtx?.levels?.[ticker]?.close;
+                const signalPrice    = det?.entry_price ?? macroCtx?.levels?.[ticker]?.close;
+                const priceAdjusted  = det?.price_corrected === true;
+                const priceUnresolved= det?.price_repair_status === 'unresolved';
                 const daysOnList  = det?.days_on_list ?? (det?.signal_date
                   ? Math.floor((Date.now() - new Date(det.signal_date)) / 86400000)
                   : null);
                 const curPrice    = p?.price;
-                const sinceSignal = (curPrice && signalPrice)
+                const sinceSignal = (!priceUnresolved && curPrice && signalPrice)
                   ? ((curPrice - signalPrice) / signalPrice * 100) : null;
                 return (
                   <tr key={i} style={{borderBottom:'1px solid #F5F3EF',
@@ -296,13 +298,19 @@ const MarketTab = ({quad, macroCtx}) => {
                     <TD><span style={{fontWeight:700}}>{ticker}</span></TD>
                     <TD style={{color:'#7A7770', fontSize:10}}>{det?.sector ?? '—'}</TD>
                     <TD style={{color:'#9A9790', fontSize:10}}>{daysOnList != null ? `${daysOnList}d` : '—'}</TD>
-                    <TD right>{signalPrice ? `$${signalPrice.toFixed(2)}` : '—'}</TD>
+                    <TD right>
+                      <span>{signalPrice ? `$${signalPrice.toFixed(2)}` : '—'}</span>
+                      {priceAdjusted && <span style={{fontSize:8,marginLeft:3,padding:'1px 4px',borderRadius:2,
+                        background:'#FFF3CD',color:'#856404',fontWeight:700}}>adj</span>}
+                      {priceUnresolved && <span style={{fontSize:8,marginLeft:3,padding:'1px 4px',borderRadius:2,
+                        background:'#F8D7DA',color:'#721C24',fontWeight:700}}>CHECK</span>}
+                    </TD>
                     <TD right style={{fontWeight:curPrice?600:400}}>
                       {curPrice ? `$${curPrice.toFixed(2)}` : '—'}
                     </TD>
                     <TD right style={{fontWeight:600,
-                      color: sinceSignal===null?'#ccc':sinceSignal>0?'#27500A':'#C8302A'}}>
-                      {sinceSignal === null ? '—' : `${sinceSignal>0?'+':''}${sinceSignal.toFixed(1)}%`}
+                      color: priceUnresolved?'#856404':sinceSignal===null?'#ccc':sinceSignal>0?'#27500A':'#C8302A'}}>
+                      {priceUnresolved ? 'CHECK' : sinceSignal === null ? '—' : `${sinceSignal>0?'+':''}${sinceSignal.toFixed(1)}%`}
                     </TD>
                     <TD right style={{fontWeight:p?600:400,
                       color: !p?'#ccc':p.chgPct>=0?'#27500A':'#C8302A'}}>

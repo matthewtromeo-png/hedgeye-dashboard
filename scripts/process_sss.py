@@ -222,6 +222,252 @@ def _ocr_extract_tickers(pdf_path):
     return rows
 
 
+
+
+# ── Price repair constants ──────────────────────────────────────────────────
+_SUSPICIOUS_RATIO_MAX = 4.0    # entry/reference > this → suspicious
+_SUSPICIOUS_RATIO_MIN = 0.25   # entry/reference < this → suspicious
+_PLAUSIBLE_MIN        = 0.18   # corrected/reference ≥ this → plausible
+_PLAUSIBLE_MAX        = 5.5    # corrected/reference ≤ this → plausible
+
+def fetch_live_prices(tickers):
+    """Fetch current market prices via yfinance. Returns {ticker: price} or {}."""
+    try:
+        import yfinance as yf
+    except ImportError:
+        print("  [INFO] yfinance not installed — decimal repair uses PDF internal ratios only")
+        return {}
+
+    tickers_list = [t for t in tickers if t]
+    prices = {}
+    try:
+        import pandas as pd
+        raw = yf.download(tickers_list, period='5d', auto_adjust=True, progress=False)
+        if not raw.empty:
+            # MultiIndex columns when multiple tickers
+            if isinstance(raw.columns, pd.MultiIndex):
+                close = raw['Close'].ffill().iloc[-1]
+            else:
+                close = raw['Close'].ffill().iloc[-1]
+            for t in tickers_list:
+                try:
+                    v = close[t] if t in close.index else None
+                    if v is not None and not pd.isna(v) and float(v) > 0:
+                        prices[t] = round(float(v), 2)
+                except (KeyError, TypeError, ValueError):
+                    pass
+    except Exception as e:
+        print(f"  [WARN] yfinance batch failed: {e}")
+
+    # Fill gaps via fast_info
+    missing = [t for t in tickers_list if t not in prices]
+    for t in missing[:20]:   # cap at 20 individual calls
+        try:
+            fi = yf.Ticker(t).fast_info
+            p = getattr(fi, 'last_price', None) or getattr(fi, 'regular_market_price', None)
+            if p and float(p) > 0:
+                prices[t] = round(float(p), 2)
+        except Exception:
+            pass
+
+    print(f"  Live prices fetched: {len(prices)}/{len(tickers_list)} via yfinance")
+    return prices
+
+
+def _repair_one_price(raw, reference, label='price'):
+    """
+    Test whether raw price has an OCR decimal error vs reference.
+    Returns (corrected, factor, reason, status)
+      status: 'ok' | 'corrected' | 'unresolved'
+    """
+    if raw is None or reference is None or reference <= 0 or raw <= 0:
+        return raw, None, None, 'ok'
+
+    ratio = raw / reference
+    if _SUSPICIOUS_RATIO_MIN <= ratio <= _SUSPICIOUS_RATIO_MAX:
+        return raw, None, None, 'ok'
+
+    # Suspicious — try /10, /100, *10 in that order
+    for factor, candidate in [(10, raw / 10), (100, raw / 100), (-10, raw * 10)]:
+        candidate = round(candidate, 4)
+        if candidate <= 0:
+            continue
+        c_ratio = candidate / reference
+        if _PLAUSIBLE_MIN <= c_ratio <= _PLAUSIBLE_MAX:
+            fstr = f"raw/{factor}" if factor > 0 else f"raw*{abs(factor)}"
+            reason = (
+                f"{label} raw={raw} (ratio={ratio:.2f}x ref); "
+                f"{fstr}={candidate:.2f} → ratio={c_ratio:.2f}x (plausible)"
+            )
+            return round(candidate, 2), factor, reason, 'corrected'
+
+    reason = (
+        f"{label} raw={raw} (ratio={ratio:.2f}x ref={reference}); "
+        "no /10, /100, *10 candidate restores plausible ratio"
+    )
+    return raw, None, reason, 'unresolved'
+
+
+def repair_sss_prices(tickers_detail, data_dir=None):
+    """
+    Audit and auto-repair OCR decimal errors in SSS signal prices.
+
+    Strategy:
+    - With live prices (yfinance): use live price as reference for both entry and recent.
+      This catches "both-off-same-factor" cases like MGM where entry=425, recent=479
+      are both 10x too high but the internal ratio looks fine.
+    - Without live prices: use the internal entry/recent ratio to determine which
+      price has the decimal error:
+        entry >> recent (ratio > 4): entry is likely 10x too high → repair entry
+        recent >> entry (ratio > 4): recent is likely 10x too high → repair recent
+      This catches one-sided OCR errors without internet access.
+
+    Returns:
+      enriched_detail : tickers_detail dict with repair fields added
+      audit           : list of audit rows
+      unresolved      : list of tickers with unresolved suspicious prices
+    """
+    tickers = list(tickers_detail.keys())
+    live_prices = fetch_live_prices(tickers)
+    has_live = bool(live_prices)
+
+    enriched = {}
+    audit    = []
+    unresolved = []
+
+    for ticker, info in tickers_detail.items():
+        entry_raw  = info.get('entry_price')
+        recent_raw = info.get('recent_price')
+        live_price = live_prices.get(ticker)
+
+        entry_c = entry_raw
+        recent_c = recent_raw
+        entry_factor = recent_factor = None
+        entry_reason = recent_reason = None
+        entry_status = recent_status = 'ok'
+
+        if live_price:
+            # ── Best path: live price available ──────────────────────────
+            # Use live price as independent reference for both prices.
+            entry_c, entry_factor, entry_reason, entry_status = \
+                _repair_one_price(entry_raw, live_price, f"{ticker}/entry")
+            recent_c, recent_factor, recent_reason, recent_status = \
+                _repair_one_price(recent_raw, live_price, f"{ticker}/recent")
+
+        elif entry_raw and recent_raw and entry_raw > 0 and recent_raw > 0:
+            # ── Fallback: use internal entry/recent ratio ─────────────────
+            # Determine WHICH price is likely the OCR error based on ratio.
+            internal_ratio = entry_raw / recent_raw
+            if internal_ratio > _SUSPICIOUS_RATIO_MAX:
+                # entry much larger than recent → entry is the OCR error
+                entry_c, entry_factor, entry_reason, entry_status = \
+                    _repair_one_price(entry_raw, recent_raw, f"{ticker}/entry")
+                # recent is our reference — don't repair it
+            elif internal_ratio < _SUSPICIOUS_RATIO_MIN:
+                # recent much larger than entry → recent is the OCR error
+                recent_c, recent_factor, recent_reason, recent_status = \
+                    _repair_one_price(recent_raw, entry_raw, f"{ticker}/recent")
+                # entry is our reference — don't repair it
+            # else: ratio is plausible — no repair needed (both-off-same-factor
+            # cases like MGM are NOT detectable without live prices)
+
+        # Overall status
+        any_corrected  = (entry_status == 'corrected' or recent_status == 'corrected')
+        any_unresolved = (entry_status == 'unresolved' or recent_status == 'unresolved')
+        if any_unresolved:
+            overall = 'unresolved'
+            unresolved.append(ticker)
+        elif any_corrected:
+            overall = 'corrected'
+        else:
+            overall = 'ok'
+
+        # Recompute pct with corrected values
+        pct_corrected = None
+        if entry_c and recent_c and entry_c > 0:
+            pct_corrected = round((recent_c - entry_c) / entry_c * 100, 1)
+
+        combined_reason = '; '.join(filter(None, [entry_reason, recent_reason])) or None
+
+        enriched_info = dict(info)
+        enriched_info.update({
+            'signal_price_raw':        entry_raw,
+            'recent_price_raw':        recent_raw,
+            'signal_price':            entry_c,
+            'entry_price':             entry_c,
+            'recent_price':            recent_c,
+            'pct_since_entry':         pct_corrected,
+            'price_corrected':         any_corrected,
+            'price_correction_factor': entry_factor,
+            'price_correction_reason': combined_reason,
+            'price_repair_status':     overall,
+            'live_price_used':         live_price,
+        })
+        enriched[ticker] = enriched_info
+
+        # Audit row
+        since_raw = since_ok = None
+        if entry_raw and live_price and entry_raw > 0:
+            since_raw = round((live_price - entry_raw) / entry_raw * 100, 1)
+        if entry_c and live_price and entry_c > 0:
+            since_ok = round((live_price - entry_c) / entry_c * 100, 1)
+
+        audit.append({
+            'ticker':                       ticker,
+            'live_price':                   live_price,
+            'entry_price_raw':              entry_raw,
+            'entry_price_corrected':        entry_c,
+            'entry_correction_factor':      entry_factor,
+            'recent_price_raw':             recent_raw,
+            'recent_price_corrected':       recent_c,
+            'recent_correction_factor':     recent_factor,
+            'since_signal_raw_pct':         since_raw,
+            'since_signal_corrected_pct':   since_ok,
+            'price_repair_status':          overall,
+            'price_correction_reason':      combined_reason,
+            'days_on_list':                 info.get('days_on_list'),
+            'signal_date':                  info.get('signal_date'),
+            'sector':                       info.get('sector'),
+        })
+
+    # Summary
+    n_ok         = sum(1 for r in audit if r['price_repair_status'] == 'ok')
+    n_corrected  = sum(1 for r in audit if r['price_repair_status'] == 'corrected')
+    n_unresolved = sum(1 for r in audit if r['price_repair_status'] == 'unresolved')
+    print(f"  Price repair: {n_ok} ok  {n_corrected} corrected  {n_unresolved} unresolved")
+    if unresolved:
+        print(f"  UNRESOLVED: {', '.join(unresolved)}")
+
+    # Write audit file
+    if data_dir:
+        audit_path = os.path.join(data_dir, 'sss_extraction_audit.json')
+        audit_doc = {
+            'generated_at':      datetime.now().isoformat(),
+            'total_tickers':     len(tickers),
+            'live_prices_used':  has_live,
+            'note': (
+                'Live prices from yfinance used — both entry and recent prices validated.' if has_live else
+                'No live prices — internal ratio used: only one-sided OCR errors detected. '
+                'Prices where both entry and recent are off by the same factor (e.g. MGM) '
+                'are not detectable without live prices and may still be incorrect.'
+            ),
+            'summary': {
+                'ok':         n_ok,
+                'corrected':  n_corrected,
+                'unresolved': n_unresolved,
+                'unresolved_tickers': unresolved,
+            },
+            'tickers': sorted(audit, key=lambda r: r['ticker']),
+        }
+        tmp = audit_path + '.tmp'
+        with open(tmp, 'w', encoding='utf-8') as af:
+            json.dump(audit_doc, af, indent=2, ensure_ascii=False)
+        os.replace(tmp, audit_path)
+        print(f"  Audit: {audit_path}")
+
+    return enriched, audit, unresolved
+
+
 def parse_sss_pdf(pdf_path):
     """
     Extract SSS data from a Hedgeye Signal Strength PDF using pdfplumber.
@@ -441,6 +687,13 @@ def main():
     print(f'Added       : {added}')
     print(f'Removed     : {removed}')
     print(f'Tickers     : {len(td)}')
+
+    # ── Repair OCR decimal errors in signal prices ───────────────────
+    if len(td) >= 5:
+        td, _audit, _unresolved = repair_sss_prices(td, DATA_DIR)
+        if _unresolved:
+            print(f'  [WARN] {len(_unresolved)} tickers with unresolved suspicious signal prices: '
+                  f'{", ".join(_unresolved[:8])}')
 
     extraction_method  = result.get('extraction_method', 'text')
     extraction_warning = result.get('extraction_warning')

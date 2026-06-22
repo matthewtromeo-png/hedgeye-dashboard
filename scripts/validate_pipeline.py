@@ -96,19 +96,30 @@ REQUIRED_TOP_KEYS = [
     "ham_per_fund",
 ]
 
-# Parser output field names that must be present on every position (schema drift guard)
+# Parser output field names that must be present on every position row (schema drift guard).
+# These match parse_position_sizing.py output — Macro ETFs by Rank table.
 REQUIRED_POSITION_FIELDS = [
-    "estimated_pct",
-    "above_hyg_threshold",
+    "rank",
+    "ticker",
+    "rerank_1w",
+    "rerank_1m",
     "entry_date",
     "asset_class",
-    "fill_pct",
-    "tier",
-    "room_to_add",
+    "min_pct",
+    "max_pct",
 ]
 
-# Keys that only appear in a manually-written (simplified) position_sizing block
-MANUAL_EDIT_SENTINEL_KEYS = ["anchor", "above_anchor"]
+# Top-level keys the parser always writes to the position_sizing block
+REQUIRED_POSITION_TOPLEVEL = [
+    "as_of_date",
+    "positions",
+    "keith_commentary",
+    "rerank_1w",
+    "rerank_1m",
+]
+
+# Keys that only appear in a manually-written (old inferred-sizing) block
+MANUAL_EDIT_SENTINEL_KEYS = ["anchor", "above_anchor", "above_hyg_threshold", "estimated_pct"]
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -300,27 +311,40 @@ def tier1_checks(ctx):
     else:
         ok(f"position_sizing.as_of_date = {as_of}")
 
-    # 7. Schema drift guard — detect manually-simplified position_sizing block
-    for sentinel in MANUAL_EDIT_SENTINEL_KEYS:
-        if sentinel in ps:
-            fail(
-                f"position_sizing has key '{sentinel}' — this is a manually-written block, "
-                f"not parser output. Run parse_position_sizing.py to replace it."
-            )
+    # 7. Schema drift guard — detect old manually-written inferred-sizing block
+    sentinel_found = [s for s in MANUAL_EDIT_SENTINEL_KEYS if s in ps]
+    if sentinel_found:
+        fail(
+            f"position_sizing has old inferred-sizing key(s): {', '.join(sentinel_found)} — "
+            f"this is stale output from the old model. Run parse_position_sizing.py to replace it."
+        )
 
-    # 8. Check first position for required parser fields
+    # 7b. Top-level required keys (new Macro ETFs by Rank schema)
+    missing_top = [k for k in REQUIRED_POSITION_TOPLEVEL if k not in ps]
+    if missing_top:
+        fail(
+            f"position_sizing missing top-level keys: {', '.join(missing_top)} — "
+            f"run parse_position_sizing.py to rebuild."
+        )
+    else:
+        ok(f"position_sizing top-level keys present  as_of={ps.get('as_of_date','?')}")
+
+    # 8. Check all position rows for required parser fields
     if isinstance(positions, list) and positions:
-        first = positions[0]
-        missing = [f for f in REQUIRED_POSITION_FIELDS if f not in first]
-        if missing:
+        rows_missing = []
+        for pos in positions:
+            missing = [f for f in REQUIRED_POSITION_FIELDS if f not in pos]
+            if missing:
+                rows_missing.append(f"{pos.get('ticker','?')}:{','.join(missing)}")
+        if rows_missing:
             fail(
-                f"position_sizing.positions[0] (ticker={first.get('ticker','?')}) is missing "
-                f"parser fields: {', '.join(missing)} — possible manual JSON edit or stale parser output"
+                f"position_sizing rows missing required fields: {'; '.join(rows_missing[:6])} — "
+                f"stale parser output. Run parse_position_sizing.py."
             )
         else:
-            ok(f"position_sizing schema  all required parser fields present")
+            ok(f"position_sizing schema  {len(positions)} rows  all required fields present")
 
-    # 9. SSS: warn if count > 0 but tickers_detail is significantly sparse
+    # 9. SSS: count/sparsity check + price sanity gate
     sss = data.get("pdf", {}).get("sss", {})
     sss_count = sss.get("count", 0) or 0
     sss_detail = sss.get("tickers_detail", {})
@@ -331,6 +355,46 @@ def tier1_checks(ctx):
         warn(f"pdf.sss.count={sss_count} but tickers_detail has only {detail_count} entries — SSS detail extraction may be incomplete")
     else:
         ok(f"pdf.sss  count={sss_count}  tickers_detail={detail_count} entries")
+
+    # 9b. SSS price sanity gate — hard-fail on unresolved decimal errors
+    if isinstance(sss_detail, dict) and len(sss_detail) > 0:
+        unresolved_prices = []
+        suspicious_no_repair = []
+        corrected_prices = []
+
+        for ticker, td in sss_detail.items():
+            status = td.get("price_repair_status")
+            if status == "unresolved":
+                unresolved_prices.append(ticker)
+            elif status == "corrected":
+                corrected_prices.append(ticker)
+            elif status is None:
+                # price_repair_status not present — data predates repair.
+                # Fall back to raw ratio check to catch obvious errors.
+                entry  = td.get("entry_price") or td.get("signal_price")
+                recent = td.get("recent_price")
+                if entry and recent and entry > 0 and recent > 0:
+                    ratio = entry / recent
+                    if ratio > 4.0 or ratio < 0.25:
+                        suspicious_no_repair.append(f"{ticker}(ratio={ratio:.1f}x)")
+
+        if unresolved_prices:
+            fail(
+                f"SSS price sanity: {len(unresolved_prices)} ticker(s) have unresolved suspicious "
+                f"signal prices (likely OCR decimal error): {', '.join(unresolved_prices[:12])}. "
+                f"Re-run process_sss.py to repair. Cannot deploy with broken signal prices."
+            )
+        elif suspicious_no_repair:
+            fail(
+                f"SSS price sanity: {len(suspicious_no_repair)} ticker(s) have suspicious "
+                f"entry/recent price ratios and price repair has not run: "
+                f"{', '.join(suspicious_no_repair[:12])}. "
+                f"Run process_sss.py to repair before deploying."
+            )
+        else:
+            n_cor = len(corrected_prices)
+            note = f"  ({n_cor} corrected)" if n_cor else ""
+            ok(f"pdf.sss  price_repair=ok{note}")
 
     # 10. generated_at present
     gen_at = data.get("generated_at")

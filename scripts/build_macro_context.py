@@ -146,6 +146,11 @@ def read_etf_pro() -> dict:
     i_date  = col('Date Added')
     i_price = col('Last Price')
     i_days  = col('Days Held')
+    i_abs   = col('Absolute Performance')
+    i_sp5   = col('S&P 500')
+    i_rel   = col('Relative Performance')
+    i_asof  = col('As of')
+    i_pub   = col('Last Published')
 
     rerank, longs, shorts = [], [], []
     seen_tickers = set()
@@ -176,13 +181,20 @@ def read_etf_pro() -> dict:
             except (ValueError, TypeError):
                 days_held = None
 
+        etf_name = str(get(i_etf) or '').strip()
         entry = {
-            "ticker":      ticker,
-            "etf":         str(get(i_etf) or '').strip(),
-            "asset_class": str(get(i_class) or '').strip(),
-            "date_added":  iso_date(added_raw),
-            "last_price":  cell_float(get(i_price)),
-            "days_held":   int(days_held) if days_held is not None else None,
+            "ticker":         ticker,
+            "etf":            etf_name,
+            "name":           etf_name,
+            "asset_class":    str(get(i_class) or '').strip(),
+            "date_added":     iso_date(added_raw),
+            "last_price":     cell_float(get(i_price)),
+            "days_held":      int(days_held) if days_held is not None else None,
+            "abs_perf":       cell_float(get(i_abs)),
+            "sp500":          cell_float(get(i_sp5)),
+            "rel_perf":       cell_float(get(i_rel)),
+            "as_of":          str(get(i_asof) or '')[:10],
+            "last_published": str(get(i_pub)  or '')[:10],
         }
         if call == 'LONG':
             longs.append(entry)
@@ -190,10 +202,15 @@ def read_etf_pro() -> dict:
             shorts.append(entry)
 
     print(f"  [debug] After filter: {len(rerank)} unique tickers ({len(longs)} long, {len(shorts)} short)")
+    # Compute as-of date from the most recent 'As of' timestamp across all entries
+    all_asof = [e["as_of"] for e in longs + shorts if e.get("as_of")]
+    max_asof = max(all_asof) if all_asof else date.today().isoformat()
+    print(f"  [debug] etf_pro_as_of: {max_asof}")
     return {
         "etf_rerank":    rerank,
         "active_longs":  longs,
         "active_shorts": shorts,
+        "etf_pro_as_of": max_asof,
         "_source":       path.name,
     }
 
